@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>中企出海因地制宜：金融主权决定发展命运#独夫之心#海外中企#金融主权</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">独夫之心 OpenGet笔记</div>
+                    <h1>中企出海因地制宜：金融主权决定发展命运#独夫之心#海外中企#金融主权</h1>
+                    <div class="meta">
+                        <span>独夫之心</span>
+                        <span>Sat, 18 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7630414424934747444/?region=CN&amp;amp;mid=7630414604040276742&amp;amp;u_code=2gg333f7dcee&amp;amp;did=MS4wLjABAAAAk-82WPgAE_0AAm2Hpebu0TiM4aZVWXxa4b4i5w8MOic&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=ZFS8X2u7XGIdXLujnKeIhQlaUMJgotOGGJkMwrl2YPE-&amp;amp;share_version=240300&amp;amp;ts=1776614508&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;p&gt;今天我们去讲社会主义，社会主义更多的是一种精神，资本主义其实也是一种精神，它是一种作风做派，这种作风和做派在某件具体的事情的指向上，它不冲突，但是在最终的整个的大的导向上，它的确它是完全不一要之所以我们过去讲一个叫姓资，叫姓社的问题，为什么是姓氏，讲的什么归属权的问题，孩子王要连麦喂老师，哎，今天我们刚好聊到了岛内的一个问题，然后直播间也有朋友提到了巴基斯坦的军队进驻沙特这个事情，然后我最近也跟莫老师聊到一个东西，就是我们讲的橱窗，最近的话，各国的政要，包括我们的一些邻国都陆续的扎堆来北京，我们这边的可以讲师车水马龙，非常热闹，那巴基斯坦这一次入驻沙特，我也注意到了一个关键词，是什么呢？叫中介市。我的天，我有生之年我能听到这个词，我也算一个从小就喜欢军事方面的东西的吧，我听过德谢式，我听过苏谢式，我也听过美谢式，但是我从小的时候，我从来没有。&lt;/p&gt;
+&lt;p&gt;我就想到过，我能在有生之年听到一个词儿叫中谢师，让我能想到的就是说，其实我们知道上个世纪有很多地方被称为这种橱窗国家，或者是橱窗地区，就比如说香港橱窗地区，然后西德橱窗国家，那个时候就是资本主义生产力或者说文化或者说制度的一种集中体现嘛，在两大阵营对抗的最前线，我们能看到这种集中体现，那现在随于世义从巴基斯坦来说的话，我至少我个人觉得这是一种中国力量在军事层面的一种橱窗的一种展示，就是通过巴基斯坦，然后向海湾地区去展示我们中国特色的这种东西。老师刚刚也聊到了台湾，台湾回归之后，我也在想，因为台湾本身有它的优势，然后这个地方它的地缘也比较特殊，它可能以后未来也会建设成为一个在经济上面，在文化交流层面的这么一个橱窗的一种地区，所以我也想今天想请老师跟我们畅想一下，就是未来我们中国。&lt;/p&gt;
+&lt;p&gt;周围的这些国家和地区，或者说跟我们中国合作比较密切的这种国家和地区，它会不会也呈现出一种叫做社会主义橱窗的这么一种盛景出来呢？老师，社会主义橱窗我理解你说橱窗的意思大概是说作为一定的对外开放的这样的一个区域，然后呢，他可能国家这个区域内招引外资比较多，然后又因为可能他就在中国的旁边，受到中国经济的整体影响和红旗比较多，它呈现出中资扎堆，在这之后呢，由于中资又有自己的这种组织特色，那么在这种组织特色加我们提供的所谓的公共服务和产品的叠加之下，我们认为OK，这个地方中国味儿很重，然后他就在我们的国境之外，是对方的一个特别发展区域，那我觉得确实会有这种可能，但是呢，我觉得这个并不是我们所广泛认为的，它的社会主义味儿很重，它还不是它一定是资本主义性质占优的，其实中资走出去呢，它更多的还是真实，就是说你们可以去想一想啊，实际上是贯彻了非常多资本主义的特质优势的走出去，因为归根结底我们是要。&lt;/p&gt;
+&lt;p&gt;要发挥我们对在地国家的环境和制度、社会状况的理解，我们才能做好这件事情，就是我们中资为何么在海外占优呢？一个是背靠国家，这是我们从国家能拿到的很多廉价的公共服务产品，还有产业链条延伸，这是我们能拿到的。但是呢，我们既然走出来了，我们就要因地制宜，那么因地制宜的话，这些国家往往是什么？封建国家啊，资本主义国家，那么中国人的灵活就在这儿体现出来。其实你们也可以想一想，很多时候今天我们去讲社会主义，社会主义更多的是一种精神，资本主义其实也是一种精神，它是一种作风、做派，这种作风和作派在某件具体的事情呢，指向上它不冲突，但是在最终的整个的大的导向上，它的确它是完全不一要，之所以我们过去讲一个叫姓资，叫姓社的问题，为什么是姓氏，讲的什么归属权的问题，既然我们走出去，那海外的中资，除非我们说是以国资为主，如果是以国资为主，那这个地方就像你说的，那它就是个社会主义厨房，如果是以聚集性的私有的中资为主的话，那它我觉得就是一个中国文化背景占多的这样的一个海外经济特区这样一个结构。所以。&lt;/p&gt;
+&lt;p&gt;我觉得他可能每个地方还不一样，比方说我们也可以去海外、东南亚去看一看，有很多的地方，这楼盘就是中国开发的，就中国国资一些个下属开发商开发的，然后可以看看香港和比方说一些地方国资委联合开发的一些东西，他的这种风格就是不一样，所以我说这个风格肯定是不一样，但是你说这个东西他可能未来会有对老师其实解答的非常的好啊，这个也让我想到就是说中国人的实用主义吧，能够非常好的就内嵌到当地的这种文化内生性也好，或者政治内生性也好啊，或者说制度内生性也好的话，其实我们做了非常多的这种探索和尝识，中资现在也在世界上各个地方在这种生根发芽长得都不错啊，勃勃生机，万物进发，那我们在中资这种不断发展壮大的同时，其实我们也看到了，比如说亚洲四小龙，曾经辉煌的亚洲四小龙在不到四五十年的这种相对说比较短的一个历史进程吧，就非常，那我们也有经常想问一下，像这种他一泻千里的这种情况来说，大概。&lt;/p&gt;
+&lt;p&gt;有哪些原因可以造成呢？老师你说这个一切千里者是什么意思？就是我讲的，以前上个世纪八九十年代，我刚讲亚洲四小龙，包括后面还有四小虎就拉的非踌，你像某省，然后香港、新加坡就拉的非踌，它的逻辑是什么呢？逻辑就是没有金融主权，金融主权的背后是强大的政府，强大的政府代表着什么呢？对国有资产的保护，这是第一，第二最重要的，他在对国有资产完成保护的同时，它能够在金融、财政、税收等制度规则上做调整，它至少能够捍卫国有资产的在地，也就是不外流。那这几个国家，它的问题要不就是什么，要不就是资产的外流，产业链的外逃，这就证明你政府中央就太弱了，要不就是你没有金融自主权。美国一纸协议给你过来，直接你就死了，我说你将要采取什么金融政策和财政政策，你必须采取，你比如广场协议，我就让你日元升值，我就美元去贬值，你听不听话吧，听话那就完蛋了。这个本质上还是什么呢？资本主义这种社会制度，它就不可能缔造一个长盛不衰的国家经济，因为既然是资本。&lt;/p&gt;
+&lt;p&gt;主义，那就是资本说了算，那么资本它的特性就是哪儿好去哪儿，它绝对不是说我就忠诚。所以这个世界上最荒谬的一个说法就是说资本主义兴起的这个世纪，西方往往说这叫近代民族国家独立浪潮，结果一研究说全是资本主义国家，所谓之近代民族国家都是打着资本集团的旗号去独立的，就去看一看为什么捷克和斯洛伐克他能够从奥匈帝国独立出来，它是一个国家，很简单啊，捷克它占据重工业啊，第二产业，斯洛伐克负责第三产业和第一产业，他这两个集团之间是互相有配合的，他就在一起。苏联进来以后给他们改造，斯洛伐克有了很多的工业，虽然斯洛伐的工业跟不上捷克的工业，但是经过苏联的社会主义改造以后，这两个国家其实已经不再互补了，他成为一个产业集群了，苏联一解体，好了，两个国家分裂了，为什么？因为它在经济上的这种互相的这种匹配，已经被社会主义制度给打乱了，被计划经济打断了，它不再具备这种产业联盟的性质了，又分开了，这个很简单，我们总讲近代民族国家，其实根本就没有什么鸡毛，近代民族国家就是近代资本主义集团，资本集团国家在地企业国家，就这么简单，其实老师说的这一点啊，联动一下昨天老师聊。&lt;/p&gt;
+&lt;p&gt;一下这个越南嘛，就是还中国起飞带，然后某几个主播特别喜欢吹这种东西，印度吹不动吹越南，越南其实有一个非常显著的问题，就是刚刚老师提到的，他的整个国家的中央集权制度的话，还是说现在是有待商榷的，或者说我们讲还有提高的空间，那这样一个国家就是哪怕他采用的也是社会主义制度，那他这样去搞的话，风险也是非常大的，因为我们其实也看到华尔街对东南亚的这种镰刀，那不是挥了一两次了，那搞好多次的，然后4次挨揍，4次不长教训，根本原因其实也在这个地方，就是老师讲的，那没有进入自主权，或者说国家集权的这种程度也不高，就是资本主义，有一个什么资本主义，他只要在分权的地方，他能活得非常好，这个也是我跟老师之前讨论过的，我说啊，为什么欧洲一屁股国家，然后资本主义能在这个地方兴盛发达，因为欧洲分权分的太厉害了，资本天然就喜欢这种地方，你要是一个大一统的集权的一个国家，那资本在这个国家他掌握不了话语权，要么呢，他就天然的反抗这种政权，要么呢，他就是被这种政权镇压成为一个工具那。&lt;/p&gt;
+&lt;p&gt;好的，老师，那今天我想跟老师交流的内容就到这儿，感谢老师您的解答，再见啊，下集请移步主页观看。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：独夫之心 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7630414424934747444/?region=CN&amp;amp;mid=7630414604040276742&amp;amp;u_code=2gg333f7dcee&amp;amp;did=MS4wLjABAAAAk-82WPgAE_0AAm2Hpebu0TiM4aZVWXxa4b4i5w8MOic&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=ZFS8X2u7XGIdXLujnKeIhQlaUMJgotOGGJkMwrl2YPE-&amp;amp;share_version=240300&amp;amp;ts=1776614508&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7630414424934747444/?region=CN&amp;amp;mid=7630414604040276742&amp;amp;u_code=2gg333f7dcee&amp;amp;did=MS4wLjABAAAAk-82WPgAE_0AAm2Hpebu0TiM4aZVWXxa4b4i5w8MOic&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=ZFS8X2u7XGIdXLujnKeIhQlaUMJgotOGGJkMwrl2YPE-&amp;amp;share_version=240300&amp;amp;ts=1776614508&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

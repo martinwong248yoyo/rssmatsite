@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>人生的松弛感从哪来？上周末跟夏博士直播对谈，一直还没来得及整理，今天回顾了下整场对话依然很受启发，关...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">晓辉博士 OpenGet笔记</div>
+                    <h1>人生的松弛感从哪来？上周末跟夏博士直播对谈，一直还没来得及整理，今天回顾了下整场对话依然很受启发，关...</h1>
+                    <div class="meta">
+                        <span>晓辉博士</span>
+                        <span>Fri, 17 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7630079107846597477/?region=CN&amp;amp;mid=7630079056062499584&amp;amp;u_code=1d8d2j2fciel&amp;amp;did=MS4wLjABAAAACjGp1rVtqNk_ESvAeqnPtJA5FHmLV7mJzAu2ELFgooo&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=vhdFhLqUppVxvjLu57_30IV.tlfkK7cBIveiy3kwC5w-&amp;amp;share_version=210700&amp;amp;ts=1776528174&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;p&gt;哈，大家周末好，上周末呢，金可能实验室的第5期我请到了夏博士，他是在全网有百万粉丝的一个大威，同时也是之前毕业于普渡大学计算机系的博士，在美国大学任教，后来他辞去了自己的工作，开始探索人生全新的可能，那他同时也是两个孩子的妈妈，现在两个孩子非常优秀，一个在斯坦福，一个拿到了哈佛的offer，然后我也这次对他也非常好奇，他到底是跟怎么跟孩子相处，怎么去教育孩子的，然后我这周也挺忙的，没有时间去整理，我周末正好有机会就又看了一下跟夏博士对谈的内容，我这两天也会发布在新可能实验室的公众号上，然后我家孩子在后面玩儿，我正好有机会也录一下这个视频，给大家分享一下我最大的收获，因为夏博士他给我的这个感觉呢，就是他整个非常松弛的一种人生状态，她今年50岁，然后我是40岁，所以她其实是一个姐姐，她说其实从人生的幸福感来看，其实在40岁这个节点会。&lt;/p&gt;
+&lt;p&gt;立一个幸福感的深微，然后慢慢的后来就会有逐渐上升和爬坡的过程，我也非常欣慰啊，非常开心能够听到这样的话，那他的松弛感来自于哪儿呢？其实我觉得跟他的孩子，就是在孩子小的时候得过一场大病，我觉得是有关系的，他的儿子在小学一年级的时候得了白血病，其实是一个非常大的人生冲击，对他来说是一个人生的治暗时刻，因为有各种各样的担心，要很长时间的去治疗，所以这个时候在这样的一种疾病的冲击下，其实等到孩子好的时候，你就觉得后面的很多问题都已经不是问题了，比如说学习成绩好不好，有没有成就，这些可能都不如孩子的健康快乐重要，所以当他去经历了这么一段这然时刻之后，对待人生的态度，对待孩子的态度，我觉得是会有一个非常大的扭转的，包括我觉得我非常羡慕他跟他女儿的关系，他女儿今年也被哈佛大学录取了，他跟他女儿一直是一种非常亲密的关系。&lt;/p&gt;
+&lt;p&gt;就是每天都会有一个小时的时间大家一起去散步、聊天，就是一个最亲密的知心的朋友的这么一个角色。我说你怎么跟女儿做到这么这么亲密的，他为什么这么相信你，对吧？我觉得也是因为他跟孩子的这种关系一直是陪伴式的成长，不是我要求你做到什么，不是我对你有很多预期，而是尊重他作为一个生命，他本身的这种可塑性，可能性。当然他跟我说，他在孩子生病之后，有了这样的一些人生态度之后，也并不是没有遇到挑战，比如说像孩子玩游戏，哥哥玩游戏，那他可能有一段时间，甚至有一些课程他都没有完整的上完，其实还是出了一些问题的，但是这个过程中，他跟孩子的爸爸其实也做过很多讨论，他觉得最重要的还是跟孩子保持一个非常好的沟通的关系，信任的关系，相信他们自己在遇到问题之后也是能够自己解决的，所以他选择了去相信，选择了不是强制的去做一些。&lt;/p&gt;
+&lt;p&gt;些事情，但是他们会无条件的给孩子提供支持和帮助，所以这也是我觉得对比之下也会给我很多启发的一些片段。当然他自己的人生状态就更有意思了，他其实是计算机系的博士，而且在美国的印第安大莫里斯这个大学任教，也是拿到了终身教职，但是呢，他在50岁这一年毅然决然决定离开这份工作，我说为什么？因为你都拿到教职了，都已经可以衣食无忧的，你或者说你哪怕没有那么多的科研也没有什么关系，因为是终身教职嘛，为什么一定要辞去？他说就是感觉他也体验了有各种各样的新的机会，比如说在短视频创作，做咨询，包括他之前也创办过一个青少年编程的公司，在更这么多的身份中，其实很难平衡，然后那他觉得还是去尊重内心的选择，做一些满足自己好奇心的事情，其实是啊，他的一个答案，所以他现在其实还在大学期有一些课。&lt;/p&gt;
+&lt;p&gt;能去上，但已经不全职在大学教书了，然后出来会尝试一些新的探索和新的可能性，我觉得他这种态度就是对人生没有那么焦虑，反而是有一种比较自然的，用一种开放的这种态度去面对自己生活的态度，非常鼓舞我。然后包括我上一期跟小实验的作者去谈的时候也是类似的，他也是放弃了谷歌的高薪的职位，然后去探索自己的这种新的空间。其实我觉得在人生的这个道路上，你要想拥有自由，就要去承担一些选择的后果，就是要要让自己意识到自己是有能力去承担这样的后果的。所以我觉得这一期的，视频对谈也是给了我非常多的启发，嗯，有很多细节大家可以去看，包括育儿的，包括自己的人生怎么不焦虑的对，我觉得可能更重要的还是说深入的去洞察自己，理解自己，包括这一期视频中，他也问了我很多问题，这也是唯一一期这个嘉宾问了我非常多问。&lt;/p&gt;
+&lt;p&gt;你比如说我在腾讯研究院的状态，我自己的人生的思考，包括我自己的育儿的状态，也是一个很有意思的一期对谈，大家感兴趣的话不妨关注一下尽可能实验室的公众号，然后我这两天会把这些内容整理出来，发布出来，如果看直播回放的话，是在我的视频号，祝大家周末愉快，拜拜。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：晓辉博士 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7630079107846597477/?region=CN&amp;amp;mid=7630079056062499584&amp;amp;u_code=1d8d2j2fciel&amp;amp;did=MS4wLjABAAAACjGp1rVtqNk_ESvAeqnPtJA5FHmLV7mJzAu2ELFgooo&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=vhdFhLqUppVxvjLu57_30IV.tlfkK7cBIveiy3kwC5w-&amp;amp;share_version=210700&amp;amp;ts=1776528174&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7630079107846597477/?region=CN&amp;amp;mid=7630079056062499584&amp;amp;u_code=1d8d2j2fciel&amp;amp;did=MS4wLjABAAAACjGp1rVtqNk_ESvAeqnPtJA5FHmLV7mJzAu2ELFgooo&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=vhdFhLqUppVxvjLu57_30IV.tlfkK7cBIveiy3kwC5w-&amp;amp;share_version=210700&amp;amp;ts=1776528174&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

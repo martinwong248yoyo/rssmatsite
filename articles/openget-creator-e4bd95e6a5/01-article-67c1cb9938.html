@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>普通人逆天改命靠读书这个世界不一定平等，但一定公平。走出校园才明白：读书之苦，是人生最轻的一种苦。读...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">何楚涵博士 OpenGet笔记</div>
+                    <h1>普通人逆天改命靠读书这个世界不一定平等，但一定公平。走出校园才明白：读书之苦，是人生最轻的一种苦。读...</h1>
+                    <div class="meta">
+                        <span>何楚涵博士</span>
+                        <span>Sat, 18 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7630055222601125129/?region=CN&amp;amp;mid=7630055321737628425&amp;amp;u_code=2l31lgm6dgbm&amp;amp;did=MS4wLjABAAAAA3-bUGC_e68QTouWOZJl_v5zDYUhmV7x2ovqcWSyxmU&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=PleAxkB5YdWhfThj1efUtS7rcVsvNBNRfHJxZQMW2fo-&amp;amp;share_version=230700&amp;amp;ts=1776614685&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;p&gt;你们觉得读书苦不苦？非常认真的告诉大家，&lt;/p&gt;
+&lt;p&gt;相比于生活之苦，读书的苦已经是最不苦的苦了。&lt;/p&gt;
+&lt;p&gt;在咱们的语文课本里面，有一篇课文叫宋东阳马生序，&lt;/p&gt;
+&lt;p&gt;他的作者就叫宋濂，明朝的开国文臣之首。&lt;/p&gt;
+&lt;p&gt;但是你们知道吗？宋濂他有多厉害，&lt;/p&gt;
+&lt;p&gt;他的小时候就有多惨，他家有多穷呢？&lt;/p&gt;
+&lt;p&gt;用宋连自己的话来说啊，叫家贫无从掷书以官，&lt;/p&gt;
+&lt;p&gt;穷到根本买不起书，连看书的机会都不给。&lt;/p&gt;
+&lt;p&gt;那家里没有书怎么办呢？他就去找人借书，借回来一个字一个字的把他抄下来。&lt;/p&gt;
+&lt;p&gt;白天他要劈柴，他要去种地，那晚上呢，&lt;/p&gt;
+&lt;p&gt;他就通宵抄书。冬天了，他的砚台里的墨水结冰了，手冻得全裂的是这个口子，&lt;/p&gt;
+&lt;p&gt;他也不敢停下来，因为这个书是借来的，他还要返回去。&lt;/p&gt;
+&lt;p&gt;宋联经常在大冬天里，衣裳单薄，要走几十里山路去请教老师。&lt;/p&gt;
+&lt;p&gt;有一天呢，路遇风雪，结果呢，就迟到了一点点。&lt;/p&gt;
+&lt;p&gt;老师非常的生气，直接把他赶出了书房。&lt;/p&gt;
+&lt;p&gt;被赶出书房的宋濂呢，他没有解释，也没有抱怨，也没有离开。&lt;/p&gt;
+&lt;p&gt;他就这样站在风雪当中啊，站了一整天，直到老师气消，&lt;/p&gt;
+&lt;p&gt;再把他请进去继续学习。后来他跟人讲起这段经历的时候啊，&lt;/p&gt;
+&lt;p&gt;他说这种谨小慎微的求学生活，一直伴随着我整个童年时期。&lt;/p&gt;
+&lt;p&gt;但是宋莲从来没有觉得自己委屈，&lt;/p&gt;
+&lt;p&gt;相反，她更害怕的是自己一不小心失去了学习的机会。&lt;/p&gt;
+&lt;p&gt;因为宋莲从小就知道一件事，家贫人普通，&lt;/p&gt;
+&lt;p&gt;读书是他唯一的出路。宋连七十岁那一年呢，他就把自己少年求学这段艰苦的经历讲给了当时来拜访他。&lt;/p&gt;
+&lt;p&gt;的一个晚辈老乡马泽君，&lt;/p&gt;
+&lt;p&gt;听这个就是宋东阳马生序。&lt;/p&gt;
+&lt;p&gt;后来很多人啊，看完这篇文章之后啊，都会说一句话叫少年不懂马生序，&lt;/p&gt;
+&lt;p&gt;读懂已无少年时。其实我现在站在这个角度啊，&lt;/p&gt;
+&lt;p&gt;我看你们就特别像是宋东阳马生序里的那个马生，&lt;/p&gt;
+&lt;p&gt;小马哥年轻有朝气，眼神里面是真的是自信又迷茫，&lt;/p&gt;
+&lt;p&gt;非常的可爱。十八岁最好的年纪，&lt;/p&gt;
+&lt;p&gt;我们现在坐在宽敞的教室里，想要读书可以去图书馆，&lt;/p&gt;
+&lt;p&gt;想要运动有体育场，你们拥有这一切的时候，你们是没有感觉的。&lt;/p&gt;
+&lt;p&gt;就是你们知道吗？并不是每一个人都有机会走进校园的，&lt;/p&gt;
+&lt;p&gt;更别说接受完完整的基础教育了。这个世界不一定平等，&lt;/p&gt;
+&lt;p&gt;但一定公平。如果说咱们现在吃不了读书的苦，&lt;/p&gt;
+&lt;p&gt;那你以后一定会吃生活的苦。读书的苦是短暂的，&lt;/p&gt;
+&lt;p&gt;你每一本看过的书，每翻过的一张卷子，&lt;/p&gt;
+&lt;p&gt;它都会成为你的底气。生活的故事漫长的，&lt;/p&gt;
+&lt;p&gt;是你将要持续的去对抗你人生中的无力且无助。&lt;/p&gt;
+&lt;p&gt;读书学习不是唯一的出路，但请相信，它是你抵达梦想最快的捷径。&lt;/p&gt;
+&lt;p&gt;朱熹先生有一句话啊，&lt;/p&gt;
+&lt;p&gt;他说少年易学老难成，一寸光阴不可欺。&lt;/p&gt;
+&lt;p&gt;我相信这句话现在很多的同学可能不一定能够理解，但是当你以后走出校园，&lt;/p&gt;
+&lt;p&gt;你在社会上经历了很多风雨之后，你就会明白。&lt;/p&gt;
+&lt;p&gt;宋濂在宋东阳马生序里写下的不只是自己那段少时求学的经历，&lt;/p&gt;
+&lt;p&gt;更是写给每一个年轻人的忠告。&lt;/p&gt;
+&lt;p&gt;读书之苦是人生当中最轻的一种苦，因为读书的苦，&lt;/p&gt;
+&lt;p&gt;它是向上的，它是有希望的，它是能让你变得更。好的苦，而生活的苦，&lt;/p&gt;
+&lt;p&gt;它是无尽的，是绵长的，是会让你越来越平庸的苦。&lt;/p&gt;
+&lt;p&gt;所以希望大家哈，吃了读书的苦，&lt;/p&gt;
+&lt;p&gt;就不要再吃生活的苦了。在我的成长过程当中啊，我一直把读书当成一件托能量的事。&lt;/p&gt;
+&lt;p&gt;你们想想看，每一本书都是在这个时代当中，&lt;/p&gt;
+&lt;p&gt;最厉害的人花一年、十年，甚至是一辈子写出来的，&lt;/p&gt;
+&lt;p&gt;但是你用七天，十天，半个月，&lt;/p&gt;
+&lt;p&gt;一个月就读完了，你用一个月的时间学到了人家一辈子的思考和钻研，&lt;/p&gt;
+&lt;p&gt;是不是一种最快的捷径？&lt;/p&gt;
+&lt;p&gt;是不是你用十天、半个月偷到了别人一生的能量？其实读书就跟我们吃饭一样的，&lt;/p&gt;
+&lt;p&gt;你们还记得上个星期一的中午，&lt;/p&gt;
+&lt;p&gt;你们吃了什么菜吗？不记得了对不对，&lt;/p&gt;
+&lt;p&gt;但是你吃过的每一口饭菜，即使已经长成了你身体里的血跟肉。&lt;/p&gt;
+&lt;p&gt;所以请大家记住啊，在这个世界上，从来没有白走的路，&lt;/p&gt;
+&lt;p&gt;你的每一步努力都算数。&lt;/p&gt;
+&lt;p&gt;点赞再加个关注呗！&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：何楚涵博士 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7630055222601125129/?region=CN&amp;amp;mid=7630055321737628425&amp;amp;u_code=2l31lgm6dgbm&amp;amp;did=MS4wLjABAAAAA3-bUGC_e68QTouWOZJl_v5zDYUhmV7x2ovqcWSyxmU&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=PleAxkB5YdWhfThj1efUtS7rcVsvNBNRfHJxZQMW2fo-&amp;amp;share_version=230700&amp;amp;ts=1776614685&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7630055222601125129/?region=CN&amp;amp;mid=7630055321737628425&amp;amp;u_code=2l31lgm6dgbm&amp;amp;did=MS4wLjABAAAAA3-bUGC_e68QTouWOZJl_v5zDYUhmV7x2ovqcWSyxmU&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=PleAxkB5YdWhfThj1efUtS7rcVsvNBNRfHJxZQMW2fo-&amp;amp;share_version=230700&amp;amp;ts=1776614685&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>借钱创业还被同学坑？你怎么可能成功？#邹先华</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">邹先华 OpenGet笔记</div>
+                    <h1>借钱创业还被同学坑？你怎么可能成功？#邹先华</h1>
+                    <div class="meta">
+                        <span>邹先华</span>
+                        <span>Fri, 17 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7629933506642119986/?region=CN&amp;amp;mid=7629933596531084074&amp;amp;u_code=5fk2gl98b6j&amp;amp;did=MS4wLjABAAAAVTuIepRC32NaZTS85fi0hhpUy_zcVc417jr1zOsBytA&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=i4BBB.3DNdTm_D0yefKZJxZ_CkGSfQrEuqtxL3QsLVg-&amp;amp;share_version=240300&amp;amp;ts=1776534994&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;p&gt;大叔，你好，周总，大叔在哪里呀？目前是在东莞，大叔在创业，伟哥伟哥你好，哎，你好，周总，哎，我是你老乡啊，也是湖北的老乡，好，我们孝感您知道的都是装修之乡，那个时候我们下门人都是上东北抹灰贴瓷砖，现在直接说那我也直接说问题，我也我也不例外，因为我今年是有52岁了，那个时候赶上了房地产的红利期，曾经也创业两次做过老板，但是后面因为做工装嘛，也是跟你差不多的遭遇嘛，就把钱刷砸进去就收不回，就垮掉了，垮掉了，然后自己就又找了几个朋友融了点资，然后也在银行贷了点款，跑到广东这边来就开厂，因为自己以前是干工地的，被开厂就就就没有什么经验，就被所谓的这个同学给坑了一下。现在就。&lt;/p&gt;
+&lt;p&gt;就负债，但是负债也不多，大概现在负债200多个吧，变成黑名单了，想想再做事儿挺难的，然后呢，很多人建议我去什么跑滴滴送外卖这个，跑网约车是吧，做代驾这些，但是我也不甘心，我也去做了一一段时间这个东西，后来就是看你的直播，然后觉得自己应该也有翻盘的机会，所以也在你的那个直播间买了这个豆包这个书，现在也一直在看，在学，现在也做这个自媒体，差不多也有两个多月吧，然后粉丝呢，大概已经在这个500多个，差不多600个了，他就一直每次的播放量就上不去，就卡在这个500~800之间，然后我做的这个赛道呢，就是叫这个大叔在创业，主要讲就是湖北人在广东创业，湖北人要帮湖北人这么一个，一个就是老乡的这个社，社群的这个圈子，这么一个赛道，就是重点想去拍我们湖北人在广东创业的这些小故事，然后就讲一个。&lt;/p&gt;
+&lt;p&gt;宝箱的情怀讲这些始终这个粉丝上不去，然后流量也上不去，始终卡在这个500~800，所以现在很迷茫，家里有几个孩子，两个大的已经参加工作，可以不用管了，然后因为因为那个出了这个，这个建工做工地的出了事的时候就离婚了，离婚了后面再婚，再婚又生了一个，生了一个小的，大概现在5岁多嘛，再婚的老婆在干什么，老婆是教师，还有固定的收入，嗯，对，你们现在在哪个地方生活，东莞在东莞，对，第一你前面要听，你前面要听实话，那肯定是实听实话嘛，前面要听实话，那肯定是听实话嘛，不听实话也不会跟你连线，不会打扰你啊。第一你搞这个抖音是对的，但是搞抖音的这个方向是错的，你搞的这个方向他不能够变现啊，你有多大的本事呢？你的粉丝又少，你有没有号召力，你宣传这个老乡，湖北老乡有什么意义啊，我这。&lt;/p&gt;
+&lt;p&gt;没有意义，你知道吗？你看我充了400多万粉丝，我的直播间这么多人，我变现都很难，那谁给你出了一个主意啊，让你搞抖音，搞这方面的内容，你这个要停下来不能搞了啊，学们您给个建议呢？给个建议，第一这是第一第二第二第二，你要真正的想翻身，应该出国，嗯，但是黑名单很难出去啊，你应该出国，曾经有人建议过这个，有有有在以前做做做建筑的朋友建议过让我去非洲，你应该出国，你一切都是个死的，你在国内搞什么，那个人，在哪一块连麦呀，那么嘈杂，你在哪里啊，你风扇关的在在在在家里后面有风扇，外面有一个挖掘机，没有没有，是风扇，风扇，我把风扇关了，你的，你的风扇怎么是这个样子呢？什么像个挖掘机，这应该没有了吧，你听我说啊，老乡，嗯。&lt;/p&gt;
+&lt;p&gt;自觉果断，毫不犹豫的出国，没有，现在没有这方面的门路啊，这个人是活的啦，我就问你，你过去发财靠什么，是不是靠你自己啊，这个是的，过去靠过去，发财靠你自己，你现在到国外去发财也靠你自己了，小兄弟啊，那你为什么在国内不能搞的呀？因为你在国内没有这个条件搞了，那你是个黑户了，你行动不便呢，你还没有赚钱，别人去找你要钱，国内的机会少了，国外的机会多了，有道理，你是怎么在想啊，你们啊，出去再说嘛，哪里会没有的，那在国外的这个一带一路建设，那么多国有企业在国外搞，搞建筑工地，搞开发，怎么会没有机会呢？你这个人是个活的呢，你能够跟我连麦，你到非洲，到东南亚，你到中东，你就找不到这样的人吗？还有一个啊，我跟你们说一下，不管你们怎么看我，我告诉你想不想听啊，你说听到了一点，哪里危险就往哪里去，俄乌比较危险，你就往俄乌去，现在伊朗打仗，你就往伊朗去，就这个意思。&lt;/p&gt;
+&lt;p&gt;曾经有一次有一个机会去那个埃塞俄比亚，最后放弃了，没去，就想着他自己真去到那边了，回不来，行了行了行了行了行了，你你你这这，反正我今天你们该说的不该说的我都说了，好吧，朋友们，你们觉得我说的是对的，他就扣个1，我希望你珍惜你今天跟我连麦的这个机会，你好好的把我的话说听进去。&lt;/p&gt;
+&lt;p&gt;你觉得大家觉得我说的是对的，大家扣个1，大家觉得我说的有道理的，扣个1好吧，那行吗？谢谢谢谢好，谢谢谢谢谢谢，嗯，这个人就是说你在什么情况下说什么话，是不是啊，你现在不是求稳，什么样的人求稳呢？你赚了钱，你生活比较。&lt;/p&gt;
+&lt;p&gt;你衣食无忧，你实现了财务自由，你就要稳，你什么都没有，你就要搏，要搏一把，对不对，那么你很稳，你像许家怡到198202017年的时候，一年能够赚200个亿的时候，那个时候就应该稳，就不要搏了，但是他那个时候他在搏，你知道吗？他在搏命，那最后一搏，你不就把他把自己搏进去了吗？嗯，上天不会让你一个某一个人永远赢下去，上天也不会让你永远输，上天给你关上一扇门，一定就会给你打开一扇窗，你像刚才这个朋友啊，我们的老乡，你是一个私心人，你连怎么出去你都出去不了，你还搞什么，有的是办法，出去不需要这个，违法不需要这个，这个啊，通过非法的途径，合法的也可以出去，出去以后你找什么路子，你要知道你的人是活的，你要知道中国人的智慧，你要相信你自己，是不是再连一个啊？&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：邹先华 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7629933506642119986/?region=CN&amp;amp;mid=7629933596531084074&amp;amp;u_code=5fk2gl98b6j&amp;amp;did=MS4wLjABAAAAVTuIepRC32NaZTS85fi0hhpUy_zcVc417jr1zOsBytA&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=i4BBB.3DNdTm_D0yefKZJxZ_CkGSfQrEuqtxL3QsLVg-&amp;amp;share_version=240300&amp;amp;ts=1776534994&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7629933506642119986/?region=CN&amp;amp;mid=7629933596531084074&amp;amp;u_code=5fk2gl98b6j&amp;amp;did=MS4wLjABAAAAVTuIepRC32NaZTS85fi0hhpUy_zcVc417jr1zOsBytA&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=i4BBB.3DNdTm_D0yefKZJxZ_CkGSfQrEuqtxL3QsLVg-&amp;amp;share_version=240300&amp;amp;ts=1776534994&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
