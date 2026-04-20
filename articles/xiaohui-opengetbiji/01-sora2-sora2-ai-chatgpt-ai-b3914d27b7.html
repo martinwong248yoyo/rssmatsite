@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sora2究竟在哪带来哪些突破？ Sora2模型的发布，可以称得上AI视频生成领域的ChatGPT时刻，模型进步是一方面，产品创新和玩法创新影响更大，让AI创作视频不再局限...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">晓辉博士 OpenGet笔记</div>
+                    <h1>Sora2究竟在哪带来哪些突破？ Sora2模型的发布，可以称得上AI视频生成领域的ChatGPT时刻，模型进步是一方面，产品创新和玩法创新影响更大，让AI创作视频不再局限...</h1>
+                    <div class="meta">
+                        <span>晓辉博士</span>
+                        
+                    </div>
+                    <div class="actions">
+                        
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;模型技术特性与生成质量突破&lt;/h2&gt;
+&lt;p&gt;Sora 2在生成质量上的核心进步体现在物理准确性和音画同步两个维度。就物理规则而言，模型现在能够还原更真实的物理反馈，例如篮球未投进时会在篮筐上弹跳，而非直接穿模进入；体操运动员的身体旋转和姿态连贯性也显著改善。此外，Sora 2实现了音画同步生成，声音与画面能够匹配呈现，这在之前的视频生成模型中较为少见。模型在面部表情、微表情等细节上的真实感也有所提升，且对prompt的响应可控性较强。&lt;/p&gt;
+&lt;p&gt;在实际使用中，仅用一句简单描述即可生成约9秒的视频。如果描述不够精细，模型会自动将其切分为多段并进行转场拼接，最终仍能实现主体一致性较高的效果。这意味着生成门槛已经下降到普通人无需专业运镜或剪辑训练即可上手的水平。&lt;/p&gt;
+&lt;h2&gt;App产品设计与Cameo数字分身功能&lt;/h2&gt;
+&lt;p&gt;Sora 2的发布不仅限于模型本身，还包括在美区苹果商店上架的配套App。该产品在界面设计上借鉴了短视频平台的交互逻辑，包含点赞、关注和内容生成入口，并采用邀请码机制实现早期用户的社交裂变，每位受邀用户可继续邀请四人。&lt;/p&gt;
+&lt;p&gt;其中值得重点关注的是Cameo功能。用户在注册后可通过录制一段个人视频，让系统识别五官特征并生成专属数字形象。该形象的使用权限可设置为仅自己、关注者或全部公开。作者利用这一功能生成了与友人共餐、与公众人物对打等场景，虽然部分表情还原尚有提升空间，但整体效果已具备较强的真实感和娱乐性。&lt;/p&gt;
+&lt;h2&gt;创作定位与社交生态启示&lt;/h2&gt;
+&lt;p&gt;从定位上看，Sora App明确强调鼓励创作而非单纯消费。作者认为，这类AI应用短期内并不会替代现有的社交工具，更可能作为真实社交关系的补充和增强。当前平台上传播度较高的内容，往往仍基于用户在现实社交中已有的共同兴趣和人际共鸣。&lt;/p&gt;
+&lt;p&gt;不过，随着算力成本进一步下降和模型质量持续提升，一句话生成高质量视频的创作方式，将大幅降低个人表达门槛，成为想象力的放大器。其长期价值或许不在于取代既有平台，而在于让基于真实社交反馈的创作互动变得更加普遍。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：晓辉博士 OpenGet笔记</div>
+                    
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

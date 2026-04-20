@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shadow AI聊聊职场中的AI工具使用 上周MIT那份报告里有个概念很有意思Shadow AI，即不是由企业采购而是由员工自掏腰包购买的AI工具，目前有90%的员工都会“自带A...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">晓辉博士 OpenGet笔记</div>
+                    <h1>Shadow AI聊聊职场中的AI工具使用 上周MIT那份报告里有个概念很有意思Shadow AI，即不是由企业采购而是由员工自掏腰包购买的AI工具，目前有90%的员工都会“自带A...</h1>
+                    <div class="meta">
+                        <span>晓辉博士</span>
+                        
+                    </div>
+                    <div class="actions">
+                        
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;Shadow AI的概念与数据背景&lt;/h2&gt;
+&lt;p&gt;上周MIT一份关于生成式AI的报告中提到了&quot;Shadow AI&quot;这个概念，指的是并非由企业统一采购、而是由员工自行购买和使用的AI工具。报告中有一组数据值得关注：目前只有40%的员工会使用企业部署的AI工具，但高达90%的人会使用自己采购的AI工具。这些未被纳入传统企业IT管理、不在公司集体采购清单中的工具，就是所谓的Shadow AI——相当于员工自带AI上班，自己为使用付费。&lt;/p&gt;
+&lt;h2&gt;员工选择自带AI工具的动因与个人实践&lt;/h2&gt;
+&lt;p&gt;这种现象一方面反映出企业统一采购的AI工具可能存在不足：不够灵活、缺乏记忆功能、迭代周期较慢。相比之下，面向个人用户（TOC端）的AI工具使用体验更好，大家用起来也更顺手。&lt;/p&gt;
+&lt;p&gt;我自己目前的主力AI工具包括Gemini、ChatGPT、Manus和伽马。最近因为事务较多，需要集中产出、交付和整理内容，基本上是多款工具同时开工：有的帮我做PPT，有的帮我梳理思路，有的帮我整理信息。&lt;/p&gt;
+&lt;h2&gt;组织态度的分化与领导认知的影响&lt;/h2&gt;
+&lt;p&gt;不过，并非所有部门或组织都鼓励使用AI。有同事分享，有些地方甚至认为用AI工具是偷懒、降低标准，担心难以控制质量。这种感受上的差异很大程度上取决于领导的认知——如果领导自己没用过AI，就很难理解它能带来的效率提升。一个比较开明、愿意拥抱新技术的领导，对组织氛围的改善非常重要。&lt;/p&gt;
+&lt;h2&gt;合规治理：企业面临的核心挑战&lt;/h2&gt;
+&lt;p&gt;TOC端的AI工具确实能在TO B场景中创造很大价值，这是不可否认的。最核心的还是要关注合规问题——隐私保护、商业秘密和合规风险如果能够规避，使用这些工具本身无可厚非。毕竟现在90%的人都在用，这也成为企业接下来必须面对的治理课题：如何在鼓励创新与保障安全之间找到平衡。&lt;/p&gt;
+&lt;p&gt;我还是挺想了解大家所在组织对AI使用是什么态度，是否鼓励，以及你们的主力模型有哪些。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：晓辉博士 OpenGet笔记</div>
+                    
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
