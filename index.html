@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RSS2GitHub</title>
+        <style>
+            :root {
+                --bg: #f4efe8;
+                --panel: rgba(255, 250, 244, 0.92);
+                --text: #1f2521;
+                --muted: #5d655f;
+                --accent: #c7592b;
+                --border: rgba(31, 37, 33, 0.08);
+                --shadow: 0 18px 48px rgba(67, 46, 23, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+                color: var(--text);
+                background:
+                    radial-gradient(circle at top left, rgba(199, 89, 43, 0.14), transparent 28%),
+                    radial-gradient(circle at bottom right, rgba(53, 96, 78, 0.14), transparent 32%),
+                    var(--bg);
+            }
+
+            main {
+                max-width: 960px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            header {
+                margin-bottom: 28px;
+            }
+
+            h1 {
+                margin: 0;
+                font-size: clamp(2.2rem, 4vw, 4rem);
+                line-height: 0.96;
+                letter-spacing: -0.04em;
+            }
+
+            .subtitle {
+                max-width: 52rem;
+                margin-top: 14px;
+                color: var(--muted);
+                font-size: 1.05rem;
+                line-height: 1.6;
+            }
+
+            .grid {
+                display: grid;
+                gap: 18px;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            }
+
+            .card {
+                padding: 22px;
+                border: 1px solid var(--border);
+                border-radius: 20px;
+                background: var(--panel);
+                box-shadow: var(--shadow);
+                backdrop-filter: blur(12px);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.74rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                margin: 12px 0 10px;
+                font-size: 1.35rem;
+                line-height: 1.2;
+            }
+
+            p {
+                margin: 0;
+                color: var(--muted);
+                line-height: 1.6;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 16px 0 18px;
+            }
+
+            .meta span {
+                padding: 6px 10px;
+                border-radius: 999px;
+                background: rgba(31, 37, 33, 0.06);
+                color: var(--muted);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.8rem;
+            }
+
+            a {
+                color: white;
+                background: var(--accent);
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            footer {
+                margin-top: 24px;
+                color: var(--muted);
+                font-size: 0.92rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>RSS2GitHub</h1>
+                <p class="subtitle">Export selected RSSHub feeds into static XML files for GitHub Pages.</p>
+            </header>
+            <section class="grid">
+                
+                <article class="card">
+                    <div class="eyebrow">Feed</div>
+                    <h2>新片场编辑精选</h2>
+                    <p>新片场编辑精选固定路由，默认导出前 20 条内容。</p>
+                    <div class="meta">
+                        <span>/xinpianchang/pick?limit=20</span>
+                        <span>xinpianchang-pick.xml</span>
+                    </div>
+                    <a href="./xinpianchang-pick.xml">Open XML</a>
+                </article>
+            
+            </section>
+            <footer>Generated from a local RSSHub instance and committed as static XML files.</footer>
+        </main>
+    </body>
+</html>
