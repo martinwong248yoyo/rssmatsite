@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>中企出海因地制宜：金融主权决定发展命运#独夫之心#海外中企#金融主权</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">独夫之心 OpenGet笔记</div>
+                    <h1>中企出海因地制宜：金融主权决定发展命运#独夫之心#海外中企#金融主权</h1>
+                    <div class="meta">
+                        <span>独夫之心</span>
+                        <span>Sat, 18 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7630414424934747444/?region=CN&amp;amp;mid=7630414604040276742&amp;amp;u_code=2gg333f7dcee&amp;amp;did=MS4wLjABAAAAk-82WPgAE_0AAm2Hpebu0TiM4aZVWXxa4b4i5w8MOic&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=ZFS8X2u7XGIdXLujnKeIhQlaUMJgotOGGJkMwrl2YPE-&amp;amp;share_version=240300&amp;amp;ts=1776614508&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;标题: “中企出海的制度适配、海外&quot;橱窗&quot;定位与金融主权的决定作用”
+日期: “2026-04-19”
+关键词: “中企出海, 金融主权, 社会主义橱窗, 亚洲四小龙, 因地制宜”
+摘要: “本文通过与嘉宾的对谈，探讨了中企出海因地制宜的制度适配逻辑，辨析了海外&quot;社会主义橱窗&quot;的实质，并结合亚洲四小龙的衰退历史论证了金融主权对国家经济命运的决定性作用。”
+来源: “独夫之心”&lt;/h2&gt;
+&lt;h2&gt;从&quot;中械师&quot;看中国力量的海外&quot;橱窗&quot;效应&lt;/h2&gt;
+&lt;p&gt;近日直播间有朋友提到巴基斯坦军队进驻沙特，我注意到了一个关键词——“中械师”。从小到大，我听过德械师、苏械师、美械师，却从未想过有生之年能听到&quot;中械师&quot;这个词。这让我想到，上个世纪有很多&quot;橱窗国家&quot;或&quot;橱窗地区&quot;，比如香港、西德，它们是资本主义在生产力、文化、制度层面的集中体现，矗立在两大阵营对抗的最前线。如今从巴基斯坦来看，这至少是我个人看来——是中国力量在军事层面的一种橱窗式展示。&lt;/p&gt;
+&lt;p&gt;与此同时，老师之前也聊到了岛内的问题。某省本身有其优势，地缘位置也比较特殊，未来回归之后，或许可以建设成为经济、文化交流层面的一个橱窗地区。最近各国政要、包括我们的一些邻国陆续扎堆来北京，车水马龙，非常热闹。顺着这个思路，我想请老师畅想一下：未来中国周围的国家和地区，会不会呈现出一种&quot;社会主义橱窗&quot;的盛景？&lt;/p&gt;
+&lt;h2&gt;&quot;社会主义橱窗&quot;的实质与中企出海的制度适配&lt;/h2&gt;
+&lt;p&gt;老师的解答非常到位。&quot;橱窗&quot;的意思，大概是说作为对外开放的区域，招引外资较多，又紧邻中国，受中国经济整体影响和辐射较多，呈现出中资扎堆的态势。中资有自己的组织特色，再加上我们提供的公共服务和产品叠加，就会显得&quot;中国味&quot;很重，成为对方国境之内的特别发展区域。&lt;/p&gt;
+&lt;p&gt;这种可能性确实存在，但这并不是我们广泛认为的&quot;社会主义味很重&quot;——实际上，它一定是资本主义性质占优的。中资走出去，更多还是贯彻了资本主义的特质和优势。归根结底，我们要发挥对在地国家的环境、制度、社会状况的理解，才能做好这件事。&lt;/p&gt;
+&lt;p&gt;中资为何在海外占优？一是背靠国家，能拿到很多廉价的公共服务产品和产业链条延伸；二是我们走出来之后懂得因地制宜。这些国家往往是封建国家、资本主义国家，中国人的灵活就在这里体现出来。&lt;/p&gt;
+&lt;p&gt;社会主义更多的是一种精神，资本主义其实也是一种精神，是一种作风、做派。这种作风和做派在某件具体的事情上指向上不冲突，但在最终的整体导向上完全不一样。我们过去讲&quot;姓资姓社&quot;，为什么是&quot;姓&quot;？讲的是归属权问题。&lt;/p&gt;
+&lt;p&gt;既然我们走出去，海外的中资除非是以国资为主——如果是国资为主，那这个地方就像你说的，是个社会主义橱窗；如果是以聚集性的私有中资为主，那我觉得就是一个中国文化背景占多的海外经济特区。所以每个地方还不一样。比如去东南亚看看，很多楼盘就是中国国资下属开发商开发的，再看看香港和一些地方国资委联合开发的东西，风格明显不同。&lt;/p&gt;
+&lt;p&gt;中国人的实用主义，能够非常好地内嵌到当地的文化内生性、政治内生性、制度内生性之中，我们做了非常多的探索和尝试。中资现在在世界各个角落生根发芽，长得都不错。&lt;/p&gt;
+&lt;h2&gt;金融主权缺失与亚洲四小龙的兴衰&lt;/h2&gt;
+&lt;p&gt;在中资不断发展壮大的同时，我们也看到了亚洲四小龙——包括后来的四小虎——曾经的辉煌。但在不到四五十年的较短历史进程中，它们就一泻千里。这背后有哪些原因？&lt;/p&gt;
+&lt;p&gt;老师的解答直指核心：逻辑就是没有金融主权。金融主权的背后是强大的政府。强大政府代表着什么呢？第一，对国有资产的保护；第二，在对国有资产完成保护的同时，能够在金融、财政、税收等制度规则上做调整，至少能够捍卫国有资产的在地性，也就是不外流。&lt;/p&gt;
+&lt;p&gt;这几个国家的问题，要不就是资产外流、产业链外逃——这证明中央政府太弱了；要不就是没有金融自主权。美国一纸协议过来，直接决定你的生死。比如广场协议，美国让日元升值、美元贬值，你听不听话？听话，那就完蛋了。&lt;/p&gt;
+&lt;p&gt;这个本质上还是资本主义社会制度的问题——它不可能缔造一个长盛不衰的国家经济。既然是资本主义，那就是资本说了算。资本的特性就是哪儿好去哪儿，绝对不是忠诚的。&lt;/p&gt;
+&lt;h2&gt;近代民族国家的资本本质与越南启示&lt;/h2&gt;
+&lt;p&gt;所以这个世界上最荒谬的一个说法就是：资本主义兴起的这个世纪，西方往往说这叫&quot;近代民族国家独立浪潮&quot;。结果一研究，发现全是资本主义国家。所谓近代民族国家，都是打着资本集团的旗号去独立的。&lt;/p&gt;
+&lt;p&gt;为什么捷克和斯洛伐克能够从奥匈帝国独立出来？很简单，捷克占据重工业、第二产业，斯洛伐克负责第三产业和第一产业，两个集团之间互相配合，就在一起。苏联进来以后给他们改造，斯洛伐克有了很多工业。虽然斯洛伐克的工业跟不上捷克，但经过苏联的社会主义改造以后，这两个国家其实已经不再互补了，成为了一个产业集群。苏联一解体，两个国家就分裂了——为什么？因为它们在经济上的互相匹配已经被社会主义制度打乱、被计划经济打断了，不再具备产业联盟的性质，就又分开了。&lt;/p&gt;
+&lt;p&gt;我们总讲近代民族国家，其实根本就没有那么回事。近代民族国家就是近代资本主义集团，是资本集团国家、在地企业国家，就这么简单。&lt;/p&gt;
+&lt;p&gt;老师说的这一点，联动一下昨天聊的越南。某几个主播特别喜欢吹这种&quot;中国起飞带&quot;的概念，印度吹不动就去吹越南。越南其实有一个非常显著的问题：整个国家的中央集权制度还是有待商榷的，或者说还有提高的空间。哪怕它采用的也是社会主义制度，这样去搞的话风险也是非常大的。华尔街对东南亚的镰刀不是挥了一两次了，而是很多次。四次挨揍、四次不长教训，根本原因也在于此——没有金融自主权，或者说国家集权的程度也不高。&lt;/p&gt;
+&lt;p&gt;资本主义有一个特点：只要在分权的地方，它就能活得非常好。为什么欧洲一屁股国家，资本主义能在这个地方兴盛发达？因为欧洲分权分得实在太厉害了，资本天然就喜欢这种地方。你要是一个大一统的集权国家，资本在这个国家掌握不了话语权——要么它天然反抗这种政权，要么它被这种政权镇压成为一个工具。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：独夫之心 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7630414424934747444/?region=CN&amp;amp;mid=7630414604040276742&amp;amp;u_code=2gg333f7dcee&amp;amp;did=MS4wLjABAAAAk-82WPgAE_0AAm2Hpebu0TiM4aZVWXxa4b4i5w8MOic&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=ZFS8X2u7XGIdXLujnKeIhQlaUMJgotOGGJkMwrl2YPE-&amp;amp;share_version=240300&amp;amp;ts=1776614508&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7630414424934747444/?region=CN&amp;amp;mid=7630414604040276742&amp;amp;u_code=2gg333f7dcee&amp;amp;did=MS4wLjABAAAAk-82WPgAE_0AAm2Hpebu0TiM4aZVWXxa4b4i5w8MOic&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=ZFS8X2u7XGIdXLujnKeIhQlaUMJgotOGGJkMwrl2YPE-&amp;amp;share_version=240300&amp;amp;ts=1776614508&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
