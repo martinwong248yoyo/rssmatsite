@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>男人必备外套#独夫之心#男装#原创设计#垫肩休闲外套#行政商务</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">独夫之心 OpenGet笔记</div>
+                    <h1>男人必备外套#独夫之心#男装#原创设计#垫肩休闲外套#行政商务</h1>
+                    <div class="meta">
+                        <span>独夫之心</span>
+                        <span>Tue, 14 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7628550525599960326/?region=CN&amp;amp;mid=7628550580119194409&amp;amp;u_code=1b52k6f027hi&amp;amp;did=MS4wLjABAAAAx8uAo7e9vBJmB4MoQpufrPR3qwFCwFveV3iybXfXd6E&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=AJO2Qrj8QfurwJOTMoa9w4O2f7FLgdTe2kAHT7vr6rA-&amp;amp;share_version=210600&amp;amp;ts=1776268972&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;产品核心卖点：垫肩设计与细节把控&lt;/h2&gt;
+&lt;p&gt;这类夹克市面上带垫肩的不好找，这款设计师挺会抓痛点。我们就是做细节做得好，跟别人PK的就是细节。&lt;/p&gt;
+&lt;p&gt;从价格来看，这款衣服的利润率很薄。一般情况下，在这个价位买衣服基本没什么细节可言，但这款结合面料和这些细节，性价比就很突出了。&lt;/p&gt;
+&lt;h2&gt;面料特性与穿着体验&lt;/h2&gt;
+&lt;p&gt;我穿这件衣服很多天，连洗都没洗过。穿上你就想不起来洗这件事——因为它不沾灰，碰上个浮灰啥的，一掸就掉了。&lt;/p&gt;
+&lt;p&gt;配衬衫的效果也很强。昨天我就穿的衬衫。&lt;/p&gt;
+&lt;h2&gt;尺码参考与购买建议&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;我的尺码&lt;/strong&gt;：我身高一米七五，体重在一百到一百二十斤之间，所以只要衣服是标准的亚洲码，我永远穿L码。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;针对用户咨询&lt;/strong&gt;：有用户问一米七七、一百五十八斤该拍哪个码？建议看详情页里的尺码表对照购买。其实问我也一样，我也是对照尺码表给你看。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;平台库存提醒&lt;/strong&gt;：如果一个平台的尺码卖没了，比如你在巴拉巴拉看到卖没了，就去dddc买；如果dddc也没了，就回巴拉巴拉买。现在量不大，有可能一下就断货了。&lt;/p&gt;
+&lt;h2&gt;职场场景与领导反应&lt;/h2&gt;
+&lt;p&gt;有用户问：普通员工穿这个，领导会不会不喜欢？&lt;/p&gt;
+&lt;p&gt;这有啥不喜欢的。如果领导问“小张，我看你那衣服比我的好”，你就反问领导衣服多少钱——领导那件肯定好几千，可能是什么鸟牌子，七八千。&lt;/p&gt;
+&lt;p&gt;你就说：“领导你穿得太有档次了，我这个不到三百块钱。”&lt;/p&gt;
+&lt;p&gt;领导听完马上傻了。从价位上来说，你绝对没有任何不尊重领导，你只是比领导会买。&lt;/p&gt;
+&lt;h2&gt;上身效果与个人感受&lt;/h2&gt;
+&lt;p&gt;我穿上这件夹克之后，也被镜子里的自己震惊到了，没想到居然如此有型。如果我是女孩，我现在也应该爱上我自己。真的是一点不比韩国的ree差。&lt;/p&gt;
+&lt;p&gt;认同的朋友把“峰哥真帅”打在公屏上。峰哥虽然人没了，但作为我的好兄弟，他现在又火了啊。&lt;/p&gt;
+&lt;h2&gt;活动信息与购买入口&lt;/h2&gt;
+&lt;p&gt;几个平台同步活动，满一千减一百，满两千减二百。需要的朋友点我主页橱窗下单，跟我直播一样。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：独夫之心 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7628550525599960326/?region=CN&amp;amp;mid=7628550580119194409&amp;amp;u_code=1b52k6f027hi&amp;amp;did=MS4wLjABAAAAx8uAo7e9vBJmB4MoQpufrPR3qwFCwFveV3iybXfXd6E&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=AJO2Qrj8QfurwJOTMoa9w4O2f7FLgdTe2kAHT7vr6rA-&amp;amp;share_version=210600&amp;amp;ts=1776268972&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7628550525599960326/?region=CN&amp;amp;mid=7628550580119194409&amp;amp;u_code=1b52k6f027hi&amp;amp;did=MS4wLjABAAAAx8uAo7e9vBJmB4MoQpufrPR3qwFCwFveV3iybXfXd6E&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=AJO2Qrj8QfurwJOTMoa9w4O2f7FLgdTe2kAHT7vr6rA-&amp;amp;share_version=210600&amp;amp;ts=1776268972&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
