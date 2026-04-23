@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>晓辉博士 - OpenGet笔记</title><link>https://www.biji.com/</link><atom:link href="https://martinwong248yoyo.github.io/rssmatsite/openget-creator-e69993e8be.xml" rel="self" type="application/rss+xml"/><description>晓辉博士 的本地清洗视频文稿 RSS 订阅，共 1 篇，仅包含已完成 textpolish 的文稿。 - Powered by RSSHub</description><generator>RSSHub</generator><webMaster>contact@rsshub.app (RSSHub)</webMaster><language>zh-CN</language><lastBuildDate>Thu, 23 Apr 2026 03:15:47 GMT</lastBuildDate><ttl>5</ttl><item><title>不是…而是…看得多了其实还可以用在Harness工程看到“不是…而是…”的句式，就知道十有八九是AI生成的，...</title><description>&lt;h2&gt;背景：一个有趣的观察&lt;/h2&gt;
+&lt;p&gt;哈喽，下班啦。今天我来北京出差，最近一直在看 Harness Engineering 相关的一些进展，突然联想到一个非常有意思的事情。&lt;/p&gt;
+&lt;p&gt;在大模型的应用中，我们经常会看到模型给出的回答里出现“不是…而是…”这样的句子。很多生成的文章都是这样的表述，我就很好奇：为什么大模型喜欢这样说？&lt;/p&gt;
+&lt;h2&gt;理解：排除与确认的双重作用&lt;/h2&gt;
+&lt;p&gt;其实比较好理解。“不是”排除了一些事情，“而是”确认了一些事情。通过把一些事情排除、另一些事情确认，你能更好地理解这个概念。&lt;/p&gt;
+&lt;p&gt;比如我们在解释 Agent 这个概念的时候，会说：那些不具备工具调用能力的模型，就不是 Agent。类似这样的界定，可以帮助我们更好地理解 Agent 到底是什么。&lt;/p&gt;
+&lt;h2&gt;迁移：从模型输出到驾驭工程&lt;/h2&gt;
+&lt;p&gt;然后我意外地发现，如果你把这样一套句式用在 Harness Engineering 里面，其实也非常有效果。&lt;/p&gt;
+&lt;p&gt;什么意思呢？我们希望驾驭大模型的时候，往往会告诉它应该做什么、我需要的结果是什么。很多时候，我们都需要很明确地表达意图。但其实一个非常有效的方案是：告诉它&lt;strong&gt;不要做什么&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这就是护栏，或者叫安全合规的底线。&lt;/p&gt;
+&lt;p&gt;举个例子：你不能去做特定的事情，比如不要去扫描我的整个目录，而是扫描特定文件夹的目录就可以了。程序员们很多时候就是这样用的——约束模型到底哪些事情不能做，它的边界在哪。这就是它的底线。&lt;/p&gt;
+&lt;h2&gt;结论：上限与底线的可控交付&lt;/h2&gt;
+&lt;p&gt;如果我们把底线告诉模型，同时让模型自己去判断、去摸高上限，那么结果就是可控的。&lt;/p&gt;
+&lt;p&gt;所以“不是…而是…”既可以是模型输出给人类的结果，也可以是我们为了驾驭模型产出、做意图表达的一种方式。我觉得这是非常高效的。&lt;/p&gt;
+&lt;h2&gt;另一个原则：确定性交给代码&lt;/h2&gt;
+&lt;p&gt;做 Harness Engineering 还有一个原则：把确定性交付的事情交给代码。因为大模型是可以写代码的。如果有一些工作你希望它做确定性的交付、不能有幻觉，你可以让它帮你把代码写出来，百分之百做对。而不确定性的事情就不要写代码，交给模型自己判断就好。&lt;/p&gt;
+&lt;h2&gt;总结：在不确定性中寻找确定性&lt;/h2&gt;
+&lt;p&gt;整个驾驭工程的理念，就是在不确定性中寻找确定性。我们希望模型交付的结果是可控的，所以用这种“不是…而是…”的方案——虽然我们看起来很多、很讨厌，但确实有效，因为它对概念的正反面都做了对比和论证。&lt;/p&gt;
+&lt;p&gt;这就是今天想跟大家分享的一点。拜拜。&lt;/p&gt;
+</description><link>https://martinwong248yoyo.github.io/rssmatsite/articles/openget-creator-e69993e8be/01-harness-ai-1494f5746a.html</link><guid isPermaLink="false">1494f5746a</guid><pubDate>Mon, 20 Apr 2026 16:00:00 GMT</pubDate><author>晓辉博士</author><category>short_video_note</category></item></channel></rss>

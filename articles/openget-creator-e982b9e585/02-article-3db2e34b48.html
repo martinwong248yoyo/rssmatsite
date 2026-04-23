@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>有些人一辈子没有成就，因为他们都在顺着人性！#邹先华#逆人性</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">邹先华 OpenGet笔记</div>
+                    <h1>有些人一辈子没有成就，因为他们都在顺着人性！#邹先华#逆人性</h1>
+                    <div class="meta">
+                        <span>邹先华</span>
+                        <span>Tue, 21 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7631517455235534107/?region=CN&amp;amp;mid=7631517737588001562&amp;amp;u_code=369cah1h0ckf&amp;amp;did=MS4wLjABAAAA0eYF_CqxcgW5SM5lspORcjCmf7IaZLrW3PfYIDeW8kQ&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=kxAfqpRRyZojHQzEr8xb8AXDNR93Lb7SmZmKEnEhERU-&amp;amp;share_version=220000&amp;amp;ts=1776880548&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;背景：一位底层年轻人的困境&lt;/h2&gt;
+&lt;p&gt;你说现在大环境不好，那么多人发大财，一代人不都在活吗？什么叫大环境不好？那我大环境不好，我的直播间为什么这么多人呢？你们年轻人，你为什么不能够好好努力工作？&lt;/p&gt;
+&lt;p&gt;你好，我是这样的，我是一个社会比较底层的娃，生活上有几个问题想请教一下。&lt;/p&gt;
+&lt;p&gt;免贵姓熊，24岁。没读大学，初中都没读。我是贵州人，来东莞这边打工，刚出来还没找到工作。我自己是开着车出来的，已经结婚了，有两个小孩，开销比较大，还没挣到钱。之前在做传统行业木质工艺品，行业下行，后面就没做，也没赚到钱，现在还欠一点债。&lt;/p&gt;
+&lt;p&gt;我想把我现在这个车卖了。如果在东莞上班，车也用不上，卖了把债还了，有债心里不踏实。但家里老婆不同意。&lt;/p&gt;
+&lt;h2&gt;核心矛盾：回去打工还是另找出路&lt;/h2&gt;
+&lt;p&gt;我之前做木制品加工，行业下行时家里有事，我就辞职回家了。再出来时，原来的老板给我发信息，让我回去。因为行业下行，工资降了一点。我在那个行业干了四五年五六年，老板觉得我踏实，说现在工资降是没办法，不是针对我一个人。&lt;/p&gt;
+&lt;p&gt;我在纠结要不要回去。毕竟做了几年，有行业积累。如果换到其他行业，现在大环境也不好，不知道做什么，前期什么都要重新开始学。我年纪小就在那个厂里面从打工开始做，做到后面做销售。&lt;/p&gt;
+&lt;h2&gt;邹先华的三条原则&lt;/h2&gt;
+&lt;p&gt;你这样乱七八糟的，太细枝末节。我跟你说几个原则问题。&lt;/p&gt;
+&lt;p&gt;小伙子，记住三句话：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一，宁愿睡地板，也要当老板。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你这样的人，如果去打工，一辈子很难有出息——因为没文化，初中都没读完。所以宁愿睡地板，你要当老板。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二，要动脑筋，不能光低头拉车，要抬头看路。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;观察什么样的事适合你去做。观察别人是怎么赚钱的，你能不能学，能不能复制。&lt;/p&gt;
+&lt;p&gt;你家里有人做生意吗？&lt;/p&gt;
+&lt;p&gt;——我堂哥在做生意，做得稍微好一点，大概几百万资产。他也是让我去帮他打工。&lt;/p&gt;
+&lt;p&gt;——你可以跟他做销售。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三，无论做什么，都要努力、吃苦、勤奋，吃到别人不能吃的苦，才能做人上人。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;为什么大多数人没有成就：顺着人性&lt;/h2&gt;
+&lt;p&gt;一般的人为什么一辈子没有成就、赚不到钱？因为他们都在顺着人性。&lt;/p&gt;
+&lt;p&gt;人性是什么？趋利避害，享受，不愿意吃苦，希望别人尊重自己，不熟悉的工作不愿意学，只愿意做自己熟悉的工作、待在自己熟悉的环境。这全部是顺着人性。&lt;/p&gt;
+&lt;p&gt;所有的让你舒服的，都是损人性的——让你最后没有斗志、没有能力。&lt;/p&gt;
+&lt;p&gt;举个例子：冬天外面很冷，你要出去卖货。这对身体是不是考验？有的人吃不了这个苦，下雨就不出去。比如你摆地摊、搞个小餐饮、做早餐，你怕冷就不出去。不出去是顺人性——为了躲避冬天的寒风之苦。但你不出去、不吃苦，客人就不信任你，你的早餐生意就做不下去。&lt;/p&gt;
+&lt;h2&gt;什么叫“逆人性”&lt;/h2&gt;
+&lt;p&gt;所有有大成就的人，包括你，现在很穷，要想今后成就一番事业，就必须吃苦耐劳，必须向上社交。你要跟别人说好话，要陪笑脸，请别人吃饭，交朋友，尊重别人，忍受他对你的白眼和冷漠。这叫逆人性。&lt;/p&gt;
+&lt;p&gt;做事业成功的人——比如读书的孩子、练武功的人——冬练三九，夏练三伏。你要做生意，就要流汗、流血，付出比别人多。每一个取得成就的人，没有不吃苦的。&lt;/p&gt;
+&lt;h2&gt;我自己的例子&lt;/h2&gt;
+&lt;p&gt;你看我的直播多久了？&lt;/p&gt;
+&lt;p&gt;——有一两年了，你刚开始做的时候我就看了。&lt;/p&gt;
+&lt;p&gt;你说我要把直播搞起来，我吃苦没有？我今年64岁，每天坚持直播。今天从深圳坐飞机三个小时，刚刚到天津，马不停蹄，还没吃晚饭，现在就打开加号键给你们直播。&lt;/p&gt;
+&lt;p&gt;我想不想玩？很想。我想不想跟天津的哥们、我的代理商们晚上在一起喝8+1？很想。但如果我晚上跟他们在一起，明天可以开会，但今天晚上就不能跟你们做直播。所以我必须克服自己的贪婪，克服只想跟朋友一起吃喝玩乐的欲望。&lt;/p&gt;
+&lt;p&gt;你们年轻人，特别是像你，家里没有太多很成功的人跟你说这些话，所以你们会吃很多亏。&lt;/p&gt;
+&lt;h2&gt;年轻人常见的陷阱：浅尝辄止&lt;/h2&gt;
+&lt;p&gt;你会不会发抖音短视频？&lt;/p&gt;
+&lt;p&gt;——会。&lt;/p&gt;
+&lt;p&gt;作品多不多？&lt;/p&gt;
+&lt;p&gt;——不会剪辑，没拍过。播放量不大。&lt;/p&gt;
+&lt;p&gt;有多少粉丝？&lt;/p&gt;
+&lt;p&gt;——之前那个账号可能有一两千个，后来没弄了。&lt;/p&gt;
+&lt;p&gt;为什么不弄？&lt;/p&gt;
+&lt;p&gt;——后面感觉没什么成果。&lt;/p&gt;
+&lt;p&gt;你是浅尝辄止。你这样的人很容易放弃。&lt;/p&gt;
+&lt;p&gt;有个寓言故事：我挖井，先挖两米深见不到水，换一个位置挖三米深也没见到水，再换一个位置挖十米深还是见不到水。其实水就在十一米的地方。做任何事都要坚持。&lt;/p&gt;
+&lt;p&gt;今天把我说的这句话记住：做事要死磕到底，要能吃苦。我就是你的表率。&lt;/p&gt;
+&lt;h2&gt;最后的纠结与回应&lt;/h2&gt;
+&lt;p&gt;我唯一最纠结的是：你说要逆人性，但大环境不好，我有家要养，有两个小孩。我是回到老本行，还是逆人性重新做一个事业？&lt;/p&gt;
+&lt;p&gt;——我不知道。你自己想办法。做任何事情要想办法，要动脑筋，要下功夫，不要让别人给你答案。&lt;/p&gt;
+&lt;p&gt;你说现在大环境不好，那么多人发大财，一代人不都在活吗？什么叫大环境不好？我的直播间为什么这么多人呢？你们年轻人，你为什么不能够好好努力工作？&lt;/p&gt;
+&lt;p&gt;你才二十几岁。我告诉你，好好的做，一年以后一年赚个几千万、赚个几个亿都有可能。&lt;/p&gt;
+&lt;h2&gt;给年轻人的最后提醒&lt;/h2&gt;
+&lt;p&gt;李小熊，不要放弃自己。多挑战自我，多跟自己死磕，多学手艺，多向有料的人学习。&lt;/p&gt;
+&lt;p&gt;你要始终向上社交，跟比你强很多倍的人交朋友。你要能够提供情绪价值，能够忍受别人对你的不客气。别人不搭理你，你也要靠近他。只有这样，你才能找得到属于你的机会。&lt;/p&gt;
+&lt;p&gt;你们这样一批年轻人，最容易陷入的困境是：向上社交很痛苦，不愿意向上社交；跟一帮狐朋狗友搅到一起很容易，心里很舒服，但你永远赚不到钱。&lt;/p&gt;
+&lt;p&gt;慢慢来。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：邹先华 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7631517455235534107/?region=CN&amp;amp;mid=7631517737588001562&amp;amp;u_code=369cah1h0ckf&amp;amp;did=MS4wLjABAAAA0eYF_CqxcgW5SM5lspORcjCmf7IaZLrW3PfYIDeW8kQ&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=kxAfqpRRyZojHQzEr8xb8AXDNR93Lb7SmZmKEnEhERU-&amp;amp;share_version=220000&amp;amp;ts=1776880548&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7631517455235534107/?region=CN&amp;amp;mid=7631517737588001562&amp;amp;u_code=369cah1h0ckf&amp;amp;did=MS4wLjABAAAA0eYF_CqxcgW5SM5lspORcjCmf7IaZLrW3PfYIDeW8kQ&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=kxAfqpRRyZojHQzEr8xb8AXDNR93Lb7SmZmKEnEhERU-&amp;amp;share_version=220000&amp;amp;ts=1776880548&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>当AI成为底座，到底什么才是真正的AI原生汽车本期视频，我们探讨一个复杂但极其有趣的话题——到底什么是真...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">王自如AI OpenGet笔记</div>
+                    <h1>当AI成为底座，到底什么才是真正的AI原生汽车本期视频，我们探讨一个复杂但极其有趣的话题——到底什么是真...</h1>
+                    <div class="meta">
+                        <span>王自如AI</span>
+                        <span>Mon, 20 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7631135445690223918/?region=CN&amp;amp;mid=7631136168020609835&amp;amp;u_code=5fk2gl98b6j&amp;amp;did=MS4wLjABAAAAhlR0Ual5FIN9j0aJq9wGxgMiDxVED6RrySQf2Rii6cw&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=2VHhjfuASlHxReqLM1sGaVPN2BMXH9Vn8ymy_8EmaQo-&amp;amp;share_version=240300&amp;amp;ts=1776796913&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;开篇：从科幻到现实的工程路径&lt;/h2&gt;
+&lt;p&gt;哈喽，大家好，今天我们用比较长的篇幅来探讨一个复杂但特别有趣的话题——什么叫做AI原生汽车（AI native automobile）。&lt;/p&gt;
+&lt;p&gt;当然我要事先说明：这是一个 sponsored video。但请大家相信，不管视频的属性如何，我都会尽可能让里面的信息提供一定的参考价值。&lt;/p&gt;
+&lt;p&gt;在解构具体产品之前，我们先解构一下“AI原生汽车”这个听起来比较抽象的概念。&lt;/p&gt;
+&lt;p&gt;不知道大家小时候有没有看过一部美国电视剧《霹雳游侠》？里面讲的是一个男主人公开着一辆高度智能化的汽车，完成各种特工类型的任务。我不是想讲科幻片，而是想说：那就是我们心目当中对原生AI汽车最终极的想象。&lt;/p&gt;
+&lt;p&gt;这部科幻片在今天变得极为有意义，是因为AI到来之后，让我们在现实与科幻之间构建起了一条可解释的工程实现路径。&lt;/p&gt;
+&lt;p&gt;稍微解释一下你就理解了：在电视剧里，那辆车可以完成复杂对话，对战局情况进行推理、决定如何逃离现场——这不就是今天AI的推理能力吗？第二，它能躲子弹、躲导弹，本质上就是一个高速推理的自动驾驶能力，加上极限的车身姿态控制。第三，它可以根据车里坐的人不同，营造不同的聊天氛围，知道该做哪些最恰当的动作——这就是很强的座舱环境感知。&lt;/p&gt;
+&lt;p&gt;小时候我们觉得那是科幻片。但今天，因为AI时代的到来，我们有了从现实到科幻之间可解释的工程实现路径。&lt;/p&gt;
+&lt;h2&gt;AI原生汽车的核心定义：让车在场景中做出最得体的反应&lt;/h2&gt;
+&lt;p&gt;在我们的生活当中，没有人是007，我们不需要躲子弹。那么AI原生汽车的意义在哪里？&lt;/p&gt;
+&lt;p&gt;我们希望车真正地去感知环境，加上它的推理能力，在每一个场景之下都做出最恰当、最得体的反应，而不是像一个机械化的脚本一样——一旦开始就要一直跑完。&lt;/p&gt;
+&lt;p&gt;举一个简单的例子：&lt;/p&gt;
+&lt;p&gt;当我一个人开车时，上车后你感知到温度或环境不合适，帮我开窗、调空调都可以，甚至用语音告诉我你接下来要做的动作，这些是合理的。但同样的场景下，如果我旁边坐了一个人，且我们正在聊天交流，你是不是就不应该再用语音打断我们的氛围？&lt;/p&gt;
+&lt;p&gt;另一个例子：我在车上点蚊香时，打开车窗会让车内环境瞬间变好。但如果外面正在下雨，或者是零下十度，是不是就不应该做这件事？甚至车窗打开的幅度应该小一点？&lt;/p&gt;
+&lt;p&gt;这不是躲子弹，也不是做特工，而是让车真正对环境有所感知，结合推理能力，做出在这个场景之下最合理、最恰当、最得体的响应——而不是通过预设脚本一路执行。这才是AI原生汽车能够带来的用户体验。&lt;/p&gt;
+&lt;h2&gt;为什么今天的所谓AI汽车不够聪明？&lt;/h2&gt;
+&lt;p&gt;如果这是AI原生汽车的终极愿景，那为什么我们感觉今天号称AI汽车的产品都不那么聪明呢？&lt;/p&gt;
+&lt;p&gt;因为在实现机制上，它们并不是通过AI推理加环境感知来完成动作，而是通过非常固定化的脚本。今天所有车型在完成语音操作或所谓环境感知时，非常机械化。基本的数据实现路径、唤起和激发场景，是通过语音的关键字提取和正则表达式来执行的。&lt;/p&gt;
+&lt;p&gt;举个例子：它不仅仅会把“打开空调”这个动作和“空调”这个名词联系在一起，可能还会做三五个其他关键字，比如“冷”、“热”、“我想凉快一点”等等，这些都变成某个具体脚本的触发关键字。&lt;/p&gt;
+&lt;p&gt;那为什么我们依旧会觉得今天的车已经蛮智能了？&lt;/p&gt;
+&lt;p&gt;因为车是一个半隐私的封闭环境，你在车内能做的事情非常有限。也正是这个前提，让人们在语音操控场景下变得极为收敛、聚焦。在一个聚焦的场景下，语音指令是可被穷举的，程序脚本也几乎可被穷举。这才给人们在AI时代到来之前，营造出了一种相对智能、相对灵活、相对好的体验。&lt;/p&gt;
+&lt;p&gt;但我还是那句话：你可以通过穷举的方式在一定空间内达到理想的场景，但因为技术架构和本质上的局限，你很难取得更高的上限。真正想要走向“环境感知加推理能力”，带来得体、合理的响应，必须通过AI技术的植入。&lt;/p&gt;
+&lt;h2&gt;产品思维的范式转变：从硬件加AI到AI定义硬件&lt;/h2&gt;
+&lt;p&gt;如果今天产品经理思考“AI原生汽车”和传统造车思维有什么本质区别？最本质的区别是思考出发的原点不同。&lt;/p&gt;
+&lt;p&gt;如果今天我们把冰箱、彩电、大沙发、方向盘和四个轮子放在中间，然后去想“如何把AI能力用螺丝拧在这种产品形态上，能带来怎样的用户体验”——那就是今天所有新能源汽车的做法。&lt;/p&gt;
+&lt;p&gt;而AI原生汽车的做法完全不同：我们首先要从脑子里清掉“汽车”这个东西，先去深刻理解今天模型基座的核心能力是什么，Agent的能力边界在哪里，理解Agent+大模型带来的用户体验和思维上限，然后再想着围绕这样的核心AI能力去构建硬件。&lt;/p&gt;
+&lt;p&gt;比如说：我给它装上四个轮子会是什么样子？给它装上冰箱、彩电、大沙发、空调和音响之后又会变成什么样子？思考的原点不同，最终的结果才能带来本质上的变化。&lt;/p&gt;
+&lt;h2&gt;上下文即一切：环境感知的维度与颗粒度&lt;/h2&gt;
+&lt;p&gt;在宏观层面，到底该如何构建一个AI原生汽车？&lt;/p&gt;
+&lt;p&gt;Context is everything——上下文就是一切。&lt;/p&gt;
+&lt;p&gt;在自动驾驶过程中，今天的纯视觉方案基于30秒到1分钟左右的长时序来判断路面和周边环境。这30秒到1分钟的视频画面，就是汽车推理的上下文窗口。因为我持续推理着过去一分钟路面上发生的变化，当旁边一辆车接近我时，我大概率能准确判断它是想并线，还是只是从隔壁车道靠拢——而不是单纯通过雷达和距离传感器知道它离我很近、我很慌、然后急刹。所以，长时距推理是做出正确响应的关键。&lt;/p&gt;
+&lt;p&gt;在座舱领域也一样。我们需要抽象地理解什么是“上下文”——不是说我上一句话说了什么，你说想去吃饭、导航到餐厅，然后给我导航到餐厅，这两句话才叫上下文。这个上下文是极为广义的。&lt;/p&gt;
+&lt;p&gt;举个例子：车内的摄像头就是上下文，副驾驶的座椅传感器也是上下文，空气净化器滤芯、音响音量、空调温度——车里边每一个原子化的感光元件都可以理解为能够供给大模型进行推理的上下文。你能喂给大模型的上下文维度越多、颗粒度越精细，以今天模型的能力来说，它就越有可能做出最合理的判断。&lt;/p&gt;
+&lt;p&gt;像我刚才举的例子：平时你上车要调空调，但有人的时候你可以直接调节，不需要再用语音对话。那就是因为环境与温度的上下文、车内的麦克风上下文同时被注入到大模型，而不是简单粗暴地在主驾驶上车时就自动触发语音交互。&lt;/p&gt;
+&lt;p&gt;这就是原生AI汽车和脚本化智能汽车在本质交互体验上的差异。&lt;/p&gt;
+&lt;h2&gt;工程架构：Agent、上下文打包与工具调用&lt;/h2&gt;
+&lt;p&gt;在工程上，到底该如何构建这样一个高度智能化的AI环境？可能要分为几个步骤：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一&lt;/strong&gt;，主机厂应该首先构建一个Agent（智能体）。在座舱之内或者说整车之内搭载一个统一的智能体，去接收用户的所有指令。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二&lt;/strong&gt;，结合对环境感知和各种传感器信号，对环境的真实情况做出判断。这个判断工作由大模型完成，但如何打包哪些传感器的信号、该做出怎样的反应，是由Agent喂给大模型的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三&lt;/strong&gt;，当大模型推理完毕，将计划和执行结果返回给Agent时，Agent就要做事了：把整车之内所有的元器件甚至控制系统，打包成Agent可以被调用的工具。比如座椅可能是一个工具，空调是一个可被调用的工具，车窗也是一个可被调用的工具。如何在这些工具中排列组合，就是大模型推理完的结果，由Agent来执行。&lt;/p&gt;
+&lt;p&gt;为什么打包车内的上下文、把所有的电控和传感器信号变成大模型和Agent可调用的工具和上下文极为重要？&lt;/p&gt;
+&lt;p&gt;因为当车辆智能化程度变得非常高时，我恨不得把整个车所有的车窗、座椅、空调、行车、底盘、甚至方向盘所有这些信号都打包出来。打包得越精细，你在车辆内部和外部的控制能力就越强大，能够得出的结果也就越匹配当下的场景。&lt;/p&gt;
+&lt;p&gt;这特别类似于健身中的“肌肉目击能力”。新手练背时，教练说发力正确但感觉不到；练臀腿时，臀部和腿部的发力感知不明显。新手和老手最本质的区别是，你没有经过特别多的训练，神经对于肌肉的控制力不够强。这就像智能体对车辆的硬件控制力不够强一样。打包每一个精细的电控传感器和信号给Agent，就像在健身中增强肌肉目击能力——维度拆得越细，能控制的维度越精准，组合出来的结果对用户来说才会越细腻。&lt;/p&gt;
+&lt;h2&gt;工程落地的三大难点&lt;/h2&gt;
+&lt;p&gt;刚才我们只是在宏观逻辑上构建基本架构。那么车上的挑战在哪里？&lt;/p&gt;
+&lt;h3&gt;1. 打包上下文的难度&lt;/h3&gt;
+&lt;p&gt;什么时候打包？打包什么样的上下文，让Agent和大模型能够完成推理？这是第一个难点。&lt;/p&gt;
+&lt;h3&gt;2. 复杂指令与Pre-tool机制&lt;/h3&gt;
+&lt;p&gt;当用户给车机发送一个非常复杂的指令，比如“明天我要去珠海自驾游，帮我规划合理路径，在哪里充电、在哪里吃饭”，Agent可能无法在第一时间完成复杂推理。在多个工具调用的过程中，你必须第一时间给用户一个反应，让用户知道你在做事，他才有耐心等。这在Agent架构中叫做 Pre-tool——在正式调用工具完成推理之前，先给用户一个初级反应。&lt;/p&gt;
+&lt;h3&gt;3. 平行工具调用与工具遮罩&lt;/h3&gt;
+&lt;p&gt;平行工具调用从软件上来说并不复杂，但难点在于：主机厂如果想让模型完成大量平行工具调用，必须在自己的Agent系统中做大量脚手架和验证机制，确保不会调用多余的工具或遗漏工具，用户的意图不会被推理到一半就掉线。这叫做 Harness Engineering。&lt;/p&gt;
+&lt;p&gt;还有一个非常挑战的点：如果我整车里的传感器和电控内容非常多，同时毫无保留地暴露给大模型，可能有几百上千个工具可以调用，那么大模型的注意力会被空前稀释。如何保证它能调用正确的工具并落到正确的业务域？&lt;/p&gt;
+&lt;p&gt;这就可能需要做大量的工具遮罩。比如识别到用户意图是调节车内舒适环境，那么我只会把座椅、空调、车窗、空气净化器等相关的工具暴露出来。甚至在行车状态下暴露得更少。工具遮罩是Agent落地工程上非常重要的维度，确保每次推理都能产出可预测、可审计、可追溯的结果。&lt;/p&gt;
+&lt;h3&gt;4. Post-tool 结果校验&lt;/h3&gt;
+&lt;p&gt;当我们所有的工具和推理都完成、结果被汇总且用户比较满意时，在真正呈现给用户之前，Agent可能要进行最终的一次校验。比如我让你调用五个工具完成五个结果的调查并最终汇总，你到底是不是完成了五个？还是只调了三个？还是提前结束了？校验机制确保在行车场景中，一百次里有九十九次都能拿到理想结果。&lt;/p&gt;
+&lt;p&gt;从Pre-tool到平行工具调用，再到原子级执行和结果校验，这一系列极其考验一个传统硬件厂商在软件工程上的实现能力，同时也是对硬件公司在Agent和AI理解上的重大终极拷问。如果你不理解这件事，很难通过AI去设计这样的结果。给领导汇报时，领导可能说：“没关系，用语音不就可以了吗？我们写一个程序不就可以了吗？”&lt;/p&gt;
+&lt;p&gt;所以，如果你理解了AI的能力和汽车的场景，我刚才描述的东西听起来并不是那么复杂，也是工程上绝对可实现的。但为什么今天汽车上依旧没有被落地？&lt;/p&gt;
+&lt;h2&gt;水面之下的关键：可控的灰度与 Harness Engineering&lt;/h2&gt;
+&lt;p&gt;这里有一个非常重要的误区。&lt;/p&gt;
+&lt;p&gt;通过语音关键字触发脚本，其实有它的好处：程序是写死的，结果是可预测的。而完全对立的反面，是把所有上下文无条件交给大模型，让模型自由推理——结果可能因为大模型幻觉、上下文过多导致注意力稀释，每次产生的结果非常不确定。&lt;/p&gt;
+&lt;p&gt;这就形成了一个钟摆的两端。你在做Agent和汽车智能化的过程中，要么走向极度可确定的结果但失去灵活性（出现我明明在跟人说话、它非要刷存在感的状况），要么走向完全不可控的结果——这在用车体验中绝对不可接受。&lt;/p&gt;
+&lt;p&gt;所以真正车厂在更隐性层面上的难点是：如何将Agent规划并约束在一个非常可控的灰度范围之内，既保证每次结果高度可靠，同时不损失Agent推理和大模型的灵活性，让它在可控轨道内运行。这就是非常重要的 Harness Engineering（脚手架工程）。&lt;/p&gt;
+&lt;h2&gt;安全隔离：黑区、灰区与彩区&lt;/h2&gt;
+&lt;p&gt;第三个难点：汽车毕竟是涉及人身安全的重要交通载具。主机厂与一般做Agent的重大区别在于安全隔离。&lt;/p&gt;
+&lt;p&gt;Agent可以做高度灵活的推理，但哪些东西是Agent绝对不可以碰的？它需要被隔离在安全的沙箱化环境中去发挥聪明才智，不要在整车范围内什么都看得见、什么都操作，让行车安全受到威胁。&lt;/p&gt;
+&lt;p&gt;这里又出现了一个灰度：如果你把它控制在极为狭小的沙箱内，还不如不做Agent，因为能做的事太少了。如果让它发挥得极大，既能控制座舱也能控制自动驾驶，就可能暴露更大风险。沙箱范围的大小、每个车厂激进程度的高低，直接决定着我们对这辆车的感受到底如何——它是真聪明还是假聪明。&lt;/p&gt;
+&lt;h2&gt;荣威“家悦”的实践：从理念到工程映射&lt;/h2&gt;
+&lt;p&gt;在前段时间我发的一个汽车视频中，主要探讨了中央计算架构的问题，也简要讲到未来新能源汽车发展的重要趋势——Agent上车，甚至车子高度智能化。今天这个视频更多探讨如何通过Agent的工程落地，结合汽车场景和大模型推理能力，让车在2026到2027年这未来12个月内真正变得聪明、可靠且可感知。&lt;/p&gt;
+&lt;p&gt;我很惊讶的一点是：我第一次听到“AI原生汽车”这个名词，是在大概二十多个月以前，在一次线下活动交流中从上汽荣威的同事嘴里听到的。今天刚好是他们的品牌之夜，发布了关于AI汽车的具体产品载体——新车叫“家悦”（家：面向家庭；悦：悦己空间、悦己设计、悦己体验、悦己智能）。&lt;/p&gt;
+&lt;p&gt;我觉得现在讨论这款车的硬件参数和配置细节为时尚早，一方面理念刚刚发布，另一方面我个人也不是很感兴趣。真正吸引我的是发布会上提出的“原生AI汽车”这个重要理念。&lt;/p&gt;
+&lt;h3&gt;计划+执行的Agent范式&lt;/h3&gt;
+&lt;p&gt;荣威采用“计划+执行”的管线，在我看来是汽车场景下最为合理的Agent范式（而不是ReAct）。在他们的软件架构设计中叫做 CPP，宏观逻辑高度相似：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;C（Context）&lt;/strong&gt;：将整车两千多个精细化的电子控制元器件全部打包，成为可以注入大模型中的上下文，甚至可以反向被控制的控制单元。这一步最主要的价值是打通了智能的“脑子”和“肌肉”之间的神经连接。两千多个元器件在控制颗粒度上极为精细。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;P（Planner）&lt;/strong&gt;：计划。完美映射了汽车场景下的平行工具调用，以及先计划、充分推理、给用户完整结果的宏观实现思维。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;P（Pixel）&lt;/strong&gt;：原子级或像素级的精准控制。既打包上下文作为推理依据，也反向控制整车的精细化响应。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从软件架构设计和Agent范式来说，高度遵循今天AI行业的最佳实践，只是在车的载具和平台上做了大量适配和调优。用刚才“神经目击能力”的例子来讲，从AI的原点出发和整车的精细化控制之间，搭建了非常精细、细颗粒度的神经连接——这是让整车变得真正智能且可感知的重要前提。&lt;/p&gt;
+&lt;h3&gt;两层架构：Persona 与 Soul&lt;/h3&gt;
+&lt;p&gt;在行车安全上，为了保证响应速度和数据安全可靠性，肯定要和国内模型厂商合作。荣威的AI上车和车机表现可以理解为两层：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最外一层叫 Persona（个性层），与字节系合作，通过豆包这种大家熟知、用户基数最大的产品，与用户之间构建快速沟通桥梁，让大家感觉到“我好像是在跟豆包说话”。&lt;/li&gt;
+&lt;li&gt;但我们都知道，一个聊天机器人并不能真正完成对车辆的精准控制。它的底座基于火山引擎，与整车两千多个精细化控制原子结合，达到精准推理、复杂任务编排和整车精准控制的作用。下面这一层是精准的控制层和计划层，上面是外化的形象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你最近有玩过Claude，可以完全把它抽象成Claude里的两个 MD 文档：Persona 和 Soul。Persona 是个性化表达，通过豆包的形象、语音和情绪化交流，让用户感知到它高度拟人。Soul 是人格底线、安全策略、沙箱化隔离以及各阶段之间的预控，确保在汽车场景下既达到高度智能，同时对风险和结果有可控产出。下面这一部分更多由火山引擎和荣威深度合作完成调优。&lt;/p&gt;
+&lt;h3&gt;三区隔离：黑区、灰区、彩区&lt;/h3&gt;
+&lt;p&gt;在真正的工程执行中，荣威把整车底层分为三个核心区域：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;黑区&lt;/strong&gt;：沙箱之外的部分，与行车安全和车辆控制息息相关的，如油门、刹车、外部灯光等。Agent绝对不可以碰。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;灰区&lt;/strong&gt;：必须有特定触发条件才允许调节。比如车停稳且非常静止的情况下才允许调节零重力座椅；行车状态中不允许Agent调节。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;彩区&lt;/strong&gt;：Agent随时可见、随时可控、随时可感知的部分，更多是座舱内部面向用户的系统，比如信息娱乐化系统、舒适系统（温度控制、基本座椅调节、风向等）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在汽车和AI结合的过程中，人们更愿意关注未来的想象空间和可能的上限。但我想特别强调硬币的反面：在汽车这样一个高度涉及安全的硬件平台上，如何去约束AI和Agent的能力，让它既聪明又安全可靠。这可能是行业在AI时代之下需要尽快形成的一种自律和共识。每家企业不一定叫黑区、彩区、灰区，可能有自己的体系，但这不重要。重要的是在打开上限和约束边界这两件事情上，每个厂商都应该花相同的时间，甚至可能在约束问题上思考得更全面、花更大的精力。&lt;/p&gt;
+&lt;h2&gt;AI原生汽车的中长期影响：从工具到伙伴&lt;/h2&gt;
+&lt;p&gt;我们今天一直都在讲AI原生汽车。为什么我个人对这件事如此上头且期待？&lt;/p&gt;
+&lt;p&gt;因为之前在手机场景中我就讲过：随着AI时代的到来、个人上下文和数据积累，会带来重大的竞争方式变化和人与产品之间关系的变化。过去你用某个手机，很可能因为有更高像素摄像头、更好的滤镜，就会从A品牌转到B品牌。但随着个人数据在一个产品上积累，真正的资产和主要价值并不是硬件平台或某个硬件参数，而是我们与这个产品之间所产生的全新交互方式。&lt;/p&gt;
+&lt;p&gt;汽车也是一样。手机上能获取大量个人上下文的积累，汽车也同样。当我使用了六个月、八个月、十二个月之后，这辆车越来越懂我的时候，人们迁移或转换品牌的动力就会越来越低。如果乘以时间、乘以规模这两个重要参数，未来会不会在消费品市场中看到一个空前规模的竞争方式和商业范式的变化？这可能才是中长期带来更具想象力、颠覆式的市场格局。&lt;/p&gt;
+&lt;h2&gt;结尾：回到霹雳游侠&lt;/h2&gt;
+&lt;p&gt;讲到这，我想 call back 一下《霹雳游侠》。其中有一集我到现在印象都蛮深：坏人把车丢到硫酸池里，整个车被腐蚀后只剩下了一个车架。小时候看的时候，我会感到非常低落甚至伤心。&lt;/p&gt;
+&lt;p&gt;今天回想起来，我们之所以会对一辆车的消陨产生情绪波动，是因为在整个剧集里不停地看到这辆车和男主人的互动，以及它高度的智能化水平，让你不知不觉中觉得它不再是一个交通工具，而是一个和男主共同攻克困难、完成任务的重要助手。&lt;/p&gt;
+&lt;p&gt;如果说因为AI的到来，我们已经构建出了从现实到科幻之间的桥梁，那么真正把AI和汽车以及其他算力平台、硬件平台结合得足够好的时候，也会从本质上改变我们和这些产品的交互方式。可能在不远的未来——两年、三年之后——车真的不再是一个把我们从A点带到B点的工具，而变成了生活当中不可或缺的助手、伴侣甚至是伙伴。&lt;/p&gt;
+&lt;p&gt;在AI时代之前，这样的鸿沟跨越是我们不敢想象的话题。但在今天，我们确实已经扎实地看见了从现实到科幻之间那个可以被解释、被描述的工程路径。&lt;/p&gt;
+&lt;h2&gt;三个趋势预判&lt;/h2&gt;
+&lt;p&gt;在AI到来之前，所有做硬件的公司都是拿着硬件想尽办法通过软件提升智能水平。AI到来的重大颠覆是：智能水平在短时间内迅速被拉高。这反倒带来一种新的范式和思考——随着智能问题被大幅解决，当智力变得充裕时，为了达到更高的用户体验，一定会对硬件的精准控制和精细控制反向提出更高的要求。智能在反向对硬件提出新要求。&lt;/p&gt;
+&lt;p&gt;我相信随着AI上车、Agent上车的能力普及以及智能水平不断拔高，整车的精细化电控一定会成为第二个非常重要的趋势。你会看到越来越多的厂商在做“大小轮解耦”、方向盘和转向的解耦，越来越多的车在普及线控底盘。因为我们不仅希望能够控制座舱，当智能程度融入得这么多时，我们一定希望对乘车品质或驾驶质感有更精准的控制。所以线控底盘会成为非常重要的需要被补齐的硬件能力。&lt;/p&gt;
+&lt;p&gt;第三个重要趋势：如果智能真的已经被解决，整车硬件已经达到极为精细化的电控条件，但我们还有一个重大门槛——现在座舱域和智驾域、整车内部和外部还是割裂的。所以我必须要逐渐迈向整车一体化发展：统一计算、统一算力，甚至统一计算架构平台。&lt;/p&gt;
+&lt;p&gt;如果你前段时间看过我做的第一个片子，你会发现我在那个车上更多讲的是统一计算架构对未来新能源汽车发展的意义和价值。今天探讨的是智能化和Agent在车上结合的话题。第三个话题——越来越多的车在真正全车精细电控上给大家带来更多的产品——很可能就是我们的下一个视频。&lt;/p&gt;
+&lt;p&gt;今天的视频就先到这，我们下次再见。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：王自如AI OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7631135445690223918/?region=CN&amp;amp;mid=7631136168020609835&amp;amp;u_code=5fk2gl98b6j&amp;amp;did=MS4wLjABAAAAhlR0Ual5FIN9j0aJq9wGxgMiDxVED6RrySQf2Rii6cw&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=2VHhjfuASlHxReqLM1sGaVPN2BMXH9Vn8ymy_8EmaQo-&amp;amp;share_version=240300&amp;amp;ts=1776796913&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7631135445690223918/?region=CN&amp;amp;mid=7631136168020609835&amp;amp;u_code=5fk2gl98b6j&amp;amp;did=MS4wLjABAAAAhlR0Ual5FIN9j0aJq9wGxgMiDxVED6RrySQf2Rii6cw&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=2VHhjfuASlHxReqLM1sGaVPN2BMXH9Vn8ymy_8EmaQo-&amp;amp;share_version=240300&amp;amp;ts=1776796913&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
