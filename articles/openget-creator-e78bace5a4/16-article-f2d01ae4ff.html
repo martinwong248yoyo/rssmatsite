@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>重塑台湾舆论认知：郑丽文与馆长连麦访谈，厘清两岸关系正确走向#独夫之心#郑丽文#馆长#台湾局势#两岸...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">独夫之心 OpenGet笔记</div>
+                    <h1>重塑台湾舆论认知：郑丽文与馆长连麦访谈，厘清两岸关系正确走向#独夫之心#郑丽文#馆长#台湾局势#两岸...</h1>
+                    <div class="meta">
+                        <span>独夫之心</span>
+                        <span>Sat, 18 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7630414789721738531/?region=CN&amp;amp;mid=7630414900698843931&amp;amp;u_code=2gg333f7dcee&amp;amp;did=MS4wLjABAAAAk-82WPgAE_0AAm2Hpebu0TiM4aZVWXxa4b4i5w8MOic&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=t0EHXSy4P6WrS_7fI0WGt_kNaiF.TgcTmhFxrP_933g-&amp;amp;share_version=240300&amp;amp;ts=1776614508&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;section class=&quot;openget-meta&quot;&gt;&lt;div class=&quot;openget-meta-item&quot;&gt;&lt;span class=&quot;openget-meta-label&quot;&gt;标题&lt;/span&gt;&lt;span class=&quot;openget-meta-value&quot;&gt;郑丽文与馆长连麦访谈中的两岸对等逻辑、台湾筹码定位与美方姿态演变&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;openget-meta-item&quot;&gt;&lt;span class=&quot;openget-meta-label&quot;&gt;日期&lt;/span&gt;&lt;span class=&quot;openget-meta-value&quot;&gt;2026-04-19&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;openget-meta-item&quot;&gt;&lt;span class=&quot;openget-meta-label&quot;&gt;关键词&lt;/span&gt;&lt;span class=&quot;openget-meta-value&quot;&gt;郑丽文, 馆长连麦, 两岸关系, 对等尊严, 台湾选举, 九二共识&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;openget-meta-item&quot;&gt;&lt;span class=&quot;openget-meta-label&quot;&gt;摘要&lt;/span&gt;&lt;span class=&quot;openget-meta-value&quot;&gt;博主通过分析郑丽文与馆长的连麦访谈，指出台湾在两岸关系中的筹码属性与在美国面前的卑微处境形成鲜明对比，民进党“对等尊严”叙事在实务层面难以为继；与此同时，美国对台态度正随中美关系格局发生深层转变，岛内选举话语已出现明显转向。&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;openget-meta-item&quot;&gt;&lt;span class=&quot;openget-meta-label&quot;&gt;来源&lt;/span&gt;&lt;span class=&quot;openget-meta-value&quot;&gt;独夫之心&lt;/span&gt;&lt;/div&gt;&lt;/section&gt;&lt;h2&gt;访谈厘清的三件事：台独牌无效、九二共识收益与台湾的历史地位&lt;/h2&gt;
+&lt;p&gt;刚好前两天郑丽文和馆长有一场连麦访谈，我看了，评价非常高，因为里面理清了几件事。&lt;/p&gt;
+&lt;p&gt;第一，打台独牌没有任何意义，打不赢——美国连伊朗都打不赢。第二，你只需要做很简单的一件事，就能得到非常大的收益，包括和平，那就是坚持九二共识、一个中国原则，你能得到的远比你想象的多。郑丽文把这个话题讲得非常明白。第三，这件事充分体现了台湾在大陆一侧的历史地位有多高。&lt;/p&gt;
+&lt;p&gt;很多大陆朋友可能没意识到台湾人脑子里的模型是什么——一边是大陆，一边是美国。过去之所以跟美国亲近，是因为自认属于“自由世界”，搞价值观外交，把美国当作最好的朋友，一切依靠美国。&lt;/p&gt;
+&lt;h2&gt;台湾的自我定位：筹码属性与“棋手”迷思&lt;/h2&gt;
+&lt;p&gt;但这里面有两个维度：第一是实力，第二是你在对方那儿的地位。我觉得这很重要。其实台湾人都会比较自己在大陆和在美国的重要性——说白了，台湾人自己也认为自己是个筹码，不是棋手，而是被利用的对象，这一点他们心里清楚。&lt;/p&gt;
+&lt;p&gt;过去民进党宣扬的是台湾自己也要做棋手，至少一定程度上是，而下这盘棋的是美国。所以你看民进党最爱提“对等原则”：去大陆可以，但要讲求对等。然而民进党去美国时姿态却极度卑微，台湾没有一个人敢要求对美国、对日本也要对等原则。郑丽文和馆长的叙事逻辑把这个矛盾带了出来，说明了一件事：中国大陆和美国现在至少能在国际上对等对抗。&lt;/p&gt;
+&lt;h2&gt;“对等尊严”的双标：对美卑微与对大陆苛求&lt;/h2&gt;
+&lt;p&gt;台湾在美国那儿没有什么对等尊严。民进党总提对等尊严，但在美国这里完全没有。然而既然大陆能够和美国在国际社会上平等对话，台湾被大陆带到的问题级别就直接拉到最高。&lt;/p&gt;
+&lt;p&gt;郑丽文和馆长说到了一个现象：民进党的区域立委和地方候选人，现在都不提这事了。去之前他们一直强调郑丽文至少要拿到对等尊严，别给台湾丢人。回来后全闭嘴了。为什么？两相对比之下，美国跨党派党团来台湾见民进党党团和国民党韩国瑜时，姿态高高在上。而且那个带团的人还有一个月就退休，根本不是重要人物，派的都不是持节钦差，就是个即将退休的人员。台湾在美国这儿就这个牌面。&lt;/p&gt;
+&lt;p&gt;反观郑丽文来大陆是什么牌面？这就在舆论上充分扭转了过来。&lt;/p&gt;
+&lt;h2&gt;两岸实务对比：牌面差异与岛内选举话语转向&lt;/h2&gt;
+&lt;p&gt;道理很清楚：台湾人今天选美国，对等尊严没有，战争风险自己承担，美国帮你打也打不赢；经济上不打仗的日子也得给美国交钱、缴纳高额对美军售。反过来，只要一个中国原则和九二共识，大陆惠台政策源源不断，游客源源不断，旅游业复兴，农副产品可以卖到那么大一个市场。美国在市场原则上和台湾还是竞争关系，因为美国也是食品输出国，你还得买美国莱猪。中国国民党来到北京，给的级别是“家里人”的级别，最高级别。&lt;/p&gt;
+&lt;p&gt;民进党的区域立委、部分候选人现在都不讲这些了，为什么？只要一讲，选情马上败坏。他们现在都在强调自己过去的主政经验、服务地方的经验，不再强调自己是民进党人，甚至不强调政治光谱和意识形态。民进党内部与中央矛盾特别大，现在当个民进党人就是负分、掉分项，早早晚晚要脱离。为什么？我在地方服务这么多年，认识了这么多人，有在地利益，就因为你民进党给我掉分，我就混不下去了？所有人都在找出路。&lt;/p&gt;
+&lt;p&gt;放在过去，谁要是敢来大陆，会被骂成什么样？现在可好，成了香饽饽。郑丽文说过两天去美国也可以，我觉得这是好事。到时候你就能看到，正是因为她跟大陆谈得好，所以在美国那儿的牌面比民进党还大。你民进党不是认爹吗？正是因为我在大陆这儿有牌面，所以我去美国牌面就比你大。&lt;/p&gt;
+&lt;h2&gt;美国对台逻辑的演变与两岸格局判断&lt;/h2&gt;
+&lt;p&gt;现在美国的脸色变了：谁跟中国大陆关系好，我在台湾就认谁，这是本质。如果特朗普来了以后说郑丽文跟我们关系也不错，那就可以聊。特朗普说我也支持你们和平统一，说关系非常好，以后美国也可以和台湾做生意，也可以和大陆做生意。你们统一就统一，是你们自己家里的事，跟我没关系。美国需要的是稳定的关系和环境。&lt;/p&gt;
+&lt;p&gt;而且郑丽文访美很可能还要晚于特朗普来华，说句直白的话，她能不能去美国还得看大陆脸色；大陆若不愿意，她恐怕去不得。而且我可以这么讲，闭门会谈里肯定讲了这事：你怎么去、为什么能去、跟美国谈什么，都要说清楚。你现在还有事瞒着我？聊完以后去美国再要点东西，回来撕毁协议？这不可能，美国也不会答应这种事发生。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：独夫之心 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7630414789721738531/?region=CN&amp;amp;mid=7630414900698843931&amp;amp;u_code=2gg333f7dcee&amp;amp;did=MS4wLjABAAAAk-82WPgAE_0AAm2Hpebu0TiM4aZVWXxa4b4i5w8MOic&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=t0EHXSy4P6WrS_7fI0WGt_kNaiF.TgcTmhFxrP_933g-&amp;amp;share_version=240300&amp;amp;ts=1776614508&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7630414789721738531/?region=CN&amp;amp;mid=7630414900698843931&amp;amp;u_code=2gg333f7dcee&amp;amp;did=MS4wLjABAAAAk-82WPgAE_0AAm2Hpebu0TiM4aZVWXxa4b4i5w8MOic&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=t0EHXSy4P6WrS_7fI0WGt_kNaiF.TgcTmhFxrP_933g-&amp;amp;share_version=240300&amp;amp;ts=1776614508&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>上一次冲突能回来，这次也大概率会回来，就算短期冲突不结束，随着时间的拉长也会回来#股票#美伊冲突#石...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">投机大拿 OpenGet笔记</div>
+                    <h1>上一次冲突能回来，这次也大概率会回来，就算短期冲突不结束，随着时间的拉长也会回来#股票#美伊冲突#石...</h1>
+                    <div class="meta">
+                        <span>投机大拿</span>
+                        <span>Wed, 22 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7631893317609613425/?region=CN&amp;amp;mid=7631893300173130523&amp;amp;u_code=3gecll5amecl&amp;amp;did=MS4wLjABAAAANH0YxC5fmro_-ELahcOXx05PUs64MoIhA7AHv3Uf7mQ&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=v7EynXZrhOgghwj7x.vsw6Gyi8yqg4wCmLsdrVEZb18-&amp;amp;share_version=240400&amp;amp;ts=1776960133&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;背景：美伊局势再次扰动A股&lt;/h2&gt;
+&lt;p&gt;A股在美伊紧张局势再次升温的情况下，出现了一定扰动。今天油价在10点多开始了一段较大幅度的上涨，同一时间A股也出现了较大幅度的回落。美伊局势的紧张升级再次对A股造成了影响。&lt;/p&gt;
+&lt;h2&gt;放量与分歧：成交额回到28000亿&lt;/h2&gt;
+&lt;p&gt;从成交量角度看，今天两市成交额再次来到了28000多亿。市场放量之后，分歧也在增加。面对这种情况，到底是该走还是该留？&lt;/p&gt;
+&lt;h2&gt;两条主线：冲突驱动与业绩驱动&lt;/h2&gt;
+&lt;p&gt;当前市场实际上走了两种行情，从板块上可以看得很清楚。&lt;/p&gt;
+&lt;h3&gt;第一条线：冲突导致的行情&lt;/h3&gt;
+&lt;p&gt;煤炭开采、煤化工、油气开采、燃气等板块再次上涨。它们的上涨时间与油价上涨基本同步——煤的上涨在10点多开始，油气资源的上涨也是在10点多开始，燃气也近乎同一时间开始上涨。从板块上可以印证，今天市场的波动就是美伊局势冲突升级导致的结果。&lt;/p&gt;
+&lt;h3&gt;第二条线：业绩驱动（基本面驱动）&lt;/h3&gt;
+&lt;p&gt;今天白酒开始大幅上涨，原因是营价老白干和山西汾酒都公布了2026年一季报，整体同比去年有一定回升。从这个迹象看，白酒出现了上涨。其他行业也一样：从今天量比排名来看，大部分放量的股票也都是基于一季报披露驱动了资本参与程度的上升。&lt;/p&gt;
+&lt;h2&gt;历史参照：冲突结束或拉长，市场都会回归自身节奏&lt;/h2&gt;
+&lt;p&gt;今天A股的反应实际上同时走冲突路径和业绩驱动路径。业绩驱动是自然的交易架构，但冲突是外部的扰动。那么，要不要再次规避冲突升级可能带来的影响？&lt;/p&gt;
+&lt;p&gt;我们可以看过去的情况。上一次冲突导致A股连续跌了一个月，整个3月份都在下跌，4月份则在反弹。&lt;/p&gt;
+&lt;p&gt;结论是：冲突产生之后有下跌，冲突缓和之后就能回归到自然交易结构里。这一次冲突升级不排除可能再次对A股造成一定扰动，但结果只有两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;扰动结束之后，市场回归到自己的结构里；&lt;/li&gt;
+&lt;li&gt;扰动如果没有结束，随着时间拉长、事件变冷，市场也会慢慢恢复到自己的结构里。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以俄乌冲突为例，冲突持续到现在，各国市场该怎么走还是怎么走，尽管俄罗斯也是一个产油大国。&lt;/p&gt;
+&lt;h2&gt;判断与提醒：等一等，经历的可能只是波折&lt;/h2&gt;
+&lt;p&gt;从这种角度看，市场大的方向还是会回到自己的节奏里。但在当前不确定冲突会不会再次对A股造成同等影响的情况下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果离场，而实际没有影响，就可能错过行情，还得追回来；&lt;/li&gt;
+&lt;li&gt;如果冲突确实有影响，最终大的方向还是向上的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其实在这儿等，最终经历的就是一次波折，只是时间上拉长了。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：投机大拿 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7631893317609613425/?region=CN&amp;amp;mid=7631893300173130523&amp;amp;u_code=3gecll5amecl&amp;amp;did=MS4wLjABAAAANH0YxC5fmro_-ELahcOXx05PUs64MoIhA7AHv3Uf7mQ&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=v7EynXZrhOgghwj7x.vsw6Gyi8yqg4wCmLsdrVEZb18-&amp;amp;share_version=240400&amp;amp;ts=1776960133&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7631893317609613425/?region=CN&amp;amp;mid=7631893300173130523&amp;amp;u_code=3gecll5amecl&amp;amp;did=MS4wLjABAAAANH0YxC5fmro_-ELahcOXx05PUs64MoIhA7AHv3Uf7mQ&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=v7EynXZrhOgghwj7x.vsw6Gyi8yqg4wCmLsdrVEZb18-&amp;amp;share_version=240400&amp;amp;ts=1776960133&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

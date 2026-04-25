@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>每年多赚10个亿，和100个亿，1000个亿到底有什么区别？#邹先华#许家印#hengg</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">邹先华 OpenGet笔记</div>
+                    <h1>每年多赚10个亿，和100个亿，1000个亿到底有什么区别？#邹先华#许家印#hengg</h1>
+                    <div class="meta">
+                        <span>邹先华</span>
+                        <span>Sat, 18 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7630489712368635174/?region=CN&amp;amp;mid=7630489700834331402&amp;amp;u_code=28eceail3m0m&amp;amp;did=MS4wLjABAAAAtk4QGv9z5rXLXvnAg3f_6gCjy4IP4zUYEyQqXxoKG_I&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=uwwVWR9svm1KtmGKiS7AQjYiYFoz4VVOoMRYTlDe4Tc-&amp;amp;share_version=210900&amp;amp;ts=1776623064&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;背景：我与恒大的商票纠纷&lt;/h2&gt;
+&lt;p&gt;各位朋友，四月十三号到十四号，也就是昨天和今天，恒大集团有限公司、恒大地产集团有限公司以及实际控制人老许的案件，在深圳市中级人民法院开庭审理。到今天中午，庭审已完结。&lt;/p&gt;
+&lt;p&gt;我们卓宝卓韦与恒大、与老许相伴十四年，但最终被恒大搞掉三点六个亿——全部是通过商票搞走的。他的商票没有兑付、跳票，最后我把我公司的现金，活蹦蹦的三点六个亿全部贴现了，血本无归。&lt;/p&gt;
+&lt;p&gt;反正我被搞掉三点六个亿。亲爱的朋友，您被搞掉多少个亿？你的公司被搞掉多少个亿？你把它抠出来。现在一审已经今天结束了，你被搞掉多少，你把它扣出来。我们同是天涯沦落人，能够彼此感受到对方此时此刻的心情，我们是同频共振的一批人。&lt;/p&gt;
+&lt;h2&gt;庭审细节：恒大集团与许家印的指控罪名&lt;/h2&gt;
+&lt;p&gt;我关注着这一重要事件，今天所有的官方视频和媒体报道我都看了，关注每一个细节。我的内心百感交集，有迟来的正义的感慨，更有刻骨铭心的伤痛与反思。&lt;/p&gt;
+&lt;p&gt;在庭审上面，公诉机关当庭指控：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;恒大集团&lt;/strong&gt;犯下非法吸收公众存款、集资诈骗、违规发放贷款（因为他有个小额贷款公司）、欺诈发行证券、违规披露重要信息，以及单位行贿，共六项罪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;恒大地产&lt;/strong&gt;涉嫌欺诈发行证券罪。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;至于许家印本人，这次审判涉及到八项罪：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;非法吸收公众存款&lt;/li&gt;
+&lt;li&gt;集资诈骗&lt;/li&gt;
+&lt;li&gt;违法发放贷款&lt;/li&gt;
+&lt;li&gt;违法运用资金&lt;/li&gt;
+&lt;li&gt;欺诈发行证券&lt;/li&gt;
+&lt;li&gt;违规披露重要信息&lt;/li&gt;
+&lt;li&gt;职务侵占&lt;/li&gt;
+&lt;li&gt;单位行贿&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;每一桩每一件都是直指他们这么多年以来无视法律、漠视责任、疯狂扩张、肆意敛财的违法犯罪事实。&lt;/p&gt;
+&lt;h2&gt;庭审过程与当庭认罪&lt;/h2&gt;
+&lt;p&gt;指控完了以后，控辩双方开展了法庭调查和法庭辩论。被告单位以及老许本人也做了当庭陈述。陈述完了以后，许家印当庭认罪悔罪，他没有否认。法院宣布择期宣判。因为他认罪悔罪，所以这个相对来说就变得比较简单，不存在其他不确定性。&lt;/p&gt;
+&lt;h2&gt;关键转折：从广州搬到深圳的动因&lt;/h2&gt;
+&lt;p&gt;我现在要问一问大家：恒大的老许，他的生意也好，他的人生也好，发生重大逆转是哪一年？就是不可逆的事件——他的人生、他的公司、他的集团是哪一年发生了不可逆的事件？&lt;/p&gt;
+&lt;p&gt;大概是二零一六年或二零一七年。不是二零二一年，二零二一年已经是毁天灭地了。&lt;/p&gt;
+&lt;p&gt;其实在二零一六年的时候，老许每年可以赚一百多个亿，那个时候没有搞足球、没有搞恒大汽车，在广州和全国各地的生意都很好，非常稳健。但是到了二零一六年底、二零一七年，情况就发生重大逆转。标志性事件就是他把总部从广州搬到深圳。&lt;/p&gt;
+&lt;p&gt;他那么赚钱，一年已经赚一百多个亿，他的福地是深圳？不，他的福地是广州，他发家是广州。他为什么要搬到深圳来？贪婪，肯定是贪婪。当然还因为一个人——因为一个人掉到了深圳。他想把生意做得更大，想在A股再次上市，所以把总部从广州迁到深圳。&lt;/p&gt;
+&lt;p&gt;我估计朋友们，那个时候他做梦都在想：我要不要成为中国的首富？我能不能一年赚一千多个亿？因为他搬来之前一年是赚一百多个亿，我能不能赚一千多个亿？&lt;/p&gt;
+&lt;h2&gt;核心反思：年赚百亿与千亿没有本质区别&lt;/h2&gt;
+&lt;p&gt;我现在来问一下你们：许家印一年赚十个亿、一百个亿、一千个亿，他的生活有没有本质的区别？&lt;/p&gt;
+&lt;p&gt;我赞成绝大部分朋友的意见：没有本质的区别。一个人心态好，一年赚十万块钱和一年赚一百个亿、一千个亿没有太大区别。&lt;/p&gt;
+&lt;p&gt;区别在哪里呢？你住的房子非常大和非常小，但房子再大，你只能够睡一张床。区别就是你出去是坐民航的飞机还是坐你的专机——你一年赚一百多个亿、一千个亿，你就是专机，波音或湾流顶级。你一个人坐专机，有机组人员、保安、服务，但你的开支也大呀。我不坐专机，搭民航几百块钱也可以。&lt;/p&gt;
+&lt;p&gt;区别就在于你钱多，吃得好一点而已。但你又能吃到多少呢？山珍海味从来就不会使人延年益寿，粗茶淡饭才是长寿的基因。&lt;/p&gt;
+&lt;h2&gt;一个历史案例的警示&lt;/h2&gt;
+&lt;p&gt;我曾经讲过一个极鲜活的案例，讲的是民国时期的袁世凯。你知道袁世凯是怎么死的吗？他死的时候只有五十六岁。他每天泡茶喝，泡的是冬虫夏草、人参，什么东西补他就用什么泡茶喝。我告诉你，他最后是被补死的，被自己毒死的。&lt;/p&gt;
+&lt;p&gt;粗茶淡饭才能够使你延年益寿，相反，山珍海味你还有可能折寿。&lt;/p&gt;
+&lt;h2&gt;结语：搬到深圳后的连锁反应&lt;/h2&gt;
+&lt;p&gt;已经赚了那么多钱，后来要把总部搬到深圳来。搬到深圳来的根本目的，是希望在深圳借壳上市。搬到深圳后，下面的动作全部变形。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：邹先华 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7630489712368635174/?region=CN&amp;amp;mid=7630489700834331402&amp;amp;u_code=28eceail3m0m&amp;amp;did=MS4wLjABAAAAtk4QGv9z5rXLXvnAg3f_6gCjy4IP4zUYEyQqXxoKG_I&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=uwwVWR9svm1KtmGKiS7AQjYiYFoz4VVOoMRYTlDe4Tc-&amp;amp;share_version=210900&amp;amp;ts=1776623064&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7630489712368635174/?region=CN&amp;amp;mid=7630489700834331402&amp;amp;u_code=28eceail3m0m&amp;amp;did=MS4wLjABAAAAtk4QGv9z5rXLXvnAg3f_6gCjy4IP4zUYEyQqXxoKG_I&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=uwwVWR9svm1KtmGKiS7AQjYiYFoz4VVOoMRYTlDe4Tc-&amp;amp;share_version=210900&amp;amp;ts=1776623064&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

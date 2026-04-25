@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>该不该给张某某机会：艺人分类管控与舆论边界说明（二）#独夫之心#张敬轩#劣迹艺人</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">独夫之心 OpenGet笔记</div>
+                    <h1>该不该给张某某机会：艺人分类管控与舆论边界说明（二）#独夫之心#张敬轩#劣迹艺人</h1>
+                    <div class="meta">
+                        <span>独夫之心</span>
+                        <span>Thu, 23 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7632249123025980723/?region=CN&amp;amp;mid=7632249214227008266&amp;amp;u_code=164h7hjb2h12&amp;amp;did=MS4wLjABAAAAK1GtsUGjP9p7WqAKyWVuqMUFY8EfuFAkxHMJekcXYM4&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=1jFe4wG0bgg63DFqW7JrBw.uh7AvvaQt6aTQlsD3c3E-&amp;amp;share_version=210800&amp;amp;ts=1777046565&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;一、越强大是否应越包容？个体差异与舆论现状&lt;/h2&gt;
+&lt;p&gt;论及个体有个体差异。我们现在越来越强大了，怎么价值观越来越狭隘了呢？按照道理来说，越强大应该越包容。&lt;/p&gt;
+&lt;p&gt;这个问题我之前讲过，现在还是这么讲：第一，我现在仍认为美国登月是成功的。当时我这么说，很多人就说你是美推，赶紧滚。其实这事很简单，现在他自己知道过去的错误言行，然后要反省、要立功，我支持，我要给他一个机会。作为公众，我们应当认同这个机会。&lt;/p&gt;
+&lt;h2&gt;二、应给怎样的机会？海外渐进式路径&lt;/h2&gt;
+&lt;p&gt;我有个新的感想。我看到张某汉、某G万，包括某兵都去海外发展。如果他们表现好了，我首先支持他们去海外发展，不会让他们先回大陆。某G去了越南，某汉去了泰国，某兵也在泰国。他们有在那边说中国好吗？完全没有。&lt;/p&gt;
+&lt;p&gt;比方说张敬轩，表现好了，首先在香港应该没被封杀，但香港市场太小，赚不了多少钱。那你可不可以先去泰国？像王嘉尔一样去泰国、英国或美国开演唱会，先去海外华人圈？王嘉尔做了什么？宣传国家的好。你去做这个事情，你就比某汉、某纪万、某兵强多了。&lt;/p&gt;
+&lt;p&gt;你得到香港保安局的认可，算是立功了。在大陆网友或大陆人民还没有完全谅解的情况下，你往外做，渐进式往上，学习王嘉尔。没准做个四五年，大陆人是不是就支持你了？你就变成另一个在娱乐圈的馆长了。届时演艺公司直接签你，你回来开演唱会，没有人抵制，那就是成功的标准。&lt;/p&gt;
+&lt;p&gt;所以，公众人物犯错，有一条路。你不能把所有路都锁死，否则他只能去海外，效果一定比那几个还要差。&lt;/p&gt;
+&lt;h2&gt;三、对道德圣人的反驳：历史源流与自我成长&lt;/h2&gt;
+&lt;p&gt;现在我的直播间里，当道德圣人的人，一个个这不行那不行。最好撒泡尿照照你自己，你这辈子有没有犯过错？&lt;/p&gt;
+&lt;p&gt;我是90后，我的老师90%都是反贼。我接受了完整的教育，思想初始是有问题的，是我自己通过努力和学习改过来的。我和很多同龄人思想不一样。你们20岁的时候，敢说三观就定了吗？我20岁时没有要求这个要求那个的。既然你们喜欢当道德圣人，那就一辈子别犯错。&lt;/p&gt;
+&lt;p&gt;青年一代，对这种人就该赶尽杀绝吗？凭什么？我们要讲历史源流。为什么会出现这种情况？为什么我的老师都是反贼？我的老师上课讲自己没有移民澳洲哭了，给我们全班都整哭了，生动上了一堂如何当罪人没当成的思政课。我多少年才扭转过来？对我来说公不公平？不公平。&lt;/p&gt;
+&lt;h2&gt;四、讨厌学生群体中的道德圣人，以及反方向声音的辩证看待&lt;/h2&gt;
+&lt;p&gt;我很讨厌我的粉丝群体，尤其是B站的个人。B站学生群体最多，学生群体里的道德圣人最多。你们洁白如月，出淤泥而不染，站在道德高地上指指点点，我最讨厌这种人。&lt;/p&gt;
+&lt;p&gt;今天互联网发展到现在，很多人抱怨号被封了。辩证地看，反方向的声音少了，不好，但也有好的地方：证明相关部门开始重视这个问题，一切都相对性，不是一竿子打死。&lt;/p&gt;
+&lt;h2&gt;五、柳杰克节目案例：真正的宣传不是“留岛不留人”&lt;/h2&gt;
+&lt;p&gt;我看了柳杰克做的和平试讲，节目上特别多前两年的“青鸟”现在变成“统牌”。他们的转变都不是因为主流宣传或评论区说“留岛不留人”。我印象很深的一个例子：一个人看到邹兆龙接受采访，说“我在好莱坞只能演正面人物，我在大华人区演反派无所谓，但在好莱坞我必须演正面人物。因为在那里黑的白的黄的分得清，我就是中国人。如果我一个中国人的形象去演一个反派，对整体大华人区影响很坏”。这个“青鸟”一下就变成“破牌”。&lt;/p&gt;
+&lt;p&gt;这才叫宣传。不是你们天天在评论区“留岛不留人”，你能吓住谁？没有人会听这种鬼话。&lt;/p&gt;
+&lt;h2&gt;六、结语：大国担当与下集预告&lt;/h2&gt;
+&lt;p&gt;我们作为知识主播，不应该去鄙视那些看团播、次元机的人。发展社会主义的目的就是吃的喝的玩的都比资本主义好。我什么都比你强，归根结底是人民的，人民看得起、能享受就行。我现在分逼不刷，也能看传播，挺好的。&lt;/p&gt;
+&lt;p&gt;今天先解决两个问题：一是张敬轩这个问题必须讲明白，我就是较真；二是未来做相关的工作，落实到每一个大陆公民身上，首先要有大国的担当，眼里容得下别人。&lt;/p&gt;
+&lt;p&gt;下集请移步主页观看。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：独夫之心 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7632249123025980723/?region=CN&amp;amp;mid=7632249214227008266&amp;amp;u_code=164h7hjb2h12&amp;amp;did=MS4wLjABAAAAK1GtsUGjP9p7WqAKyWVuqMUFY8EfuFAkxHMJekcXYM4&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=1jFe4wG0bgg63DFqW7JrBw.uh7AvvaQt6aTQlsD3c3E-&amp;amp;share_version=210800&amp;amp;ts=1777046565&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7632249123025980723/?region=CN&amp;amp;mid=7632249214227008266&amp;amp;u_code=164h7hjb2h12&amp;amp;did=MS4wLjABAAAAK1GtsUGjP9p7WqAKyWVuqMUFY8EfuFAkxHMJekcXYM4&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=1jFe4wG0bgg63DFqW7JrBw.uh7AvvaQt6aTQlsD3c3E-&amp;amp;share_version=210800&amp;amp;ts=1777046565&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

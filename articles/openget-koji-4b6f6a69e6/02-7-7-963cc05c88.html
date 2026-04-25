@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>【正片】把7位黑客松选手请进播客➤本周「十字路口」，我们把「小红书黑客巅峰赛」的7位选手，以及这场比...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">Koji杨远骋 OpenGet笔记</div>
+                    <h1>【正片】把7位黑客松选手请进播客➤本周「十字路口」，我们把「小红书黑客巅峰赛」的7位选手，以及这场比...</h1>
+                    <div class="meta">
+                        <span>Koji杨远骋</span>
+                        <span>Wed, 22 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7631580144527871268/?region=CN&amp;amp;mid=6802540870953502727&amp;amp;u_code=2gfc2ck4ha1i&amp;amp;did=MS4wLjABAAAAaACcUv_0j-qA-Vm7JpNPnGziZU-y2dGvB1mNUdq56OU&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=8Q7sZbftcP5cqaukzhD4TWKgDfqbcXslumHi9tqMP.A-&amp;amp;share_version=220100&amp;amp;ts=1776982636&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;开场：48小时的黑客巅峰赛&lt;/h2&gt;
+&lt;p&gt;嗨，我是科技。本周十字路口很特别，我们邀请到了小红书黑客巅峰赛的七位选手以及总负责人伞兵。伞兵也是小红书社区科技负责人。&lt;/p&gt;
+&lt;p&gt;今天我会先和伞兵聊一聊这次黑客松巅峰赛——作为组织者和评委、旁观者的观察与感受。然后我们会邀请七位选手一一来到播客，聊聊他们的产品与参赛故事。选手包括拿到大奖的“口袋吉他”，以及其他一等奖、二等奖的选手，还有我个人很喜欢但没拿到奖的作品。&lt;/p&gt;
+&lt;h2&gt;组织者视角：为什么办这场赛事？&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;问：作为组织者，这次48小时黑客松巅峰赛你最开心的一件事情是什么？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：最开心的是看到两百多个人到了现场。看着鲜活的人是非常重要的体验，每个人的性格和感受都会变得更具体。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：小红书一开始想做这个比赛是因为什么？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：我们觉得“人”这件事在今年变得更加重要。去年我们在做独立开发大赛时认为社区里有海量需求，希望有人能看见这些需求、和用户对话。但今年需求和技术的变化都非常快，如果去追趋势，筹备和做项目的周期已经赶不上了——就像OpenAI的活动还没做，热潮已经过去了。所以我们想去找更本质的东西，最终看到了这批年轻人和正在创造的人。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：为什么聚焦年轻人？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：我们在理解今天谁更愿意创造、谁在创造。从社区状态看，确实是一批年轻人、学生或刚创业的人，他们对这件事的热情和参与度最高。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：你在现场印象最深刻的一幕是什么？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：第一个是敲锣打鼓。我们在4月8日零点开场和4月10日零点结束时，分别以敲锣和打鼓宣布比赛开始和结束。我们需要给选手一个好的opening感觉，仪式感很重要。这种冒犯的感觉跟我们想要的黑客松氛围很像。有可能选手未来会说：我人生中敲过两次钟，一次是在参加小红书的起点，再一次是IPO的时候。&lt;/p&gt;
+&lt;p&gt;我喜欢现场出现的各种即兴、临时的事情，这让比赛变得更鲜活。&lt;/p&gt;
+&lt;h2&gt;选手一：小娥——哆啦A梦的AI小道具&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自我介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;小娥：我是王心怡，北京师范大学未来设计学院在读研究生，也是叽里呱呱和叽里咕咕的founder。这次拿了地瓜赛道的银奖。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们做的是哆啦A梦的AI小道具，帮助用户在现实生活中找回专注力。在AI时代，我们认为最稀缺的不是记忆力，而是专注力。围绕“Attention is all you need”，我们改造了哆啦A梦的一些小道具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;记忆面包机&lt;/strong&gt;：通过类似烤面包的方式锁住你的手机，你与它直接对话，它能以一种感应的物理反馈和你交流。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;伸出援手摄像头&lt;/strong&gt;：不间断记录用户，通过多模态分析提供专注力报告。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;组队经历&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;现场组队很有意思，像现实版狼人杀——前一秒组队，下一秒可能就跳队。有抢人和叛逃环节。我是被抢的那个，因为每个小组都可能缺设计。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;惊喜与惊吓&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;最大的感受是小红书对选手创造体验太好了。有个叫东宝的老师，四天里没怎么睡觉。Demo day前一晚大家要清理现场，有一组的水母灯因为结构原因无法挪动，东宝老师就让选手先去睡，自己整晚守着那盏水母灯。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最喜欢的产品（除了自己）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;那必然是头戴吉他。开赛前和博文交流时，他给我拍了个在Mac触控板上弹奏的小视频。最后展示环节就是“aha moment”。他最后一句话也很打动我：“我们以创造为快乐，以不创造而痛苦。”这可能就是小红书黑巅精神。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;没拿奖但喜欢的作品&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;水母灯，它帮助用户监测睡眠状态，陪伴用户更好休息。作为选手还去支持其他队伍，是因为大家不只是想把自己东西做好，也在交流、互帮互助。这不只是一个比赛，更是为了创造而有的氛围。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;赛后感受&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;生活还没回归到原点，感觉还在黑客松状态中。那种创造的激情持续让我更好地做自己手头的事情。&lt;/p&gt;
+&lt;h2&gt;选手二：明威——给AI Agent定制动漫大头&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自我介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;明威：我们没拿到奖，但我们心里觉得黑巅人气王是我们自己。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们做动漫头的核心目的是为了展示：这样的产品在人身上已经非常完美。我们在现场做的是——假设未来AI或agent会有自己的身体，它们需要自己独特的面容。我们写了一个可以让agent下单的平台，让平台给它生成设计。平台会把图纸、3D资产、表面纹理设计直接完成。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如何匹配性格与形象？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们写了一个skill，让agent自己去想象自己的样貌，提取五官、眼睛、睫毛、外轮廓等特征，生成3D资产。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;有agent真的下单了吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在现场确实有某位投资人的agent尝试了我们的产品，但没有真正对接到订单系统（订单系统复杂度比现场demo高得多）。我们想象未来智能体会自己来下单。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;惊喜与惊吓&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;惊喜是我们现场组成了一个“给头壳长了个腿”。有个小伙伴过来说“你能把头借给我们一下吗？”过了一会儿那个头就自己长腿跑出来了。我在小红书上刷到好多视频都在拍那个——有人本来昏昏欲睡，突然惊醒，因为那个大头在赛场里每次评委或观众入场就开始营业。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品灵感来源&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们过去做动漫头产品叫Kiwimi。我们想：为什么不为未来可能有身体的AI做一个独一无二的面容？这个事情还没人解决。我们播客刚录了一期家庭机器人，他们要把机器人送到家里去；而我们做的事情是让机器人可以自己去下单，根据它大脑里的记忆和喜好给自己定制发型、妆容。&lt;/p&gt;
+&lt;p&gt;现场戴着这个头只是一次偶然意外，但这件事足以验证需求是真实存在的——现场那么多人的围观和眼神状态说明它值得做。现在一个机器狗在黑客松现场动来动去已经没人搭理，但如果带上我们的动漫大头，瞬间又成为全场焦点。面容是人和人之间产生情感交互的最重要接口。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最喜欢的产品&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;现场有个“会放屁”的项目，我没赶上搭话。我发现戴上头套后在厂里营业时是个非常热情活泼的状态。面具或cosplay给人一个新的“包票”去面向更多人，外部反馈和你本人反馈完全不一样。这种角色被交换的价值会带来很多正反馈，让人上瘾。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;认识的新朋友&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这次和很多机器人厂商建立了连接。现场观众的反馈是他们过去没想到这种可能性，新的价值点值得探索。&lt;/p&gt;
+&lt;h2&gt;选手三：叶博文——全场大奖“口袋吉他”&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自我介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;叶博文：我是个学生，独立开发者，这次拿了黑巅全场大奖。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们做了一个用来感受音乐氛围的类吉他便携式设备，叫Party Guitar。你可以选择和弦组，用摇杆切换和弦，用手触摸弦就能发出声音。（现场弹奏演示）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;没有基础的人能玩吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;可以，其实我没什么基础，每个人都能玩。因为在同一个和弦内，不管怎么弹都不会弹出特别难受的音，都很和谐。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;惊喜与惊吓&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;最大惊喜是拿了奖。更开心的是路演——我以前非常恐惧舞台。小时候上台表演失误被嘲笑很久，之后一上台就紧张到全身发抖。这次虽然还在手抖腿抖，但我很享受在舞台上的感觉。&lt;/p&gt;
+&lt;p&gt;比赛前晚上看了乔布斯发布iPod nano的演讲，他从口袋里掏出设备，全场欢呼。我想复刻这个场面，就想到“为什么我们有两个口袋”，再从口袋里掏出设备。虽然很无厘头，但我觉得很帅。那一刻全场振奋了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最喜欢的产品（除了自己）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我喜欢皮克斯那个台灯项目。他们的内容、展台和氛围都做得非常好，一出现就跟周围所有人完全不一样，像在一个真正的艺术展上，有整套视觉语言和品牌语言。我为他们感到可惜——听说早上不小心碰坏了，没法现场演示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;团队组成&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我在群里找人聊想法，大部分人不太感兴趣。后来一个在芬兰读大学的女生聊得挺契合，她又找来一个在美国读Music Tech的朋友（非常专业，我不懂合成器，音乐也只略懂一二），还有另一个开发同学（之前就认识）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;能力比例&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我觉得我是六边形战士。技术上项目用到的技术栈我都很熟练。设计上大家也能感觉到有Taste，主要也是我来主导的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关于那句话&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;“因为创造而快乐，因为难以创造而痛苦”——这不是我想的，是我很喜欢的一个视频制作者发的微博。你创作过程中肯定有很多痛苦，但本质上你只要专注于创造，不考虑别的，就能做出好作品。创造过程有痛苦，也正是这些痛苦让你拥有快乐。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;睡眠时间&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第一天12点开始后就没睡。演讲前睡了大概两个小时，醒来开始写稿。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;被抄袭的担心&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;抄袭无法避免，但影响不大。一般抄袭的人都是后来者，只能抄表面，抄不走灵魂。后发者一般赶不上第一个做出来的人，心态和思考会扭曲。一旦太抄，灵魂就不在那个产品上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品的灵魂&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;是对和弦的理解。以前的乐器以音符为主题，小白必须知道怎么弹和弦才能弹出和谐的音乐。但我们一开始把和弦做好，所以一上手就会觉得“哇，我居然也能搞出这样的氛围”。&lt;/p&gt;
+&lt;h2&gt;选手四：Edward——AI合伙人与注意力交互界面&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自我介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Edward：我之前是搞过艺术的设计师，现在在“合伙AI不独立开发”中。虽然我一个人，但我和AI在一起就不是独立开发，而是一个团队。这次拿了软件赛二等奖。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;产品叫Atom，名字来源于Attention。这个时代注意力很重要，我们想要的是注意力的交互界面——根据用户的注意力动态调节或重构网页，把它缩减到只聚焦的部分，从十个聚焦到两三个。&lt;/p&gt;
+&lt;p&gt;我们做了交互界面动态重构：把所有我们认为用户此时需要的交互按钮放到鼠标旁边，同时尝试猜测用户意图并转化为一两个按钮。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;惊喜与惊吓&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;看到零零后大家们非常有活力，无论是群里还是见面打招呼，还是晚上激情讨论，都是又惊喜又惊吓。&lt;/p&gt;
+&lt;p&gt;我们团队之前各自做独立开发产品，因为喜欢对方的产品就说有机会合作。这次黑客松是第一次合作。最惊吓的是：我们现场没有提前想好任何想法，过了十几个小时每个人都有自己的idea。最后我们每个人用自己idea做一个demo，内部互评，我运气比较好被选上。我们只花了后面二十多个小时去做最终的想法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;coding速度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;现在idea更重要，做可以变得更快。有些IDEA口头讨论很难有画面感，既然Cursor这么快，我们就每个人花20-30分钟快速跟AI出一个demo来选。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关于设计&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;大家今天都很在意设计。无论是OpenAI、Anthropic还是小红书，都会请非常专业的品牌设计团队。视觉好看的产品一定会受到更多关注。对设计师来说这是个福利。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最喜欢的产品&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;全场大奖那个。我在小红书上翻了他们队友的账号，都是很有艺术风范的设计师。其中有一位经常在小红书上发自己做合成器、做音乐方面探索的内容，最后积累呈现在了全场大奖作品上，很好地体现了科技和人文的结合。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品定位&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们觉得自己是Save Time还是Kill Time的产品？时间不一定最关键，重要的是你最重要的注意力放在了最值得你花注意力的地方。它不一定节约时间，但一定为你的最终结果提升价值。&lt;/p&gt;
+&lt;h2&gt;选手五：景初——自律神器与Building Public方法论&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自我介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;景初：我是连续创业者，从高中（2018年）就在做项目，最有名的是Instab（碰一碰加好友的项目）。最近沉迷Cursor。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;获奖与产品&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我拿了一个细分赛道的地瓜奖。我们做了个“自律神器”：脑袋上别一个摄像头，如果捕捉到你做不自律的事（如抽烟、喝酒），后面加的两个电极片就会电你脖子后面。挺抽象的一个东西。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;对现场选手年龄和状态的观察&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;感觉大家都变年轻了。我参加黑客松快二十场了（从2020年到现在）。一开始觉得自己年龄小，现在突然觉得不那么小了，已经有一零后来参加了。&lt;/p&gt;
+&lt;p&gt;另一个感受：虽然大多数还是CS Major、专门学coding的占多数，但Non-Coder来参加的人数越来越多。大家做出来的东西比以前更“有人味”，不像之前做的那些硬核科技的东西。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最喜欢的产品&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;放屁垫子——你一坐下它就开始放屁声，特别搞笑，也挺抽象。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;作为小红书博主的参赛感受&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这次是我第一次以博主身份参加黑客松。一进去很多人认识我，挺惊喜的，我很享受这种交流。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;给Building Public的同学的建议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Building Public是这个时代、尤其是做AI产品最好的杠杆。现在做AI产品的成本非常低，如果能很快把东西做出来，又用自媒体方法获得早期曝光，就能立马验证PMF。有traction就继续做，不行就换个方向做下一个项目。&lt;/p&gt;
+&lt;p&gt;不要怕朋友刷到觉得尴尬。如果觉得不行就赶紧move on，没什么不好意思的。我有朋友是顶级天才，产品比我做得好很多，但他们一直不发，说要做到“怎么怎么好”才发。我觉得这是现在这个时代最错误的决定。想法最不值钱，你不发，别人跟你想到同一个idea先发了，你就再也没机会了。&lt;/p&gt;
+&lt;p&gt;我现在把小红书和其他社交平台比作App Store——它们是最好的分发渠道，非常便宜、非常牛，还能帮你做个人IP。我们真的生在好时代了。&lt;/p&gt;
+&lt;h2&gt;选手六：Quinn——Vibe Coding线上比赛平台&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自我介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Quinn：我是早期投资人，base在新加坡。这次拿了黑巅人气王奖（选手内部票选）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我做了Vibe Song，一个任何人都可以发起并参加的Vibe Coding线上比赛。你可以发起自己想做的topic，设置人数、时间、奖金，然后开始直播整个Vibe Coding过程。观众可以进入赛场发弹幕、体验产品、提建议、最后投票。&lt;/p&gt;
+&lt;p&gt;我很喜欢Vibe Coding和Hackathon这种形式，从中得到很多乐趣，觉得这是一种沉浸式的创造模式。我想用这种类似小游戏的形式降低大家参与的门槛，上到老下到小都可以参与。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;惊喜与惊吓&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;整个体验从开始到结束都很奇幻。我第一次见到规模这么大、筹备这么精心、细节这么耳目一新的黑客松。最能relate的是那个口号：“48小时给世界造一个大玩具。”我觉得很符合我参赛的心境。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;后续计划&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们真的打算自己办一场。黑客松结束后我们每天都在完善产品，希望两周内上线，五月份在新加坡和上海办线下Vibe Coding活动。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;比赛形式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;平台24小时开放，多语言版本，任何人任何地点任何时间都能发起比赛。目前选6人以内。评选方式有两种：Host决定奖金发给谁，或者由现场/直播观众投票。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最喜欢的产品（除了自己）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;降噪口罩那个硬件项目。idea很幽默：一个降噪口罩，里面内置麦克风。在公众场合跟AI讲话时不会影响别人。我自己也有这需求，一天到晚跟AI讲话又不想打扰别人。我还想买给我的日本朋友，他们特别在意在公众场合打扰别人。&lt;/p&gt;
+&lt;h2&gt;选手七：彭程——聋人团队的语音修复项目&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自我介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;彭程（通过手语翻译）：我来自北京，主要做聋人言语康复业务。这次作品因为硬件烧坏现场翻车了，没拿到奖，但很多人提到我们产品印象深刻。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品介绍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们的作品叫“柯南变声器”，主要功能是通过AI修复模糊的声音。&lt;/p&gt;
+&lt;p&gt;我第一反应是很感动——整个团队成员都是听障人士，他们做的产品是为了让比较模糊的发音能被转换成正常的表达。我跟康复医疗沟通时，医生说可能需要用十年甚至一辈子才能学会说话，但我不想把我的人生都耗费在康复上。所以我们公司开发了AI语训App降低康复成本。&lt;/p&gt;
+&lt;p&gt;但学说话中发现一个问题：别人总是听不懂我在说什么，总是会打击到我。我不能因为这些事断掉康复之路，所以想开发一个项目：在我还在康复阶段、说话不清楚时，能帮助我与别人顺利说话。这就是柯南变声器的灵感。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;印象深刻的故事&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第一天我们小组三个人，我负责技术，董汉负责沟通，另一位负责设计。他对3D打印不熟悉，打印失败了。现场的选手看到后很热情地帮助我们解决，成功做出了3D模型。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最喜欢的产品&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;香菇肥牛项目，他们做了一个菌菇串，用意念控制轮椅。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;量产计划&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;希望比赛后继续完善这个产品。如果真能开发出来，我就可以通过它自己上台演讲了。&lt;/p&gt;
+&lt;h2&gt;组织者复盘：现场氛围的设计逻辑&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;问：你们设计现场氛围的关键词是什么？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：第一个词是“创造”。我们希望现场是能激发创造力的地方，不是死气沉沉的比赛现场。我们有解压小工具、密码、梗图，都是为了激发创造力。&lt;/p&gt;
+&lt;p&gt;第二个词是“自虐”。黑客松核心主旨就是把自己逼在有限时间、有限工具、有限人里去解决一个难题。包括倒计时、开始和结束的仪式、帐篷，都是为了让选手有“来找虐”的感受。创造力和自虐放在一起，化学反应很有意思。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：为什么每天发短信鼓励退赛并给100薯条？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：这也是为了“自虐”的感觉——你是不是忍不住了？忍不住出去就有甜头。更多是在调动年轻人的求胜心和不服气。最后那个环节反而变成大家互喷垃圾话：“你要么去拿100薯条吧！”&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;真的有人退赛吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;没有。大家都忍住了。可能100薯条的福利太低了，可以提高到100万——第二天就没有选手了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：你们会特别鼓励选手做什么样的Building Public？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：我们更多的是希望更有创意、从自己的需求和身边出发。过去很多黑客松主题围绕创业，但我们这次想让大家看到年轻builder的面貌和更天马行空的想法与创意。作为平台，如果没那么功利，Building Public的部分就会非常有趣。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：从什么时候开始，小红书成为大家Building Public的主要平台？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：从去年独立开发大赛之后。当时我们就讲这里有很多验证PMF的机会。之后有了Manus，再之后发现很多大神、同行、厉害的人都在这里。Building Public一方面是为了找需求、找用户，另一方面是为了交流。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：这和时代有关吗？为什么2025-2026年Building Public突然火起来？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：跟时代特别相关。因为生产力太丰富了——所有的想法一两天内就能做出非常完整的demo。所以怎么让你的产品更早地找到用户、更早Go to Market，这些部分很重要。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：你们在背后有哪些运营动作？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：我们做了很多激发创造的事情。这种比赛或每年的大项目是最集中的展示，但平时的储备更多是在做选题时找“谁能代表我们想要的maker气质”、“谁能代表Building Public的作者”。最难甄别的是大家的意图，我们主要筛选真正在创造和真正想去创造的人。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：印象深刻的选手？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：13岁的小朋友，在小红书教编程，现场大家叫他“老杨”。还有张智尧，大家叫他“尧哥”，“尧哥来能解决一切”。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问：你希望大家以后怎么描述黑巅？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：我希望大家聊到“全中国最牛逼的科技赛事”时，第一反应就是小红书黑客巅峰赛。我们的初衷是为中国提供一个顶尖的科技活动。我们看到很多科技活动像展会，比较传统老式，但真正在创造的人特别年轻（零零后、一零后）。他们的面貌怎么在另外的场景下被呈现出来是重要的。所以才用了黑客松这个壳，但我们真正想做的是那件事。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;接下来最想做的事情？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;有两个方向。回到社区层面，这次等于把想要的这群人的样子告诉了大家，希望有更多这样的人长出来。另一个层面：我们的野心是做全球最好的科技社区。去年说“最好的科技人的朋友圈”，今年野心会更大，希望速度更快。从更大项目上，如何做出比肩全球影响力的大型项目，也是我们后半段要策划的。&lt;/p&gt;
+&lt;h2&gt;尾声：关于“年轻”的争论&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;问：有些人嘲讽创投圈“恋童癖”，沉迷歌颂年轻甚至年幼的开发者。你怎么看？为什么这么强调年轻？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;伞兵：年轻只是一个很好理解的词。像现场曹曦提到，在AI时代我们更关注“时代年龄”而非“物理年龄”。之前有个小采访，陈景初、老杨和我坐在一起——我是90后，00后，10后，三代人。但我们接触AI、使用AI、应用AI的时间是差不多的。所以更重要的是：谁在这个场景里对新一波技术浪潮更敏感、进入得更早、更感兴趣？&lt;/p&gt;
+&lt;p&gt;在AI时代，我们都是同龄人。甚至有可能我是更稚嫩的那个人。&lt;/p&gt;
+&lt;p&gt;黑客松我一直觉得过程比结果重要。最近很喜欢一句话：“年轻的时候要去巴黎。”因为在文艺的黄金时代去巴黎，你能遇到最高密度的、和你一样充满野心、想要创造、想要改变的人。&lt;/p&gt;
+&lt;p&gt;我觉得这次黑客松就是AI时代的巴黎。在这里你可以结识很多同类，在未来的路上和大家同行。这可能是参赛最大的收获。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：Koji杨远骋 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7631580144527871268/?region=CN&amp;amp;mid=6802540870953502727&amp;amp;u_code=2gfc2ck4ha1i&amp;amp;did=MS4wLjABAAAAaACcUv_0j-qA-Vm7JpNPnGziZU-y2dGvB1mNUdq56OU&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=8Q7sZbftcP5cqaukzhD4TWKgDfqbcXslumHi9tqMP.A-&amp;amp;share_version=220100&amp;amp;ts=1776982636&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7631580144527871268/?region=CN&amp;amp;mid=6802540870953502727&amp;amp;u_code=2gfc2ck4ha1i&amp;amp;did=MS4wLjABAAAAaACcUv_0j-qA-Vm7JpNPnGziZU-y2dGvB1mNUdq56OU&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=8Q7sZbftcP5cqaukzhD4TWKgDfqbcXslumHi9tqMP.A-&amp;amp;share_version=220100&amp;amp;ts=1776982636&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
