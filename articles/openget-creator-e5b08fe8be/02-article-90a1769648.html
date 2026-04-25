@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>关于个体户的常见问题解答</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">小辉教你开公司 OpenGet笔记</div>
+                    <h1>关于个体户的常见问题解答</h1>
+                    <div class="meta">
+                        <span>小辉教你开公司</span>
+                        <span>Wed, 22 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7631782076190199074/?region=CN&amp;amp;mid=7631782349281200947&amp;amp;u_code=i1m892flfhm&amp;amp;did=MS4wLjABAAAA_chfjrGjzZ2v_Szd_2YYS2U706byxOdlWyGHtKaAX1s&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=IW4wx1IVa3AK2yYkpMZC0YS_CUaQ3YzYvXcCF6s6Opg-&amp;amp;share_version=220900&amp;amp;ts=1776960994&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;一、个体户的注册流程与部门&lt;/h2&gt;
+&lt;p&gt;正常来讲，营业执照需要去市场监督管理部门办理注册。现在很多地方都支持线上办理，直接在当地市场监督管理局官网提交申请，按要求提交资料即可。&lt;/p&gt;
+&lt;p&gt;办完营业执照之后，还需要去税务部门办理税务登记。现在税务登记也基本支持线上办理，可以直接在电子税务局系统内完成。如果不会操作或遇到复杂问题，可能需要线下跑一趟市场监督管理部门或税务部门。这两个部门都需要处理。&lt;/p&gt;
+&lt;p&gt;另外，个体户如果需开公户，要去银行办理；不开公户则不用。之后每个月按时报税即可。报税政策各地不同：有些地方允许核定征收，个体户不用自己报相关税；如果是查账征收，则需要记账并报税。&lt;/p&gt;
+&lt;h2&gt;二、刻章与开公户是否强制&lt;/h2&gt;
+&lt;p&gt;关于刻章，没有强制要求。个体户可以刻一个公章（或个体户专用章），用于签合同。如果客户或供应商没有明确要求，可以不用刻。&lt;/p&gt;
+&lt;p&gt;开公户同理：如果是核定征收的个体户，开不开无所谓；如果是查账征收，建议开一个，记账报税会更方便。&lt;/p&gt;
+&lt;h2&gt;三、主要税种与优惠政策&lt;/h2&gt;
+&lt;p&gt;个体户主要有两大税种：增值税和个人所得税（经营所得）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;增值税：如果是小规模个体户，税率为1%（按营业额×1%）；如果是一般纳税人，税率分别为6%、9%、13%（不同行业不同）。&lt;/li&gt;
+&lt;li&gt;个人经营所得税：按5%到35%的五级累进税率。注意，这与个人综合所得（3%至45%七级累进）不同。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;优惠政策：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;增值税：每月营业额不超过10万元（或每季度不超过30万元）免征增值税。超过后按1%缴纳。&lt;/li&gt;
+&lt;li&gt;个人经营所得税：年应纳税所得额（利润）不超过200万元，可在5%-35%基础上减半征收（即实际2.5%-17.5%）。此外，如果当地允许核定征收，甚至可能连减半后的税率都没有，直接按固定额度或固定利润率计算。具体需与当地税务所确认。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、核定征收与查账征收的区别&lt;/h2&gt;
+&lt;p&gt;核定征收有两种形式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按固定金额征收，例如一年固定交1000元。适用于规模特别小、无法记账报税的情况。&lt;/li&gt;
+&lt;li&gt;按固定利润率征收：当地根据同行业平均值确定一个利润率（如10%或20%），按收入×利润率算出利润，再代入个人经营所得税税率表计算。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;查账征收则需要建立完整的会计账簿，由会计记账，按实际账目报税。&lt;/p&gt;
+&lt;p&gt;需要注意的是，目前各地个体户正逐渐取消核定征收，转向查账征收。查账征收将成为主流趋势。如果你当地还允许核定征收，建议抓紧利用该优惠政策。&lt;/p&gt;
+&lt;h2&gt;五、开发票的渠道&lt;/h2&gt;
+&lt;p&gt;个体户可以开发票，这也是很多人成立个体户的原因之一。开票渠道有两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线上：电子税务局（网页端或App）。&lt;/li&gt;
+&lt;li&gt;线下：税务局大厅。
+只要有发票，就能正常入账。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;六、一个人能否开多个个体户&lt;/h2&gt;
+&lt;p&gt;理论上没有明确限制，但不建议一个人开多个个体户。因为如果你开了多个个体户，第二年3月31日前，需要将个人名下所有个体户的个人经营所得合并计税。合并后可能无法享受年利润200万以内减半的优惠政策。&lt;/p&gt;
+&lt;p&gt;如果确实有需求，建议让家人各自成立个体户，分散经营主体，这样每个人都能享受优惠政策。一个人同时拥有多个个体户，合并后超过优惠线就无法享受。&lt;/p&gt;
+&lt;h2&gt;七、个体户升级为有限公司&lt;/h2&gt;
+&lt;p&gt;可以升级。去当地市场监督管理部门直接办理升级。好处是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保留原字号（即品牌名称），可以将个体户名称中的字号作为有限公司的字号，显得成立日期较早，像老字号。&lt;/li&gt;
+&lt;li&gt;也可以直接注销个体户，重新注册新公司，这样更简单干净，但会失去原来的字号和成立日期。各有利弊。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;八、合伙开餐馆能否用个体户&lt;/h2&gt;
+&lt;p&gt;正规合伙不能用个体户。因为合伙要求每个人都登记为股东或合伙人，而个体户只能登记一个人。如果只登记一人，其他人的权益只能通过私下协议约定，这种协议效力不如工商登记强，不能对抗外部第三人，存在风险。&lt;/p&gt;
+&lt;p&gt;如果正规合伙，建议用有限责任公司。个体户做不大，未来做大了一定会转为有限责任公司。如果只是小生意，其实没必要合伙。建议：要么直接奔着做大的目标注册有限责任公司，要么先开个体户，以后做大了再升级为公司。&lt;/p&gt;
+&lt;h2&gt;九、能否在个体户里给自己发工资&lt;/h2&gt;
+&lt;p&gt;不能。个体户的个人经营者缴纳的是“个人经营所得”。无论你走工资还是最终分红，都按个人经营所得计算，而不是通常意义上的工资薪金所得。在别人公司上班领工资才是工资薪金所得。在自己的个体户里领的所有钱都叫个人经营所得。即使自己报了工资个税，最终也要合并到个人经营所得里结算。&lt;/p&gt;
+&lt;h2&gt;十、在职人员的工资收入与个体户经营所得是否冲突&lt;/h2&gt;
+&lt;p&gt;会有冲突，核心在于每年6万元以内的免税额。每个人每年都有6万元免税额度。如果你在别处用了工资的6万元免征额度，那么个体户个人经营所得那块就用不了这个额度。&lt;/p&gt;
+&lt;p&gt;但是，如果你在有正式工作的公司领工资（非自己的个体户），又同时经营个体户获得个人经营所得，两者可以分开计税，各算各的。因为工资税率（3%-45%）和个人经营所得税率（5%-35%）不同，两者都是个人所得税下的子类型，分开计算。唯一的影响是6万元免税额度共用，只能一个使用，另一个无法使用。&lt;/p&gt;
+&lt;h2&gt;十一、刚办好执照，能否用个人卡收款并开票&lt;/h2&gt;
+&lt;p&gt;可以用个人卡收款，开票用个体户名义开。需保证“三流一致”：资金流、发票流、业务流保持一致。&lt;/p&gt;
+&lt;p&gt;如果客户明确要求三流一致（进公户、个体户开票、个体户签合同），建议开公户。如果客户无此要求，用个人卡收款也行。&lt;/p&gt;
+&lt;h2&gt;十二、利润高但营业额10万以内是否免税&lt;/h2&gt;
+&lt;p&gt;注意区分：营业额10万以内免征的是增值税，不是个人经营所得税。个人经营所得税根据利润缴纳。利润高的话，需按利润全额缴纳个人经营所得税；如果有成本抵扣，则按利润（营业额减成本）计算。&lt;/p&gt;
+&lt;p&gt;举例：营业额10万，如果无任何成本，10万都是利润，则按10万计算个人经营所得税。如果有5万成本，利润5万，则按5万计算。增值税免的是营业额10万以内，个人经营所得税不免。&lt;/p&gt;
+&lt;h2&gt;十三、想开3%或13%专票，必须是一般纳税人吗&lt;/h2&gt;
+&lt;p&gt;小规模也能开专票，但只能开1%或3%的专票。要开13%的专票，必须是一般纳税人。个体户也分小规模个体户和一般纳税人个体户，默认都是小规模。等做大了可主动升级或被强制升级（年营业额达到500万自动升级）。&lt;/p&gt;
+&lt;p&gt;如果不确定自己个体户是小规模还是一般纳税人，可登录电子税务局，在“我的信息”-&amp;gt;“纳税人信息”中查询。&lt;/p&gt;
+&lt;h2&gt;十四、个人经营所得税在哪里申报&lt;/h2&gt;
+&lt;p&gt;所有税务申报都在电子税务局。在电子税务局系统中找到个人经营所得税申报入口即可。如果自己不会报，可以找代理记账公司帮忙。&lt;/p&gt;
+&lt;h2&gt;十五、进项票可以抵扣什么税&lt;/h2&gt;
+&lt;p&gt;进项票（进货发票）和销项票（销售发票）主要关于增值税。一般纳税人取得的专票可以抵扣增值税；小规模纳税人抵扣不了增值税。&lt;/p&gt;
+&lt;p&gt;但进项票还有另一层作用：作为成本抵扣个人经营所得税。无论小规模还是一般纳税人，只要有进项发票，就可以作为成本减少利润，从而降低个人经营所得税。&lt;/p&gt;
+&lt;p&gt;同一张进项票，在一般纳税人公司里既可抵扣增值税又可抵扣企业所得税；在个体户里（查账征收）可抵扣个人经营所得税。核定征收的个体户不需要抵扣，因为税很少且不用记账报税。查账征收的个体户必须要有进项票，否则个人经营所得税会非常高。&lt;/p&gt;
+&lt;h2&gt;十六、个体户能否给配偶买社保&lt;/h2&gt;
+&lt;p&gt;可以。把配偶作为员工正常参保即可。个体户如果没有员工，可以给自己交灵活就业社保；如果有员工，可以给员工交职工社保。&lt;/p&gt;
+&lt;p&gt;特别说明：女性买职工社保可享受生育津贴。生孩子时会有产假，产假期间不用工作也能领生育津贴，由生育险基金发放。前提是至少连续缴满一年或10个月（各地可能不同）。按时足额缴纳10个月或1年后，生孩子时可领至少4-5个月的生育津贴，金额与工资相近。&lt;/p&gt;
+&lt;p&gt;如果夫妻都没工作，丈夫有个体户或公司，可以在自己的个体户/公司里给妻子缴社保，一定要缴生育险，这样领取生育津贴很有价值。作者分享个人经历：妻子辞职后在作者自己公司交社保，二胎、三胎时都领取了金额不低的生育津贴。&lt;/p&gt;
+&lt;h2&gt;十七、异地执照未使用也未注销的风险&lt;/h2&gt;
+&lt;p&gt;如果执照不注销，可能会被吊销。被吊销后会被列入失信黑名单，未来注册新企业或担任任何企业高管都会受影响。&lt;/p&gt;
+&lt;p&gt;建议：如果执照不用，要么正常注销，要么维持零申报的正常运转。零申报需正常做工商年检（现称“企业信息公示”），在公示系统操作即可。&lt;/p&gt;
+&lt;h2&gt;十八、利润6万以内是否免征个税&lt;/h2&gt;
+&lt;p&gt;如果没有其他收入，6万以内免个人经营所得税。但如果还有其他工资收入，这个6万额度是共用的，不能重复享受。&lt;/p&gt;
+&lt;h2&gt;十九、在公司交社保，能否注册个体户并有资金往来&lt;/h2&gt;
+&lt;p&gt;可以，前提是有真实业务且合规纳税。不能虚构业务。需保证三流一致（合同流、发票流、资金流一致），且从实质上也要有真实业务。&lt;/p&gt;
+&lt;h2&gt;二十、总结与课程推荐&lt;/h2&gt;
+&lt;p&gt;以上是关于个体户常见问题的解答。此外，作者还提供了《新手开公司必备知识》系统课程，涵盖公司注册、财税、股权、社保、用工等方面，并提供班级群答疑服务。课程链接见下方。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：小辉教你开公司 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7631782076190199074/?region=CN&amp;amp;mid=7631782349281200947&amp;amp;u_code=i1m892flfhm&amp;amp;did=MS4wLjABAAAA_chfjrGjzZ2v_Szd_2YYS2U706byxOdlWyGHtKaAX1s&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=IW4wx1IVa3AK2yYkpMZC0YS_CUaQ3YzYvXcCF6s6Opg-&amp;amp;share_version=220900&amp;amp;ts=1776960994&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7631782076190199074/?region=CN&amp;amp;mid=7631782349281200947&amp;amp;u_code=i1m892flfhm&amp;amp;did=MS4wLjABAAAA_chfjrGjzZ2v_Szd_2YYS2U706byxOdlWyGHtKaAX1s&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=IW4wx1IVa3AK2yYkpMZC0YS_CUaQ3YzYvXcCF6s6Opg-&amp;amp;share_version=220900&amp;amp;ts=1776960994&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

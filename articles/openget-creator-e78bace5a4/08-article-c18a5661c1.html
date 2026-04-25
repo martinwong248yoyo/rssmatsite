@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>舆论阵地的重要性：坚守制度自信、宣传正向内容（三）#独夫之心#舆论#制度自信</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">独夫之心 OpenGet笔记</div>
+                    <h1>舆论阵地的重要性：坚守制度自信、宣传正向内容（三）#独夫之心#舆论#制度自信</h1>
+                    <div class="meta">
+                        <span>独夫之心</span>
+                        <span>Wed, 22 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7631887769354128667/?region=CN&amp;amp;mid=7631887898786220827&amp;amp;u_code=308ljhfg16hl&amp;amp;did=MS4wLjABAAAAhdqhjZJKVhPQ7lZPs4nNQh--xF53MXC23z0d3pDbpNE&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=ol9MY8WUgMG8g6NrdTSRvNzXbUBWnnrWVvL1sjbVaAU-&amp;amp;share_version=210000&amp;amp;ts=1776960171&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;背景：资料搜集与认同问题的提出&lt;/h2&gt;
+&lt;p&gt;我曾经跟你们讲过，全世界搜集中国资料，尤其是建国以来到改革开放之间的，资料最全的根本不是中国大陆，而是香港中文大学的中文数据库。这个数据库是拿美国人钱建的。他们有多重视这个事，你们应该知道了——就是我们可能没那么重视的事，他们重视。&lt;/p&gt;
+&lt;p&gt;所以我有下面的言论：我可以跟你不讲政治和意识形态，但我要跟你讲民族和文化认同。你是不是中国人？就这么简单，一句话：是中国人就完事了。&lt;/p&gt;
+&lt;p&gt;我可以认为你是特殊的人民内部矛盾。就是说，你认为自己是中国人，但是你觉得现在的条条框框得跟西方学，可你承认“我就是中国人”——这就可以和另一类人分开看。&lt;/p&gt;
+&lt;h2&gt;案例参照：张敬轩与内地公知的对比&lt;/h2&gt;
+&lt;p&gt;像张敬轩这种定位，他一定要比国内那帮深度参与政治生活、完全适应大陆生态的公知们——那些所谓的“推塔的反贼们”——强多了。因为张敬轩起码句句还说自己是广东人，他没有说自己不是中国人。我看了他所有言论，全是制度问题。&lt;/p&gt;
+&lt;p&gt;这个问题放在台湾是一模一样的。台湾人质疑大陆，分两种：一种人认为自己不是中国人，这就是****；另一大批认为自己就是中国人，那就行。他质疑你制度、质疑各方面，无所谓。你先整明白自己是中国人，然后我们就可以说制度的事了，这就叫可讨论范畴内，属于特殊人民内部矛盾。&lt;/p&gt;
+&lt;h2&gt;历史成因：海外华人、殖民地与解放战争遗留&lt;/h2&gt;
+&lt;p&gt;中国由于有特殊的半殖民地封建历史，导致一部分同胞流落海外。比如马来西亚的华人，也不了解中国大陆的制度。我们应不应该通过文明发展，让他们感到“鱼有容颜”？应该。为什么？这是整个大中华文明的崛起。他们虽然是马来西亚人，但随着中国实力强大，马来西亚华人的社会地位、中国在国际上的影响力都会提升。&lt;/p&gt;
+&lt;p&gt;再往小说，两岸三地、台澎金马、澳门、香港，他们是什么问题？台澎金马是解放战争以来的问题——解放战争没有结束；澳门和香港是清朝时期的殖民地问题。前者是资本主义买办集团的社会（蒋邦、两蒋），后者是殖民地政府的社会（葡萄牙派驻的澳门总督、英国派驻的香港总督）。那时候中国人在香港是二等，上面是英国人，那就是殖民地社会。&lt;/p&gt;
+&lt;p&gt;殖民地社会的人现在经济发展好，有自由贸易港，政治上属于英国，具备这么大的国际市场条件，当然比起被封锁的大陆发展得好，很正常。他们小，而且没有经历过完整的社会主义政治生活和教育。但只要他们认定自己是中国人，就属于人民内部矛盾。&lt;/p&gt;
+&lt;h2&gt;标准划分：从人民内部矛盾到反动分子&lt;/h2&gt;
+&lt;p&gt;再小一圈：经历过完整的中国大陆教育、完整参与社会生活和政治生活，还对国家本身有质疑，并且在宣传上进行破坏性宣传的——这就是反动分子。这个划分就很精准。&lt;/p&gt;
+&lt;p&gt;比如我们经常讲的典型反动分子，非常典型。你看他对资本主义国家的吹嘘，对国内具体问题的分析，都能透露出这个问题。昨天的流露算什么？如果按照他自己说的话，接近于汉奸吗？不算汉奸，算日本人——他自己说的。&lt;/p&gt;
+&lt;p&gt;猴王呢？我们现在能接触到的猴王基本上都是……如果你真的信奉红色思想、马列主义、唯物辩证，你真的为民请命，有一个非常大的范例摆着：在今天简中互联网上，有个人叫佟仁忠（穷人忠），他连人民内部矛盾都没有。他就是为人民、舍己为人，他跟谁有矛盾？跟资本家、买办、工贼有矛盾，跟人民大众没矛盾。&lt;/p&gt;
+&lt;p&gt;很多人觉得“我为民请命”，但你的目的是什么？不是为民，是奔着推塔去的。佟仁忠刚开始起的几个号被封了，后来还是起了一个号。他也说过我不好，说我有问题。对，我说我是有问题啊——说得对，没毛病。&lt;/p&gt;
+&lt;h2&gt;宣传态度：制度自信下的可控辩论与对冲&lt;/h2&gt;
+&lt;p&gt;我刚才评判他们属于这个分子那个分子，但我并不觉得在今天这个舆论社会上要把他们封掉。我不认可。我觉得我们应该充分有这个自信。&lt;/p&gt;
+&lt;p&gt;过去一个时代有一个时代的办法。现在我们既然有制度自信、各方面自信了，我觉得相关部门要对宣传有领导作用。过去偏管理，现在应该是服务、导向管理，三者合一，然后有一个指向性。&lt;/p&gt;
+&lt;p&gt;其实现在这些博主，应该充分给他们一些说话空间，让我们去和他们进行相对可控的辩论，在舆论上形成对冲，而非只有一种声音。&lt;/p&gt;
+&lt;p&gt;某位博主对国家基本方针有非常错误的理解和解读，是非常扰乱视听的说法。如果说要封他们，一个简单的理由是“挑动对立”——严重挑动对立。你凭什么说人家是什么“基本盘”？而且“基本盘”这个词是台湾岛内蓝绿白互相对骂用的，过去就是骂人用的。&lt;/p&gt;
+&lt;h2&gt;个人判断逻辑：历史正当性与后人智慧&lt;/h2&gt;
+&lt;p&gt;主播判断准确的原因是坚信“人间正道是沧桑”。但也不完全是——人间正道未必沧桑。我说过，历史未必时时刻刻都是正义的。它邪恶过。很多历史阶段就是有问题的。大清像正义的吗？五代十国全是邪恶的，十国政权没有一个好东西。&lt;/p&gt;
+&lt;p&gt;哪个封建王朝是好的？历史有局限性和相对性。大明王朝刚建的时候就是好的。好了，我现在又变成明粉了。我说清朝不好没有人会注意，但我说清朝好马上被截取。&lt;/p&gt;
+&lt;p&gt;重点在于历史的正当性。看什么？看人民性，看是否有利于人民、发动人民、信任人民。明朝朱元璋对老百姓就是好；汉朝让利于民，西汉初建、文景之治到汉武帝、汉宣帝都是好的。促进生产力，调整生产关系——这是今天的看法。&lt;/p&gt;
+&lt;p&gt;历史发展到一千年以后，今天的很多制度、生产关系可能就是反动的。你不能把一千年以后的社会存在放在今天去说。拿今天比较？你比较个什么？刻舟求剑。&lt;/p&gt;
+&lt;p&gt;不论如何，只要人类文明往上走、往上发展，一千年以后我们肯定比今天好。今天的东西平移过去，那就是反动的。万一一百年以后倒退了呢？倒退了就倒退了。只要人类文明绵延不绝，就一定能够从历史中找到经验和教训，也还是有进步的。&lt;/p&gt;
+&lt;p&gt;相信后人的智慧，但不要把今天的问题留给后人。相信后人的智慧，是因为我们今天能够用今天的智慧去解决今天的问题。&lt;/p&gt;
+&lt;p&gt;下集请移步主页观看。&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：独夫之心 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7631887769354128667/?region=CN&amp;amp;mid=7631887898786220827&amp;amp;u_code=308ljhfg16hl&amp;amp;did=MS4wLjABAAAAhdqhjZJKVhPQ7lZPs4nNQh--xF53MXC23z0d3pDbpNE&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=ol9MY8WUgMG8g6NrdTSRvNzXbUBWnnrWVvL1sjbVaAU-&amp;amp;share_version=210000&amp;amp;ts=1776960171&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7631887769354128667/?region=CN&amp;amp;mid=7631887898786220827&amp;amp;u_code=308ljhfg16hl&amp;amp;did=MS4wLjABAAAAhdqhjZJKVhPQ7lZPs4nNQh--xF53MXC23z0d3pDbpNE&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=ol9MY8WUgMG8g6NrdTSRvNzXbUBWnnrWVvL1sjbVaAU-&amp;amp;share_version=210000&amp;amp;ts=1776960171&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

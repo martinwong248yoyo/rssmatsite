@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>该不该给张某某机会：艺人分类管控与舆论边界说明（一）#独夫之心#张敬轩#劣迹艺人</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">独夫之心 OpenGet笔记</div>
+                    <h1>该不该给张某某机会：艺人分类管控与舆论边界说明（一）#独夫之心#张敬轩#劣迹艺人</h1>
+                    <div class="meta">
+                        <span>独夫之心</span>
+                        <span>Thu, 23 Apr 2026 16:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://www.iesdouyin.com/share/video/7632252148218137906/?region=CN&amp;amp;mid=7632252229023075118&amp;amp;u_code=164h7hjb2h12&amp;amp;did=MS4wLjABAAAAK1GtsUGjP9p7WqAKyWVuqMUFY8EfuFAkxHMJekcXYM4&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=J3VY.ypyHTl5NhV6Qk3XbXl_fqZkEOdkpp7Gj84iUaA-&amp;amp;share_version=210800&amp;amp;ts=1777046565&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    &lt;h2&gt;问题背景：为什么重新讨论张敬轩&lt;/h2&gt;
+&lt;p&gt;昨天我讲了一下互联网上怎么分辨具体言论，以及舆论阵地保卫这些问题，其中提到了张敬轩。很多人说我反对独播，但这个事昨天并没有说明白，因为我没有具体分析。今天我还是原有的观念，没有变，但要把这个问题讲明白。&lt;/p&gt;
+&lt;h2&gt;两个标准：完整教育与政治生活&lt;/h2&gt;
+&lt;p&gt;我昨天提了两个标准：第一，接受大陆的完整教育；第二，参与大陆的政治生活。&lt;/p&gt;
+&lt;p&gt;张敬轩从小在广州长大，21岁去香港发展，然后进入香港娱乐圈。我做过调查，他没有参与过大陆的政治生活。什么是大陆的政治生活？在中华人民共和国大陆地区，政治生活分两种：中国共产党内的政治生活，以及党外政治生活。党外政治生活比较宽泛，比如参与政治协商、国家统战工作，包括合理合法的宗教团体活动、参加民主党派等。大一点的单位有党支部，小到商会也是经过统战工作指导的，这些都属于政治生活。&lt;/p&gt;
+&lt;h2&gt;张敬轩的定位：高危而非劣迹&lt;/h2&gt;
+&lt;p&gt;很多人一说到网开一面，就联系到张敬轩来大陆捞金。但他在大陆捞金已经很多年前就不能了。我没有说支持他来大陆捞金，这对我来说不是焦点。&lt;/p&gt;
+&lt;p&gt;张敬轩之前被中国国防报批评过，批评后他说自己绝对不是一个&quot;独&quot;艺人。目前官方认定的&quot;独&quot;艺人有何韵诗、杜汶泽、黄秋生、黄连煜四个。此外还有内地全面抵制艺人：赵学而、周启生、叶德娴。高危艺人里面包含张敬轩。我认为他不是&quot;独&quot;艺人，这不光是我说，国家有关部门也有相关认定。&lt;/p&gt;
+&lt;h2&gt;行业协会与地方审批的实操逻辑&lt;/h2&gt;
+&lt;p&gt;我们有一个对全体艺人生效的演艺协会。如果你或你的经纪公司加入这个演艺协会成为会员单位，就要听从相关的封杀令。比如张敬轩（注：原文此处写张某汉，可能是口误或另一人），就是被这个演艺协会认定的。&lt;/p&gt;
+&lt;p&gt;但如果经纪公司不是演艺协会会员，能不能在内地开演唱会？需要当地有关部门批准，并且没有遭到大量群众抵制，就能开。所以所谓的劣迹艺人或&quot;独&quot;艺人，国家有规定，但并没有完全堵死。比如某汉就在中国某酒吧驻唱，没被发现，也没被抵制。这种事不会被行政处罚，也不属于违法犯罪——咱们要讲法律。&lt;/p&gt;
+&lt;h2&gt;网开一面的核心：给立正的机会&lt;/h2&gt;
+&lt;p&gt;我说的网开一面是什么？很多人拿馆长举例，说他行而张敬轩不行。但馆长之前放了什么言论大家都知道。我认为香港港府做得对，港府是给他机会的；同样台湾也是给馆长机会的。台办给馆长一次机会，现在港府给张敬轩一次机会，我认为可以。馆长现在立功了，没问题了。&lt;/p&gt;
+&lt;p&gt;张敬轩现在是寸功未立。现在不是他要立功吗？给不给他这个机会？我说网开一面，给他机会。他现在要立功去。香港保安局拉着他去做什么？叫正向宣讲。&lt;/p&gt;
+&lt;h2&gt;正向宣讲机制与反面教材价值&lt;/h2&gt;
+&lt;p&gt;什么叫正向宣讲、正向引导？我专门做过功课。它指的是过去曾经被有毒思想毒害过的青年——说白了就是废青——他们需要再教育。怎么再教育？请他来当典范，他去讲：我当年是怎么回事，被谁引诱了，被什么思想毒害了，然后我来大陆几次后终于想明白了。这叫反面教材。&lt;/p&gt;
+&lt;p&gt;有人说，那应该请那些本身就爱国爱港的人，为什么忘了他们？两码事。人家从小就是红色的、价值观就对的人，怎么做正向宣讲？他讲&quot;我从小就对，你们就错&quot;，讲不了。你得找一个人，既有公众示范效应，又有典型性——他过去犯过错，现在知道什么错、什么对。这不就是立功吗？怎么就不能网开一面？网开一面就是让他立功。&lt;/p&gt;
+&lt;p&gt;我从小对到大，有什么示范效应？首先要聚焦他们身上的毛病，他从来都没这个毛病，你让他讲什么？张敬轩现在没说来大陆赚钱，没听说过这事。现在就是讨论：允不允许给他一次机会，让他去立功？我说网开一面就应该允许，没什么问题。&lt;/p&gt;
+&lt;p&gt;香港保安局相当于大陆的官方机构，官方让他去的，有什么问题？看他后续表现。&lt;/p&gt;
+&lt;p&gt;（下集请移步主页观看）&lt;/p&gt;
+                </section>
+                <footer>
+                    <div>来源订阅：独夫之心 OpenGet笔记</div>
+                    <div>原始内容：<a href="https://www.iesdouyin.com/share/video/7632252148218137906/?region=CN&amp;amp;mid=7632252229023075118&amp;amp;u_code=164h7hjb2h12&amp;amp;did=MS4wLjABAAAAK1GtsUGjP9p7WqAKyWVuqMUFY8EfuFAkxHMJekcXYM4&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=J3VY.ypyHTl5NhV6Qk3XbXl_fqZkEOdkpp7Gj84iUaA-&amp;amp;share_version=210800&amp;amp;ts=1777046565&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D">https://www.iesdouyin.com/share/video/7632252148218137906/?region=CN&amp;amp;mid=7632252229023075118&amp;amp;u_code=164h7hjb2h12&amp;amp;did=MS4wLjABAAAAK1GtsUGjP9p7WqAKyWVuqMUFY8EfuFAkxHMJekcXYM4&amp;amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;amp;with_sec_did=1&amp;amp;video_share_track_ver=&amp;amp;titleType=title&amp;amp;share_sign=J3VY.ypyHTl5NhV6Qk3XbXl_fqZkEOdkpp7Gj84iUaA-&amp;amp;share_version=210800&amp;amp;ts=1777046565&amp;amp;from_aid=1128&amp;amp;from_ssr=1&amp;amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
