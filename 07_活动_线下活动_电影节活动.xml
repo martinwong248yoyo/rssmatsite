@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
-  <title><![CDATA[影视分类 / 活动 / 线下活动 / 电影节活动]]></title>
+  <title><![CDATA[线下活动/电影节活动]]></title>
   <link>https://example.com/rssReclassify/yingshi</link>
   <description><![CDATA[活动 > 线下活动 > 电影节活动，共 17 篇]]></description>
   <language>zh-CN</language>
-  <lastBuildDate>Sun, 26 Apr 2026 11:49:16 +0800</lastBuildDate>
+  <lastBuildDate>Sun, 26 Apr 2026 15:40:53 +0800</lastBuildDate>
   <generator>reclassify_yingshi_xml.py</generator>
   <item>
     <title><![CDATA[2026第四届薄荷紫华语电影节片单公布！早鸟PASS预售中]]></title>

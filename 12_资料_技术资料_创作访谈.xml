@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
-  <title><![CDATA[影视分类 / 资料 / 技术资料 / 创作访谈]]></title>
+  <title><![CDATA[技术资料/创作访谈]]></title>
   <link>https://example.com/rssReclassify/yingshi</link>
   <description><![CDATA[资料 > 技术资料 > 创作访谈，共 11 篇]]></description>
   <language>zh-CN</language>
-  <lastBuildDate>Sun, 26 Apr 2026 11:49:16 +0800</lastBuildDate>
+  <lastBuildDate>Sun, 26 Apr 2026 15:40:53 +0800</lastBuildDate>
   <generator>reclassify_yingshi_xml.py</generator>
   <item>
     <title><![CDATA[波兰实验动画：媒介，感知和历史经验中的十个关键词]]></title>

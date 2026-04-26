@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
-  <title><![CDATA[影视分类 / 资料 / 技术资料 / AIGC]]></title>
+  <title><![CDATA[技术资料/AIGC]]></title>
   <link>https://example.com/rssReclassify/yingshi</link>
   <description><![CDATA[资料 > 技术资料 > AIGC，共 42 篇]]></description>
   <language>zh-CN</language>
-  <lastBuildDate>Sun, 26 Apr 2026 11:49:16 +0800</lastBuildDate>
+  <lastBuildDate>Sun, 26 Apr 2026 15:40:53 +0800</lastBuildDate>
   <generator>reclassify_yingshi_xml.py</generator>
   <item>
     <title><![CDATA[第十六届北京国际电影节AIGC电影单元论坛暨荣誉盛典日程安排]]></title>

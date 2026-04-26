@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel>
-  <title><![CDATA[影视分类 / 活动 / 线下活动 / 线下交流]]></title>
+  <title><![CDATA[线下活动/线下交流]]></title>
   <link>https://example.com/rssReclassify/yingshi</link>
   <description><![CDATA[活动 > 线下活动 > 线下交流，共 22 篇]]></description>
   <language>zh-CN</language>
-  <lastBuildDate>Sun, 26 Apr 2026 11:49:16 +0800</lastBuildDate>
+  <lastBuildDate>Sun, 26 Apr 2026 15:40:53 +0800</lastBuildDate>
   <generator>reclassify_yingshi_xml.py</generator>
   <item>
     <title><![CDATA[太多人在夸这部了]]></title>
