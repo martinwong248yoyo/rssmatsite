@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-26T03:38:43.322Z",
+  "generatedAt": "2026-04-26T03:41:45.058Z",
   "generatedFiles": [
     ".nojekyll",
     "index.html",
@@ -116,6 +116,21 @@
     "articles/openget-creator-e982b9e585/10-10-100-1000-hengg-bdd744a1c5.html",
     "articles/openget-ai-e78e8be887/01-ai-ai-6f7da4a45c.html",
     "articles/openget-creator-e69993e8be/01-chatgptimages2-0-chatgptimages2-0-34aaa7676a.html",
-    "articles/openget-creator-e69993e8be/02-harness-ai-1494f5746a.html"
+    "articles/openget-creator-e69993e8be/02-harness-ai-1494f5746a.html",
+    "01_articles_now_showing_general.xml",
+    "02_articles_film_history_general.xml",
+    "03_articles_theatrical_observation_general.xml",
+    "04_events_venture_training_camp_general.xml",
+    "05_events_submissions_general.xml",
+    "06_events_online_events_general.xml",
+    "07_events_offline_events_festival_events.xml",
+    "08_events_offline_events_offline_discussions.xml",
+    "09_festivals_short_film_festival_festival_events.xml",
+    "10_festivals_feature_film_festival_festival_events.xml",
+    "11_resources_technical_notes_aigc.xml",
+    "12_resources_technical_notes_creator_interviews.xml",
+    "13_resources_technical_notes_post_production.xml",
+    "14_resources_technical_notes_gear.xml",
+    "15_resources_casting_calls_general.xml"
   ]
 }
