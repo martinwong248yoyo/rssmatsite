@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>从数学博士到英国“纳税王”：他用AI撑起千亿美金量化帝国</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>从数学博士到英国“纳税王”：他用AI撑起千亿美金量化帝国</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Sun, 26 Apr 2026 08:02:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69edc7ddcb0c6578b6b8bf3f?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/44GfPt2xlSqF2HYWRkuK3CJ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>在冰岛，有一台由地热能驱动的超级计算机日夜运转。它不生产芯片，不渲染电影，也不训练聊天机器人。它只做一件事：替一位俄罗斯出生的数学博士赚钱。</span></p><p><span>这个人叫 Alex Gerko，今年 46 岁，他是量化交易巨头 XTX Markets 的创始人。早在 ChatGPT 成为全民话题之前，他就已经搭建起一套纯粹以盈利为目的的 AI 交易系统。他在冰岛部署的这台超级计算机，正是 XTX 交易帝国的“算力大脑”。这台机器存储着超过 400 PB（约相当于 80 万亿张高清数码照片）的全球金融市场数据，并驱动着庞大的 GPU 集群。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/11fcvi3AuEAg1hsG8z4mGJgr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgb(178, 178, 178)">(来源：XTX Markets)</span></p><p><span style="color:rgb(171, 25, 66)">靠着这个超级大脑，XTX 全公司仅 250 多名员工，没有一名传统意义上的交易员，但日均交易额高达2,500 亿美元。</span><span>更奇特的是，XTX 没有任何外部投资者，利润全部流向少数合伙人，而 Gerko 本人持有公司 75% 的股份。也就是说，这台机器产生的绝大部分财富，直接进入了他的口袋。</span></p><p><span>截至 2026 年初，Gerko 的个人净资产已经超过 120 亿美元，稳居英国最富有的人群之列。媒体直称他是一个“把 AI 变成印钞机的数学天才”。</span></p><p><span style="color:rgb(14, 23, 50);font-weight:bold">反其道而行之：不拼速度，拼智力</span></p><p><span>Gerko 出生于苏联时代的莫斯科。在数学英才学校度过少年时代，他随后在莫斯科国立大学获得数学博士学位。毕业后，他进入德意志银行担任交易员，并于 2000 年代初移居伦敦。2015 年，他创办了量化交易公司 XTX Markets。</span></p><p><span>成立之初，Gerko 就押下了一个在当时看来极为激进的赌注：放弃对交易速度的追逐，全力押注机器学习与预测准确度。对于普通投资者来说，这在传统的“高频交易（HFT）”圈堪称离经叛道。</span><span style="color:rgb(171, 25, 66)">因为在传统量化竞争中，“速度”曾是唯一的信仰。</span></p><p><span>为了比对手快上几个微秒（百万分之一秒），顶级机构曾斥资数亿美元在大西洋海底铺设笔直的光缆，或在交易所附近建设微波塔阵列。只要能在物理上比市场早 0.001 秒看到价格波动，就能抢走利润。但这本质上是一场烧钱的“网络延迟”军备竞赛。</span></p><p><span>Gerko 并不打算加入这个游戏。他不仅自己退出了物理速度的内卷，还公开游说监管机构引入“减速带”（Speed Bumps）。即人为设置毫秒级的延迟以抑制超高速交易。XTX 的核心逻辑确立：竞争的关键在于大脑（模型的预测准确度），而非神经末梢（光纤或微波塔的数量）。</span></p><p><span>XTX 的模型究竟在做什么？简而言之，它利用深度神经网络处理海量数据，预测资产价格变动。业务主要分为做市（Market Making）和套利。</span></p><p><span>与传统量化机构依赖简单的线性模型或历史统计不同，XTX 将算力集中于深度的模式识别。举个具体的例子：</span><span style="color:rgb(171, 25, 66)">在处理外汇或股票做市时，XTX 的 AI 系统并非只盯着单一资产的当前买卖盘，而是同时分析横跨股票、固定收益、外汇、大宗商品和加密货币等超过 50,000 种金融工具的实时数据流。</span><span>模型能从全球市场的海量交叉数据中，识别出极度隐秘的微观“价格模式”。</span></p><p><span>当系统捕捉到某些特定的订单流压力组合时，即便受制于人为的交易延迟，深度学习模型也能以极高的置信度算出该资产在未来几秒或数小时内的走势，从而精准“伏击”那些盲目追求速度的对手。</span></p><p><span>从结果来看，这场对深度学习的豪赌大获成功。据公开财务数据，XTX 英国业务在 2025 年营收同比增长 44% 至 39 亿英镑，录得创纪录的 17 亿英镑利润。这尚未包含其庞大的新加坡等海外分公司数据。</span></p><p><span style="color:rgb(14, 23, 50);font-weight:bold">从算法公司到算力基础设施</span></p><p><span>如今，Gerko 正在 AI 领域加倍下注。2026 年，XTX 将在芬兰启用自建数据中心群的首座设施，总投资超 10 亿美元。首座设施面积相当于三个足球场，第二座已基本建成。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1RULbKpha542cpEwd1FCFLw.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgb(178, 178, 178)">（来源：XTX Market)</span></p><p><span>选址芬兰北部并非偶然，那里的低温环境天然利于高密度计算设备的冷却。在常规做法是租用云服务的金融行业，这一决策显得格格不入。</span></p><p><span>但 Gerko 的逻辑极其严密：随着全球 AI 产业的计算重心逐渐从“模型训练（Training）”向大规模的“模型推理（Inference）”转移，金融市场对高密度、低延迟算力的需求将呈指数级爆发。依赖第三方不仅成本攀升，推理算力的供给也极易受限。自建基础设施能确保底层算力的绝对稳定。换言之，Gerko 正带领 XTX 从一家“算法公司”硬核转型为“算力基础设施公司”。</span><span style="color:rgb(171, 25, 66)">为此，XTX 已囤积了超过 2.5 万块 AI 芯片。</span></p><p><span style="color:rgb(14, 23, 50);font-weight:bold">行业里的毒舌异类</span></p><p><span>在以沉默和低调著称的量化行业，Gerko 是个绝对的异类。大多数掌门人恨不得隐形，他却活跃在社交媒体上，对同行公开发表评论甚至是指控。</span></p><p><span>2025 年 7 月，当印度监管机构 SEBI 指控量化巨头 Jane Street 在印度期权市场涉嫌操纵市场时（Jane Street 予以否认），Gerko 在 LinkedIn 上连发长文进行硬核“拆台”。他并未止步于泛泛的批评，而是详细拆解了 Jane Street 所谓合法套利的双腿交易（Two-leg trade）策略，一针见血地指出其并非在纠正市场的错误定价，而是依靠巨大的资金体量在流动性差的市场人为制造价格偏离。</span></p><p><span>他不仅直接评论“整件事糟糕透了”，还极具攻击性地公开质疑 Jane Street 的风控合规部门是不是“故意雇了一群提线木偶（Muppets）”。这种不留情面的嘲讽，在金融圈高层极为罕见。</span></p><p><span>在锋芒之外，Gerko 的另一面展现出极强的个人原则。2022 年底，在俄乌冲突爆发后，这位出生于莫斯科的俄罗斯人经历了漫长的法律程序，正式放弃了俄罗斯国籍，完全转为英国公民。</span><span style="color:rgb(171, 25, 66)">这几年来，他通过慈善机构积极为乌克兰捐赠了数千万英镑。</span></p><p><span>在金融富豪热衷于利用离岸信托和避税天堂隐匿财富的背景下，Gerko 也显得像一股“清流”：他极其遵纪守法，且从不避讳缴税。据《星期日泰晤士报》的税务榜单，仅在 2024 年，</span><span style="color:rgb(171, 25, 66)">他个人就缴纳了 6.645 亿英镑的税款，创下英国单人纳税历史纪录，并在后续年份连续蝉联英国“纳税王”。</span></p><p><span>他将剩余财富大量投入慈善。XTX 已向英国慈善和教育机构捐赠超 5,000 万英镑，并发起了“数学卓越基金”。他最引以为傲的项目之一，是将于今年 9 月在伦敦开学的“1729 数学学校”。校名致敬著名的“哈代 - 拉马努金数”，1729 是最小的可以用两种不同方式表示为两个正整数立方之和的数。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/cdjq73waogKAuleS1joxGv.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgb(178, 178, 178)">图 ｜ 哈代拉马努金数（来源：substack)</span></p><p><span>Gerko 曾在采访中表示：“我一直关注数学教育，因为这是一条最公平的让寒门子弟通往高薪职业的道路。”的确，从莫斯科的数学英才班，到如今掌握顶级算力与深度学习架构的交易帝国，这位换了国籍、交着最高税额、吐槽着最强对手的异类富豪，他的每一步都由严谨的数学铺就。</span></p><p><span><span><span style="color:rgb(178, 178, 178)">参考链接：</span></span></span></p><p><span style="color:rgb(178, 178, 178)">1.https://www.wsj.com/finance/alex-gerko-xtx-markets-ai-d155626a?eafs_enabled=false</span></p><p><span style="color:rgb(178, 178, 178)">2. https://www.xtxmarkets.com/news/</span></p><p><span><span><span style="color:rgb(178, 178, 178)">3. https://www.forbes.com/profile/alexander-gerko/</span></span></span></p><p><span style="color:rgb(178, 178, 178)"><span>注：封面/首</span></span><span><span style="color:rgb(178, 178, 178)">图</span></span><span><span style="color:rgb(178, 178, 178)">由AI辅助</span></span><span style="color:rgb(178, 178, 178)"><span>生成</span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69edc7ddcb0c6578b6b8bf3f?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69edc7ddcb0c6578b6b8bf3f?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

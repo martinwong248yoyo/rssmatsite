@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>在生物世界，给Physical AI一个落脚点</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 暗涌Waves-公众号</div>
+                    <h1>在生物世界，给Physical AI一个落脚点</h1>
+                    <div class="meta">
+                        <span>暗涌Waves</span>
+                        <span>Tue, 14 Apr 2026 04:55:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ddce1a7adb63a9df0d304f?channel_id=67cc08a29a4297b6148b29ed">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/k5hIX1wwSZjuaALK25r1e5.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 175, 0)"><strong><span>「</span></strong></span><span style="color:rgb(16, 46, 91)"><strong><span>恩和七年，产业技术公司是如何生长出AI能力的？</span><span style="color:rgb(0, 175, 0);font-weight:bold">」</span></strong></span></p><p><span style="color:rgb(16, 46, 91)"><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2vz8YAamVYV1PcB4FrkwTz.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></span></p><p><span style="color:rgb(85, 85, 85)">GPT能用完美的逻辑解释抗生素耐药机制，但如果你让它真的去做一支更好的抗生素，它没有手，没有实验室，连一个培养皿都端不起来。</span></p><p><span style="color:rgb(85, 85, 85)">全球头部的AI公司的市值已经以万亿美元计，但这些价值几乎全部产生在屏幕里。制造业、农业、化工、材料——这些支撑实体经济运转的行业，AI至今仍然站在门外。不是模型不够聪明，是物理世界没有给AI准备好一个可以落脚的地方。</span></p><p><span style="color:rgb(85, 85, 85)">在生物实验室里，这种断层的日常表现很朴素：博士们仍然逃不开半夜回来摇瓶子。AI能读完人类发表过的4000万篇生物学论文，能推理蛋白质折叠，能设计代谢通路，但它无法走进实验室，端起移液枪，把方案变成现实。认知能力和执行能力之间，差着一个物理世界。</span></p><p><span style="color:rgb(85, 85, 85)">一家名为恩和科技的公司，用七年时间，尝试走出一条穿越它的路径。</span></p><p><span style="color:rgb(16, 46, 91)"><strong>Part</strong></span><span style="color:rgb(0, 175, 0)"><strong>01</strong></span></p><p><span style="color:rgb(0, 175, 0)"><strong>先建数字化实体，再谈智能</strong></span></p><p><span style="color:rgb(85, 85, 85)">恩和做的第一件事，看起来跟AI完全无关——建生物铸造厂（Biofoundry）。</span></p><p><span style="color:rgb(85, 85, 85)">从外部来看，恩和是一家以工业菌株开发为核心的生物制造企业。其创始人兼CEO崔好（Cheryl），MIT医学工程博士，想做的事情很朴素：让生物实验不再依赖个人经验，变成可规模化的工程。</span></p><p><span style="color:rgb(85, 85, 85)">在生物制造的世界里，过去几年的关键词是“通量”，即在单位时间内处理任务的规模和速度。如果把传统实验室研发比作手工小作坊，高通量就是现代化全自动流水线。</span></p><p><span style="color:rgb(85, 85, 85)">2019年开始，Cheryl选了一条最难的路：不做针对特定菌株的集成式专用流水线，而是做模块化的通用平台。系统必须足够灵活，能接住不同行业、不同客户的需求。</span></p><p><span style="color:rgb(85, 85, 85)">那几年，恩和内部有一种持续的张力。程序员们倾向于“先跑一轮，不行再迭代”的互联网节奏；而生物学家习惯于“读万卷书、万无一失”的严谨论证。最典型的难题是用自动化设备合成DNA，起初成功率不到10%。那是一个极其枯燥的磨合期：程序员不理解生物的复杂性，科学家不耐烦代码的生硬逻辑。这种张力，在某些时刻像内耗，在另一些时刻又像某种奇怪的燃料。就这样磨了两年，DNA合成的成功率被一点点推到90%以上。</span></p><p><span style="color:rgb(85, 85, 85)">历经三四年，恩和搭建了完整的生物铸造厂，用机器替代双手，让实验变成了流水线：质粒构建环节，一名熟练科研人员两周内手动操作能构建几十个质粒，恩和的自动化系统将这个数字推到了1000个以上；样品检测从数十分钟压缩至每样6至8秒；每跑一次发酵罐，系统自动采集并回流多达21万个数据点，每个环节高度可追溯、可复现。</span></p><p><span style="color:rgb(85, 85, 85)">这些数字本身并不算惊天动地。真正值得注意的是：当恩和把这座铸造厂搭建完成时，它无意间做成了一件更大的事，为AI进入生物制造构建了运行环境。</span></p><p><span style="color:rgb(85, 85, 85)">AI Coding Agent能爆发，不是因为模型最聪明，而是因为软件世界早就准备好了编译器和执行环境。恩和用四年建成的这座铸造厂，本质上就是生物制造的“编译环境”。</span></p><p><strong><span style="color:rgb(16, 46, 91);font-weight:bold">Part</span></strong><strong><span style="color:rgb(16, 46, 91);font-weight:bold"><span style="color:rgb(0, 175, 0)">02</span></span></strong></p><p><span style="color:rgb(0, 175, 0)"><strong>半导体厂叫Foundry</strong></span></p><p><span style="color:rgb(0, 175, 0)"><strong>生物铸造厂也叫Foundry</strong></span></p><p><span style="color:rgb(85, 85, 85)">铸造厂搭建完成后，恩和的下一步在当时看来更加冒险：走出实验室，接管真正的工厂。</span></p><p><span style="color:rgb(85, 85, 85)">2020年，现任恩和科技 AI &amp; Computation 总监的 Alex 加入这家只有十几个人的初创公司，他的身份是半导体行业的“跨界者”。他曾在美光负责全球智能制造系统，见证了芯片制造中上千步工序如何实现完全无人化。</span></p><p><span style="color:rgb(85, 85, 85)">在面试时，他给Cheryl递交了一份关于“未来3至5年构架”的建议书。Alex说，那份文档写的时候更多是"感觉方向对"——数据自动化、模型闭环、自主驱动。六年后再看，没想到团队真的一起走到了这里。</span></p><p><span style="color:rgb(85, 85, 85)">“半导体厂叫Foundry，生物制造的核心也叫Biofoundry（生物铸造厂）。”Alex发现，两者在逻辑上高度同构：都是将元件组合，产出特定功能的产品。只是生物系统比半导体更难——因为它是活的。</span></p><p><span style="color:rgb(85, 85, 85)">Cheryl决定进入产业化验证阶段。在她看来，如果技术只停留在实验室，它就没有真正的价值。恩和做了一个冒险的决定：在山东盘活了一家发酵企业；在鄂尔多斯建设大规模生产基地。这让恩和拥有了从实验室到工厂的"端到端"能力——数据飞轮从几百微升的孔板，一直转到了上百吨的发酵罐里。</span></p><p><span style="color:rgb(85, 85, 85)">这一步的意义，在产业AI的语境下尤其值得强调。大多数AI for Science公司的数据止步于实验室阶段，从实验室到工厂之间是一个巨大的黑箱。一个菌株在0.5升发酵罐里的表现，和它在30吨生产规模下的行为，往往判若两物。打通这个黑箱靠的不是算法，而是真正去建工厂、跑产线、做交付。</span></p><p><span style="color:rgb(85, 85, 85)">由于具备端到端的交付能力，恩和通过共同研发和材料供给两种方式与客户达成合作。目前，恩和已赢得了新和成、伊利、珀莱雅、百雀羚、巴斯夫（BASF）和世索科（Syensqo）等国际与国内一线战略伙伴的认可，雅诗兰黛也已深度切入其项目合作流程中。这种合作并非简单的买卖，而是在食品、营养和个人护理等领域从源头的需求共研共创。</span></p><p><span style="color:rgb(85, 85, 85)">截至目前，恩和累计交付了23个项目，拥有15个商业化产品管线，项目总数超过44个，建立了横跨中国杭州、禹城、鄂尔多斯与海外美国、荷兰等地的全球网络。</span></p><p><span style="color:rgb(85, 85, 85)">“AI找不到真实场景，就只是个工具。”Alex对「暗涌Waves」说。正是在数字化铸造厂、实体工厂、跨界团队三件事都就位之后，恩和的AI能力，才算真正有了生长的土壤。</span></p><p><strong><span style="color:rgb(16, 46, 91);font-weight:bold">Part</span></strong><strong><span style="color:rgb(16, 46, 91);font-weight:bold"><span style="color:rgb(0, 175, 0)">03</span></span></strong></p><p><span style="color:rgb(0, 175, 0)"><strong>数据从哪里来</strong></span></p><p><span style="color:rgb(85, 85, 85)">对于今天的中国公司来说，几乎每个CEO面前都摆着“如何长出AI能力”这个问题。大多数答案指向同一个起点：数据。</span></p><p><span style="color:rgb(85, 85, 85)">但数据从哪里来？</span></p><p><span style="color:rgb(85, 85, 85)">互联网AI公司的做法是烧钱——雇标注团队、买数据集、做合成数据。但对于植根物理世界的产业公司，存在另一条路。</span></p><p><span style="color:rgb(85, 85, 85)">“数据是壁垒，但更关键的是'不烧钱积累数据'的正循环。”这是Cheryl这些年最深的一点体会。恩和的逻辑是：在创造商业价值（交付项目）的同时，无感地收集数据。</span></p><p><span style="color:rgb(85, 85, 85)">Cheryl以特斯拉做类比——当特斯拉在路上跑的时候，它就在收集自动驾驶数据；当恩和的生物铸造厂在为客户开发菌株时，它就在积累最真实的闭环实验数据。目前，恩和已拥有超过千万条端到端的闭环数据，且全部是结构化的“AI Ready”资产。</span></p><p><span style="color:rgb(85, 85, 85)">这些数据之所以有价值，不只是因为数量，更因为它的结构——同一个菌株，恩和拥有它在微孔板上的实验室数据，在两升小试发酵罐的表现，在1000升中试的变化，在30吨生产规模下的稳定性。这种从实验室到工厂的端到端连续性，是大多数只做实验室阶段的公司不具备的。通用大模型用公开文献训练，能读到的是发表出来的最终结果；读不到的是过程中的失败案例、参数的敏感性、放大过程中的隐性规律——而这些恰恰是生物制造最关键的知识。</span></p><p><span style="color:rgb(85, 85, 85)">数据是地基。真正让AI能力成型的，是组织的适配。在恩和，你会看到极端的跨界场景：计算团队被调去财务做数字化，程序员入职要先把MIT的合成生物学公开课看完，生物学家要学会读懂代码逻辑。</span></p><p><span style="color:rgb(85, 85, 85)">“我们希望让大家认同彼此的价值。”Cheryl说，“如果你只想要一样的人，这事儿干不成。”</span></p><p><span style="color:rgb(85, 85, 85)">铸造厂运转了四年，数据积累到千万级，恩和的AI能力终于到了可以定义和命名的阶段。</span></p><p><span style="color:rgb(85, 85, 85)">2026年3月，恩和正式发布了SAION AI——全球首个面向生物制造领域的Physical AI平台。它在做的事，可以用自动驾驶领域的VLA架构（Vision-Language-Action）来理解：AI先看懂生物世界，再把理解翻译成标准化指令，最后在物理实验室里闭环执行。</span></p><p><span style="color:rgb(85, 85, 85)">三层中最关键、也是行业最稀缺的，是中间的编排层。恩和为此自研了BPL（Biology Protocol Language），一套生物实验的标准协议语言，作用类似于半导体行业的EDA：把科学家的实验意图翻译成机器可以精确执行的指令。在内部测试中，BPL编译的实验协议结构一致性达到99.4%，而自然语言描述的同类协议仅为43%。有了这一层，上游的认知模型（接入300+种科研工具和4000万篇文献，多项基准测试超越GPT和Claude）和下游的自动化铸造厂（全天候运行、日处理万次操作）才能真正连成闭环——实验结果实时回流，驱动下一轮迭代。</span></p><p><span style="color:rgb(85, 85, 85)">在SAION AI介入下，传统的“试错式”生物研发被“智能编排”取代。效率变化可以量化：实验室一年的通量，从几百上千个菌株变成了上百万个；项目研发周期，从6至8年压缩至1-3年。</span></p><p><span style="color:rgb(85, 85, 85)">举一个具体的例子，玉米黄质。这种广泛用于眼部健康的分子，过去高度依赖天然植物提取，受气候和供应链波动影响巨大。恩和在接到市场需求后，SAION AI在其中不仅通过大模型推理找到了最优的酶突变位点，将转化效率提升了60%以上，还让每一代菌株的迭代周期缩短到一个季度以内。该产品已完成美国Self-GRAS评估，实现了全产业链贯通。</span></p><p><span style="color:rgb(85, 85, 85)">“物理AI的核心在于闭环数据的有效采集。”Cheryl说。它不再仅仅是屏幕上的预测，而是能够真正进入物理世界，优化生产工艺，重新定义效率边界。当认知、编排、执行三层打通，AI就不只是工具，而是一个能自我进化的系统。</span></p><p><strong><span style="font-weight:bold;color:rgb(16, 46, 91)">Part</span></strong><strong><span style="color:rgb(16, 46, 91);font-weight:bold"><span style="color:rgb(0, 175, 0)">04</span></span></strong></p><p><span style="color:rgb(0, 175, 0)"><strong>仅仅是“Day 0”</strong></span></p><p><span style="color:rgb(85, 85, 85)">尽管玉米黄质的成功验证了路径的可行性，但对于恩和来说，这仍然仅仅是“Day 0”。SAION AI目前处于L2阶段——AI执行任务，人类做最终决策。下一步的目标是L3：AI领导实验设计，人类只需设定方向。更远的愿景L4——端到端的自主生物学研究——仍需要在多个维度持续突破。</span></p><p><span style="color:rgb(85, 85, 85)">目前，AI更多是在处理已知框架下的任务编排，而真正的“AI科学家”需要进化到能够在未知领域识别并提出正确的问题。物理世界的感知与交互依然困难——要让AI拥有应对物理偏差、具备触觉感知且足够灵活的硬件肢体，仍是硬核挑战。如何将AI的决策触角从实验室延伸至大规模工业生产的每一个阀门和参数，实现跨地域工厂的实时智能调度，也是下一阶段攻坚的重心。</span></p><p><span style="color:rgb(85, 85, 85)">但如果把视野拉到更宏观的层面，恩和的实践所指向的问题要大得多。</span></p><p><span style="color:rgb(85, 85, 85)">今天的世界正处于一种微妙的不稳定之中。能源格局的重构，地缘政治的撕裂，供应链的反复断裂。这一切指向同一个底层现实：人类文明仍然高度依赖石油。塑料、纤维、化学品、燃料——构成现代生活基础设施的材料，几乎无一例外。</span></p><p><span style="color:rgb(85, 85, 85)">生物制造提供了另一种可能。微生物可以以糖、淀粉乃至工业副产物为原料，生产功能相当的替代品。但长期以来，这条路被一个现实问题堵死：太慢、太贵、太不确定。一个菌株从概念到商业化，动辄6-8年、数千万美金的投入。</span></p><p><span style="color:rgb(85, 85, 85)">Physical AI正在做的，是把这条路上最关键的时间成本砍掉。全球生物经济赛道的潜在规模超过6万亿美元，但进入这个市场的入场券，从来不是更聪明的算法，而是能够承载算法的物理基础设施：标准化的实验环境、端到端的数据闭环、从实验室到工厂的完整执行能力。</span></p><p><span style="color:rgb(85, 85, 85)">恩和用七年时间给出了一个样本：产业公司的AI能力在物理世界的实践中生长出来的。先建环境，再长智能，这个顺序可能才是产业AI的正确打开方式。</span></p><p><span style="color:rgb(85, 85, 85)">“希望生物学成为是一门可以规模化的工程学。”这句话Cheryl说了很多年。但现在她想说的，已经不只是规模化了。当AI真正介入生物制造的每一个环节，生物学有可能成为一个可以智能泛化的平台——不只是造一个更好的菌株，而是造一套理解和改造生命的通用能力。</span></p><p><span style="color:rgb(85, 85, 85)">这件事还没有做完。但它已经不再只是一个想法了。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/NSaXs48IaIs4FfCSq1Hbst.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 暗涌Waves-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ddce1a7adb63a9df0d304f?channel_id=67cc08a29a4297b6148b29ed">https://lingowhale.com/reader/web/69ddce1a7adb63a9df0d304f?channel_id=67cc08a29a4297b6148b29ed</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

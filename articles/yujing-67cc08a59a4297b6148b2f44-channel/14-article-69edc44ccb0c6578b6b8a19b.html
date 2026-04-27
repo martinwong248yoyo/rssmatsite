@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>深度 | 揭秘广州“小升初”：消灭重点班后，内卷消失了么？</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 财新-公众号</div>
+                    <h1>深度 | 揭秘广州“小升初”：消灭重点班后，内卷消失了么？</h1>
+                    <div class="meta">
+                        <span>财新</span>
+                        <span>Sun, 26 Apr 2026 07:47:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69edc44ccb0c6578b6b8a19b?channel_id=67cc08a59a4297b6148b2f44">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><section><section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3MEY42hYLqUOvDKh1ttAiv.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><p><span>2022年9月1日，广州，中小学开学首日，市二中的学生们有序入校。</span></p></section></section></section></section></section></section><section style="color:rgb(34, 34, 34);font-weight:400"><section><section><section><p><span style="color:rgb(92, 92, 92);font-weight:400"><span style="color:rgb(136, 136, 136)">新政如何落地？重点班消失之后，义务教育的供需格局将如何变化？</span></span></p></section></section></section></section><p><span>4月12日，广州某教培机构举办了一场关于“小升初”摇号政策的讲座，主办方给到场家长准备了280个玩具小木鱼，劝大家“佛一点”。但焦虑显然无法被安抚。“讲座下午2点半才开始，头一天主办方在群里说木鱼先到先得，结果好几个家长12点半就到了。”一名参加了讲座的家长向财新感叹，“连木鱼都要抢，真的太‘卷’了。”</span></p><p><span>家长们的焦虑并非没有来由。此前4月3日，教育部印发通知，部署中小学“阳光招生专项行动”，明确提出义务教育阶段实行随机分班、均衡配置师资，严禁设立重点班。</span></p><p><span>这项被称为“阳光分班”的政策，正在成为今年“小升初”最核心的变量。在上述讲座现场，家长们最关心的问题集中在同一个方向：阳光分班会给“小升初”带来什么变化？家长们还能做些什么？</span></p><p><span>自2014年教育部《关于进一步做好小学升入初中免试就近入学工作的实施意见》发布以来，全国治理择校、均衡生源的努力不断升级，2018年多地明确提出“阳光分班”，2021年“双减”政策实施后要求全国推广落地。2025年3月，教育部办公厅发通知要求全国开展义务教育阳光招生专项行动，深圳率先响应，5月发文，8月下旬统一行动，电脑一键分班，教师随机匹配，全程阳光监督。</span></p><p><span>4月22日下午，广州政策正式落地。市教育局明确，从2026年秋季学期起，在新小一、新初一全面实施“双随机”分班——学生随机编班、教师团队随机配置，分班权统一收归区教育局。</span></p><p><span>从政策上看，广州“小升初”一直不允许公开择优，主流路径是直升或划片摇号，仅有华南师范大学附属中学和广州外国语学校两所学校例外。但在实际运作中，另一套逻辑长期存在。在广州，“小升初”真正被竞争的，往往不是学校，而是班级。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)">……</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 财新-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69edc44ccb0c6578b6b8a19b?channel_id=67cc08a59a4297b6148b2f44">https://lingowhale.com/reader/web/69edc44ccb0c6578b6b8a19b?channel_id=67cc08a59a4297b6148b2f44</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>谷歌400亿美金投资Anthropic，算力成AI巨头资本游戏的砝码</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>谷歌400亿美金投资Anthropic，算力成AI巨头资本游戏的砝码</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Sat, 25 Apr 2026 12:37:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ecb64acb0c6578b6ae219a?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <span><span><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:#000000">据多家外媒报道，谷歌要投给竞争对手一大笔钱，</span><span style="color:rgb(171, 25, 66)">它承诺将向 Anthropic 投资最高 400 亿美元，先期注入 100 亿美元现金，后续 300 亿美元要看 Anthropic 能否达到特定业绩目标。</span><span style="color:rgb(0, 0, 0)">谷歌自己有 Gemini 模型，和 Anthropic 的 Claude 在市场上正面竞争。一边打架一边投钱，看起来矛盾的操作，在当前的 AI 浪潮中并不稀奇。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">如果说 OpenAI 与微软的结盟是 AI 军备竞赛的第一章，那么谷歌与 Anthropic 的循环交易则标志着第二章的到来，在这个阶段算力就是货币，对于初创公司而言谁能拿到这种额度循环，谁就拥有了进入下一轮生存竞赛的入场券。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">AI 公司最缺的不是算法和人才，而是算力。训练和运行大模型需要海量的计算资源，一座数据中心动辄耗电几十兆瓦，芯片更是供不应求。OpenAI 靠着微软的 Azure 云和芯片支持一路狂奔，Anthropic 也需要找到同样强大的靠山。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">谷歌手里正好有 Anthropic 最想要的东西。谷歌云的 TPU 芯片是专门为 AI 设计的，性能不输英伟达的 GPU，而且谷歌的数据中心遍布全球，能够提供大规模算力。当前，Anthropic 的编程助手 Claude Code 需求暴涨，服务器都快扛不住了，这时候谷歌送来的算力等于是雪中送炭。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这种合作模式有一个专门的名字叫循环交易。云厂商投钱给 AI 公司，AI 公司拿钱买云厂商的算力和芯片，钱转了一圈又回到云厂商手里。微软和 OpenAI 也是这么干的，微软投资 OpenAI，OpenAI 用这笔钱租用微软的云服务，微软的 Azure 收入随之水涨船高。双方各取所需，OpenAI 拿到了稀缺的算力，微软在 AI 浪潮中占据了核心位置。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">谷歌此次和 Anthropic 的交易如出一辙，谷歌投钱、Anthropic 拿钱买谷歌的 TPU 和云服务。更关键的是，Anthropic 已经成为谷歌 TPU 芯片的最大客户之一。对于谷歌来说，这不仅是一笔投资，更是给自家的芯片和云业务找到了一个大买家。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">不过这笔交易比微软投资 OpenAI 多了一层复杂性。谷歌的 Gemini 和 Anthropic 的 Claude 在市场上是直接竞争对手，它们俩都在开发大模型，都在争夺企业客户。微软和 OpenAI 的关系则相对单纯，微软本身没有与 OpenAI 同等量级的自研模型。谷歌不一样，它在 AI 上不能输也不敢输。这种既合作又竞争的状态，让双方的关系变得微秒起来。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1HBls317mf321OnmNlVu6iK.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span>（来源：Anthropic）</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Anthropic 最近的表现确实亮眼，它的编程助手 Claude Code 在企业中迅速普及，很多软件公司用它来加速开发流程。该公司的年度营收运行率已经超过 300 亿美元，去年年底这个数字还是 90 亿美元。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">资本市场对 Anthropic 的热情非常高涨，今年 2 月的一轮融资中其估值已经达到 3,500 亿美元，亚马逊也在同期投了 50 亿美元。面对这样的增长势头，谷歌选择加码而不是对抗。与其在算力资源上和 Anthropic 抢破头，不如成为它的供应商。同样的，与其让它完全倒向亚马逊的阵营，不如用投资锁定它的长期合作。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">另外，谷歌承诺从 2027 年开始向 Anthropic 提供 5 吉瓦的算力容量，这个数字足以供应美国明尼苏达州所有家庭的用电。Anthropic 如果能够达到业绩目标，后续还能获得更多算力支持。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这种级别的承诺资源，不是一般投资能比的。它意味着谷歌不仅要投钱，还要实实在在地扩建数据中心和部署更多芯片。对于 Anthropic 来说，这比现金本身更有价值。毕竟在算力短缺的当下，有钱也不一定能够立刻买到足够的计算资源。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">从整个行业来看，这种循环交易正在重塑 AI 的竞争格局。几家科技巨头通过投资锁定了最有潜力的 AI 公司，而 AI 公司则获得了生存和发展必须的算力。批评者认为这种模式会让市场进一步集中，小公司更难出头。不过换个角度看，训练大模型的成本实在太高了，没有巨头的支持，像 Anthropic 这样的公司根本没法和 OpenAI 抗衡，因此这种资本和算力的捆绑既是现实也是无奈。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Anthropic 和亚马逊的关系同样盘根错节，就在谷歌这笔交易公布前几天，亚马逊刚刚承诺向 Anthropic 追加投资，先期 50 亿美元，后续还有 200 亿美元取决于业绩目标。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这两家公司的合作关系可以追溯到更早之前。</span></span><span style="color:rgb(0, 0, 0)">Anthropic 大量使用亚马逊的 Trainium 芯片来训练模型，同时也在亚马逊云上部署服务。短短一周之内，Anthropic 先后从亚马逊和谷歌获得了巨额投资承诺，合计先期现金 150 亿美元，后续潜在投资高达 500 亿美元。这种两边通吃的局面，反应了顶级 AI 公司在当前市场上的议价能力。那就是：因为稀缺所以值钱，因为需要算力所以云厂商争相买单。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">谷歌投资 Anthropic 的另一个背景，是 AI 编程工具市场的激烈竞争。Claude Code 已经成为这个领域的标杆产品，很多开发者把其当做日常工具。有报道称谷歌内部对于自家 AI 编程工具的进展感到担忧，而且目前谷歌在这个细分市场上明显落后于 Anthropic。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">与其花大力气追赶一个已经成型的领先者，不如通过投资分享它的增长红利。这笔交易在一定程度上承认了谷歌在 AI 编程领域的追赶压力，也反映了科技巨头面对颠覆性技术时的打不过就入股的典型心态。事实上，国内大厂也在投资新生 AI 公司，可以说这种做法在全球各地都不罕见。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Anthropic 的崛起速度确实很快，其成立于 2021 年，创始团队是原来 OpenAI 的一批研究人员。他们对 OpenAI 的发展方向感到不满，认为后者在安全方面的投入不够，于是出走创办了 Anthropic。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">短短几年，它就成了 OpenAI 最强劲的对手。Claude 系列模型的推理能力和安全性都不错，Claude Code 的火爆更是让 Anthropic 的营收曲线陡峭上升，从 90 亿到 300 亿的年营收运行率，只用了几个月时间。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">不过，Anthropic 也面临着挑战，用户增长太快、算力跟不上，用户抱怨使用限制太多、响应太慢。这些问题不解决，好不容易积累的用户可能会流失。谷歌和亚马逊的巨额投资，核心目的就是帮助 Anthropic 解决算力瓶颈。但这中间还有很长的路要走，数据中心的建设和芯片部署都需要时间。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">无论如何，谷歌投资竞争对手这件事，也再次说明算力才是这个时代的硬通货，只有掌握算力才能掌握 AI 发展的关键。谷歌用投资换来了 Anthropic 对 TPU 的长期依赖，Anthropic 用股权换来了生存和发展的空间。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">然而，这种左手倒右手的循环交易模式，已被多家国际主流媒体、财经分析机构广泛讨论，并被质疑为是科技巨头通过 AI 泡沫进行营收虚增或资本空转的手段。这种模式不仅被认为加速了美国经济对于 AI 的过度依赖，还引发了关于 AI 行业估值泡沫和财务真实性的担忧。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">2026 年 4 月 2 日，美国哈佛大学法学院旗下的项目谈判计划（PON，Program on Negotiation）发表了一篇名为《什么是循环交易》（What Are Circular Deals?）的文章，明确指出在 AI 领域这种互相投资、互相购买的现象是一种潜在风险 [1]。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">文章认为这种 AI 公司之间的资金与算力循环，本质上是企业为了维持惊人增长而构建的封闭生态，会引发市场对于这种增长可持续性的深层担忧。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">文章针对去年 OpenAI 和英伟达达成的用于建设数据中心的 1000 亿美元协议提出了批评意见，认为这种合作关系可被视为是一种循环交易，因为 OpenAI 很有可能会从英伟达购买设备，而英伟达会将这些利润再投资于 OpenAI，OpenAI 可能又会用这些资金购买更多英伟达设备。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这种循环交易在华尔街被称为资产负债表的自我循环，云巨头通过投资 AI 初创公司将资本支出转化为云服务营收，借此营造一种通过会计处理向投资者展示 AI 需求强劲的局面。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1xPKrb2OZNU816L6Rd3rcO1x.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span><span style="color:rgb(178, 178, 178)"><span>图 | 《什么是循环交易》（What Are Circular Deals?）文章截图（来源：</span></span><span style="color:rgb(178, 178, 178)"><span>Program on Negotiation）</span></span></span></span></p></span></span><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">而通过巨额的算力承诺和资金注入，谷歌和微软正在将 Anthropic 与 OpenAI 变成自己的算力加工厂，借此同时锁定了技术路径和下一代 AI 基础设施的生态定价权。同时，Anthropic 深度绑定谷歌 TPU，意味着其模型优化路径被限制在谷歌的硬件架构内，所以这种循环交易也是一种技术捆绑销售。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这一现象早在 2025 年 10 月就被经济学家注意到，当时发表的一篇 Fortune 报道称哈佛大学经济学家、前奥巴马政府经济顾问杰森·弗曼表示如果不计入数据中心，美国去年上半年 GDP 增长率将仅为 0.1%[2]。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/WxCmC4xZNKO48y0K94svqVQ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span>图 | 哈佛大学经济学家、前奥巴马政府经济顾问杰森·弗曼（来源：维基百科）</span></span></span></p><p><span style="color:rgb(0, 0, 0)">但是，并非所有经济学家都认同美国经济剔除 AI 就没增长的观点，部分华尔街分析师曾反驳称，AI 投资带来的设备很多依赖进口，在 GDP 计算中进口是扣除项，因此单纯说 AI 拉动 GDP 的逻辑也存在会计学上的争议。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">无论如何，在当前的 AI 军备竞赛中，谷歌这样的云巨头不仅在销售算力，更在通过这种左手倒右手的投资架构，深度锁定 AI 生态的竞争壁垒。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这种模式迅速抬高了 AI 初创企业的生存门槛，只有被巨头看重的公司才有算力支撑，这会导致 AI 领域出现极端的寡头马太效应，巨头通过这种方式完成了对于 AI 创新的托管和分拣。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">未来五年内，美国科技巨头计划投资数万亿美元用于 AI 基础设施，但目前 AI 初创公司的年度营收仅为百亿美元级别，这种天价资本投入和微薄营收产出之间存在巨大鸿沟。当云巨头一边向初创公司注资，一边将这些资金转化为自身的云服务营收时，这种财报上的增长，距离真正可持续的盈利模式可能还有一定距离。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">从历史经验来看，每一次产业浪潮的退潮期，都是从这种自我循环开始的，当巨头们停止向 AI 创企输血，或者创企无法从外部市场转到足够支付云服务费的真金白银时，这场精密构建的投资才会迎来真正的大考。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">届时，我们看到的不仅是 AI 公司的生死，更是科技巨头们在那张庞大的算力版图上到底谁留下了真正的资产，谁又只留下了一堆虚幻的账面繁荣。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">正因此，谷歌和微软在 AI 基础设施上的巨额投入被华尔街所审核的核心点是，这些投入何时能够产出汇报？这种循环是否具有自我造血能力？如果 AI 初创公司不能再 2026 年和 2027 年通过 B 端商业化产生真正的外部利润，那么这种循环就有可能被认为是一场游戏。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span><span>参考资料：</span></span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">1.https://www.pon.harvard.edu/daily/dealmaking-daily/what-are-circular-deals/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.nytimes.com/2026/04/24/technology/google-anthropic-investment-artificial-intelligence.html</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">2.https://fortune.com/2025/10/07/data-centers-gdp-growth-zero-first-half-2025-jason-furman-harvard-economist/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://en.wikipedia.org/wiki/Jason_Furman</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.reuters.com/business/google-plans-invest-up-40-billion-anthropic-bloomberg-news-reports-2026-04-24/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://arstechnica.com/ai/2026/04/google-will-invest-as-much-as-40-billion-in-anthropic/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.ft.com/content/366c73dd-4006-4ce6-9816-5004447d30b8?syn-25a6b1a6=1</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.wsj.com/finance/investing/google-expands-anthropic-investment-with-40-billion-commitment-99b4de74?st=zwkxJ7&amp;reflink=article_copyURL_share</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://9to5google.com/2026/04/24/google-anthropic-investment-40-billion/</span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ecb64acb0c6578b6ae219a?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69ecb64acb0c6578b6ae219a?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

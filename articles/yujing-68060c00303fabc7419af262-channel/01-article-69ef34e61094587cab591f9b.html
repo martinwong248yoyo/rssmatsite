@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>扯！日韩股市创新高！</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 金融-公众号-评论</div>
+                    <h1>扯！日韩股市创新高！</h1>
+                    <div class="meta">
+                        <span>发财老博士</span>
+                        <span>Mon, 27 Apr 2026 09:56:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef34e61094587cab591f9b?channel_id=68060c00303fabc7419af262">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p>今天朗子又提出一份新方案，并通过巴基斯坦转交给了美方，看得出来，现在两边都不想打，但问题在于——<span style="font-weight:bold">也不知道该怎么谈</span>。</p><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3faoWJ3wdC6y17MSNX205EHZ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><p>伊朗将整个谈判过程，分为三个阶段：</p><p>1. 先实现全面停火，包括黎巴嫩方向的停火。</p><p>2. 获得美以的安全保证后，美国和伊朗均解除对海峡的封锁，再研究海峡的收费问题。</p><p>3. 前两阶段协议达成后，最终再谈核问题。</p><p>说实话，朗子这个思路挺好，站在他们的立场上，一点毛病没有。</p><p>但问题是，站在懂王的立场上，<span style="font-weight:bold">毛病可就大了</span>：目前懂子希望通过武力威慑和封锁，来压迫伊朗，让其经济撑不住，最终低头谈判。</p><p>换言之，如果懂王先停火并给出安全保证，那压迫伊朗的手段就没有了，后面谈的话，拖你个十年八年、再换三茬总统，都有可能。</p><p>而懂王要的是<span style="color:rgb(250, 83, 89)">即时</span>“伟大胜利”，以便挽救其中期选举，不可能跟你慢慢谈的，只会加大封锁力度，逼迫伊朗石油减产，以求尽快谈成。</p><p>所以，这事还是没戏，分的阶段越多越没戏：懂王要的是核材料，以及开放海峡，或者海峡分钱，其他都无所谓；而这两点，恰恰是伊朗的命门——<span style="font-weight:bold">核材料保安全，海峡收费保经济</span>，绝无妥协的可能性。</p><p>目前看，双方只能先这么耗着，看谁最终撑不住，不过在美伊倒下之前，我估计小日子会先撑不住，或者是东南亚国家。</p><p>因为这意味着：中东出口占比高的能源及化工原材料，<span style="font-weight:bold">依然会长期短缺</span>。</p><p>比如硫酸和硫磺。</p><p>硫酸号称“化工血液”，是化工和金属冶炼领域，最普遍使用的原材料之一。</p><p>硫酸最主要的来源，就是硫磺：全球每年约2/3的硫酸，由硫磺转化而来；其次是铜/铅/锌等金属提炼的副产品，占比约25%；第三是天然硫铁矿，占比不足10%。</p><p>而硫磺最主要的来源，<span style="font-weight:bold">是石油和天然气</span>，二者合计占全球硫磺总产量的93%，其他还有一小部分来自于煤化工，天然硫磺矿的产量极少，可以忽略不计。</p><p>中东地区是全球硫磺产量最高的地方，年产量2600万吨，占比32%，其次是北美（22%），然后是中国、俄罗斯（15%-18%）。</p><p>所以霍尔木兹海峡封锁，硫磺、油、气全都出不来，<span style="font-weight:bold">造成全球硫酸供给严重短缺</span>，这就是我国即将暂停硫酸出口的主要原因，也是硫磺价格短期暴涨40%的直接原因。</p><p>那咱们暂停硫酸出口，究竟都有哪些影响？</p><p>首先，中国是全球最大的硫酸生产国，年产1.2亿吨，全球占比40%，不过绝大部分为自用。</p><p>其次，2025年中国出口硫酸460万吨，其中约33%出口到智利，支撑其<span style="color:rgb(250, 83, 89)">1/5的铜生产</span>（湿法炼铜）；15%出口到印尼，用于镍矿提炼；其余主要用于化肥、维生素、尼龙等领域。</p><p>再加上今年夏天“百年未遇”的<span style="font-weight:bold">厄尔尼诺现象</span>，等到下半年，东南亚、南美洲的矿物、粮食、电力、可可豆、棕榈油等产品，都有可能出现大面积缺口。</p><p>这一块，大家可以关注一下，尤其是做期货的朋友，应该有机会。</p><p>至于小日子，别看股市创新高，但很多行业根本撑不到下半年，因为其原材料即将告罄，很快就要被迫停产。</p><p>现在的日股，就如同沙漠中的高楼一般，看着宏伟炫目，实则根基松散，根本撑不了太久，稍有风吹草动，便会崩塌，哼～</p><p>哪像咱们大A，彻底贯彻“慢牛”的方针：<span style="font-weight:bold">散户负责慢，指数负责牛</span>，板块疯狂轮动，坚决避免大面积盈利盘的出现，堪称“提前释放风险”的典范。</p><p>可能大家很郁闷，有些人甚至又被踹回坑里去了，但别急：虽然你亏了钱，但你学到知识了啊；虽然你不知吃肉是何味，但指数tm天天吃到饱啊，还要啥自行车呢？</p><p>在A股这样一个充满着挑战，却又处处是机会的市场里，一定要把握“知识就是力量”的宗旨，好好研究，提前布局，稳住别浪！</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 金融-公众号-评论</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef34e61094587cab591f9b?channel_id=68060c00303fabc7419af262">https://lingowhale.com/reader/web/69ef34e61094587cab591f9b?channel_id=68060c00303fabc7419af262</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

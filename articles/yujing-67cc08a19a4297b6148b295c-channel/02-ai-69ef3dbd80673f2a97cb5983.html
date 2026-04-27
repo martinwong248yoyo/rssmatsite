@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>打工人五一自救指南：把活全甩给AI，准备免打扰出门</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 量子位-公众号</div>
+                    <h1>打工人五一自救指南：把活全甩给AI，准备免打扰出门</h1>
+                    <div class="meta">
+                        <span>量子位</span>
+                        <span>Mon, 27 Apr 2026 10:36:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef3dbd80673f2a97cb5983?channel_id=67cc08a19a4297b6148b295c">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="color:rgb(34, 34, 34);font-weight:400">还有两三天就是五一假期了，看看你的工作群，是不是已经开始有人发“假期保持在线”了。</p><p style="color:rgb(34, 34, 34);font-weight:400">这绝对是打工人放假出门前的终极内耗：<span style="color:rgb(0, 153, 127);font-weight:bold">背不</span><span style="color:rgb(0, 153, 127);font-weight:bold">背电脑？</span><span style="color:rgb(0, 153, 127);font-weight:bold">背？不背？</span></p><p style="color:rgb(34, 34, 34);font-weight:400">这次我决定换个法儿，装个叫<strong>D<span style="color:rgb(0, 153, 127);font-weight:bold">uMate</span></strong>的AI助手，尝试把一些假期可能要加班干的活儿托付给它。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/19W8XP2Z6Lvw1rz3gC1Y7Ur7.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">据介绍，DuMate支持<span style="font-weight:bold;color:rgb(0, 153, 127)">多模态理解与生成</span>，可以处理<span style="font-weight:bold;color:rgb(0, 153, 127)">跨</span><span style="color:rgb(0, 153, 127);font-weight:bold">文件、跨应</span><span style="font-weight:bold;color:rgb(0, 153, 127)">用</span>的复杂任务，完成从“理解”到“执行”的一站式交付。</p><p style="font-weight:400;color:rgb(34, 34, 34)">并且，它还<span style="font-weight:bold;color:rgb(0, 153, 127)">打通了主流IM</span>。人在外面通过微信/飞书/钉钉等，就能指挥它用电脑干活，结束后把结果甩回给你。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3khbOQCrEAF4mIRFt11dOwK.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">趁还在放假前，先来实测试试水呗。</p><h2 style="font-weight:bold;color:rgb(34, 34, 34)">放假前夜，先把全天候工作替身安排上</h2><p style="color:rgb(34, 34, 34);font-weight:400">DuMate由百度智能云打造，第一步得先去官网（dumate.cn）下载安装到本地。</p><p style="color:rgb(34, 34, 34);font-weight:400">下载登录后，首先它会<span style="font-weight:bold;color:rgb(0, 153, 127)">自动构建本地隔离沙盒</span>，以保障任务运行环境安全：</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3JleFH12gvhV1uDPA817WOHn.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">下一步，直接就能开用了，不用配置复杂环境，几乎没有操作门槛：</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1lD0fj29BpYG31iSvXf8Izx.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">DuMate已预装了百度搜索、文档处理、视频生成等Skill。</p><p style="color:rgb(34, 34, 34);font-weight:400">左侧技能广场中还有<span style="font-weight:bold;color:rgb(0, 153, 127)">一系列</span><span style="font-weight:bold;color:rgb(0, 153, 127)">预封装Sk</span><span style="color:rgb(0, 153, 127);font-weight:bold">ill</span>供大伙儿按需选择，像秒哒、Notion、飞猪旅行、滴滴出行、腾讯文档这些常用工具，都能直接添加。</p><p style="font-weight:400;color:rgb(34, 34, 34)">当然，你也可以自定义技能，把自己的工作流、常用操作全传授给它，让它适配你的工作节奏。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/nr0pn2h7m3C3I7niR3FLRXc.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">此外，界面左侧还有“<span style="color:rgb(0, 153, 127);font-weight:bold">连接应用</span>”入口。一键连接，DuMate就能跨应用完成复杂任务，不用你手动切换软件：</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3qDqcG2reQ2C2Y6NF3E13px.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">在设置里，你还可以把DuMate连接到飞书、微信、如流、钉钉这些IM平台。绑好之后，手机就是遥控器，人在哪都能随时指挥DuMate。</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/171cwK1towmM2ClLUYmWMO8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">替身就位，抓紧来看这DuMate都能干啥活。</p><p style="color:rgb(34, 34, 34);font-weight:400">我们模拟了假期可能发生的“夺命连环@”。</p><p style="font-weight:400;color:rgb(34, 34, 34)">合理想象一下，五一假期回来，量子位就要举办一年一度的中国AIGC产业峰会了。筹备期间，老板随时可能@我。</p><p style="color:rgb(34, 34, 34);font-weight:400">举个栗子：整理一下前两年量子位发布的AI十大趋势报告，做个对比表格发我。</p><p style="color:rgb(34, 34, 34);font-weight:400">我们丢给DuMate试试。</p><p style="font-weight:400;color:rgb(34, 34, 34)">输入指令后，用户可为其<span style="color:rgb(0, 153, 127);font-weight:bold">设置工作区</span>，既能根据资料保存地址，选择文件夹让它检索分析；也可以直接上传文件。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3NSTLl3W7CI21VnnkS1J6liq.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">DuMate收到指令立刻开工。打开文件、读取信息一气呵成，没几秒就拉出一份对比表格，最后还贴心总结了核心变化。</p><p style="color:rgb(34, 34, 34);font-weight:400">咱就是说，咱再也不用挠着头自己从0开始了，这效率一下子就提上去了。</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1KX2we13PZb1euUrV3KL72Z.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">第二种情况，更是打工人的日常——领导要日报、行业简报。</p><p style="color:rgb(34, 34, 34);font-weight:400">这个简单，直接设个<span style="color:rgb(0, 153, 127);font-weight:bold">定</span><span style="font-weight:bold;color:rgb(0, 153, 127)">时</span><span style="color:rgb(0, 153, 127);font-weight:bold">任</span><span style="color:rgb(0, 153, 127);font-weight:bold">务</span>：</p><blockquote style="font-weight:400;color:rgb(34, 34, 34)"><p style="color:rgb(62, 62, 62)">从明天开始，每天上午9点，抓取行业科技媒体关于“AI大模型”的Top10新闻，整理成简报推我飞书。</p></blockquote><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3jjdk41HKXN1q8Ojb1cMnXN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">DuMate立马安排定时任务，全程不用我多管一句。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4AEPy7KGY8x2TZBRT1WMge9.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">以后每天到点它自己跑，搜索新闻、筛选排序、排版整理，准时推到飞书。领导眼里你假期也没断更，实际你连电脑都没摸过。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3TIKFu1Q9OlJ4AOf9C1PKplx.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">DuMate的<span style="color:rgb(0, 153, 127);font-weight:bold">多模态</span>能力也能帮你省不少事。</p><p style="color:rgb(34, 34, 34);font-weight:400">视频内容总结这类工作，都可以交给DuMate完成。它在执行任务前会主动申请权限，获得用户授权后便能快速解析视频，提炼重点：</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4pNJMw43cQqJ4y6D1npgRom.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">生成视频也不在话下，只需一句指令，成品自带BGM：</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1UrP6e3RUh6B2eTP4J2Gbivn.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">稍微复杂一点的任务，比如写一份分析报告，它也能轻松拿捏。</p><p style="font-weight:400;color:rgb(34, 34, 34)">DuMate给到的<span style="color:rgb(0, 153, 127);font-weight:bold">PDF文</span><span style="color:rgb(0, 153, 127);font-weight:bold">件</span>，格式规范、排版专业：</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/47IbObFECsQ4AI8Ze1hNDVk.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">生成好后，还可以发送到你的手机上：</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1qj0ab3rO7uv1SWiXP4BjG4C.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">还没完，继续让它出<span style="color:rgb(0, 153, 127);font-weight:bold">配套PPT</span>也不成问题：</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/yHPk13QBxzM2FyuNe3Xml7c.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">更省心的是，DuMate能<span style="color:rgb(0, 153, 127);font-weight:bold">并行处</span><span style="font-weight:bold;color:rgb(0, 153, 127)">理多项任务</span>。一边整理文件，一边解析视频，一边写报告，互不耽误：</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1zzhWx2gPK8h34ItHM1uTdp3.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">所有任务完成后，别忘了让它帮你收拾桌面。</p><p style="font-weight:400;color:rgb(34, 34, 34)">假期回来，要是看到一堆临时文档、截图、下载文件乱糟糟，那可还得了。</p><p style="color:rgb(34, 34, 34);font-weight:400">给DuMate发“<span style="color:rgb(0, 153, 127);font-weight:bold">整理</span><span style="color:rgb(0, 153, 127);font-weight:bold">文</span><span style="font-weight:bold;color:rgb(0, 153, 127)">件</span>”指令，它立马就会归置得十分清爽，归档清单也都列得明明白白。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4dyllk1h1SCiNaDKZ2mMT5v.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><h2 style="color:rgb(34, 34, 34);font-weight:bold">这AI助手确实能处</h2><p style="font-weight:400;color:rgb(34, 34, 34)">实测一圈，总结来说，DuMate虽不是万能，没法替你开会、无法代替决策、不能处理需要人为判断的核心工作，但它完美承接了打工人最厌烦的那一部分——</p><p style="color:rgb(34, 34, 34);font-weight:400">重复机械的整理工作、繁杂的数据统计、琐碎的文件处理、固定模板的文案输出、无技术含量的例行任务。</p><p style="font-weight:400;color:rgb(34, 34, 34)">过去，这些事占用大量时间。现在，DuMate这类AI工具可以帮你代办。</p><p style="color:rgb(34, 34, 34);font-weight:400">无论是假期应急办公，快速响应职场突发需求，还是图文、短视频等多模态内容创作，高效产出简单物料，它都能一站式搞定、自主闭环。</p><p style="color:rgb(34, 34, 34);font-weight:400">最后来划重点——</p><p style="color:rgb(34, 34, 34);font-weight:400">DuMate已经全量上线，<span style="color:rgb(0, 153, 127);font-weight:bold">用户登录即可获得每日1000免费积分</span>，日常需求完全够用，还有订阅套餐可供选择。</p><p style="font-weight:400;color:rgb(34, 34, 34)">邀请自己的真搭子用AI搭子还可以领永久积分。小编也给大家弄了一波福利，目前<span style="color:rgb(0, 153, 127);font-weight:bold">新用户</span><span style="font-weight:bold;color:rgb(0, 153, 127)">在DuMa</span><span style="color:rgb(0, 153, 127);font-weight:bold">te中输入邀请码「QBITAI」，还可领取5000永久积分</span>。</p><p style="font-weight:400;color:rgb(34, 34, 34)">这还不赶紧薅羊毛（doge）～</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 量子位-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef3dbd80673f2a97cb5983?channel_id=67cc08a19a4297b6148b295c">https://lingowhale.com/reader/web/69ef3dbd80673f2a97cb5983?channel_id=67cc08a19a4297b6148b295c</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

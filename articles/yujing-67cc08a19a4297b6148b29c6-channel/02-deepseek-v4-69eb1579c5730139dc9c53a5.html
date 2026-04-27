@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>实测DeepSeek V4，为国产化而生。</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 数字生命卡兹克-公众号</div>
+                    <h1>实测DeepSeek V4，为国产化而生。</h1>
+                    <div class="meta">
+                        <span>数字生命卡兹克</span>
+                        <span>Fri, 24 Apr 2026 06:55:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eb1579c5730139dc9c53a5?channel_id=67cc08a19a4297b6148b29c6">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span>今天，等了一年的DeepSeek V4，终于发布了。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2oniiL2x0IZI4EumWLJFDWp.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>本来每天都很期待，但是发布的这一刻，突然感觉进入到了一种贤者模式。</span></p><p><span>人有点麻了，这一周发了7、8个新模型，最近24小时就发了4个，昨天下午刚开始测MiMo，然后HY3发了，刚写完MiMo，然后GPT-5.5发了，今天刚发完MiMO，然后DeepSeek v4发了。</span></p><p><span>我现在就仿佛鸡排哥，写完你的写你的，写完你的写你的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3ZMB3rAMdFSZrrV33c7hG9.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>我也第一时间把DeepSeek V4接到了我的Claude Code里。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Dzdhu1TSQBl1qDusU3Fnt0B.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>然后很多朋友问为啥没有R2了，这块我简单的科普一下下，就是在去年这个阶段，推理模型和非推理模型还是分开的，也就是DeepSeek R1是推理模型，DeepSeek V3是非推理模型。</span></p><p><span>然后到了后面，基本Claude和GPT都还开始使用混合模型了，也就是用思考强度去控制模型是否进行推理。</span></p><p><span>所以DeepSeek V3.1的时候，也改成了混合模型的架构，这些V4同样的，也是混合模型。</span></p><p><span>所以R2存在的意义现在就有点不明确了，就像OpenAI o3，就成了OpenAI的最后一代推理模型，被并到了GPT-5里面。</span></p><p><span>再简单说一下DeepSeek V4这次的一些特性。</span></p><p><span>先看跑分。</span></p><p><span>这是DeepSeek V4自己的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3muVUPfsSi943Vzyo3xyJ8l.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4ezfYM48oDBA4g19uK1r1Yl.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>各方面都有明显加强。</span></p><p><span>然后这段时间，模型又太多太杂太乱了，于是我又自己整理了一下，因为大家的数据和口径总是经常不一样，所以这个表能看个大概，但是不能深究。。。</span></p><p><span>先是知识推理类的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4BVaSb3BFbjq2BDhfs1lwBAj.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>没有数据的就是没放这块的跑分。</span></p><p><span>可以看到DeepSeek最强的还是SimpleQA这两个知识类的，逼近Gemini 3.1 Pro，在其他的地方只能说中庸。</span></p><p><span>然后代码类的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/10lola2Nxya43szCUk39hNkd.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>可以非常明显的看到走的也是Gemini那一卦的，在竞赛、算法类比较强，但是真实代码工程能力上，只能说从分数上看，也没啥大幅领先，第一梯队水平。</span></p><p><span>代码这块我觉得也可以把Arena最新的评分放出来，目前DeepSeek V4排第三，第一还是GLM-5.1，MiMo没上榜是因为还没开源出来，目前只有API，开源估计下周了。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/q4yrW4gJnzR4iJFYW3KTu5n.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span>Agent能力这一卦上。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Pn9CtZusb20QgeenWz5L.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>这个确实比较强。</span></p><p><span>跑分大概就是这样，其实可以看到比较正常，在现在一众诸神混战的年代里，可以给到人上人，但是如果大家是夯爆了的预期的话，可能就会失望了。</span></p><p><span>然后还有一个非常直观的数据，V4-Pro的总参数量是1.6T，也就是1.6万亿。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2i1XVC3G5h9n3Y1eYN24jFAB.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>V3.2是671B，也就是6710亿，V4的参数量，翻了将近两倍半。</span></p><p><span>所以其实你可以看到，在如今这个时代，依然还是大就好，大就牛逼，大就是聪明。</span></p><p><span>但是因为大带来的提升，也变向带来了Token的涨价，算力就那么多，模型参数越来越大，Agent推理所用的Token又越来越多，不涨价都不可能了。</span></p><p><span>V4-Pro是输入12元，输出24元每百万token，V4-Flash是输入1元，输出2元。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/27ET4oMnhyp2zb4IO2vZdaA.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>换算成美元的话，</span><span>输入1.74美元每百万token，输出3.48美元。V4-Flash，输入0.14美元每百万token，输出0.28美元。</span></p><p><span>作为对比，Claude Opus 4.7是输入5美元，输出25美元，GPT-5.5是输入5美元，输出30美元。</span></p><p><span>MimM-V2.5-Pro在0到256k token内，是¥7/¥21每百万token（输入/输出），在256k到1M token内是¥14/¥42每百万token（输入/输出）。</span></p><p><span>平均下来国产模型价格定价都差不多，虽然有点对不起DeepSeek一直以来的价格屠夫的称称号，但还是大概比海外模型平均便宜60%左右。</span></p><p><span>不过这里面有个细节很多人可能没注意到。</span></p><p><span>DeepSeek在定价页面底部有一行小字，大意是说，受限于高端算力，目前Pro的服务吞吐十分有限，预计下半年昇腾950超节点批量上市后，Pro的价格会大幅下调。</span></p><p><span>也就是说，V4-Pro现在的价格还不是最终态，等芯片产能跟上了，价格还会往下降，这一点我觉得还是挺重要的。</span></p><p><span>然后这个事，加上DeepSeek V4的报告里，其实能透露出非常多国产化的细节，明显是为了给国产芯片做准备的。</span></p><p><span>有几个小细节，我也不知道我理解的对不对，有大佬可以来拍砖一下。</span></p><p><span>1. V4在后训练和推理体系里引入了MXFP4。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2gFHeO3Z4pAmn5fTm2CZWG1.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>虽然训练还是用的英伟达体系，但是在后训练和推理上用这个基本上就意味着，DeepSeek在往开放低精度格式和多硬件适配方向走，可以适配国产卡比如华为昇腾、寒武纪、壁仞等等，会降低对NVIDIA的FP8生态的绑定，特别是推理的时候，那这就是正儿八经的国产生态国产模型了，可惜的就是现在价格还没下来。</span></p><p><span>2. V4的底层内核不再完全靠CUDA写，用了一个叫TileLang的DSL。DeepSeek希望底层算子开发不要完全锁死在CUDA上，而是用更高一层的语言描述计算，再尽量编译到不同硬件上，这个非常牛逼，可以大大降低迁移成本。</span></p><p><span>3. V4专门搞了一个叫MegaMoE的融合内核，设计目标是减少专家并行中的通信等待，目前已经在华为昇腾上跑通。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3R6ef91dGl2K1eCz3q373UQe.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="font-weight:bold">这三条放一起，方向就非常清楚了，V4是完完全全的，为了国产卡而设计的模型。</span></p><p><span>这真的不是啥爱国故事，所有人都知道，未来算力有多缺，算力生产有多慢，但是Agent加速之下，Token带来的消耗有多恐怖。</span></p><p><span>算力被卡脖子，所有人都没有办法，君不见GLM-5.1这么好的模型，有多受限于算力推理吗？</span></p><p><span>算力博弈，很多时候，就是顶层博弈。</span></p><p><span>DeepSeek v4，就是算力博弈逼出来的现实。</span></p><p><span>未来一年，国产大模型跑国产卡这件事，感觉会逐渐成熟了。</span></p><p><span>然后多模态的事，我知道大家很关心。</span></p><p><span>因为现在，多模态几乎是标配了，比如Opus 4.7大幅强化的就是多模态能力，K2.6、MiMo-V2.5-Pro也都标配了多模态，更别提GPT-5.5了。</span></p><p><span>因为没有多模态，你读不了图，你没有视觉能力，审美上也必然差一截，同时什么Computer Use之类的Agent能力，更是想都别想。</span></p><p><span>但是非常非常可惜的是，DeepSeek V4，不是多模态。</span></p><p><span>还是一个纯文本模型，没有多模态能力。</span></p><p><span>一声长叹，其实很早以前就在传V4有多模态了，我也知道他们内部肯定做了多模态的工作，但是最后，还是没有放出来，看来适配国产卡的压力，还是太大太大了。</span></p><p><span>多模态，可能只能等到v4.5或者v5.0了，希望这两个版本，没有了适配国产卡的压力，不要再让我们等一年了。</span></p><p><span>目前V4 Pro我也接到Claude Code里面了。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Dzdhu1TSQBl1qDusU3Fnt0B.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>我们在自己紧锣密鼓的测试了3个小时之后，有了一些自己粗糙的结论。</span></p><p><span>我个人感觉，跟Claude Code的适配，是有一些问题的，我现在不知道到底是适配的问题，还是模型的问题。</span></p><p><span>举个最简单的例子，我的本地skill，是有一个直接管理我服务器的skill的。</span></p><p><span>我至今没有见到任何一个模型，在我说出明确带有服务器的词语的时候，不去调用我的服务器skill去服务器查询。</span></p><p><span>GLM-5.1、MiniMax M2.7、Kimi K2.6、MiMo-V2.5-Pro，没有一个有问题，但是，DeepSeek V4，出了问题。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3g121f4wczeT3BHkRMIYEDZ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>我需要把Prompt说的如此明确才可以。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2f0ZcU2zXhRE2kN0El36bFLe.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>非常的奇怪。</span></p><p><span>我们小伙伴也是，之前他做了一个社群运营系统，已经做完了，在桌面留了个PRD，用来测试的，但，理解力也有点问题，虽然是为了测试，在根目录进行启动的，但一般还是会进行全局搜索一下的，而不是直接拒绝。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Q0go3eDvt44hUaW04kOIxX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>然后开发这块，我自己之前测试Opus 4.7的Case扔给了他，这个需求其实就是给我们开发一个招聘网站，要使用女神异闻录5的风格，同时还要部署到我的服务器上，但是我的需求说的非常的乱，也会比较考验模型需求的理解能力。</span></p><p><span>Opus 4.7当时做出来的效果是这样的。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2RI2xy4aAlLW28T37p4beWnv.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/147DKq1YM1qf4C2TNV4vOZal.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span>在给DeepSeek V4 Pro开发的时候，速度非常的缓慢。</span></p><p><span>大概花了24分钟做完的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/265YYPQdSd12JG24Zxn908.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>然后实现效果是这样的，</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1APNPu84M1JsrGl6s8lvm.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>UI其实还好了，但是出了蛮大的问题，就是没有跟我进行任何的确认。</span></p><p><span>因为我的约束给的是非常多的，比如CLAUDE.md里面，还有我的skill里面，最基本的一个问题，就是比如没有遵守skill的描述。</span></p><p><span>任何新项目，部署到服务器上，都是一定要跟用户确认域名是否OK的，但是没有做任何确认，直接自己选了</span><span>careers.virxact.com干上去了，24分钟结束之后，给了我一个域名，让我确认。</span></p><p><span>这个其实蛮奇怪的，我的约束好像很多也都失效了。</span></p><p><span>而模型的写作能力上，反而是让我觉得比较开心的点。</span></p><p><span>相比于其他模型，几乎不说人话不看写作了，DeepSeek是为数不多的还关注这一块的。</span></p><p><span>第一个是强行调用我的skill，去写一篇关于Token涨价的文章。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1hsmsn3Jt0BF2T7j3Y2tbtt1.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>花了大概8分钟，不知道开了多少个网页，然后写了一篇，在几层检测上，自己完成了。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Dmvwl1SeJh24EP4Sa4c5kbm.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>效果大概是这样的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1vzNSJ1koCcF34bWxMYHMmQ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/9HP5J2v2brT3iPLTk1qq1yC.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>还让他对我昨天GPT-image-2的黑暗森林那篇进行了中段续写的测试。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/x4GNC1p08No1V2l0G2rEHv8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>整体效果达不到Opus 4.6那种润物细无声的级别，但是比Opus 4.7要好，如果你用修改度来区分，那大概Opus 4.6直出的我的修改度是30%，Opus 4.7我的修改度是60%，那DeepSeek V4 Pro的修改读大概在45%左右。</span></p><p><span>并且因为上下文增加，在输出长文档上，效果会好的多的多。</span></p><p><span>对DeepSeek V4的测试大概就是这样。</span></p><p><span>有好有坏。</span></p><p><span>我昨天在GPT-5.5的文章里修正过一次推荐，早上我也写过MiMo-V2.5-Pro，说它是我现在觉得搭配Claude Code的最佳模型之一。</span></p><p><span>现在，我再更改一下推荐：</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span>1. 如果你更偏好海外模型，且愿意花20～200刀会员订阅费：</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="font-weight:bold">在内容创作（文章、策划案、脚本等）这种需要创意的场景上，我至今依然推荐使用Claude Code + Claude Opus 4.6。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="font-weight:bold">而在通用开发、数据分析、文档处理等所有其他场景下，我更推荐你用Codex + GPT-5.5。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span>2. 如果你更偏好国内模型：</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="font-weight:bold">在内容创作场景上，我推荐你使用DeepSeek官网，没有必要用Claude Code。</span></span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">而在其他所有场景下，我依然推荐你使用Claude Code + GLM-5.1或MiMo-V2.5-Pro的组合。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">DeepSeek V4，身上背负的东西太多，承载的东西也太多。</span></p><p><span>大家给的期望也足够的大。</span></p><p><span>虽然非常坦诚的讲，这次的模型，并没有大幅度的领先和巨型的惊艳。</span></p><p><span>但，对于模型的国产化、乃至AI的国产化，都是浓墨重彩的一笔。</span></p><p><span>希望这一次，完成了所有的底层积累，厚积薄发。</span></p><p><span>在V4.5或者V5的时候。</span></p><p><span>让世界，继续听到DeepSeek的声音。</span></p><p><strong><strong><strong><span><span>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。</span></span></strong></strong></strong></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 数字生命卡兹克-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eb1579c5730139dc9c53a5?channel_id=67cc08a19a4297b6148b29c6">https://lingowhale.com/reader/web/69eb1579c5730139dc9c53a5?channel_id=67cc08a19a4297b6148b29c6</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

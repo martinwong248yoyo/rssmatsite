@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>具身智能迎来“安卓时刻”，一位清华博士决定给机器人换脑｜甲子光年</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 甲子光年-公众号</div>
+                    <h1>具身智能迎来“安卓时刻”，一位清华博士决定给机器人换脑｜甲子光年</h1>
+                    <div class="meta">
+                        <span>甲子光年</span>
+                        <span>Mon, 27 Apr 2026 08:44:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef2399936faa8bf9e883e8?channel_id=67cc08a29a4297b6148b29e8">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2skbeZF7rsMqhbvJ28ypou.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1zWNS63UWqqfeGbKC2YxX6H.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section><section><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(123, 127, 131)">“缸中之脑”的思想假设，正被千诀科技在各种形态的机器人上逐一落实。</span></span></strong></p></section></section></section></section></section><p><span>1981年，美国哲学家希拉里·普特南在《理性，真理与历史》一书中，提出了一个至今仍让人脊背发凉的思想实验。</span></p><p><span>想象一个疯狂科学家将你的大脑取出，放入盛有营养液的缸中。超级计算机通过神经末梢向你的大脑传送信号，让你“看见”天空、“感受”微风、“听见”人声。你以为自己正走在街上，但这一切不过是精心设计的电信号。</span></p><p><span>这个思想实验的内核关系到人之所以为人的根本。它提供了一种可能——在技术足够发达的未来，人类的意识能否脱离肉体独立存在，人类的大脑能否成为可以被“安装”到任何载体上的操作系统？</span></p><p><span>四十年多后，这个问题不再只属于哲学系课堂。</span></p><p><span>近期，千诀科技CEO高海川向「甲子光年」完整讲述了其打造的具身智能系统：</span><strong><span>它可以脱离特定的硬件载体，被安装到不同形态的机器人身上。即使本体形态变换，这套系统也能随本体和场景需求增减功能。</span></strong></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Mp4032wA8Vn3ufRmI3w6p6o.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">千诀科技</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">CEO</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">高海川</span></span></p><p><span>高海川在机器人操作领域深耕多年。他博士毕业于清华大学自动化系。2018年，他作为组长带领清华类脑中心双臂机器人课题组，从0到1设计并开发了多款双臂自主决策机器人。</span></p><p><span>2023年，高海川牵头成立千诀科技。公司团队来自清华大学自动化系下属的脑与认知科学研究所，具备跨学科（自动化、机械、生物计算、AI）的交叉背景。</span></p><p><span>2026年2月，千诀科技宣布完成Pre-A++扩展轮融资，由祥峰资本、智路资本、英诺天使等七家机构联合投资。加上此前两月内完成的Pre-A++轮融资，这家成立不到三年的公司已在资本市场连续斩获数亿元资金支持。</span></p><p><span>“缸中之脑”的思想假设，正被千诀科技在各种形态的机器人上逐一落实。</span></p><p><span style="font-weight:bold">1.类脑智能：一条少有人走的路</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>谈及类脑智能，很容易让人联想到科幻小说中的虚拟概念。高海川择用一个如今已成为行业共识的技术坐标，将类脑智能拉回现实——这个坐标就是VLA。</span></p><p><span>当下的具身智能领域，VLA已经成为一个率先引起关注的技术范式。但在高海川看来，</span><strong><span>VLA是一个太过宏观的概念，就像“数学”一样，可以划分出几百个细分领域。</span></strong><span>在这上百种分法里，有两个最关键的维度。</span></p><p><strong><span>第一，生成式vs预测式。</span></strong></p><p><span>生成式是当下最热门的路线，像GPT做文本生成一样，机器人通过“生成下一个token”来生成动作。高海川将其描述为一种连续滚动的滑动窗口学习，模型把自己输出的东西作为新的输入，不断迭代，做内容生成。</span></p><p><span>预测式则完全不同，其模型输出是从所习得动作分布采样得到。高海川解释道：“它有动作空间的概念，每个动作的信息含量是大致相等的。它是基于不同的输入，从相同的动作分布采样动作。”在数学本质上，生成式是一个序列生成问题，而预测式是一个因果推理的问题。</span></p><p><strong><span>第二，一段式vs两段式。</span></strong></p><p><span>一段式是从感知信号到动作输出用一个网络全部做完，可以端到端求梯度、更新参数。这也是目前大多VLA选择的路径，端到端VLA路线已经在自动驾驶领域得到了充分验证。两段式则是分成两个独立训练的部分，只在推理时才接在一起。</span></p><p><span>“从学术上来讲，走model-based控制的论文数量，甚至要比一段式VLA的数量还多。但一段式和两段式在产业里走得时间更长，自动驾驶已经把很多坑都踩过了，工程上有很多创新。”高海川解释道。</span></p><p><span>然而，无论是一段式还是两段式，端到端VLA路线都面临一个共同的困境——它是一个“数据怪兽”。</span></p><p><span>高海川用三个指标来衡量模型能力，分别是</span><strong><span>最优性、样本效率和计算效率。</span></strong></p><ul><li><p><span>最优性：数据无穷多时能到达的上限</span></p></li><li><p><span>样本效率：用多少数据能达到及格线</span></p></li><li><p><span>计算效率：推理时消耗多少算力</span></p></li></ul><p><strong><span>生成式端到端模型虽然在数据量无穷大时性能上限最高，但样本效率却是最差的，需要海量数据才能达到及格线。</span></strong><span>而在数据匮乏的具身智能领域，这恰恰是致命短板。</span></p><p><span>更关键的是，</span><strong><span>端到端模型难以实现真正的跨本体泛化。</span></strong></p><p><span>“端到端路线会要求本体厂完全放弃自己的软件，这是不现实的，”高海川表示。如果强行适配不同形态的机器人，端到端网络往往需要推倒重来，因为它是一个“乘法关系”的紧耦合系统，数据需求量是各个部分相乘的结果。</span></p><p><span>基于以上洞察，千诀科技跳出端到端VLA的束缚，选择了一条截然不同的路径——</span><strong><span>分区预测式世界模型</span></strong><span>。</span></p><p><span>通俗来讲，</span><strong><span>这种路线将大脑按功能区和控制层级进行切分，把难以泛化的部分直接删掉，可以泛化的部分能够跨本体复用。</span></strong><span>用高海川的话说，“类脑网络是一个纯加法运算”，各部分的数据需求是加法关系而非乘法关系。因此，在数据匮乏的阶段，这种解耦式路线反而能率先跑通数据飞轮。</span></p><p><span>这个逻辑在自动驾驶行业已经被验证过。“做L2智驾大脑的公司因为拥有海量应用数据而掌握了进入L4赛道的门票；相反，许多早期直接冲向L4的公司，因数据与工程难度问题未能持续推进。”高海川补充道。</span></p><p><span>核心原因是，L2场景下的数据能够持续回流、反哺模型，而那些直奔L4的端到端方案，恰恰因为数据量达到及格线的门槛太高，在起步阶段就耗尽了弹药。</span></p><p><strong><span>但解耦式的技术难点在于，如何分区？</span></strong></p><p><span>如果模型的功能分区不科学，往往会带来最优性的严重损失。类脑路线的学术史上走过不少弯路，很多人从计算机理论角度出发，拆出各种方案做实验验证，却发现验证数据集与真实应用场景之间存在难以弥合的gap，而且这种问题极难被快速修正。</span></p><p><span>正因如此，千诀科技选择有生物依据的类脑分区方法——通过对生物脑的观测并经过机器学习理论的严格验证，保证解耦后整个系统的性能上限不会比理论值损失太多。这是一种可控的性能损失。</span></p><p><span>更进一步，高海川认为，</span><strong><span>类脑网络真正的价值，在于因果推理。</span></strong></p><p><span>“现在的Transformer底层是注意力机制，在数学上是相关性推理。你觉得两件事很相关，但它们之间的具体关系是什么，无法被网络内部推理出来。”他说，“但类脑的脉冲神经网络可以用神经元表达因果关系。”</span></p><p><span>如果神经网络能在神经元级别表达因果，就能从理论上消除AI幻觉，模型的泛化性也可极大提升。</span></p><p><span>“人类推理有三个层级：相关性推理、因果推理、反事实推理。现在的生成式大模型还在第一个层级。”高海川说，“如果产生因果性网络，再做反事实推理，AI就会真正拥有创造力。”</span></p><p><span>因为因果推理本身就是强泛化的。相关性是纯数据驱动，而因果推理可以用少量数据学出结构，之后靠结构泛化，样本效率自然更高。</span></p><p><span>当下的千诀选择两条腿走路：短期在Transformer基础上做功能分区，先让产品走进真实场景、积累数据飞轮；同时拿出部分精力与资源，探索以脉冲神经网络为核心的下一代神经网络。</span></p><p><span>在高海川看来，商业化是当前更紧迫的问题。毕竟，算法可以改，算力可以买，唯有数据壁垒需要时间沉淀。</span></p><p><span style="font-weight:bold">2.寻找机器人中的“安卓机”</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>在商业思考上，千诀内部曾经历过一次从封闭到开放的关键转变。</span></p><p><span>时间拉回到2017年。彼时，千诀科技的早期团队骨干成员在聚焦于使用课题组自研二代类脑芯片，搭载基于脉冲卷积网络的预测式世界模型，刚拿下国际3D世界模型比赛IEEE VIZDoom的季军。</span></p><p><span>当时，他们尝试让模型只适配自家芯片，做成封闭生态。专用算法驱动专用芯片，功耗和性价比确实都做到了极致。“</span><span>主要给使用者，而开发者生态还未完善</span><span>。”高海川回忆道，“这导致做出来的东西只有少数专有场景能用，没能迅速打开市场。”</span></p><p><span>这次经历让团队重新审视了技术路线的选择。以史为鉴，</span><strong><span>封闭方案虽然能在特定指标上做到极致，但真正决定长期竞争力的往往是生态的开放性。</span></strong></p><p><span>于是，千诀科技调整方向，将原本封闭的专用方案改为两套并行的架构：一套保留脉冲神经网络与类脑芯片适配的效能优势，另一套则兼容主流通用芯片，让模型可以根据不同硬件平台灵活部署。</span></p><p><span>“我们现在相当于用开放的生态去推动行业发展。”高海川说，“否则各家都在重复造轮子。”</span></p><p><span>2024年8月，千诀第二代模型刚完成预训练，团队开始主动接触市场上的本体厂商，尝试将类脑模型适配到不同形态的机器人上。从那时起，几乎每个月都能拓展数款新设备，合作品牌的名单迅速拉长。</span></p><p><strong><span>截至目前，千诀已与7大品类、30多个子品牌的机器人本体完成结合，覆盖人形、轮式双臂、四足、扫地机器人、无人机等多种形态。</span></strong></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2xDSZz1dpZwa45xRLY2aYdX9.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span>具体到交付环节，千诀延续了多分布预测式世界模型的思路，将大脑按功能拆分成不同模块，客户可以根据自身需求自由选配。每个品牌、每种形态的机器人需要的大脑能力各不相同：人形机器人的脑区最完整，轮式双臂少一些，四足机器狗可能又少一块。</span></p><p><span>不难发现，千诀科技的思路似曾相识。</span></p><p><span>高海川直言，千诀的目标是打造</span><strong><span>“机器人领域的安卓系统”</span></strong><span>——一个模块化、可替换、接口开放的操作系统。</span></p><p><span>但他同时强调，这种开放并不意味着要求合作方完全放弃自己的软件积累，那是既不现实也不必要的，“分区的好处就是，有些区本来就不需要跨本体复用，我们就把它删掉。客户可以按照自己的需要选配，要哪些区、不要哪些区。”</span></p><p><span>总结来看，千诀的生态模式可以用三句话概括：</span><strong><span>不推出自家本体品牌</span></strong><span>，避免与客户竞争；</span><strong><span>解耦架构</span></strong><span>，让不同形态的机器人按需装配大脑模块；</span><strong><span>开放接口</span></strong><span>，既兼容第三方方案，也允许客户保留自有能力。</span></p><p><span>与其在软硬一体的窄路上与少数头部公司贴身肉搏，不如成为更多本体厂商的共同选择，用广度换深度，用生态建壁垒。</span></p><p><span style="font-weight:bold">3.家庭场景比工业场景更容易落地</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>对于落地场景的选择，高海川有一个反直觉的判断：</span><strong><span>家庭场景比工业场景更容易落地。</span></strong></p><p><span>“大家主观上觉得工业更高科技，家庭没那么高科技。掌握资源的人大多也是外行居多，不是很懂技术。”他直言，“但实际做起来，家庭是最好做的，服务次之，工业是最难做的。”</span></p><p><span>这背后，是高海川更为反直觉的思考。“难的场景不一定难做进去，好做的场景不一定好做进去。”他总结道，“工业场景要求太高了，既要节拍又要精度，你用模型做最后会发现效率和精度都不达标，要么就得退回去用上一代技术。”</span></p><p><span>原因首先在于容错率。</span></p><p><span>工业场景对生产节拍和操作精度有着严苛要求，一个插装动作差了几毫米，整条产线可能就要停摆。这种高精度操作恰恰是当前具身智能的技术短板，它需要海量的触觉数据和高精度控制能力，而这两样现阶段都相当匮乏。</span></p><p><span>家庭场景则完全不同。“垃圾没捡起来，就再捡一次，没关系。”高海川说，“</span><strong><span>我们在复杂场景中做半精细化简单操作，他们是在封闭场景中做精细化操作。</span></strong><span>”换言之，家庭场景虽然环境更动态、更不可控，但对操作精度的容错率反而更高。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2ViSVC3tcvMY3qU5fE7YWBr.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>事实上，家庭场景和工业场景的选择背后，或许还有一个更隐晦的能力区分。因为两类场景的游戏规则截然不同。</span></p><p><span>工业场景的客户决策链条更长，涉及的考量维度也更复杂，对创业公司的组织能力和行业经验都有更高要求。相比之下，家庭和服务场景的反馈回路要短得多，产品好坏与否，消费者都会用各自的钱包投票。</span></p><p><span>对于一支从清华实验室实验室孵化出来的初创团队而言，后者的规则或许更靠近自身的能力半径。把产品打磨到极致，让用户体验说话，确实是一种基于禀赋的理性选择。</span></p><p><strong><span>在这个思路下，千诀瞄准了半服务半家庭的方向，并最先在面向家庭场景的机器人品类上找到了突破口。</span></strong></p><p><span>“这类机器人接口本身就不对外开放，各种保密要求很严格。以前这个行业都是软硬一体的，很难接受第三方方案。”高海川回忆道。千诀团队花了大量精力啃下这块硬骨头，回报也是显著的。“它的量大，我们把这个啃下来之后，产品一下就成熟了。因为每天都在面对消费者的反馈、消费者的投诉，很快就打磨好了。”</span></p><p><strong><span>沿着这个逻辑外推，千诀的商业模式逐渐成型：接入的本体越多，回流的数据越丰富；数据越丰富，模型能力越强；模型越强，适配新本体的速度就越快。</span></strong></p><p><span>高海川透露，适配速度存在一个明显的收敛拐点。“大概每个形态摸到第二、第三种子品牌的时候，就开始找到规律了。到摸完差不多第20款的时候，从第20款到第30款就非常快。现在国内几乎不存在我们没碰过的机器人了，可能有些下一代产品还没摸，但接口跟上一代不会差太多。”</span></p><p><span>不过，这种模式也存在潜在风险。</span></p><p><span>千诀的数据反馈需要经由本体合作伙伴，再回流至千诀内部，链条越长，信息损失的风险就越大。更不用说，部分本体厂商出于数据安全和商业竞争的考量，并不放心将全部数据开放给第三方大脑。</span></p><p><span>事实上，这也是当前许多具身智能企业选择“软硬一体”路线的核心原因，将客户数据直接反馈至自家模型，驱动本体迭代，闭环更短、效率更高。</span></p><p><span>但高海川对此并不担心，</span><strong><span>千诀的思路，是以广度弥补深度，通过跨品牌数据形成更完整的行业视角。</span></strong></p><p><span>“虽然每个品牌单独的数据量比不上软硬件一体的公司，但我们30多个品牌加在一起，几乎能拼出一幅完整的行业地图。”他说，“我在这一块看看、那一块看看，推理一下，总能把真相还原出来，而且还原得可能比人家软硬一体的更真实、更全面。”</span></p><p><strong><span>目前，千诀对外提供两类产品：科研版和商业版。</span></strong><span>科研版标准化程度更高，主要面向高校和开发者社区，提供API接口供二次开发使用。商业版则多为半标准模型半系统工程订单，需要根据不同客户的传感器配置、功能需求和部署方式逐一适配。</span></p><p><span>某种程度上，非标的定制化交付是当下具身智能行业的普遍现状。</span></p><p><span>“每家公司需求不同，预算不同，愿意购买服务的程度也不同，部署方式也不一样。”高海川坦言，行业尚未形成标准化的交付体系，定价也相对混乱。但他同时指出，当接触的客户足够多之后，哪些是高频需求、哪些是个性化需求，规律会自然浮现。</span></p><p><span style="font-weight:bold">4.真正的壁垒，来自于对用户场景的理解</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>在端到端VLA路线逼近性能瓶颈的当下，行业内部正在倒逼出更多技术选择。当前备受关注的世界模型，正逐渐成为VLA之外的第二条路径。</span></p><p><span>与此同时，竞争格局也在发生变化。高海川发现，市场上已经出现一些水下项目，追随千诀的路径开始创业。面对逐渐拥挤的赛道，千诀如何在开放生态的前提下，保持先发优势？</span></p><p><span>在这个问题上，高海川的认知很清晰。“随着基础设施的发展，算力的获取门槛在降低，而算法能力也在逐渐趋同，数据，尤其是来自真实场景的数据，正在成为决定模型表现的关键因素。”他说，“算法大家都可以改，算法路径的切换和模仿相对快速，但数据必须要有时间积累。”</span></p><p><span>这里所说的“积累”，不止关乎数据量的多寡。</span><strong><span>更重要的是，不同技术路线所积累的数据分布，天然存在差异。</span></strong><span>“由于各家公司定位不同，在不同技术路线上走得越久，积累的数据会越多，差异也会越大。这些数据本身，就代表了未来的落地场景方向。”</span></p><p><span>数据是结果，但数据带来的真正价值，在于对用户场景的深度理解。这也是各家公司当前争夺客户的核心原因。“我们更懂用户，知道模型该怎么改，”高海川说，“很多论文之外的东西，是需要自己做出来的。”</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3EQuRA2HRyCZ2vRTWeH1ECG.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>但长期来看，追求类人泛化能力的通用机器人，无疑是整个行业的终极目标。而在通往这个目标的路上，一个关键卡点正在浮出水面——</span><strong><span>触觉数据</span></strong><span>。</span></p><p><span>高海川曾不止一次在公开场合强调，触觉数据的缺失，已经成为限制机器人能力提升的硬约束。“虽然大家都在叠衣服，但世界上最好的叠衣服效果泛化起来也就在94%左右徘徊，落地其实还很远，而且提不上去了。”他解释道，“</span><strong><span>视觉本身的信息只是一个部分。缺失了触觉信息，就存在信息缺失的问题。这是问题本身的天花板，不是模型和数据不够。</span></strong><span>”</span></p><p><span>触觉的技术形态决定了其发展需要软硬件复合能力，迭代周期远长于纯软件。“以硬件迭代的周期来看，至少还得三四年。”高海川判断，“还是要靠整个行业的共同努力。”</span></p><p><span>千诀在触觉领域也有相应布局。目前团队已与瞬恒智能、灵心巧手等灵巧手厂商保持合作，但整体投入仍以预研性质为主。</span></p><p><span>触觉硬件的限制也意味着，未来三到五年内，精细操作类任务的大规模落地仍将受限。因此，千诀的策略非常务实：</span><strong><span>先把能做的场景做好，等待触觉传感器成熟。</span></strong></p><p><span>对于2026年，千诀有清晰的规划。</span></p><p><span>首先是把愿意接受第三方大脑的设备尽可能全部接入，基于客户真实反馈和应用回流的数据，形成第五代模型。</span><strong><span>这一代的核心特点是“个性化”，针对家庭和服务场景做定向优化。</span></strong></p><p><span>“数据本身就有倾向性，有高频使用的，有低频使用的，有不同场景的区分。”高海川说，“到时候我们在家庭和服务场景的能力，会比那些做通用泛化训练的模型强很多。”</span></p><p><span>在他看来，</span><strong><span>当前机器人大脑赛道虽然火热，但真正决定胜负的是场景卡位。</span></strong><span>各家竞争的核心，更多还是要进入各个场景做落地应用的竞争。在这个过程中，“技术是重要的要素，但不是最主要的”，高海川坦言。</span></p><p><span style="font-weight:bold">5.“无论有没有ChatGPT，我们都要做”</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>和高海川交流的过程中，「甲子光年」能清晰感受到千诀身上并存的两种气质，一边身处十分前沿的技术方向，另一边又极为务实。</span></p><p><strong><span>事实上，千诀在技术路线、商业模式、落地场景三个维度上的选择，已经构成了一套能够层层推导的闭环逻辑。</span></strong></p><p><span>类脑路线的高样本效率，使他们能在数据匮乏的早期率先落地；家庭和服务场景的高容错率与短反馈回路，又天然契合这种技术特性；而快速铺开的合作生态，则让数据飞轮得以加速转动。</span></p><p><span>这个故事在千诀早期融资时并不容易被理解。</span></p><p><span>高海川估算，从2024年开始融资至今，见过的投资人至少上百家。虽然成功率不低，“基本上每次有里程碑，见几家就可以close一轮了”，但沟通成本却相当高。</span></p><p><span>因为这套路线恰好落在四个领域的交叉点上：计算机专业的原始AI语言、生物计算的类脑研究范式、机械工程的本体视角，以及自动化的控制理论传统。投资人通常只深耕其中一两个维度，要同时跨越四套话语体系，解释门槛可想而知。</span></p><p><span>高海川本人出身清华自动化系下属的脑与认知科学研究所，恰好处于这几个领域的交汇地带。这种交叉背景让他能够理解各方的难点，但对外沟通时，依然要反复充当“翻译”。</span></p><p><span>这也解释了为什么千诀在2023年成立后，直到2024年中才开启首轮对外融资。一旦跨过认知门槛，投资人的决策往往很快。天使轮的领投英诺天使基金，当天见面就签了TS。</span></p><p><span>高海川回忆，不被投资人理解的时间里，基本都在靠自有资源做事。这背后自然离不开“清华系”的无形支撑。他坦言，从研究者转向创业者的过程很顺畅，从公司注册、股权结构设计到持股平台命名，清华校友前辈都给了大量帮助。“一堆前辈大哥，跟他们学就好了，很多时候会直接微信问。”他笑道。</span></p><p><span>校友圈的支撑，也让高海川有更多精力沉下来思考公司的技术和业务路线。</span></p><p><span>其实，公司虽然在2023年正式投入运营，但早在2019年他就萌生了将类脑技术产业化的念头，但疫情的突然到来让计划搁置。</span></p><p><span>回看这段被迫慢下来的时光，他反而觉得是一种幸运：“这段时间给了不少沉淀的机会，很多试错都在学校完成了，没有拖到公司来踩坑。”期间，他们将模型骨架切换为Transformer架构，做了大量模型分区的结构试错，也完成了从封闭芯片方案转向开放生态的关键调整。这些弯路都在实验室阶段走完了，留给公司的是一套经过反复验证的技术骨架。</span></p><p><span>当被问及创业的初心时，高海川的回答没有丝毫犹豫：“无论有没有ChatGPT，有没有Transformer，这件事我们都要做。”</span></p><p><span style="color:rgb(123, 127, 131)">（封面图来源：AI生成，文中图片来源：千诀科技）</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/27k9Za1qvzPj3gkNov2xKn9I.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 甲子光年-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef2399936faa8bf9e883e8?channel_id=67cc08a29a4297b6148b29e8">https://lingowhale.com/reader/web/69ef2399936faa8bf9e883e8?channel_id=67cc08a29a4297b6148b29e8</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

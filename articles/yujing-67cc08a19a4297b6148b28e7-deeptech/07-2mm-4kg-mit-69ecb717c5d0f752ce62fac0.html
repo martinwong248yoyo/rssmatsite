@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>2mm纤维举起4kg物体：MIT团队造出不靠电机的人工肌肉，有望摆脱伺服电机</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>2mm纤维举起4kg物体：MIT团队造出不靠电机的人工肌肉，有望摆脱伺服电机</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Sat, 25 Apr 2026 12:37:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ecb717c5d0f752ce62fac0?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1s7T0m2XEsZe1I1i5q4gjF5d.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 0, 0)">一款又软又轻、还不用外接设备的人工肌肉来了！直径仅 2mm 的纤维组成的新型人工肌肉竟能举起 200 倍自重的物体，更重要的是，它在功率密度上实现了接近生物肌肉的水平。</span></p><p><span style="color:rgb(0, 0, 0)">近期，麻省理工学院与意大利巴里理工大学联合团队在 </span><span style="color:rgb(0, 0, 0);font-style:italic">Science Robotics </span><span style="color:rgb(0, 0, 0)">发表了一项关于电流体纤维人工肌肉（EFM，Electrofluidic fiber muscles）的研究。</span></p><p><span style="color:rgb(0, 0, 0)">研究人员在一根仅 2mm 粗的密封液体软管中装上微型电流体动力学（EHD）泵，通电后能够像生物肌肉那样收缩发力。</span></p><p><span style="color:rgb(0, 0, 0)">然后，神奇的现象发生了：这束纤维可举起 4kg 的物体，</span><span style="color:rgb(171, 25, 66)">功率密度达 50 瓦每千克，收缩应变达 20%，不仅能在 0.3 秒内把一个小球弹射出去，同时还能与人类柔软地握手。</span></p><p>【视频】跳转到原文查看</p><p><span style="color:rgb(178, 178, 178)">（来源：麻省理工学院）</span></p><p><span style="color:rgb(0, 0, 0)">这项研究的关键突破在于，解决了机器人领域重要挑战：将泵塞进纤维内部做成闭环，驱动器不仅兼具静音、强劲、对人体友好，还彻底甩掉了过去限制软体机器人量产的外部液压设备，</span><span style="color:rgb(171, 25, 66)">有望应用于可穿戴辅助设备、柔性外骨骼、人机协作机器人和软体机器人等场景。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/vZH8cEalBk45HPxB1sN2QB.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图丨相关论文（来源：</span><span style="color:rgb(178, 178, 178);font-style:italic">Science Robotics</span><span style="color:rgb(178, 178, 178)">）</span></p><p><span style="color:rgb(0, 0, 0)">长期以来，</span><span style="color:rgb(0, 0, 0)">传统的机器人驱动系统</span><span style="color:rgb(0, 0, 0)">难以集成到</span><span style="color:rgb(0, 0, 0)">机器人和假肢等领域</span><span style="color:rgb(0, 0, 0)">。</span><span style="color:rgb(0, 0, 0)">核心原因之一是，其</span><span style="color:rgb(0, 0, 0)">往往需要电机、外部泵或其他笨重且体积庞大的支撑硬件。工程师们一直在寻找相关解决方案，希望开发出具有独特优势的仿生材料，例如能够与生物肌肉力量相当、快速响应、具有可扩展性和强控制力等。</span></p><p><span style="color:rgb(0, 0, 0)">这项研究给出了一套不同于传统驱动的解决方案：</span><span style="color:rgb(171, 25, 66)">直接将泵集成到纤维内部。EFM 在多个方面接近于真实肌肉，并具有足够的柔韧性，能够更好地与人体连接且可静音运行。</span><span style="color:rgb(0, 0, 0)">更重要的是，这些纤维可以组合成不同的形状，来适配特定的任务。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2JPKhv2oj5Pj1rArUP2yg6Xn.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图丨具有可调架构和性能的 EFM（来源：</span><span style="color:rgb(178, 178, 178);font-style:italic">Science Robotics</span><span style="color:rgb(178, 178, 178)">）</span></p><p><span><span style="color:rgb(0, 0, 0)">这套新系统的核心在于</span></span><span><span style="color:rgb(0, 0, 0)">融合了</span></span><span><span style="color:rgb(0, 0, 0)">两种已有技术：一种是流体驱动——薄型 McKibben 执行器，另一种则是基于 EHD 的微型固态泵，可在密封的流体腔室内产生压力，无需移动部件或外部流体供应。</span></span></p><p><span style="color:rgb(0, 0, 0)">尽管技术路线看起来简单，但要将这两个具有不同的动力学特性的技术相结合，在操作层面仍存在不小的挑战。研究人员发现，如果不解决这个问题，电压在达到约 4 千伏条件时泵容易崩溃。</span></p><p><span style="color:rgb(0, 0, 0)">于是，他们提出了一个巧妙的方案：在封闭系统中特意注入过量的液体，并提前为整个系统施加约 75 千帕的偏置压力。</span></p><p><span style="color:rgb(0, 0, 0)">这样做的目的在于，让两根对抗肌同时处于微绷紧状态，不仅可防止因入口处压力过低引起的气泡，还能将耐受电压从 4 千伏提升到超过 8 千伏。从实现效果来看，在同样负载 2 牛顿力的条件下，施加过偏置压力的人工肌肉收缩幅度实现了从 2% 至 14% 的显著提升。</span></p><p><span style="color:rgb(0, 0, 0)">该系统的另一创新之处在于模块化设计。</span><span style="color:rgb(171, 25, 66)">电驱动和液压可以像搭建乐高积木一样进行自由组装，使系统在设计与控制上更加灵活。</span><span style="color:rgb(0, 0, 0)">例如，可通过并联多个泵让液体流量变大的方式，来实现速度的提升。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1XHpsB3wCJrE3O3O5i1AYGsA.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">（来源：麻省理工学院）</span></p><p><span style="color:rgb(0, 0, 0)">研究团队通过并联 4 个泵驱动一对肌肉，实现了每秒 180mm 的收缩速度，并且完成一次动作仅需 0.13 秒，这样的性能支持在 0.3 秒内通过杠杆臂将乒乓球弹射至 24 厘米高度。</span></p><p><span style="color:rgb(0, 0, 0)"><span><span style="color:rgb(0, 0, 0)">再比如，可通过并联多根肌肉纤维的方式，来获取更大的力气。在研究中，研究人员将 8 根 EFM 绑在一起，</span></span></span><span style="color:rgb(0, 0, 0)">每侧的两个泵通过并联工作的方式提升流量，两侧的肌肉束则串联形成闭环回路。</span><span style="color:rgb(0, 0, 0)"><span><span style="color:rgb(0, 0, 0)">结果显示，总重量仅 22 克的一束人工肌肉，提起了 4kg 重的物品，行程为 30mm，并在 1,000 次循环测试中仍保持性能稳定。</span></span></span></p><p><span><span style="color:rgb(0, 0, 0)">此外，研究团队还展示了将 EFM 应用在可穿戴设备的可能性。研究人员将这些纤维织成一块 40cm 长、6cm 宽的“肌肉织物</span></span><span><span style="color:rgb(0, 0, 0)">”</span></span><span><span style="color:rgb(0, 0, 0)">，作为</span></span><span><span><span style="color:rgb(0, 0, 0)">机械臂的</span></span></span><span><span style="color:rgb(0, 0, 0)">肱二头肌和肱三头肌。</span></span></p><p><span style="color:rgb(0, 0, 0)">由于其高柔软的特性能够实现折叠扭曲，机械臂在 EFM 的驱动下实现了 40 多度弯曲。有趣的是，当人类与其握手时，它可以顺从地被推开，而这种反向可驱动性正是传统电机难以实现的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4ul8zjaCwOq45OVlklYOGx.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图丨研究人员展示了几种用于不同任务的肌肉配置：一种可快速发射物体的杠杆；一种可举起 4kg 重物的纤维束，以及一对驱动机械臂</span><span style="color:rgb(178, 178, 178)">弯曲</span><span style="color:rgb(178, 178, 178)">并保持高柔韧性，作为</span><span style="color:rgb(178, 178, 178)">肱二头肌和肱三头肌与人类进行握手（来源：麻省理工学院）</span></p><p><span><span style="color:rgb(0, 0, 0)">尽管 EFM 表现出相关性能的优势，但也需要同时看到的是，它还不是一个完美的解决方案。例如，它的能量转化效率并不高，</span></span><span><span style="color:rgb(0, 0, 0)">仍需要</span></span><span><span style="color:rgb(0, 0, 0)">高压驱动才能工作，这对于日常的电源管理方面还有进一步完善的空间。</span></span></p><p><span style="color:rgb(0, 0, 0)"><span><span style="color:rgb(0, 0, 0)">此外，这项研究中用到的</span></span><span><span style="color:rgb(0, 0, 0)">氢氟醚</span></span><span><span style="color:rgb(0, 0, 0)">液体是一种特殊的氟化液，存在供应限制和在一定的环境影响。因此，研究人员也在探索用非氟化的液体实现类似效果的可能性。</span></span></span></p><p><span style="color:rgb(0, 0, 0)">当下，大多数机器人仍然以电动伺服电机为主，而电机本身存在局限性，尤其在人形机器人领域，其圆柱形的形态只能安装在关节处，这会导致的后果是，要想获得更大的力气，电机重量也需要随之增加，因此整个机器人的质量集中在某几个关键点。相比之下，</span><span style="color:rgb(171, 25, 66)">纤维状的人工肌肉能够更紧密地封装在机器人或外骨骼内部，并分布在整个结构中。</span></p><p><span style="color:rgb(0, 0, 0)">这项工作的意义不仅仅是突破某几个性能指标，例如提起物品的重量、柔韧性和速度方面的提升。更重要的是，它为机器人执行器提供了一条不同于伺服电机的新路径。这种纤维形态的人工肌肉，能够像真正的肌肉那样分布在机器人全身，即便其中几根遇到问题也可能不影响整体工作。摆脱刚性躯壳的起点，或许就藏在那根 2mm 粗的软管中。</span></p><p><span style="color:rgb(178, 178, 178)">参考资料：</span></p><p><span style="color:rgb(178, 178, 178)">https://www.science.org/doi/10.1126/scirobotics.ady6438</span></p><p><span style="color:rgb(178, 178, 178)">https://www.media.mit.edu/articles/a-new-type-of-electrically-driven-artificial-muscle-fiber/</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ecb717c5d0f752ce62fac0?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69ecb717c5d0f752ce62fac0?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

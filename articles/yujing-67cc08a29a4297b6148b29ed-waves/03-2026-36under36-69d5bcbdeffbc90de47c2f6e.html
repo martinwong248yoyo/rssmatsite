@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>我们寻找迎风而立的人｜2026年「36Under36」 征集开始</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 暗涌Waves-公众号</div>
+                    <h1>我们寻找迎风而立的人｜2026年「36Under36」 征集开始</h1>
+                    <div class="meta">
+                        <span>暗涌Waves</span>
+                        <span>Wed, 08 Apr 2026 02:19:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69d5bcbdeffbc90de47c2f6e?channel_id=67cc08a29a4297b6148b29ed">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1AYbOzUF8gU4mO0Tp4DMTVO.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 175, 0)"><strong><span>「</span></strong></span><span style="color:rgb(16, 46, 91)"><strong><span>风已至，路在前。</span></strong></span><span style="color:rgb(0, 175, 0)"><strong><span>」</span></strong></span></p><p><span style="color:rgb(16, 46, 91)"><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2vz8YAamVYV1PcB4FrkwTz.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></span></p><p><span style="color:rgb(85, 85, 85)">如何形容2026的创投行业？</span></p><p><span style="color:rgb(85, 85, 85)">「暗涌Waves」回望过去一年，试图找到最恰当的形容：</span><span style="color:rgb(85, 85, 85)">当</span><span style="color:rgb(85, 85, 85)">AI</span><span style="color:rgb(85, 85, 85)">重新搭建产业底座，当硬科技成为底色，当全球化与本土创新彼此缠绕，</span><span style="color:rgb(85, 85, 85)">我们已全然接受一级市场的新叙事、新世代。</span></p><p><span style="color:rgb(85, 85, 85)">从肖弘2016年的一场黑客松，到2026年的蝴蝶效应，我们深知总有人挺立在创业前线；当一位位科学家从实验室走向量产前线，我们坚信总有人在开辟前路。</span></p><p><span style="color:rgb(85, 85, 85)">这群人，有一个共同点：</span><span style="color:rgb(0, 175, 0);font-weight:bold"><span style="color:rgb(0, 175, 0);font-weight:bold">不被风口塑形，在湍流中站稳，用持续创造定义自己的形状。年轻，是他们的共性。<span style="color:rgb(85, 85, 85)">每一位</span></span></span><span><span style="color:rgb(85, 85, 85)">都用行动证明：真正的价值从来不在风口之上，而在长期坚持的土地里。</span></span></p><p><span style="color:rgb(0, 175, 0);font-weight:bold">提炼今年的创投圈：风已至，路在前。</span></p><p><span style="color:rgb(85, 85, 85)">2026，年轻人被推上风口浪尖。95后、00后创始人涌现，10后“极客”斩获各大黑客松奖项，他们自会发声：“这是年轻人的舞台，这是年轻人的时代”。我们无法预知未来一级市场的全部图景与人物，但，记录时代的样本，记录这群人总有意义。</span></p><p><span style="color:rgb(85, 85, 85);font-weight:bold">「36Under36」</span><span style="color:rgb(85, 85, 85)">走过九年，36岁的门槛，我们深知年龄只是界限。</span></p><p><span style="color:rgb(85, 85, 85)">36岁，是沉淀与锋芒并存的黄金年纪。有了沉淀，未失热血；见过起伏，依然坚定。这不是被年龄困住的刻度，而是可以再次出发的底气。未来风云谁可测，少年锋芒自当书，江湖也喜欢听一些热血的故事。</span><span style="color:rgb(0, 175, 0);font-weight:bold">我们在过往的名单中，一次次看见这种力量：</span></p><p><span><span style="color:rgb(85, 85, 85)">2023年，我们在</span><a href="https://mp.weixin.qq.com/s?__biz=Mzk0MDMyNDUxOQ==&amp;mid=2247486714&amp;idx=1&amp;sn=a47c8fd39b623470806fcdbeb08df5d5&amp;scene=21#wechat_redirect"><span style="color:rgb(16, 46, 91)">《你才 36 岁，你可以成为任何你想成为的人》</span></a><span style="color:rgb(85, 85, 85)">里见证过年轻的无限可能；2024年，也在</span><a href="https://mp.weixin.qq.com/s?__biz=Mzk0MDMyNDUxOQ==&amp;mid=2247490968&amp;idx=1&amp;sn=027309e5c24b1eceda88d9ae5095a639&amp;scene=21#wechat_redirect"><span style="color:rgb(16, 46, 91)">《前方两条路，但你不能同时涉足》</span></a><span style="color:rgb(85, 85, 85)">里重新锚定创新的意义...</span></span></p><p><span style="color:rgb(0, 175, 0);font-weight:bold">而今年，我们寻找迎风而立的人。</span></p><p><span style="color:rgb(85, 85, 85)">1959年，36岁的金庸，面临创办《明报》维艰、中年初至、时代动荡的三重交织下，在《神雕侠侣》后记中写出冷峻的自省：“世事遇合变幻，但归根结底，总是由各人本来性格而定”。</span></p><p><span style="color:rgb(85, 85, 85)">创投江湖风浪不息，风口来去无常。我们寻找以心性抗风浪、以定力立自身的迎风者。站在世界中央的Under36们，愿我们迎风而立，也永远年轻。</span></p><p><span style="color:rgb(85, 85, 85)">2026年度「36Under36」报名通道正式开启！⬇️</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4xuPQ52E7gx329weKQ4naC1i.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)"><span style="color:rgb(178, 178, 178)">图片来源｜Unsplash</span></span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/ExkHk1yEsfmzk8AMM22J.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/33WN0m39JBTI2uYtXF3nyNe7.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 暗涌Waves-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69d5bcbdeffbc90de47c2f6e?channel_id=67cc08a29a4297b6148b29ed">https://lingowhale.com/reader/web/69d5bcbdeffbc90de47c2f6e?channel_id=67cc08a29a4297b6148b29ed</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

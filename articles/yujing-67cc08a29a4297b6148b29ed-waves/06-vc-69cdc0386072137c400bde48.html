@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>“一人基金”完成数千万首关，VC大兵团时代会终结吗？丨入局</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 暗涌Waves-公众号</div>
+                    <h1>“一人基金”完成数千万首关，VC大兵团时代会终结吗？丨入局</h1>
+                    <div class="meta">
+                        <span>暗涌Waves</span>
+                        <span>Thu, 02 Apr 2026 00:55:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69cdc0386072137c400bde48?channel_id=67cc08a29a4297b6148b29ed">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3AvL3IuaQXD1OOkPk3Cpkse.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 175, 0)"><strong><span>「</span></strong></span><span style="color:rgb(16, 46, 91)"><strong><span>Solo、AI、全球化。</span></strong></span><span style="color:rgb(0, 175, 0)"><strong><span>」</span></strong></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgb(143, 149, 158)"><span style="color:rgb(136, 136, 136)">「入局」是「暗涌Waves」的固定栏目。它源于我们发现，曾经行之有效的运行模式出现新的挑战，过往自西向东所承袭的行业规则已经被打散。人们亟待创新与资本的新版图和新秩序。而“入局”则是一种最珍贵的姿态。</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><strong><span style="color:rgb(143, 149, 158)"><span style="color:rgb(136, 136, 136)">「入局」诞生于变局之中。</span></span></strong><span style="color:rgb(143, 149, 158)"><span style="color:rgb(136, 136, 136)">若用一句话总结这个栏目的书写对象：我们希望找到更适应变化环境中的新玩家、新玩法。以下是本栏目的第十六篇文章。</span></span></p><p><span style="color:rgb(16, 46, 91)"><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2vz8YAamVYV1PcB4FrkwTz.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></span></p><p><span style="color:rgb(85, 85, 85)">AI正在重构所有行业的组织形态。从软件开发到内容创作，“超级个体”革命掀起的OPC（一人公司）浪潮正席卷全球。</span></p><p><span style="color:rgb(85, 85, 85)">这股冲击波也影响到了风险投资行业。2025年，硅谷风险投资人Elad Gil独立管理的基金净赚1300亿。在全球VC募资寒冬中，他单枪匹马给第四期基金募了30亿美元，是2023年第三期基金规模的3倍，甚至超过去年诸多Mega Fund的成绩。这支自2020年成立的基金没有团队，所有决策由Gil一人完成，却投出Instacart、Figma等多个改变行业格局的现象级基础设施公司。</span></p><p><span style="color:rgb(85, 85, 85)">作为前Twitter战略副总裁、前Google产品经理，以及Color Genomics联合创始人，Gil亲手从0到1打造过估值数十亿美元的科技公司，也从来就不是什么nobody。但从另一个维度看，他的尝试或许也能让人思考另一件事：在个人极高的认知密度，叠加AI杠杆与扁平决策的前提下，去机构化的VC是否真能批量成立？</span></p><p><span style="color:rgb(85, 85, 85)">中国一级市场也在近两年出现了零星Solo VC的尝试。近期，</span><strong><span style="color:rgb(0, 175, 0);font-weight:bold">「暗涌Waves」独家获悉，资深投资人阮飞成立了一支专注于全球化投资的“一人基金”——Captain Vanguard Capital（锋领资本）。锋领资本是一家day one就以双币运作、solo GP形式的VC机构，目前人民币基金完成数千万首关。</span></strong><span style="color:rgb(85, 85, 85)">同时，目标数千万美元的美元基金也在同步募集之中。</span></p><p><span style="color:rgb(85, 85, 85)">阮飞拥有北京大学电子学系和国际关系双学位、物理电子学研究生，从事VC投资、尤其是全球化跨境投资十余年，历任创新工场投资董事、复星锐正资本高级投资总监、日初资本出海业务负责人。</span></p><p><span style="color:rgb(85, 85, 85)">过去十年，阮飞几乎只关注中国企业全球化这一件事。从亲历“坂田五虎”时代的草莽、在印度班加罗尔凌晨送快递做调研、熬过亚马逊封号潮的至暗时刻，阮飞穿越了从移动互联网工具出海、跨境电商、DTC品牌到智能硬件、AI全球化的完整周期，投出中力股份（SH603194）、Uniuni、和生创新Dreo、元鼎智能Aiper、万邑通海外仓、大宇无限、Velotric、Voila等项目。他在印度、东南亚、中东、美国等多个市场工作、调研、生活过，累计在出海领域投资4亿人民币，退出金额超5亿人民币，剩余账面还有数倍本金的回报。</span></p><p><span style="color:rgb(85, 85, 85)">未来，锋领资本投资方向聚焦出海和全球化行业，主要关注欧美等高消费力市场的品牌和服务的投资机会。</span><strong><span style="color:rgb(0, 175, 0);font-weight:bold">阮飞告诉「暗涌Waves」，他更关注传统“衣食住行”的需求在新技术时代下的变化和机遇，其投资方向和关注重点落在“</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">AI</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">和物理世界的连接+全球化”。</span></strong></p><p><span style="color:rgb(85, 85, 85)">对于今天的阮飞来说，选择Solo VC这种形式更像是一种隐喻，是一个全球投资老手主动选择的自我进化。用十年积累的垂直市场认知，去捕捉结构性机会，正是OPC模式的理想试验田——出海链条极长、需要深度本土化认知，天然适合“认知密集型”的超级个体，而非“资金密集型”的大兵团。</span></p><p><span style="color:rgb(85, 85, 85)">「暗涌Waves」最近和全新启程的阮飞聊了聊他走过的周期，以及他眼中不同于世俗的未来。</span></p><p><span style="color:rgb(16, 46, 91);font-weight:bold">以下为阮飞的自述，经编辑——</span></p><p><span style="color:rgb(16, 46, 91)"><strong>Part</strong></span><span style="color:rgb(0, 175, 0)"><strong>01</strong></span></p><p><span style="color:rgb(0, 175, 0)"><strong>传统VC正在失效</strong></span></p><p><span style="color:rgb(85, 85, 85)">站在2026年的节点回望，中国风险投资行业已经走过了34年的历程。如果说2015年的“双创”是烈火烹油的起点，那么现在，传统VC已经走到了必须回答生存命题的十字路口。</span></p><p><span style="color:rgb(85, 85, 85)">在我选择成立“一人基金”之前，我反复思考过一个问题：现在的风投机构，真的比一家便利店更先进吗？</span></p><p><span style="color:rgb(85, 85, 85)">结论是令人沮丧的。现存的绝大部分风险投资基金，综合管理水平连便利店都不如。在便利店里，刚需款永远在最深处，利润款（烟、口香糖等）永远在收银台，系统实现了自动化库存与分成管理。而我们的风投机构，内部项目管理往往还停留在Excel表格阶段，信息孤岛严重，群狼人海战术下的管理成本高昂。</span></p><p><span style="color:rgb(85, 85, 85)">更深层的危机在于，传统“大兵团”模式正在产生巨大的内耗。</span></p><h3><span style="color:rgb(85, 85, 85)"><span style="color:rgb(16, 46, 91);font-weight:bold">赚管理费还是赚Carry？</span></span></h3><p><span style="color:rgb(85, 85, 85)">对于正常意义上的风险投资模式来说，主要的收入来自于两部分：</span></p><p><span style="color:rgb(85, 85, 85)">首先是管理费，一般为基金规模的2%/年，这部分收入主要用于维持基金运作的运营成本；超额收益部分的Carry。一般按照国内主流基金的方法，在基金收益超过一个固定的年化收益以后，超额收益按照20%归基金管理人，80%归投资人的方法进行分配。</span></p><p><span style="color:rgb(85, 85, 85)">基金存续期动辄8到12年，要看到Carry往往在5年以后。这就催生了两种路径：一种是拼命做大规模赚取2%的管理费，以维持庞大的团队开支；另一种是精挑细选赚取Carry。</span></p><p><span style="color:rgb(85, 85, 85)">在资本市场火热时，大基金可以靠管理费高薪挖人，通过幸存者偏差来维持声量。但当市场下行，业绩不稳、反投压力增大，大基金就陷入了平庸化的困境。</span></p><p><span style="color:rgb(85, 85, 85)">GP和LP之间从利益共同体，走向了悖论。</span></p><h3><span style="color:rgb(85, 85, 85)"><span style="color:rgb(16, 46, 91);font-weight:bold">“屎上雕花”毫无意义</span></span></h3><p><span style="color:rgb(85, 85, 85)">在传统风投架构中，最了解项目的人往往没有决策权，而决策者往往不在一线。</span></p><p><span style="color:rgb(85, 85, 85)">这导致了大量的投资经理沦为“内部FA”——为了证明一个项目值得投，他们花费大量精力做各种精美的报告，我称之为“屎上雕花”。这些工作除了自我证明，对最终的投资收益毫无贡献，且随着AI的普及，这些工作正被机器完美替代。</span></p><p><span style="color:rgb(85, 85, 85)">更糟糕的是激励机制的断层。由于人员流动率高，非合伙人很难待到项目退出拿Carry的那天，他们的收入本质上还是工资加奖金。这导致很多人只是为了“把项目投掉”，项目赚钱了写简历跳槽，亏了拍拍屁股走人。</span></p><h3><span style="color:rgb(85, 85, 85)"><span style="font-weight:bold;color:rgb(16, 46, 91)">“大盲池”的长期困境</span></span></h3><p><span style="color:rgb(85, 85, 85)">市场除了AI以外，缺乏移动互联网那种可以容纳大量投资机会的to C投资方向，所以传统基于移动互联网崛起起来的Mega Fund，后续需要不断的通过叠加新的投资领域来维持基金规模的投资数量。</span></p><p><span style="color:rgb(85, 85, 85)">随着项目越来越“硬科技”，需要的垂直方向知识储备大幅增加，泛品类大基金投资组合越来越倾向于平庸化和跟随市场流行趋势化。</span><strong><span style="font-weight:bold;color:rgb(0, 175, 0)">原来，风险投资赚的是认知不对称的钱，而认知的平庸大众化，也势必导致最终收益趋于平庸</span><span style="font-weight:bold;color:rgb(0, 175, 0)">。</span></strong></p><p><span style="color:rgb(85, 85, 85)">所以我认为，VC机构需要一场彻底的改革。这种改革不仅仅是投什么，更是组织形态的革命。</span></p><p><span style="color:rgb(16, 46, 91)"><strong>Part</strong></span><span style="color:rgb(0, 175, 0)"><strong>02</strong></span></p><p><span style="color:rgb(0, 175, 0)"><strong>Solo决策、AI辅助、专注全球化</strong></span></p><p><span style="color:rgb(85, 85, 85)">我决定做一个试验田：Captain Vanguard Capital（锋领资本）。它的核心公式是：</span><strong><span style="color:rgb(0, 175, 0);font-weight:bold">Solo VC+</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">AI</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold"> Management+Globalization</span></strong><span style="color:rgb(85, 85, 85)">。</span></p><p><span style="color:rgb(85, 85, 85)">这绝非一时冲动，而是基于对生产力变革的判断。</span></p><p><span style="color:rgb(85, 85, 85)">在过去，管理费要养活几十甚至上百人的团队，因为搜集信息、整理数据、撰写投后报告需要人海战术。但现在，除了两端——也就是面对创业者和LP——难以被替代，中间的环节都可以被重构。</span></p><p><span style="color:rgb(85, 85, 85)">我已经开发了自己的“投后管理助手”和“投后作战室”。通过AI Agent，我可以按指定格式整理被投公司资料，生成专业汇报文档，甚至拆解下轮融资的BP故事线。过去一个团队干的活，现在我可以全权负责，决策简单高效，直接对业绩负责。</span></p><p><span style="color:rgb(85, 85, 85)">二十年前，有人可以成为“移动互联网专家”并抓住时代的红利，但今天，没有人能成为“泛品类专家”。</span></p><p><span style="color:rgb(85, 85, 85)">我选择只关注“中国企业全球化”这一件事。出海的链条极长，涉及不同国家的认知差异与资源整合，这天然适合“认知密集型”的超级个体，而非“资金密集型”的大兵团。</span></p><p><span style="color:rgb(85, 85, 85)">创业者不需要一个刚入行一两年的投资经理来传话，他们需要的是一个能确实帮他们解决本土化痛点的老兵。我希望通过自媒体IP和专业文章，让出海行业的朋友知道，我是一个“帮忙不添乱”的投资人。</span></p><p><span style="color:rgb(85, 85, 85)">具体到我准备怎么做。其实，一级市场投资本质上是胜率与赔率的博弈，在不同阶段和行业的项目中，寻求胜率×赔率函数的极大值。基于此，锋领资本在出海行业重点关注两个区间：</span></p><p><strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">1. </span></strong><span style="color:rgb(0, 175, 0);font-weight:bold">早期阶段（博取赔率）：</span></strong><span style="color:rgb(85, 85, 85)">最好是第一轮融资，估值在3亿以内。我甚至愿意和创始人一起共创Idea，利用我十年的出海积累全方位赋能。这一部分是为了博取超额收益的潜力。</span></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">2. 成熟期阶段（确保胜率）：</span></strong><span style="color:rgb(85, 85, 85)">项目已有规模化收入利润，按PE估值。这是基金的底仓，通过扩品类、扩市场获取稳健增长。</span></p><p><span style="color:rgb(85, 85, 85)">从资产配置角度，单个项目是无法避免风险的，但是一个基金如果投资标的数量分散，顶层设计设计好，将底仓项目和高风险高回报潜力项目想清楚，是有可能通过垂直行业的投资组合来大幅降低基金亏损的风险的。</span></p><p><span style="color:rgb(85, 85, 85)">我不追逐市场热点。当一个项目估值飞涨但产品还没出来，赔率在降低而胜率没提升，我宁可错过。</span></p><p><span style="color:rgb(85, 85, 85)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2qUZIw4eZBPLCIyT332mvrv.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></p><p><span style="color:rgb(85, 85, 85)">在具体方向上，我70%的精力关注品牌，30%关注基础设施。</span></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">在</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">AI</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">时代，我关注新技术如何满足人最底层、最古老的“衣食住行”需求，更看重AI如何与物理世界产生连接。</span></strong></p><p><span style="color:rgb(85, 85, 85)">比如我最近投的RIC建筑机器人。美国的建筑工人缺口巨大，时薪30美金依然招不到人。RIC通过AI和3D打印技术，不仅提升了效率，更直接解决了劳动力缺失的痛点。目前他们已经在沃尔玛仓库建设中得到了验证。</span></p><p><span style="color:rgb(85, 85, 85)">以下是我定义的三个具体方向：</span></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">1. 帮助人类了解自己：</span></strong><span style="color:rgb(85, 85, 85)">通过更多的传感器监测数据等，帮助人类更加了解自己的健康、行为等数据，并且将数据本身积累起来，通过不断增强的AI能力来处理数据；</span></p><p><strong><span style="font-weight:bold;color:rgb(0, 175, 0)">2. 帮助人类提升工作效率：</span></strong><span style="color:rgb(85, 85, 85)">作为工具，提升人类的工作效率、或者作为机器，减少人类工作参与数量；</span></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">3. 帮助人类活得更爽：</span></strong><span style="color:rgb(85, 85, 85)">AI时代长期会带来生产力的长期爆发式的增长，未来人类会花更多的时间用于“躺平”享乐，在生活的更爽的点上，不管是陪伴、娱乐、还是日常基本需求的消费等。</span></p><p><span style="color:rgb(16, 46, 91)"><strong>Part</strong></span><span style="color:rgb(0, 175, 0)"><strong>03</strong></span></p><p><span style="color:rgb(0, 175, 0)"><strong>出海，趁现在</strong></span></p><p><span style="color:rgb(85, 85, 85)">很多人问我，现在大环境这么复杂，为什么还要all in出海？</span></p><p><span style="color:rgb(85, 85, 85)">2025年，中国的进出口顺差达到了历史性的1.2万亿美金。这背后是中国供应链强大的韧性。但我们必须清醒地认识到，过去25年依托人口红利和廉价制造的“商品输出”时代已经终结了。随着人均GDP达到13500美元，我们的成本优势在消失，必须寻找新的增长点。</span></p><p><span style="color:rgb(85, 85, 85)">这意味着我们必须完成两个转变：</span></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">1. 从“卖货”到“做品牌”：</span></strong><span style="color:rgb(85, 85, 85)">赚取更多的利润溢价。</span></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">2. 从“低端制造”到“科技出海”：</span></strong><span style="color:rgb(85, 85, 85)">利用我们的工程师红利，输出带有科技属性的产品。</span></p><p><span style="color:rgb(85, 85, 85)">过去30年，世界最大的机会是“Invest China”，中国经济年均增速达到了惊人的13.6%。但今天，我们需要内外双循环——对内靠自主创新提升生产力，对外则要坚定不移地走全球化道路，将过剩的产能力量转化为全球红利。</span></p><p><span style="color:rgb(85, 85, 85)">海洋的征服意味着扩张，而以“比较优势”为基础的贸易是有利于全球福祉的。从西班牙、荷兰到英美，海洋霸权的更迭是历史的规律。接下来的三十年，是中国企业的“大航海时代”。当大家都在唱衰全球化时，中国只有通过全球化，才能联合更多寻求发展的国家，走出一条自己的道路。</span></p><p><span style="color:rgb(85, 85, 85)">回想我这十余年，在印度班加罗尔凌晨的冷风里送快递，在封号潮的焦虑中找对策，我越来越意识到，风险投资本质上是和自己相似的人共同奋斗的过程。</span></p><p><span style="color:rgb(85, 85, 85)">我喜欢的创业者，要为人正直（这是合作的底色），要在垂直方向有极长的长板，要有全球化的组织凝聚力，更要有容纳他人意见的格局。</span></p><p><span style="color:rgb(85, 85, 85)">“一人基金”的成立，是我主动选择的进化。这是一种隐喻：在这个充满变量的时代，唯有极致的专注与对技术的敬畏，才能捕捉到真正的结构性机会。</span></p><p><span style="color:rgb(85, 85, 85)">出海和全球化，是勇敢者的游戏，也是我们这一代人、甚至下一代人一生的使命。我们要么成，要么败，但绝对不能不参与。毕竟，这场大航海才刚刚开始。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2qaTUP2gFXBZCJqEhPquNL.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/NSaXs48IaIs4FfCSq1Hbst.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 暗涌Waves-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69cdc0386072137c400bde48?channel_id=67cc08a29a4297b6148b29ed">https://lingowhale.com/reader/web/69cdc0386072137c400bde48?channel_id=67cc08a29a4297b6148b29ed</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

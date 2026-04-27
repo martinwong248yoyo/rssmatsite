@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>很想分享一下，我上线了自己的「AI异类」系列漫剧</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI异类弗兰克-公众号</div>
+                    <h1>很想分享一下，我上线了自己的「AI异类」系列漫剧</h1>
+                    <div class="meta">
+                        <span>AI异类弗兰克</span>
+                        <span>Mon, 20 Apr 2026 09:45:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e5fa83d419f50beb17c64a?channel_id=67cc08a39a4297b6148b2c97">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span><img src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/4KW1YfFgWQl7aUwJwxhR1pBjjovqug71zL4U5ByyY5YopZVSGBdVgjC7jLQ5gpqu4ibNcvvUibnribgrnwqUHSnibmCmiaZvFtfypE1HTP60j7dg/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p>【视频】跳转到原文查看</p><p><span>这一集以我自己为主角的科幻漫剧，大家猜猜，是多久做出来的？</span></p><p><span>一天？一个小时？</span></p><p><span>AI视频模型现在能力越来越强了。</span></p><p><span>就好比有人给了一把全世界最好的锤子，然后说，去造栋房子吧。</span></p><p><span>我拿着锤子站在空地上，第一锤该敲哪儿都不知道。</span></p><p><span>现在，关于内容创作、关于影音娱乐IP、关于漫剧短剧视频消费……确定性的机会已经非常明显。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">每一个创作者，在AI生产力支持下，都应该是视频生产者。</span></p><p><span>但是说实话，我的视频内容做的不算很好。</span></p><p><span>2023年就关注到了短剧的趋势，我有很多自己想表达创意，但是即便借助了现有的那么多AI视频工具，还是觉得有所欠缺。</span></p><p><span>脚本要分别生成，分镜要自己画，每个镜头要反复抽卡，抽完图抽视频，抽完视频还要剪辑配音配乐，前后人物长得不像还得重来。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">当听说有个叫剧火的产品，一个人一天就能做完一部短剧，我想认真试试。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQkcBoUtaTNwRMKbU8C32WZZWqB9j7hEVjJoicnQeIK5Exib41uhhA8iaJunUDGRoWJ2zQcuEibgUKumBvibgCHVXhE9mH2dAEK3VQC8/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>官网：https://juhuo.cn/</span></p><p><span>文末还有一个小彩蛋，关于剧火新推出的【伙剧计划】，感兴趣的朋友一定看到最后。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">01</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">先说说「对话式创作」</span></h2><p><span>打开剧火的页面，界面很简单。</span></p><p><span>一个对话框，上面一行小字：上传小说、剧本，或者直接输入你的故事想法。</span></p><p><span>我上传了一个自己以前写的科幻小说，几千字，题材是外星人和地球人的互动。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQkic8fBARWhibQjYNfribZFyWuxzHKgVZqicibq6NPPe1BRwicUD3JMRsXibic2YfYcickRoNQzzml3L4MdgRhyJZerHndAYlHO9QPbZNPY/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>选择的是「顶级编剧」，辅助我来优化剧本。</span></p><section><img src="https://mmbiz.qpic.cn/mmbiz_png/4KW1YfFgWQnun1gPm8VFDcsMiaI4iahSp9UdmVXzYNibibfN2YWicrrjgAtVOMBaTNr5N54kSLUSCeM8VJzMprKod38vgwj8Y3VmiadQlCMxkg8O0/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>输入之后，AI已经开始跟我对话了。</span></p><p><span>交互设计给我的感觉很自然，比较符合跟Agent交互的习惯，每进行一步，接下来的提示很到位，像手把手被一个资深编辑、导演带着走。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQlvbGSfbI4DUSUaXZWnTwDD2iaSVoP6NicPyQnFgysUsObiafiabCKtAqAEXOa6EsMPbpXWedvA3ZOEMsMlEnTuxCqAf3ibmH5kBmnU/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>会主动问我：想保留原著的哪些核心情节？主角的性格偏强势还是隐忍？反派需要多大的升级空间？</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">能感觉到，是基于商业短剧的方法论在提问。</span></p><p><span>比如它问反派恶行的升级路线，这其实就是短剧里常说的“仇恨值递进”——观众得跟着主角一起恨反派，后面逆袭的时候才爽。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">整个视频制作的设定，基于五大模块：基础设定、大纲与脚本、角色、场景、道具。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQlQ8qWRBUXicrWzDaIcciauE2qT32feZPxk0akCicXBe75gwFfQXRPYgX3kE4gzI58wBfMnh4QGhDVVrFic2kY9x8hSuhsiaozR9hQc/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>左侧通过对话的方式和Agent进行任务推进，右侧可以看到具体的环节步骤以及阶段性的成果，还可以在右侧做更具体的选择和调整。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_gif/4KW1YfFgWQnKOZWA3gV8zpSt6sQrjsMhe3d7hdXxFF3nGCxqaSBspA7ybc22HM2KiaNeBg2W0e4AFycia60a7vQtcwBYH5BIGXKkpiaI8icdEO4/640?wx_fmt=gif&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>整个过程大概聊了几分钟，我回答了一些问题，也接受了一些AI的建议。</span></p><p><span>然后AI说，开始生成大纲了。</span></p><p><span>大纲生成得很快，大概几十秒。小说被改造成了十集的短剧大纲，每集控制在两分钟左右。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQnJF1qexiaEyJumvMjC8icI2Ip6ZY0pyaOSKVOWYJakrf6WQKGynSS7xgqrEQI0Bl7xaW2KvLIlfe2zBnY0NYqwDaLexAFFF0Pho/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>开场钩子、集末悬念、情绪爆点，编排得明明白白。</span></p><p><span>但真正让我觉得有点东西的是接下来的Agent审查环节。</span></p><p><span>大纲生成完后，系统弹出一个提示：审稿编辑Agent正在审查。</span></p><p><span>这个设计很有意思。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">剧火内置了一个独立的审查系统，会从八个维度检查大纲质量。</span></p><p><span>比如开场钩子够不够强，每集结尾的悬念是不是具体到“正在发生但未完成的动作”，有没有水集，信息差是否建立有效等等。</span></p><p><span>审查完直接给出优化版本，直接交付打磨后的成品。</span></p><p><span>所以我拿到的第一版大纲，其实已经是经过“创作+审查+优化”迭代后的版本。</span></p><p><span>大纲通过后，AI开始生成角色设定、场景设定、道具设定。</span></p><section><img src="https://mmbiz.qpic.cn/mmbiz_png/4KW1YfFgWQnKGekEzhYZicSTicrCFgMO1AWFOIPDAF8LUvJzKgfqhzO9MNgxJh82grTrAY9iafvY38cw7iaqdgY1mBfk3icKwegGUbm5AG7q7hkQ/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>这部分我基本没操心，全程自动完成。</span></p><p><span>每个角色都有详细的外貌描述、性格特征、台词风格，甚至标注了在哪些集里出场、承担什么功能。</span></p><p><span>我直接把自己的头像，用作了剧本主角。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">然后是重头戏：分场剧本。</span></p><p><span>分场剧本是逐集生成的，每一集都包含场景描述、角色动作、台词、镜头提示。</span></p><section><img src="https://mmbiz.qpic.cn/mmbiz_gif/4KW1YfFgWQnicUkFIokXS8EyIGdyDZgVH29Iuo6iaodL4ScaCN7LQZgsC2YhA7QYias8t19p4gx4vOVFI2rFH1Ryc3jEyVQsen8Y7gGdEcicW3A/640?wx_fmt=gif&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>生成完一集，审查系统又会跑一遍，这次是十一项检查：每句台词有没有信息量、有没有超过五秒的哑巴画面、冲突密度够不够、情绪有没有起伏……</span></p><p><span>审查报告里有一句让我印象很深：第三场中，两个角色有长达八秒的沉默对视，建议加入台词或旁白填充。</span></p><p><span>这个细节说明审查系统是真的懂视频语言的，它不是简单地检查语法错误，还会考虑观众的观看体验。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">整个剧本创作阶段，从上传小说到完成十集分场剧本，我大概花了半个小时。</span></p><p><span>其中大部分时间是我在回答AI的问题和看审查报告。如果单纯让AI全自动跑，估计还会更快</span></p><section><img src="https://mmbiz.qpic.cn/mmbiz_png/4KW1YfFgWQk5R007etQOsChQqR4pxBb9moysb7sXEpwtpXNlgpdPXrvh2aSnLzhXQ6AgCoFEiad6DAygNwMuKyxQRf4rR7VY7tib2TZ7p3DR8/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>但剧本只是第一步，真正的考验在后面。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">02</span></h2><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">视频生成才是真正的修罗场</span></h2><p><span>剧本写好了，接下来就是视频生成。</span></p><p><span>这是我最担心的环节，市面上的AI视频工具我基本都用过，痛点很有共性。</span></p><p><span>最让人头疼的就是一致性。用AI生成一个角色，换个角度或者换个场景，立马变成另一个人。</span></p><p><span>一部短剧几十上百个镜头，前后角色长不一样，观众分分钟出戏。</span></p><p><span>还有就是工序繁琐。</span></p><p><span>传统AI视频工具的工作流是这样的：写提示词生成角色图 → 不满意重抽 → 终于满意了 → 用这张图生成视频 → 动作不对重抽 → 角度不好重抽 → 勉强能用 → 下一个镜头，从头再来。</span></p><p><span>做完所有镜头还要剪辑、配音、配乐、加字幕。做一个两分钟的视频，抽卡上百次是家常便饭。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">剧火不光有Seeadance 2.0模型，还改变了很多视频创作方式。</span></p><p><span>从设定图和剧本来生成成品视频，视频里自带画面切分、角色对白、音效、背景音乐。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQlFaO929HwlWnrYCwEhbibkpQWMXib0V7Eb3mVL0xb6c0UKD0mmAqylicQhuqK2KGPM3bEeOQDCPWpn6PDbM7VwBuB5vupDbvlTsM/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>在剧火的工作台里，我选择了剧本的第一集，系统自动解析出这一集包含多少个分镜，每个分镜的场景描述、角色、台词。</span></p><p><span>我只需要点击生成视频就行。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQmUtr1FxhCpRtr1mXgIibCBjAgcfXibjIL7832vPnbU9uT3K8xwQqOuagTHbk3YLSSU9Gn4t067DibhWFDKiaV8cH5WS2H9v7MIcWA/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>它内置了几十种画风预设，覆盖漫剧和真人剧两大类。</span></p><p><span>漫剧有日系、国漫、韩漫等风格，真人剧有电影质感、网感、纪实等风格。我选了一个偏网感的真人剧风格。</span></p><p><span>点击生成后，系统开始逐镜生成视频。</span></p><p><span>关键的是它有镜头延续功能：生成下一个分镜时，系统会自动参考上一个分镜的视频，确保角色外貌、场景风格、画面调性保持一致。</span></p><p>【视频】跳转到原文查看</p><p><span>到了第四集，有个比较复杂的场景，主角跟反派有情绪波动、有冲突。</span></p><p><span>这个场景有七八个分镜，各种角度切换、近景远景交替。</span></p><p><span>看生成效果，每个分镜之间的过渡非常自然，角色长相一致，连声音和背景音乐都在分镜间保持了连续。</span></p><p>【视频】跳转到原文查看</p><p><span>而且抽卡成功率很高，没那么多需要返场重来的</span></p><p><span>我生成了第一集全部十二个分镜，只有一个分镜因为动作幅度太大导致画面有点糊，重新生成了一次就过了。这种成功率在我用过的所有AI视频工具里都是最高的。</span></p><p><span>一个人，半个小时，十集科幻短剧。</span></p><p><span>我还做了个番外篇，也是以我自己的出海品牌QLab为主题的，科幻商战。</span></p><p>【视频】跳转到原文查看</p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">03</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">聊聊技术，也聊聊行业</span></p><p><span>作为一个技术出身的AI创业者，很想拆解一下剧火到底是怎么做到的。</span></p><p><span>首先是剧本创作部分。</span></p><p><span>剧火用的应该是目前市面上能拿到的最强语言模型、视频模型，而且肯定是满血版。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQlVCxZxU3TTicpvAKEsJTtFTBaCfV7dIZlEqHbh56zePfsdrDaTTZ5DlM6LD5dqOpfdsZz4kiazFQI5BMrDLOHyruAwoxhSic3SHo/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>但光有强模型不够，模型再强，不懂商业短剧的方法论，写出来的东西也是外行。</span></p><p><span>剧火的壁垒，在我看来，它是把公司内部爆款短剧制作团队的编剧方法论，做成了一个Skill体系。</span></p><p><span>这个体系包含了大纲策划的八项检查标准、分场剧本的十一项检查标准、开场钩子的设计模式、冲突密度的控制方法、情绪爆点的编排逻辑等等。</span></p><p>【视频】跳转到原文查看</p><p><span>像我做的这个秦王主题的历史权谋漫剧，就非常有情绪张力和情节转折。</span></p><p><span>这些内容方法论，是经过市场验证的，是真正能做出爆款短剧的经验沉淀。</span></p><p><span>把这种行业Know-how跟大模型结合，才可能让一个完全不懂编剧的人也能写出合格的商业短剧剧本。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">然后是视频生成部分。</span></p><p><span>Seeadance 2.0这个模型本身就强，但剧火还基于模型特性，重新设计了整个创作流程。</span></p><p><span>传统的AI视频工具是“镜头中心”的，每个镜头都要从头开始。</span></p><p><span>剧火是“剧本中心”的，剧本决定了镜头序列，系统自动解析分镜、保持一致性、合成成品视频。</span></p><p><span>基于剧本，分镜、人物、环境，很自然去展开。</span></p><section><img src="https://mmbiz.qpic.cn/mmbiz_png/4KW1YfFgWQlf5ibLNC1YNAF9xn6dJK1iaVpOMgJpGdUhK2jiboFgE2H1LAXxoY6iaVnRMSOMVrFiaQRKicJ8YLibrwQFxuBpJr2shnXIgMsEovrPicE/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>这是两种完全不同的产品哲学。</span></p><p><span>还有一致性问题的解决，得益于它的镜头延续功能。</span></p><p><span>传统做法是靠提示词硬控，在提示词里反复描述角色特征，但效果很差。</span></p><p><span>剧火的做法是把上一个分镜的视频作为参考帧，让模型在生成下一个分镜时继承上一个分镜的视觉特征。</span></p><p><span>这个方法其实在技术圈，但能把它产品化、做到这么稳定好用的，剧火是我见到的第一个。</span></p><p><span>还有一个我很喜欢的，是它的公共虚拟演员库。</span></p><section><img src="https://mmbiz.qpic.cn/mmbiz_gif/4KW1YfFgWQnTlCHcI44FVulsmH3QMwgoWVAgDHKzyUENeYT1u9yazDVCicq4PCDnsXvfIKhUQSAT3CrFpzosX9GIBAGT7oXHVezaocv0uuPo/640?wx_fmt=gif&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>剧火内置了一批官方精选的虚拟演员形象，都是经过观众审美检验的。</span></p><p><span>不需要每次自己去抽卡抽一个好看的角色出来，直接选就能用。</span></p><p><span>省去了大量角色外貌抽卡的成本和时间，而且这些形象本身就符合主流审美，降低了翻车风险。</span></p><p>【视频】跳转到原文查看</p><p><span>像我做的这个古装短剧片段，里面的角色看起来挺顺眼，都是从虚拟演员库里挑选的形象。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQnCicQvaH4Sia6zDFbzLicViaqSbNPLZgluraJqiaBvicQ2eibUV76NnqbKzKvovNjMqN0OIFyK1DibNGhYhZ9vt1rr1tiaX0oGAx6KFaxg/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>收费模式也值得一说。</span></p><p><span>剧火是按量计费，积分永不过期。</span></p><p><span>跟市面上主流的按月订阅相比，这个模式对用户更友好。</span></p><p><span>月费制最大的问题是，这个月你用得少，积分清零，等于亏了；用得多，积分不够，又要升级套餐。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQmjncZfQcLIibfeB4ZicwprnysfdC806O7Oqibn5kNTLN3K8icbN0lFNH2koxMAhZIic4fxE009dZNjDQzrgsgvHWyBuOsGvVU0qibhk/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>按量计费就没有这个焦虑，用多少扣多少，积分放着也不会过期。</span></p><p><span>可以说是很有性价比了。</span></p><p><span>而且还有新推出的【伙剧计划】，剧火AI全额承担算力费用，你0成本做剧、发布、赚钱。</span></p><p><span>报名方式我放在文末最后了。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">04</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">一些冷静下来的思考</span></h2><p><span>说了这么多优点，也该说说局限和思考了。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">首先是视频质量的上限问题。</span></p><p><span>剧火生成的视频质量，某种程度上还是取决于Seeadance 2.0模型的能力上限。</span></p><p><span>虽然目前这个模型是地表最强，但它还不是完美的。比如复杂的人物交互、精细的面部表情、快速的打斗动作，有时候还是会翻车。</span></p><p><span>剧火做得好的地方是，它通过分镜设计规避了模型容易翻车的场景，但并不能完全解决问题。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">其次是创作自由度的问题。</span></p><p><span>剧火的剧本生成严格遵循商业短剧的方法论，这意味着它产出的剧本结构是比较固定的。开场钩子、冲突升级、情绪爆点、集末悬念，这些都是标准化的。</span></p><section><img src="https://mmbiz.qpic.cn/mmbiz_png/4KW1YfFgWQnic7UwWib5EkGznSB7KDHRydwicSTw34KgCVt3G1pn8kDWAdld5CXjd9icibRicaGic9pBle3bgaMQ9PQ4wobmf6zWUZw9U5p1wzezxE/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>如果想做一部文艺片或者实验性质的短剧，这套方法论不一定完全适用。</span></p><p><span>但话说回来，剧火的目标用户本来就不是文艺片导演。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">它的定位很清晰：AI编剧+导演，一人短剧工作室。</span></p><p><span>目标用户是那些想快速产出商业短剧的人，可能是网文创作者想做短剧改编，可能是MCN机构想批量生产短剧内容，可能是个人创作者想做副业。</span></p><p><span>就比如说我自己，核心诉求不是艺术表达，是效率和质量稳定性。</span></p><p><span>在这个定位上，剧火做得相当出色。</span></p><p><span>还有一个值得思考的问题是，这种工具会怎么影响内容消费行业。</span></p><p><span>我的判断是，它会加速短剧行业的平民化和工业化。</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQncicbib78xzp2sugulWK7ibQAeqM7ja6hwiaiaHVFRuzCKQKpbRBJtf9bqQd1zYopcDOM23lAc35ftpFX8iaLOEJ011s63MoSmPbYr4/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>平民化体现在门槛降低。以前做一部短剧，你需要编剧、导演、摄影、演员、后期，是一个团队的事。</span></p><p><span>现在一个人就能完成，成本极低、用时也短。这意味着会有大量个人创作者涌入短剧赛道，内容供给会大幅增加。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">工业化体现在生产流程的标准化。</span></p><p><span>剧火把商业短剧的制作流程固化成了一套可复用的Agent系统，从剧本创作到视频生成，每一步都有标准、有审查、有优化。这种标准化程度，在传统短剧制作中很难实现。</span></p><p><span>但工业化也意味着同质化。</span></p><p><span>当所有人都用同一套方法论、同一个模型、同一个画风预设，产出的内容会不会越来越像？这是一个潜在的问题。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">我觉得答案在于个性化配置。</span></p><section><img src="https://mmbiz.qpic.cn/mmbiz_png/4KW1YfFgWQk335yllcYEudqEeibF20LRtGYFibfYbXemmVr9ErsWMLMo9swM6d0q1NQa3Yf7RPTKkp5usdEZibt4pyPKgA5Mmt59Cv3rfpWMwY/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">剧火也内置了差异化的方法论选项，用户还可以在对话过程中干预和调整。</span></p><p><span>跟AI聊得越深入，AI就越理解你的偏好。</span></p><p><span>未来可能会出现用户自定义的Skill体系，每个人都可以把自己的创作方法论教给AI。</span></p><p><span>还有一个更大的想象空间是，剧火这种“Agent+工作台”的模式，可能会成为AI视频创作的主流范式。</span></p><p><span>传统的“填表单+抽卡”模式太反人类了，它要求用户既懂编剧又懂摄影还懂提示词工程，这根本不合理。</span></p><p><span>未来的AI视频工具应该像剧火这样，把复杂性交给Agent，用户只关心故事本身。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">我把做好的视频，发给了几个做影视的朋友看。</span></p><p>【视频】跳转到原文查看</p><p><span>他们知道是AI做的，但看完后的反应出奇的一致：仔细看还是能看出来是AI做的，但不重要，因为剧情把他们的注意力抓住了。</span></p><p><span>我在想，技术最终是要服务于内容的。</span></p><p><span>观众不在乎你是人拍的还是AI生成的，他们在乎的是故事好不好看。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">剧火最厉害的地方，就是它让AI产出的故事情节，真的精彩。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">这就够了。</span></p><p><span style="font-style:italic">之前提到的【</span><strong><span style="font-style:italic">伙剧计划】，免费的</span></strong><strong><span style="font-style:italic">算力</span></strong><strong><span style="font-style:italic">支持，只为了鼓励更多创作者，带来更多精品。</span></strong></p><p><span style="font-style:italic">也许，我们和新的AI创作故事，只差这一个开始……</span></p><section><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQmdnGcX3cyqSKprC8LRmM21PsvUVUahesPttYrCrT2dB1R6ssticzOVoAzq6Ozia3pbaGuibTNYdu931kHLDsKFX3oYicD2Wc0ficow/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><span><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/4KW1YfFgWQldTVMrOYTOpMqKvtL2vAlIuBve2l7bs8Z0al6TEQicwskB42vVzY6ct1ZibAtZhyNgENutLxQ8wnBlyCxYaboWjyibgB3R6PXknE/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI异类弗兰克-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e5fa83d419f50beb17c64a?channel_id=67cc08a39a4297b6148b2c97">https://lingowhale.com/reader/web/69e5fa83d419f50beb17c64a?channel_id=67cc08a39a4297b6148b2c97</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>最新周刊导播｜反腐法网再织密、宇宙级IPO来袭、追觅追梦</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 财新-公众号</div>
+                    <h1>最新周刊导播｜反腐法网再织密、宇宙级IPO来袭、追觅追梦</h1>
+                    <div class="meta">
+                        <span>财新</span>
+                        <span>Mon, 27 Apr 2026 09:56:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef39231094587cab597097?channel_id=67cc08a59a4297b6148b2f44">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p>4月10日下午，兼职从事刑事辩护的中国政法大学教授何兵接到一通求助电话。“何老师，我怎么办，是不是犯罪？”对方是一名身价过亿元的民企老板，声称自己直接从公司支钱给高管发奖金，十年间总计上千万元，自己还借给公司几千万元。何兵劝他抓紧整改，平账。</p><p>无独有偶，当晚北京刑辩律师徐红亮也接到一名企业高管的咨询，对方举棋不定：已经从公司拿了300多万元，是扭头送回去，还是“一条道走到黑”？</p><p>这天上午，最高法院、最高检察院联合发布《关于办理贪污贿赂刑事案件适用法律若干问题的解释（二）》（下称《解释（二）》）。这是继2016年《关于办理贪污贿赂刑事案件适用法律若干问题的解释》（下称《解释（一）》）后，“两高”发布的第二份事关职务犯罪定罪量刑的司法解释。其中和民营企业老板、高管等人密切相关的一个新内容，是调整内部腐败行为定罪量刑数额标准。</p><p>民企、国企人员贪腐的认定标准要不要拉平？对产权平等保护，是否意味着也要平等打击？这是《解释（二）》发布后舆论热议最多的话题之一。</p><p>本期《周刊导播》，将先为你领读《财新周刊》封面文章《反腐法网再织密》，让我们先来看看，对非国家工作人员的贪腐规则到底发生了哪些变化。</p><p>中国政法大学刑事司法学院教授阮齐林告诉财新，第8条写的是“参照”适用，但确实降低了定罪量刑数额标准，显然对触犯非公行受贿、职务侵占、挪用资金相关罪名的被告人不利。以非国家工作人员受贿罪为例，在2020年《刑法修正案（十一）》出台前，按照规定，非国家工作人员受贿数额较大的，处5年以下有期徒刑或者拘役；数额巨大的，处5年以上有期徒刑，可以并处没收财产。2016年《解释（一）》规定该罪数额较大的标准，按照受贿罪2倍执行，即6万元；数额巨大的，按照受贿罪5倍执行，即100万元。</p><p>到2020年，《刑法修正案（十一）》调整了非国家工作人员受贿罪的刑罚配置，并增加了一档量刑幅度。具体来说，数额较大的，处3年以下有期徒刑或者拘役，并处罚金；数额巨大或者有其他严重情节的，处3年以上10年以下有期徒刑，并处罚金；数额特别巨大或者有其他特别严重情节的，处10年以上有期徒刑或者无期徒刑，并处罚金。不过在当时，司法解释并未同步对“数额特别巨大或者有其他特别严重情节”这一档规定量刑标准。直到此次《解释（二）》第8条统一规定，非国家工作人员受贿罪参照受贿罪定罪量刑标准执行。</p><p>“也就是说，原来非公受贿100万元，构成数额巨大，刑期是5年以上至15年。现在只要20万元就构成数额巨大，刑期是3年以上10年以下。数额特别巨大这一档，原来没有具体规定，现在明确参照受贿罪掌握，也就是非公受贿300万元以上，处10年以上有期徒刑、无期徒刑。那么如果非公受贿100万元，过去一般判5年，现在可判3年到10年，有可能也只是判5年。而如果非公受贿300万元，按照原来规定实际判罚可能六七年，现在一般判10年，就重不少。”阮齐林说。</p><p>为什么要这样改？最高法院在发布《解释（二）》时特别提到，此举是落实对不同所有制企业依法平等保护。民企内部腐败现象近年来备受关注，最高法院曾在一次新闻发布会上披露，2025年上半年，全国法院审结非国家工作人员受贿、职务侵占、挪用资金案件4842件，同比增长11.6%。2025年5月，北京市海淀区法院、中国互联网协会共同举办互联网企业内部人员贪腐犯罪治理座谈会。座谈会前，海淀区法院发布了《互联网企业内部人员贪腐犯罪案件白皮书》。数据显示，2020年至2024年，海淀区法院共审理127件涉互联网企业内部人员贪腐犯罪案件，罪名包括非国家工作人员受贿罪、职务侵占罪、挪用资金罪，涉案总金额3.05亿余元。一名大型互联网企业的内部监察总监在座谈会上提到，“我们互联网（企业）的工作人员可能并不比这些落马的厅局级干部贪得少”。</p><p>本期封面文章，作者单玉晓。</p><p><strong>《宇宙级IPO来袭》</strong></p><p>位于美国东南部田纳西州的孟菲斯机场从未如此繁忙。近一段时间，来自主权财富基金、大型资管机构和对冲基金的投资人及华尔街分析师，应马斯克之邀，搭乘私人包机来到这里实地参观xAI的超级计算机集群“Colossus”。</p><p>这更像是一场实地路演。SpaceX即将登陆资本市场，目标估值1.75万亿至2万亿美元，计划募资750亿美元，这将打破沙特阿美和阿里巴巴的纪录，成为全球史上规模最大的IPO。</p><p>关于估值是否合理的担忧随之而来。SpaceX 2025年营收约185亿美元，净亏损50亿美元，“星链”贡献了六成以上收入，而xAI仍处于巨额烧钱阶段。市销率高达108倍，远超英伟达等科技巨头。这让投资者对估值泡沫感到担忧，甚至有人认为这“很大程度上是在为马斯克的信仰买单”。</p><p>此外，值得关注的是，马斯克打破华尔街惯例，计划将高达30%的新股份额分配给个人投资者，这可能引发散户的狂热追捧。然而，高比例的散户持仓也意味着股价波动风险加剧，尤其在锁定期解禁后面临巨大的抛售压力。</p><p>华尔街从未遇到过一家IPO规模如此巨大、同时与美国政府关系如此复杂的上市公司。SpaceX的上市，将是一场对市场定价机制、指数规则与散户理性的极限考验。由于体量过大，SpaceX上市后进入指数几无悬念，而巨额指数基金将在短时间内被动建仓，届时股价会如何演绎？而马斯克个人又会给市场带来怎样的风险？更多内容请看《宇宙级IPO来袭》。</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 财新-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef39231094587cab597097?channel_id=67cc08a59a4297b6148b2f44">https://lingowhale.com/reader/web/69ef39231094587cab597097?channel_id=67cc08a59a4297b6148b2f44</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

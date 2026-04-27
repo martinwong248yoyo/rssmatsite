@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>谷歌收200美元的AI动态图表功能，今天被Claude免费开放！</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 新智元-公众号</div>
+                    <h1>谷歌收200美元的AI动态图表功能，今天被Claude免费开放！</h1>
+                    <div class="meta">
+                        <span>新智元</span>
+                        <span>Sun, 26 Apr 2026 10:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ede4acc5d0f752ce6ebd90?channel_id=67cc08a19a4297b6148b2994">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <h3 style="color:rgb(34, 34, 34)"><section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2VRv4h4gIz7Z45PQSE2ddYJw.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section></h3><section style="color:rgb(34, 34, 34)"><section><p></p><strong><span>【新智元导读】</span><span><span>Anthropic刚给Claude装了一块「白板」，可以在对话里直接生成交互式图表和流程图，用户点哪里都能展开。巧的是，OpenAI两天前也上了类似功能，Google更是去年就动了手。三家不约而同押注同一件事：光会说不够，AI得学会「画给你看」。</span></span></strong><p></p></section></section><p><span>3月12日，Anthropic官宣：Claude现在可以在对话中直接生成交互式图表、流程图和可视化内容了！</span></p><p><span>如果你问它关于元素周期表的问题，它能直接画一个可点击的周期表，每个元素点进去都有详细信息。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4rRSFb13Qble2wAbBu1XgkRu.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>更有意思的是，就在两天前，OpenAI刚给ChatGPT上了类似的交互式可视化功能；</span></p><p><span>再往前翻，Google的Gemini去年11月就开始做这件事了。</span></p><p><span>一周之内，三巨头全部发出了自己的新技术。这难道只是巧合？</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>如果给Claude一块白板，会发生什么？</strong></span></p><p><span>「给AI一块白板」和大家理解的AI画图完全不是一回事。</span></p><p><span>Claude画的东西，底层是HTML代码和SVG矢量图形。这相当于给Claude发了一块白板，让它边说边画。</span></p><p><span>而Midjourney图像生成，更像是一个程序员现场写代码、现场渲染。</span></p><p><span>和Claude已有的Artifacts功能比，「白板」的定位也不一样。</span></p><p><span>Artifacts是作品。你可以下载、分享、反复用，它在侧边面板里，关了对话还在。</span></p><p><span>但这些对话内的可视化是临时的，对话往下走可能就没了。</span></p><p><span>如果你觉得图不对，说一句，它会当场改正；如果你想深挖某个部分，点击一下，它继续展开。</span></p><p><span>这个功能的前身是一个叫「Imagine with Claude」的实验。</span></p><p>【视频】跳转到原文查看</p><p><span>当时，</span><span>这个功能只给Max用户体验了几天后就关闭了，很多人以为那只是个技术秀。</span></p><p><span>结果半年后，核心能力以这种更实用的方式落地了。</span></p><p><span>Inc.的记者做了个测试：让Claude生成Timothée Chalamet争议事件的交互式时间线。</span></p><p><span>结果它不仅做了完整的事件节点可视化，还自己加了一个「愤怒指数」仪表盘。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/33WFVo3AryEzSbw2l2UlIa2.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">点击查看完整示例：https://claude.ai/share/50b1325b-e9c7-4de1-a80c-eda6a4999975</span></p><p><span>另一个测试是让它做宝可梦系列的视觉历史，带有游戏、影视、文化事件的分类筛选器，完成度相当高。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3lcZgn20S5iQQAnV41AhzwN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">点击查看完整示例：https://claude.ai/share/7ae16a77-dc6a-4b12-bd76-234b7ecec465。</span></p><p><span>这个功能默认开启，免费用户也能用。</span></p><p><span>目前支持Web端和桌面端，移动端暂时没有。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>三巨头扎堆：是巧合，还是故意为之？</strong></span></p><p><strong><span>2025年11月</span></strong><span>，Google先坐不住了。</span></p><p><span>Gemini上线了交互式图像，把教材里的静态图变成可点击的学习工具。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/214kh2I6pHd4s1k5y1yrc1A.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>到2026年初又推了「Guided Learning」模式，把图像、视频、测验打包成一个学习伴侣。</span></p><p><strong><span>2026年3月10日</span></strong><span>，OpenAI紧随其后。</span></p><p><span>ChatGPT上线「动态视觉解释」，覆盖70+个数学和科学概念。</span></p><p><span>每周1.4亿人拿ChatGPT学数学和科学，这个用户基数够大。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4nArsL2whydG4cYwqfC5DCL.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><strong><span>2026年3月12日</span></strong><span>，Anthropic上线。而且一出手就带来福利：免费用户也可使用。</span></p><p><span>对比之下，Google去年12月给Gemini Ultra上的高级交互式图表和模拟，订阅费每月</span><strong><span>200美元</span></strong><span>，门槛不低。</span></p><p><span>Anthropic一直在文本和代码上猛打，音频、图像、视频这些多模态方向基本没投入，因为OpenAI和Google早就砸了重金。</span></p><p><span>现在Anthropic另辟蹊径，不做图像生成，用代码画图，扬长避短，十分明智。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>一条赛道，三种打法</strong></span></p><p><span>三家虽然都在做交互式可视化，但思路差别非常大。</span></p><section><p><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3v1uU43lX9GA4j2luy2kHM5U.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></p></section><p><strong><span>经典的教科书：OpenAI</span></strong></p><p><span>ChatGPT高度结构化，70多个预设主题，从二项式展开到库仑定律、从指数衰减到胡克定律，每个都有专门设计的交互模块。</span></p><p>【视频】跳转到原文查看</p><p><span>你不能让ChatGPT可视化任意话题——超出这70多个主题就不触发。</span></p><p><span>好处是做得精，专业感强，教学设计有章法；代价是范围窄，灵活性差。</span></p><p><span>OpenAI摆明了说：先做教育，面向高中生和大学生，以后再扩张。</span></p><p><span>配合去年上线的Study Mode和QuizGPT，OpenAI在教育赛道上的布局已经相当完整了。</span></p><section><p><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3v1uU43lX9GA4j2luy2kHM5U.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></p></section><p><strong><span>图注生成器：Gemini</span></strong></p><p><span>Gemini的路子像给一张现有的图「开外挂」。</span></p><p><span>AI识别图像里的关键元素，自动生成可点击的标签和解释面板。</span></p><p><span>你点一下细胞图里的高尔基体，就会弹出他的定义和功能。</span></p><p>【视频】跳转到原文查看</p><p><span>本质上是围绕图像做文章，得先有图才能交互。</span></p><p><span>但Google的优势在生态：LearnLM教育模型、YouTube视频、Google Classroom的打通，让这个功能可以直接嵌入课堂场景，这是OpenAI和Anthropic都做不到的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2da4ln3FgfRa4iVGy117ldJC.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><p><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3v1uU43lX9GA4j2luy2kHM5U.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></p></section><p><strong><span>通用白板 ：Claude</span></strong></p><p><span>不限主题，不限场景，不要预设模板。</span></p><p><span>建筑受力分析、职业选择决策树、公司收入趋势图、RGB调色板......理论上，它能画任何可以用代码表达的东西。</span></p><p><span>而且这些可视化还能和Figma、Canva、Slack等第三方应用联动。</span></p><p><span>这暗示Anthropic想的不只是聊天增强，而是一个连接生产力工具的视觉交互层。</span></p><p><span>今年1月Claude上线的Connectors功能让它能直接操作第三方应用，现在加上可视化，拼图又多了一块。</span></p><p><span>当然白板也有白板的缺点。</span></p><p><span>The New Stack的记者让Claude画非塔台机场的VFR进近模式图，大体对了，但「中场侧风进入」的标注位置搞错了。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1OeAoQ3TOSuteaEfx2taKXs.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>还有速度问题。一个复杂可视化可能要等30秒，而用搜索引擎找一张类似的图只要3秒。</span></p><p><span>不过在Beta阶段，这些都正常。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>光会说已经不够用了</strong></span></p><p><span>三家同时押注可视化，可能意味着</span><strong><span style="color:rgb(255, 104, 39)">纯文本回复正在触及天花板。</span></strong></p><p><span>AI聊天从2022年底火到现在，核心交互一直是你问我答，全靠文字。</span></p><p><span>但越来越多场景证明文字难以胜任。</span></p><p><span>解释时间复杂度，一张图比三段话清楚；呈现销售数据，一个可拖动的图表比一堆数字有感觉；教物理概念，让学生自己拖参数看变化比对着公式发呆管用得多。</span></p><p><span>教育研究也早就说了，交互式学习比被动阅读的理解效果好得多，这不是什么新发现。</span></p><p><span>之前的AI没有画的能力，只能用文字硬扛。</span></p><p><span>现在，三家同时把这个技能点亮了，区别只在切入角度。</span></p><p><span>而且各家的选择都和自身生态有关。</span></p><p><span>OpenAI有1.4亿周活学生用户，做教育顺理成章；Google有LearnLM和Classroom生态，做标注式学习是老本行；Anthropic代码能力最强，用代码画白板是最自然的延伸。</span></p><p><span>Digital Trends的报道提到一个有意思的说法：Anthropic把这次更新定义为Claude「学会选择最佳表达格式」。</span></p><p><span>有时候文字最好，有时候一张图更好，有时候一个可交互的小工具最合适。</span></p><p><span>再加上今年上线的食谱卡片、天气可视化、Figma/Canva/Slack等应用内交互，Claude正在从「文字助手」变成「多格式表达引擎」。</span></p><p><span>AI竞赛持续了三年多，模型能力差距越来越小；跑分互有胜负，用户感知越来越模糊。</span></p><p><span>谁更聪明拉不开差距，「谁更会表达」成了新战场。</span></p><p><span>这一轮，三家答案出奇一致：让AI学会画画。</span></p><p><span>不过话说回来，这些功能都还是早期。</span></p><p><span>Claude的标注偶尔出错，ChatGPT的交互模块覆盖面有限，Gemini的高级功能需要200美元的入场费。</span></p><p><span>真正的竞赛不在谁先上线，在谁能把「边说边画」做成用户根本不会注意到的自然交互。</span></p><p><span>2026年3月这一周，大概就是AI从文字机器变成表达工具的起点。</span></p><p><span style="color:rgb(136, 136, 136)">参考资料：</span></p><section><span style="color:rgb(136, 136, 136)">https://claude.com/blog/claude-builds-visuals</span></section><section><span style="color:rgb(136, 136, 136)">https://www.theverge.com/ai-artificial-intelligence/893625/anthropic-claude-ai-charts-diagrams</span></section><p></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 新智元-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ede4acc5d0f752ce6ebd90?channel_id=67cc08a19a4297b6148b2994">https://lingowhale.com/reader/web/69ede4acc5d0f752ce6ebd90?channel_id=67cc08a19a4297b6148b2994</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

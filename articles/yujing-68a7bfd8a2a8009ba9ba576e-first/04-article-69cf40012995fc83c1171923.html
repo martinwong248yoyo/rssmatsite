@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>演员实验室招募｜成为例外</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / FIRST青年电影展-公众号</div>
+                    <h1>演员实验室招募｜成为例外</h1>
+                    <div class="meta">
+                        <span>FIRST青年电影展</span>
+                        <span>Fri, 03 Apr 2026 04:08:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69cf40012995fc83c1171923?channel_id=68a7bfd8a2a8009ba9ba576e">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p>我常常带着望远镜去剧场。</p> 
+    <p>不完全是因为座位太远，更多的时候是因为我想看清楚这一秒在我眼前的人，此刻是否真实地活着。</p> 
+    <p>望远镜压缩了物理距离，也放大了一种微妙的不安——我永远无法确定我所看到的究竟是情感本身，还是情感的精确复制品。这两者之间存在一条极细的缝隙。<span style="font-weight:bold">而一位演员一生的工作，也许就是在这条缝隙中寻找栖身之所。</span></p> 
+    <p>同一出戏，我看过不止一次，但它们从未真正重复过：空气湿度不同，观众的呼吸节奏不同，对手演员今晚的状态不同......这些细小的变量就像水渗进石头，悄悄改变表演环境的内部压力，让一句台词生长出完全不同的重量。</p> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/fcacbTqe9T911NFicu4oGJlfEmYjiabjMDB02fqnYXrOqUmhy2CyRnezvDyaNibCeYNAXhnWQziaGS2q8lfgz8RJfTIxUunWrdGlrVOQYicialSJQ/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/fcacbTqe9T9Uq5scxza6JdacNLsc29oG0JMDO2SBUUJDkLxxeiczLNtzZpZYyklsEFiayemVIRxQrVPAz0GEebjgdjcmrCZPKmcMkJNiambh3I/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/fcacbTqe9T8E6YMiaURGOHoHZicmUIZrVXWMuf4OibiaVL3KWXYBrpHMHQ9QJK3ib9fpXbvN1MLqia4ePNCmt2PUvZyuJ1dOVqpaIGHGp7jjNLwxM/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/sz_mmbiz_png/fcacbTqe9Tib4AnSlQTHRPic08bNC9GsdhtMsVuobzEUPzYwqMLmPVV7zDicRFSE1Ru2fRV4NdRtjdLhicictSZjvNAXia2RlzrmLQgQqd9QhEs9Q/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/sz_mmbiz_png/fcacbTqe9TictJGRjp8b0BMqMZIw1FTqA7k1tXQVqHuKjrRwiaibHWQYQDnp6teeLVv6IEUrib41ic4aSknAmicR5fP9eM8pJSSu7xVHUnZaOicF0c/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+    </section> 
+    <p><span style="color:rgb(136, 136, 136)">2024-2025 演员实验室 公开周复试现场</span></p> 
+    <p>这就是为什么我仍然沉迷于剧场：<span style="font-weight:bold">它是世界上少数几个地方，能让人们共同见证真实的发生。</span></p> 
+    <p>影像也有这样的时刻，只是更稀少，也更难在事后被验证。</p> 
+    <p>1969 年，<span style="font-weight:bold">《午夜牛郎》</span>在街头的实景拍摄戏中偶然闯入了一辆出租车，险些直接撞上<span style="font-weight:bold">达斯汀·霍夫曼</span>。“我在走路呢，伙计！”但表演没有停止，霍夫曼直接转向那辆车，用他的角色——一个在纽约街头求生的骗子应有的愤怒喊出了这句话。</p> 
+    <p>1972 年，<span style="font-weight:bold">《教父》</span>开拍前，一只流浪猫溜进了派拉蒙片场的院子里，此时正是柯里昂家族族长会见对手的那场戏。镜头一转，<span style="font-weight:bold">马龙·白兰度</span>已然把猫抱在膝上抚摸，阵阵呼噜声甚至盖过了台词，可没有人在剧本里找见过这只猫的痕迹。一个号令生死的人，此刻显现出一种漫不经心的温柔，这幕太过日常的画面让整场戏的气质发生了根本性的偏移——它让权力变得令人不安。</p> 
+    <p>2007 年，<span style="font-weight:bold">《蝙蝠侠：黑暗骑士》</span><span>中的</span>爆炸并没有如约而至。<span style="font-weight:bold">希斯·莱杰</span>从疑惑到不耐烦，再到疯狂地拍打引爆器，他带着对世界规律的漠视、带着这个混沌的人格，真实地展现了面对意外时，小丑的无聊永远优先于慌乱。</p> 
+    <p>这些时刻在不约而同地传达着一种观点：<span style="font-weight:bold">表演最困难的部分或许不是技术，而是一种持续活着、持续响应的能力——镜头外发生了意料之外，镜头内的 TA 是否正用角色的本能，即时对这个世界作出反应？</span></p> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/QSjGzxHEMdvR74icpNgich9ZaWmlkst60AYLpDWqIWicBG5jFJaG0ywXNcwjgZPTVP82s4n5upSRVK6dYbGJiaCkJawiaInSdUPibnNwwSaYobRC8/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/QSjGzxHEMdtsPk03d6qfLLFHdenYLNVmRicDtkD9ETm3HXAOuTv8odicBsTQHrbbGicg6LjicTdGzp0aVbCJPQFGEBlic4GaiaIPZaA4LPWGic7kcI/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/QSjGzxHEMdsYHLLwKB9YwQiaCxxZLcf7FibdEc8zsQNEYwn9NBuzsvnt69PLVOKTF2jTHjHOErH8Exich0gUvABjHXwlJAiaDPQpu6JHicUjDBP8/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/sz_mmbiz_png/fcacbTqe9TibxUCT6ZIic8hPwRXLFU4xS4xFuE1n1RianKsAicZQibSNbdAkySggyZMLDYodFBluExKngE00yFzqsOcNuoQMZnODy720rxEtvoCw/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+    </section> 
+    <p><span style="color:rgb(136, 136, 136)">2024-2025 演员实验室 表演工坊活动现场</span></p> 
+    <p>正如<span style="font-weight:bold">罗兰·巴特</span>在谈论摄影时，用“刺点”来描述那些在照片中刺穿观看者、令人无法移开目光的细节，它不是构图、不是意图、而是某种溢出了作者控制的部分，某种偶然降落在画面中的真实，表演亦是——在某个瞬间，演员接纳真实世界对自己的细微“改造”。<span style="font-weight:bold">TA 们足够谦逊、足够在场、足够有勇气，不去过分保护自己精心构建的表演，而是任由一只猫、一辆闯入的出租车、一个故障的引爆器真实地到达内心的深处，并以真实的方式做出回应。</span></p> 
+    <p> 
+     2024 年，FIRST 正式推出“ONE里挑一”演员推介企划，将目光投向台前最为聚焦视线的职业。特邀<span style="font-weight:bold">冯小刚、郝蕾、乌尔善、宋佳</span>担任年度导师，聚焦18 位入选青年演员。2025 年，FIRST 打通双展创作者生态，以“实验室”的形态展开了更为多元的表演实践。演员实验室年度导师<span style="font-weight:bold">惠英红、段奕宏、曾国祥</span>与电影市场年度导师<span style="font-weight:bold">张颂文</span>，各自带着历经实践打磨出的精彩课程，与 13 位年度入选演员展开了深度对话。 
+    </p> 
+    <p>从电影市场公开周的命题演练，到西宁旷野的训练营日夜，再到盛典的颁奖礼红毯，及至现场 casting 与创作分享，<span style="font-weight:bold">“演员实验室”不再是单向的选拔与推介，而是一场导演、导师与演员之间相互促发的未完待续。</span></p> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_png/fcacbTqe9T84dgCSOuzTphAlY2JYMgfLic6icNLdblUycKwyNtNRB6wYAnMzeiaQiagUDxNoRsBnicIVC0sJetUuicro8v90z9TKicvVFDHurFqZfc/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/fcacbTqe9T9AFk9kGsOW8ibe30wKib93Q9U6lf9P9W9BicwC9xaOibTY2ELvyMKxCD5moNFlCjbianBKhOucAblLYT2qS0xmFfdIqUoogibW7bmh0/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/fcacbTqe9TicDrIGXFuD9OOMCdgfiaibbMAorpXzz3UD9fcrB2t3iaRKaEDicGcNdhLjxQpvYe0oDpBz2gytXytCx1K6dst3FOVsicEqZ9EnyOSNM/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/fcacbTqe9T9mHudJv4icB5I4DVno3C1jwDEIkZ3shPck9ep72T1oX8aBusUfkBR1lzjl5pJ3zuFK6VVzBH4c711hI7l64AAUk6NmKtGDP3Es/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/sz_mmbiz_png/fcacbTqe9T8WTHlJ7icIt6QNibiaQoCBNq53HvI3XMN9DPgT4MkGohGDGz97eYxIibVJJtugn2JLnibBZoRdGHPDrbHU0FmBbxl6ZEZiaIGrUSmHo/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_png/fcacbTqe9T8Kwj63CdTKk7ZSqgFIv2kvRZDfeFia9FepfkdA52eN7tufM8TLzt5qwg9siaBHLtibYXgOernA5rb4rbgtpkVHwzmSCzz5a2gPBI/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/sz_mmbiz_png/fcacbTqe9T869nVtqiaVxjWdaQWMvDMIsIULp2TvMYbT6YeGTf9yM0cys1sibx20uictfgPiaKXZub5SqibnuBLauj3Cf8x0ZdWiaFp93OvZywmia0/640?wx_fmt=png&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+    </section> 
+    <p><span style="color:rgb(136, 136, 136)">2024-2025年度入选演员在FIRST现场</span></p> 
+    <p><span style="font-weight:bold">里尔克</span>在<span style="font-weight:bold">《给一位年轻诗人的信》</span>里，引领着那个年轻人反复自我叩问：“我必须写吗？”</p> 
+    <p>如果那个答案是坚定的“必须”，那就用整个生命去回应它，直到它最寻常、最细碎的时刻都成为这个创造冲动的印记。然后——</p> 
+    <p><span style="font-weight:bold">“像一个原人那样，练习去说你所见、所体验、所爱，以及所遗失之物。”</span></p> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/fcacbTqe9TibCHET5MtSDoznaYsBfrCuXs7HokSk96HQUJ9D6xM5ne5hd8OBcu25rrU6icwicJs55a5dvRzcIqVLYYqz2kjSKT8TFnxn3VMkicw/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/fcacbTqe9T8LlZyT6E64wA3KUpeefKSJcziaj8mGzvPQXA5qPj2wrFiccm2Lkib0gqH2tOdXdpMNfHEJocS0axL9kzytgJA5SnJE9RYCOvanaw/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/fcacbTqe9TibI7AGKXlwYMueRkUQZZHOtHKy5hIsEtqxSm93K9yWEo4diaPKia9dklrf18VHkDkydmicNIX5WgLQ4Oghpn6kqDxZ8zKLahw3ia4k/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://mmbiz.qpic.cn/mmbiz_jpg/fcacbTqe9T8zaOB9lccibO5lIOOaz06jteOsIibbELaeZQDWzJb0Bj0C1D04jqcqLB2fGAPceAjNxfCicsal219YJJFcv6ve6JHLdgIHh0DYXQ/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+    </section> 
+    <p><span style="color:rgb(136, 136, 136)">2024-2025年度入选演员在训练营片场</span></p> 
+    <p>表演与写作，最终要回答的亦是同一个问题：你是否拥有某种非如此不可的真实？如果你的回答是肯定的——<span style="font-weight:bold">2026 年度FIRST演员实验室招募已于今日正式启动，至 5 月 20 日截止。请点击文末“阅读原文”，跳转 FIRST 官网查阅章程细则并报名。</span></p> 
+    <section> 
+     <img src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/QSjGzxHEMdsWOCe9oicTYXo03IFiaoDHE6dzyiaGNozbZgGFXvxiacPOLl9CibtM50ohGaqSnU7eqLO2x5BPWjhgCBzQB0O9yos8tHaVHYSqqycc/640?wx_fmt=jpeg&amp;from=appmsg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+    <span><span><span><span style="color:rgb(136, 136, 136)">2026 FIRST演员实验室 主视觉 </span></span></span></span><span><span><span><span style="color:rgb(136, 136, 136)">Designed by 罗骞</span></span></span></span> 
+     
+    <p><span style="font-weight:bold">像树木似的成熟，不勉强挤它的汁液，满怀信心地立在春日的暴风雨中，也不担心后边没有夏天来到。</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / FIRST青年电影展-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69cf40012995fc83c1171923?channel_id=68a7bfd8a2a8009ba9ba576e">https://lingowhale.com/reader/web/69cf40012995fc83c1171923?channel_id=68a7bfd8a2a8009ba9ba576e</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

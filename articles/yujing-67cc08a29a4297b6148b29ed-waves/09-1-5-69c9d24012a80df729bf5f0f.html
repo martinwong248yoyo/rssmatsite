@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>源码律动完成超1.5亿美元首期基金募资，已启动人民币基金募资</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 暗涌Waves-公众号</div>
+                    <h1>源码律动完成超1.5亿美元首期基金募资，已启动人民币基金募资</h1>
+                    <div class="meta">
+                        <span>暗涌Waves</span>
+                        <span>Mon, 30 Mar 2026 01:28:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69c9d24012a80df729bf5f0f?channel_id=67cc08a29a4297b6148b29ed">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3BCgtA3zf07N47Uz231C2qfj.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 175, 0)"><strong><span>「</span><span style="color:rgb(16, 46, 91);font-weight:bold">又</span></strong></span><span style="color:rgb(16, 46, 91)"><strong><span>一支超募的早期美元基金</span><span>。</span></strong></span><span style="color:rgb(0, 175, 0)"><strong><span>」</span></strong></span></p><p><span style="color:rgb(16, 46, 91)"><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3ykdtZI0MQ3GxGQh1GXM0Z.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></span></p><p><span style="color:rgb(0, 175, 0);font-weight:bold">近日，源码律动完成首期美元基金募资，总规模超1.5亿美元，超出原定目标；出资人（LP）涵盖了中东主权基金、全球知名母基金、跨国企业、产业投资方、全球家族办公室及知名企业家等多元主体。与此同时，源码律动也已正式启动人民币基金募资，进一步完善双币种布局。</span></p><p><span style="color:rgb(85, 85, 85)">“本期基金在募资过程中获得了诸多LP的超额认购，不仅体现了对源码律动团队的信任，更传递了全球资本对‘源自中国创新’的坚定信心。”源码律动管理合伙人黄云刚表示，“但在AI驱动的超级浪潮中，深度的认知迭代比单纯的资源堆砌更为重要，因此我们最终选择了主动控制规模，以保持投资的敏锐与专注。”</span></p><p><span style="color:rgb(85, 85, 85)">据了解，源码律动是源码资本VC业务内部创业，并最终独立运营的产物，于2025年5月正式独立运营。该基金由黄云刚领衔，专注早期投资，独立募资、独立决策。而首期美元基金将聚焦AI这一时代最大变量，重点布局AI基建和应用、机器人及硬件、全球化出海三大领域，寻找科技驱动带来的结构性机会。</span><span style="color:rgb(85, 85, 85)">其团队核心成员在过往的投资履历中，参与了对Kimi、宇树、银河通用、加速进化、Sand.ai</span><span style="color:rgb(85, 85, 85)">等代表性企业的投资，在该领域积累了扎实的实践经验。</span></p><p><span style="color:rgb(85, 85, 85)">黄云刚具体阐释了源码律动的投资逻辑：“我们关注三个核心维度：一是AI的原生性——不看‘AI+’的表面包装，而看AI在商业模式中的实质贡献、对用户体验的质变提升，以及团队对技术演进趋势的理解深度；二是范式突破能力，而非渐进式改良，要能够跳脱现有框架、面向未来设计产品，而非在旧体系上修修补补。”在商业模式和产品之外，源码律动同样看重创业者是否具备真实的使命感，“不要为了创业而创业，否则很难走远。”</span></p><p><span style="color:rgb(85, 85, 85)">截至目前，首期美元基金已出手多个早期项目：首笔投资给了诺因智能，其创始人李银川曾任职于华为，对具身智能走进家庭有着独到思考和前沿探索，而这一方向在当下仍属行业非共识领域；另一笔投资是东南亚二手电商平台Kitar，该平台将中国已验证的商业模式带向海外，并用AI重构效率与体验。</span></p><p><span style="color:rgb(85, 85, 85)">“前者代表非共识的技术前沿，后者代表模式出海的范式迁移，正是我们要寻找的大机会。”黄云刚认为，当下AI技术变化已经到快速渗透的临界点，新的供给会带来生产力的大幅提升。而中国的创新创业氛围活跃，技术基础与企业家精神兼备，“未来会有许多新的产品和伟大公司诞生。”</span></p><p><span style="color:rgb(85, 85, 85)">对于黄云刚及源码律动，源码资本创始合伙人曹毅也表达了大力支持。他认为，“AI会是一个超级大浪，机会很大变化也很快。这既是AI创业的机会，也是VC创业的机会，因为这样的情况下认知比资源重要。所以，云刚带领一支精干团队创立源码律动，专注于早期投资，深入一线发掘、投资AI创业公司，是应对当下时代最有效的认知迭代方式，也是创业精神和精力聚焦的双重结构。”并且，未来在生态资源和创业者服务方面，源码资本仍将为源码律动提供坚实支持。</span></p><p><span style="color:rgb(178, 178, 178)"><span style="color:rgb(178, 178, 178)">图片来源｜Unsplash</span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 暗涌Waves-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69c9d24012a80df729bf5f0f?channel_id=67cc08a29a4297b6148b29ed">https://lingowhale.com/reader/web/69c9d24012a80df729bf5f0f?channel_id=67cc08a29a4297b6148b29ed</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cohere收购德国AI明星，200亿美元估值剑指主权AI，硅谷巨头新增对手</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>Cohere收购德国AI明星，200亿美元估值剑指主权AI，硅谷巨头新增对手</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Sat, 25 Apr 2026 12:37:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ecb6493e9cda2380ac0f50?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2kLuCntaxNs4uHDof2iWcER.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">4 月 24 日，加拿大 AI 公司 Cohere 同意收购德国 AI 公司 Aleph Alpha，合并后的公司估值大约为 200 亿美元。这笔交易得到了德国政府和加拿大政府的支持，年收入超过 2,000 亿美元的德国零售巨头施瓦茨（Schwarz）集团还承诺投资 6 亿美元。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(171, 25, 66)">双方之所以合并是为了打造主权</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(171, 25, 66)"> AI，</span><span style="color:rgb(0, 0, 0)">让政府和企业在使用 AI 时无需将自己的数据交给美国等国家的科技巨头，真正做到自己的数据自己说了算，在 AI 世界越来越被少数几个大公司主导的当下给世界多一个选择。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Cohere 和 Aleph Alpha 都成立于 2019 年。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Cohere 总部位于加拿大多伦多，由几位前谷歌研究人员创立，专注于为企业客户开发大模型，尤其强调安全性。Cohere 的联合创始人之一 Ivan Zhang 是华人移民，曾在加拿大多伦多大学读计算机专业本科，后来辍学创业。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Uefjn1Fy66B4z2CsH36VbzT.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">图</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span> | Cohere 的几位联合创始人（来源：Cohere）</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Cohere 于 2025 年推出的 Command A Reasoning 模型，支持一次输入 25.6 万个 token，相当于一本厚书的体量。用户也可以设置一个 token 预算，限制模型消耗的计算资源，防止账单失控。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Cohere 还做了两个工具，一个叫 North 的工具可以让人自行搭建 AI 智能体，一个叫 Compass 的工具能让该公司员工在公司内部文件里精准搜索信息。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">其客户可以把</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> Cohere 的模型部署在自己的服务器上，数据不用上传到云端。整体来看，Cohere 的产品线还算丰富，既有专门处理数据搜索的模型，也有能够自动完成多步骤工作流程的智能体。其官方也留着诺奖得主兼图灵奖得主、多伦多大学教授杰弗里·辛顿对于该公司的评价。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4tgSmT3K8LbISyMLR3rEGM.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">图</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span> | Cohere 官网留有杰弗里·辛顿对于该公司的评价（来源：Cohere）</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Aleph Alpha 的总部位于德国海德堡，一开始也想和位于美国的 OpenAI 正面竞争，不过这条路走得不太顺。训练大模型太烧钱了，而且它起步时比美国竞争对手晚了好几年。2024 年 9 月，Aleph Alpha 调整了业务方向，不再死磕自研大模型，转而做一个可以接入第三方模型的平台。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Aleph Alpha 还开发了一种叫做 HAL 的模型架构，让 AI 在处理不熟悉的输入时也能表现更好。其客户集中在金融、医疗、国防等高监管行业，主要提供帮助客户建立评估框架、确保定制模型按预期工作的服务，和德国政府的关系很深。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">2025 年，Aleph Alpha 的创始人 Jonas Andrulis 由于经营不善被迫交出 CEO 位置，后来彻底离开公司另起炉灶开始新的创业。作为德国当年最有希望的 AI 明星公司，正在准备被 Cohere 这样一家加拿大公司收入囊中，可能在一定程度上映射了这样一个事实，那就是欧洲在 AI 竞赛中确实掉队了。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/44UqV7sijkuywg0z3Mtpqp.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">图</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span> | Aleph Alpha 目前的领导团队（来源：Aleph Alpha）</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">说回主权</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> AI，它不是一个新概念，不过 Cohere 和 Aleph Alpha 的交易把这个概念往前推了一大步。合并后的公司将拥有双总部，一个在加拿大多伦多，一个在德国海德堡。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">德国超市集团施瓦茨旗下的云计算子公司</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> STACKIT 将成为基础设施提供方，把 Cohere 的 AI 系统部署在德国本地的数据中心。目前，德国柏林政府已经计划成为合并后新公司的客户，在公共采购中优先采购主权 AI 解决方案。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">加拿大</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> AI 部长表示，要确保政府和企业在大规模云服务商和单一霸权之间有另一个选项，这个选项就是 Cohere 和 Aleph Alpha 联手打造的主权 AI。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在这笔交易中，施瓦茨集团扮演的角色也很值得关注，它是德国零售的巨头，旗下拥有</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> Lidl 和 Kaufland 超市，老板 Dieter 施瓦茨是德国最富有的人之一。施瓦茨之前已经是 Aleph Alpha 的主要股东，持股超过 20%。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4ipCe24Fi8q63cEqBZ2cie8g.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">图</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span> | 出生于 1939 年的亿万富翁、施瓦茨集团的拥有者 Dieter Schwarz，他从父亲那里继承了这家公司（来源：https://baron-magazine.com/2018/09/09/dieter-schwarz/）</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这次施瓦茨承诺向</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> Cohere 下一轮融资投资 6 亿美元，同时把自家的云平台 STACKIT 拿出来作为技术底座。一个开超市的公司，成了欧洲主权 AI 的关键推动者，听起来有点像</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">跨界，不过换个角度想这样的大型企业集团有资金、有基础设施、有长期战略眼光，恰恰是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> Aleph Alpha 和 Cohere 在这个阶段最需要的合作伙伴。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">对于原本身处加拿大的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> Cohere 来说，这笔交易最直接的价值是打开了欧洲市场。Aleph Alpha 和德国数字部以及德国巴登符腾堡州政府都有长期合作关系，这些客户关系比单纯的代码更有价值。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> AI 这个圈子里，技术可以追赶，但是信任和合规是需要时间积累的。眼下，Aleph Alpha 已经完成了最耗时的部分。此次合并之后，Aleph Alpha 还能拿到 Cohere 的技术和全球资源。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 2025 年的融资中，Cohere 估值约为 68 亿美元，此前已累计融资 16 亿美元，投资方包括英伟达、AMD 和 Salesforce Ventures 等。前面提到，Aleph Alpha 和 Cohere 合并后的公司估值将跃升至 200 亿美元，规模上了一个台阶。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">对于普通用户来说，一般不太考虑主权</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> AI 的事情，因为有些 AI 用起来差别不大。比如，你用 ChatGPT 问个菜谱，数据去了哪里你可能不太关心。但对于政府、医院、银行和国防部门来说，数据去了哪里、谁有权访问、受到哪个国家法律管辖，这些都是绕不开的红线。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">举个例子，德国国防部如果使用美国的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> AI 服务，敏感信息会不会被美国政府调取？德国医院使用云端 AI 分析病人影像，病人的隐私数据符不符合欧盟的法规？这些问题并没有一个简单的答案，而 Cohere 和 Aleph Alpha 押注的就是这个需求。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">它们提供本地部署的解决方案，数据留在客户自己的服务器上，受到本地法律的保护，这样的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> AI 才是能够让某一国的机构放心地把核心数据交出来的 AI。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">也就是说，这条路和</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> OpenAI 以及谷歌走的不是一个赛道。美国硅谷巨头追求的是规模、用户数量和数据量的飞轮效应。Cohere 和 Aleph Alpha 追求的是信任和合规，主打对于客户数据主权的尊重。两种路线没有高低之分，都是各自在服务不同的用户。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span><span>参考资料：</span></span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.ft.com/content/4492c0d6-855b-4164-9ae5-f4d855a95f1e?syn-25a6b1a6=1</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.businesswire.com/news/home/20260424174908/en/Sovereign-AI-for-the-World-Cohere-and-Aleph-Alpha-to-Form-Global-AI-Powerhouse-as-Nations-and-Enterprises-Demand-Control-Over-Their-Technology</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://techcrunch.com/2026/04/24/cohere-acquires-merges-with-german-based-startup-to-create-a-transatlantic-ai-powerhouse/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://the-decoder.com/cohere-takes-over-aleph-alpha-shortly-after-the-german-startup-ousted-its-original-founder/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.cnbc.com/2026/04/24/cohere-aleph-alpha-germany-ai-europe-expansion.html</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://siliconangle.com/2026/04/24/ai-startups-cohere-aleph-alpha-merge-600m-new-funding/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.bloomberg.com/news/articles/2026-04-24/cohere-to-buy-germany-s-aleph-alpha-wins-Schwarz-investment</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://baron-magazine.com/2018/09/09/dieter-schwarz/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://www.forbes.com/billionaires/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://aleph-alpha.com/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://cohere.com/</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span><span>注：封面/首图由 AI 辅助生成</span></span></span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ecb6493e9cda2380ac0f50?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69ecb6493e9cda2380ac0f50?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>北京车展，遍地“龙虾”｜甲子光年</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 甲子光年-公众号</div>
+                    <h1>北京车展，遍地“龙虾”｜甲子光年</h1>
+                    <div class="meta">
+                        <span>甲子光年</span>
+                        <span>Sat, 25 Apr 2026 15:27:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ecdec6c5d0f752ce6482be?channel_id=67cc08a29a4297b6148b29e8">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2skbeZF7rsMqhbvJ28ypou.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/xHlQf1SBIZKlf8Ad1rrObC.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section><section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(123, 127, 131)">AI从外场“白棚子”爬进了主展馆。</span></span></p></section></section></section></section></section><p><span>在2026北京国际车展（以下简称北京车展）启用新展馆之后，一个变化变得异常直观：汽车智能化，正在从“幕后能力”走向“台前产品”。</span></p><p><span>即便4月24日、25日仍是媒体日，展馆内的人流量已经接近公众日水平。官方数据显示，本届车展规模创下新高：38万平方米展区、来自21个国家和地区的近千家企业参展、1451辆展车、181辆首发新车。</span></p><p><span>但真正值得关注的，并不只是规模。</span></p><p><span>从展位结构来看，本届车展像是一场产业秩序的重组：智能驾驶、智能座舱等解决方案厂商，不再作为配角出现，而是与整车厂正面相邻，占据相当一部分的展区。过去停留在技术语境中的“智能化”，正在被拆解为具体产品能力，直接面向消费者。</span></p><p><span>“领时代 智未来”不只是本届北京车展的主题口号，它更像是一个现实判断：当市场不再单纯追求造型、参数等显性差异，汽车的竞争开始转向一个更隐性的维度——智能化能力。</span></p><p><span>也正是在这一背景下，车展现场展示的，不再只是VLA模型、世界模型、端到端辅助驾驶或AI座舱。今年最明显的新变量，是以OpenClaw（“龙虾”）为代表的新一代Agent能力，开始进入汽车。</span></p><p><span>当车展现场也出现了大量“龙虾”产品的时候，汽车也不再是一个封闭的智能终端，而是开始成为连接外部世界的入口。</span></p><p><span>「甲子光年」认为，“遍地龙虾”更像是一个行业拐点的外在表现。智能驾驶、智能座舱从“加分项”变成“必选项”的过程，已经完成；而下一阶段，关于Agent如何重写汽车边界的竞争，才刚刚开始。</span></p><h2><span style="font-weight:bold">1.当“龙虾”爬进智能座舱</span></h2><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>如果说2025年是智能驾驶的元年，那么2026年则是AI大模型座舱的元年。</span></p><p><span>本届北京车展期间，多家供应商展示了基于大模型的座舱解决方案，与几年前相比，其核心差异在于：从“功能控制”转向“情感陪伴”与“主动服务”。</span></p><p><span>“龙虾上车”成为了智能座舱领域最具象化的体现。</span></p><p><span>4月23日，在北京车展的前一天，斑马智能举办了AI-TECH DAY。重磅推出了元神AI汽车机器人大脑，升级了AutoOmni全模态端模型产品矩阵，并发布了“龙虾上车”方案AutoClaw，它通过端云一体中枢系统连接全车，驱动出行生活、影音娱乐、用车服务等多个智能体协同工作。</span></p><p><span>在车展现场，「甲子光年」体验到了AutoClaw的强大，当后排乘客提出晚上想去吃火锅的想法时，智能座舱系统会根据前后文语义自动筛选高评分的目的地火锅店，并规划路径开始导航。</span></p><p><span>同时，在北京车展开幕的当天，斑马智能宣布还与蚂蚁集团旗下支付宝达成合作，基于支付宝AI付车载版，正式推出元神AI“AI座舱 + AI支付”融合方案。无论是影音娱乐场景下的内容付费，还是出行生活场景中的即时消费需求，均可通过Agent直接发起并完成支付。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/M5l3D1PMgEa3KquxU3o0FuB.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">斑马智能</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">展台</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">，图片来源：</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">「</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">甲子光年</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">」</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">拍摄</span></span></p><p><span>佑驾创新在北京车展发布了座舱智能管家“BamBam龙虾助手”，该产品同样定位为多智能体系统工具，可以主动规划行程、预订服务、处理邮件。BamBam还可以充分发挥视觉感知能力，实时捕捉用户的身份、疲劳度甚至情绪，将这些空间和状态信息与语言大模型融合，从而从“被动执行”变成“主动服务”。</span></p><p><span>这让智能座舱管家不再只是工具，而是具备情感交互能力的“灵魂伴侣”。</span></p><p><span>佑驾创新智能座舱研发负责人告诉「甲子光年」，在智能出行领域，未来的趋势未必是“必须使用OpenClaw”，但 OpenClaw的出现，提供了一种全新的应用开发范式。</span></p><p><span>“过去，在没有’龙虾‘的情况下，车内智能的想象空间主要局限于车内闭环，比如控制车窗、空调、导航等，本质上都是围绕车辆本身展开。”这位负责人说，“龙虾”的意义在于把边界打开了，“它可以作为连接外部世界的‘网关’，通过车端将能力映射到车外设备，实现对外部设备的控制与联动。”</span></p><p><span>这意味着，汽车不再只是一个封闭的智能空间，而是成为连接更大物理世界的一个入口，应用场景也因此被大幅拓宽。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Ahd6Z2YIE0t4pkvQr8SHAY.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">BamBam龙虾助手，图片来源：佑驾创新</span></span></p><p><span>地平线选择在车展开幕前两天，抛出了一个“龙虾”产品——KaKaClaw“咖咖虾”。</span></p><p><span>它的官方定位，是“中国首个整车智能体操作系统”。但比命名更值得关注的，是它试图解决的问题：用自然语言作为统一入口，同时调度智能驾驶与智能座舱，实现跨域的并行协同。换句话说，它瞄准的不是某一项能力的增强，而是“舱驾分离”这一长期结构性问题的重写。</span></p><p><span>发布会上，地平线创始人余凯一本正经地谈论“车载小龙虾”上车，这个略显轻松的表达背后，其实是一个相当严肃的判断——当Agent成为统一调度层，汽车内部原本割裂的系统，将开始被重新组织。</span></p><p><span>“咖咖虾”本身或许只是一个起点，但它指向的，是舱驾融合从架构层走向操作系统层的尝试。</span></p><p><span>“星空芯片+咖咖虾OS+HSD智驾”构成了地平线整车智能的三板斧。公开资料显示，目前星空芯片已收获大众、奇瑞、比亚迪等10余家车企品牌，以及博世、电装等头部Tier1的合作意向，预计2026年第三季度量产上车。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2PFGxG3pdmy14vdc4z7Cf66.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">KaKaClaw“咖咖虾”，图片来源：「甲子光年」拍摄</span></span></p><p><span>而在商汤绝影的展台，OpenClaw不再只是一个“新功能”，而是被做成了车里的“默认能力”。通过 SageBox（千机智盒），很多原本要依赖云端完成的智能体能力，被直接放进了车里运行。</span></p><p><span>这带来的变化很直接：一方面成本大幅下降，不再按次调用付费；另一方面响应更快、更稳定，即使在弱网环境下也能即时工作。换句话说，智能体开始从“可选配置”，变成车内随时可用的基础能力。</span></p><p><span>真正把这件事落地的是New Member。New Member是商汤绝影SageBox千机智盒的执行层原生智能体，作为车载版“Claw”，它是连接“思考层”与真实场景的关键桥梁，为车载自主智能体提供从感知到执行的全链路闭环能力。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/49CyEW1cNXe1pzFZ01AhM6r.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">New Member，图片来源：商汤绝影</span></span></p><p><span>从表面上看，智能座舱的升级和“龙虾”扎堆，是今年北京车展的一大特色，甚至有“跟风”之嫌，</span><strong><span>但毋庸置疑的是，智能座舱体验的升级，本质上是一种技术升级引发的行业热潮，而非激烈的同行竞争引发的生存危机。</span></strong></p><h2><span style="font-weight:bold">2.智能化解决方案供应商走到台前</span></h2><h2><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></h2><p><span>由于新展馆的启用，整个北京车展的展览面积大了一倍多，从最南边的E1展馆，走到最北边的A1展馆，要将近20分钟。</span></p><p><span>但最明显的变化并不来源于此或某款明星车型，而是一种空间秩序的重组。</span></p><p><span>比如在E1展馆，地平线、黑芝麻等芯片及智能化解决方案供应商，和奇瑞系汽车品牌放在了一起；佑驾创新与智界的站台面对面设置；在A1展馆，轻舟智航与吉利汽车同样分别置于参观通道两侧。</span></p><p><span>华为乾崑、鸿蒙智行、华为数字能源均设有独立展台，鸿蒙智行的展台总面积超甚至超过了4400平方米，几乎占据了整个B4展馆一半的位置。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3anMM54lHHuU2JE9ZRupZmB.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">华为乾崑智驾展位，图片来源：</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">「</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">甲子光年</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">」</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">拍摄</span></span></p><p><span>这种情况在中国车展的历史上是很罕见的，因为在两年前，2024年的北京车展上，包括华为在内的一众智能化解决方案供应商，被安排在了展馆外面临时搭建的白棚子里，甚至算不上一个正规场地。</span></p><p><span>彼时智能驾驶和智能座舱虽然已成为热门话题，但在2024北京车展上，这类供应商的物理位置仍然折射出整个产业的从属心态。轻舟智航市场生态总监高健雄告诉「甲子光年」：“2024年北京车展的时候，我们也来参展了，但是连个站台都没弄。”当时，他们只能在外面场地做试乘体验，或者是合作伙伴的展台上搞发布。</span></p><p><span>而今年，他们在400平方米的独立展区内，摆出了一辆奇瑞风云T9L，代表轻舟智航高阶智驾的量产车型。“我们不想摆太多车，每家的车都摆一辆也摆不下。我们想表达的是‘我们在做什么’，而不是‘我们做到了什么’。”</span></p><p><span>在解释为什么不多摆几辆合作车型的时候，高健雄的语气平和而自信。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/43ZhClzqrfl1cyOIV1cyZZu.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">轻舟智航</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">展台</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">，图片来源：</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">「</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">甲子光年</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">」</span></span><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">拍摄</span></span></p><p><span>元戎启行公关经理沈思涵的回答则更直接：“大家都是想要破圈，想要触及C端用户，而不是做一个幕后的角色。我相信其他公司也有同样的想法，所以才有了今年智驾厂商和主机厂同台搭戏的氛围。”</span></p><p><span>元戎启行在车展期间明确传递了一个信号：智驾供应商想要打破公众认知，像“Intel Inside”那样从幕后走到台前。</span></p><p><span>“只有更多消费者了解智驾，我们才能更好地完成商业运作，才会有更多人愿意使用你的产品，数据飞轮才能转起来，新的技术才能不断提升。”沈思涵说。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4Ezw16vVmPo33uY3w4gUz4A.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span>元戎启行展台，图片来源：「甲子光年」拍摄</span></span></p><h2><span style="font-weight:bold">3.为什么智能化概念会在今年车展爆发</span></h2><h2><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></h2><p><span>如果说2024年的北京车展还在争论“哪辆车的屏幕更大”“哪辆车的续航更长”，那么2026年智驾、智舱供应商和芯片厂商，已经在通过实际表现告诉消费者，汽车真正变成了“智能体”。</span></p><p><span>2026年北京车展的智能化氛围如此浓厚，绝非偶然。它是全球汽车行业电动化格局定型、智能化加速落地的关键节点叠加后的必然结果。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/rgPB62uGB6c4bovxCB80B4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">图片来源：商汤绝影</span></span></p><p><span>2026年一季度，国内新能源汽车渗透率已稳定在51%以上。电动化的“基座”完成之后，下一步的差异化竞争点无可争议地落到了智能化上。</span></p><p><span>数据显示，截至2025年底，中国L2级乘用车新车渗透率已达66.1%；新能源乘用车的数据则更夸张，已经接近90%。中商产业研究院数据显示，2025年中国自动驾驶市场规模逼近4500亿元，预计2026年将超4800亿元。</span></p><p><span>同时，在“智驾平权”的概念驱动，10-20万元车型智驾功能渗透率增速最快。根据盖世汽车研究院ADAS配置数据库的分析，2025年1-4月期间，10-20万元价格区间车型的ADAS域控制器装机量达到了52.5万套，同比激增超过2000%。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/42QOnB4qInKI17311J1hQHLj.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">比亚迪“天神之眼”辅助驾驶系统，图片来源：「甲子光年」拍摄</span></span></p><p><span>激增的装机量和渗透率，以及广阔的市场体量，都让智驾厂商不能沉默，车展也就成了其展示自身实力、高效触达消费者的最好途径。</span></p><p><span>一些观点认为，形成这种态势的另一大原因，是智驾厂商也正在经历“能者上、庸者下”的淘汰赛，甚至已经到了生死存亡的关键时期，所以供应商要不遗余力地展示自己的技术实力，以给消费者和客户信心。</span></p><p><span>但部分智驾供应商并不认同</span><strong><span>“智驾公司正面临生死节点”</span></strong><span>的说法。</span></p><p><span>沈思涵告诉「甲子光年」：“确实有些人在讨论生死节点，但放眼全球，智驾的市场蛋糕仍然足够大。除了国内，企业还可以出海，最好是两条路都走，全球市场远远不是两三家企业就能吃完的。”</span></p><p><span>在沈思涵看来，目前智驾供应商的登台亮相的动作，更多的是“价值驱动和产品形态驱动”，而非“迫不得已地求生”。</span></p><p><span>这一判断与「甲子光年」在车展上观察到的信息是吻合的。例如大众、宝马、丰田等多个跨国车企也正在积极引入中国本土智驾方案，甚至连展位也离得不远。两条腿走路、全球化布局，已经成为头部智驾公司的标准叙事。</span></p><p><span>今天，智能驾驶技术公司Momenta公布了其智能驾驶方案的最新量产落地进展。过去一年，Momenta的智能驾驶方案搭载量从近30万台增长至逾80万台。目前，公司已交付量产车型超过70款，累计定点车型超过200款，量产方案覆盖十余个国家和地区。北京车展上，超过60款展车搭载了Momenta的智能驾驶方案。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1XopJT3LNRnT3oDfMI3W7KEy.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(143, 149, 158)"><span style="color:rgb(123, 127, 131)">Momenta展台，图片来源：「甲子光年」拍摄</span></span></p><p><span>从2024年的“新时代 新汽车”到2026年的“领时代·智未来”，北京车展主题的变化，精准反映了中国汽车产业从电动化上半场全面迈向智能化下半场的深层转型。</span></p><p><span>2024年北京车展，「甲子光年」的报道主题是：车展上已经看不到燃油车了。即使对智能驾驶和智能座舱也进行了一定程度的描述和分析，但结论仍是：在智能化喊了这么多年之后，大模型终于带来了智能化的最优解吗？</span></p><p><span>如今，智能化供应商已经与整车厂在主展馆内平起平坐，</span><span>AI走出了外场白棚子，以“龙虾”的样态爬进了主展馆，爬上了车，这或许就是整车智能化时代最生动的注脚。</span></p><p><span style="color:rgb(123, 127, 131)">（封面图来源：「甲子光年」拍摄）</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/WV8Uq3bYjih41KXFD3IWgwO.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 甲子光年-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ecdec6c5d0f752ce6482be?channel_id=67cc08a29a4297b6148b29e8">https://lingowhale.com/reader/web/69ecdec6c5d0f752ce6482be?channel_id=67cc08a29a4297b6148b29e8</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

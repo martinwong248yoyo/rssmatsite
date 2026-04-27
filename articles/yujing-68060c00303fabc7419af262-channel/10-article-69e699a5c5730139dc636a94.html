@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>提个醒，小心！</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 金融-公众号-评论</div>
+                    <h1>提个醒，小心！</h1>
+                    <div class="meta">
+                        <span>邻居大爷</span>
+                        <span>Mon, 20 Apr 2026 11:15:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e699a5c5730139dc636a94?channel_id=68060c00303fabc7419af262">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">周三就是美伊临时停火的最后期限，目前美国谈判代表团已抵达巴基斯坦，停火是否延长、谈判结果如何全是未知数。站在主力资金的角度思考，这种不确定性下，绝不会盲目拉升，最优选择是</span><strong><span style="color:rgba(0, 0, 0, 0.9)">诱多降仓</span></strong><span style="color:rgba(0, 0, 0, 0.9)">—— 注意不是彻底出货，毕竟停火若延长市场仍会上涨，直接离场会丢失筹码、抬升持仓成本，因此主力需要时间逐步减仓。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">从主力行为逻辑来看，</span><strong><span style="color:rgba(0, 0, 0, 0.9)">诱多降仓的走势往往出现在上午</span></strong><span style="color:rgba(0, 0, 0, 0.9)">；若下午拉升，多半是为次日出货做准备。基于这个核心逻辑，我们直接把明天的交易策略拆分为两个时段，清晰应对：</span></p><ol><li><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">早盘若拉升后遇阻回落，大概率是主力</span></span><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">诱多降仓</span></span></strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">，上午坚决不追涨开仓，甚至可以顺势高抛；</span></span></p></li><li><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">重点盯下午走势：若上午冲高回落，下午资金回流、分时震荡上行，说明主力已消化利空或提前获知利好信号，此时再择机开仓做多才安全。</span></span></p></li></ol><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">今天盘面整体节奏偏乱：算力科技股出现分歧，电池板块延续调整，唯独</span><strong><span style="color:rgba(0, 0, 0, 0.9)">商业航天</span></strong><span style="color:rgba(0, 0, 0, 0.9)">逆势走强。这波行情核心是消息催化：4月24日启动仪式及后续中国航天大会，将集中发布深空探测规划、商业航天扶持政策等重大信息，直接点燃了市场对商业火箭、卫星互联网等赛道的预期。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Gs6W64mnNGC3t7KNv3kVK92.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 0, 0);font-weight:bold">但我们要清醒判断，这是</span></span><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 0, 0);font-weight:bold">纯题材炒作</span></span></strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 0, 0);font-weight:bold">，并非基本面驱动的主线行情。</span>从技术结构看，商业航天指数仅重回箱体内部，尚未突破箱体上沿，不具备持续走强的基础。<span style="color:rgb(255, 0, 0);font-weight:bold">尤其要警惕：这个位置若出现大阳线，属于</span></span><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 0, 0);font-weight:bold">阶段性加速</span></span></strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 0, 0);font-weight:bold">，明天即便拉大阳线也绝不能追，只能等分歧后低吸，明天绝非合适的进场时点。</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">再提醒大家，当前正值一季报披露期，今天商业航天的强势股大多存在基本面瑕疵，这种“带病拉升”很容易变成套人行情。即便想轻仓参与，也只选资金介入度高、技术上走出主升浪的标的。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">很多散户都有一个惯性误区：</span><strong><span style="color:rgba(0, 0, 0, 0.9)">跌了就觉得有风险</span></strong><span style="color:rgba(0, 0, 0, 0.9)">。电池板块连续调整，不少人开始恐慌，其实咱们抛开板块结构不谈，单看碳酸锂期货的走势，就能明确电池产业链的景气度在持续提升。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4jSO3k1Bu4fy3DJAXK34vwmT.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">期货和股票虽是不同资金体系，但商品价格上涨，最终一定会带动股价匹配估值。就像黄金期货与黄金股，黄金股走势明显滞后，期货走第二波主升时，个股才迎来强势上涨。强逻辑支撑下，只要市场节奏配合，个股迟早会发力，只是时间问题。</span><strong><span style="color:rgba(0, 0, 0, 0.9)">电池和能源金属的调整，根本不是风险，反而是难得的布局机会</span></strong><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">市场本就是轮动行情，题材也会不断扩散，今天算力就扩散到了液冷服务器方向。只要算力科技股的上升趋势没有破坏，安心持股待涨即可。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">今晚20:00直播间实战拆解</span><strong><span style="color:rgba(0, 0, 0, 0.9)">主力诱多降仓的核心盘口</span></strong><span style="color:rgba(0, 0, 0, 0.9)">，手把手教你明日分时段精准操作，同时讲透商业航天追涨陷阱、电池调整低吸信号，还有算力轮动扩散的持股策略，带你避开诱多套路、踏准轮动节奏！</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 金融-公众号-评论</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e699a5c5730139dc636a94?channel_id=68060c00303fabc7419af262">https://lingowhale.com/reader/web/69e699a5c5730139dc636a94?channel_id=68060c00303fabc7419af262</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

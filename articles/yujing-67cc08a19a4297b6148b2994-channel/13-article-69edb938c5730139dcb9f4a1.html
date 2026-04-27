@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>奥特曼，正式向公众道歉</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 新智元-公众号</div>
+                    <h1>奥特曼，正式向公众道歉</h1>
+                    <div class="meta">
+                        <span>新智元</span>
+                        <span>Sun, 26 Apr 2026 07:01:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69edb938c5730139dcb9f4a1?channel_id=67cc08a19a4297b6148b2994">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <h3 style="color:rgb(34, 34, 34)"><section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3y9Ll83fjGuL2QmKWj3sda2G.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section></h3><p><span style="color:rgb(136, 136, 136)">编辑：艾伦</span></p><section style="color:rgb(34, 34, 34)"><section><p></p><strong><span>【新智元导读】</span><span><span>OpenAI CEO Sam Altman 向加拿大小镇 Tumbler Ridge 道歉：公司曾封禁枪击案嫌疑人的 ChatGPT 账号，却未向警方预警。事件造成 8 人死亡，也把 AI 平台的风险识别、执法转介和未成年人监管推到台前。</span></span></strong><p></p></section></section><p><span style="color:rgba(0, 0, 0, 0.9)">本周，OpenAI CEO 奥特曼正式向加拿大小镇 Tumbler Ridge 道歉。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">此前，OpenAI 未能更早向警方通报 Jesse Van Rootselaar 的相关活动——Van Rootselaar 是今年 2 月一起大规模枪击案的嫌疑人，该事件造成 8 人死亡。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">在一封落款日期为 4 月 23 日的信中，奥特曼表示，对于 OpenAI 没有就 Van Rootselaar 联系执法部门，他深感歉意。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/AT2ES3QPFxRzb2tD1wviJy.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">https://tumblerridgelines.com/2026/04/24/openai-apologizes-to-tumbler-ridge/</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">去年 6 月，OpenAI 已经封禁了 Van Rootselaar 使用的 ChatGPT 账号。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">奥特曼在信中写道：</span></p><section style="color:rgb(91, 91, 91)"><p>我想向整个社区表达最深切的哀悼，任何人都不应该承受这样的悲剧。</p></section><p><span style="color:rgba(0, 0, 0, 0.9)">OpenAI 的自动审核系统曾在内部标记 Van Rootselaar 的多条消息。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这些消息描述了暴力场景，并最终导致其账号被封禁。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">一些员工认为，这些文字可能指向现实世界中的暴力风险，并敦促管理层提醒加拿大执法部门。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">但据《华尔街日报》报道，OpenAI 高层最终决定不联系警方。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3mbvV2kp7IW4aACDH4pfDqz.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">https://www.wsj.com/us-news/law/openai-employees-raised-alarms-about-canada-shooting-suspect-months-ago-b585df62</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">今年 2 月，警方确认 Van Rootselaar 为 Tumbler Ridge 大规模枪击案的嫌疑人。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">Van Rootselaar 现年 18 岁，是一名跨性别女性。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/13z1pe3T91P3312bzy1Z7GpP.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">OpenAI 曾表示，在枪击案发生后，随着 Van Rootselaar 的姓名被公开，公司发现其还在使用另一个 ChatGPT 账号。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1kLBY2FjXxA1hIBzDfF7WW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">2 月，官员们在一处临时纪念点为枪击案遇难者献花。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">奥特曼在信中称，他重申了此前向 Tumbler Ridge 镇长和不列颠哥伦比亚省省长作出的承诺：OpenAI 将寻找办法，防止 Tumbler Ridge 所经历的悲剧再次发生。</span></p><section style="color:rgb(91, 91, 91)"><p>往后，我们的重点仍将是与各级政府合作，帮助确保类似事件不再发生。</p></section><p><span style="color:rgba(0, 0, 0, 0.9)">这封道歉信最早由当地社区报纸 Tumbler RidgeLines 刊发。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">OpenAI 表示，自枪击案发生以来，公司已经加强了安全流程。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">公司还称，按照目前升级后的执法转介规则，如果今天发现 Van Rootselaar 的账号，OpenAI 会将其提交给执法部门。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">今年 3 月，加拿大议员称，奥特曼已同意向 Tumbler Ridge 居民道歉。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">不列颠哥伦比亚省省长 David Eby 周三表示，公共安全部门已从警方处获悉，枪击案调查正进入最后阶段。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4HLUd412OYy1HYks22z4vww.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">Tumbler Ridge 镇长 Darryl Krakowka 未立即回应置评请求。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1WXj4z1KPItX21z9dy30JEsi.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">本周早些时候，他在不列颠哥伦比亚省维多利亚对记者说：</span></p><section style="color:rgb(91, 91, 91)"><p>镇上居民仍在悲痛之中。</p><p>有些人已经开始疗愈，但另一些人还没有。</p><p>对我来说，这件事仿佛就发生在昨天，但其实已经过去几个月了。</p></section><p><span style="color:rgba(0, 0, 0, 0.9)">加拿大负责人工智能事务的部长 Evan Solomon 的代表未回应置评请求。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">本月，加拿大执政党自由党的全国党员通过了一项不具约束力的决议，呼吁禁止 16 岁以下青少年使用 AI 聊天机器人。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">加拿大人工智能与数字创新部长 Evan Solomon 和其他加拿大高级官员表示，他们正在考虑 AI 监管措施，但尚未作出最终决定。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4sATeT2siTia1vWiHn24fsJ8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">如何在个人隐私与公共利益间保持合理的平衡，也考验着 AI 管理者们的智慧与良知。</span></p><p><span style="color:rgb(136, 136, 136)">参考资料：</span></p><p><span style="color:rgb(136, 136, 136)">https://www.wsj.com/us-news/law/openai-ceo-apologizes-for-not-flagging-mass-shooting-suspect-to-police-afa53d1d</span></p><p><strong><span>秒追ASI</span></strong></p><p><strong>点亮星标，锁定新智元极速推送！</strong></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2tZvCo3Ksi7F2Grz9U2goqMl.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3AR97Y3Jez8o3QIW4I10UBpn.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 新智元-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69edb938c5730139dcb9f4a1?channel_id=67cc08a19a4297b6148b2994">https://lingowhale.com/reader/web/69edb938c5730139dcb9f4a1?channel_id=67cc08a19a4297b6148b2994</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>蛤？霍尔木兹电诈！！</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 金融-公众号-评论</div>
+                    <h1>蛤？霍尔木兹电诈！！</h1>
+                    <div class="meta">
+                        <span>发财老博士</span>
+                        <span>Wed, 22 Apr 2026 09:47:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e89aef936faa8bf99d2522?channel_id=68060c00303fabc7419af262">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p>不行，笑不活了，没想到电诈的风，竟然也吹到了霍尔木兹海峡。</p><p>希腊海事风险管理公司（MARISKS）发布警告称：<span style="font-weight:bold">有人冒充革命卫队</span>，向部分航运公司发送消息，说只要支付价值200万美元的加密货币，便可安全通过海峡。</p><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3p2A3c13MCe13aTBDN2hAbFM.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><p>更难绷的是，三哥居然信了……</p><p>上周六那个名场面，三哥船员哀嚎：我们已经交过钱了，就在你们名单上第二个，请停止开火，让我们回去！</p><p>据MARISKS证实，三哥其实是把钱转给了电诈份子：等于钱被骗，船没出去，还挨了揍，一炮三响，苦不堪言。</p><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/40EeA844tmJkVkjPf2H2Sf4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><p>没想到，真是没想到：印度，竟然会被电诈骗！相当于<span>玩鹰的，被鹰给啄瞎了眼，这玩意你跟谁说理去。</span></p><p>更加没想到的是，小小一条海峡，<span style="font-weight:bold">居然同时被两国封锁，三波人赚钱</span>：有人收过路费，有人诈骗，有人画线。</p><p>不得不说，现实比电影还魔幻～</p><p>……</p><p>回到市场。</p><p>在Taco卷肉加焖子这一块，还得是懂子专业：他宣布<span style="color:rgb(250, 83, 89)">无限期停火</span>，但海上封锁继续，直至伊朗拿出一份统一的的方案。</p><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/26wCyr8Fzpg3gfOzifyWOh.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><p>你甭管是巴基斯坦总理和元帅求他，还是伊朗内部“分裂”，反正懂王爱吃Taco这一块，并不令人意外。</p><p>伊朗也接受了停火建议，但这<span style="font-weight:bold">绝不意味着战争结束</span>：等到布什号和拳师号两个打击群到位，战火依然有可能随时重燃。</p><p>另外一边，沃什的提名听证会，倒是挺让人意外的，他说：</p><p>1. 美联储应改革现行的通胀框架。</p><p>2. <span style="font-weight:bold">减少、甚至取消前瞻性指引</span>。</p><p>3. 每次议息会议后，不一定开新闻发布会。</p><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/15wxZr2ddtsJ2erIpr1SsjvJ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><p>我给大家翻译一下他的意思：</p><p>别指望每次遇到危机时，美联储就会大放水，现在通胀的根源，正是20年疫情后，所采取的无限QE政策。</p><p>这种央行介入财政的非正常局面，<span style="font-weight:bold">必须得到扭转</span>，美联储应回归其货币政策制定者的本位。</p><p><span style="color:rgb(250, 83, 89)">取消点阵图，减少预期管理</span>，为缩表做准备。</p><p>总体而言，沃什的思路，<span style="font-weight:bold">中性偏鹰</span>。</p><p>不过美债逼近40万亿的规模、快速膨胀的现实，以及中东久拖不决的战事，允不允许他执行“降息+缩表”的路线？</p><p>说实话，未必能实现，包括AI降低通胀、利于降息的设想，还得走一步看一步。</p><p>今天放量成交2.58万亿，三市共2920家上涨、2433家待涨，资金净流出110亿，南向资金净流入49亿。</p><p>热点题材方面，“光”继续照耀大A：光通信芯片龙头20cm涨停，股价创历史新高，三安、永鼎等多股涨停，光纤亦有不错的表现。</p><p>消息面上，谷歌Cloud Next大会于4月22-24日召开，或将发布新一代TPU架构、及OCS光路交换机新应用。</p><p>AMD与格芯合作开发基于MRM的CPO方案，也进一步验证了CPO的产业趋势。</p><p>此外，石墨电极、钠电池概念走高，翔丰华20cm涨停。</p><p>上涨原因，一方面是宁德宣布要大规模量产钠电池；另一方面，负极石墨材料近期需求回暖，叠加行业库存去化，推动涨价预期升温。</p><p>小金属方面，锗、锡等品种，受益于下游半导体和光伏需求增长，今天涨幅很大。</p><p>总体而言，市场依然在围绕<span style="font-weight:bold">景气度、涨价、通胀</span>概念做文章，这也是我反复提及的交易逻辑：把握住“大通胀时代”的大机会。</p><p>各位好好做研究吧，随着指数越来越高，后面的波动也会越来越大，万不可胡乱追高，稳住别浪。</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 金融-公众号-评论</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e89aef936faa8bf99d2522?channel_id=68060c00303fabc7419af262">https://lingowhale.com/reader/web/69e89aef936faa8bf99d2522?channel_id=68060c00303fabc7419af262</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

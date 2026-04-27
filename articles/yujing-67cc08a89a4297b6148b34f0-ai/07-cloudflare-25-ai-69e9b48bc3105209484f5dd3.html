@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>深度解读：Cloudflare 一周砸了 25 个产品，AI 的水电气被一次通齐了...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 小互AI-公众号</div>
+                    <h1>深度解读：Cloudflare 一周砸了 25 个产品，AI 的水电气被一次通齐了...</h1>
+                    <div class="meta">
+                        <span>小互AI</span>
+                        <span>Thu, 23 Apr 2026 05:51:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e9b48bc3105209484f5dd3?channel_id=67cc08a89a4297b6148b34f0">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="font-weight:400;color:rgb(0, 0, 0)"><p style="color:rgb(51, 51, 51)">上周有件事你可能没注意到。</p><p style="color:rgb(51, 51, 51)"> Cloudflare 公司，从 4 月 12 号到 20 号，一口气发了<span style="font-weight:600;color:rgb(245, 158, 11)"> 25 </span>个新产品。一天平均三五个，连着砸了一周。</p><p style="color:rgb(51, 51, 51)">这不是那种“又开发布会凑热闹”的周。你往下看会发现，他们做的其实是件挺大的事：<span style="color:rgb(245, 158, 11);font-weight:600">把 AI 要用的水电气，一次性全给通了。</span></p><p style="color:rgb(51, 51, 51)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/18QBIo4oD2CW4mMOXk3GKWRM.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:rgb(51, 51, 51)">过去你用 AI，比如让它写段代码、查个数据、订张机票，它经常干到一半就卡住。不是 AI 笨，是它脚下没路可走。访问不了公司内网，没法发邮件，记不住昨天说过的话，想买个域名还得你亲自去点页面。所有这些小问题加起来，就是一个大问题：<strong><span style="color:rgb(245, 158, 11);font-weight:600">AI 没有基础设施</span></strong>。</p><p style="color:rgb(51, 51, 51)">Cloudflare 这一周干的事，就是把这些空一个一个补上。补完之后你会发现，前面大家天天追的“模型更聪明了”其实只是一半的事，另一半是“模型终于有地儿干活了”。</p><section style="color:rgb(51, 51, 51)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/kS7kt1qxaXjZwqdn3raDn1.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="font-weight:400;color:rgb(0, 0, 0)"><p><span style="color:rgba(245, 158, 11, 0.12);font-weight:900">01</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">先问个笨问题：AI 为啥要一整套“地基”</h2><p style="color:rgb(51, 51, 51)">我们这两年看到的 AI，大部分还停在 <span style="font-weight:600;color:rgb(245, 158, 11)">ChatBot</span> 的阶段。ChatBot 是啥？就是你问一句它答一句，你不问它就不动。ChatGPT 刚出来那会儿，基本就是这样。</p><p style="color:rgb(51, 51, 51)">但现在大家想要的不是 ChatBot，是 <span style="font-weight:600;color:rgb(245, 158, 11)">Agent</span>。</p><p style="color:rgb(51, 51, 51)"><span style="color:rgb(245, 158, 11);font-weight:600">Agent 跟 ChatBot 差在哪？</span></p><p style="color:rgb(51, 51, 51)">举个例子：</p><p style="color:rgb(51, 51, 51)">你让一个 Agent 帮你处理一封客户投诉邮件。ChatBot 的做法是当场甩你一段模板话。Agent 不一样：它收到邮件后，会去翻三个不同的系统查历史单据，对比类似案例，花一个小时整清楚，然后给客户回一封真正能解决问题的邮件。该追问就追问，该升级给人就升级给人。</p><p style="color:rgb(51, 51, 51)">看出差别了吧。ChatBot 像应付差事的客服接待，Agent 像真的在帮你干活的同事。</p><section style="color:rgb(51, 51, 51)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/TvOti2bgWncZfvbUaW0On.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(51, 51, 51)">问题来了，同事干活是要工具的。办公桌、内网账号、邮箱、记事本、还有进公司门的工卡。ChatBot 这些都不需要，它只在那儿等你说话。Agent 要真干活，一样都不能少。</p><p style="color:rgb(51, 51, 51)">过去两年 AI 领域的焦点基本都在“让模型更聪明”，对这些工具几乎没人系统地做。结果就是 Agent 工具主要只有程序员在用，因为只有程序员能自己动手，把缺的东西拼出来。普通打工人用不起来。</p><p style="color:rgb(51, 51, 51)">Cloudflare 这一周，就是把这套工具给打包好了。</p></section><section style="font-weight:400;color:rgb(0, 0, 0)"><p><span style="font-weight:900;color:rgba(245, 158, 11, 0.12)">02</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">一笔算给你听的账</h2><p style="color:rgb(51, 51, 51)">为啥这件事这么急？Cloudflare 在开幕博客里直接甩了一组数字。</p><p style="color:rgb(51, 51, 51)">光美国，1 亿多知识工作者。假设每人配一个 Agent 助手，同一时刻 15% 的人在真用，就是 2400 万个 session 同时在跑。按每颗 CPU 承担 25 到 50 个 session 估算，光美国就需要 50 万到 100 万颗服务器 CPU。</p><p style="color:rgb(51, 51, 51)">这还只是一个人配一个 Agent。真实情况是一个人同时挂好几个：一个写代码，一个看邮件，一个跑调研。全世界知识工作者 10 亿起。</p><p style="color:rgb(51, 51, 51)">Cloudflare 产品 VP 的原话：“我们不是缺一点算力，是差了好几个数量级。”</p><p style="color:rgb(51, 51, 51)">缺口大到这个份上，现在的云撑不起。不是做不了 AI，是做了成本就顶不住。要让公司前台、研究助理、客服、行程规划师人人都用上，单位成本必须砍一个数量级。</p><p style="color:rgb(51, 51, 51)">这事不解决，所有聊“AI 改变世界”的话都停在 PPT 上。</p></section><section style="font-weight:400;color:rgb(0, 0, 0)"><p><span style="color:rgba(245, 158, 11, 0.12);font-weight:900">03</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">看看这一周补了哪些空</h2><p style="color:rgb(51, 51, 51)">25 个产品一口气丢出来，乍看像工具箱翻了。归归类，其实就是给 Agent 补齐 6 类东西。</p><p style="color:rgb(51, 51, 51)"><strong>一、工作台</strong>(Sandboxes、Artifacts）。给 AI 一个虚拟电脑，让它能在里面装东西、跑代码、存文件，还有一套 Git 兼容的版本化存储。过去 AI 写代码只能在自己脑子里跑，写完你得自己复制粘贴去执行。现在它有地方干活了。</p><p style="color:rgb(51, 51, 51)"><strong>二、网络</strong>(Cloudflare Mesh）。让 AI 能安全连到你家电脑或者公司服务器，不用你每次都开个后门。你在家跑的本地 AI、你公司的内部数据库、你笔记本上的工作文件，它都能碰。</p><p style="color:rgb(51, 51, 51)"><strong>三、身份</strong>(Managed OAuth for Access）。给 AI 一个能替你登录内部系统的办法，有日志有权限，不是给它一把万能钥匙。以前大家图省事都用“服务账号”(相当于给 AI 配了把总经理卡），出事都查不到是谁指使的。现在 AI 能用你的身份登录，只能干你授权它干的事。</p><p style="color:rgb(51, 51, 51)"><strong>四、邮箱</strong>(Email Service）。让 AI 有自己的邮箱地址，能收能发，还能记住跟每位客户聊过什么。</p><p style="color:rgb(51, 51, 51)"><strong>五、记忆</strong>(Agent Memory）。让 AI 跨天、跨周、跨月记得你说过什么。不是塞进上下文窗口那种短期记忆，是真的能存起来、以后要用能翻出来的长期记忆。</p><p style="color:rgb(51, 51, 51)"><strong>六、杂事工具</strong>(Registrar API、Browser Run、Flagship）。AI 想买域名？有个专门 API，让它直接下单。AI 想看一个网页？有个带“看 AI 在干啥”直播功能的浏览器。AI 想让新功能慢慢上线？有个自动灰度工具。</p><p style="color:rgb(51, 51, 51)">每一件单拎出来都不惊艳，合在一起就是一份完整装备。AI 从“只能陪你聊天”变成“能替你办事”的设备全齐了。</p><section style="color:rgb(51, 51, 51)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/iFVN327onfKRbf8T3KXwvx.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(51, 51, 51)">下面挑三件最有意思的展开讲。</p></section><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgba(245, 158, 11, 0.12);font-weight:900">04</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">AI 有邮箱了</h2><p style="color:rgb(51, 51, 51)">你想象一下这么个场景。</p><p style="color:rgb(51, 51, 51)">你买了个东西出了问题，发邮件给客服。过去两种下场：要么几秒钟给你来封自动回复“我们收到了，3 个工作日回复”，然后没下文。要么人工客服上班了，回一句“请提供订单号”，你回过去，再等半天。</p><p style="color:rgb(51, 51, 51)">Cloudflare 这周想解决的是第三种可能：你给一个邮箱发邮件，对面是个 Agent。它花半小时，查了你过往 3 年的订单记录，对比了 10 个类似案例，调了两个内部系统，给你发一封真的能解决问题的回信。不着急就不着急回，该问你问题就主动再发一封，该升级给真人就升级。</p><p style="color:rgb(51, 51, 51)">这种模式以前做不了，主要卡在邮箱这关。Agent 没有自己的邮箱地址，你发过去没地方收；就算能收，它也记不住你上次投诉过啥。</p><p style="color:rgb(51, 51, 51)">Cloudflare 的做法就三件事。</p><p style="color:rgb(51, 51, 51)">第一，<strong>每个 Agent 配个邮箱地址</strong>。比如 support@yourcompany 路由给 support Agent，sales@yourcompany 路由给 sales Agent，不需要你一个个开邮箱。</p><p style="color:rgb(51, 51, 51)">第二，<strong>每个 Agent 自带一个小记事本</strong>。它给你回完信，会把这次聊了什么记下来。下次你再发邮件过来，它翻开记事本就知道上次说到哪了。</p><p style="color:rgb(51, 51, 51)">第三，<strong>回信路由不能被伪造</strong>。攻击者没法伪造邮件头，把本该给 support Agent 的机密信息导到别处。</p><p style="color:rgb(51, 51, 51)">这三件事说起来不难，但过去 Agent 邮箱产品大多只做前两件，第三件基本被忽略。Cloudflare 官方在博客里直接点名：“大多数‘给 Agent 用的邮箱’方案都没处理这个安全问题。”</p><p style="color:rgb(51, 51, 51)">邮件这件事还有一层意思，Cloudflare 没直说。邮件这东西已经 30 多岁了，全世界每个人都有邮箱，每家公司都用邮件。你不需要专门下个 App，不需要新学一个协议，Agent 直接就能跟你对话。把一个老接口拿出来补一下，比发明新接口有效得多。</p></section><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgba(245, 158, 11, 0.12);font-weight:900">05</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">AI 有记忆了</h2><p style="color:rgb(51, 51, 51)">你跟一个 AI 聊了三个月。你在第一周告诉它你是 Mac 用户、爱用 pnpm、项目用的 GraphQL。到了第三个月，你问它一个问题，它开口第一句建议你去 Windows 商店下东西，用 npm，假设你用 REST。</p><p style="color:rgb(51, 51, 51)">这不是它笨，是它根本记不住。</p><p style="color:rgb(51, 51, 51)">现在 AI 的记忆基本靠两种办法。第一种是每次把你过去聊的话全塞回去，就像每次见面都复习一遍你跟对方的整本聊天记录。这招一开始还行，聊多了就开始丢三落四，大模型处理太长的历史质量会掉。第二种是狠砍，只留最近的，结果是它永远记不住三天前的事。</p><p style="color:rgb(51, 51, 51)">Cloudflare 这周发的 Agent Memory 走的是第三条路：帮 AI 从每次对话里自动抽出重要的事，分门别类存起来，下次要用精准取出来。</p><p style="color:rgb(51, 51, 51)">它把 AI 的记忆分成四类，分类特别接地气。</p><p style="color:rgb(51, 51, 51)"><strong>事实类</strong>：当下是真的、稳定的。“用户喜欢深色模式”，“项目用 GraphQL”。</p><p style="color:rgb(51, 51, 51)"><strong>事件类</strong>：某个时间点发生了什么。“4 月 10 日出过一次故障，之后把 API 限流提到了一万”。</p><p style="color:rgb(51, 51, 51)"><strong>指令类</strong>：怎么做一件事的流程。“部署前先跑完整测试”。</p><p style="color:rgb(51, 51, 51)"><strong>任务类</strong>：当下在干的活。“正在查这个 bug，还没结论”。</p><section style="color:rgb(51, 51, 51)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2zxgZr4xHOvf34UTMC3wgv4l.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(51, 51, 51)">AI 要翻记忆的时候可以精准定位：你喜欢什么主题就查事实类，上次咋出事的查事件类，流程啥样查指令类。</p><p style="color:rgb(51, 51, 51)">更有意思的是，你的偏好会变。去年你喜欢深色，今年可能换亮色。Cloudflare 这个系统不会把旧记忆硬盖掉，而是留一条版本链。旧的标“已过时”，新的接上，需要的时候还能回头看当初是啥样。</p><p style="color:rgb(51, 51, 51)">最值得敲黑板的是官方那句承诺：<strong>你的记忆是你的，随时可以导出带走</strong>。</p><p style="color:rgb(51, 51, 51)">这听起来是句废话，但云厂商里愿意这么明说的不多。Agent 用得越久，它攒的记忆就越值钱。你的工作习惯、团队的内部约定、过去踩过的坑，都在里头。如果绑死在一家厂商身上换不了，那这笔资产就捏在人家手里。</p><p style="color:rgb(51, 51, 51)">Cloudflare 直接说，你想留就留，想走随时走。这姿态放在现在这个人人都想做封闭生态的年代，挺难得。</p></section><section style="font-weight:400;color:rgb(0, 0, 0)"><p><span style="color:rgba(245, 158, 11, 0.12);font-weight:900">06</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">AI 能安全进公司内网了</h2><p style="color:rgb(51, 51, 51)">假设你用 AI 帮你写代码，写到一半它说“我需要查一下你公司的 staging 数据库验证下结果”。</p><p style="color:rgb(51, 51, 51)">传统两条路。</p><p style="color:rgb(51, 51, 51)">第一条，你给它你的 VPN 账号密码。问题是，它拿到钥匙之后，其实整个公司内网它都能碰，你也搞不清楚它到底看了啥。而且这密码是你本人的，出事查下来，日志上写的是你，不是它。</p><p style="color:rgb(51, 51, 51)">第二条，你给它一个“服务账号”。这是给程序用的公共账号。问题一样：日志上所有事都挂在这个账号头上，追不回是哪个 AI、为谁干的。</p><p style="color:rgb(51, 51, 51)">都别扭。</p><p style="color:rgb(51, 51, 51)">Cloudflare 这周的思路是给 AI 发一张<strong>正式员工工卡</strong>。</p><p style="color:rgb(51, 51, 51)">这张工卡上写了三件事：<strong>是谁授权的</strong>(平台组的王小明）、<strong>它是谁</strong>(小明的部署助手，第 123 号对话）、<strong>它能干啥</strong>(能看部署记录、能回滚版本，但不能删数据库）。</p><section style="color:rgb(51, 51, 51)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1ySv212QaaTWeQPvcPdWQy.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(51, 51, 51)">好处很直接。王小明的 AI 可以读部署记录，但要改库必须王小明本人确认。今天要把这个 AI 权限撤回，不影响王小明本人其他工作。出了事一查，日志上写清楚是小明哪次对话里的 AI 干的，追得到人追得到原因。</p><p style="color:rgb(51, 51, 51)">这套机制把 AI 从“钻墙洞的小偷或者万能钥匙”变成了“有工卡有权限有日志的正式员工”。对企业用 AI 来说，这是必需的一步。</p><p style="color:rgb(51, 51, 51)">当然 Cloudflare 自己也承认，这套工卡系统还在铺基础设施，路线图里写的是“今年晚些时候”完整上线。但方向已经很清楚了。</p></section><section style="font-weight:400;color:rgb(0, 0, 0)"><p><span style="color:rgba(245, 158, 11, 0.12);font-weight:900">07</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">为什么偏偏是 Cloudflare</h2><p style="color:rgb(51, 51, 51)">一周 25 个产品、一次补齐，这事不是谁想做就能做的。为什么 Cloudflare 能这么干？</p><p style="color:rgb(51, 51, 51)">有两个挺关键的历史原因。</p><p style="color:rgb(51, 51, 51)"><strong>一是八年前他们选错了路，结果走对了</strong>。</p><p style="color:rgb(51, 51, 51)">2018 年他们做了一个产品叫 Workers。当时选的技术路线跟所有人都反着来：别的云厂商都用容器（大概相当于给每个程序一整套完整的厨房），他们偏要用一种叫 isolate 的东西（相当于给每个客人一个临时小灶台，做完一道菜就收了）。</p><p style="color:rgb(51, 51, 51)">当时的动机很实用，就是让 CDN 客户的代码跑得快、启动不卡顿。没人想过这东西跟 AI 有啥关系。</p><p style="color:rgb(51, 51, 51)">八年后回头看，isolate 那种“毫秒级启动、用完就扔、一台机器上同时能挂几十万个”的性格，正好对上 Agent 的需求。每个用户一个 Agent，每个 Agent 一个独立环境，规模起来几千万上亿个。容器不够用，isolate 正好合适。</p><p style="color:rgb(51, 51, 51)">Cloudflare 自己在博客里都说：“我们也没料到这个模型这么适合 Agent 时代。”这不是战略眼光，是长期主义做一件事，等风口吹过来。</p><section style="color:rgb(51, 51, 51)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3UAb7x3sk6hm4oMhGm2I2vRc.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(51, 51, 51)"><strong>二是他们本来就站在安全和网络这两条线的交汇处</strong>。</p><p style="color:rgb(51, 51, 51)">Cloudflare 不是一家单纯的云公司，它的老本行是 CDN 和网络安全，全球大半流量从他们节点过一遍。这意味着他们天然掌握两种能力：一是把数据从世界任何地方送到任何地方，二是在数据流过的时候做安全检查。</p><p style="color:rgb(51, 51, 51)">给 AI 造地基，这两种能力刚好是刚需。AI 要安全连到你公司内网，是网络问题。AI 要有身份有权限，是安全问题。其他云厂商要做这事得自己拼，他们本来就有。</p><p style="color:rgb(51, 51, 51)">这两个底子加起来，就是他们这一周敢一次砸 25 个产品的底气。别人要做这事得先花半年搭地基，他们直接往上盖楼。</p></section><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgba(245, 158, 11, 0.12);font-weight:900">08</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">泼点冷水</h2><p style="color:rgb(51, 51, 51)">不吹太过，说说几件还不到位的事。</p><p style="color:rgb(51, 51, 51)"><strong>有几个关键产品还是内测阶段</strong>。比如那个让 AI 自己灰度发布新功能的工具 Flagship，还没公开。宣传是有了，真能用得再等等。</p><p style="color:rgb(51, 51, 51)"><strong>有些“重做”其实是重命名</strong>。比如 Mesh(那张私有网络），底子是他们几年前的产品 WARP Connector，这次换个定位再包装一下。这不是坏事，但你要能分清楚哪些是真的换了底层架构、哪些只是换了壳。</p><p style="color:rgb(51, 51, 51)"><strong>AI 员工工卡那一套，路线图写着“今年晚些时候”</strong>。方向画出来了，真落地还得等。在此之前，企业用 AI 进内网这事儿还是得凑合。</p><p style="color:rgb(51, 51, 51)"><strong>数据库这块他们没碰</strong>。AI 要长期存状态，底下离不开数据库。这一周他们选择继续让合作伙伴 PlanetScale 来补这块，自己不做。合理，但也是个显而易见的缺口。</p><p style="color:rgb(51, 51, 51)"><strong>25 个产品一次砸，信息密度太大</strong>。每篇博客都能单写一万字，普通人读完记得住三四个名字就不错。这是 Cloudflare 的策略选择：一周密集轰炸做行业定调，比分散发半年声量大多了。</p><p style="color:rgb(51, 51, 51)">这些不推翻方向，但得说出来。写稿子如果只剩夸，基本就不值得读。</p></section><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="font-weight:900;color:rgba(245, 158, 11, 0.12)">09</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">同一周 Vercel 出了件事</h2><p style="color:rgb(51, 51, 51)">还有一件事跟 Cloudflare 这一周没直接关系，但时间点凑到一起挺耐琢磨。</p><p style="color:rgb(51, 51, 51)">4 月 19 号，也就是 Agents Week 的倒数第二天，Vercel(另一家做 AI 和前端部署特别火的云厂商）披露了一次供应链攻击。</p><p style="color:rgb(51, 51, 51)">攻击路径挺典型。先是 Context.ai 的一名员工 2 月份被一款叫 Lumma Stealer 的恶意软件感染，攻击者拿到了他的 OAuth 令牌。顺着这条线，一路摸进了一名 Vercel 员工的 Google Workspace，访问到了部分客户的环境变量。Vercel 把这批数据划在“非敏感”那一档，但里头还是有 API key 和 token。数据据报被挂到 BreachForums 上开价 200 万美元。npm 包经过 GitHub、Microsoft 和 Socket 三方核查，确认没被污染。</p><section style="color:rgb(51, 51, 51)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3JWWrk4hPuHV1w1BfC4pRCB9.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(51, 51, 51)">这事儿跟 Cloudflare 没直接关系，但两家放在一起看，一个共同点会浮出来。</p><p style="color:rgb(51, 51, 51)">当你用 AI 产品，每多接一家第三方平台，你的攻击面就多一扇门。多一个 OAuth 入口，多一份环境变量，多一条可能被顺着走下来的信任链。这次 Vercel 被横穿，不是 Vercel 本身的漏洞，是信任链上其中一环的员工先中招，然后一路传过来的。</p><p style="color:rgb(51, 51, 51)">独立开发者和小团队做技术选型的时候，这是个常常被忽略的维度。多供应商表面看是“不被一家锁死”的灵活，实际上每增加一家，被横穿的概率就叠加一次。把 Worker、R2、KV、Access、Pages 这些功能都放在一家手里，不是因为这家就一定比别家更安全，是<strong>攻击者需要同时突破多个平台才能完成一次横穿</strong>。</p><p style="color:rgb(51, 51, 51)">Cloudflare 这一周补齐 25 个产品，另一层意思就在这儿：它把 AI 产品需要的工作台、网络、身份、邮箱、记忆、杂事工具全部收拢到自家平台上。对用它的客户来说，依赖收敛到一家，攻击面自然窄一圈。</p><p style="color:rgb(51, 51, 51)">这不一定是每个人都要做的选择。但至少值得明白，站在哪家平台上，决定的不只是好不好用、贵不贵用，还有一旦出事，你的暴露面有多宽。</p><section style="color:rgb(51, 51, 51)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1PH82p4AZAhv1bj64d2s2pgO.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgba(245, 158, 11, 0.12);font-weight:900">10</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">这事儿跟你有啥关系</h2><p style="color:rgb(51, 51, 51)">如果你在建 AI 产品，这一周值得你认真过一遍的是那几个基础工具。每一件都是过去你要自己拼、自己维护、自己踩坑的东西，现在有人打包好了。</p><p style="color:rgb(51, 51, 51)">如果你只是在用 AI，这一周的意义更隐形一点。</p><p style="color:rgb(51, 51, 51)">你今天用 AI 觉得它慢、觉得它贵、觉得不敢让它碰你的工作文件，这些感受的底层原因，有很大一部分是基础设施没到位。AI 跑在容器上成本太高，所以只有程序员用得起；AI 没有身份和权限，所以你不敢把公司账号给它；AI 没长期记忆，所以每次都跟它从零聊起。</p><p style="color:rgb(51, 51, 51)">这些问题不解决，AI 就永远只能给愿意折腾的一小撮人用。Cloudflare 这一周，是在解这些问题。解完之后，AI 从“试验玩具”变成“日常工具”的速度会快一些。</p><p style="color:rgb(51, 51, 51)">当然光 Cloudflare 一家干不了这件事。基础设施这种东西，得整个行业一起往一个方向走，OpenAI、Anthropic、Google 都在各自推进，每家的切入角度不同。</p><p style="color:rgb(51, 51, 51)">Cloudflare 的特别之处在于：它手里刚好攒够了八年前押对的技术底子，又守着网络和安全的交叉位。站在这个位置上补齐这套工具，它是最顺手的一家。</p><p style="color:rgb(51, 51, 51)"><strong>素材来源</strong>：</p><p style="color:rgb(51, 51, 51)">Cloudflare Blog Agents Week 2026 全部发布。</p><p style="color:rgb(51, 51, 51)"><span>汇总页： cloudflare.com/Agents-week/updates</span></p></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 小互AI-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e9b48bc3105209484f5dd3?channel_id=67cc08a89a4297b6148b34f0">https://lingowhale.com/reader/web/69e9b48bc3105209484f5dd3?channel_id=67cc08a89a4297b6148b34f0</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

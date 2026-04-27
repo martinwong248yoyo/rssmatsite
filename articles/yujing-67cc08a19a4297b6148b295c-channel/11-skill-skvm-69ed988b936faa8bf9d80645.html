@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Skill也有语言虚拟机了！上交大开源SkVM，实现一次编写，处处高效</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 量子位-公众号</div>
+                    <h1>Skill也有语言虚拟机了！上交大开源SkVM，实现一次编写，处处高效</h1>
+                    <div class="meta">
+                        <span>量子位</span>
+                        <span>Sun, 26 Apr 2026 04:20:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ed988b936faa8bf9d80645?channel_id=67cc08a19a4297b6148b295c">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="font-weight:400;color:rgb(34, 34, 34)">Skill确实好用，但架不住模型和Agent Harness适配翻车。</p><p style="font-weight:400;color:rgb(34, 34, 34)">不是所有模型都吃得动Skill，有的用上直接反向掉性能。</p><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4GoAzw3uNhRr48p1Fc1hcyNz.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span>△</strong>从计算机系统架构角度审视“程序语言”和“Skill语言”<p style="font-weight:400;color:rgb(34, 34, 34)">为了解决这个问题，来自<strong>上海交大的IPADS研究团队</strong>提出了<strong>SkVM</strong>：面向Skill的语言虚拟机。</p><p style="color:rgb(34, 34, 34);font-weight:400">在Agent时代下，<strong>Skill是代码，而不同的LLM是异构处理器</strong>。</p><p style="color:rgb(34, 34, 34);font-weight:400">研究团队借鉴了经典语言虚拟机（如Java Virtual Machine）的架构，首次为Skill设计了原生的语言虚拟机，让Skill通过一次编写，能够在任意的模型和Agent Harness上高效运行。</p><p style="color:rgb(34, 34, 34);font-weight:400">通过SkVM编译后的Skill，甚至能够让小模型（30B）获得匹配Opus4.6的精度，同时减少40%的token消耗量和至多50倍的运行速度提升。</p><p style="font-weight:400;color:rgb(34, 34, 34)">从而<strong>一键提升OpenClaw、Hermes、openJiuwen、PI等Agent框架与Clawhub等主流Skill生态的执行速度、Token效率与任务精度</strong>。</p><h2 style="color:rgb(34, 34, 34);font-weight:bold">Skill与模型间不匹配</h2><p style="color:rgb(34, 34, 34);font-weight:400">同一个技能在不同模型/不同harness组合上的执行效果天差地别，甚至还会拖后腿。</p><p style="color:rgb(34, 34, 34);font-weight:400">上海交大IPADS的研究人员分析了超过 11.8万个技能，发现：</p><ul><li><p>15%的任务在使用技能后反而性能下降；</p></li><li><p>87%的任务至少有一个模型没有任何提升；</p></li><li><p>有的技能带来的token开销暴增451%，但成功率却纹丝不动。</p></li></ul><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2WQHHeadbZe3xdA1h4hUoDi.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span>△</strong>采取Skill前后，对于任务完成率的影响，红色表示下降，绿色表示上升<p style="color:rgb(34, 34, 34);font-weight:400">原因很简单：</p><blockquote style="font-weight:400;color:rgb(34, 34, 34)"><p style="color:rgb(62, 62, 62)">技能写的是“自然语言代码”，但模型和运行环境千差万别，Skill需求的能力和模型与环境提供的能力，存在明显的语义鸿沟！</p></blockquote><p style="font-weight:400;color:rgb(34, 34, 34)">具体而言：</p><ol><li><p>模型能力不匹配：技能预设模型很聪明，但如果你用的是个小模型，它可能完全听不懂你在说什么，强行使用甚至会导致15%的任务性能下降；</p></li><li><p>环境依赖老报错：技能里写了要用某个Python包，但用户的电脑上根本没装，大模型只能不断试错，疯狂浪费Token；</p></li><li><p>又慢又贵：高度重复的死板工作，大模型每次都要重新走一遍“推理-工具调用”的脑回路，Token成本极高 。</p></li></ol><h2 style="color:rgb(34, 34, 34);font-weight:bold">SkVM：一次编写，处处高效！</h2><p style="color:rgb(34, 34, 34);font-weight:400">面对上面所述的痛点，上交大团队从传统的语言虚拟机设计中汲取灵感，给出了面向自然语言的虚拟机SkVM架构，其整体架构如下图所示：</p><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2FxJlU1Hxk5Q2ieEYD1mk5iE.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span>△</strong>SkVM整体架构：包含AOT编译优化和运行时优化两个部分<p style="color:rgb(34, 34, 34);font-weight:400">SkVM类比了经典了Java语言虚拟机（JVM）的设计，提炼了底层运行抽象，结合AOT/JIT等编译方式，并在运行时做自适应调优和运行时调度。</p><p style="color:rgb(34, 34, 34);font-weight:400">下表展示了SkVM和JVM在不同编译优化策略上的对比：</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/gJOjl3ISOoR2Jqr0g1NOqgi.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><h4 style="font-weight:bold;color:rgb(62, 62, 62)">AOT编译（Ahead-of-Time Compilation）：将Skill编译成模型更能看懂的形式</h4><p style="font-weight:400;color:rgb(34, 34, 34)">在安装Skill的时候，AOT编译器（由编译优化Skill+LLM组成）会对Skill进行编译，生成多个编译后产物，帮助后续Agent Harness+LLM在运行时更好地理解Skill。</p><p style="color:rgb(34, 34, 34);font-weight:400">SkVM在运行前会做三件事：</p><p style="font-weight:400;color:rgb(34, 34, 34)"><strong>PASS-1基于能力的编译</strong></p><p style="color:rgb(34, 34, 34);font-weight:400">系统提炼了26种“原子能力”（Primitive Capabilities），像测CPU跑分一样先摸底你的大模型。</p><p style="font-weight:400;color:rgb(34, 34, 34)">不同于其他的LLM 测试集，原子能力并非测试大模型能否解决一个复杂逻辑问题，更多是测试模型是否具备工具调用，指令遵循，格式对齐等对立、可组合、以及逻辑无关的基本能力。</p><p style="color:rgb(34, 34, 34);font-weight:400">同时，对于每一个“原子能力”，也会进行分级打分，从而生成更加客观的大模型+Harness组合能力画像。其次，编译器会去分析Skill本身需要哪些“原子能力”，以及对应的等级。</p><p style="color:rgb(34, 34, 34);font-weight:400">如果Skill需要的“原子能力”等级大于当前运行的大模型+Harness能够提供的能力等级，编译器会编译Skill，以降低Skill的能力需求。</p><p style="font-weight:400;color:rgb(34, 34, 34)">例如，Skill中往往会包含一些预先定义的python/js执行文件，而这些文件通常是通过相对路径定义的。</p><p style="font-weight:400;color:rgb(34, 34, 34)">如果模型+Agent harness 缺乏对应相对路径的解析能力，编译器会在安装Skill的时候，将相对路径转换为绝对路径，以降低Skill 对于“脚本执行”这一原子能力的等级需求。</p><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3zuFhM2WC5X34DvA972suQTs.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span>△</strong>基于模型原子能力的skill编译<p style="color:rgb(34, 34, 34);font-weight:400"><strong>PASS-2 环境绑定</strong></p><p style="color:rgb(34, 34, 34);font-weight:400">Skill中往往会定义运行需要的环境和依赖。</p><p style="color:rgb(34, 34, 34);font-weight:400">Agent在运行时候，LLM会检查并且安装对应的环境，导致大量的token浪费 / 环境安装失败。</p><p style="font-weight:400;color:rgb(34, 34, 34)">为此，AOT编译器自动提取技能需要的包和工具，生成安装/检验脚本。运行前一键配好环境，不用大模型自己尝试排错了 。</p><p style="font-weight:400;color:rgb(34, 34, 34)"><strong>PASS-3 并发提取</strong></p><p style="font-weight:400;color:rgb(34, 34, 34)">有超过76%的Skill中包含workflow，并且Agent harness 默认会采用串行的方式执行。</p><p style="color:rgb(34, 34, 34);font-weight:400">AOT编译能够发掘Skill执行过程中，不同粒度的并行机会，包括数据并行（一条指令，多个数据）、指令并行（无依赖的指令并行发射）和线程并行（多个独立的sub-agent，完成不同的子任务），并且生成可并行的DAG工作流图。</p><p style="font-weight:400;color:rgb(34, 34, 34)">同时，开发者还可以自定义编译优化机制，注册到AOT编译器中，从而进一步对Skill进行运行前优化。</p><h4 style="color:rgb(62, 62, 62);font-weight:bold">运行时优化：越跑越准，越跑越省</h4><p style="font-weight:400;color:rgb(34, 34, 34)">除了静态编译，在运行时，SkVM会采用JIT（Just-in-Time Compilation）加速Skill的执行效率。</p><p style="font-weight:400;color:rgb(34, 34, 34)"><strong>代码固化（Code Solidification）</strong></p><p style="color:rgb(34, 34, 34);font-weight:400">Skill中定义的脚本，往往是可变参数的代码模板。</p><p style="color:rgb(34, 34, 34);font-weight:400">Skill在每次运行时，LLM都需要反复生成可执行的脚本，导致大量token的浪费。</p><p style="font-weight:400;color:rgb(34, 34, 34)">为此，SkVM会在AOT阶段，生成代码的指纹，模板，以及对应的参数列表。</p><p style="color:rgb(34, 34, 34);font-weight:400">在运行阶段，调用Skill后由LLM生成的代码，和AOT阶段提前生成的代码指纹进行匹配，如果连续多次匹配成功，SkVM会采用JIT编译优化，根据输入参数，直接固化可执行的代码，而非每次由LLM 重新生成。</p><p style="color:rgb(34, 34, 34);font-weight:400"><strong>自适应重编译</strong></p><p style="color:rgb(34, 34, 34);font-weight:400">如果在运行中出现报错/重试，系统会收集错误日志反馈给编译器，自动重新优化技能。</p><p style="color:rgb(34, 34, 34);font-weight:400">防止每次运行Skill的过程中，发生同样的错误，并且提高任务的成功率。</p><p style="font-weight:400;color:rgb(34, 34, 34)">在运行时，SkVM除了采用JIT的编译优化外，还会负责Skill生命周期、加载管理，保证Skill编译后新的编译产物，能够正确的加载和执行。</p><p style="color:rgb(34, 34, 34);font-weight:400">同时，SkVM还会根据当前的系统资源，调节并行粒度，减少不必要的资源竞争。</p><h4 style="color:rgb(62, 62, 62);font-weight:bold">实验结果：小模型+SkVM比肩Opus4 .6，效率至多提升50倍</h4><p style="font-weight:400;color:rgb(34, 34, 34)">研究团队在包含代码生成、数据分析等118个代表性任务上进行了测试。</p><p style="color:rgb(34, 34, 34);font-weight:400">结果显示，SkVM带来的收益非常显著。尤其是对于偏弱的小模型，提升最为显著，因为它弥补了小模型在处理复杂JSON结构生成、环境依赖、脚本解析上的短板，使得qwen 30B拥有比肩Opus 4.6的任务成功率。</p><p style="color:rgb(34, 34, 34);font-weight:400">对于顶尖模型，采用SkVM编译后，消耗的token至多下降40%。</p><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/23tIUS16lPsC1xuw1D1mjxwb.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span>△</strong>经过SkVM编译后和原始Skill在任务完成率上的对比，绿色深度表示提升的幅度，数字表示完成率分数<strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2dMUOt3HFrNQ2vdgpL1Ov8Rf.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span>△</strong>不同模型+Harness下，没有Skill、原始Skill、Skill-creator、SkVM的任务完成率对比<p style="font-weight:400;color:rgb(34, 34, 34)">同时，得益于“代码固化”技术，代码部分的执行时间，从上万毫秒直接压缩到了几百毫秒，速度飙升19到50倍。</p><p style="color:rgb(34, 34, 34);font-weight:400">而针对Skill中潜在的并行机会，SkVM通过数据并行、指令并行和线程并行，将Skill的执行效率至多提升3.2倍。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3W6CyI2wD6Xl1V6IN73domk5.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><strong>△</strong>数据并行、指令并行、线程并行下Skill效率的提升<strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2XuxcQ2bazdsBasDcjIeut.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span>△</strong>触发JIT-代码固化优化前后，token消耗量和执行延迟间的对比<p style="color:rgb(34, 34, 34);font-weight:400">目前，SkVM能够无缝键入openClaw，Hermes Agent，openJiuwen Agent、PI Agent等主流的Agent框架，支持Clawhub等主流的Skill生态。</p><p style="font-weight:400;color:rgb(34, 34, 34)"><em><span>SkVM论文：https://arxiv.org/abs/2604.03088</span></em><em><span>项目网站：https://skillvm.ai/</span></em><em><span>项目仓库：https://github.com/SJTU-IPADS/SkVM/</span></em></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 量子位-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ed988b936faa8bf9d80645?channel_id=67cc08a19a4297b6148b295c">https://lingowhale.com/reader/web/69ed988b936faa8bf9d80645?channel_id=67cc08a19a4297b6148b295c</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

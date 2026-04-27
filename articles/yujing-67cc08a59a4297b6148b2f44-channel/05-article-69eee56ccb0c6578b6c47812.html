@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>最新封面｜反腐法网再织密</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 财新-公众号</div>
+                    <h1>最新封面｜反腐法网再织密</h1>
+                    <div class="meta">
+                        <span>财新</span>
+                        <span>Mon, 27 Apr 2026 04:10:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eee56ccb0c6578b6c47812?channel_id=67cc08a59a4297b6148b2f44">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><section><section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/oC6rY2ijRIn1G04ph1xhjAq.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section></section><section style="font-weight:400;color:rgb(34, 34, 34)"><section><section><section><p><span style="color:rgb(92, 92, 92);font-weight:400"><span style="color:rgb(136, 136, 136)">惩治企业内部贪腐，穿透新型、隐性腐败，加码涉案财物追缴……刑事法网进一步补强</span></span></p></section></section></section></section><p><span>4月10日下午，兼职从事刑事辩护的中国政法大学教授何兵接到一通求助电话。“何老师，我怎么办，是不是犯罪？”对方是一名身价过亿元的民企老板，声称自己直接从公司支钱给高管发奖金，十年间总计上千万元，自己还借给公司几千万元。何兵劝他抓紧整改，平账。</span></p><p><span>无独有偶，当晚北京刑辩律师徐红亮也接到一名企业高管的咨询，对方举棋不定：已经从公司拿了300多万元，是扭头送回去，还是“一条道走到黑”？</span></p><p><span>这天上午，最高法院、最高检察院联合发布《关于办理贪污贿赂刑事案件适用法律若干问题的解释（二）》。这是继2016年《关于办理贪污贿赂刑事案件适用法律若干问题的解释》后，“两高”发布的第二份事关职务犯罪定罪量刑的司法解释。其中和民营企业老板、高管等人密切相关的一个新内容，是调整内部腐败行为定罪量刑数额标准。</span></p><p><span>司法解释是最高司法机关在适用法律过程中对具体问题所作的解释，比如，收了多少钱构成《刑法》规定的受贿罪，超过什么金额会判无期徒刑。中国立法多年来秉持“宜粗不宜细”理念，司法解释一直实际发挥着为立法“打补丁”的作用，成为司法准绳之一。</span></p><p><span>10年前《解释（一）》的短短20个条文，深远影响了中国的反腐败司法。其大幅调整了贪污贿赂等职务犯罪的定罪量刑标准：数额方面，规定贪污或受贿数额在3万元以上不满20万元，属于数额较大，处3年以下有期徒刑或拘役，并处罚金；数额在20万元以上不满300万元，属于数额巨大，处3年以上10年以下有期徒刑，并处罚金或没收财产；数额在300万元以上，属于数额特别巨大，处10年以上有期徒刑、无期徒刑或死刑，并处罚金或没收财产。同时，若数额虽未达上述标准，但具有特定情形，也可构成其他较重情节、其他严重情节或其他特别严重情节，予以追责。</span></p><p><span>在保持《解释（一）》从严惩治腐败的基调下，《解释（二）》又对非公职务犯罪、新型隐性腐败、斡旋受贿、约定受贿、赃款赃物追缴等标准作出补充和细化，共24条。不少法律人士分析认为，这份将于5月1日起实施的新规定，再次织密织紧了中国的反腐败刑事法网，也对掌权者廉洁自律提出更高要求。</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 财新-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eee56ccb0c6578b6c47812?channel_id=67cc08a59a4297b6148b2f44">https://lingowhale.com/reader/web/69eee56ccb0c6578b6c47812?channel_id=67cc08a59a4297b6148b2f44</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

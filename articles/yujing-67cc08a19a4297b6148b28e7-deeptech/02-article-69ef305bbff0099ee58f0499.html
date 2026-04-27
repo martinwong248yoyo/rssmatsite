@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>被扔掉的废羊毛，正在被科学家用来修复人体骨骼</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>被扔掉的废羊毛，正在被科学家用来修复人体骨骼</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Mon, 27 Apr 2026 09:40:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef305bbff0099ee58f0499?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3XHdGNh37vw1zz3ixKV7Zg.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 0, 0)">在大多数人的印象里，羊毛的命运似乎一眼看得到头：它们先是被剪下、然后清洗、纺纱，最后变成毛衣或地毯等织物。而那些因为太粗、太短或有瑕疵而被纺织业淘汰的“废料”，通常只能被填埋或焚烧，被人抛弃。但在伦敦国王学院（King’s College London）谢里夫·埃尔沙卡维（Sherif Elsharkawy）博士的团队眼里，这些被视为累赘的生物边角料却藏着修复人体骨骼的潜力。</span></p><p><span style="color:rgb(0, 0, 0)">近期，该团队在《生物材料进展》（</span><span style="color:rgb(0, 0, 0);font-style:italic">Biomaterials Advances</span><span style="color:rgb(0, 0, 0)">）上发表了一项研究：</span><span style="color:rgb(171, 25, 66)">他们从英国谢特兰群岛绵羊的粗毛中提取出角蛋白，制成一种仿生膜，成功帮助大鼠修复了大面积的颅骨损伤。</span><span style="color:rgb(0, 0, 0)">这项研究向目前骨科和牙科领域的“金标准”：胶原蛋白膜，发起了挑战。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2cAjB02gKGQC3idLu12OCozl.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">（来源：King’s College London）</span></p><p><span style="color:rgb(14, 23, 50);font-weight:bold">为什么要换掉胶原蛋白？</span></p><p><span style="color:rgb(0, 0, 0)">要理解这个挑战，我们需要先看看医生在处理骨缺损时的困境。</span></p><p><span style="color:rgb(0, 0, 0)">想象一下这样的场景：一位患者的骨骼因严重外伤或肿瘤切除，留下了一个较大的缺损空腔。在人体自身的修复过程中，负责骨骼再生的成骨细胞，其增殖和迁移速度相对较慢；而周围的软组织细胞（如成纤维细胞）却像杂草一样长得飞快。如果不进行医疗干预，会发生什么呢？</span></p><p><span style="color:rgb(0, 0, 0)">答案是，这些生长迅猛的软组织细胞会抢先填满骨缺损的空腔，导致成骨细胞无法进入，骨头便再也无法自行愈合。为了解决这个问题，医生会植入一层“屏障膜”，其作用就像一道物理屏障，用来阻挡软组织细胞侵入，为内部的成骨细胞营造一个相对封闭、不受干扰的空间，让骨骼得以缓慢而有序地再生。这项技术，在临床上被称为“引导骨再生技术”（GBR）。</span></p><p><span style="color:rgb(0, 0, 0)">几十年来，提取自牛或猪的胶原蛋白膜一直是这个领域的首选材料。它的优点是生物相容性好，细胞喜欢在上面附着。</span><span style="color:rgb(171, 25, 66)">但缺点也很明显：它太软了，且降解速度难以控制。</span><span style="color:rgb(0, 0, 0)">在口腔或承重骨修复中，胶原蛋白膜往往在骨头还没长好之前，就被体液侵蚀塌陷了。一旦屏障失效，手术就算白做了。此外，作为异体蛋白，它还存在潜在的免疫排斥和病原体风险。</span></p><p><span style="color:rgb(0, 0, 0)">与之不同，羊毛的主要成分是角蛋白。这种蛋白富含半胱氨酸，分子间能形成强韧的二硫键。埃尔沙卡维团队并没有简单地使用原始角蛋白，而是通过不同的化学交联手段，制备了四种不同特性的膜，以寻找最佳平衡点。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4jReOO3FJbVu241Nk076reD.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图 | 扫描电子显微镜（SEM）下的羊毛角蛋白膜微观结构：展示了经过化学处理后，角蛋白分子重新组装形成的致密网状或海绵状三维骨架结构。（来源：论文）</span></p><p><span style="color:rgb(0, 0, 0)">其中，一种名为 Ker5 的基础膜仅通过角蛋白自身的相互作用形成，质地致密；另一种 Ker5TE1 则引入了温和的化学交联剂（TEGDMA），增加了内部孔隙率；还有一种 M-Ker5TE1 预先矿化，表面附着了类似骨成分的纳米晶体；最后一种 Ker5H3 则通过更强烈的化学交联（HDI）获得了极高的刚性。</span></p><p><span style="color:rgb(0, 0, 0)">相比软塌塌的胶原蛋白，这些角蛋白膜在手术中表现出更好的操作性。它们更容易贴合不规则的骨缺损边缘，不易撕裂，既能维持形状，又有足够的弹性抵抗周围组织的挤压。特别是经过预矿化处理的 M-Ker5TE1 和高度交联的 Ker5H3，在体外实验中显示出对干细胞的强大吸引力。</span></p><p><span style="color:rgb(14, 23, 50);font-weight:bold">数量不如胶原，质量却更高</span></p><p><span style="color:rgb(0, 0, 0)">真正有趣的发现来自大鼠实验。团队在大鼠颅骨上制造了无法自然愈合的大面积缺损，分别植入不同配方的角蛋白膜和商用胶原蛋白膜。</span></p><p><span style="color:rgb(0, 0, 0)">八周后，微 CT 扫描数据显示了一个和预测情况相反的结果：如果只看新生骨的体积分数（BV/TV），胶原蛋白组更高（约 17.3％，而表现最好的角蛋白组 Ker5 约为 12.8％）。乍看之下，胶原蛋白似乎赢了。</span></p><p><span style="color:rgb(0, 0, 0)">但当研究人员把样本放到显微镜下仔细观察微观结构时，情况发生了反转。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/V9Rsc4mHodB3fCsWL3Nh00I.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图 3 | 角蛋白膜与胶原蛋白膜的“屏障功能”荧光对比图。上为角蛋白，下为胶原蛋白。（来源：论文）</span></p><p><span style="color:rgb(0, 0, 0)">胶原蛋白组长出的骨头虽然多，但结构相对松散，胶原纤维杂乱堆叠。而角蛋白组（特别是 Ker5 和 M-Ker5TE1）引导生成的新骨，虽然体积稍少，但内部结构极其致密、有序。</span><span style="color:rgb(171, 25, 66)">在偏振光显微镜下，角蛋白组的新生胶原纤维呈现出清晰的平行层状排列，红绿相间的双折射条纹如同建筑中的钢筋网，完美复刻了健康成熟骨骼的力学结构。</span></p><p><span style="color:rgb(0, 0, 0)">在临床看来，骨修复的核心从来不是长得快或长得满，而是长出来的骨头够不够结实、能不能承受长期的物理压力。在这个维度上，角蛋白膜不仅仅是一道物理屏障，更像是一个严格的“建筑师”，规训着新骨以最高效、最坚固的方式搭建。</span></p><p><span style="color:rgb(0, 0, 0)">此外，体外屏障功能测试也揭示了一个细节：胶原蛋白膜由于多孔，允许部分软组织细胞穿透进入内部；而角蛋白膜则表现出更好的“封闭性”，能有效将软组织阻挡在外，这正是引导骨再生技术所急需的特性。</span></p><p><span style="color:rgb(14, 23, 50);font-weight:bold">从牙齿到骨骼：一条技术路线</span></p><p><span style="color:rgb(0, 0, 0)">这并非埃尔沙卡维团队第一次利用角蛋白进行人体结构修复。早在 2025 年，他们在《先进医疗材料》上发表的研究瞄准的是人体最坚硬的组织——牙釉质。</span></p><p><span style="color:rgb(0, 0, 0)">牙釉质一旦磨损不可再生，传统补牙材料容易因为热胀冷缩系数不同而出现微渗漏。当时，团队利用角蛋白在水环境下的自组装特性，开发了一种能引导纳米晶体定向生长的涂层，试图让牙齿实现某种程度的“自我修复”。</span></p><p><span style="color:rgb(0, 0, 0)">从微观的牙釉质矿化，到宏观的骨骼支架重塑，这条技术路线的逻辑是一贯的：利用天然生物大分子的结构特性，去引导人体组织的有序再生。</span></p><p><span style="color:rgb(0, 0, 0)">除了临床性能，这项研究还有一个现实层面的吸引力：成本与可持续性。</span></p><p><span style="color:rgb(0, 0, 0)">胶原蛋白的提取纯化工艺复杂，成本高，且受限于动物来源。相比之下，全球畜牧业每年产生数以吨计的劣质羊毛，对农场主来说是处理负担，对环境是压力。如果能通过相对简单的水溶性工艺将这些废毛转化为医用材料，不仅原料几乎无限且廉价，还能大幅降低医疗耗材的成本。</span></p><p><span style="color:rgb(0, 0, 0)">对于患者而言，这意味着未来或许能用更低的价格，获得性能更稳定、甚至优于传统材料的骨骼修复方案。这种从农业废料到高值医疗材料的跨越，或许正是未来生物材料发展的一个缩影：不再一味追求合成材料的昂贵与复杂，而是回归自然，在废弃之物中寻找再生的秩序。</span></p><p><span style="color:rgb(178, 178, 178)">参考链接：</span></p><p><span style="color:rgb(178, 178, 178)">https://www.kcl.ac.uk/news/scientists-turn-wool-into-sustainable-material-for-bone-repair</span></p><p><span style="color:rgb(178, 178, 178)">注：封面/首图由 AI 辅助生成</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef305bbff0099ee58f0499?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69ef305bbff0099ee58f0499?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

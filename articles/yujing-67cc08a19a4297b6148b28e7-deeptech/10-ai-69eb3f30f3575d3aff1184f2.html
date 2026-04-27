@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AI算力的尽头，是一块会变形的板子</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>AI算力的尽头，是一块会变形的板子</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Fri, 24 Apr 2026 09:47:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eb3f30f3575d3aff1184f2?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3cRD5U3501eO3GAhIq202bR1.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 0, 0)">芯片是一种矛盾的存在。它极其聪明，能在指甲盖大小的面积上完成数十亿次运算；但也极其脆弱：裸露的硅片薄如蝉翼，怕摔、怕热、怕灰尘，甚至怕空气中的水分。一颗芯片从晶圆上切割下来后，如果不加保护直接使用，大概撑不过几分钟。</span></p><p><span style="color:rgb(0, 0, 0)">这就是“封装”（packaging）存在的意义。封装主要帮芯片解决三个问题：第一是保护，给脆弱的硅片穿上一层“铠甲”，让它能在真实世界中存活；第二是供电与连接，芯片需要电力才能工作，也需要和外界交换数据，封装要把电源和信号通路从电路板一路接到芯片内部数以亿计的晶体管上；第三是散热，芯片运算时产生的热量惊人，如果散不出去，芯片会降频甚至烧毁。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2nF1Sv1MNCMx2HGtTH3BPs82.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">（来源：Mckinsey）</span></p><p><span style="color:rgb(0, 0, 0)">但如今，每一个问题的解决都变得越来越难。</span></p><p><span style="color:rgb(0, 0, 0)">过去几十年，摩尔定律一直引领半导体产业向前。晶体管不断缩小，同样面积的芯片能塞进更多计算单元，性能持续翻倍。可最近几年，先进制程的研发成本呈指数级上升，台积电 3 纳米的一次流片费用已超过数亿美元；物理极限也在逼近，当晶体管栅极宽度只有几个原子尺寸时，量子隧穿效应开始干扰，漏电问题几乎无法根治。</span></p><p><span style="color:rgb(0, 0, 0)">于是，行业把目光投向了另一个方向：</span><span style="color:rgb(171, 25, 66)">与其把所有功能硬塞进一块芯片，不如把多块芯片用更精巧的方式组装在一起，让它们协同工作，仿佛一颗更大的芯片。</span><span style="color:rgb(0, 0, 0)">这就是先进封装（Advanced Packaging）的核心思路。</span></p><p><span style="color:rgb(0, 0, 0)">台积电的 CoWoS（晶圆级芯片堆叠封装）和 HBM（高带宽内存）的堆叠封装就是一个典型例子。英伟达每一代 AI GPU 都在用更大面积的 CoWoS 中介层，把更多 HBM 颗粒拉到 GPU 身边，靠封装层面的互连密度和带宽来"喂饱"算力。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2a1iJ521CaOy3i1PHK1IVJ1q.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图 | CoWoS 先进封装结构示意图。该技术通过在芯片（SoC）和基板（Substrate）之间引入一层硅中介层（Interposer），实现了逻辑芯片与高带宽内存（HBM）的极高密度互连。这种“三明治”结构能显著缩短信号传输距离，提升 AI 加速器的带宽并降低功耗。（来源：AnySilicon）</span></p><p><span style="color:rgb(0, 0, 0)">正因如此，先进封装在过去几年被寄予厚望，被视为“接棒摩尔定律”的关键路径，对人工智能发展至关重要。英伟达先进技术集团总监 Sandeep Razdan 在今年 iMAPS（国际微电子组装与封装学会）大会上明确表示：</span><span style="color:rgb(171, 25, 66)">“今天真正驱动性能的，不再是每块 GPU 有多少万亿次浮点运算能力，而是系统架构和系统整体性能。”</span></p><p><span style="color:rgb(0, 0, 0)">当系统架构成为性能驱动力时，封装就不再是芯片设计完成后的“收尾工作”，而是性能方程式本身的一部分。基板的选择、键合界面的质量、散热路径的设计，甚至工艺步骤的先后顺序，都会直接决定最终能做出什么样的产品。可问题在于，先进封装自身也正在撞墙。</span></p><p><span style="color:rgb(0, 0, 0)">今年 iMAPS 大会上反复出现的一个关键词是“翘曲”。这个看似简单的机械问题，正成为先进封装的头号难题。</span><span style="color:rgb(171, 25, 66)">翘曲的本质，是封装内部不同材料之间的热膨胀系数不匹配。</span><span style="color:rgb(0, 0, 0)">专家解释，先进封装的堆叠结构里同时用了好几种聚合物，它们各自有不同的玻璃化转变温度，当温度越过其中任何一种材料的临界点时，该材料的硬度会急剧下降、热膨胀系数陡然升高，翘曲也随之加剧。</span></p><p><span style="color:rgb(0, 0, 0)">更麻烦的是，翘曲并不是一个孤立的问题。它会传导到后续的每一个工艺步骤：基板翘了，芯片就贴不平，对准精度就会下降；对准出了偏差，键合良率就掉下来；良率一掉，成本就扛不住。当封装尺寸还比较小的时候，翘曲勉强可以通过工艺调整来补偿，但当模组尺寸持续增大，AI 芯片的封装面积已经逼近光罩极限。一点点弯曲，就可能引发系统性的良率问题。</span></p><p><span style="color:rgb(0, 0, 0)">为了应对翘曲，行业把目光投向了三个方向：底层基材、互连方式和空间架构。</span></p><p><span style="color:rgb(171, 25, 66)">首先是底层基材的替换，传统的有机塑料基板在高温下极易发生热胀冷缩，是导致封装翘曲的元凶。</span><span style="color:rgb(0, 0, 0)">为了应对这一问题，行业将目光投向了玻璃。玻璃的优势显而易见：绝对平整、尺寸稳定，且热膨胀系数与上层的硅片极其接近。有工程师指出，作为封装载体，玻璃能将翘曲控制在远优于有机材料的水平。</span></p><p><span style="color:rgb(0, 0, 0)">但玻璃也带来了新问题：它是脆性材料。微裂纹、边缘崩损、搬运过程中的碰撞，都可能导致不可逆的损伤。有厂商甚至专门开发了一种摆锤冲击测试来评估玻璃载体的边缘韧性，因为他们发现传统测试方法无法充分捕捉真实搬运条件下的边缘损伤。</span></p><p><span style="color:rgb(0, 0, 0)">如果玻璃载体需要回收重复使用，微小缺陷还会随时间累积，在某次工艺中突然失效。也有专家提醒，玻璃面板越大，翘曲和残余应力越大，而且这种应力是累积性的。换句话说，玻璃解决了一类问题，却带来了另一类问题。</span></p><p><span style="color:rgb(171, 25, 66)">其次是互连方式的升级，行业开始迈向混合键合（Hybrid Bonding）。</span><span style="color:rgb(0, 0, 0)">如果说玻璃解决的是“地基”问题，混合键合解决的就是“通路”问题。它彻底抛弃了传统的金属凸块焊锡，直接让两块芯片表面的铜和铜在微观尺度下熔合连接。这是目前能实现最高互连密度的路径，对于渴求极致带宽和极低延迟的 AI 芯片而言几乎不可替代。</span></p><p><span style="color:rgb(0, 0, 0)">但这项技术正面临两头夹击的微妙困境。在键合间距大于 5 微米时，良率主要取决于环境够不够干净；可一旦间距缩小到 2 至 3 微米以下，游戏规则就变了。极高的铜密度带来了巨大的机械应力，铜的热膨胀与周围介电质层的束缚形成拉锯，导致失效机制从“微尘污染”突变为“应力撕裂”。</span></p><p><span style="color:rgb(0, 0, 0)">同时，它对污染的极度敏感依然存在——由于是纯刚性界面对接，没有任何有机材料提供柔性缓冲，一颗纳米级灰尘就可能顶起整个界面，报废大片晶圆。工程团队面对的，不再是可以集中火力攻克的单一难题，而是污染与应力高度耦合的死结。</span></p><p><span style="color:rgb(171, 25, 66)">最后是空间架构的翻转：探索背面供电（Backside Power Delivery）。</span><span style="color:rgb(0, 0, 0)">随着芯片正面布线密度的饱和，工程师们开始采用“背向出线”的策略：把原本拥挤在芯片正面的电源网络转移到硅片背面，将正面空间完全留给数据信号。</span></p><p><span style="color:rgb(0, 0, 0)">但这也让制造工艺逼近了物理操作的极限。为了把电源引出，原本坚固的硅片需要被研磨到极薄，通常只剩 5 微米（不到头发丝直径的十分之一）。如此极端的减薄，对底层的临时键合材料提出了严苛要求：键合胶厚度的任何微小偏差，都会直接传导为硅片研磨后的厚薄不均，这对 HBM 等堆叠存储芯片是致命的。此外，解键合后若清洗不彻底，残留物又会在后续工序中化身为新的良率杀手。</span></p><p><span style="color:rgb(0, 0, 0)">可以说，先进封装正在变成一部“累积的机械历史”。每一步工艺都在往系统里注入应力和不确定性，每一步的误差都在蚕食下一步的工艺窗口。用一位专家的话来讲：</span><span style="color:rgb(171, 25, 66)">“每一步都会引入某种应力，你必须确保这一步产生的应力不会大到让下一步无法继续。”</span></p><p><span style="color:rgb(0, 0, 0)">虽然目前阶段，以上问题的讨论主要发生在台积电、英伟达、Amkor、ASE 这些处于技术前沿的公司之间。但对于正在全力追赶先进封装的中国大陆企业来说，同样值得认真审视。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/44mK4G2a1J2V2ONixn2o2Rgy.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图 | 全球主要半导体封装与测试服务商（来源：techovedas）</span></p><p><span style="color:rgb(0, 0, 0)">过去两年，在算力需求爆发与供应链自主可控的驱动下，长电科技、通富微电、盛合晶微等本土厂商正加速产能爬坡。然而，面对愈发收窄的试错窗口，追赶者面临的挑战不仅是市场开拓，更是严苛的技术跨越。据行业预测，全球先进封装市场将在未来五年突破千亿美元大关，但国内厂商在核心的 2.5D/3D 高端市场份额依然有限。</span></p><p><span style="color:rgb(0, 0, 0)">外部竞争的标杆正在被以台积电为首的头部企业大幅拔高。供应链最新数据显示，台积电预计到 2026 年底其 CoWoS 月产能将提升至 15 万片晶圆当量，仅英伟达的新一代架构就锁定了绝大部分份额。先进封装已不仅是制造的末端环节，而是真正开启了"代工 2.0"时代。</span></p><p><span style="color:rgb(0, 0, 0)">这种快速推进也放大了前文提到的工程系统性难题。当封装尺寸逼近极限、混合键合间距进入亚微米级，国内企业试图快速跟进时，直面的不再是单一互连密度的比拼，而是极度复杂的物理学与热力学挑战。</span></p><p><span style="color:rgb(0, 0, 0)">台积电十余年沉淀的材料交互数据与热历史模型，构成了其坚实的护城河。追赶者不仅要攻克基板微裂纹、临时键合残渣等单步工艺痛点，更要在庞大的堆叠结构中控制翘曲放大和应力累积，避免误差传递导致的系统性良率问题。</span></p><p><span style="color:rgb(0, 0, 0)">与此同时，这种技术热潮在不同应用场景中展现出明显的分层。</span><span style="color:rgb(171, 25, 66)">围绕超大尺寸封装和面板级加工的探索，几乎完全由 AI 与高性能计算强力驱动；而在对长期可靠性要求极高的汽车电子等领域，传统的成熟方案依然占据主导。</span><span style="color:rgb(0, 0, 0)">这意味着国内封测企业在路径选择上需要更精细的商业判断，在有限资源下，针对不同下游市场采取差异化策略，而非盲目追逐所有前沿概念。</span></p><p><span style="color:rgb(0, 0, 0)">无论是站在前沿的拓荒者，还是奋力追击的本土企业，最终的考验都在于谁能率先在材料、结构与热历史的复杂博弈中，将良率稳定在具备商业竞争力的水平上。这是一道极其艰难的系统集成必答题，而留给追赶者摸索工艺窗口的时间，正在飞速流逝。</span></p><p><span style="color:rgb(178, 178, 178)">参考链接：</span></p><p><span style="color:rgb(178, 178, 178)">1. https://semiengineering.com/advanced-packaging-limits-come-into-focus/</span></p><p><span style="color:rgb(178, 178, 178)">2.https://www.mckinsey.com/industries/semiconductors/our-insights/advanced-chip-packaging-how-manufacturers-can-play-to-win</span></p><p><span style="color:rgb(178, 178, 178)">注：封面/首图由 AI 辅助生成</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eb3f30f3575d3aff1184f2?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69eb3f30f3575d3aff1184f2?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

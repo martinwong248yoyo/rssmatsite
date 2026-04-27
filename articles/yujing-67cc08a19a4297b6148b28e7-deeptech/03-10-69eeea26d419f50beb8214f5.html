@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>对话许华哲：进家的机器人，先做好这10件事</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>对话许华哲：进家的机器人，先做好这10件事</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Mon, 27 Apr 2026 04:25:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eeea26d419f50beb8214f5?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1H35Ky18OUqJ36PKWG1f3Czh.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 0, 0)">2026 年 2 月，许华哲从他参与创办的星海图（Galbot）正式离开，开启一段新的创业——破壳机器人，切入具身智能的 C 端赛道，目标是走进家庭。</span></p><p><span style="color:rgb(0, 0, 0)">此前，许华哲是星海图首席科学家兼联合创始人，也是清华大学交叉信息研究院助理教授、具身智能实验室负责人。他在伯克利拿到博士学位，在斯坦福做博士后，他和团队提出的 3D Diffusion Policy（DP3）已成为业内被广泛采用和扩展的 3D 视觉模仿学习架构之一。</span></p><p><span style="color:rgb(0, 0, 0)">“让机器人做一道松鼠鳜鱼” 是他在多次公开场合提到的终极设想：从处理活鱼、改刀到油炸、摆盘，复杂的物理交互几乎是验证机器人智慧程度最好的指标。但在破壳的产品路线上，他不会上来就做松鼠鳜鱼，而是先做 10 件事：物体传递、收纳、一定程度的清洁……这些看起来不够酷，却是他认为进家的机器人必须先做透的事。</span></p><p><span style="color:rgb(0, 0, 0)">从首席科学家到 CEO，他的体感是“干得很痛快，每天要干非常多事情”。他也第一次自己去看办公室的朝向、算楼层的租金、招自己原本不太懂的岗位。</span></p><p><span style="color:rgb(0, 0, 0)">我们聊了聊他为什么在 2026 年选择进家、为什么是 10 件事而不是追求完全泛化、数据从哪里来、规模化强化学习和在线学习这两件“今年想做的大事”具体意味着什么，以及他从科学家到创业者身份转变里那些具体又琐碎的体验。</span></p><p><span style="font-style:italic;color:rgb(178, 178, 178)">以下是对话实录，为方便阅读，做了不改变原意的编辑。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">你之前其实有很多不同方向的选择。星海图做得很快、估值也起来了，你原本可以继续留在那里做通用的具身大脑。当初决定单独出来做 TO C，最核心的触发点是什么？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">这件事我是从两个层面来考虑的。</span></p><p><span style="color:rgb(0, 0, 0)">首先从商业上，TO C 本身就是一个非常有吸引力的市场。古往今来，那些伟大的品牌很多都是 TO C 的，我们日常生活里用到、看到的品牌，绝大部分都面向个人消费者。它天然是一个巨大的市场。</span></p><p><span style="color:rgb(0, 0, 0)">更重要的是从 AI 的视角去看这件事。机器人最缺的是什么，大家其实已经有定论了，那就是数据。那什么数据好？肯定是丰富的、多样的数据才是最好的数据。什么地方有这样的数据？一个答案很显然：有熵增的地方。一个地方自动变得混乱，才会丰富；如果一个地方一直规规矩矩、没有变化，那数据就是固定的、固化的，就没什么意义。</span></p><p><span style="color:rgb(0, 0, 0)">那什么地方有熵增？有活物的地方，有人的地方。这给了我们一个很好的启示：</span><span style="color:rgb(171, 25, 66)">家里面，很有可能是最丰富的数据来源。</span></p><p><span style="color:rgb(0, 0, 0)">所以我的结论是：从商业上，它是一个巨大的市场；从 AI 上，它是一个非常好的数据来源，或者说 AI 最终的落地点。基于这两点，我们决定从 TO C 开始。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">那为什么是现在？2026 年这个时间点，在你看来有什么特殊的？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">如果你把“为什么要进家“和“为什么是在 2026 年进家”分成两个问题，前面那个回答的是价值判断，后面这个其实是时机判断。</span></p><p><span style="color:rgb(0, 0, 0)">时机上，大模型、AI 的能力已经出现了一个跃迁，和五年前、十年前，甚至三年前都不同。我们看到人工智能几乎可以做所有的事情，这是一个很显然的事实。整个行业对“机器人能不能做通用任务”的预期已经被重新校准过了。在这个节点上做家庭机器人，和两三年前完全是两件事。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">你在最近一次公开演讲里说，破壳要先把 10 件事做透，之后再谈别的。但你过去几年的研究有很多都是在做泛化，比如 ManiWhere、3D Diffusion Policy 等，作为一个一直在追求泛化的研究者，产品上来突然“收敛”到 10 件事，这里面的逻辑是什么？</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/16IF501tQ2u1bRxxC41srWU.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图丨3D Diffusion Policy（来源：</span><span style="color:rgb(178, 178, 178);font-style:italic">arXiv</span><span style="color:rgb(178, 178, 178)">）</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">这其实不矛盾。做这 10 件事，本身也是要泛化的，只是对“泛化”这两个字要做更准确的定义。</span></p><p><span style="color:rgb(0, 0, 0)">我们要做的依然是一个通用的、泛化的模型，只不过到了家里面，不能事事都做。这里面其实有两件事需要区分开：</span></p><p><span style="color:rgb(0, 0, 0)">第一，这 10 件事不是固定点位、固定的 10 件事，而是 </span><span style="color:rgb(171, 25, 66)">10 件通用的事。</span><span style="color:rgb(0, 0, 0)">举个例子，“收纳”本身就很泛化，收袜子是收纳、收衣服是收纳、收玩具是收纳。一个家里每天要收的东西是什么，不完全一样；不同家庭之间更不一样。你如果有一个能泛化的收纳模型，那它就是在做一件通用的事，只不过我们对外把它叫做"收纳"这一件事。</span></p><p><span style="color:rgb(0, 0, 0)">第二，有些事情本身其实很有挑战。你如果真的希望让千家万户用起来，那第一天你肯定不希望机器人去做给老人喂饭、给儿童喂饭这类事，即使技术上能做到，这件事本身也太危险了。类似的，松鼠鳜鱼大家都知道很难，我们不可能说机器人进家的第一件事就是做一道松鼠鳜鱼。</span><span style="color:rgb(171, 25, 66)">这是发展顺序的问题，</span><span style="color:rgb(0, 0, 0)">而不是我们放弃了通用的 Physical AGI。</span></p><p><span style="color:rgb(0, 0, 0)">即使是今天的大模型，我也仍然没办法跟它说一句“你帮我训一个机器人大模型，数据我丢给你”，现在的 GPT 也做不到这件事。我们肯定要在中间找到一个点：一个技术上能做到、又能真正交付给用户、同时不会伤到人的点。10 件事就是这个点。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">可以透露一下这 10 件事里，哪些是比较明确的吗？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">我们确实有一些比较明确的，也有一些比较泛的。</span></p><p><span style="color:rgb(0, 0, 0)">比较明确的，比如</span><span style="color:rgb(171, 25, 66)">家内的物体传递、收纳，以及一定程度的清洁，</span><span style="color:rgb(0, 0, 0)">这些是我们会去明确承诺的。</span></p><p><span style="color:rgb(0, 0, 0)">比较泛的是什么？比如说清洁这件事，家里做过清洁都知道，缝里的脏东西特别难弄，人都很难弄。我不可能上来就说要把这一类最困难的清洁都解决。</span></p><p><span style="color:rgb(0, 0, 0)">更进一步说，产品定义要随着 AI 的发展而发展。我们心里当然有一个列表，但今天不适合把完整列表给出来，因为后续的 AI 发展，几乎不是任何人能完全预判的。你现在锁死 10 件事写在发布会 PPT 上，半年后可能就低估了一部分能力、高估了另一部分。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">刚才你一再提到“家里是最好的数据来源”。但哪怕在你们现在规划的这些相对简单的任务里，每个家庭、每一天的场景都高度多样，一家和另一家的叠衣服不一样，今天和明天叠的衣服也不一样。这种差异，模型侧具体怎么解决？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">这就是我们说的泛化能力。</span></p><p><span style="color:rgb(0, 0, 0)">我自己的看法是，智能其实就两部分：一部分是数据的覆盖，另一部分是模型的插值，或者说模型的内外插，你也可以叫它涌现，因为它太复杂了，有时候连研究者自己都分不清到底是插值还是涌现。</span></p><p><span style="color:rgb(0, 0, 0)">所以我们肯定要尽可能让数据覆盖得足够丰富，数据本身覆盖的面积要足够大；同时，模型在我们的视角里也要用最新一代的模型，让它有足够好的泛化能力。我们会依托世界模型这样的具身基模去做训练。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">回到数据这件事。你之前在公开场合讲过，“完全依赖仿真”是具身智能常见的失败模式之一。那破壳的数据来源具体包括哪些？真实家庭、样板间、人类视频，比例大概是什么样？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">你最终要用到哪儿，你肯定希望数据来自哪儿，所以最主要的数据来源，一定是</span><span style="color:rgb(171, 25, 66)">很多真实的家庭和样板间。</span><span style="color:rgb(0, 0, 0)">这是我们的底盘。</span></p><p><span style="color:rgb(0, 0, 0)">在此基础上，我们强调的是“真实世界”的数据。</span><span style="color:rgb(171, 25, 66)">人类视频会用，真机数据会用，无本体的数据也会用，</span><span style="color:rgb(0, 0, 0)">只要是真实世界里长出来的，对我们都是有价值的。我们不会把希望完全押在纯仿真上，这个路线上前人已经踩过不少坑了。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">模型这边，破壳会自己训练一个从头到尾的模型，还是基于已有的模型做后训练？目前这个模型的初步规划是什么样的？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">当然是自己做自己的模型，这点没有悬念。</span></p><p><span style="color:rgb(0, 0, 0)">初步规划我可以从几个维度简单说一下。第一，我们希望有一个</span><span style="color:rgb(171, 25, 66)">足够大容量</span><span style="color:rgb(0, 0, 0)">的模型，能吃得下现有的具身数据，在这个赛道里，模型吃不下数据是一件很危险的事。</span></p><p><span style="color:rgb(0, 0, 0)">第二，它要有</span><span style="color:rgb(171, 25, 66)">预测能力，</span><span style="color:rgb(0, 0, 0)">学到时间上的表征，这件事本身也很重要。有预测能力，相当于在时序上有表征能力，这是一个模型能不能理解“世界是怎么演化的”最基础的要求。</span></p><p><span style="color:rgb(0, 0, 0)">第三，它要能够</span><span style="color:rgb(171, 25, 66)">适配足够好的后训练，</span><span style="color:rgb(0, 0, 0)">支持短时间的后训练就能快速获得新任务的能力，这和我们前面说的“10 件事之外等你升级”是一个逻辑。这样一个模型，大致是我们想要的世界模型形态。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">在家庭里做“挂衣服”这类任务，是典型的长程任务，它需要开柜门、找衣服、挂衣服，涉及一系列动作。你们会更偏端到端，还是上层规划加底层技能的分层？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">我们肯定还是</span><span style="color:rgb(171, 25, 66)">偏端到端</span><span style="color:rgb(0, 0, 0)">的。分层的路线大家都试过，各有各的问题；从模型发展的方向来看，我们相信端到端仍然是更有长期生命力的那一条。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">你在另一次公开对话里提过，你今年想做两件大事，一件是把强化学习 scale 到上千台机器人。这个在具身智能行业还很少有人真正做起来。这件事对破壳来说，是还在实验室打磨的方向，还是会直接搭载到第一代产品上？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">这件事在公司内部正在做，它最核心的难度是那套</span><span style="color:rgb(171, 25, 66)">分布式系统，</span><span style="color:rgb(0, 0, 0)">如何让一系列机器人像仿真环境一样运转，把真实世界变成仿真环境，然后把它用起来。</span></p><p><span style="color:rgb(0, 0, 0)">这不只是一个算法问题，更多是工程问题。每一台机器人是一个采样器，它们之间要能协同、共享、同步、回流。我们目前还在搭这套系统，小规模的几台机器人上已经跑得比较好了。规模化肯定是要去做的，我们希望在真实场景里去推这个规模化。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">如果真的做 C 端的分布式在线学习，有一些普遍的顾虑可能包括：一台机器人学到的东西能不能让其他机器人变强，模型会不会灾难性遗忘，以及用户数据的隐私。你怎么处理这些问题？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：先说泛化。</span><span style="color:rgb(0, 0, 0)">既然我们做的是“规模化”的强化学习，它本身就是一个</span><span style="color:rgb(171, 25, 66)">共享模型</span><span style="color:rgb(0, 0, 0)">的设定，不是一台机器人一个模型，而是几十台、几百台、几千台共用一个模型。你可以把它想象成一个“共享大脑”。所以根本不存在“一台学到了、另一台没学到”这个问题，它们的数据共同回流，随机打乱采样，是一个多任务的强化学习。</span></p><p><span style="color:rgb(171, 25, 66)">再说隐私，这确实是非常重要的问题。</span><span style="color:rgb(0, 0, 0)">我们自己列了几个维度：</span></p><p><span style="color:rgb(171, 25, 66)">第一，</span><span style="color:rgb(0, 0, 0)">要和用户、场景方有明确的协议，说清楚数据到底能放在哪、不能放在哪。这是一切的前提。</span></p><p><span style="color:rgb(171, 25, 66)">第二，</span><span style="color:rgb(0, 0, 0)">要有明确的提醒。就像智能眼镜一样，它启动的时候要亮灯，让用户知道"我在被拍了、它在工作"。这一点看起来小，但对心理感受非常关键。</span></p><p><span style="color:rgb(171, 25, 66)">第三，</span><span style="color:rgb(0, 0, 0)">工业设计本身要看起来足够亲和，比如不要给人太多攻击性。</span><span style="color:rgb(171, 25, 66)">除了实质上要安全，看起来也要安全。</span><span style="color:rgb(0, 0, 0)">大家的心理感受也很重要。</span></p><p><span style="color:rgb(171, 25, 66)">第四，</span><span style="color:rgb(0, 0, 0)">在结构设计上，它在不工作的时候要能够让人明确地感到“它现在不会侵犯我的隐私”。这可能涉及镜头遮挡、机械臂收起等设计。</span></p><p><span style="color:rgb(171, 25, 66)">第五，</span><span style="color:rgb(0, 0, 0)">打码。如果用户同意数据上传到云，那我们也要做好人脸打码这类工作，不让任何涉及人脸的隐私泄露出去。</span></p><p><span style="color:rgb(0, 0, 0)">这些问题其实在扫地机行业、在早期人脸识别行业都被思考过、解决过。只是在家庭机器人上，我们需要更谨慎地综合考虑这些问题。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">那灾难性遗忘呢？这在大模型里也是一个老问题，在具身智能里被放大了。</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">灾难性遗忘是我们的重点，这其实就是在线学习要解决的问题。</span></p><p><span style="color:rgb(0, 0, 0)">什么叫在线学习？就是当我的模型已经训到一定程度的时候，我能不能来一个新任务，还能越用越好用、越聪明，同时不影响旧的任务？</span></p><p><span style="color:rgb(0, 0, 0)">这件事的做法上有很多路径可以选，但有没有在做这个动作，决定了你这家公司、你这个模型，</span><span style="color:rgb(171, 25, 66)">是否真的有可能落地到一般性的服务场景，</span><span style="color:rgb(0, 0, 0)">因为对 C 端用户来说，你要么就是一个已经定义完善的产品，要么就是一个越用越好用的产品。你不能越用越难用，那样风险就太高了。</span></p><p><span style="color:rgb(0, 0, 0)">所以在线学习这件事，目标就是解决灾难性遗忘。在大模型领域，这件事大家讨论得比较多了；在具身智能领域，讨论还很少，我觉得它在未来一段时间里会成为一个关键命题。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">在操作任务上，过去两年行业主流一直是模仿学习和 VLA，但从去年下半年开始，越来越多团队在模仿学习的基础上叠加真机强化学习来突破成功率的天花板。强化学习正在从运动控制走进操作任务。你怎么看这两者各自的角色？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">模仿学习和强化学习的使命是不一样的，模仿学习学的是</span><span style="color:rgb(171, 25, 66)">先验，</span><span style="color:rgb(0, 0, 0)">学的是这些事情大概怎么做、物理大概怎么变。它是快速起量、把机器人拉到一个基础水平的办法。但模仿学习训完之后，你拿到的一般是 70%–80% 的成功率，做不到 100%。</span></p><p><span style="color:rgb(0, 0, 0)">强化学习是一个更后阶段的事：让它</span><span style="color:rgb(171, 25, 66)">动得足够快、保持泛化性、达到高成功率。</span><span style="color:rgb(0, 0, 0)">这是两个天然很不一样的角色。</span></p><p><span style="color:rgb(0, 0, 0)">同时强化学习还有一个模仿学习没有的好处：它会</span><span style="color:rgb(171, 25, 66)">对数据进行评估、打分，</span><span style="color:rgb(0, 0, 0)">这就是 value function。现有状态是好是坏，它给你一个反馈。这件事非常宝贵，因为它能告诉我们什么是坏的、什么是次优的，而不只是“什么是对的”。这个信号对机器人来说比想象中更关键。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">那你觉得未来一年，强化学习的关键突破会出现在哪些地方？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">有几个比较明显的方向：</span></p><p><span style="color:rgb(171, 25, 66)">第一是规模化。</span><span style="color:rgb(0, 0, 0)"> 之前大家做强化学习做得少、大多是单机的，单机的又不可复用，意义不大。规模化强化学习的价值本质上是让你的采样能力随着机器人数量线性扩展。</span></p><p><span style="color:rgb(171, 25, 66)">第二是多任务。</span><span style="color:rgb(0, 0, 0)">规模化不只是“1,000 台干一件事”，而是“1,000 台干 500 件事”。这里面有调度、有经验分享、有多任务之间的相互促进。</span></p><p><span style="color:rgb(171, 25, 66)">第三是训练的速度和效率。</span><span style="color:rgb(0, 0, 0)"> 原来强化学习为什么在 AlphaGo 身上表现很好、后面一度低迷？因为 AlphaGo 的数据量可以无限试，你可以在围棋里跑几十亿次模拟。但到了机器人身上，你能试的空间变得太大，又很昂贵，用真实机器人去试，所以产出慢。</span></p><p><span style="color:rgb(0, 0, 0)">但现在不一样了。预训练可以给你一个很好的模型，在这个基础上，你的</span><span style="color:rgb(171, 25, 66)">采样空间被极大地“减脂”了，</span><span style="color:rgb(0, 0, 0)">我认为采样空间已经是“几乎正确”了，最后要做的其实是把“几乎正确”变成“正确”。这是一个量级上完全不同的工作量。</span></p><p><span style="color:rgb(0, 0, 0)">所以我觉得强化学习未来会有一个极高的效率去做训练。大家之前对它“缓慢”或者“特别耗数据”的印象，应该会在这一两年里发生比较大的改变。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">把规模化强化学习和在线学习这两件事放在破壳的 roadmap 上，大概什么时候会真正落地到产品上？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">我们希望在</span><span style="color:rgb(171, 25, 66)">一年半到两年</span><span style="color:rgb(0, 0, 0)">的时间周期里，能有相当一部分规模化的部署，能够把机器人用在实际场景里，把数据回流回来，形成真正的闭环。这是一个现实的时间表。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">第一代产品交付的时候，这 10 件事每一件的目标成功率，心里有没有一个大概的标准？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">这件事没有一个具体的数字，和自动驾驶很像——自动驾驶到底是每多少公里、多少英里不被干预才算好？其实也很难说。对一辆自动驾驶车来说，即使它开得比人好，用户也不一定满意。</span></p><p><span style="color:rgb(0, 0, 0)">但我觉得</span><span style="color:rgb(171, 25, 66)">跟人相近的成功率，对机器人来说是必要的。</span><span style="color:rgb(0, 0, 0)">这样大家才会觉得买一个机器人是一件划算的事、是一件真正能给我带来收益的事，而不是一个总是要被监督、被返工的东西。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">如果遇到它无法解决的问题，怎么办？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">这里面有几层设计：</span></p><p><span style="color:rgb(0, 0, 0)">第一，</span><span style="color:rgb(171, 25, 66)">机器人的柔顺控制非常宝贵、非常重要。</span><span style="color:rgb(0, 0, 0)">说白了就是它能不能足够软。因为柔顺控制在一定程度上决定了这个东西会不会打到人、磕到桌子之后会不会出问题。柔顺控制是第一环。</span></p><p><span style="color:rgb(0, 0, 0)">第二，</span><span style="color:rgb(171, 25, 66)">触觉是柔顺控制的前提。</span><span style="color:rgb(0, 0, 0)">只有带着触觉，你才有可能把柔顺控制真正做好。所以我们会在本体上配触觉传感器，挂衣服、整理这类任务会涉及大量柔性物体，对接触力的感知要求非常高，这件事没有捷径。</span></p><p><span style="color:rgb(0, 0, 0)">第三，它要有</span><span style="color:rgb(171, 25, 66)">足够好的理解能力，</span><span style="color:rgb(0, 0, 0)">知道哪些事情“我现在做不了”，也就是说，机器人对任务要有一个</span><span style="color:rgb(171, 25, 66)">内置的分类，</span><span style="color:rgb(0, 0, 0)">有一个“哪些我不应该去做”的判断。这件事本身也是产品安全感的重要来源，</span><span style="color:rgb(171, 25, 66)">一个知道自己边界的机器人，才是一个可以放进家里的机器人。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">你之前在星海图做首席科学家，感觉当时对“做不做 CEO”没有很强的执念。现在自己做带头人，体感上有什么不一样？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">肯定不一样。</span></p><p><span style="color:rgb(0, 0, 0)">做的事情更多了，维度更多了，丰富度也更多。从我个人的角度来讲，成长速度也更快，就跟模型一样，</span><span style="color:rgb(171, 25, 66)">数据的边界就是 AI 的边界；</span><span style="color:rgb(0, 0, 0)">人也一样，处理事情的复杂度在一定程度上决定了你能力的边界。对我来说这是一个很好的体验，做起来也更快乐。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3pnJaz1C8lNQlLg3L4hm0IA.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图丨破壳机器人团队（来源：受访者）</span></p><p><span style="color:rgb(0, 0, 0)">另一方面，一定程度上，看整个大模型行业，很多公司其实都是技术的人在主导，无论是智谱的张鹏，还是月之暗面的杨植麟。在很多技术判断上，在很多投入取舍上，我更可以从自己的、或者说我们几个人讨论出来的技术判断出发去做决策。战略上，就有了更大的灵活度。</span></p><p><span style="color:rgb(171, 25, 66)">这件事对我来说还是意义重大的。</span><span style="color:rgb(0, 0, 0)">每个 OpenAI 都需要一个 Ilya 来给出一些想法，如果 Day 1 没有 Ilya、没有他和几个核心技术骨干，他们也不会往 Scaling Law 这条路上冲。所以在我们这儿，也会更尊重技术的发展规律，去考量各种各样的权衡和取舍。</span></p><p><span style="color:rgb(0, 0, 0)">再简单一点说，就是我觉得很爽，干得很爽。每天要干巨多事情，能把我所有的能量都用出来，</span><span style="color:rgb(171, 25, 66)">这是我特别开心的一件事。</span><span style="color:rgb(0, 0, 0)">之前做 Chief Scientist，更多是做 AI 模型本身，可能还没有把全部的势能释放出来。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">你现在又有教职，又在创业，看你小红书也更新得蛮勤快。清华那边和公司之间，精力大概怎么分配？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">其实在今天这个时代的节点，我们应该看的可能是：</span><span style="color:rgb(171, 25, 66)">我们到底要干成什么事。</span></p><p><span style="color:rgb(0, 0, 0)">你在清华北大也好，你在破壳机器人也好，或是在 OpenAI 和字节跳动也好，最终还是看你干成了什么事。在哪儿，对我来说是一样的。我的精力 100% 投入到 Physical AGI 这件事上面就可以了。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">从科学家到创业公司的一号位，这个切换一般都是“事情变多、琐碎变多”。有没有哪些是你之前完全没预料到、最近真实在处理的困难？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">困难肯定是有的。</span></p><p><span style="color:rgb(171, 25, 66)">第一个困难就是找办公室。</span><span style="color:rgb(0, 0, 0)"> 因为物理世界不可加速。我当 AI 科学家的时候，办公室我到了就已经在那儿了；我不用关心这栋楼和那栋楼哪个更合适、价格怎么样、朝向怎么样、楼层怎么样。但创业最开始，这些事都是我自己去看、自己去比。</span></p><p><span style="color:rgb(0, 0, 0)">它只是一个例子。真正的问题是，创业早期有</span><span style="color:rgb(171, 25, 66)">一大堆具体的、不可加速的、没有杠杆的事情，</span><span style="color:rgb(0, 0, 0)">需要你把自己的时间拉满去做。AI 科学家的工作模式是高杠杆的，一个想法、一篇论文、一个算法可以被无数机器人复用。但找办公室这种事，你时间花一小时就是一小时，没有第二个你。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2M2fTQ394252s4PxU1WhMgO.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">图丨许华哲和他的新办公室（来源：受访者）</span></p><p><span style="color:rgb(171, 25, 66)">第二个是决策维度的变化。</span><span style="color:rgb(0, 0, 0)"> 你考虑的维度肯定变多了一些，毕竟你是一个组织了，不再是一个个体。你要对兄弟们负责，要对跟你一起做事情的人负责，这个责任也就更重了。这个我觉得变化本身不夸张，但它是一种“背景音”，每次做决定都会在身后。</span></p><p><span style="color:rgb(171, 25, 66)">第三个是招人。</span><span style="color:rgb(0, 0, 0)"> 这个地方的困难更多是在判断上。这对所有要招人的人都是不小的挑战，因为每个人都有长板、也有短板，你要在你短的地方招人，但你自己在这个地方很菜，你怎么知道他很强？</span><span style="color:rgb(171, 25, 66)">你的 value function 都不准。</span><span style="color:rgb(0, 0, 0)">这时候就需要更多手段，比如各种快速学习、感受他的气场，用各种方式去做评估。</span></p><p><span style="color:rgb(0, 0, 0)">同时你还要去打动你不熟悉的领域、不熟悉方面的人，这也很有挑战。做 AI 我知道你想要什么卡、哪种型号、多少台；机器人我也知道，你大概想要什么形状的机器人，你想要多丝滑的机器人。但比如做公司还需要 PR，你要理解一个好的 PR 同事到底想要一个怎样的环境、他希望提供什么样的价值，这些东西都要快速去学。</span></p><p><span style="color:rgb(0, 0, 0)">以前你不需要太关心，因为只要做好 AI 就好了。</span><span style="color:rgb(171, 25, 66)">现在你既要懂他，又要打动他，</span><span style="color:rgb(0, 0, 0)">这对我来说还是有挑战的。我们也在快速成长。</span></p><p><span style="color:rgb(171, 25, 66)">DeepTech：</span><span style="color:rgb(0, 0, 0)">最后一个问题。如果我们一年后再坐下来聊，你希望那时候的破壳已经能做到哪些事？</span></p><p><span style="color:rgb(171, 25, 66)">许华哲：</span><span style="color:rgb(0, 0, 0)">我希望到那时候，你能来我的办公室，</span><span style="color:rgb(171, 25, 66)">直接给机器人一些指令，自己体验一下它到底能干什么。</span></p><p><span style="color:rgb(178, 178, 178)">注：封面/首图由 AI 辅助生成</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eeea26d419f50beb8214f5?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69eeea26d419f50beb8214f5?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

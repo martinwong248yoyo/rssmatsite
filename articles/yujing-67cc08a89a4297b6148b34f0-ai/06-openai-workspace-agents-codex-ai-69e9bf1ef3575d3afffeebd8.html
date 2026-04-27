@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>OpenAI Workspace Agents上线：Codex 驱动的AI员工</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 小互AI-公众号</div>
+                    <h1>OpenAI Workspace Agents上线：Codex 驱动的AI员工</h1>
+                    <div class="meta">
+                        <span>小互AI</span>
+                        <span>Thu, 23 Apr 2026 06:19:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e9bf1ef3575d3afffeebd8?channel_id=67cc08a89a4297b6148b34f0">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="color:#3D2E20"><strong>OpenAI 今天把 ChatGPT 里的 GPTs 升级成了 Workspace Agents</strong>，由 Codex 驱动、云上持续运行、能跨工具干活、按时间表或 Slack 消息启动。官方原话是 GPTs 的进化版，以后 GPTs 能一键转成 Agent。</p><p style="color:rgb(61, 46, 32)"><span style="color:rgb(61, 46, 32);font-weight:700">1分钟扫读：</span></p><section><p><span style="color:#C96442;font-weight:bold">•</span><span style="color:#3D2E20">底层换成 Codex 驱动，跑在云端，<span style="font-weight:bold">你下班回家它也能继续干活</span></span></p><p><span style="color:#C96442;font-weight:bold">•</span><span style="color:#3D2E20">从个人 GPT 变成团队资产，一个人搭好，整个组织都能在 ChatGPT 或 Slack 里调用</span></p><p><span style="color:#C96442;font-weight:bold">•</span><span style="color:#3D2E20">支持<span style="font-weight:bold">定时运行</span>（比如每周五自动出报告）和 Slack 触发（消息来了当场接单）</span></p><p><span style="color:#C96442;font-weight:bold">•</span><span style="color:#3D2E20">有自己的工作区，能存文件、跑代码、调用连接的 App、<span style="font-weight:bold">记住学过的东西</span>、多步骤持续推进</span></p><p><span style="color:#C96442;font-weight:bold">•</span><span style="color:#3D2E20">管理员可以控制谁能建、谁能用、能调哪些工具，<span style="font-weight:bold">敏感动作必须先经人批</span></span></p></section><p>【视频】跳转到原文查看</p><h2 style="color:rgb(61, 46, 32);font-weight:700">先搞清楚它跟以前的 GPTs 有什么不一样</h2><p style="color:rgb(61, 46, 32);font-weight:400">你可能听说过或者用过 GPTs，就是 ChatGPT 里那种可以自定义的“小助手”。你给它设定好身份和知识库，然后跟它聊天。</p><p style="color:rgb(61, 46, 32);font-weight:400">GPTs 的问题是：<strong>它只能回答，不能干活</strong>。</p><p style="color:rgb(61, 46, 32);font-weight:400">比如你让一个 GPT 帮你处理客户反馈。它能总结一段文字，能告诉你这个反馈属于哪一类，但它没办法真的替你：</p><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">去公司的群聊里翻一圈最近的消息</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">判断哪些反馈重要</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">开一张工单</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">通知对应的产品经理</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">下周回来跟进</span></p></section><p style="color:rgb(61, 46, 32);font-weight:400">这些事都得你自己做。GPT 只是一个聊天时候蛮聪明的搭档。</p><p style="color:rgb(61, 46, 32);font-weight:400">Workspace Agents 不一样。它真的能把上面这些事，从头到尾自己干完。</p><p style="color:rgb(61, 46, 32);font-weight:400"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/22khvg1pJvEW1o3hWT4DpsmL.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><h2 style="color:rgb(61, 46, 32);font-weight:700">它到底能干什么</h2><p style="color:rgb(61, 46, 32);font-weight:400">举几个 OpenAI 自己内部在用的例子，你一看就懂。</p><p style="color:rgb(61, 46, 32);font-weight:400"><strong>销售 Agent</strong>：自动看销售跟客户的通话录音，把客户情况总结出来，打分，然后在销售代表的邮箱里写好跟进邮件草稿。销售只要检查一下发出去就行。</p><p>【视频】跳转到原文查看</p><p style="color:rgb(61, 46, 32);font-weight:400">一家叫 Rippling 的公司（做企业人力系统的）拿这个做了实验，他们一个销售顾问搭了类似的 Agent。原来销售一周要花 5 到 6 小时做的活，现在每一笔交易都在后台自动跑。</p><p style="color:rgb(61, 46, 32);font-weight:400"><strong>会计 Agent</strong>：月底结账的时候，它自动做分录、对账、差异分析。本来要花好几天的活，几分钟跑完，还会把底层数据和汇总都整理好，方便人去复核。</p><p>【视频】跳转到原文查看</p><p style="color:rgb(61, 46, 32);font-weight:400"><strong>产品反馈 Agent</strong>：24 小时盯着公司的各种反馈渠道，内部群、客服工单、社区论坛。谁抱怨了、谁夸了、谁提了新需求，它都记下来，分类，排优先级，每周给产品经理一份整理好的报告。</p><p>【视频】跳转到原文查看</p><p style="font-weight:400;color:rgb(61, 46, 32)"><strong>IT 审核 Agent</strong>：员工想申请某个软件，跟它说一声，它去对照公司的政策看行不行，能用就批，不能用就告诉你原因，必要时帮你开 IT 工单。</p><p>【视频】跳转到原文查看</p><p style="color:rgb(61, 46, 32);font-weight:400"><strong>周报 Agent</strong>：每周五下午，不用你提醒，它自己去拉数据、画图、写总结，把周报发到你们团队群里。</p><p>【视频】跳转到原文查看</p><p style="font-weight:400;color:rgb(61, 46, 32)">看出来了吧？这些都不是“回答问题”，是<strong>一整段工作</strong>。</p><p style="font-weight:400;color:rgb(61, 46, 32)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1zWmYz1QQZ3Q1lPwU013m3f0.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><h2 style="color:rgb(61, 46, 32);font-weight:700">普通人怎么建一个</h2><p style="font-weight:400;color:rgb(61, 46, 32)">不需要写代码，不需要懂技术。</p><p style="font-weight:400;color:rgb(61, 46, 32)">打开 ChatGPT 侧边栏，点「Agents」，描述一下你想让它做什么，比如“每周一帮我整理上周销售数据出一份周报”，ChatGPT 会一步步引导你：</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/J8c6r2peiF82uhObB2GDLjb.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(201, 100, 66);font-weight:700">1</span><span style="color:rgb(61, 46, 32)">把你说的流程拆成具体步骤</span></p><p><span style="color:rgb(201, 100, 66);font-weight:700">2</span><span style="color:rgb(61, 46, 32)">问你要连哪些工具（比如你的表格、邮箱）</span></p><p><span style="color:rgb(201, 100, 66);font-weight:700">3</span><span style="color:rgb(61, 46, 32)">加一些“技能”让它会做具体的事</span></p><p><span style="color:rgb(201, 100, 66);font-weight:700">4</span><span style="color:rgb(61, 46, 32)">拉着你一起测试，直到跑通为止</span></p></section><p style="color:rgb(61, 46, 32);font-weight:400">也可以直接从模板开始。OpenAI 准备了财务、销售、市场这些部门的现成模板，改一改就能用。</p><p style="color:rgb(61, 46, 32);font-weight:400">搭好之后，它就是你团队的公共资产了。谁都可以在 ChatGPT 里调用，或者拉进团队群聊里，整个团队一起使唤。</p><h2 style="font-weight:700;color:rgb(61, 46, 32)">这些 Agent 是怎么运作的</h2><p style="font-weight:400;color:rgb(61, 46, 32)">有四个特点让它能真正干活，不只是聊天。</p><p style="font-weight:400;color:rgb(61, 46, 32)"><strong>它跑在云上，你下班了它不下班</strong>：传统的 ChatGPT 对话，你关了窗口就没了。Workspace Agent 不是，它住在云端，可以设定每周五早上自动启动，也可以随时接收群聊里的消息开始工作。</p><p style="color:rgb(61, 46, 32);font-weight:400"><strong>它有记忆，有自己的工作桌面</strong>：Agent 会记住上次处理到哪里、你之前怎么纠正过它、这个客户之前提过什么需求。它还有一个“工作区”可以存文件、跑代码、调用连接的工具。</p><p style="color:rgb(61, 46, 32);font-weight:400"><strong>它能连各种工具</strong>：目前已经接入了邮箱、日历、云端文档、团队群聊、CRM、知识库、工单系统、网页搜索这些。你让它发邮件、更新日程、改客户资料、建工单，它都能动手。</p><p style="color:rgb(61, 46, 32);font-weight:400"><strong>它能被训练、越用越聪明</strong>。你在对话里纠正它、给它反馈，它会记住。团队里的人都在用同一个 Agent，它就在不断吸收集体的经验。</p><h2 style="color:rgb(61, 46, 32);font-weight:700">Codex 驱动：给 Agent 加了真动手能力</h2><p style="color:rgb(61, 46, 32);font-weight:400">Codex 原本是 OpenAI 给程序员用的 AI 工具，它跟普通聊天 AI 最大的不一样：不只是告诉你「可以这么做」，而是真的替你动手把事做完。</p><p style="color:rgb(61, 46, 32);font-weight:400">Workspace Agents 把这套能力打开给所有工作流，举几个例子：</p><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">你要一份带图表的周报，Agent 自己去数据库里取数字、画成图、排好版</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">你要更新销售系统里的客户记录，Agent 直接进 HubSpot 或 Salesforce 这类 CRM 把数据改掉</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">同事在群里问了个产品问题，Agent 进公司内部文档库翻答案给他</span></p></section><p style="color:rgb(61, 46, 32);font-weight:400">这里的关键不是 Codex 多能干，而是<strong>门槛消失了</strong>。以前要让 AI 真的做这些活，公司得派工程师花几周做系统对接。现在不用了，你在 ChatGPT 里描述一下流程，它自己把对接搭出来。</p><p style="font-weight:400;color:rgb(61, 46, 32)">聊天模型负责想，Codex 负责做。这是 ChatGPT 第一次有一个完整的执行层。</p><h2 style="color:rgb(61, 46, 32);font-weight:700">跟 GPTs 的根本差别：从「一次对话」变成「一整条流程」</h2><p style="color:rgb(61, 46, 32);font-weight:400">这件事跟升级版 GPTs 不是一回事。</p><p style="color:rgb(61, 46, 32);font-weight:400">GPT Store 开了两年，上面有几十万个 GPT。但你去公司里数一下，真正被团队天天在用、把一段完整工作从头接到尾的 GPT，几乎是零。</p><p style="color:rgb(61, 46, 32);font-weight:400">问题不在 prompt 写得好不好，在 GPT 的<strong>形态从一开始就装不下真实工作</strong>。</p><p style="color:rgb(61, 46, 32);font-weight:400">GPT 的运行单位是「一次对话」。你问一句它答一句，对话关掉，什么都不留。但公司里真正有价值的工作不长这样：处理一条客户投诉，要跨三天、四个工具、两次审批；做一份月报，要拉数据、画图、写分析、发给十个人。这些活 GPT 装不下。</p><p style="color:rgb(61, 46, 32);font-weight:400">Workspace Agents 换的就是这个单位。Codex 驱动 + 云端常驻 + 工作区 + 定时触发，四件事一起到位，结果是从「一次对话」升级成「一整条流程」。</p><p style="color:rgb(61, 46, 32);font-weight:400">官方说的「GPTs 一键转 Workspace Agents」，背后的意思是：旧一代不会长期保留。</p><h2 style="color:rgb(61, 46, 32);font-weight:700">官方给了 5 个现成模板</h2><p style="font-weight:400;color:rgb(61, 46, 32)">进 chatgpt.com/agents/studio/new?from-template 直接抄：</p><div><p>模板</p><p>干什么</p><p>Software Reviewer</p><p>审核员工软件采购请求，对照政策，自动开 IT 工单</p><p>Product Feedback Router</p><p>从 Slack / 支持渠道 / 公共论坛抓反馈，排优先级，出周报</p><p>Weekly Metrics Reporter</p><p>每周五自动拉数据、画图、写摘要、推送给团队</p><p>Lead Outreach Agent</p><p>研究新进 lead、按规则评分、起草个性化跟进邮件、更新 CRM</p><p>Third-Party Risk Manager</p><p>供应商制裁、财务、声誉风险筛查，出结构化报告</p></div><p style="color:rgb(61, 46, 32);font-weight:400">OpenAI 自己三个部门内部都在用：</p><section style="font-weight:400;color:rgb(0, 0, 0)"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>销售组</strong>：从通话笔记和客户研究里提取细节，认证新 lead 资格，在销售代表 inbox 里起草跟进邮件</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>产品组</strong>：Agent 驻在 Slack 频道里，主动回员工问题、链相关文档、发现新 bug 自动开工单</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>财会组</strong>：做月末结账，从日记账分录到资产负债表对账到差异分析，按内部政策生成工作底稿供复核</span></p></section><p style="color:rgb(61, 46, 32);font-weight:400">两个共同点：所有场景都是「团队原本就有的流程」，不是造新工作流；每个场景都至少跨两个工具，在 Slack / CRM / IT / 会计系统之间搬数据。</p><section style="color:rgb(61, 46, 32);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3SvQDm20l0QE4MSBccOefw.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><h2 style="color:rgb(61, 46, 32);font-weight:700">能接到哪些工具里干活</h2><p style="color:rgb(61, 46, 32);font-weight:400">Agent 不只待在 ChatGPT 聊天框里，它能跑到各种工具里干活。目前已经接通的：</p><section style="font-weight:400;color:rgb(0, 0, 0)"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>团队聊天</strong>：Slack(国内类似飞书 / 企微 / 钉钉）</span></p><p><span style="font-weight:bold;color:rgb(201, 100, 66)">•</span><span style="color:rgb(61, 46, 32)"><strong>研发协作</strong>：Atlassian Rovo，Atlassian 是海外做任务系统和团队知识库的公司，Agent 能在里面直接建任务、批量改状态、翻文档（国内最接近的是 TAPD、Teambition）</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>邮箱和日历</strong>：Gmail、Google Calendar、Google Drive 三件套</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>在线文档</strong>：Notion(国内类似飞书文档、语雀）</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>销售客户系统</strong>：Salesforce(国内类比销售易、纷享销客）</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>联网搜索</strong>：Agent 能自己上网查资料</span></p></section><p style="color:rgb(61, 46, 32);font-weight:400"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/jv2En2gxR1fJZcs92XOPhC.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:rgb(61, 46, 32);font-weight:400">除了接更多工具，这次还加了两个新的<strong>启动方式</strong>：</p><section style="font-weight:400;color:rgb(0, 0, 0)"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>定时启动</strong>：设好时间表，Agent 自己按时上班。比如每周五早上 8 点自动开始拉数据、写周报、发群里</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>Slack 里启动</strong>：把 Agent 拉进某个 Slack 频道，同事在频道里发消息、提需求，它当场接单</span></p></section><p style="color:rgb(61, 46, 32);font-weight:400">这个「Slack 里启动」的玩法最好理解。OpenAI 的产品团队就在内部 Slack 里常驻了一个 Agent：员工问「最新版本的 XX 功能怎么开？」，Agent 直接回答，附上文档链接；如果发现是一个没人处理过的新问题，它还会主动开一张工单留底。相当于给团队配了一个 24 小时不下班、查文档不打扰人的新同事。</p><section style="font-weight:400;color:rgb(61, 46, 32)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1QijrQ1wEBMI1baqvt4DUMrm.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><h2 style="color:rgb(61, 46, 32);font-weight:700">控制权全在管理员</h2><p style="color:rgb(61, 46, 32);font-weight:400">企业版客户最在意的那层：</p><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>工具和数据权限</strong>：每个 Agent 只能访问你授权的工具和数据源</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>敏感动作要审批</strong>：改表格、发邮件、加日历前，Agent 必须问你</span></p><p><span style="font-weight:bold;color:rgb(201, 100, 66)">•</span><span style="color:rgb(61, 46, 32)"><strong>使用分析</strong>：每个 Agent 的仪表盘显示运行次数、用户数、最近活动、使用趋势</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>基于角色的管控</strong>：Enterprise 和 Edu 管理员控制谁能建、谁能用、能用什么</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>Prompt injection 防护</strong>：OpenAI 在模型侧内置了防御，防 Agent 被外部内容劫持指令</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>Compliance API</strong>：管理员能看每个 Agent 的配置、更新记录、运行日志</span></p><p><span style="font-weight:bold;color:rgb(201, 100, 66)">•</span><span style="color:rgb(61, 46, 32)"><strong>一键暂停</strong>：出问题管理员直接停 Agent</span></p></section><p style="color:rgb(61, 46, 32);font-weight:400">「soon」的一条：管理员后台能看到全组织的 Agent 清单、使用模式、连接的数据源。</p><p style="color:rgb(61, 46, 32);font-weight:400"><span> <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3qx8922BV8nC3qkfwM2P190w.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><h2 style="color:rgb(61, 46, 32);font-weight:700">谁能用</h2><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>只面向企业版</strong>：ChatGPT Plus 和免费用户用不了，只限 Business / Enterprise / Edu / Teachers</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>研究预览</strong>：不是正式版，功能还在迭代</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>GPTs 迁移没到位</strong>：GPTs 和 Workspace Agents 目前并存，一键转换「soon」</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>入口只有 ChatGPT 加 Slack</strong>：其他工具的原生入口都是 coming soon</span></p><p><span style="font-weight:bold;color:rgb(201, 100, 66)">•</span><span style="color:rgb(61, 46, 32)"><strong>定价不透明</strong>：5 月 6 日后的积分计费，官方还没披露单位价格</span></p><p><span style="font-weight:bold;color:rgb(201, 100, 66)">•</span><span style="color:rgb(61, 46, 32)"><strong>地区限制</strong>：ChatGPT 本身在中国大陆普通账号不可用</span></p></section><h2 style="font-weight:700;color:rgb(61, 46, 32)">怎么入门</h2><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">ChatGPT 侧边栏点 <strong>Agents</strong>，描述你想自动化的流程，ChatGPT 会一步步帮你做成 Agent</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">直接用官方模板起步：chatgpt.com/agents/studio/new?from-template，财务、销售、市场、IT 都有现成模板</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">官方学习资源：OpenAI Academy<sup>[1]</sup> 和 Help Center<sup>[2]</sup></span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)">想试的尽早，5 月 6 日前都不收钱</span></p></section><h2 style="color:rgb(61, 46, 32);font-weight:700">OpenAI 和 Anthropic 赌了两条不同的路</h2><p style="color:rgb(61, 46, 32);font-weight:400">Anthropic 这两年把「AI 员工」拆到了不同形态：Claude Code 在终端，Cowork 在桌面，Claude for Chrome 在浏览器，Claude for Excel / PowerPoint 在 Office 文件里。每一个都是独立的落脚点，对应已经存在的工作界面。</p><p style="color:rgb(61, 46, 32);font-weight:400">OpenAI 这次反过来：不做分布式落脚点，把入口做在 ChatGPT 侧边栏作为唯一主入口，所有流程从这里启动，再让 Agent 去别的工具里干活。</p><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>Anthropic 赌「AI 嵌到你现有的工具里」</strong>：用户在哪干活，Claude 就出现在哪</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>OpenAI 赌「现有的工具被 ChatGPT 统一起来」</strong>：员工打开 ChatGPT，所有流程在这里启动和协调</span></p></section><p style="color:rgb(61, 46, 32);font-weight:400">工程师大概率跟 Anthropic，他们就在终端和浏览器里。普通知识工作者大概率跟 OpenAI，ChatGPT 已经是他们每天打开的第一个窗口。真正的关键分歧在中间一层，产品经理、销售、运营、HR，这些人的工作界面到底在现有 SaaS 里，还是在一个新的「AI 首页」里。OpenAI 显然在赌后者。</p><h2 style="color:rgb(61, 46, 32);font-weight:700">国内对等产品在哪一层</h2><p style="color:rgb(61, 46, 32);font-weight:400">方向一致的国内产品有几个：</p><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>字节扣子 Coze 飞书</strong>：最早做 Agent 平台的中国产品，个人能搭 Bot，企业版有团队协作</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>阿里 + 钉钉 AI 助理</strong>：Agent 平台 + 办公场景集成，绑在钉钉生态里</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>腾讯 + 企微智能体</strong>：走企业微信这条线</span></p></section><p style="color:rgb(61, 46, 32);font-weight:400">但跟 Workspace Agents 比，国内大多产品还停在「升级版 GPTs」这一层，能定义角色、能连几个工具，但「Codex 级别的真执行底座 + 云端持续运行 + 跨工具长流程 + 企业级管控」四件全做齐的不多。办公套件捆绑（钉钉、飞书、企微）是国内的天然优势，执行底座和长流程编排是短板。接下来一年这个差距会不会被追上，是关注点。</p><h2 style="color:rgb(61, 46, 32);font-weight:700">还没被回答的三件事</h2><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>Codex 在非代码流程里的可靠性</strong>。OpenAI 展示的例子都还相对结构化（月末结账、线索评分）。一旦流程更模糊、更长，Codex 跑几步以后能不能稳住，是整个产品叙事的命门。</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>治理在实践中是不是真跑得顺</strong>。权限、审批、审计听起来完备，但一个 Agent 改了 Salesforce 数据、发了客户邮件出事了谁负责？是建它的人、用它的人、还是 IT？企业 SaaS 这些责任链都很清楚，Agent 层还没共识。</span></p><p><span style="color:rgb(201, 100, 66);font-weight:bold">•</span><span style="color:rgb(61, 46, 32)"><strong>积分经济学</strong>。按积分计费的问题在于，员工很难预估一个 Agent 一次跑下来到底烧多少 token。跑一次年底分析可能吃掉一笔不小的钱。CFO 如果看不懂账单、预测不了支出，采购逻辑就不稳。</span></p></section><p style="color:#3D2E20">👉 OpenAI 官方 blog<sup>[4]</sup> | Workspace Agents 产品页<sup>[5]</sup> | Atlassian Rovo × ChatGPT 连接器<sup>[6]</sup> | 9to5Mac 报道<sup>[7]</sup> | 原推文<sup>[8]</sup></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 小互AI-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e9bf1ef3575d3afffeebd8?channel_id=67cc08a89a4297b6148b34f0">https://lingowhale.com/reader/web/69e9bf1ef3575d3afffeebd8?channel_id=67cc08a89a4297b6148b34f0</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

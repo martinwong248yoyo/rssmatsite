@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>因为GPT-image-2，整个互联网都变成了巨大的黑暗森林。</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 数字生命卡兹克-公众号</div>
+                    <h1>因为GPT-image-2，整个互联网都变成了巨大的黑暗森林。</h1>
+                    <div class="meta">
+                        <span>数字生命卡兹克</span>
+                        <span>Thu, 23 Apr 2026 02:08:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e98306c3105209484cb6e3?channel_id=67cc08a19a4297b6148b29c6">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span>昨天，GPT-image-2正式上线了。</span></p><p><span>然后，所有的社群、社媒都玩疯了。</span></p><p><span>甚至，GPT-image-2生成的梗图，一度冲上了微博热搜第一。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/EfeoU2eyWiWvZLqm2v5Tfo.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>就是这张图，为了防止大家误会，我打了巨大的水印。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/StwbQ1xNkXf2TEpnK4pO3qY.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>除了这张图之外，我又看到了很多很多很多，因为搞抽象，因为我们太熟悉了，所以很容易被识别的GPT-image-2生成的假图。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4qwmE138QjKK1KQmw23y4rtC.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/nU8og1SdvG42S84zMs8t9X.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>还有这种级别的照片。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2yuuRF1IOfH32xf9ou1RlAG0.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>甚至还有我朋友鲜虾包，整活生成的微信聊天记录。</span></p><p><span>大家玩的确实很High，但是这一整天，让我忽然觉得，这个世界变成了一座巨大的黑暗森林。</span></p><p><span>昨天早上有一个特别典型的例子。</span></p><p><span>就是昨天大概中午12点的时候，应该是OpenAI在配置Codex模型的时候出了点问题。</span></p><p><span>导致GPT-5.5被泄露了出来。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/262kSZ3c6VLe3HmG1T11lg4I.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>如果是以前，那按照我们群友的德行，几乎都是会立刻打开Codex，然后去体验，然后回到群里来反馈，说，真的上了真的上了类似的这种话。</span></p><p><span>但是昨天中午，我看到的却是让我非常不寻常的一幕。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1YRykit7wi71EHJBf2rKbS.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/mcD4p2LKMOw3EdLIS3Bvkc6.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>然后又确实是因为BUG，所以泄露很快就被OpenAI收回了。</span></p><p><span>然后群友如果迟了一点去看的话，其实会发现，没有GPT-5.5，只有5.4了。</span></p><p><span>群里的氛围直接是这样的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Ays2D1yQo8F2hRgE03BBHlU.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>最抽象的是，我把这个截图发了朋友圈，感叹了一句。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2uvonvh5NIP2GUAWpBRU3R.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>然后，评论区，是这样使的。</span></p><p><span>都说我这两张群里截图也是AI生成的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/a6G1f489QY246xwQ21GYmCK.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>我把这个朋友圈发回到群里，想给大家看看这个神奇的评论区。</span></p><p><span>他们说，我发到群里的这个朋友圈截图，也是AI生成的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4bwyyY20tym8SvqwN4vKI2C.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>猜疑链闭环了。</span></p><p><span>这个世界，终于变成了一个巨大的黑暗森林。</span></p><p><span>还有这张图，猜疑链更甚，昨天讨论的非常的多，因为，已经没有人知道到底是真的还是假的了。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/s3g861gbXUA4hzrydZhnLa.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>甚至我到现在即使拿原图去豆包实测过，我也依然没有办法100%确实是真的还是假的。</span></p><p><span>我知道大家是在玩梗，是觉得好玩，大家本意都是善良的。</span></p><p><span>但，当你们看到这些图片的时候，我不知道你们会不会像我一样，冷汗直冒。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3PZiRA1Kau4yOubPP1KGGPr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/216rKp21wskR3Ml5Sc2rI0cw.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/18YG2s2BIQBl3Zvxf446aeHc.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>还有些更敏感的比如转账截图、银行流水、护照啥的我就不放了。</span></p><p><span>放了我这篇文章我感觉都发不出去了。</span></p><p><span>我觉得因为这个模型的发布，有一个我们一直赖以生存的东西，悄悄的消亡了。</span></p><p><span style="font-weight:bold">就是信任。</span></p><p><span>或者更准确地说，是我相信我看到的东西是真的这件事本身。</span></p><p><span>在GPT-image-2之前，我们每天在互联网上接收信息的时候，有一个默认的底层假设，就是截图是真的，照片是真的，聊天记录是真的。</span></p><p><span>有图有真相，这句话被流传了很久很久。</span></p><p><span>我们不需要花任何精力去怀疑这些东西。</span></p><p><span>看到一张微博截图，我们讨论的是内容本身。</span></p><p><span>看到一张聊天记录，我们关心的是发生了什么事。</span></p><p><span>看到一张新闻图片，我们思考的是新闻本身。</span></p><p><span>这个默认信任，其实就是是整个互联网信息生态运转的基石。</span></p><p><span>很多时候，我们甚至都都不需要意识到它的存在，就像鱼很多时候也并不会意识到水的存在，我们也不会意识到空气这种东西。</span></p><p><span>只有，当它开始消亡的那一刻。</span></p><p><span>我并不是说，我们所有人，就会变得立刻、可以的去怀疑每一张图本身。</span></p><p><span>但，那个怀疑的种子，已经种下了。</span></p><p><span>未来，你看到一张图，但凡有一点点跟你的感觉不符，或者，触发了你的某个PTSD，你的脑海里必定会多出一个声音，这是不是AI生成的？</span></p><p><span>这个声音可能很小，可能只是一闪而过，可它就像种子一样，深深的扎根在那里了。</span></p><p><span>而它，随着AI的继续发展，也只会越来越大，不会越来越小。</span></p><p><span>这就是黑暗森林。</span></p><p><span>那种著名的《三体》里面的黑暗森林法则。</span></p><p><span>宇宙是一座黑暗森林，每个文明都是带枪的猎人。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2zFDTg14ZyceDFZwr2WV7IB.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>在黑暗森林中，最核心的理论，就是猜疑链假设。</span></p><p><span>因为你无法判断对方是善意和恶意的。</span></p><p><span>为了保护自己，你只能先行预设对方是恶意的。</span></p><p><span>就像现在的互联网，我也无法判断信息的背后，那个源头的人，是抱有善意还是抱有恶意，我无法判断，我的最优解，就是先默认不相信。</span></p><p><span>因为，制造假的东西变得太容易了。</span></p><p><span>当造假的成本趋近于零的时候，信任的成本就趋近于无穷大。</span></p><p><span>这是一个非常基本的数学问题。</span></p><p><span>2023年初，ChatGPT爆火的时候，我决定写下自己的第一篇文章，选择开始做一个IP，其实当时思考了非常多。</span></p><p><span>那时候我非常焦虑，因为我不知道在AI时代，什么东西是不会被替代的，我花了很长时间去想这个问题。</span></p><p><span>我最后答案，只有一个词。</span></p><p><span style="font-weight:bold">信任。</span></p><p><span style="font-weight:bold">今年年初我也对外发了一下当时的思考。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1ItbUZ1lzsGl1W9QmgK4uvm.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>当时有三条自己认为是公理的东西，虽然看着非常民科也很扯淡，但，当时确实指导了我后续的一切。</span></p><p><span style="font-weight:bold">1.在AI加持下信息生产的效率呈指数级爆发，而人类消费的效率是恒定或线性增长的。二者之间形成了永久性的、不断扩大的结构性失衡。</span></p><p><span style="font-weight:bold">2.无论信息总量如何爆炸，一个社会在特定时间内的总注意力是一个基本恒定的稀缺资源，一个领域注意力的增加必然意味着另一个领域注意力的减少。</span></p><p><span style="font-weight:bold">3.辨别内容由AI还是人类生成的成本，将系统性地高于该内容本身带来的价值。因此，绝大多数人将从理性上放弃辨别。</span></p><p><span>第三条，在23年跟很多朋友交流的时候，很多人其实还挺嗤之以鼻的。</span></p><p><span>"AI生成的东西这么假，我怎么可能看不出来呢。"</span></p><p><span>可昨天，这一天，在图片领域，终于到来了。</span></p><p><span>而且来的方式，比我想象的还要快，还要彻底。</span></p><p><span>辨别的成本太高了，你花5分钟去验证一张截图是不是真的，结果它可能就是真的，你浪费了5分钟。</span></p><p><span>也可能是假的，但那又怎样呢？你每天要看几百张图，你不可能每张都花5分钟去验证。</span></p><p><span>所以最理性的策略就是，默认一切都可能是假的。</span></p><p><span>或者，默认一切都无所谓真假。</span></p><p><span>所以，当年，我自己由这三条公理推导出的结论，就是：</span></p><p><span style="font-weight:bold">传统的信息筛选因失衡而不可能，因不可辨识而无意义，最终将会失效。我们为了应对有限注意力的挑战，可能唯一的策略就是，放弃筛选信息，转而筛选信息的源头。</span></p><p><span>信任不再附着在信息上。</span></p><p><span>信任附着在人上。</span></p><p><span>这就是我当年想做IP的原因。</span></p><p><span>不止是因为做IP能赚钱，也不止是因为做IP能出名，而是因为在一个真假难辨的世界里，一个你长期关注、长期验证、长期建立了信任关系的活人，是你在信息洪流中唯一可以抓住的锚。</span></p><p><span>23年我做这个公众号的第一天，给自己定了一条底线。</span></p><p><span>真诚是唯一的捷径。</span></p><p><span>这并不所谓的鸡汤。</span></p><p><span>这是我自己，在黑暗森林里的生存策略，也是为了对抗这个操蛋的AI时代，唯一的解法。</span></p><p><span>但说实话，今天，此时此刻，我完全没有任何我三年前就说对了的得意感，我也完全不想炫耀任何东西。</span></p><p><span>一点都没有。</span></p><p><span>我只有一种深深的不安。</span></p><p><span>我不知道互联网的黑暗森林最终会演化成什么样子。</span></p><p><span>我不知道信任的重建需要多长时间，需要什么样的技术，需要什么样的共识。</span></p><p><span>就像现在最主流的识别方案就是加AI水印，显示水印和数字水印，比如C2PA。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/37xTK532qPhH2I2Zhg1H6ffy.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>但去除这些太简单了。</span></p><p><span>就像C2PA，只能证明有这个标签的图是AI的，但不能证明没有这个标签的图就是真的。</span></p><p><span>所以一张没有C2PA标签的图片，你依然无法判断它是真的照片还是被去过标签的AI图。</span></p><p><span>Google有一个叫SynthID的技术，思路稍微不太一样一点，它是直接在图像的像素层面嵌入不可见的水印，理论上这种水印更难去除，这个确实我是目前看到的AI检测效果最好的方式，但是并不兼容其他家，只有Google自己玩。</span></p><p><span>而且在类似reddit的论坛里，依然有很多的攻破方式。</span></p><p><span>坦率的讲，目前没有任何一种技术手段，能够可靠地检测一张图片是不是AI生成的。</span></p><p><span>这就是现实。</span></p><p><span>就像昨天群友在群里发的一段话。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1dMq3N1lDBXkTRTpP3FDQL1.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>那技术不靠谱的时候，我们普通人能做什么？</span></p><p><span>我想了想，能给的建议真的不多，但我觉得每一条都是有用的。</span></p><p><span style="font-weight:bold">1. 截图不等于证据，这个观念，需要从今天开始刻进脑子里。</span></p><p><span style="font-weight:bold">2. 传播任何图片之前多停三秒钟。</span></p><p><span style="font-weight:bold">3. 关注信息的源头，而不是信息本身。</span></p><p><span>最后，如果非要说一句话。</span></p><p><span>我只能说，在这个黑暗森林里，做一个值得被信任的人。</span></p><p><span>这可能是我们唯一能做的事。</span></p><p><span>也可能是，最重要的事。</span></p><p><strong><strong><strong><span><span>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。</span></span></strong></strong></strong></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 数字生命卡兹克-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e98306c3105209484cb6e3?channel_id=67cc08a19a4297b6148b29c6">https://lingowhale.com/reader/web/69e98306c3105209484cb6e3?channel_id=67cc08a19a4297b6148b29c6</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

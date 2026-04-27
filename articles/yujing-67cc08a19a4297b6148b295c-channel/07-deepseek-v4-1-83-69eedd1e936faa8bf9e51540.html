@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DeepSeek V4永久降价！缓存命中再打1折，实测编程成本骤降83%</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 量子位-公众号</div>
+                    <h1>DeepSeek V4永久降价！缓存命中再打1折，实测编程成本骤降83%</h1>
+                    <div class="meta">
+                        <span>量子位</span>
+                        <span>Mon, 27 Apr 2026 03:47:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eedd1e936faa8bf9e51540?channel_id=67cc08a19a4297b6148b295c">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="color:rgb(34, 34, 34);font-weight:400">DeepSeek两天连续两次降价！</p><p style="font-weight:400;color:rgb(34, 34, 34)">输入输出2.5折的基础上，命中缓存的输入<span style="font-weight:bold;color:rgb(0, 153, 127)">折上折</span>再打1折。</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2jD3PuRGFta2IbARk4FbNRS.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">划重点了，输入缓存的折扣没有规定时限哦～</p><p style="color:rgb(34, 34, 34);font-weight:400">DeepSeek研究员陈德里也确认，<span style="color:rgb(0, 153, 127);font-weight:bold">输入缓存是永久降价</span>，还打上了AGIforEveryone标签。</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4xugcw4vpZGa2x3kW0319fBk.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">有学者表示，这将彻底改变人们处理AI记忆的方式。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3jXELo2qgA0z3LxC5S276w.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">原来发布时候的<span style="color:rgb(0, 153, 127);font-weight:bold">“迈入百万上下文普惠时代”</span>是这个意思啊？</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/U2oyOwAJjC46RxiJ3BBoeu.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">那么打折后到底省了多少钱？</p><p style="color:rgb(34, 34, 34);font-weight:400">只能说，<span style="color:rgb(0, 153, 127);font-weight:bold">比表面看起来还要更多</span>。</p><h2 style="color:rgb(34, 34, 34);font-weight:bold">实测编程整体节省83%</h2><p style="font-weight:400;color:rgb(34, 34, 34)">首先，Agent编程任务场景下，<span style="color:rgb(0, 153, 127);font-weight:bold">输入的比例远高于输出</span>。</p><p style="font-weight:400;color:rgb(34, 34, 34)">而且DeepSeek的缓存优化本来就做得好，<span style="font-weight:bold">V</span><span style="color:rgb(0, 153, 127);font-weight:bold">4-Pro的输入缓存命中率约95%，V4-Flash约91%</span>。</p><p style="font-weight:400;color:rgb(34, 34, 34)">也就是说，<span style="color:rgb(0, 153, 127);font-weight:bold">真实花费的绝大部分token，都是按输入（命中缓存）计算的</span>。</p><p style="color:rgb(34, 34, 34);font-weight:400">在这一点上，V4-Pro每百万token只比V4-Flash贵了0.5分钱。</p><p style="color:rgb(34, 34, 34);font-weight:400"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1rYGVn2EVEGLHs4qCrwzC7.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3n2BTXofzqs3DcZ3f35JWno.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="font-weight:400;color:rgb(34, 34, 34)">此前量子位测试消耗约3500万token，花费31.73元。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Txu7e13dHvu2vmvQB19hZ6L.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">把数据发给DeepSeek，让他计算一遍，与真实花费相差无几。</p><p style="font-weight:400;color:rgb(34, 34, 34)">但是！</p><p style="color:rgb(34, 34, 34);font-weight:400">按照打折后的新价格计算，只需要花5.34元了。</p><p style="color:rgb(34, 34, 34);font-weight:400"><span style="color:rgb(0, 153, 127);font-weight:bold">整体节省约83%</span>，只花打折前17%的成本，就能获得同样的产出。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/gvp3i2jws1R4fX7bm3WmWeT.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">实际测试打折后消耗了1300万的V4-Pro token。</p><p style="color:rgb(34, 34, 34);font-weight:400">缓存命中率稍有提升到了约96%，输出token的占比与打折前测试的也差不多。</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/238Zu12xSsly16HNIacoSJg.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">实际使用1300万token，花费2.36元，也基本符合计算结果。</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2hh5EYBW0y82zQtWWzalH0.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><h2 style="font-weight:bold;color:rgb(34, 34, 34)">价格屠夫回来了</h2><p style="font-weight:400;color:rgb(34, 34, 34)">降价引发行业震动，DeepSeek不是第一次干了。</p><p style="font-weight:400;color:rgb(34, 34, 34)">这种商业策略与他们的技术理念高度一致，通过底层架构和算法的持续创新来压低模型推理成本，并将这些成本优势迅速转化为市场竞争力</p><p style="color:rgb(34, 34, 34);font-weight:400">早在2024年8月，DeepSeek就给V3降价，引发阿里云、字节等大厂更近，引发第一轮token价格战。</p><p style="font-weight:400;color:rgb(34, 34, 34)">R1发布后，更是通过夜间空闲时段额外打折的方法，让价格战进一步升温。</p><p style="color:rgb(34, 34, 34);font-weight:400">这一次V4在开启价格战，对海外用户的心理冲击力还要更大。</p><p style="color:rgb(34, 34, 34);font-weight:400">如果按美元标价，小数点后有几位都快数不清楚了。</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3HQJIo3fS2h1fIzDA3gCmQu.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">有网友总结，学生和AI初学者、小型企业都将受益匪浅。</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1AOGAO4eoTN1NnoMRxdPAn.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400"><span style="color:rgb(0, 153, 127);font-weight:bold">最后，别忘了那行小字。</span></p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1ISgK5puX5NWJ83E2k5Nyw.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">期待下半年，DeepSeek大规模部署华为算力后，价格还能给大家什么惊喜。</p><p style="color:rgb(34, 34, 34);font-weight:400"><span style="color:rgb(136, 136, 136)">参考链接：</span><span style="color:rgb(136, 136, 136)">[1]https://x.com/deepseek_ai/status/2048440764368347611?s=20</span><span style="color:rgb(136, 136, 136)">[2]https://x.com/victor207755822/status/2048442362800804159</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 量子位-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eedd1e936faa8bf9e51540?channel_id=67cc08a19a4297b6148b295c">https://lingowhale.com/reader/web/69eedd1e936faa8bf9e51540?channel_id=67cc08a19a4297b6148b295c</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

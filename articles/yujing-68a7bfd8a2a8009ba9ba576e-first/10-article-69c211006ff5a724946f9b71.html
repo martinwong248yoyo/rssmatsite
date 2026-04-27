@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>招募开启 | 主动放映，繁荣自己</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / FIRST青年电影展-公众号</div>
+                    <h1>招募开启 | 主动放映，繁荣自己</h1>
+                    <div class="meta">
+                        <span>FIRST青年电影展</span>
+                        <span>Tue, 24 Mar 2026 04:09:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69c211006ff5a724946f9b71?channel_id=68a7bfd8a2a8009ba9ba576e">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2IAUXl3XeVOb5RBQK164M9i.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+   </section> 
+   <section> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3WBOpC9wtbT3ytRhldCWJW.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+   </section> 
+   <section> 
+    <section> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3z6chq2yMz5Y47TybNmzg6p.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/32LknL1WvZAG3w9gwX2H9Lla.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/11KAaeiwHhmegEzo2idU6H.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3hEsH11mIKS2tpHOw4jr101.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4g2iSerV6w82x7Dk92POEPa.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2wxB0B15rdSIYfXoS1nAgnN.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3sOT4328kk4uvo6eztDEtS.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/bjMsp2ISaFS3pyyfsYqCfV.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3p53Ib2y36uPd1IVr1OKwL6.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1v0kGU4C0YDGOSGfk41NSE4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+          <section> 
+           <section> 
+            <section> 
+             <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1AHJswNhdL140Zkh2GOiew.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+            </section> 
+           </section> 
+          </section> 
+         </section> 
+        </section> 
+         
+       </section> 
+      </section> 
+     </section> 
+     <section> 
+      <section> 
+       <section> 
+         
+          
+           
+            
+           
+           
+            
+           
+           
+            
+             
+            
+           
+          
+          
+          
+         
+       </section> 
+      </section> 
+     </section> 
+    </section> 
+   </section> 
+   <section> 
+    <section> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/D8ydk3MdxtO2w3NS9OqYSp.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3y99nz1zGcQ51sqwKC1Bqj96.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+         </section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3wWNwz1FKDsh4wWU1D2rqCGD.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+         </section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1O6xHnx6CxK3kf9cN4gEyUG.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+        
+      </section> 
+     </section> 
+    </section> 
+    <section> 
+     <section> 
+      <section> 
+        
+         
+          
+           
+          
+          
+           
+          
+          
+           
+            
+           
+          
+         
+         
+         
+        
+      </section> 
+     </section> 
+    </section> 
+   </section> 
+   <section> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/42xQZ43QIPCg1B6foG2vot32.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+   </section> 
+   <section> 
+    <section> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/25B8qw3xyNjL3RgL3rZzjZl.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/31Z7X32wf0bm3VmGMo1FTl2S.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+        </section> 
+       </section> 
+        
+      </section> 
+     </section> 
+    </section> 
+    <section> 
+     <section> 
+      <section> 
+        
+         
+          
+           
+          
+          
+           
+          
+          
+           
+            
+           
+          
+         
+         
+         
+        
+      </section> 
+     </section> 
+    </section> 
+   </section> 
+   <section> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3YyxIE3Czx0c34jHg3GIxiW.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+   </section> 
+   <section> 
+    <section> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2mrP1S2jCqXGweUrX2CnUDV.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2etvqX1oAXde2N53z63lAX6M.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+         </section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/119abe2HynTy1XWV4T2C4FX6.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+         </section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1yvvrw2tAHvk2isfT73lHvTg.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+        
+      </section> 
+     </section> 
+    </section> 
+    <section> 
+     <section> 
+      <section> 
+        
+         
+          
+           
+          
+          
+           
+          
+          
+           
+            
+           
+          
+         
+         
+         
+        
+      </section> 
+     </section> 
+    </section> 
+   </section> 
+   <section> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4athZm3NLWQF2aNwi14grEbd.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+   </section> 
+   <section style="color:rgb(160, 160, 160)"> 
+    <span><span><span>20届 FIRST 主动放映主视觉 </span></span></span><span><span><span>Designed by 罗骞</span></span></span> 
+     
+    <blockquote> 
+     <p><span>电影诞生的初期，通过捕捉一次“火车进站”，人类第一次以影像达成了对时间与空间的扭曲与混沌。自此，暗室凝结出一种全新的“公共空间”。</span></p> 
+    </blockquote> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3CqgGi3rOUrk21q4Ir3Oolpz.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+      </section> 
+     </section> 
+     <section> 
+      <section> 
+       <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Yimn31WxTix2kC2Qq1jcCm1.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+      </section> 
+     </section> 
+    </section> 
+     
+   </section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / FIRST青年电影展-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69c211006ff5a724946f9b71?channel_id=68a7bfd8a2a8009ba9ba576e">https://lingowhale.com/reader/web/69c211006ff5a724946f9b71?channel_id=68a7bfd8a2a8009ba9ba576e</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

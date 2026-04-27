@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>2026投海Tech Show专场活动在京圆满落幕｜甲子光年</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 甲子光年-公众号</div>
+                    <h1>2026投海Tech Show专场活动在京圆满落幕｜甲子光年</h1>
+                    <div class="meta">
+                        <span>甲子光年</span>
+                        <span>Thu, 23 Apr 2026 11:53:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ea0ba9c5730139dc8fd7ad?channel_id=67cc08a29a4297b6148b29e8">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2skbeZF7rsMqhbvJ28ypou.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3JDG017roQ1ZkkPC1hBjKC.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section><section><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(123, 127, 131)">4月23日，2026投海Tech Show专场</span></span></strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(123, 127, 131)">活动</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(123, 127, 131)">在中关村国际创新中心举行。</span></span></p></section></section></section></section></section><p><span style="color:rgba(0, 0, 0, 0.9)">4月23日上午，2026投海Tech Show专场</span><span style="color:rgba(0, 0, 0, 0.9)">活动</span><span style="color:rgba(0, 0, 0, 0.9)">在中关村国际创新中心举行。作为第</span><span style="color:rgba(0, 0, 0, 0.9)">20届中国投资年会·年度峰会的重磅组成部分，本次活动由中关村科学城管委会指导、</span><span style="color:rgba(0, 0, 0, 0.9)">中关村科学城公司</span><span style="color:rgba(0, 0, 0, 0.9)">主办、投中信息承办，聚焦</span><span style="color:rgba(0, 0, 0, 0.9)">AI与硬科技两大方向</span><span style="color:rgba(0, 0, 0, 0.9)">。本次亮相展示的</span><span style="color:rgba(0, 0, 0, 0.9)">14 家企业，均源自海淀区 “五方六力” 科技成果转化机制挖掘培育，是具备核心技术壁垒与高成长潜力的优质科创项目。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">没有几十页</span><span style="color:rgba(0, 0, 0, 0.9)">PPT，也没有标准化的BP。这场活动真正的不同，要从台上这些人说起。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">登台的</span><span style="color:rgba(0, 0, 0, 0.9)">14位创始人中，有00后的清华博士、95后的海归设计师、90后的院士弟子，也有80后的“小冰之父”。他们来自清华、北大、北航、北邮等高校院所，带着各自在AI、空天、芯片、</span><span style="color:rgba(0, 0, 0, 0.9)">新材料</span><span style="color:rgba(0, 0, 0, 0.9)">等领域的硬核项目，用最</span><span style="color:rgba(0, 0, 0, 0.9)">直接</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">语言剖析</span><span style="color:rgba(0, 0, 0, 0.9)">自己为什么要做这件事。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/nRngD444JZ72q3q8p4rNg1i.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">14个项目，14种硬核底色</span></span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">在</span><span style="color:rgba(0, 0, 0, 0.9)">AI Tech Show环节，</span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">明日新程</span>带来群体智能平台</span><span style="color:rgba(0, 0, 0, 0.9)">“团子”，能够模拟跨学科专家团队的工作模式来解决复杂问题</span><span style="color:rgba(0, 0, 0, 0.9)">；<span style="font-weight:bold">万象智维</span>聚焦端侧个人智能体，打造随时随地可用的</span><span style="color:rgba(0, 0, 0, 0.9)">AGI产品；</span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">素源矩阵</span>以</span><span style="color:rgba(0, 0, 0, 0.9)">AI4S材料多智能体，<span>赋能新材料</span>研发与生产优化</span><span style="color:rgba(0, 0, 0, 0.9)">；<span style="font-weight:bold">万格智元</span>自研端侧算力引擎，让大模型在消费级设备本地运行；</span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">圆木智能</span>专注于打造工业智能体统一入口，用</span><span style="color:rgba(0, 0, 0, 0.9)">AI赋能工厂转型</span><span style="color:rgba(0, 0, 0, 0.9)">；<span style="font-weight:bold">忆衡生物</span>专注以</span><span style="color:rgba(0, 0, 0, 0.9)">AI4S赋能神经退行性疾病创新药研发。</span></p><section style="color:rgb(62, 62, 62);font-weight:400"><section><section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2R9tgd33dhWC18t8P24syB07.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>李笛 明日新程创始人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3fhMsq2wycn41UjVLDT9BO2.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>王拓为 万象智维CEO</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4w5qEy1v8Pmb2xNIke2XIG4B.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>那荣钰 素源矩阵创始人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1kRuhj3ZenWw23nrk71nMjJc.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>王冠博 万格智元创始人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/32FoB71QDbAZmoqHz1lbDkF.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>姜昌浩 圆木智能创始人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2eQmzJ1Nijoy4C8Qyc3CPrca.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>刘磊 忆衡生物创始人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Gvsun3WYDzH1jKLeg1EQqzQ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>邢若粼 一苇宇航创始人兼CEO</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2HyUeM2PEez9DBi98Wskc6.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>吴晓萱 光子芯力合伙人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/30QFUKWv3qkyeIKh2hlQHZ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>罗屹东 水木元鲲创始人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/30d0Hc3PN3bM1fi1MbAkJSV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>韩碧 星辰道合创始人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2C8nLvLqwTz3wl6u924TrpG.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>王宇峰 芯智睿声联合创始人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Hdddx21hXYw2IDtBx3EJgnt.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>李振坤 德热纳科技创始人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Lr7RA42XOKJ3gDp1I1x0QwD.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>孙方舟 一湃智能合伙人</p></section></section></section></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/33eTpWVYQWElGmRN1nCouw.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>宋知珩 星忆科技创始人</p></section></section></section></section></section></section></section><p><span style="color:rgba(0, 0, 0, 0.9)">在硬科技</span><span style="color:rgba(0, 0, 0, 0.9)">Tech Show环节，</span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">一苇宇航</span>聚焦商业卫星计算系统全栈研发，提供高性能、高可靠、国产化的太空算力解决方案</span><span style="color:rgba(0, 0, 0, 0.9)">；<span style="font-weight:bold">光子芯力</span>研发全波光电融合计算芯片，突破后摩尔时代算力瓶颈；<span style="font-weight:bold">水木元鲲</span>聚焦柔性高熵陶瓷的生产制备，刚柔并济重塑陶瓷边界；<span style="font-weight:bold">星辰道合</span>布局太空态势感知，建设全球首个厘米级碎片编目星座；<span style="font-weight:bold">芯智睿声</span>带来国际首创可穿戴智能人工喉，覆盖多类语言障碍群体，用</span><span style="color:rgba(0, 0, 0, 0.9)">AI还原真实音色；<span style="font-weight:bold">德热纳科技</span>带来全球首创AI赋能4D打印技术，服务人形机器人与低空经济；<span style="font-weight:bold">一湃智能</span><span>为柔</span>性制造行业提供产线级工业具身智能软硬件产品；<span style="font-weight:bold">星忆科技</span>构建具身智能物理数据基础设施，大幅降低真实数据采集成本。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这些项目有一个共同点：成立时间不足两年，但技术壁垒极高。它们不是靠</span><span style="color:rgba(0, 0, 0, 0.9)">BP包装出来的故事，而是海淀源头创新的真实切片。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">不唯文书，不唯图表：一场路演的范式实验</span></span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">活动现场，每位创始人有</span><span style="color:rgba(0, 0, 0, 0.9)">10分钟：3分钟讲自己的成长故事，5分钟以实物、场景、软硬件交互来展示技术，2分钟接受评委提问。这或许正是“投资就是投人”“Anything But BP”的现场答案——不唯文书重技术本色，不唯图表重创始人底色。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">多位投资人在现场交流中表示，这种方式让他们更快地做出判断</span><span style="color:rgba(0, 0, 0, 0.9)">——从过去翻阅大量材料，到如今聚焦创始人和技术本身。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">现场还设置了投票环节，与会投资人和观众现场选出自己最感兴趣的项目。活动尾声，主办方根据投票结果发布了</span><span style="color:rgba(0, 0, 0, 0.9)">“最夯项目大礼包”，为票选出的项目提供10家头部资本深度对接、5家科技媒体专属宣传、5家大企业场景对接、办公空间支持、人才专属服务、企业管家服务等实质性资源。其中，</span><span style="color:rgba(0, 0, 0, 0.9)">星忆科技</span><span style="color:rgba(0, 0, 0, 0.9)">获得最高票数，成为现场最受关注的项目。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">在资本寄语环节，包括星连资本合伙人李文珏、元禾厚望合伙人佘立斌、长石资本创始合伙人汪恭彬、东方富海合伙人王鑫、水木清华校友种子基金管理合伙人王学辉、众为中国合伙人徐薇、水木创投合伙人张静、中信资本董事总经理张予焓</span><span style="color:rgba(0, 0, 0, 0.9)">、</span><span style="color:rgba(0, 0, 0, 0.9)">讯飞创投合伙人徐剑</span><span style="color:rgba(0, 0, 0, 0.9)">在内的多位知名机构合伙人针对当天路演项目给出了市场化建议，从估值逻辑、场景落地到融资节奏，为创业者提供了实实在在的</span><span style="color:rgba(0, 0, 0, 0.9)">“资本视角”反馈。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">来海淀，看未来：一场关于</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">“人”的长期主义</span></span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/c29dcf5d03e4470ba7aaa5f29ccf0a45/20250608091625_1931520659589787648_2536.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这场活动落地的背后，是海淀持续构建的独特创投生态。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/21VIho42Ktwx3sa23937xDfq.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">活动现场介绍了中关村科学城创投生态，进一步强化了海淀作为北京国际科技创新中心核心区的引领地位。海淀正持续建设中关村科学城国际创新服务集聚区，打造全球前沿科技的创投中心，</span><span style="color:rgba(0, 0, 0, 0.9)">为优质项目提供孵化、资本、场景、上市全周期服务</span><span style="color:rgba(0, 0, 0, 0.9)">。</span><span style="color:rgba(0, 0, 0, 0.9)">同时，将依托</span><span style="color:rgba(0, 0, 0, 0.9)">“五方六力” </span><span style="color:rgba(0, 0, 0, 0.9)">科技成果转化</span><span style="color:rgba(0, 0, 0, 0.9)">机制，加速源头创新转化、打通转化堵点难点，推动更多优质科创成果从实验室走向生产线、落地生根见效。在资本赋能上，持续做大做强海淀创投</span><span style="color:rgba(0, 0, 0, 0.9)">“朋友圈”，用好总规模 300 亿元的中关村科学城科技成长基金与成果转化基金，坚持 “投早、投小、投长期、投硬科技” 导向，以耐心资本、长期资本为源头创新和技术突破保驾护航。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">“来海淀，看未来”——这句话的核心，从来不是口号，而是人。是站在台上的这14位创始人，是更多正在实验室里埋头攻关的年轻人。海淀之所以能蝉联“最具投资价值之城”，不是因为它的政策文件写得有多好，而是因为它持续不断地“投资于人，投资于未来”。通过机制创新和资本引航，海淀正在构建一个覆盖项目发现、资本对接、产业落地全流程的创投生态。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这或许正是投海</span><span style="color:rgba(0, 0, 0, 0.9)">Tech Show的意义所在：让资本看懂技术底色，让路演回归创投本质。而海淀，正在用行动证明——最好的投资，是投资于创造未来的人</span><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(123, 127, 131)">（封面图来源：2026投海Tech Show专场）</span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 甲子光年-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ea0ba9c5730139dc8fd7ad?channel_id=67cc08a29a4297b6148b29e8">https://lingowhale.com/reader/web/69ea0ba9c5730139dc8fd7ad?channel_id=67cc08a29a4297b6148b29e8</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

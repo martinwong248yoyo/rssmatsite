@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>速递｜Microsoft收紧GPU供应，小型AI客户等待期或延续至2026年底</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / Z Potentials-公众号</div>
+                    <h1>速递｜Microsoft收紧GPU供应，小型AI客户等待期或延续至2026年底</h1>
+                    <div class="meta">
+                        <span>Z Potentials</span>
+                        <span>Mon, 27 Apr 2026 04:53:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eeecfbc5730139dcc69e52?channel_id=67cc08a19a4297b6148b2969">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/k3K144jWfH2MYR2qPiITX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><em><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3jQOsd2V4BrT1Pco1k3zogPS.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></em></p><p><em><span><span><span><span>图</span></span></span></span><em><span><span><span><span><span>片来源：</span></span></span></span><span style="font-style:italic"><span><span><span>Mike Sullivan</span></span></span></span></span></em></em></p><p>由于 Microsoft 和其他云服务提供商将 GPU 库存调配给其内部团队或更大的云客户，AI 初创公司正面临获取 Nvidia 图形处理器的困境，这迫使小型公司不得不以更高的价格争夺剩余的服务器资源。</p><p>据一些公司的创始人及投资者透露，供应紧缩正在影响那些从红杉资本（Sequoia Capital）、Founders 基金、General Catalyst、Andreessen Horowitz 以及其他主要投资机构筹集资金且资金充足的 AI 初创公司。据一位知情人士透露，这种短缺促使 General Catalyst 的 Hemant Taneja 向创始人们发送了一份调查问卷，询问他们获取算力的能力。</p><p>“我们从你们许多人那里听说，算力——尤其是 GPU 的获取——是你们今年面临的最大瓶颈之一，”Taneja 写道。</p><p>这种动态让人联想到 2023 年初 ，当时云服务提供商从其云服务中收回容量，以支持其内部团队和少数关键客户（如 OpenAI）。包括 Andreessen 和 Index Ventures 在内的风险投资公司最终确保了各自的 GPU 池，以缓解其投资组合公司的压力。</p><p>但与 AI 应用尚处于萌芽阶段的那个时期不同，对 AI <span>编程工具的异常需求加剧了当前的短缺。据云服务公司高管和初创公司创始人透露，<span style="font-weight:bold">随着来自 </span></span><span><span style="font-weight:bold">Anthropic </span></span><span><span style="font-weight:bold">等大型 </span></span><span><span style="font-weight:bold">AI </span></span><span><span style="font-weight:bold">开发商以及编程和其他自动化工具的需求激增，云服务商正在收紧针对小型客户的 </span></span><span><span style="font-weight:bold">GPU </span></span><span><span style="font-weight:bold">供应</span>。</span></p><p>这一次，General Catalyst 正在研究一种方法来帮助其投资组合中的公司获取 GPU，可能通过促成共享算力池或直接代表初创公司进行谈判。</p><p>芯片短缺使得云服务商能够提高租用 NVIDIA 驱动服务器的费用。在一些服务商近期难以通过芯片盈利后，这为云服务商的利润率提供了急需的提振。</p><p>但价格上涨的影响已波及到像 Krea 这样的初创公司，该公司致力于开发图像生成 AI 模型。这家成立四年的初创公司已从 Andreessen 和 Bain Capital Ventures 等投资者手中筹集了 8300 万美元的资金。</p><p>六个月前，在几家云服务提供商为争取这家初创公司的业务而展开激烈竞争后，Krea 签署了一份为期六个月的合同，以每芯片每小时 2.80 美元的价格租用了数百颗 NVIDIA Blackwell 芯片。但联合创始人兼首席执行官 Victor Perez 表示，上个月当这家初创公司开始寻找更多 AI 服务器来从头开始训练模型时，一些云服务提供商的销售代表甚至不接电话了。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2lvwwB3Sd3x6p8M8a1Mwjhg.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><em><span><span><span><span>图</span></span></span></span><em><span><span><span><span><span>片来源：The Information</span></span></span></span></span></em></em></p><p>当销售代表最终回电时，他们告诉他价格已经大幅上涨，除非他签署一份为期三年的承诺协议，否则他们不会与他洽谈。</p><p>“有些公司杳无音信，有些告诉我们没有可用资源，还有些则试图让我们接受条件极差的优惠，”Perez 说道。</p><p>他表示，虽然Krea 正在评估一些集群的报价，但这些集群在几天内就被其他客户抢购一空。</p><p>最终，创始人们达成了一项协议，以每小时3.70 美元的价格续签了为期一年的数百颗 Blackwell 芯片使用合同——这比他们上一次的优惠价格高出了 32%。即便如此，考虑到他从其他供应商那里看到的芯片价格，这个价格似乎仍然很便宜。</p><p>“我们最大的恐惧是无法获得计算资源来运行我们的平台，以及在我们需要训练的地方运行模型，”Perez 说道。“如果价格稍微高一点，并不会让我们陷入绝境。”</p><p>在另一个例子中，一位寻求租用由近 1,000 个 GPU 组成的紧密连接集群的初创公司创始人表示，NVIDIA 的销售人员上周告诉他们，鉴于寻求更多芯片数量的客户众多，很难在最大的云提供商那里找到这样的集群。该创始人表示，他们仍在寻找集群，其租用成本每天将超过 70,000 美元。</p><p><span><span style="color:rgb(2, 30, 170);font-weight:bold">合同续约</span></span></p><p>让初创公司处境雪上加霜的是，<span><span style="font-weight:bold">Microsoft</span></span><span><span style="font-weight:bold">、</span></span><span><span style="font-weight:bold">Amazon</span></span><span><span style="font-weight:bold">、</span></span><span><span style="font-weight:bold">CoreWeave </span></span><span><span style="font-weight:bold">以及其他云服务提供商正做出规模空前的数十亿美元承诺，向 </span></span><span><span style="font-weight:bold">Anthropic </span></span><span><span style="font-weight:bold">和 </span></span><span><span style="font-weight:bold">OpenAI </span></span><span><span style="font-weight:bold">提供大量的 </span></span><span><span style="font-weight:bold">GPU</span></span>。（这些承诺仍不足以缓解 Anthropic 在经历前所未有的增长爆发期时所面临的算力短缺问题 。）</p><p>造成短缺的另一个原因是：许多 AI 初创公司此前签署了两到三年的云服务协议，这些协议现在即将到期，这让云服务提供商有机会向他们推销价格更高的交易，或将这些算力重新分配给其他方。</p><p>该人士称，Azure 销售主管近期告知员工，客户应做好等待期至少持续到 2026 年底的心理准备。</p><p>例如，一家 AI 云服务提供商的 CEO 表示，他们最近计划将一个顾客的 GPU 集群转移给另一位愿意多支付约 30% 费用的顾客，因为原顾客的合同即将到期。但在原顾客恳求保留芯片后，该云服务提供商最终允许他们以更高的价格继续使用这些 GPU。</p><p>与此同时，GPU 云服务商 Lightning AI 的首席执行官 Will Falcon 表示，该公司目前上线了约 40,000 块 GPU，但仍有约 40 家客户积压了约 400,000 块 GPU 的潜在租赁订单。Falcon 指出，这导致价格在过去六个月内上涨了 25% 以上，从每片芯片每小时约 1.60 美元上涨到现在的 2 美元以上，某些情况下甚至更高。（Lightning 的大部分芯片是 Hopper，即 NVIDIA 的上一代芯片。）</p><p><span><span style="font-weight:bold;color:rgb(2, 30, 170)">Microsoft </span></span><span><span style="color:rgb(2, 30, 170);font-weight:bold">的“不使用即收回”政策</span></span></p><p>据一位知情的Microsoft 员工透露，由于大客户和 Microsoft 内部团队的需求激增，公司的 Azure 云计算部门开始限制向小型客户出租服务器的数量。该人士表示，部分小型客户在租用额外 GPU 时，已经面临长达数月的等待。</p><p>Microsoft 长期以来一直将其规模最大的尖端芯片集群预留给 OpenAI 及其内部使用，并且还在为 Anthropic 构建新的集群。对于其他 Azure 客户而言，能否获得 GPU 取决于他们已经在 Azure 云服务上投入了多少资金，以及他们愿意为 AI 服务器投入多少额外现金。</p><p>据知情Microsoft 员工透露，例如，Microsoft 近几个月开始要求希望获取 NVIDIA Blackwell 芯片的顾客承诺租用至少 1,000 颗芯片且租期至少一年，这类合同的费用起步就在数千万美元。</p><p>据该 Microsoft 员工和一位曾尝试预留芯片的顾客透露，顾客在 Azure 上租用哪怕是少量的旧代 NVIDIA 芯片，也必须等待数周或数月。</p><p>该 Microsoft 员工表示，等待时间的长短取决于顾客与 Azure 的现有关系，Azure 根据分层系统对顾客进行优先级排序。获得优先访问权的第 1 梯队顾客包括约 1,000 家云服务支出最大的客户；第 2 梯队顾客支出较少，但规模仍足以让 Microsoft 指派专门的销售代表来管理其账户。第 3 梯队顾客则是规模较小的企业，其关系由 CDW 等 Microsoft 转售合作伙伴管理。</p><p>如果不承诺预留大量GPU，顾客在按需付费模式下租用芯片将面临漫长的等待。据 Microsoft <span>员工透露，<span style="font-weight:bold">在 </span></span><span><span style="font-weight:bold">Microsoft </span></span><span><span style="font-weight:bold">以该模式提供 </span></span><span><span style="font-weight:bold">GPU </span></span><span><span style="font-weight:bold">容量后，会追踪其使用情况，如果顾客让服务器闲置仅几个小时，</span></span><span><span style="font-weight:bold">Microsoft </span></span><span><span style="font-weight:bold">就可能取消其访问权限</span>。</span></p><p>同样，Microsoft 一直在取消部分通过 Microsoft for Startups 计划获得芯片访问权限的公司的 GPU 使用权，该计划为初创公司提供免费额度以租赁服务器。据该 Microsoft 员工透露，Microsoft 已告知这些初创公司，如果他们未能充分利用这些芯片，将失去对 GPU 的访问权限。</p><p><span><span style="font-weight:bold;color:rgb(2, 30, 170)">直接交易？</span></span></p><p>一些初创公司创始人可能会完全绕过云服务提供商。初创公司Collide 的创始人 Collin McLelland 表示，他的公司正考虑花费约 50 万美元购买 NVIDIA GPU 自行运行，因为他已经受够了从大型云服务提供商那里租赁 GPU 所面临的漫长等待时间和种种限制。Collide 去年完成了 1400 万美元的种子轮融资，目前正在为石油和天然气公司开发 AI Agent。他表示，Collide 正在考虑在收到 GPU 后，直接从数据中心公司或云服务提供商处租赁空间来托管这些硬件。</p><p>McLelland <span>表示，<span style="font-weight:bold">虽然短期内购买和安装 </span></span><span><span style="font-weight:bold">GPU </span></span><span><span style="font-weight:bold">的成本明显高于从云服务商处租赁，但他认为为了避免租赁带来的延迟和不确定性，这样做是值得的，并预计与数年的租赁费用相比，购买 </span></span><span><span style="font-weight:bold">GPU </span></span><span><span style="font-weight:bold">的支出会更少</span>。</span></p><p>“当我们需要计算资源却无法获得时，这对我们来说是一个巨大的风险，”他说。“大多数人只是对硬件感到恐惧。我曾拥有过油井，所以对此已经麻木了。”</p><p><span style="font-style:italic;color:rgb(136, 136, 136)">参考资料：</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">https://www.theinformation.com/articles/microsoft-cloud-providers-tighten-grip-gpus-pressuring-ai-customers?rc=jn0pp4</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span><strong><strong><span><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247506405&amp;idx=1&amp;sn=29bdac1ee34aaceade9e66e9b0867d8f&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Rb4gq1Kttj0C6sdJ2kzkXN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></span></strong></strong></span></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247503698&amp;idx=4&amp;sn=ade3fdbb8a82ca59be3212c4843bb1a0&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3tGylYOPsWP3H0UuD3uCS.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247494663&amp;idx=1&amp;sn=8fab67231b9ebc593ac65864fd8f7e00&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Gk8PW1BuRCX32iMfWVNdAr.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/rZlKD3H6UGSB7dB44beqy5.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1xV3SiPYUz63Vrtzu4c8WQ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/28FG1544LRlz14bI5T15sCkZ.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / Z Potentials-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eeecfbc5730139dcc69e52?channel_id=67cc08a19a4297b6148b2969">https://lingowhale.com/reader/web/69eeecfbc5730139dcc69e52?channel_id=67cc08a19a4297b6148b2969</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>人形机器人量产的关键瓶颈，可能是一种几乎只产在中国的材料</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>人形机器人量产的关键瓶颈，可能是一种几乎只产在中国的材料</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Sun, 26 Apr 2026 08:02:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69edc7a1c3105209487e2ab2?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3BcmuYWn7OQCbb5B1RzevK.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span><span><span>很长一段时间以来，人形机器人产业的讨论几乎完全被“大脑”占据。</span></span><span><span><span>VLA</span></span></span><span><span>（视觉</span></span><span><span><span>-</span></span></span><span><span>语言</span></span><span><span><span>-</span></span></span><span><span>动作）模型的训练数据够不够、世界模型什么时候收敛、端到端架构能不能撑住真实环境的泛化。摩根士丹利在</span></span><span><span><span> 1 </span></span></span><span><span>月的一份报告里甚至认为下一轮行业降温会由“实体</span></span><span><span><span> AI </span></span></span><span><span>模型开发的难度凸显”触发。</span></span></span></p><p><span>这些判断可能都对，但它们隐含一个假设：一旦模型跑通，机器人就能造出来。</span></p><p><span><span>可实际情况并不一定如此。因为如果我们从物理层面重新拆解一台人形机器人，会发现决定其产能上限的因素不止算法和算力，还包括每个关节里塞着的一块小磁铁。这块小磁铁就是</span><span style="color:rgb(171, 25, 66)">钕铁硼（</span></span><span><span><span style="color:rgb(171, 25, 66)">NdFeB</span></span></span><span><span style="color:rgb(171, 25, 66)">）永磁铁</span><span>，它是另一个被严重低估的变量。这块材料未来</span></span><span><span><span> 3 </span></span></span><span><span>到</span></span><span><span><span> 5 </span></span></span><span><span>年的供应曲线，或许会比许多人预期的更直接地约束人形机器人能造多少台。</span></span></p><p><span><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/k5Avg3sIleO1qyYHsQXM3P.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></span></p><p><span><span><span style="color:rgb(178, 178, 178)">图丨钕铁硼（</span></span></span><span><span><span><span style="color:rgb(178, 178, 178)">NdFeB</span></span></span><span><span style="color:rgb(178, 178, 178)">）永磁铁（来源：</span></span><span><span><span style="color:rgb(178, 178, 178)">Stanford Magnets</span></span></span></span><span><span><span style="color:rgb(178, 178, 178)">）</span></span></span></p><p><span style="color:#000000">钕铁硼并不是什么新东西。这是一种在 1980 年代被发明出来的稀土永磁材料，主要由钕、铁、硼三种元素构成，磁能积是当下所有商业化磁性材料里最高的，因此也被业内称为“磁王”。</span></p><p><span style="color:#000000">过去 40 年它一直默默工作在我们身边，比如硬盘里的读写头、电梯曳引机、风力发电机的直驱电机、新能源车的驱动电机等产品的背后，都有它的身影。它早就是工业体系里一种成熟的标准件，价格透明，供应稳定，没什么戏剧性。直到人形机器人开始走向量产。</span></p><p><span style="font-weight:bold"><span style="color:rgb(14, 23, 50)">量产爬坡时，短板会从软的地方移到硬的地方</span></span></p><p><span><span style="color:rgb(171, 25, 66)">一个产业从概</span></span><span><span style="color:rgb(171, 25, 66)">念验证走到规模交付，瓶颈会沿着“软—硬”的方向迁移。早期瓶颈在</span></span><span><span><span style="color:rgb(171, 25, 66)"> demo </span></span></span><span><span style="color:rgb(171, 25, 66)">能不能跑通，中期在工程化和可靠性，进入量产爬坡后，瓶颈迅速切到上游物料和制造</span></span><span><span>良率上。新能源车</span></span><span><span><span> 2019 </span></span></span><span><span>年前后经历过一次这样的切换：锂、镍、石墨从大宗商品变成定价权在上游的稀缺资源，车企</span></span><span><span><span> BOM </span></span></span><span><span>结构被彻底重塑。</span></span></p><p><span>人形机器人今年走到同一个拐点。</span></p><p><span><span>据野村证券，特斯拉</span></span><span><span><span> Optimus Gen3 </span></span></span><span><span>已在一季度完成设计冻结，</span></span><span><span><span>8 </span></span></span><span><span>月开始爬坡，全年目标</span></span><span><span><span> 6 </span></span></span><span><span>至</span></span><span><span><span> 8 </span></span></span><span><span>万台；</span></span><span><span><span>Figure AI </span></span></span><span><span>北美产线年产能</span></span><span><span><span> 1.2 </span></span></span><span><span>万台；智元机器人</span></span><span><span><span> 2025 </span></span></span><span><span>年底累计交付</span></span><span><span><span> 5,000 </span></span></span><span><span>台，</span></span><span><span><span>2026</span></span></span><span><span>年目标数万台；中国六家头部企业合计</span></span><span><span><span> 2026 </span></span></span><span><span>年出货能达到 </span></span><span><span><span>11 </span></span></span><span><span>至</span></span><span><span><span> 20 </span></span></span><span><span>万台量级。</span></span><span><span><span>2026 </span></span></span><span><span>年将是单品牌从“百台级跑通工艺”过渡到“万台级稳住良率”的一年，也是产能边界第一次被上游物料推着走的一年。</span></span></p><p><span><span>在这个节奏里，软件和硬件的进展是两条不同形状的曲线。大脑这一侧的进展密度很高，论文每周发、</span></span><span><span><span>benchmark </span></span></span><span><span>每月刷，端到端架构、世界模型、数据工程都有持续的新进展。</span></span></p><p><span>身体这一侧的进展节奏要慢得多，关节怎么出货、磁铁怎么供应、减速器怎么降本，每个季度才更新一次，每次都是百分比级的小幅推进。两条曲线对产业上限都有约束，讨论的注意力天然会落在更新频率更高的那一条上，但节奏更慢的那条，很可能才是真正决定瓶颈的地方。</span></p><p><span><span>拆开一台人形机器人，你会看到几十个独立的运动单元，每一个都由一台电机驱动，每一台电机都有一块稀土磁铁。以特斯拉</span></span><span><span><span> Optimus Gen2 </span></span></span><span><span>的构型为例，</span></span><span><span><span>16 </span></span></span><span><span>个旋转执行器、</span></span><span><span><span>14 </span></span></span><span><span>个线性执行器、</span></span><span><span><span>2 </span></span></span><span><span>只各</span></span><span><span><span> 6 </span></span></span><span><span>个空心杯电机的灵巧手，合计约</span></span><span><span><span> 42 </span></span></span><span><span>个电机。按每台机器人</span></span><span><span><span> 3.5 </span></span></span><span><span>至</span></span><span><span><span>4 </span></span></span><span><span>公斤高性能钕铁硼计算，一台机器人要吃掉相当于一辆新能源车两倍的高性能磁材。</span></span></p><p><span><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/aRQR23u5fo03pA7v43VGiwA.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></span></p><p><span style="color:rgb(178, 178, 178)">图丨特斯拉</span><span><span style="color:rgb(178, 178, 178)"> Optimus Gen2 </span></span><span style="color:rgb(178, 178, 178)">构型（来源：</span><span><span style="color:rgb(178, 178, 178)">Morgan Stanley</span></span><span style="color:rgb(178, 178, 178)">）</span></p><p><span>这个数字本身还不算惊人，惊人的是它潜在的出货规模。</span></p><p><span style="font-weight:bold"><span style="color:rgb(14, 23, 50)">一台人形机器人说到底是几十个电机的集合</span></span></p><p><span>把这件事倒推一遍。人形机器人需要做什么？在人类环境里完成抓取、行走、搬运、协作。这些动作都是力的输出和姿态的控制。</span></p><p><span>力的输出和姿态的控制靠什么实现？靠分布在全身几十个关节的执行器。一个执行器在当下主流架构里由五个东西组成：</span><span style="color:rgb(171, 25, 66)">无刷电机、减速器或行星滚柱丝杠、编码器、轴承、外壳，其中决定执行器性能上限的是电机。</span><span>电机的扭矩密度不够，减速器再好也带不动负载；扭矩密度够了，减速器只是把转速换成扭矩。</span></p><p><span><span>电机的扭矩密度取决于磁场强度，而磁场强度由磁铁的能量密度（最大磁能积，通常以</span></span><span><span><span> MGOe</span></span></span><span><span>或</span></span><span><span><span> kJ/m</span></span></span><span><span>³计）决定，关节性能的天花板，最后落在这块材料上。</span></span></p><p><span><span>人形机器人对磁铁有三个硬要求，叠加之后选择空间被压到极窄。第一是高能量密度，否则关节会过大过重，连自己的肢体都抬不动；第二是高矫顽力，电机在高速旋转下产生热，磁铁温度可能到</span></span><span><span><span> 120 </span></span></span><span><span>度以上，低矫顽力的磁铁会在高温下退磁；第三是一致性和良率，量产爬坡需要每一台电机的性能偏差在窄范围内。</span></span></p><p><span><span style="color:rgb(171, 25, 66)">目前能同时满足这三个要求的商业化材料只有一种，就是钕铁硼。</span><span>铁氧体能量密度低一个数量级，钐钴能量密度接近但价格和脆性都撑不住量产，非稀土电机（感应电机、开关磁阻电机）在同等功率下要大</span></span><span><span><span> 4 </span></span></span><span><span>倍，装不进人形机器人的膝关节。</span></span></p><p><span style="font-weight:bold"><span style="color:rgb(14, 23, 50)">钕铁硼是物理意义上的唯一解</span></span></p><p><span><span>钕铁硼的能量密度约</span></span><span><span><span> 400 kJ/m</span></span></span><span><span>³，是目前商业化磁性材料里的天花板。过去</span></span><span><span><span> 40 </span></span></span><span><span>年，最大磁能积从</span></span><span><span><span> 1980 </span></span></span><span><span>年代的</span></span><span><span><span> 30 MGOe </span></span></span><span><span>提升到近年的</span></span><span><span><span> 55 MGOe </span></span></span><span><span>左右，平均每十年改进幅度不到</span></span><span><span><span> 30%</span></span></span><span><span>。这跟算法或者芯片的迭代完全不是一个节奏，后两者每</span></span><span><span><span> 18 </span></span></span><span><span>个月到</span></span><span><span><span> 2 </span></span></span><span><span>年翻倍，前者几十年才翻倍一次。</span></span></p><p><span>磁铁性能服从的是晶体结构、磁畴排列和固相反应动力学，不是摩尔定律。你可以用更昂贵的设备、更纯净的原料、更精细的工艺把产品做得更好，但无法把物理常数往上推。</span></p><p><span><span>对工程师来说，这种约束会以一种具体方式体现出来。</span></span><span><span><span>Firgelli </span></span></span><span><span>给过一个测算，人形机器人执行器在极端情况下的“成本</span></span><span><span><span>-</span></span></span><span><span>运输比”（</span></span><span><span><span>CoT</span></span></span><span><span>）约束意味着：每在脚踝位置增加</span></span><span><span><span> 200 </span></span></span><span><span>克重量，膝关节、髋关节、腰部、电池都需要相应升级以补偿重心变化，系统级惩罚能放大到</span></span><span><span><span> 1.3 </span></span></span><span><span>公斤。磁铁用料要是减少</span></span><span><span><span> 10%</span></span></span><span><span>，电机的扭矩密度就不够，电机就要做大做重，更重的电机触发上面的链式放大，最终整机重量失控。</span></span></p><p><span>反过来，也没法用“加大一点点磁铁”来换冗余。磁铁太多会让电机铁芯饱和，浪费的磁通全部变成热，电池掉得更快，散热更难做。钕铁硼的用量上下限都被夹得很紧。</span></p><p><span>所以在人形机器人这个具体场景里，磁铁既是材料，也是结构约束。它决定了整机能做多轻、能出多大力、能连续工作多久。设计师可以把其他部件换掉重做，唯独磁铁那一块几乎没有选择余地。</span></p><p><span><span>这给供应端提出了一个苛刻的条件：产能要跟得上，性能要稳得住，成本不能随需求暴涨失控。过去</span></span><span><span><span> 30 </span></span></span><span><span>年的稀土产业，很少能够同时做到这三件事。</span></span></p><p><span style="font-weight:bold"><span style="color:rgb(14, 23, 50)">需求不是“增长”，而是“阶跃”</span></span></p><p><span><span><span>Adamas Intelligence </span></span></span><span><span>做过一次压力测试：如果人形机器人在未来</span></span><span><span><span> 15 </span></span></span><span><span>到</span></span><span><span><span> 20 </span></span></span><span><span>年走到大规模部署（假设全球年出货量到上亿台量级），各种上游原材料需要扩产多少倍才能跟上。</span></span></p><p><span><span style="color:rgb(171, 25, 66)">结果大致是这样：铜需要扩产</span></span><span><span><span style="color:rgb(171, 25, 66)"> 3 </span></span></span><span><span style="color:rgb(171, 25, 66)">倍，镍</span></span><span><span><span style="color:rgb(171, 25, 66)">4 </span></span></span><span><span style="color:rgb(171, 25, 66)">倍，钴</span></span><span><span><span style="color:rgb(171, 25, 66)"> 6 </span></span></span><span><span style="color:rgb(171, 25, 66)">倍，石墨</span></span><span><span><span style="color:rgb(171, 25, 66)"> 13 </span></span></span><span><span style="color:rgb(171, 25, 66)">倍，锂</span></span><span><span><span style="color:rgb(171, 25, 66)"> 14 </span></span></span><span><span style="color:rgb(171, 25, 66)">倍。</span><span>以上这些数字在市场里已经引起了反复讨论，也带动了过去几年全球大宗商品周期的一个新叙事。</span></span></p><p><span><span>钕铁硼这一项，需要扩产</span></span><span><span><span> 186 </span></span></span><span><span>倍。</span></span></p><p><span><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4vqwus1WU3tIUSFJxtEl1a.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></span></p><p><span><span style="color:rgb(178, 178, 178)">图丨制造</span></span><span><span><span style="color:rgb(178, 178, 178)">100</span></span><span style="color:rgb(178, 178, 178)">亿台人形机器人所需的金属（来源：</span><span><span style="color:rgb(178, 178, 178)">Adamas Inside</span></span></span><span><span style="color:rgb(178, 178, 178)">）</span></span></p><p><span><span>这个数字其实并不算夸张，背后的推导逻辑很简单：每台机器人</span></span><span><span><span> 3.5 </span></span></span><span><span>到</span></span><span><span><span> 4 </span></span></span><span><span>公斤高性能钕铁硼，</span></span><span><span><span>2024 </span></span></span><span><span>年全球高性能钕铁硼产量大约</span></span><span><span><span> 10 </span></span></span><span><span>万吨。要支持每年上亿台的产出，磁材需求会到</span></span><span><span><span> 40 </span></span></span><span><span>万吨量级。按</span></span><span><span><span> 2024 </span></span></span><span><span>年产量基数算，扩张倍数在几十倍到一百倍之间；如果把车、风电、工业电机的常规需求叠加进去，扩张倍数就进入了三位数。</span></span></p><p><span>人形机器人这一个品类造成的冲击之所以远超当年的电动车，有两个原因。</span></p><p><span><span style="color:rgb(171, 25, 66)">第一，单位含量高。</span><span>一台电动车用约</span></span><span><span><span> 2 </span></span></span><span><span>公斤高性能钕铁硼，一台风电直驱机组几百公斤但数量上限明显，一台人形机器人</span></span><span><span><span> 4 </span></span></span><span><span>公斤但理论出货量没有物理上限。汽车有</span></span><span><span><span> 70 </span></span></span><span><span>亿人口的基本盘，人形机器人长期看如果走进工厂、仓储、服务、家庭，总量是前者的几倍。</span></span></p><p><span><span style="color:rgb(171, 25, 66)">第二，部署曲线不同。</span><span>汽车替换燃油车的过程是有节奏的线性增长，受限于充电桩、补贴周期、消费习惯。人形机器人替换的是劳动力，一旦单机成本降到某个临界值（摩根士丹利测算约</span></span><span><span><span> 1.5 </span></span></span><span><span>到</span></span><span><span><span> 2 </span></span></span><span><span>万美元），</span></span><span><span><span>TCO</span></span></span><span><span>（总拥有成本）会在几年内压过人工，触发一次阶跃式部署。</span></span></p><p><span>阶跃式需求遇到线性扩张的供给，会发生什么？过去三次稀土价格冲击已经给出了答案。</span></p><p><span><span><span>2010 </span></span></span><span><span>年到</span></span><span><span><span> 2011 </span></span></span><span><span>年中日稀土争端期间，氧化镨钕从</span></span><span><span><span> 38 </span></span></span><span><span>美元</span></span><span><span><span>/</span></span></span><span><span>公斤涨到</span></span><span><span><span> 190 </span></span></span><span><span>美元</span></span><span><span><span>/</span></span></span><span><span>公斤，</span></span><span><span><span>31 </span></span></span><span><span>个月涨了</span></span><span><span><span> 5 </span></span></span><span><span>倍；</span></span><span><span><span>2021 </span></span></span><span><span>年到</span></span><span><span><span> 2022 </span></span></span><span><span>年疫情时期，同一个指标从</span></span><span><span><span> 45 </span></span></span><span><span>美元涨到</span></span><span><span><span> 170 </span></span></span><span><span>美元，</span></span><span><span><span>16 </span></span></span><span><span>个月涨</span></span><span><span><span> 375%</span></span></span><span><span>；</span></span><span><span><span>2025 </span></span></span><span><span>年下半年，欧洲现货氧化镝从</span></span><span><span><span> 700 </span></span></span><span><span>美元</span></span><span><span><span>/</span></span></span><span><span>公斤涨到</span></span><span><span><span> 1,100 </span></span></span><span><span>美元</span></span><span><span><span>/</span></span></span><span><span>公斤，氧化铽从</span></span><span><span><span> 2,000 </span></span></span><span><span>美元涨到</span></span><span><span><span>4,000 </span></span></span><span><span>美元，不到一年近乎翻倍。</span></span></p><p><span><span>三次冲击里，非中国端的产量响应几乎为零。价格信号正常工作需要两个条件：一是存在未开发的产能，二是产能可以在价格周期内进入市场。而稀土产业无法同时满足这两个条件：有矿，但没有加工链，建加工链的时间窗口远长于价格周期。标准的</span></span><span><span><span> TAM </span></span></span><span><span>模型（潜在市场总量）默认供给弹性，假设量起来了单价会降。这个假设在稀土上历史不支持，未来也难成立。</span></span></p><p><span style="font-weight:bold"><span style="color:rgb(14, 23, 50)">瓶颈不在矿里，也不在磁铁厂里</span></span></p><p><span><span>关于稀土最常见的一个叙事是“中国占全球</span></span><span><span><span> 90%</span></span></span><span><span>”，但这个数字掩盖了产业链内部的不均衡。</span></span></p><p><span>稀土从矿到磁铁要过四道工序：采矿、分离、精炼（氧化物还原成金属）、磁铁制造。中国在每一道的份额不同，产业集中度的成因也不同。</span></p><p><span><span>采矿是最接近可复制的一环。中国约占全球稀土精矿产量的</span></span><span><span><span> 69%</span></span></span><span><span>，澳大利亚</span></span><span><span><span> Lynas</span></span></span><span><span>、美国</span></span><span><span><span> MP Materials</span></span></span><span><span>、缅甸都有规模化输出。全球稀土储量分布相对分散，只要愿意开矿，非中国端还能再挖出几个</span></span><span><span><span> Mt Weld </span></span></span><span><span>或者</span></span><span><span><span> Mountain Pass</span></span></span><span><span>。</span></span></p><p><span><span>磁铁制造的集中度也不算特别高。粉末冶金、烧结、磁场定向压制这些工序设备和工艺的商业化程度高，资本开支可控。</span></span><span><span><span>MP Materials </span></span></span><span><span>在</span></span><span><span><span> Fort Worth </span></span></span><span><span>的磁材厂设计产能约</span></span><span><span><span> 1,000 </span></span></span><span><span>吨</span></span><span><span><span>/</span></span></span><span><span>年，</span></span><span><span><span>Vacuumschmelze</span></span></span><span><span>在南卡罗来纳有类似规模。这些产能合起来无法满足</span></span><span><span><span> 2030 </span></span></span><span><span>年特斯拉一家的需求，但技术路径不是问题。</span></span></p><p><span><span>产业最主要的集中度在中间两层：分离和精炼。这两道工序决定了全球稀土加工的节奏，也是过去 </span></span><span><span><span>20 </span></span></span><span><span>年行业格局相对稳定的原因。</span></span></p><p><span><span>分离的任务是把化学性质极其接近的十几种稀土元素分开。主流工艺是溶剂萃取，一批浸出液依次流过几百到一千多个串联的化学反应槽（</span></span><span><span><span>mixer-settler</span></span></span><span><span>），每一个槽的配比让产物更接近目标元素的纯度。一条成熟的分离线要运行几天到几周才能稳定输出</span></span><span><span><span> 99.5% </span></span></span><span><span>以上纯度的氧化物。</span></span></p><p><span><span>每一种稀土矿的成分结构都不同，适用于包头矿的参数搬到</span></span><span><span><span> Mountain Pass </span></span></span><span><span>不一定能直接跑通，工艺参数本身就是一种积累性资产。中国在分离环节的</span></span><span><span><span> 90% </span></span></span><span><span>份额，来自几十年持续运行积累下来的参数库和工程师群体。</span></span></p><p><span><span>精炼这一步是把氧化物还原成金属或合金。镨钕金属通常用钙热还原或熔盐电解，镝铁、铽铁合金在真空感应炉里融化配比。这一步看起来像传统冶金，但在高附加值稀土上，工艺良率和产品一致性的差距能拉开一倍。</span><span style="color:rgb(171, 25, 66)">中国的精炼份额同样约</span></span><span><span><span style="color:rgb(171, 25, 66)"> 90%</span></span></span><span><span style="color:rgb(171, 25, 66)">，非中国端只有越南、英国、爱沙尼亚各自有一些小规模产能，加起来依然是个位数。</span></span></p><p><span><span>这种“两头分散、中间集中”的格局过去</span></span><span><span><span> 20 </span></span></span><span><span>年基本没有变化，背后是几个因素在同时起作用。</span></span></p><p><span><span>一是资本成本。一条年产能几千吨氧化物的分离精炼线，资本开支通常在</span></span><span><span><span> 5 </span></span></span><span><span>到</span></span><span><span><span> 10 </span></span></span><span><span>亿美元；考虑产品价格的周期性，项目的</span></span><span><span><span> IRR</span></span></span><span><span>（内部回报率）对</span></span><span><span><span> WACC</span></span></span><span><span>（加权平均资本成本）极度敏感。中国的稀土项目融资成本大约在</span></span><span><span><span> 2% </span></span></span><span><span>到</span></span><span><span><span> 3%</span></span></span><span><span>，西方项目在</span></span><span><span><span> 10% </span></span></span><span><span>到</span></span><span><span><span> 15%</span></span></span><span><span>。在同样产品价格下，西方项目可能根本算不过账。</span></span></p><p><span><span>二是良率爬坡。稀土分离厂投产后的首</span></span><span><span><span> 3 </span></span></span><span><span>年首次通过率通常在</span></span><span><span><span> 70% </span></span></span><span><span>到</span></span><span><span><span> 80%</span></span></span><span><span>，需要反复试车调参才能稳定在</span></span><span><span><span> 90% </span></span></span><span><span>以上。这个过程是资金消耗密集的，在经历一次价格下跌周期后，还没爬坡完成的项目往往会被迫停产。</span></span></p><p><span><span>三是人才密度。全球能稳定运行分离精炼产线的工艺工程师估计不到几千人，绝大多数在中国和日本。培养一个能独立调参的稀土冶炼工程师需要</span></span><span><span><span> 10 </span></span></span><span><span>年以上。</span></span></p><p><span><span>第四是环保成本。稀土矿普遍伴生钍、铀等放射性元素，分离过程产生大量含酸废水和放射性尾矿。这类项目无论建在哪里，尾矿处置、废水处理、辐射防护的投入都是项目总投资的相当一部分。中国早在</span></span><span><span><span> 2011 </span></span></span><span><span>年就已经建立了《稀土行业污染物排放标准》（</span></span><span><span><span>GB 26451</span></span></span><span><span>），行业整体的环保治理投入持续上升，而新进入者要达到同等环保水平，初始资本开支并不低。</span></span></p><p><span><span>这四件事任何一件单独出现都能拖慢产能建设；叠加在一起，就是过去</span></span><span><span><span> 20 </span></span></span><span><span>年西方稀土产业多次尝试重建却每次都在半途夭折的根本原因。</span></span></p><p><span style="font-weight:bold"><span style="color:rgb(14, 23, 50)">磁铁的节奏，会变成产业的节奏</span></span></p><p><span>回到人形机器人本身，这个结构意味着什么？</span></p><p><span>意味着机器人的量产节奏会被磁材的供应节奏反向约束。</span></p><p><span><span><span>2026 </span></span></span><span><span>年到</span></span><span><span><span> 2027 </span></span></span><span><span>年是一个相对温和的过渡期。量产爬坡刚开始，全球人形机器人需求大约在几千吨钕铁硼量级，占高性能钕铁硼市场个位数百分比。这个阶段磁材够用，行业讨论依然可以集中在软件上。</span></span></p><p><span><span><span>2028 </span></span></span><span><span>年到</span></span><span><span><span> 2030 </span></span></span><span><span>年压力开始显现。如果头部厂商的产能规划兑现一半，全球人形机器人对高性能钕铁硼的需求会涨到数万吨量级，占当前全球高性能钕铁硼产量的两到三成。这个阶段开始争夺产能，定价权会从下游向上游转移。</span></span></p><p><span><span><span>2030 </span></span></span><span><span>年之后如果走向百万级、千万级年出货量，钕铁硼供应会成为机器人量产的直接约束。</span><span style="color:rgb(171, 25, 66)">届时全球高性能钕铁硼的产量即便翻倍，也不一定够用。</span></span></p><p><span>这个时间表建立在两个前提上：机器人量产按当前规划推进，钕铁硼扩产按当前能力推进。任何一个条件变化都会让时间表前移或后移。</span></p><p><span><span>这个格局会重塑一批公司的战略位置。国内几家高性能钕铁硼厂商，如金力永磁、宁波韵升、中科三环、正海磁材等，已经在</span></span><span><span><span> 2025 </span></span></span><span><span>年明显调整了重心。金力永磁在</span></span><span><span><span> 2025 </span></span></span><span><span>年初成立人形机器人磁组件事业部，由</span></span><span><span><span> CEO </span></span></span><span><span>直接牵头；宁波韵升给智元机器人的供货已进入量产；中科三环在多份券商研报中被列为特斯拉</span></span><span><span><span> Optimus </span></span></span><span><span>二代关节电机供应商之一。据测算（</span></span><span><span><span>2023</span></span></span><span><span>年数据），中国六家头部磁材上市公司</span></span><span><span><span> 2026 </span></span></span><span><span>年钕铁硼毛坯总产能将达到</span></span><span><span><span> 19 </span></span></span><span><span>万吨。</span></span></p><p><span>更微观的信号也在出现。上游磁材厂开始往下游磁组件、转子、甚至整套电机模组延伸，比如金力永磁已经在做“具身机器人电机转子”业务。这是一个典型的垂直一体化动作：当上游产能稀缺时，把磁铁锁进更下游的组件里，增加下游客户的切换成本。再往上走，北方稀土、中国稀土等镨钕原料供应商也在加快和磁材厂的绑定。</span></p><p><span><span>这条链条一旦锁紧，机器人</span></span><span><span><span> OEM</span></span></span><span><span>（原始设备制造商）会发现自己议价空间变小。它们不再是在全球磁材市场自由采购，而是在若干个上下游深度绑定的供应集群里挑供应商。供应集群内部的利润分配会倾向上游——哪个环节最稀缺，哪个环节就最值钱。按目前的供应结构看，最稀缺的是高性能钕铁硼，其次是镝铁、铽铁合金，再次是镨钕金属，最后才是磁铁组件本身。</span></span></p><p><span><span>这个利润分配可能跟直觉不符。很多人习惯性认为机器人产业链的大头是整机厂（比如苹果</span></span><span><span><span>iPhone</span></span></span><span><span>），其次是大脑（比如英伟达</span></span><span><span><span> GPU</span></span></span><span><span>），再次是关键零部件（看宁德时代电池），最后才是原材料。但人形机器人更像风电而不是手机，在一个供给严重不弹的原材料上，定价权很可能会一路往上游爬。</span></span></p><p><span><span>在</span></span><span><span><span> 2026 </span></span></span><span><span>年</span></span><span><span><span> 4 </span></span></span><span><span>月的时间点回头看，人形机器人产业离“量产元年”的完成还差两件事：软件足够通用，硬件足够便宜。前者是算法问题，后者是</span></span><span><span><span> BOM </span></span></span><span><span>问题。</span></span></p><p><span><span>软件这一侧的进展快到让很多人重新估计了时间表。端到端</span></span><span><span><span> VLA </span></span></span><span><span>从论文到工业部署只用了两年，世界模型的融合应用已经出现在多家头部厂商的产品路线图里。</span></span></p><p><span><span>硬件这一侧的进展要淡定得多。谐波减速器的国产化率从</span></span><span><span><span> 2025 </span></span></span><span><span>年的</span></span><span><span><span> 55% </span></span></span><span><span>升到</span></span><span><span><span> 2026 </span></span></span><span><span>年目标的 </span></span><span><span><span>70%</span></span></span><span><span>；行星滚柱丝杠从海外垄断到国产突破；空心杯电机从送样到量产。每一环都在改进，但节奏是季度级而不是月级的。</span></span></p><p><span>钕铁硼这一环走得更慢，因为它受限于化学而不是机械。矿可以再挖，磁铁厂可以再建，但分离线和精炼线的学习曲线不会因为有人开支票而缩短。</span></p><p><span><span>这可能是具身</span></span><span><span><span> AI </span></span></span><span><span>最容易被低估的一个事实，模型可以一个月迭代一次，但矿山五年才能出矿。当软件的边际进步越来越大、硬件的边际进步越来越小时，决定产业上限的东西会从软件一侧慢慢转到硬件一侧。</span></span></p><p><span>再过几年回头看，这一代人形机器人最终造到多少台、卖到多少钱、在哪些场景里被部署，答案里写着的不只是软件和芯片。也有每个关节那几十克黑色磁铁，它从哪里来，由谁加工，以什么节奏流向哪一家客户。</span></p><p><span style="color:rgb(178, 178, 178)"><span style="color:rgb(178, 178, 178)"><span>参考资料：</span></span></span></p><p><span><span><span><span style="color:rgb(178, 178, 178)">1.</span></span></span></span><span><span><span style="color:rgb(178, 178, 178)">https://substack.com/home/post/p-189173515</span></span></span></p><p><span><span><span><span style="color:rgb(178, 178, 178)">2.</span></span></span></span><span><span><span style="color:rgb(178, 178, 178)">https://www.adamasintel.com/rare-earth-magnet-market-outlook-to-2040/</span></span></span></p><p><span><span><span><span style="color:rgb(178, 178, 178)">3.</span></span></span></span><span><span><span style="color:rgb(178, 178, 178)">https://www.firgelli.com/pages/linear-actuator-technical-reference</span></span></span></p><p><span><span><span><span style="color:rgb(178, 178, 178)">4.</span></span></span></span><span><span><span style="color:rgb(178, 178, 178)">https://advisor.morganstanley.com/john.howard/documents/field/j/jo/john-howard/The_Humanoid_100_-_Mapping_the_Humanoid_Robot_Value_Chain.pdf</span></span></span></p><p><span style="color:rgb(178, 178, 178)"><span>注：封面/首图由AI辅助生成</span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69edc7a1c3105209487e2ab2?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69edc7a1c3105209487e2ab2?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

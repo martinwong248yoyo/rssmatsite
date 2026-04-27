@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>太狠了！OpenClaw之父一夜屠光5000 Issue，GitHub服务器先跪了</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 新智元-公众号</div>
+                    <h1>太狠了！OpenClaw之父一夜屠光5000 Issue，GitHub服务器先跪了</h1>
+                    <div class="meta">
+                        <span>新智元</span>
+                        <span>Sun, 26 Apr 2026 03:26:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ed86dd936faa8bf9d72fa7?channel_id=67cc08a19a4297b6148b2994">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <h3 style="color:rgb(34, 34, 34)"><section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/oarJW15kRs01bF2dh4CzX8N.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section></h3><section style="color:rgb(34, 34, 34)"><section><p></p><strong><span>【新智元导读】<span>2天搭建、不到1000美元、50个Codex并行扫描——OpenClaw创始人祭出ClawSweeper，一天关闭5000+无效Issue，GitHub API限流成唯一瓶颈，开源维护正式进入AI「自愈」时代。</span></span></strong><p></p></section></section><p><strong><span style="color:rgba(0, 0, 0, 0.9)">AI</span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)">产生的垃圾，就该AI自己来扫。</span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">刚刚，OpenClaw创始人、OpenAI工程师Peter Steinberger干了一件疯狂的事——</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">他花2天时间搭了一个叫ClawSweeper的工具，启动</span><strong><span style="color:rgba(0, 0, 0, 0.9)">50个Codex实例7×24小时并行扫描。</span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">一天之内把openclaw/openclaw仓库里</span></span><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">超过5000个无效Issue直接关闭</span></span></strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">，数千个还在管道里排队等着被「处决」。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1pL4M92cyR4J2n2EfL3X546J.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">这个36万Star的开源巨兽，积压了上万个Issue和PRs。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1i1uUU2T2YnV1JhfEqadzfm.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">重复的、过时的、早就在main分支修好了没人关的、AI灌水产生的slop——它们像数字坟场一样堆在那里。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">任何人类维护者看一眼都会头皮发麻。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">按人工处理速度，清完这些积压大概需要整整一年。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">Steinberger用AI，一天就清了一半。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/JQBVs4pGXGU2dFB2s3zE2cn.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">有人问他这一轮扫描花了多少钱。他的回答轻描淡写：</span><strong><span style="color:rgba(0, 0, 0, 0.9)">不到1000美元</span></strong><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">5000多个Issue的深度审查加关闭，平均一个不到两毛钱。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/hLad242TYHm1Oo1FlHSNxs.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">而唯一让整套系统慢下来的，不是模型不够聪明，</span><strong><span style="color:rgba(0, 0, 0, 0.9)">是GitHub的</span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)">API</span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)">速率限制——<span style="font-weight:bold">服务器追不上</span></span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">AI</span></span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">的速度。</span></span></strong></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>「冷面判官」的处决逻辑</strong></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">别以为ClawSweeper是个无脑杀手。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">恰恰相反，Steinberger对它的设计哲学可以用四个字概括——</span><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">极致保守</span></span></strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这套系统的核心运行在 </span><strong><span style="color:rgba(0, 0, 0, 0.9)">gpt-5.5</span></strong><span style="color:rgba(0, 0, 0, 0.9)"> 上，采用 </span><strong><span style="color:rgba(0, 0, 0, 0.9)">high reasoning effort</span></strong><span style="color:rgba(0, 0, 0, 0.9)"> 和 </span><strong><span style="color:rgba(0, 0, 0, 0.9)">fast service tier</span></strong><span style="color:rgba(0, 0, 0, 0.9)"> 配置；每个待审条目的 Codex 审查超时为 </span><strong><span style="color:rgba(0, 0, 0, 0.9)">10 分钟</span></strong><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">它只在以下7种情况下才会关闭一个Issue：：已经在 </span><span style="color:rgba(0, 0, 0, 0.9)">main</span><span style="color:rgba(0, 0, 0, 0.9)"> 实现、当前 </span><span style="color:rgba(0, 0, 0, 0.9)">main</span><span style="color:rgba(0, 0, 0, 0.9)"> 无法复现、应归属 ClawHub 的 skill/plugin 而非 core、重复或已被更权威条目取代、在该仓库内具体但不可执行、内容过于混乱不可执行、以及超过 60 天且缺少足够数据验证 bug。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/206f1g4BchPw2jjdzD173Ii4.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">除此之外，一律保持open。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">还有一层保险，ClawSweeper不会去碰维护者自己发的条目。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">它会先看 GitHub 里的身份标记，只要是项目主人、成员或协作者发的 issue，就直接跳过，不会自动关闭。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">更谨慎的是，Codex 在审查时根本没有写权限。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">它只能在只读环境里看代码、看上下文、做判断，然后把结果整理成一份结构化的 markdown 报告，存进 </span><span style="color:rgba(0, 0, 0, 0.9)">items/&lt;编号&gt;.md</span><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">真正的评论和关闭动作，并不会在审查那一步直接发生。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">系统要等到进入 </span><span style="color:rgba(0, 0, 0, 0.9)">apply_existing=true</span><span style="color:rgba(0, 0, 0, 0.9)"> 模式后，重新抓一遍最新上下文，再把快照哈希重算一次，确认这条 issue 在提案生成之后没有发生变化，才会真正动手。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">Steinberger自己人工抽检了数百条关闭记录，结果：</span><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">准确率几乎无误</span></span></strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4yrDz12TLTbNEHhnW2bQa5z.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><p><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3v1uU43lX9GA4j2luy2kHM5U.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></p></section><p><strong><span>README就是仪表盘</span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">ClawSweeper最让人拍案叫绝的设计，可能不是它的关闭逻辑，而是它的「监控系统」。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">传统做法是什么？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">搭个Grafana，配个Prometheus，弄一套精美的后台Dashboard。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">Steinberger说：不需要。</span><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">README就是我的</span></span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">仪表盘</span></span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold;color:rgb(255, 104, 39)">。</span></span></strong></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/29B9SK15wfUE5Vf8F13QuCx.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">ClawSweeper在运行过程中，会实时更新仓库的README.md文件。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">当前有多少open issue、本轮审查了多少条、提议关闭多少条、已执行关闭多少条、GitHub限流到了哪一步——全部以表格形式明明白白地写在README里。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">任何人打开GitHub仓库主页，就能看到这个AI判官此刻正在干什么。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">它让整个清理过程变得完全透明、完全公开、完全可审计。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">任何对「AI擅自关我Issue」有疑虑的贡献者，都可以直接点进对应的</span><span style="color:rgba(0, 0, 0, 0.9)">items/71514.md</span><span style="color:rgba(0, 0, 0, 0.9)">查看Codex给出的完整审查理由。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>当AI开始「自愈」</strong></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">你可能会想，这不就是个自动化脚本吗？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">格局放大一点。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">GitHub上有超过4亿个仓库，其中活跃的大型开源项目几乎都面临着同一个噩梦——</span><strong><span style="color:rgba(0, 0, 0, 0.9)">Issue坟场</span></strong><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">Kubernetes有4万多个已关闭Issue，Linux内核的邮件列表积压更是天文数字。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/UyQxNULcVW2fMhr0286F50.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">维护者的时间是世界上最稀缺的资源之一，而大量时间被浪费在「判断这个Issue到底还需不需要存在」这种机械劳动上。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">ClawSweeper的意义在于，它第一次在一个</span><strong><span style="color:rgba(0, 0, 0, 0.9)">真实的、百万Star级别的</span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)">仓库</span></strong><span style="color:rgba(0, 0, 0, 0.9)">里证明了：<span style="color:rgb(255, 104, 39);font-weight:bold">用AI agent进行大规模的、保守的、可审计的Issue分诊，是完全可行的。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">5000多个Issue的深度审查+关闭，总花费不到1000美元。按单个Issue算，成本大约0.2美元。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">而且它7×24小时不休息、不抱怨、不带情绪。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">唯一让它慢下来的，只有GitHub API的速率限制。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">从某种意义上说，这标志着开源项目从「人工维护」迈向「自愈」的起点。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">未来，每一个大型开源仓库可能都会跑着一个类似ClawSweeper的bot，持续监控Issue质量，自动过滤噪音，让人类维护者只需要关注那些真正需要人类判断的、高价值的问题。</span></p><section><p><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3v1uU43lX9GA4j2luy2kHM5U.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></p></section><p><strong><span>Rate Limit是最后的防线</span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">有个细节特别有意思。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">ClawSweeper的Dashboard上赫然写着：</span><strong><span style="color:rgba(0, 0, 0, 0.9)">「State: Apply throttled」</span></strong><span style="color:rgba(0, 0, 0, 0.9)">——<span style="color:rgb(255, 104, 39);font-weight:bold">GitHub的API限流把它卡住了。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1ovaDr3kfhIL3mx91Q1R5Keg.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">50个Codex并行扫描的速度太快，快到GitHub的服务器开始说「你慢点，我跟不上了」。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">在传统软件开发中，速率限制是为了防止攻击。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">但现在，它成了AI工作效率的唯一瓶颈。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">不是模型不够聪明，不是判断不够准确，纯粹是基础设施跟不上AI的速度。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这大概就是2026年最真实的写照：</span><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">管道追不上AI</span></span></strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(255, 104, 39);font-weight:bold">。</span></span></p><p><span style="color:rgb(136, 136, 136)">参考资料：</span></p><p><span style="color:rgb(136, 136, 136)">https://x.com/steipete/status/2047982647264059734</span></p><p><span style="color:rgb(136, 136, 136)">https://github.com/openclaw/clawsweeper</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 新智元-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ed86dd936faa8bf9d72fa7?channel_id=67cc08a19a4297b6148b2994">https://lingowhale.com/reader/web/69ed86dd936faa8bf9d72fa7?channel_id=67cc08a19a4297b6148b2994</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

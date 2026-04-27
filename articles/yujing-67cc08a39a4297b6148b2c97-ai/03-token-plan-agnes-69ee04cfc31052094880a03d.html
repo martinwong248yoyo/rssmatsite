@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>从Token Plan到模型应用，Agnes全家桶，很值得</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI异类弗兰克-公众号</div>
+                    <h1>从Token Plan到模型应用，Agnes全家桶，很值得</h1>
+                    <div class="meta">
+                        <span>AI异类弗兰克</span>
+                        <span>Sun, 26 Apr 2026 12:21:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ee04cfc31052094880a03d?channel_id=67cc08a39a4297b6148b2c97">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Ak5CC2HgtY4xmV8PreoFm.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span>不知道大家有没有这种感觉，就是市面上顶着各种名头的AI产品越来越多，定价也越来越离谱。</span></p><p><span>有些厂商仿佛商量好了一样，把按token计费这件事玩出了花，你稍微用勤快点，月底账单能看得你肉疼。</span></p><p><span>还有些搞订阅制的，基础套餐给的那点额度，基本上就是让你尝个鲜，真要想干点正事，不升级到几十美金一个月的那档根本没法用。</span></p><p><span>现在那些调用大模型的应用，成本结构通常由两部分构成：模型调用成本和产品功能成本。</span></p><p><span>大部分产品会把这两件事混在一起告诉你，让人稀里糊涂地为每一次点击付费。</span></p><p><span>像我自己做了一个Agent原生加速器，平时高频测试各种模型，经常一个项目跑下来，光是API调用费就好几百美金。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">最近注意到Agnes AI，新上线了一个Token Plan订阅套餐。</span></p><p><span>直接把自己自研的AgnesClaw模型家族的调用权，打包按月卖。</span></p><p><span>相当于不用再操心每次调用花了多少token，买个月票，敞开了用。而且起售价是4美元一个月。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/39yDo23aGgj44J42X28yBBW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>官网：https://agnes-ai.com/</span></p><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">01</span></h2><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">4美元的Token Plan，够好用吗？</span></h2><p><span>先说这个最便宜的Starter套餐，4美元一个月。</span></p><p><span>用这个价格去买API调用额度，放在OpenAI或者Anthropic那边，用不了几次，一个任务有可能就见底了。</span></p><p><span>市面上的AI应用，起步价基本也是20美元。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4o4dqp3EoiENcYSJ62mX7Jg.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>但Agnes给的配置是支持1个OpenClaw Agent，覆盖基础执行、搜索和图像理解。</span></p><p><span>让我觉得有点意思的是他们的速度指标。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">Agnes系统运行速度稳定在50 TPS，峰值能到100 TPS。TPS就是每秒处理token的数量。</span></p><p><span>基本上体验就是，用任何主流模型，响应速度基本都在毫秒级，感觉不到延迟的那种。</span></p><p><span>这对于需要批量处理的任务来说太关键了。</span></p><p><span>我用自己的账号测试了一下，拿它来做信息抽取和内容摘要。</span></p><p><span>我丢进去一篇大概八千字的技术文档，让Starter套餐里的模型提炼核心要点。</span></p><p><span>耗时大概在十几秒左右，输出质量相当能打。是真的有逻辑结构的总结。</span></p><p><span>这个套餐最适合什么人？</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">我觉得是那些像我一样，需要把AI当过滤器用的人，而且看重性价比。</span></p><p><span>比如你每天要处理大量的邮件、会议纪要、客户反馈，需要一个前置的工具帮你先把海量信息粗筛一遍，提取重点，你再花时间去精读。</span></p><p><span>4美元就能干这个活，相对于每个月有了一个AI文字工作助理，性价比可以说是无敌的。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">再往上走，10美元一个月的Plus套餐。</span></p><p><span>这个档位支持1到2个OpenClaw Agents，覆盖的范围从Research到Slides，从Design到Sheet。</span></p><p><span>同时全面支持Hermes Agent。</span></p><p><span>支持无缝迁移OpenClaw记忆与工具，自动生成专属skill，智能主动性全面升级。</span></p><p><span>这个升级跨度其实挺大的，它已经从一个信息过滤器变成了一个能闭环交付的生产工具。</span></p><p><span>从研究调研开始，到产出分析报告，再到做成演示文稿或者数据表格，整个过程不用换工具，两个Agent配合就能搞定。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Y7GWT3bcU7b475M3z2rXQmx.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>我试了一个场景，让它帮我调研了当下的水培蔬菜行业，然后整理成一份PPT。</span></p><p><span>整个过程大概跑了二十多分钟，出来的东西有模有样，框架清晰，数据也有来源标注。</span></p><p><span>每一页都有标题、要点、配图建议，排版也基本合理。</span></p><p><span>最顶配的Pro套餐是50美元一个月。</span></p><p><span>支持2到3个OpenClaw Agents，覆盖Agnes-1.5-Pro文本模型、Agnes-Image-1.2图像生成和Agnes-Video-V1.2视频生成。</span></p><p><strong><span>其中Agnes1.5 pro</span></strong><span>上下文1M，最大输出1M tokens，能力更强，中高配长输出型，高质量长任务。适合整合多源、长文写作、长代码生成、多轮推演、复杂方案生成。</span></p><p><span>这套组合拳打下来，基本上就是一个小型AI生产系统了，而且是能并行跑的那种。</span></p><p>【视频】跳转到原文查看</p><p><span>我重点测试了一下他们的视频模型Agnes-Video-V1.2。这个版本的模型，不单支持文生视频和图像引导视频生成，还有音画同步功能。</span></p><p><span>上面这个视频就是几句话生成的：上海，赛伯朋克风格，两个机器人大战。</span></p><p><span>节奏的把握、情节的连贯性、打斗动作的细节设定，都很到位。</span></p><p><span>相对于连开视频平台会员的费用，也包含进来了，还有其他更多的全栈日常任务能力。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4e7eInkOJGr3fRzhp23vqmb.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>另外一个轻量版生图模型Agnes-1.5-Flash，走的是高性价比路线，主打海量处理。</span></p><p><span>这个模型我用来做批量短问答和图像描述。说实话，这种场景下速度和价格比精度更重要，Flash在这方面的表现符合预期。</span></p><p><span>同样的生产能力，放在其他平台，起步价至少在几十美金，配置稍微高一点就往几百美金走了。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/26C3cr18uY5UpeB9Z3BM1GQ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>Agnes这个Token Plan在价格上的优势不是一点点，已经是数量级的差距了。</span></p><p><span>他们给的对比数据我核实了一下。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">拿某国产主流模型来说，在类似并发需求下，起步级别的月成本高达36.6美元，Agnes只要4美元。</span></p><p><span>还有的模型套餐得排队抢，不一定买得到。</span></p><p><span>Agnes用了一招很聪明的方式，把自研模型带来的成本优势直接让利给用户。</span></p><p><span>而且他们兼容OpenAI的API协议，开发者集成起来差不多五分钟就能搞定。</span></p><p><span>开发者和重度用户，最在意的就是接入成本和迁移成本，这方面Agnes也考虑到了。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/znKMYAQvoS1DKop8exp3Q.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">02</span></h2><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">玩转生图和视频，创意格局打开了</span></h2><p><span>说完API层面的Token Plan，再来聊聊他们基于自研多模态底座推出的两个应用。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">一个是Pavo，另一个是Echo。</span></p><p><span>这两个应用的推出，让我觉得Agnes从来不满足于只做底层的模型提供商，他们正在把技术优势延伸到应用层，直接面向终端用户。</span></p><p><span>先讲Pavo。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2bc9ok3YIkVJ1bY42B3MqXnv.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>https://pavo-ai.work/</span></p><p><span style="color:#0052ff;font-weight:bold">Pavo是一个视频创作工具，核心能力覆盖了六个方向，照片动起来、丝滑运镜、高能转场、创意特效、宠物魔法、动作模仿。</span></p><p><span>每个功能背后都对应着具体的使用场景。</span></p><p><span>我重点试了照片动起来这个功能。上传一张静态照片，系统自动识别画面中的主体和背景，然后生成动态效果。</span></p><p><span>比如我传了一张我家猫蹲在沙发上的照片，几秒钟后生成了一个视频，猫的耳朵在动，尾巴在轻轻摇摆，背景的光影也有微妙的变化。</span></p><p><span>不是什么翻天覆地的大动作，但那种恰到好处的动态，让一张普通的照片瞬间有了生命力。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1QmIM61B91vBvlQKVyRGtN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="font-weight:bold;color:rgb(0, 82, 255)">丝滑运镜这个功能也挺有意思。</span></p><p><span>系统会自动生成电影级的推拉、旋转、跟随运镜。</span></p><p><span>我测试了一下，用几张连续动作的照片生成了一段短视频，镜头语言很自然，没有那种生硬卡顿的感觉。对于不会视频剪辑的用户来说，这个功能基本相当于白送了一个虚拟摄影师。</span></p><p><span>Pavo还有一个很聪明的设计，就是智能模型推荐。系统会根据你的内容风格、时长、动态复杂度自动匹配最佳模型。当然，如果你是个进阶用户，也可以手动切换模型。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">他们集合了多款市面上顶级模型，包括即将上线的阿里那个HappyHorse 1.0模型，还有Seedance 2.0。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1db0EP3Pokx53vgQjV19YIlA.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>要知道，不同视频模型的生成效果，跨度很大，有些在电影质感上更细腻，有的适合于漫剧动漫，有的在动态质感上完成度更高.....视频生成也成了一门选择的艺术。</span></p><p><span>智能模型推荐给我的感觉就是，很聪明、很体贴，能跟我我的任务需要，推荐使用最合适的模型，在视频、文本、代码等任务都是。</span></p><p><span>还有印象比较深的是，Pavo的操作门槛真的很低。</span></p><p><span>整个创作流程就是选模板、传素材、点生成，三步搞定。生成出来的视频可以直接下载分享。</span></p><p><span>对于那些想快速产出爆款短视频但又不想学剪辑的人来说，这个工具几乎是量身定做的。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">03</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">不只是聊天，你是故事的主角</span></h2><p><span>再说说Echo。如果说Pavo解决的是创作效率问题，那Echo解决的是情感体验问题。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2TW3Tu3XuU1832VeKu4AiC3o.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>https://echo-ai.life/</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">Echo是一款沉浸式AI角色互动应用。</span></p><p><span>市面上类似的角色扮演或者虚拟伴侣类的应用已经有不少了，但Echo有几个不一样的地方。</span></p><p><span>最核心的差异在于场景感和沉浸感。</span></p><p><span>在Echo里，不是在和冷冰冰的对话框互动，是以一个主角的身份进入一个完整的故事世界。</span></p><p><span>他们内置了大量的剧情世界观，从纯爱、校园、奇幻到恐怖、悬疑、冒险、职业、休闲，几乎覆盖了所有主流叙事类型。</span></p><p><span>我第一次打开Echo的时候，随便选了一个校园奇幻的剧本。</span></p><p><span>系统让我上传了一张自己的照片，然后生成了我的数字形象。接着我就直接进入了剧情，从一个转学生开始，跟剧情里的角色展开对话。每一次对话选择都会影响剧情走向，那种主导感确实跟普通的AI聊天不一样。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/494BQw2Gg8nD2LANFG3F3ArN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">Echo让我印象最深的，是音画同频技术。</span></p><p><span>你跟AI角色对话的时候，不仅能看到文字回复，还能看到角色的表情变化和口型同步，同时有语音输出。</span></p><p><span>试了一段对话，角色的表情变化和语气情绪是匹配的，没有那种割裂感。</span></p><p><span>生成记录功能也很实用。</span></p><p><span>所有互动生成的图片和视频都会自动保存，按角色和剧情分类，方便回看和管理。对于一些重度用户来说，这相当于一个不断累积的个人剧情素材库。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3nabxy160u9u41FWiNTaSQZ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>上传个人形象图这个功能，怎么说呢，有点双刃剑。</span></p><p><span>一方面它确实增强了代入感，你真的感觉自己成为了故事的一部分。另一方面，上传个人照片涉及隐私问题，希望Echo在这方面有足够安全的数据保护措施。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">为你推荐这个功能做得很聪明。</span></p><p><span>平台会根据你的互动偏好推送热门角色的剧情高光片段。你直接点击就能进入对应剧情，不需要自己搜索。这个设计大大降低了新用户的探索成本。</span></p><p><span>Echo定位的用户群体很明确，就是喜欢互动叙事、情感陪伴、角色扮演的年轻用户。</span></p><p><span>这个群体对情感体验的要求很高，不满足于简单的问答，更需要的是陪伴感和掌控感。</span></p><p><span>Echo通过剧情化互动和实时视频生成，把传统的文字聊天升级成了视听一体的沉浸式体验。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1ooAdk3WIYZ62CvMJO4peyVx.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>情感成长体系是Echo另一个值得关注的功能。</span></p><p><span>AI角色会随着互动不断成长，能记住你们之前的对话内容。这个技术其实挺难的，需要在保持角色一致性的同时又能展现成长性。</span></p><p><span>从我的测试来看，Echo在这方面做得还不错，角色没有出现失忆或者性格突变的情况。</span></p><p><span>计费方面，Echo也是月度订阅制，首月有优惠。</span></p><p><span>所有套餐都包含基础互动体验，更高的套餐会解锁更多的图片和视频生成额度。对于轻度用户来说，免费额度应该也够体验核心功能了。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">04</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">从底层模型到上层应用，Agnes的布局不一样</span></h2><p><span>Agnes的核心团队来自新加坡国立大学、MIT、斯坦福、伯克利这些顶尖高校，创始人Bruce带队，有扎实的学术背景和工程能力。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2waSmEBrFY6AaqromWrnQ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>他们在权威的PinchBench榜单上，Agnes-1.5系列模型在准确性维度表现突出。</span></p><p><span>能在这种榜单上排到前列，说明模型能力是经过实战检验的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/BuJWSmVbgsNLPik3FDvo1.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>AgnesClaw这个模型的架构设计思路也很有意思。</span></p><p><span>他们把隐式MoE、Mamba-2状态空间模型和原生多模态早融合技术揉在一起，目标是要同时解决超长上下文、高频工具调用、复杂Multi-Agent协作这三个痛点。</span></p><p><span>说白了，他们想打破传统模型在规模、延迟和记忆三者之间只能选两个的魔咒。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3wGPEg1vHHIr3iVIJj10hacT.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>现在，据说Agnes已经迈过了2000万美元ARR的门槛。</span></p><p><span>产品和市场，已经形成了正向循环，跨过了那种靠融资烧钱的阶段。</span></p><p><span>商业化的验证往往比技术指标更能说明问题，有人愿意真金白银持续付费，这才是硬道理。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1BXDoIqTpMo3v4uir2PaWte.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">回到开头那个话题，为什么我觉得Agnes的Token Plan正在重新定义AI的性价比？</span></p><p><span>因为当前的AI行业，定价体系是混乱的。</span></p><p><span>模型即服务这个商业模式本身没问题，问题在于很多厂商把成本转嫁给了用户，而这个成本因为模型调用的不透明性，用户很难精确估算。</span></p><p><span>Agnes用一个很简单的方案解决了这个问题，按月封顶，随便用。</span></p><p><span>这种做法在商业上其实有点激进。</span></p><p><span>因为如果用户真的高强度使用，Agnes的边际成本是有可能超过订阅收入的。</span></p><p><span>他们敢这么定价，只能说明两件事，一是他们对自研模型的成本控制非常有信心，二是他们愿意牺牲短期利润换取用户规模和市场份额。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">Pavo和Echo的推出则是另一个信号。</span></p><p><span>Agnes的布局，越来越接近一个有着自己生态卡位的AI生态圈、一站式平台。</span></p><p><span>底层模型的能力最终要通过应用来变现，自己做应用可以更直接地触达用户，收集反馈，迭代产品。</span></p><p><span>而且这两个应用跟Token Plan是打通的，订阅制的用户权益可以跨产品使用，这种生态化的思路比单一产品更有想象空间。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4hvIlx3gOSRQ49y0jn19TFiR.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>https://agnes-ai.com/</span></p><p><span>最后说一句实在话。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">如果你是个AI的重度用户，或者你正在用AI做一些批量处理的工作，强烈建议可以去Agnes官网看看那个4美元的Token Plan。</span></p><p><span>反正就一杯奶茶的钱，可以自己试试看，到底是继续按token付费心疼，还是每个月固定花几块钱敞开用更爽。</span></p><p><span>AI这个行业的变化太快了，每周都有新的模型和应用冒出来。</span></p><p><span>但最终用户关心的只有三点，好不好用，便不便宜，稳不稳定。</span></p><p><span>从这三个维度来看，Agnes至少已经跑到了前面。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/hOwhr1i8sUB1zspnq2ogjK9.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI异类弗兰克-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ee04cfc31052094880a03d?channel_id=67cc08a39a4297b6148b2c97">https://lingowhale.com/reader/web/69ee04cfc31052094880a03d?channel_id=67cc08a39a4297b6148b2c97</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

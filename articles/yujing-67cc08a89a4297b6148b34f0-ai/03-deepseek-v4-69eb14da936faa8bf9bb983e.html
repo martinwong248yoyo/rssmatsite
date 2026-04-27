@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DeepSeek V4 发布 这次有哪些创新？技术报告解读...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 小互AI-公众号</div>
+                    <h1>DeepSeek V4 发布 这次有哪些创新？技术报告解读...</h1>
+                    <div class="meta">
+                        <span>小互AI</span>
+                        <span>Fri, 24 Apr 2026 06:53:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eb14da936faa8bf9bb983e?channel_id=67cc08a89a4297b6148b34f0">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><p style="color:rgba(255,255,255,0.5)">小互AI · 深度解读</p><h1 style="font-weight:800">DeepSeek-V4 预览版开源：1M 上下文成标配</h1><p style="color:rgba(255,255,255,0.75)">今天 DeepSeek 把 V4 的预览版开出来了，同步开源。使用体验优于 Sonnet 4.5，交付质量接近 Opus 4.6 非思考模式，但仍与 Opus 4.6 思考模式存在一定差距。</p></section><section><p style="color:#333333">核心信息先铺一遍：</p><section><p><span style="font-weight:bold;color:#f59e0b">•</span><span style="color:#333"><strong>两个版本</strong>:<strong>V4-Pro</strong> 1.6T 总参 / 49B 激活、<strong>V4-Flash</strong> 284B / 13B,都是 MoE 架构（一次只派最相关的几个专家干活),均默认 <strong>1M 上下文 + 最大 384K 输出</strong></span></p><p><span style="color:#f59e0b;font-weight:bold">•</span><span style="color:#333"><strong>V4-Pro 的 Agentic Coding 是当前开源最佳</strong>,已成为 DeepSeek 内部员工日常使用的模型，官方自评"优于 Sonnet 4.5,交付质量接近 Opus 4.6 非思考模式"</span></p><p><span style="color:#f59e0b;font-weight:bold">•</span><span style="color:#333"><strong>代码、数学、竞赛超越所有已公开评测的开源模型</strong>,部分指标（LiveCodeBench、Codeforces）已反超 Opus 4.6 Max 和 GPT-5.4 xHigh,世界知识仍落后 Gemini-3.1-Pro</span></p><p><span style="font-weight:bold;color:#f59e0b">•</span><span style="color:#333"><strong>LMArena 盲测开源第 2</strong>(Text Arena)/ <strong>开源第 3</strong>(Code Arena),「医学 &amp; 医疗健康」分类榜总榜第 1</span></p><p><span style="color:#f59e0b;font-weight:bold">•</span><span style="color:#333"><strong>技术报告四大创新</strong>:<strong>CSA + HCA</strong> 注意力换血、<strong>mHC + Muon + FP4 + TileLang</strong> 训练栈、<strong>两阶段专家蒸馏 + GRM</strong> 奖励模型、<strong>DSec Agent 沙盒</strong></span></p><p><span style="color:#f59e0b;font-weight:bold">•</span><span style="color:#333"><strong>价格打到顶级闭源的 1/5 到 1/9</strong>:V4-Pro 比 Opus 4.7 便宜 5 倍，比 GPT-5.5 便宜 9 倍</span></p></section><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2BnWmU2YhwLVqs3yU21rfSd.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><h3 style="color:#1a1a1a;font-weight:700"><span>Pro 追到顶级闭源梯队，Flash 走量</span></h3><p style="color:#333333">V4-Pro 的进步按维度拆开看：</p><div><p>能力维度</p><p>V4-Pro 位置</p><p>Agentic Coding</p><p>当前开源最佳</p><p>数学 / STEM / 竞赛代码</p><p>超越所有已公开评测的开源模型，比肩顶级闭源</p><p>世界知识</p><p>开源大幅领先，仅稍逊于 Gemini-Pro-3.1</p></div><p style="color:#333333">Agentic Coding 那一栏特别值得盯一眼，DeepSeek 这次给的是内部员工实际使用反馈，不是榜单数字：</p><p style="color:#333333">这个自评非常克制。Opus 4.6 非思考档和思考档之间差距并不小，V4-Pro 刚追到非思考档附近，意味着在真正复杂的多轮 agent 任务上仍会输闭源一截。但对想做自建 Agent、自托管、或者想降本的开发者，这已经是开源这一档的新上限。</p><p style="color:#333333">V4-Flash 不是 Pro 的蒸馏，是同系列里参数量和激活更小的独立型号：</p><div><p>能力</p><p>V4-Flash 相对 V4-Pro</p><p>世界知识</p><p>明显弱</p><p>推理</p><p>接近</p><p>Agent 简单任务</p><p>旗鼓相当</p><p>Agent 高难任务</p><p>差距明显</p><p>API 速度 / 成本</p><p>显著优势</p></div><p style="color:#333333">分工很干脆：简单工具调用、批处理、客服类会话走 Flash，复杂多步规划和长链路 Coding 走 Pro。</p><p style="color:#333333">官方原话：<strong>从现在开始，1M 上下文将是 DeepSeek 所有官方服务的标配</strong>。</p><p style="color:#333333">是标配，不是顶配。</p><p style="color:#333333">1M 的体量：一次能吞 75 万汉字，差不多 3 部《三体》。</p><p style="color:#333333">过去一年多，1M 上下文一直是各家打榜用的玄学指标。Gemini 先做到，别家追；放进产品里都小心翼翼，要么限付费档，要么偷偷降级。原因很简单，贵。注意力算力按上下文平方涨，显存按线性涨，1M 的账谁算谁肉疼。</p><p style="color:#333333">V4 把这件事从营销话术拉回工程问题。同样跑 1M,V4-Pro 的算力只占上一代 V3.2 的 27%</p><p style="color:#333333">KV 缓存（模型读长文时占用的短期记忆内存，文越长这块越粗）只占 10%。V4-Flash 压得更低，算力只占 10%,KV 缓存只占 7%,大约是传统主流方案（BF16 GQA8）的 2%。</p><p style="color:#333333"><span style="font-weight:bold">2% 什么概念？</span></p><p style="color:#333333">以前跑一次 1M 推理的显存，现在能跑 50 次。同样的硬件能服务的并发用户数，接近翻了十倍。这个成本曲线一旦压下去，1M 就从「我专门给你开一个超长档位」变成「你随便开个 API、随便点开官网聊天，它天然就是 1M」。不挑场景，不挑身份，不加钱。</p><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/YmbqK198UXi1HN36otiUD8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><span style="color:rgba(245,158,11,0.12);font-weight:900">01</span></p><h2 style="color:#1a1a1a;font-weight:700">一、性能追到哪儿了：Sonnet 4.5 已经越过，Opus 4.6 还在前面</h2><p style="color:#333333">DeepSeek 自家做了一套 R&amp;D Coding 内部评测，题目来自 50 多个内部工程师贡献的真实研发任务，覆盖 PyTorch / CUDA / Rust / C++,包括新功能开发、Bug 修复、重构、诊断，最后筛出 30 道高难度任务作为评测集。</p><p style="color:#333333">同一批题的通过率：</p><div><p>模型</p><p>Pass Rate</p><p>Haiku 4.5</p><p>13%</p><p>Sonnet 4.5</p><p>47%</p><strong>V4-Pro-Max</strong><strong>67%</strong><p>Opus 4.5</p><p>70%</p><p>Opus 4.5 Thinking</p><p>73%</p><p>Opus 4.6 Thinking</p><p>80%</p></div><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/GlOMN2K5HhR3IMvsp1MQvLy.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#333333">国产开源第一次在真实编码任务上把 Sonnet 4.5 甩开 20 分，已经贴到 Opus 4.5 非思考档位的脚后跟（67% vs 70%）。官方给的对外口径保守一点：「使用体验优于 Sonnet 4.5,交付质量接近 Opus 4.6 非思考模式，但仍与 Opus 4.6 思考模式存在一定差距。」</p><p style="color:#333333">同步的还有一份 N=85 的 DeepSeek 工程师内部调研，问的是 V4 是不是你日常编码的默认模型。52% 答「是」,39% 答「倾向是」,剩下不到 9% 说不是。V4 已经是公司内部 Agentic Coding 的默认模型。</p><p style="color:rgb(51, 51, 51)"><span>但是</span><strong><span>LMArena 盲测显示</span>：<span>DeepSeek V4 在开源模型里编码能力排在智谱和Kimi之后，</span><span style="font-weight:bold">位列第三</span></strong></p><h3 style="color:#1a1a1a;font-weight:700"><span>LMArena 盲测：开源第 2 / 第 3,和 GPT-5.4-high、Gemini-3.1-Pro 同档</span></h3><p style="color:#333333">DeepSeek 自家评测只能说明一半，第三方盲测更有说服力。V4 今天上线后直接进了 LMArena(大模型竞技场，真人盲评打分）的榜单：</p><section><p><span style="color:#f59e0b;font-weight:bold">•</span><span style="color:#333"><strong>Code Arena</strong>(编程能力):V4-Pro 思考模式开源第 3,总榜第 14,在 agentic webdev 任务上和 GPT-5.4-high、Gemini-3.1-Pro 打平</span></p><p><span style="color:#f59e0b;font-weight:bold">•</span><span style="color:#333"><strong>Text Arena</strong>(通用文本):V4-Pro 思考模式开源第 2,总榜第 14,和 Kimi-2.6 同档</span></p><p><span style="color:#f59e0b;font-weight:bold">•</span><span style="color:#333"><strong>Text Arena</strong>:V4-Flash 思考模式开源第 10,总榜第 47</span></p><p><span style="color:#f59e0b;font-weight:bold">•</span><span style="color:#333"><strong>分类榜</strong>:V4-Pro 在「医学 &amp; 医疗健康」拿了总榜第 1,「法律 &amp; 政府」第 8,「数学」第 8</span></p><section><span style="color:#333"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3hdPH7zc0fmt3Mm64bFO93.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section></section><p style="color:#333333">盲评榜有它的门道：用户看两个回答选哪个更好，综合数十万次对比打出 Elo 分。这里测的不是刷题能力，是真人用着顺不顺手。开源模型能在 Code Arena 的 agentic webdev 上和 GPT-5.4、Gemini-3.1 Pro 打平，过去两年只有 Kimi 做到过。V4 这次把位置又往前推了一步，而且在「医学 &amp; 医疗健康」拿到总榜第 1,闭源模型全被压在后面，这是开源模型过去几乎没进过的领域。</p><h3 style="color:#1a1a1a;font-weight:700"><span>Codeforces 和各项跑分</span></h3><p style="color:#333333">再看 Codeforces(全球最大的算法竞赛平台，给选手实时打分）。V4-Pro-Max 评分 3206,在人类选手里大概排到第 23 名，高于 GPT-5.4 xHigh 的 3168 和 Gemini-3.1-Pro 的 3052。国产开源模型在算法竞赛维度第一次坐到最前排。</p><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2HsdpS4gNet5UbJRw2bRjqp.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#333333"><strong>代码</strong>:LiveCodeBench 93.5 分，反超 Opus 4.6 Max 的 88.8 和 Gemini-3.1-Pro 的 91.7。代码是追平的。</p><p style="color:#333333"><strong>推理</strong>:GPQA 90.1,跟 Opus 4.6 Max 的 91.3、GPT-5.4 xHigh 的 93.0 在同一档。HLE 37.7,对面 40.0 / 39.8 / 44.4。整体上落后前沿闭源 3 到 6 个月，技术报告自己也承认了。</p><p style="color:#333333"><strong>世界知识</strong>:SimpleQA 57.9,落后 Gemini-3.1-Pro 的 75.6 将近 18 分。Chinese-SimpleQA 84.4,超所有开源模型 20 个百分点，但还差 Gemini-3.1 的 85.9 一个身位。原因好理解：世界知识来自预训练数据的规模和多样性，是顶级闭源公司手里最硬的资源，靠结构创新补不回来。</p><p style="color:#333333"><strong>长上下文</strong>:MRCR 1M 考的是塞进 1M 文本后还能不能准确找到指定信息。Opus 4.6 拿 92.9,V4-Pro 83.5,Gemini-3.1 只有 76.3。V4 是第二，把 Gemini 甩在身后。CorpusQA 1M 上 Opus 4.6 71.7,V4-Pro 62.0,Gemini-3.1 53.8。</p><p style="color:#333333">衰减曲线更说明问题。V4-Pro 在 8k / 32k / 128k 长度下都能稳在 0.90 以上，512k 掉到 0.66,1024k 掉到 0.59。</p><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/F5YAQ2nXTaE2MBxVj1CHjom.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#333333">换成体验：8 万字以内几乎不漏信息，塞到 70 万字以上时，大约有四成关键细节会被模型忘在中间段。1M 名义上支持，但末端的记忆精度离首尾还有明显距离。这是行业共性，不是 V4 独有。用的时候心里要有数：把最关键的信息尽量往前放或者往后放，别埋在中间。</p><p style="color:#333333"><strong>写作和白领任务</strong>:对 Gemini-3.1-Pro,功能性中文写作 V4 赢 62.7% 输 34.1%,创意写作指令跟随 60%、质量 77.5%。最难的一档题目，对 Opus 4.5 V4 还是 45.9% vs 52% 输。白领任务测了 30 个任务、13 个行业，对 Opus 4.6 Max V4 赢 53% 平 10% 输 37%,优势在任务完成度和内容质量，弱势在指令跟随和排版美学。</p><p style="color:#333333">画像挺具体：干活能力追上了，听话程度和美感还差一截。</p><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/HI52i46UAzf49TngB36lc1t.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><span style="color:rgba(245,158,11,0.12);font-weight:900">02</span></p><h2 style="color:#1a1a1a;font-weight:700">二、技术报告里的关键：它怎么把 1M 成本砍到十分之一</h2><p style="color:#333333">同一套硬件、同一类 MoE 架构，V4 怎么把 1M 上下文的成本压到 V3.2 的十分之一。答案分两层：注意力换血 + 训练栈全换。</p><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1n8dES12sfYY1cgiVd1HJpra.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#333333">下面几个名词是工程术语，记不住不影响读后面，挑看得顺的那段看就行。</p><h3 style="color:#1a1a1a;font-weight:700">注意力换血：从暴力平等到智能取舍</h3><p style="color:#333333">传统 Transformer 的注意力机制有一个硬伤：每生成一个 token,都要回头看前面所有 token,两两算一遍相关度。序列翻一倍，计算量翻四倍，显存也同步涨。几万字还撑得住，几十万字开始吃力，到了 1M 这个量级，光 KV 缓存就能把一张 H100 吃光。</p><p style="color:#333333">V4 的做法一句话：<strong>别再每个字平等地看，学会挑重点看</strong>。</p><p style="color:#333333">它给了注意力机制两样新能力。一样叫 CSA,每 m 个 token 压成一条摘要条目，读长文章的时候，先看这些压缩条目，再通过 DSA 稀疏注意力从里面挑出 top-k 条深入算，同时用一个滑动窗口抓住眼前的局部细节。另一样叫 HCA,压缩率拉得更大，50 页直接捏成一张便利贴，但信息保留得更稠密，算的时候是满算的。两样东西在模型里交错用，有的层做稀疏挑重点，有的层做稠密抓全局。</p><p style="color:#333333">说人话就是，它不再用一只「大眼睛」扫全文，而是一只「远视眼」看大局，加一只「近视眼」抠细节，来回切。</p><p style="color:#333333">打个日常比方。你读一本 500 页的厚书，不会逐字背，你会每读几页压成一条脑内笔记，比如「这章讲主人公逃出地下室」。需要回忆的时候，先翻这些书签挑出最相关的几条，再回到原文细看。CSA 干的就是这个事。HCA 是更激进的版本，压缩率翻几倍，每条便利贴里信息稠密，用来做全局兜底。</p><p style="color:#333333">听着像工程小聪明，其实是换了一套思路。过去注意力默认所有字地位平等，让模型自己学哪个重要哪个不重要。V4 反过来，先承认字和字本来就有主次，把这层主次关系先帮模型定下来，再让它在这层结构上发力。从暴力平铺到先挑重点，这一步是拐点。</p><h3 style="color:#1a1a1a;font-weight:700">训练栈全换：在 1.6T 这个量级拧紧每一颗螺丝</h3><p style="color:#333333">训练一个 1.6T MoE 模型是个极其脆弱的过程。参数量到这个量级，训练流程里每个默认选择都可能在某个节点翻车。V4 不是单点创新，是把四个会出事的地方挨个换了新做法。</p><p style="color:#333333"><strong>第一个坎：深层网络容易训着训着突然崩</strong>。参数多、层数深，梯度很容易在某一层出异常，训到一半不收敛，工程师管这叫「训崩」。V4 的解法叫 <strong>mHC</strong>,在残差连接里加了一层数学约束，把梯度走势框在安全区间里。相当于给摩天大楼加抗震钢筋，层再高也不会结构性倒塌。</p><p style="color:#333333"><strong>第二个坎：老优化器跑得太慢</strong>。优化器是训练里决定「每一步往哪走、走多远」的大脑。过去十年大家默认用 AdamW,稳但慢。V4 换成 <strong>Muon</strong>,同样的训练预算能多走 20-30% 的距离，稳定性还更高。这是训练界过去一年最被关注的新工具，V4 是目前最大规模的实战部署。</p><p style="color:#333333"><strong>第三个坎：万亿参数塞不下显存</strong>。传统训练用 BF16(16 位浮点）表示参数，V4 压到 <strong>FP4</strong>(4 位浮点),同样的硬件能多塞 4 倍的参数，GPU 之间的通信带宽也省下来。类比：描述身高，「1.753 米」是精确写法，「1.8 米」是粗略写法。神经网络多数参数对这种精度不敏感，粗颗粒表示照样能算对。代价是误差容忍度变低，DeepSeek 为此把整套训练流程重新校准了一遍。</p><p style="color:#333333"><strong>第四个坎：GPU 在等数据</strong>。MoE 训练里专家之间要不停传数据，CUDA 默认调度一不小心就把 GPU 算力晾在那儿等数据到齐。V4 团队自研了 <strong>TileLang</strong> 这门 GPU 内核语言，手动把通信和计算交织排布，让 GPU 在等数据的空隙里顺手把下一批计算先做了。像给工地换了一套更精细的施工调度，不再让工人站着等水泥。</p><p style="color:#333333">每条单看都不起眼，攒到一起，是一个团队把「1.6T MoE 还要跑出好精度」这事的每一颗螺丝都拧到位了。万亿级训练上，任何一颗松了，整个训练就前功尽弃。</p><h3 style="font-weight:700;color:#1a1a1a">后训练：专家先单独练透，再合并到一个学生身上</h3><p style="color:#333333">训练一个全能模型，传统做法是 SFT(监督微调）加 RLHF(人类反馈强化学习）混着跑，代码、数学、写作、常识一起训。问题是它们会互相拉扯，练代码多了写作掉分，训写作细腻了代码又变笨。</p><p style="color:#333333">V4 换了两阶段思路。</p><p style="color:#333333"><strong>第一阶段，各专家分头练到顶</strong>。让每个领域各有一个专家模型，代码专家只练代码，数学专家只练数学，写作专家只练写作，用 SFT 加 GRPO(一种强化学习算法）在各自方向上跑到极致。十几个专家互不干扰。</p><p style="color:#333333"><strong>第二阶段，蒸馏到一个学生</strong>。通过 <strong>OPD</strong>(On-Policy Distillation,在线策略蒸馏）把这十几个专家的能力合并到一个统一的学生模型里。类比：不是让一个学生同时上十门课，而是请十位专科老师轮流给一个学生做示范，老师怎么做，学生就跟着怎么做。「边做边学」比「看书自学」有效得多，学生最后拿到的是融合了十种专业能力的综合体，每一项都接近专家水准。</p><p style="color:#333333"><strong>奖励模型也升级了</strong>。RLHF 传统的奖励信号是 scalar reward,评委给每个回答打一个分，比如 1 到 10。V4 换成 <strong>GRM</strong>(生成式奖励模型),评委不打分，改写一段带理由的评语，比如「这段代码逻辑对，但变量命名不清晰，异常处理缺失」。这比单一分数密得多，学生能学到的细节也多得多。</p><p style="color:#333333"><strong>Agent 能力是在真实沙盒里练出来的</strong>。V4 专门做了一个叫 <strong>DSec Sandbox</strong> 的训练环境，模型在里面真的跑工具调用、执行代码、读写文件，失败了拿真实反馈接着改。这种「实战演习」训出来的 agent 能力，跟只在文本里纸上谈兵训出来的不是一个东西。很多开源模型 agentic coding 跑分好看，但一到真实工作流就翻车，差别就在这。</p><p style="color:#333333">配套的工程细节还有三档推理模式（Non-think 不思考直接答 / Think High 中等 / Think Max 最深）、Interleaved Thinking(多轮工具调用之间保留完整思考链，不会每次工具返回后把大脑清空重来）、以及工具调用格式从 JSON 换成 DSML(一种 XML 标签，比 JSON 出错少）。</p><p style="color:#333333">这些细节加起来，才让 V4-Pro 在真实 agentic coding 场景上能追上顶级闭源。</p></section><section><p><span style="color:rgba(245,158,11,0.12);font-weight:900">03</span></p><h2 style="color:#1a1a1a;font-weight:700">三、价格：V4-Pro 是 Opus 4.7 的 1/5,GPT-5.5 的 1/9</h2><p style="color:#333333">性能追到这个位置，下一个要问的问题就是，多少钱一斤。</p><p style="color:#333333">先看 V4 自己的报价（百万 tokens,人民币):</p><div><p>计费项</p><p>V4-Flash</p><p>V4-Pro</p><p>输入（缓存命中）</p><p>0.2 元</p><p>1 元</p><p>输入（缓存未命中）</p><p>1 元</p><p>12 元</p><p>输出</p><p>2 元</p><p>24 元</p></div><p style="color:#333333">横向拉出来比。人民币按当前汇率换成美元（1 美元 ≈ 7.2 元),各家都取官方标准档牌价，不算批处理、不算夜间折扣这些优惠：</p><div><p>模型</p><p>输入（USD/M）</p><p>缓存命中</p><p>输出（USD/M）</p><p>上下文</p><p>DeepSeek V4-Flash</p><p>$0.14</p><p>$0.028</p><p>$0.28</p><p>1M</p><strong>DeepSeek V4-Pro</strong><strong>$1.67</strong><strong>$0.14</strong><strong>$3.33</strong><strong>1M</strong><p>Gemini 3.1 Pro(≤200K）</p><p>$2.00</p><p>$0.20</p><p>$12.00</p><p>1M</p><p>Gemini 3.1 Pro(&gt;200K）</p><p>$4.00</p><p>$0.40</p><p>$18.00</p><p>1M</p><p>GPT-5.4</p><p>$2.50</p><p>$0.25</p><p>$15.00</p><p>400K</p><p>GPT-5.5</p><p>$5.00</p><p>未公布</p><p>$30.00</p><p>1M</p><p>Claude Opus 4.6</p><p>$5.00</p><p>$0.50</p><p>$25.00</p><p>1M</p><p>Claude Opus 4.7</p><p>$5.00</p><p>$0.50</p><p>$25.00</p><p>1M</p></div><p style="color:#333333">两个脚注。GPT-5.5 是今天（4 月 24 日）刚发的，价格直接在 5.4 基础上翻了一倍。Opus 4.7 的牌价和 4.6 一样，但 4.7 换了一版 tokenizer,同样的文本会切出比 4.6 多 35% 左右的 token,实际账单会比牌价看起来贵一截。</p><p style="color:#333333">单比输入或者单比输出不公平，按业界常用的 3:1 输入输出混合费率（blended rate）算每百万 tokens 的综合成本，这才是真实月底账单的换算基数：</p><div><p>模型</p><p>Blended (USD/M）</p><p>相对 V4-Pro</p><p>DeepSeek V4-Flash</p><p>$0.21</p><p>0.1×</p><strong>DeepSeek V4-Pro</strong><strong>$2.08</strong><strong>1×</strong><p>Gemini 3.1 Pro</p><p>$4.50</p><p>2.2×</p><p>GPT-5.4</p><p>$5.63</p><p>2.7×</p><p>Claude Opus 4.6 / 4.7</p><p>$10.00</p><p>4.8×</p><p>GPT-5.5</p><p>$11.25</p><p>5.4×</p></div><p style="color:#333333">几个能直接拎出来的对比：</p><p style="color:#333333"><strong>V4-Pro 是 Opus 4.7 的 1/5</strong>。结合前面的评测，V4-Pro-Max 在 R&amp;D Coding 上已经贴到 Opus 4.5 非思考档的脚后跟。花 Opus 五分之一的钱买一个差两个小版本的体验，这个性价比在旗舰档里没见过。</p><p style="color:#333333"><strong>V4-Pro 的输出只有 GPT-5.5 的 1/9</strong>。这是今天最魔幻的对比。GPT-5.5 上午刚发，定价激进，V4 同一天发，价格差一个量级。两边是同一个行业，但看起来不太像是同一个时代。</p><p style="color:#333333"><strong>V4-Pro 和 Gemini 3.1 Pro 输入价几乎打平</strong>($1.67 vs $2.00),但输出差 3.6 倍。Gemini 3.1 Pro 原本是闭源里性价比最好的旗舰，V4 把这个标杆又往下拉了一截。</p><p style="color:#333333"><strong>缓存命中是 DeepSeek 的隐藏大招</strong>。V4-Pro 缓存命中输入 $0.14 / M,Opus 4.7 缓存命中 $0.50 / M,差 3.6 倍。Agent 系统的 system prompt 动辄几万 token 反复复用，这部分差价攒下来是实打实的。</p><p style="color:#333333">算个更直观的账。假设一个 Agent 产品日均 1000 万 tokens 输入 + 300 万 tokens 输出，跑一个月：</p><div><p>模型</p><p>月成本（USD）</p><p>DeepSeek V4-Pro</p><p>$799</p><p>Gemini 3.1 Pro</p><p>$1,680</p><p>GPT-5.4</p><p>$2,100</p><p>Claude Opus 4.7</p><p>$3,750</p><p>GPT-5.5</p><p>$4,200</p></div><p style="color:#333333">一个月的差价够一个工位的工资。V4-Pro 月账比 Opus 4.7 省下 2900 多美元，比 GPT-5.5 省 3400 美元。这已经不是省不省的问题，是能不能靠这个跑出正毛利的问题。</p><p style="color:#333333">「1M 不加钱」那句话，到这张表上就真的落地了。过去一年长上下文在各家都是带阶梯定价的溢价功能，128K 一个价，1M 又一个价，或者直接按上下文长度阶梯涨。V4 把溢价抹掉，1M 和 128K 一个价卖。</p></section><section><p><span style="color:rgba(245,158,11,0.12);font-weight:900">04</span></p><h2 style="color:#1a1a1a;font-weight:700">四、接进来：一行配置的事</h2><p style="color:#333333">API 这边做得很克制。base_url 不变，model 参数换成 deepseek-v4-pro 或 deepseek-v4-flash 就切过去了。OpenAI ChatCompletions 接口和 Anthropic 接口都兼容。</p><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1JJgm73jjNw5ayOkDdQY28.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#333333">注意上面图片的灰色小字↑，价格还有很大空间...</p><p style="color:#333333">Anthropic 接口兼容这一条，是对 Claude Code 用户的直接招手。Claude Code 是 很多开发者日常用它写代码，用的就是 Anthropic API 格式。改一个 base_url 加一个 model name,就能把 V4 接进你现成的 Claude Code 工作流里去。内部评测体感优于 Sonnet 4.5,接近 Opus 4.6 非思考模式，1M 上下文白送，账单还是 Opus 的 1/5。</p><p style="color:#333333">换句话说，DeepSeek 把你留在 Claude 生态里的迁移门槛，降到了「改一行配置」。</p><p style="color:#333333">原来的 deepseek-chat 和 deepseek-reasoner 两个 model name 会在 2026-07-24 正式停用，过渡期指向 V4-Flash 的非思考和思考模式。这是一次干净的代际切换，不是并行叠床架屋。切到 V4,就是一条路。</p><p style="color:#333333">思考模式里还多了 reasoning_effort 参数，可以设 high 或 max,换来的是硬任务的准确率。复杂 agent 场景官方建议直接给 max。</p><p style="color:#333333">开源权重同步上了 HuggingFace 和 ModelScope,技术报告也放出来了。要跑本地部署或者做二次训练的可以直接拿。</p></section><section><p><span style="font-weight:900;color:rgba(245,158,11,0.12)">05</span></p><h2 style="color:#1a1a1a;font-weight:700">写在最后</h2><p style="color:rgb(51, 51, 51)">V4 追得紧，但不是样样都追上了。</p><p style="color:rgb(51, 51, 51)">把它相对顶级闭源的短板按严重程度摆出来，分三档：</p><p style="color:rgb(51, 51, 51)"><strong>致命</strong>：靠 V4 自己补不回来的差距,换模型才能解决。</p><p style="color:rgb(51, 51, 51)"><strong>明显</strong>：差距真实存在,但方向对、在缩小，下个版本有希望。</p><p style="color:rgb(51, 51, 51)"><strong>可接受</strong>：能感觉到落后，但不影响核心场景，或者本来就不是 V4 的目标。</p><p style="color:rgb(51, 51, 51)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4i2b8E3SC4RP3qWhjZ1QxT2X.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:rgb(51, 51, 51)">就像 DeepSeek V4 官方公众号结尾说的：</p><p style="color:rgb(51, 51, 51)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1HGqhRQMkrv1B9eWRZ9knY.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:rgb(51, 51, 51)">希望一些人凡是遵循客观规律和事物的发展，不要盲目的期望，也不要妄自菲薄。</p><p style="color:rgb(51, 51, 51)">更不要自大自夸，也不要妄自尊大...</p><p style="color:rgb(51, 51, 51)"><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">秉持长期主义的原则理念，在尝试与思考中踏实前行...</span></p><blockquote style="color:#b45309;font-style:italic"><p style="color:#b45309">本文参考：DeepSeek-V4 官方发布文章（微信公众号 / 深度求索)+ DeepSeek-V4 技术报告 PDF<sup>[1]</sup> + LMArena 榜单数据</p></blockquote></section><section><section><p style="color:#999;font-weight:600">参考链接</p><p style="color:#999">[1] DeepSeek-V4 技术报告 PDF: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf</p></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 小互AI-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eb14da936faa8bf9bb983e?channel_id=67cc08a89a4297b6148b34f0">https://lingowhale.com/reader/web/69eb14da936faa8bf9bb983e?channel_id=67cc08a89a4297b6148b34f0</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

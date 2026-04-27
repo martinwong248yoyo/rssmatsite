@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>灵光 App 上线“体验世界模型”功能 秒级生成一个3D世界</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 小互AI-公众号</div>
+                    <h1>灵光 App 上线“体验世界模型”功能 秒级生成一个3D世界</h1>
+                    <div class="meta">
+                        <span>小互AI</span>
+                        <span>Mon, 27 Apr 2026 02:26:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eecb85d419f50beb809c3f?channel_id=67cc08a89a4297b6148b34f0">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="color:#515151;font-weight:400"><span style="color:#515151">兄弟们，手机上现在能跑世界模型了，你敢信？</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">上传一张照片，手机上立刻生成一个可以探索的 3D 世界，说白了其实就是世界模型：<span style="font-weight:bold">你给AI一张图，它给你生成出一整个能走进去的物理空间...</span></span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">很多人都体验过世界模型，但都是远程大模型等待很久后生成的。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">手机上等待几秒立刻生成，这已经反常识了，你还可以在手机上用类似手游摇杆的方式往前走、转视角、看周围的环境，这就离谱了。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">手机的算力怎么可能支撑这件事？我也想不明白，但是不重要，它就是可以！</span></p><p>【视频】跳转到原文查看</p><p style="color:#515151;font-weight:400"><span style="color:#515151"><span style="font-style:italic">上传一张马里奥的图片，点击"生成图中世界"，等待几秒秒，马里奥的世界就可以游览了。</span></span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">生成的马里奥世界就是原图的风格，之后延展出来的整个世界都是这个风格，所有的景物和道具都是这个风格，左边的摇杆可以控制前进后退，右边的摇杆可以控制视角，和打游戏一样。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">非常简单，没有任何学习过程，也没有任何上手难度。</span></p><h3 style="font-weight:bold;color:#3B3B38"><span style="color:inherit;font-weight:bold"><span>一张图，现在可以"走进去"了</span></span></h3><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2qX5rI1EpM4A3Yotfz2mfedl.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><p style="color:#515151;font-weight:400"><span style="color:#515151">4月27日蚂蚁灵光 App 正式上线"体验世界模型"功能。<span style="font-weight:bold">这是首个可在移动端体验世界模型的产品。</span></span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">不需要理解什么是世界模型，也不需要懂 3D 建模。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">打开 App，上传一张图，选择"生成图中世界"。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">或者直接输入一句：</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151"><span style="font-weight:bold">“帮我用第一人称视角探索这个世界。”</span></span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">然后等它生成就行。</span></p><p style="font-weight:400;color:#515151"><span style="color:#515151">它让你可以进入这个画面，用自己的视角去探索。</span></p><p>【视频】跳转到原文查看</p><h2 style="color:#D97757;font-weight:bold"><span style="color:inherit;font-weight:bold">一张照片，怎么变成一个世界？</span></h2><p style="color:#515151;font-weight:400"><span style="color:#515151">它不是一个工具，没有复杂参数，没有一堆看不懂的设置，也不需要你提前准备 3D 素材，只要给它一张图片，它就会根据图片里的空间、物体和氛围，生成一个可以探索的场景。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">比如一张街景图，它会把你放到街道里。一张室内图，它会让你像走进房间一样去看周围。一张风景图，它会把画面变成一个可以往前推进的空间。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">进入体验页面之后，你可以自己控制视角。往前走，往旁边看，转一下方向。操作方式也很熟悉，就是类似手游里的摇杆。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">这点我觉得很重要。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">因为很多普通用户其实不怕 AI，怕的是工具太复杂。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">一旦让用户调参数、选模型、看一堆专业名词，很多人就不想玩了。但摇杆这种东西大家都很熟。不需要学习。上手就知道怎么动。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">所以整个体验会更像是在手机上玩一个刚刚生成出来的小世界游戏。</span></p><h3 style="color:#3B3B38;font-weight:bold"><span style="color:inherit;font-weight:bold">走进游戏</span></h3><p style="color:#515151;font-weight:400"><span style="color:#CC7C5B;font-weight:bold">第一张是我随手丢的一张《和平精英》截图。</span></p><p>【视频】跳转到原文查看</p><p style="color:#515151;font-weight:400"><span style="color:#515151">我本来以为它会"翻车"——毕竟这是一张游戏画面，本身就是 3D 渲染过的东西，再喂给 AI 让它"生成 3D 世界"，听起来有点套娃。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">结果进去之后，场景对了，光对了，远处的建筑，地面的质感，那种荒地荒野的氛围都还在，我推着摇杆往前走，真的是"在那张截图里走"的感觉。</span></p><p style="color:#515151;font-weight:400"><span style="color:#CC7C5B;font-weight:bold">一张 3D 游戏的概念场景图</span></p><p>【视频】跳转到原文查看</p><p style="color:#515151;font-weight:400"><span style="color:#515151">类似于第一人称设计游戏的视角，我在想这样的游戏场景如果可以生成的话，那下一代 GTA 是不是就真的是开放世界了，所有地图和场景都是实时生成的，每一次进入，每一次玩都不一样，那游戏就真的好玩了。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">一点不错，灵光生成的这个世界好像就是继承了所有的世界观和风格，怎么走都是这种破败的样子，这时候只有一个感觉，要换手机了，哈哈！！</span></p><h3 style="color:#3B3B38;font-weight:bold"><span style="font-weight:bold;color:inherit">走进别人的人生</span></h3><p style="color:#515151;font-weight:400"><span style="color:#CC7C5B;font-weight:bold">我从小红书上扒的一张博主拍的海边旅游照。</span></p><p>【视频】跳转到原文查看</p><p style="font-weight:400;color:#515151"><span style="color:#515151">这张是真实世界的照片，不是游戏画面。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">这个世界生成出来，真的震惊了，整个场景还原的太完整了，主角走动的时候裙角还会飘荡，站住不动，海风吹过来，裙角也会飘荡，远处海浪一浪接着一浪。</span></p><p style="font-weight:400;color:#515151"><span style="color:#515151">这种体验太好了，不要纠结他的生成画质，这是手机算力算出来的，这不代表这个技术的未来，它只是开始，随着手机算力越来越强，以后我们没有去过的地方，只要一行照片就能在其中探索了。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">这一瞬间我有个很奇怪的感受——这是别人拍的照片，我没去过那里，但我现在在那张照片里"走"。</span></p><p style="color:#515151;font-weight:400"><span style="color:#CC7C5B;font-weight:bold">另一个博主在云南洱海边荡秋千的照片</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">这张图很有氛围：一个人、一个秋千、一片湖、远处的山。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">我其实没期望它能把"秋千"这种细节物体处理得多好,主要想看它对那种空旷的、有纵深感的风景能不能撑住。</span></p><p>【视频】跳转到原文查看</p><p style="color:#515151;font-weight:400"><span style="color:#515151">一进去，我去，所有的世界观都正确，风，光影，湖水涟漪，我不敢太往前了，他这个的逻辑是画面中的人物是主角，我再往前走，她就掉下去了，我就这么看着他在荡秋千，感觉我就在后面的躺椅上躺着，微风拂过，看着这一幅真实的景象。</span></p><p style="color:#515151;font-weight:400"><span style="color:#CC7C5B;font-weight:bold">江西望仙谷的风景照</span></p><p>【视频】跳转到原文查看</p><p style="color:#515151;font-weight:400"><span style="color:#515151">这张图是我故意挑的，中式山水那种层峦叠嶂、雾气、远近虚实的关系，是出了名的难处理。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">进去之后，雾还在，山的层次还在，我往前走的时候，近处的树和远处的山是分层动的——这是一个有空间感的世界，而不是一张被拉伸开的平面图片。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">而且所有出现的人都打伞，哈哈，这时真的理解这个世界发生了什么吗？</span></p><h3 style="color:#3B3B38;font-weight:bold"><span style="color:inherit;font-weight:bold">写在最后</span></h3><p style="color:#515151;font-weight:400"><span style="color:#515151">测完这一圈下来，我大概理解了灵光想做的事情。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">它不是要做一个最精美的 3D 引擎，不是要和那些大型 3D 软件比画质，手机屏幕就这么大，它也不需要去比那个。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">它做的事情是：把"生成一个可以探索的 3D 世界"这件事，从一件需要专业团队、需要昂贵设备，需要漫长等待的事，变成</span><span style="color:#CC7C5B;font-weight:bold">普通人在手机上点一下，等十秒，就能玩</span><span style="color:#515151">。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">以前说"AI 生成 3D 世界"，听起来是发布会上的演示，是论文里的截图，是别人嘴里的"未来"。</span></p><p style="color:#515151;font-weight:400"><span style="color:#515151">现在它就在我手机里。我朋友、我爸妈、刷到这条视频的你，打开 App 上传一张图，十秒之后都能进去走一圈。</span></p><p style="font-weight:400;color:#515151"><span style="color:#515151">一张照片，真的可以"走进去"了，而且是在手机上。</span></p><p style="color:#515151;font-weight:400">当然目前只是体验这种生成 <span style="color:#515151">3D </span>世界的感觉，还不能达到很流畅的操作和精美的画面，所以期望不要太高，但是这代表了一种全新的方向。灵光的目的也是让我们能更早的体验和感知AI的强大，为我们打开3D世界的大门，呈现更多的可能....</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 小互AI-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eecb85d419f50beb809c3f?channel_id=67cc08a89a4297b6148b34f0">https://lingowhale.com/reader/web/69eecb85d419f50beb809c3f?channel_id=67cc08a89a4297b6148b34f0</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

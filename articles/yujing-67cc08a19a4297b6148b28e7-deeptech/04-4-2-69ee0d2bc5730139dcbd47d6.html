@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>中国科学家用4.2万亿粒子构建虚拟宇宙，以“大衍之数”推演万物</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>中国科学家用4.2万亿粒子构建虚拟宇宙，以“大衍之数”推演万物</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Sun, 26 Apr 2026 12:55:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ee0d2bc5730139dcbd47d6?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2zihzR4nilYT4AIFAUFEj0r.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">宇宙有多大？面对这一问题，天文学家给出的回答是：目前可见物质不过是全部质量的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 5%，其余 95% 是暗物质与暗能量，迄今无法被直接探测。星空下，人类的视线曾被望远镜的口径所限。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">而在位于北京的中国科学院计算机网络信息中心，一台名为</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">东方</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">的超级计算机运行了超过</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 420 小时，走过逾 12,000 个时间步长，模拟了一个涵盖 4.2 万亿粒子的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">数字宇宙</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">4 月 23 日，中国科学院国家天文台举办了一场特殊的科学发布会：由中国科学家王乔领衔的国际团队，历经数年攻关，向世界展示了迄今规模最大的宇宙学数值模拟项目：</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">HyperMillennium）的首批研究成果。在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">东方</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">的算力支撑下，它忠实地重现了宇宙从大爆炸后的早期状态，到今天形成星系、星系团和大尺度结构的漫长演化历程。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/mnoSu2dFL5u2NEQyN2UgxeA.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span>（来源：中国科学院国家天文台）</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0);font-weight:bold"><span><span style="color:rgb(14, 23, 50)">宇宙学数值模拟：在硅片上复现万物生成的</span></span></span></span><span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold;color:rgb(14, 23, 50)">上帝视角</span></span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0);font-weight:bold"><span><span style="color:rgb(14, 23, 50)">”</span></span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">宇宙的演化过程跨越了百亿年的时间尺度，数十亿光年的空间尺度。在现代天文学中，科学家无法通过更改变量来观察星系的碰撞，也无法让时光倒流，窥探大爆炸后的第一缕曙光。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">唯一的破解之道是数值模拟：借助计算机，将宇宙的初始条件（来自宇宙微波背景辐射的观测约束）作为输入，按照已知的物理定律（主要是引力）一步步演算，得到今天宇宙的结构分布预测，构建一个与真实宇宙高度吻合的数字孪生体，再与实际观测进行比对。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这一方法最重要的理论框架是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">ΛCDM 模型</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">（冷暗物质加宇宙学常数模型），它已被数十年来的观测证据反复验证，成为现代宇宙学的标准模型。在这个框架下，宇宙的结构</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">——从星系、星系群到包含数百个星系的星系团，再到绵延数亿光年的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">宇宙纤维网</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">——通过引力作用，由小至大逐级汇聚而成。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">天文学家自上世纪</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 80 年代便开始尝试运行数值模拟。其中最具历史意义的节点，是 2005 年由维尔戈联盟（Virgo Consortium）发布的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千年模拟</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Millennium Simulation）。该模拟追踪了超过 100 亿个暗物质粒子，描绘出宇宙大尺度结构的基本骨架，至今已是天体物理学领域被引用次数最多的模拟工程之一。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">此后，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Millennium-II、Millennium-XXL、日本的 Uchuu 和欧洲的欧几里得旗舰模拟（Euclid Flagship II）等项目相继推出，不断推高模拟的体量上限。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">随着新一代天文观测设备投入使用，现有模拟的体量与分辨率已经开始捉襟见肘。欧洲空间局</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">欧几里得</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">望远镜（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Euclid）、中国空间站巡天望远镜（CSST）等巡天项目将在更广袤的空间中绘制宇宙中数十亿个星系的分布图，高精度的模拟是后续研究的重要理论支撑与数据标定基础。既要体量，还要保证精度，正是在这一迫切需求下，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">应运而生。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4AhFtc2u645K4rOaYG2thKr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span>中国空间站巡天望远镜（来源：中国科学院国家天文台）</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0);font-weight:bold"><span><span style="color:rgb(14, 23, 50)">“</span></span></span></span><span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">背后，专为</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold;color:rgb(14, 23, 50)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">东方</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">”</span></span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0);font-weight:bold"><span><span style="color:rgb(14, 23, 50)">超算开发的自研代码</span></span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">HyperMillennium，缩写 HM）的命名颇具深意。</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">字呼应其英文名</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Millennium</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">（千年），象征宇宙在漫长时间尺度上的演化；</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">字则取自《易经》中的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">大衍之数</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">，意在以数值计算为手段，在基本物理规律的约束下，从简单的初始条件出发，重建宇宙由无序到有序的层级演化历程。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在技术参数上，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">模拟的规格在当前世界范围内位居首位。暗物质粒子数量达到约</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 4.2 万亿，是此前主流大型模拟 Uchuu 粒子数的两倍，也超过了欧几里得旗舰 II 模拟的粒子总数；模拟了边长约合 120 亿光年的正方体区域，质量分辨率达到 Uchuu 的同等水平，显著优于 Millennium-XXL 以及欧几里得旗舰 II。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">值得一提的是，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">背后的核心软硬件组合几乎全部由中国团队自主开发，数值模拟使用了国家天文台团队自主开发、专为国产超算优化设计的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> PhotoNs-3.7 代码，并在中国科学院计算机网络信息中心的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">东方</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">超级计算机上完成运算。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">其中，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">PhotoNs 采用粒子网格（PM）与快速多极展开（FMM）的混合方案来计算引力。与主流的 PM-树（PM-Tree）方法相比优势显著，特别适合在大规模并行超算上运行极大体量的模拟。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">当前高性能计算（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">HPC）的主流架构以 CPU-GPU 异构为主。PhotoNs 充分利用了这一特点：将计算中最耗时、可占全部计算量 90% 以上的的粒子间直接相互作用运算卸载至上万张加速卡（GPU）中完成。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">针对</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这一规模更大的挑战，团队对</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> PhotoNs 再次进行了深度改造：重写计算核函数，对寄存器和内存中的指令进行精调，并针对</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">东方</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">超算特定的通用</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> GPU 架构进行了适配，同时重构域分解与 MPI 通信机制。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">运行</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 4 万亿粒子规模的模拟需要占用超大内存。为解决这一难题，研究团队创新地采用了混合精度方案：在引力计算中使用 32 位单精度浮点数来节省空间，但在记录粒子位置时引入 32 位整型数来弥补精度的损失。实验证明，这种方案与使用标准代码得到的结果高度一致，系统误差极低。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">最终，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">模拟耗费约</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 420 小时墙钟时间，经历超过 12,000 个时间步长，在超过 1 万张加速卡上长期高效稳定运行，圆满完成任务。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2YLuNce7RUd2Dsxt44c2DLC.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">图</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"> |</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">”</span></span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">模拟暗物质密度场的一个切片（来源：</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span>http://doi.org/10.1093/mnras/stag540）</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0);font-weight:bold"><span><span style="color:rgb(14, 23, 50)">试金石：模拟宇宙能否</span></span></span></span><span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">生产</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">”</span></span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold;color:rgb(14, 23, 50)">出阿贝尔</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0);font-weight:bold"><span><span style="color:rgb(14, 23, 50)"> 2744？</span></span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">一个虚拟宇宙是否可靠，最严苛的检验在于能否</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">复现</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">真实观测中那些极端的、复杂的特殊天体。研究人员将目光对准了距离地球约</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 40 亿光年的著名星系团：阿贝尔 2744（Abell 2744，简称 A2744）。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">A2744 是由至少四个独立星系团在约 3.5 亿年时间内相继碰撞并合的产物，结构极其破碎且动态复杂，因此素有</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">潘多拉星系团</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">的外号。在这个星系团中，星系的可见物质只占总质量的约</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 5%，热气体约占 20%，其余约 75% 是无法直接探测的暗物质。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">模拟必须在统计上</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">产生</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">类似</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> A2744 的极端天体，才能证明它足够可靠。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">研究团队从</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">的虚拟宇宙中筛选出</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 851 个候选星系团。随后，他们采用普罗克鲁斯特斯分析法（Procrustes Analysis），一种在生物形态学中常用的几何匹配技术，对候选体进行系统比对。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">最终，研究团队确定了两组共</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 9 个与 A2744 构型高度相似的模拟类似体。由于模拟本身只处理暗物质，团队引入了 L-GALAXIES 半解析模型，为这些暗物质的引力骨架填入星系、颜色、光度等物理属性，并模拟出韦布望远镜（JWST）视角的虚拟观测图。结果显示，模拟预测与 JWST 的实际观测在光度函数、质量密度分布等多个维度上表现出惊人的一致性，精细度直达 50 kpc 的空间尺度。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3VQwo73KtCBcwec1dA6ePJ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">图</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"> | A2744 与</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">”</span></span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">模拟中选定的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span> A2744 类似物（编号 328 和 842）的星系数量和光度密度图对比（来源：http://doi.org/10.1093/mnras/stag540）</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">值得注意的是，研究团队在将解析模型应用于</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">时，并未针对</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> A2744 进行专门的参数调优，这确保了比对结果的客观性，避免了</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">过拟合</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">的嫌疑。这强有力地证实，即使在宇宙最极端的并合环境下，标准</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">ΛCDM 宇宙学模型依然有效，而</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">模拟也完全具备刻画这种极端物理过程的能力。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(14, 23, 50);font-weight:bold">面向下一代巡天的科学支撑</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">模拟的建设目标，从一开始就是服务于即将到来的新一代大规模宇宙学巡天。中国空间站巡天望远镜（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">CSST）是其中最直接的受益者之一。CSST 预计将以约 0.15 角秒的高角分辨率对约 17500 平方度的天区进行多波段巡天观测，绘制数十亿星系的图像和光谱，用于精确测量弱引力透镜、重子声波振荡等宇宙学探针。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这类工作要求有高精度的模拟</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> mock 星系表作为理论基准和系统误差评估的依据，而</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在体积、分辨率和快照数量（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">100 帧）的组合上，为此提供了理想的数据基础。此外，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">模拟首批数据计划后续通过国家天文科学数据中心面向全球开放发布，这一数字宇宙资源将能为国际天文学社区所共享和利用。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Millennium-II 模拟的主要作者之一、美国德克萨斯大学奥斯汀分校的麦克·博伊兰-科尔钦（Mike Boylan-Kolchin）教授在评价</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">时表示，这是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">一项计算奇迹，它在模拟体积和质量分辨率的覆盖范围上前所未有</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">，并预计未来多年里，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">模拟都将成为星系形成和宇宙学研究领域的重要标志性成果。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">尽管成就突出，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">模拟也存在一些技术局限。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">首先，作为纯暗物质</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> N 体模拟，它不直接包含重子物理，即气体的流体动力学、辐射冷却、恒星形成等过程，星系的产生依赖半解析模型的参数化处理，而非从头数值求解，这对于研究气体主导的精细宇宙现象有一定的局限性。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">其次，由于内存限制，模拟的初始条件采用了泽尔道维奇近似（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">Zel'dovich approximation），而非更精确的二阶拉格朗日摄动理论（2LPT），后者可以更好地抑制粒子噪声对低质量晕分布的影响。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">此外，模拟采用了四年前普朗克数据给出的宇宙学参数，未来，科学家将获取到更精密的观测数据，宇宙学参数的测量精度仍将持续提升，届时或需对模拟结果进行重新标定。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">后续工作方面，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">团队计划推进对更多极端宇宙天体、宇宙大尺度结构统计特征（功率谱、弱透镜剪切相关函数等）以及高红移星系形成历史的系统研究。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">宇宙是一个无法被缩小的实验室，但人类已经有能力在计算机中为它建造一个数字复本。</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">以</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 4.2 万亿个虚拟粒子、120 亿光年的模拟边长，在国产超算的算力驱动下，将宇宙演化的百亿年历史压缩进 420 小时的计算时间。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">从</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 2005 年的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千年模拟</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">到</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 2026 年的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">，二十年间，宇宙学数值模拟的粒子数增长了近</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"> 400 倍，中国科学家在这一领域中，也逐渐从参与者走向了引领者。</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">千衍</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">背后，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">“</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">以数推演万物生成</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">”</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">的东方哲学意象，正在当代宇宙学研究中，以超算代码的形式得到一次真正意义上的实现。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span><span>参考论文：</span></span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://academic.oup.com/mnras/article/548/1/stag540/8529018</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">注：封面</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"><span style="color:rgb(178, 178, 178)"><span><span>/首图由 AI 辅助生成</span></span></span></span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ee0d2bc5730139dcbd47d6?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69ee0d2bc5730139dcbd47d6?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

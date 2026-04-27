@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>纪录片实验室开启 | 人的重力</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / FIRST青年电影展-公众号</div>
+                    <h1>纪录片实验室开启 | 人的重力</h1>
+                    <div class="meta">
+                        <span>FIRST青年电影展</span>
+                        <span>Wed, 25 Mar 2026 11:18:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69c3c741ca51b85fa0b78d87?channel_id=68a7bfd8a2a8009ba9ba576e">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3PH7OV1I4gQ33gc04M3aWDDX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+    <p><span style="font-weight:bold;color:rgb(83, 94, 64)">2021 年，</span>纪录片<span style="font-weight:bold">《流浪者：一部关于安东尼·波登的电影》</span>，讲述了已故知名厨师的人生。电影后半段，观众听到<span style="font-weight:bold">波登</span>朗读写给艺术家朋友大卫·乔的邮件，仿佛是生命尽头的内心剖白。音频语调自然、声线沧桑，许多人以为是波登生前的录音。然而，这段独白是AI在学习了波登的语言习惯后生成的音频。</p> 
+    <p><span style="color:rgb(83, 94, 64);font-weight:bold">2020 年，</span><span style="font-weight:bold">大卫·法兰斯</span>导演的纪录片<span style="font-weight:bold">《欢迎来到车臣》</span>，为了保护被拍摄者的安全，招募 22 名志愿者，用 AI 深度学习把志愿者面部细节“嫁接”到面临死亡威胁的逃亡者脸上。AI 保留了肌肉微颤、泪水轨迹与眼神光泽，年轻人谈及家人背叛时眼角抽动。即便肤色与骨相被替换，影像依然传递出生命真实的战栗。</p> 
+    <p>当生成式人工智能把纪录片伦理推向风口浪尖，让人们陷入真伪难辨的“数字幻觉”时，《欢迎来到车臣》却用“造假”抵达了“真实”。在开诚布公的契约下，观众自愿跨过“虚假”的门槛。</p> 
+    <p>这种危机不只在银幕上。我们每天打开手机，在社交媒体、播客、短视频里不自觉卷入信息洪流，被驱使着站队、下定论、宣泄情绪。自以为掌握世界，却悄悄交出了思考的主动权。</p> 
+    <p><span style="font-weight:bold">如何揭开信息幕幔，去蔽祛魅，完成对真实的记录与求索？</span></p> 
+    <p>游戏<span style="font-weight:bold">《逃离方块：四季》</span>中，玩家开场便置身 1964 年的春日房间，窗明几净，布置寻常。没有情境说明，没有行动目标，唯一明确的指令来自媒介本身：去点击，去组合，去尝试。这像一个隐喻——<span style="color:rgb(83, 94, 64);font-weight:bold">在意义悬置的旷野里，系统赋予我们唯一可确认的交互，只是进入现场，保持行动与追问，理解才可能姗姗到来。</span></p> 
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2OyeYx1VP18T1iexch1NgB4e.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1vmEU73oprWg3oMVDo3YsRHl.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3JBDnl4aj5VZ37JYRgA51N9.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/kbdyyemeUN4Fvjqy1OYaTV.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2c8NEkFacRn2iwNR03oezzo.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/vtBlvljrK10ORwVfAxG8.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+     <section style="color:rgb(160, 160, 160)"> 
+      <p>第九期FIRST纪录片实验室现场图集</p> 
+     </section> 
+    </section> 
+    <p>我们的现实，正越来越像这间没有说明书的房间，进入解谜游戏般的盲目交互。</p> 
+    <p>某天路过一条街，路旁一棵树被砍断，树根裸露，刚够站上一个人。站上去的瞬间，仿佛自己也成了一棵树，也在那一刻，摆脱了心虚。近处的火光、远处的声响、楼宇间的太阳、大桥的钢骨、海面的波光、粗糙的微粒，作家、诗人、外卖员、工人、亲友、清洁工……当目光对准这些可触的真实人与事，再次伸手触摸，我们才仿佛获得确认。</p> 
+    <p><span style="color:rgb(0, 0, 0)">或许，“真实”并非客观存在的物证，而是一次“诚实”的讲述。</span><span style="color:rgb(83, 94, 64);font-weight:bold">它来自创作者对自我的诚实，与最本能的共情。</span><span style="color:rgb(0, 0, 0)">无论记录、扮演还是再造，纪录片本质上是人的创作，无法脱离创作者的生命经验——</span><span style="color:rgb(83, 94, 64);font-weight:bold">那些独特的观察、进入与理解方式，才是影像最终的答案。</span></p> 
+    <p>这种“在场”的韧性，正由纪录片实验室所集聚的创作者们持续践行。继去年<span style="font-weight:bold">陈德明</span>的<span style="font-weight:bold">《从来》</span>之后，<span style="font-weight:bold">陈东楠</span>导演执导的<span style="font-weight:bold">《春日幻游》</span><span style="font-style:italic">Whispers in May </span>代表华语纪录电影再次摘得哥本哈根国际纪录片影展（CPH:DOX）最高奖 DOX:AWARD。这部作品发轫于纪录片实验室与  Edition 的共创项目<span style="font-weight:bold">《五月的秘密》</span>，通过镜头进入一个成长故事，在 16 届影展进行短片首映后，继续在女性成长与秘密的幽微褶皱里生长、蜕变，最终以《春日幻游》完成了又一次华语纪录电影的国际叙事，也代表着在潜流中坚定紧握摄影机的创作代际，不论在如何艰难的环境下，对整体电影精神的坚守和召回。</p> 
+    <p>在《欢迎来到车臣》中，一位受访者成功逃离、获得安全身份后，决定不再隐藏。导演用特效让“数字面纱”像融冰般缓缓褪去，露出他真实的面孔。<span style="color:rgb(0, 0, 0)">于是，“真实”不再是静态概念，而是一个动态的、赢回主权的过程。</span></p> 
+    <p><span style="color:rgb(83, 94, 64);font-weight:bold">一切最终都让位于生命的尊严，让位于人的重力。</span></p> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3SOIvjDTXgD1Cv2BP2Y1yrH.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+    <span><span><span><span style="color:rgb(136, 136, 136)">第十届FIRST纪录片实验室 主视觉 </span></span></span></span><span><span><span><span style="color:rgb(136, 136, 136)">Designed by 罗骞</span></span></span></span> 
+     
+    <blockquote> 
+     <p><span>树不定，风不定，影不定，虚实的平衡脆弱而复杂。影像在世界的流动中不断延伸、铺展、变形，以理智层层拆解，投影是投影，景深是景深，折射是折射。对相对真实保持警惕，对投射关系保守诚实。</span></p> 
+    </blockquote> 
+    <p><span style="font-weight:bold;color:rgb(83, 94, 64)">即日起，第十期FIRST纪录片实验室征案开启，截止日期 5月20日。</span><span style="color:rgb(0, 0, 0)">本期继续开设</span><span style="color:rgb(83, 94, 64);font-weight:bold">发展中项目</span><span style="color:rgb(83, 94, 64)">、</span><span style="color:rgb(83, 94, 64);font-weight:bold">粗剪项目</span><span style="color:rgb(0, 0, 0)">两个方向，面向社会征集不同开发阶段、不同体裁与介质的纪实及非虚构作品。点击文末</span><span style="color:rgb(0, 0, 0)">，跳转FIRST官网查阅详细章程并报名。</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / FIRST青年电影展-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69c3c741ca51b85fa0b78d87?channel_id=68a7bfd8a2a8009ba9ba576e">https://lingowhale.com/reader/web/69c3c741ca51b85fa0b78d87?channel_id=68a7bfd8a2a8009ba9ba576e</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

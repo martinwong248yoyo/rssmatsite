@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>志愿者招募 | 让灵魂认出灵魂</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / FIRST青年电影展-公众号</div>
+                    <h1>志愿者招募 | 让灵魂认出灵魂</h1>
+                    <div class="meta">
+                        <span>FIRST青年电影展</span>
+                        <span>Fri, 27 Mar 2026 04:36:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69c60c7b06717b71d73066dc?channel_id=68a7bfd8a2a8009ba9ba576e">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1U7k5r3IF96r10G4V72LYeoz.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+     
+    <blockquote> 
+     <p><span style="color:rgb(235, 118, 48);font-weight:bold">“我觉得我和 FIRST 的关系就是我被淘汰。”</span></p> 
+    </blockquote> 
+    <p>前两周入职的新同事拿铁，在刚刚的下班路上这样平静地描述她与 FIRST 的连接。<span style="font-weight:bold">2019 年</span>，她做足准备，却最终止步于志愿者选拔。没有录取邮件，没有那件T恤，也没有踏上高原。</p> 
+    <p>让我们诚实一点：每年，FIRST 志愿者招募的录取率被戏称为“文青高考”：几千人精心准备报名材料，在面试中展露才华与热忱。然后，大多数人会收到一封措辞礼貌的拒绝邮件。</p> 
+    <p><span style="font-weight:bold">2006 年</span> 7 月 1 日，青藏铁路全线通车，这条全长 1956 公里的列车轨道，穿过 550 公里冻土层和大片生命禁区，也在此后的 19 年里，把至少<span style="color:rgb(104, 181, 5);font-weight:bold">3200 名 FIRST 志愿者送至西宁</span>，打开一段新的故事篇章。<span style="color:rgb(0, 0, 0)">在 FIRST 19年的叙事里，我们习惯了庆祝抵达，庆祝那些拖着行李箱站在西宁日光下的身影，庆祝那些在星空下结下的友谊。</span></p> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3vRvTe3CTut7kyRqQ4wTVsp.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/13MqEm4r617X4l2YUi4up0sl.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2PGzCK2J9N0qzAUkg1aJBgo.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/147ho32BzWMu2fxZYL4qQYPU.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3ANBsL5zcNlgHSEE4xLcmt.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/33Oq8s2cuWOa1txgXLzazE.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/426vNL1q7AVO1WBQSu2TpFk.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/aqmZC2UFpIT2aj1uP3Zp0i8.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/21fFUz24blbV3lYV1czCVhz.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+     <section style="color:rgb(160, 160, 160)"> 
+      <p>第19届 FIRST青年电影展志愿者在西宁</p> 
+     </section> 
+    </section> 
+    <p><span style="color:rgb(104, 181, 5);font-weight:bold">但那些未曾来到现场、却始终心怀热爱的期待，同样构筑着更庞大的想象共同体，让未完成的小小愿望，以意想不到的走向慢慢实现</span><span style="color:rgb(0, 0, 0)">——</span>与 FIRST 擦肩而过之后，拿铁带着同样的热爱奔赴不同的电影现场，在光影世界里持续前行，以最朴实的热忱，活成了自己想成为的样子。就在前两周，她入职了 FIRST，准备着新一年的志愿者招募。</p> 
+    <p>看，能否来到现场，只是这个漫长故事里一个微小的逗号，而那种<span style="font-weight:bold;color:rgb(104, 181, 5)">“想加入”</span>的冲动本身，早已将她与这个地方紧紧相连。<span style="color:rgb(62, 62, 62);font-weight:400">FIRST 志愿者的奇妙之处在于，它构建了一套超越“是否到场”的联结体系。</span><span style="color:rgb(104, 181, 5);font-weight:bold">在这里，“参与”的定义被极大地拓宽了。</span></p> 
+    <p>张瑜珺的故事，其实也有一个“未抵达”的前传。<span style="font-weight:bold">2018 年</span>，她第一次报名，没能入选。如果故事停在这里，她就是无数心怀热爱、却暂未到场的人之一——一个真诚渴望、却暂时错过的人。但她硬生生给自己“创造”了一次机会：她写了一篇影评，投给了 FIRST 志愿者公众号。后来，这篇影评成为她重新走进 FIRST 的门票。这个夏天，她学会了“主动就会有故事”。</p> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4zXtMhO0kYQqlYmY3GB2fQ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/PEGSJ4BgoJnWQtfH1XlkU4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/39QnfL14vHS22wMVZp2mZOtG.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2o96lJ3571Nm4604tS10zdDq.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+     <section style="color:rgb(160, 160, 160)"> 
+      <p>第12届 FIRST青年电影展张瑜珺的工作瞬间</p> 
+     </section> 
+    </section> 
+    <p><span style="font-weight:bold">2021 年</span>，张莉佳从四川坐绿皮火车来西宁。曹家堡机场的大厅成了最熟悉的地方，每天举着牌子等人，忙到脚不沾地。累极了就和伙伴们在角落铺一块布，并肩躺着歇一会儿。机场的冷气，地面的微凉，成了那年夏天最特别的记忆。偶尔收工后溜去露天放映，晚风吹过来，银幕上的光落在疲惫的脸上。学表演的她心里悄悄埋下一颗种子：“如果有一天，我也能出现在这里，该多好啊。”</p> 
+    <p>四年后，她穿着礼服走上 FIRST 的红毯，作为入围影片的女主角回到这个梦想开始的地方。</p> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/31dDLc9olB04fBdacPZtBC.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+          <section style="color:rgb(160, 160, 160)"> 
+           <p>第15届 FIRST青年电影展张莉佳的工作瞬间</p> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/6iqbV24jkrT2816sA2O9sj4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+          <section style="color:rgb(160, 160, 160)"> 
+           <p>第19届 FIRST青年电影展张莉佳作为入围主创回到西宁</p> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+    </section> 
+    <p><span style="color:rgb(104, 181, 5);font-weight:bold">FIRST 的十九年，由很多人的梦想共同织就，也因人与人的友情绵延向前。</span>当我们谈论“认识二十年的人”时，指的不仅是那些年年在西宁相见的老朋友，也应该包括那些在精神上遥遥“认识”了对方很多年，却始终未曾谋面的人。</p> 
+    <p>我们渴望你来到现场，来西宁或北京，成为那个不可或缺的共创者，成为别人故事里认识了 2 年、5 年乃至 10 年的战友。然后夏天结束，你们各自回到原来的生活轨道。但你知道，这个人就在那里。可能在另一个城市，可能在另一个行业，但就在那里。<span style="color:rgb(104, 181, 5);font-weight:bold">你们可能不常聊天，你们可能几年不见，但一见就能回到那个夏天。</span></p> 
+    <p><span style="font-weight:bold"> 3月27日 </span></p> 
+    <p><span style="font-weight:bold;color:rgb(235, 118, 48)">第20届 FIRST青年电影展（07.17-07.25）</span></p> 
+    <p><span style="color:rgb(235, 118, 48);font-weight:bold">2026年 FIRST惊喜电影展（09.09-09.15）</span></p> 
+    <p><span style="font-weight:bold">志愿者招募</span></p> 
+    <p><span style="font-weight:bold">首次同步启动！</span></p> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/13JhLU4qnGSl2TusTN2k0jwP.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+    <span><span><span><span style="color:rgb(136, 136, 136)"> 2026 FIRST志愿者招募 主视觉 </span></span></span></span><span><span><span><span style="color:rgb(136, 136, 136)">Designed by 罗骞</span></span></span></span> 
+     
+    <blockquote> 
+     <p><span>高原上，地心引力似乎更小一些，身体似乎也变得愈发轻盈而自由，请挥舞或者高举双手，甚至一跃而起，让距离在夏日的阳光下融化，青春的热量在空气中带动色彩弥漫、铺开。</span></p> 
+     <p><span>Ask Me，一起来撒野吧！</span></p> 
+    </blockquote> 
+     
+    <p><span style="font-weight:bold">区域自治</span></p> 
+    <p><span style="font-weight:bold;color:rgb(235, 118, 48)">让你的主动性成为友谊的起点</span></p> 
+    <blockquote> 
+     <p><span>我们以不同活动场景划分区域，把不同职能的志愿者放进具体现场。在这里，沟通是直接的，判断是现场的，决策是在你们之间发生的。你需要主动，可以“撒野”，用你的“Ask Me”精神，去联结、去创造、去解决问题。而友谊，往往就从一次主动的“需要帮忙吗？”开始。</span></p> 
+    </blockquote> 
+     
+    <p><span style="font-weight:bold">角色升级</span></p> 
+    <p><span style="color:rgb(235, 118, 48);font-weight:bold">你成为真正的共建者</span></p> 
+    <blockquote> 
+     <p><span>你一直是这片场域的共建者，是观点的激发者、氛围的营造者、突发灵感的共创者。我们鼓励你带着完整的自己而来——你的专业、你的热爱、你的怪癖、你的想法。在这里，真实的碰撞才能产生真实的友谊。</span></p> 
+    </blockquote> 
+     
+    <p><span style="font-weight:bold">时间选择</span></p> 
+    <p><span style="color:rgb(235, 118, 48);font-weight:bold">让你以最适合的方式进入</span></p> 
+    <blockquote> 
+     <p><span>你可以选择成为全程/超长全程志愿者，从影展开幕前到闭幕后，完整参与一个系统的生长，与同伴建立深厚的“革命情谊”；也可以选择成为半程志愿者，在具体时段进入，在浓缩的时间里迸发最大的能量，创造高浓度的联结。</span></p> 
+    </blockquote> 
+     
+    <p>真理会过时，电影理论会被修正，美学标准会被刷新，今天的前卫可能成为明天的保守。多年以后，当电影的具体情节已经模糊，当电影技术的细节已经更新换代，你依然会记得自己曾以 FIRST 志愿者的身份，踏上过一片容易心跳加速的土地；你会在某个普通的日子里，乘兴写下一封信，你轻盈地称自己为“永远的志愿者”，随即发往数年前的一个旧邮箱，完成一次精神重逢；<span style="color:rgb(104, 181, 5);font-weight:bold">更会记得某一张面孔，以及与对方在西宁的烈日下或北京的秋色中，并肩完成具体而微的工作，共同面对欣喜或棘手的瞬间。</span></p> 
+     
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3lhfri26eaOxa4YbY3rXU6b.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+    <p><span style="color:rgb(136, 136, 136)">第7届 FIRST志愿者于2025年发给组委会的一封信</span></p> 
+     
+    <p><span style="font-weight:bold">2026 FIRST影展志愿者招募现已正式开启，至 5 月 8 日截止。欢迎大家登录FIRST青年电影展官网或点击“阅读原文”链接查看详细信息并完成报名。</span></p> 
+     
+    <p> 
+     【视频】跳转到原文查看 
+    </p> 
+    <p><span style="color:rgb(136, 136, 136)">2025 </span><span style="color:rgb(136, 136, 136)">年度</span><span style="color:rgb(136, 136, 136)">FIRST志愿者回顾视频</span></p> 
+     
+    <p><span style="color:rgb(178, 178, 178)">*本文</span><span style="color:rgb(178, 178, 178)">音乐来源于QQ音乐，版权归原作者 David Lee Murphy / Kenny Chesney 所有</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / FIRST青年电影展-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69c60c7b06717b71d73066dc?channel_id=68a7bfd8a2a8009ba9ba576e">https://lingowhale.com/reader/web/69c60c7b06717b71d73066dc?channel_id=68a7bfd8a2a8009ba9ba576e</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>清华团队为机器人带来超级触觉，材料成本不到1美元，让机械手比人手还灵敏</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / DeepTech深科技-公众号</div>
+                    <h1>清华团队为机器人带来超级触觉，材料成本不到1美元，让机械手比人手还灵敏</h1>
+                    <div class="meta">
+                        <span>DeepTech深科技</span>
+                        <span>Fri, 24 Apr 2026 09:47:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eb3d9f936faa8bf9bdd6ac?channel_id=67cc08a19a4297b6148b28e7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4kp7Or3HmZ7P1TaxsC3OWpmP.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)"><span>当一个机器人在一片凌乱的桌面上摸索，它没有眼睛，却能从一堆水果里挑出来熟透的那个，能够在黑暗中找到遥控器，能够感知到杯子里的水是热的还是凉的，也能使用手指分辨出一只杯子是金属的还是塑料的，甚至能摸出它的表面是光滑还是粗糙的。还能感知到 0.07 毫米粗的头发丝，还能准确识别 26 个盲文字母，准确率达到 100%。</span></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这是清华大学深圳国际研究生院丁文伯教授和合作者打造的一款名为 SuperTac 的仿生触觉传感器，整个传感器的材料成本不到1美元，具备大规模生产的潜力。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4ubxfZ4tY5n74hGc293B66QW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">来源：</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://doi.org/10.1038/s44460-025-00006-y</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">关于应用前景，丁文伯告诉 DeepTech 所有需要精细化触觉感知的场景都可以应用。论文发表后，一家国内大厂以及一些人形机器人厂商都主动联系寻求合作，特别关注康养或居家场景中的柔性接触和柔性交互。在科技部的一个青年科学家项目中，专家也提出能否将传感器应用在航空航天或核辐射等人员稀少、需要人工替代的场景。军工领域同样有潜在需求。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">为了研发这款传感器，他们从鸽子的眼睛里找到了灵感，鸽子能够看到人类看不到的紫外吸纳，还能感到到地球磁场。基于此，他们在 SuperTac 上集成了多光谱成像、摩擦电传感和惯性测量等多种能力，厚度只有一毫米，能够让机器人像人类一样感知物体的材质、纹理、温度、颜色，甚至能在接触之前就感觉到物体的靠近。</span></span></p><p>【视频】跳转到原文查看</p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">（来源：Nature Sensors）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">SuperTac 的设计思路和传统触觉传感器非常不同。以前的电子皮肤传感器，要像提高分辨率就得密密麻麻低排布电极，信号会互相干扰，电路也变得极其复杂。后来，人们想到利用摄像头来“看”触觉，其实这就是视触觉传感器，即利用一个摄像头拍下皮肤接触物体时的变形图像，再从中计算出来受力情况。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这种方法的分辨率较高，不过通常只能在可见光波段工作，感知能力较为有限。SuperTac 的创新之处在于，它把感知范围从可见光扩展到了紫外线、近红外波段和中红外波段。紫外线用来追踪传感器表面的变形和滑动，近红外光用来捕捉物体的细微纹理，中红外光则用来测量温度。不同波长的光在传感器内部各司其职，互不干扰。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2JvQu93SVRSK1A7nBn2UEy9w.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">来源：</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://doi.org/10.1038/s44460-025-00006-y</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这个厚度只有一毫米的传感皮肤一共有四层。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(171, 25, 66)">最外面是导电层，</span><span style="color:rgb(0, 0, 0)">使用透明导电材料 PEDOT:PSS 制成，当它与不同材质的物体接触时，会因为摩擦起电产生不同的电信号，由此可以分辨材质。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(171, 25, 66)">第二层是反射层，</span><span style="color:rgb(0, 0, 0)">它像一面单向镜子，从有光的一侧看是不透明的，从没光的一侧看却是透明的，这让传感器能够自由切换工作模式。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(171, 25, 66)">第三层是荧光层，</span><span style="color:rgb(0, 0, 0)">在紫外光照射下会发出荧光，用来标记传感器表面的变形和位移。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(171, 25, 66)">最下面是支撑层，</span><span style="color:rgb(0, 0, 0)">用硅胶做成可充气结构，通过调节内部气压来改变传感器的受力范围。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">这套精巧的设计让 SuperTac 能在指甲盖大小的面积上，同时感知力、温度、纹理、滑动、材料、距离、振动和颜色等十种信息。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2pAxdh1Rhlut1Dv5Z02M63m9.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">来源：</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://doi.org/10.1038/s44460-025-00006-y</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">测试数据显示：</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在力觉感知方面，SuperTac 的测量精度达到了 0.06 牛，位置精度为 0.4 毫米。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">温度测量范围为 0 到 90 摄氏度，经过校准之后精度达到 0.25 度。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">纹理识别准确率为 98%，材质分类准确率为 95%，滑动检测准确率为 97%，颜色识别准确率 100%。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在振动检测方面，它能感知 0 到 60 赫兹的频率范围，碰撞检测准确率 94%。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">摩擦电信号还能实现非接触感知，在 0 到 15 厘米的距离内就能提前感知物体的靠近。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1o3guz2hknJY3Lbuar1J7vVZ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">来源：</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">https://doi.org/10.1038/s44460-025-00006-y</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">为了让机器人理解这些触觉数据，</span><span style="color:rgb(171, 25, 66)">研究团队开发了一个名为 DOVE 的触觉语言模型，拥有 85 亿参数。DOVE 可以处理 SuperTac 传来的多模态触觉信息，把它们转化成自然语言描述。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">当机器人摸到一个黄色的、处于室温的、表面有凸起纹路的金属物体时，DOVE 会给出“黄色、室温、表面有纹理、凸起、金属质感”。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">它还能进行推理，比如通过触觉判断两个物体的颜色、温度和纹理相似但是材质并不相同，因此它俩是不一样的。在垃圾分类演示中，机器人通过触摸就能判断桌上的物体到底是可回收物、可重复使用物还是普通垃圾。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在工业制造中，这种机器人可以使用手指来感知零件表面的微小瑕疵，或者精准抓取易碎的电子元器件。在医疗领域，手术机器人可以触摸到组织的硬度变化和温度变化，帮助医生判断病灶。在家庭服务中，它甚至能够帮助盲人触摸屏幕上的信息，通过触觉反馈来阅读文字。</span></span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/16QE5f2eMEof3tcUc63pjRo6.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">图 | 丁文伯（来源：受访者）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">为了验证传感器的耐用性，研究团队进行了 8 万次反复接触测试，结果发现 SuperTac 的信号输出始终保持稳定。紫外荧光标记在连续照射一周后也没有出现褪色。不过，目前 SuperTac 的尺寸有点偏大，只能装在机器人的手掌上，还不能装到指尖。研究团队正在推进小型化工作，希望未来能让机器人的每一根手指都能搭载这样一款触觉皮肤。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在产业化方面，丁文伯表示传感器领域非常愿意与产业界合作。他个人的背景交叉，既有材料也有通信和信号处理，这让他更关注传感器应该产生什么样的信号、多模态信号怎么融合。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 0, 0)">在具身智能和大模型时代，触觉被认为是具身智能最重要的环节之一，触觉需要什么样的数据是丁文伯比较关心的问题。传感器方面他更愿意与头部企业合作。不过他的团队也已经孵化了一个名为无界智航的企业，更专注于未来具身智能需要什么样的数据，以及传感器该有什么样的性能。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">参考资料：</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">相关论文https://doi.org/10.1038/s44460-025-00006-y</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)"><span style="color:rgb(178, 178, 178)">注：封面/首图由 AI 辅助生成</span></span></span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / DeepTech深科技-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eb3d9f936faa8bf9bdd6ac?channel_id=67cc08a19a4297b6148b28e7">https://lingowhale.com/reader/web/69eb3d9f936faa8bf9bdd6ac?channel_id=67cc08a19a4297b6148b28e7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

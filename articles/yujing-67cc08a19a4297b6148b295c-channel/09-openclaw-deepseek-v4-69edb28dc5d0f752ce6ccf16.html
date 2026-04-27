@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>虽然OpenClaw为DeepSeek V4又更了一版，但“更新新版需谨慎”</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 量子位-公众号</div>
+                    <h1>虽然OpenClaw为DeepSeek V4又更了一版，但“更新新版需谨慎”</h1>
+                    <div class="meta">
+                        <span>量子位</span>
+                        <span>Sun, 26 Apr 2026 06:30:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69edb28dc5d0f752ce6ccf16?channel_id=67cc08a19a4297b6148b295c">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="font-weight:400;color:rgb(34, 34, 34)">OpenClaw又双叒更新了，这次正式接入了DeepSeek V4系列：</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4qfMH03ARbDZ2MvukFDgPB2.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">现在在龙虾里配置DeepSeek API，默认模型就不是「deepseek-chat」，而是「deepseek-v4-flash」了。</p><section style="font-weight:400;color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Dk3FT3KdGmQ2NdfqW2ORM53.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(34, 34, 34)">这个4.24版本更新内容具体是这样的：</p><ul><li><p>实时语音通话全面打通；</p></li><li><p>DeepSeek V4 Flash和Pro加入模型库；</p></li><li><p>浏览器自动化增加了坐标点击和更好的恢复机制；</p></li><li><p>Telegram、Slack、MCP、会话和TTS修复。</p></li></ul><p style="color:rgb(34, 34, 34);font-weight:400">都是实用功能，一起具体来看。</p><h4 style="color:rgb(62, 62, 62);font-weight:bold">加入DeepSeek V4系列</h4><p style="color:rgb(34, 34, 34);font-weight:400">前一天刚为GPT-5.5更新，没有时间给龙虾之父Peter休息，DeepSeek V4已经向我们走来。</p><p style="font-weight:400;color:rgb(34, 34, 34)">尽管没有像更新GPT-5.5那样把更新信息放到第一条（doge），但并不妨碍网友们期待地搓起了小手。</p><p style="color:rgb(34, 34, 34);font-weight:400"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2wu0Wu10Q4Bp2z4nJ73fPc2t.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4cIszg4zp2C03OHkop3EmYlX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="font-weight:400;color:rgb(34, 34, 34)">V4 Pro和V4 Flash均已可选，其中DeepSeek V4 Flash会是配置完API之后的默认选项。OpenClaw还对后续工具调用回合的重放和逻辑处理问题进行了修复。</p><h4 style="font-weight:bold;color:rgb(62, 62, 62)">实时语音可接入完整智能体能力</h4><p style="color:rgb(34, 34, 34);font-weight:400">龙虾4.24版本更大篇幅的更新，是OpenClaw实时语音功能的大升级。</p><p style="color:rgb(34, 34, 34);font-weight:400">这次龙虾真能边听边想边干活了。</p><p style="color:rgb(34, 34, 34);font-weight:400">Talk、Voice Call和Google Meet现在可以使用realtime voice loops，并调用完整OpenClaw Agent来给出更深层、带工具能力的回答。</p><p style="color:rgb(34, 34, 34);font-weight:400">举个例子，当语音对话里遇到复杂问题时，AI不再只能给一个轻量回复，而是可以把问题交给完整的OpenClaw Agent处理，调用工具、查上下文、跑更深的推理，然后再把结果通过语音返回。</p><h4 style="color:rgb(62, 62, 62);font-weight:bold">浏览器自动化改进</h4><p style="font-weight:400;color:rgb(34, 34, 34)">浏览器自动化这次也朝着“更像真人操作浏览器”迈了一步。</p><p style="color:rgb(34, 34, 34);font-weight:400">OpenClaw新增了基于视口坐标的点击能力，可以直接指定页面上的坐标进行点击操作，还提供了新的CLI命令openclaw browser click-coords。这对一些DOM结构复杂、按钮难以稳定定位，或者需要模拟视觉操作的网页会很有用。</p><p style="font-weight:400;color:rgb(34, 34, 34)">浏览器动作的默认超时时间也拉长到了60秒。以前一些正常但耗时较长的页面操作，可能会被客户端传输层提前判定失败，现在长等待场景会更稳一些。</p><p style="font-weight:400;color:rgb(34, 34, 34)">更多更新细节，可看这里：https://github.com/openclaw/openclaw/releases/tag/v2026.4.24</p><p style="color:rgb(34, 34, 34);font-weight:400">不过懂OpenClaw更新的朋友都懂，每次更新多少都会整点幺蛾子出来。</p><p style="color:rgb(34, 34, 34);font-weight:400">比如这位倒霉朋友的龙虾就搞崩了……</p><section style="color:rgb(34, 34, 34);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/BdLt2bVazb1tk0ke3vrXmW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34);font-weight:400">不少网友吐槽OpenClaw的更新就跟没做过测试似的，只能说更新需谨慎吧。</p><p style="font-weight:400;color:rgb(34, 34, 34)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4nSlxp41dCsu3JEgyp2Qlrb0.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1jhAOQ1MvkSknWuNA3bN8J9.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:rgb(34, 34, 34);font-weight:400"><span>不过……谁知道Peter是不是把这活交给<img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/diq9C1TSkwO1qwLom1t2KhN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" />自己干了呢（doge）？</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 量子位-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69edb28dc5d0f752ce6ccf16?channel_id=67cc08a19a4297b6148b295c">https://lingowhale.com/reader/web/69edb28dc5d0f752ce6ccf16?channel_id=67cc08a19a4297b6148b295c</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

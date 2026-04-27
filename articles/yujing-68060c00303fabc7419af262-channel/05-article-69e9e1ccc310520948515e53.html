@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>魔幻！只剩光了！！</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 金融-公众号-评论</div>
+                    <h1>魔幻！只剩光了！！</h1>
+                    <div class="meta">
+                        <span>发财老博士</span>
+                        <span>Thu, 23 Apr 2026 08:42:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e9e1ccc310520948515e53?channel_id=68060c00303fabc7419af262">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span style="color:rgba(0, 0, 0, 0.9)">现在的市场风格很简单：要站在光里，不要光站在那里，更不要</span><span style="color:rgba(0, 0, 0, 0.9)">赤手空拳的</span><span style="color:rgba(0, 0, 0, 0.9)">站在那里。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">如果你光站在那里，大概率是被套牢了，如果你</span><span style="color:rgba(0, 0, 0, 0.9)">赤手空拳</span><span style="color:rgba(0, 0, 0, 0.9)">站在那里，大概率是</span><span style="color:rgba(0, 0, 0, 0.9)">损失惨重</span><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">简而言之一句话：<span style="font-weight:bold">硅基文明向碳基文明发起了总攻</span>，而且是一种</span><span style="color:rgba(0, 0, 0, 0.9)">强有力</span><span style="color:rgba(0, 0, 0, 0.9)">的进攻。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">围绕人的板块，</span><span style="color:rgba(0, 0, 0, 0.9)">很多都</span><span style="color:rgba(0, 0, 0, 0.9)">表现低迷</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">围绕</span><span style="color:rgba(0, 0, 0, 0.9)">AI</span><span style="color:rgba(0, 0, 0, 0.9)">的板块，</span><span style="color:rgba(0, 0, 0, 0.9)">很多都</span><span style="color:rgba(0, 0, 0, 0.9)">表现强势</span><span style="color:rgba(0, 0, 0, 0.9)">，恰如在现实世界中，</span><span style="color:rgba(0, 0, 0, 0.9)">AI</span><span style="color:rgba(0, 0, 0, 0.9)">对人的取代一样，令人</span><span style="color:rgba(0, 0, 0, 0.9)">无可奈何。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">我不是说要在这个位置，去当追光少年，但当资金形成抱团趋势之后，市场就是这样一种风格：</span><span style="color:rgba(0, 0, 0, 0.9)">一边持续走强，另一边持续走弱</span><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">你别看今年指数牛气冲天，特别是创业板、深成指、</span><span style="color:rgba(0, 0, 0, 0.9)">AI</span><span style="color:rgba(0, 0, 0, 0.9)">和电池等等，<span style="font-weight:bold">但其实赚钱的人没几个</span>，能跑赢指数者，更是寥寥无几。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">今年以来：创业板大涨</span><span style="color:rgba(0, 0, 0, 0.9)">16%</span><span style="color:rgba(0, 0, 0, 0.9)">，深市涨</span><span style="color:rgba(0, 0, 0, 0.9)">11%</span><span style="color:rgba(0, 0, 0, 0.9)">，中证</span><span style="color:rgba(0, 0, 0, 0.9)">2000</span><span style="color:rgba(0, 0, 0, 0.9)">涨</span><span style="color:rgba(0, 0, 0, 0.9)">8.8%</span><span style="color:rgba(0, 0, 0, 0.9)">，沪指涨3</span><span style="color:rgba(0, 0, 0, 0.9)">%</span><span style="color:rgba(0, 0, 0, 0.9)">，通信设备指数涨</span><span style="color:rgba(0, 0, 0, 0.9)">36%</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">CS</span><span style="color:rgba(0, 0, 0, 0.9)">人工智能指数涨</span><span style="color:rgba(0, 0, 0, 0.9)">15%</span><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">但从年初到昨天，三市涨幅中位数，只有</span><span style="color:rgba(0, 0, 0, 0.9)">+0.6%</span><span style="color:rgba(0, 0, 0, 0.9)">，今天这一跌完，</span><span style="color:rgba(0, 0, 0, 0.9)">又得往下走一截</span><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">也就是说，别看今年指数大涨，但有超过一半的股票，是下跌的，上涨家数不足一半。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">如果你年内盈利，那妥妥跑赢</span><span style="color:rgba(0, 0, 0, 0.9)">60%</span><span style="color:rgba(0, 0, 0, 0.9)">以上的人；如果跑赢沪指，即盈利</span><span style="color:rgba(0, 0, 0, 0.9)">3%+</span><span style="color:rgba(0, 0, 0, 0.9)">，我估计能跑赢</span><span style="color:rgba(0, 0, 0, 0.9)">80%</span><span style="color:rgba(0, 0, 0, 0.9)">的人；如果你跑赢了创业板，那绝对是</span><span style="color:rgba(0, 0, 0, 0.9)">top 1%</span><span style="color:rgba(0, 0, 0, 0.9)">的存在，</span><span style="color:rgba(0, 0, 0, 0.9)">跑赢</span><span style="color:rgba(0, 0, 0, 0.9)">99%</span><span style="color:rgba(0, 0, 0, 0.9)">的股民。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">所以，<span style="font-weight:bold">指数强势、极致分化、波动巨大</span>，</span><span style="color:rgba(0, 0, 0, 0.9)">有人喜笑颜开，有人欲哭无泪，</span><span style="color:rgba(0, 0, 0, 0.9)">就是今年市场的真实写照，其他大类资产，也都差不多。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">事实上，资金分化抱团的风格，在大</span><span style="color:rgba(0, 0, 0, 0.9)">A</span><span style="color:rgba(0, 0, 0, 0.9)">屡见不鲜：从</span><span style="color:rgba(0, 0, 0, 0.9)">19-21</span><span style="color:rgba(0, 0, 0, 0.9)">年的白马股，</span><span style="color:rgba(0, 0, 0, 0.9)">20-22</span><span style="color:rgba(0, 0, 0, 0.9)">年的新能源，再到这一波的</span><span style="color:rgba(0, 0, 0, 0.9)">AI</span><span style="color:rgba(0, 0, 0, 0.9)">和光，几乎就没断过顿。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">从过往经验来看，大</span><span style="color:rgba(0, 0, 0, 0.9)">A</span><span style="color:rgba(0, 0, 0, 0.9)">抱团往往呈现出以下<span style="font-weight:bold">几个特点</span>：</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">1. </span><span style="color:rgba(0, 0, 0, 0.9)">时间经历</span><span style="color:rgba(0, 0, 0, 0.9)">13</span><span style="color:rgba(0, 0, 0, 0.9)">个季度左右，涨幅一般在</span><span style="color:rgba(0, 0, 0, 0.9)">10-20</span><span style="color:rgba(0, 0, 0, 0.9)">倍之间，个别股票超过</span><span style="color:rgba(0, 0, 0, 0.9)">20</span><span style="color:rgba(0, 0, 0, 0.9)">倍。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">2. </span><span style="color:rgba(0, 0, 0, 0.9)">月线通常有三波大级别的上涨，第二、第三波涨幅，会非常惊人，可以高位再翻</span><span style="color:rgba(0, 0, 0, 0.9)">3-5</span><span style="color:rgba(0, 0, 0, 0.9)">倍。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">3. </span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">估值在抱团过程中，根本不重要</span>，任何试图通过市盈率、市净率等指标，来判断趋势拐点的行为，往往都是徒劳的。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">因为抱团反映的是情绪预期，而非现实情况，哪怕业绩</span><span style="color:rgba(0, 0, 0, 0.9)">miss</span><span style="color:rgba(0, 0, 0, 0.9)">，只要产业趋势不破，资金也会选择原谅，所以短期估值根本不重要。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">4. </span><span style="color:rgba(0, 0, 0, 0.9)">当一些朗朗上口、而又美好的故事，开始广为传播并被大众所接受时；当没有任何投资经验的人，都可以躺着挣钱时；当某个抱团板块，开始向其他板块发出</span><span style="color:rgba(0, 0, 0, 0.9)">“劝降书”时，就要格外注意了。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这意味着情绪，已经接近高潮，<span style="font-weight:bold">接盘力量到达衰减拐点</span>。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">经过这一年多的捶打，我相信大家都已经体会到我反复讲过上百遍的话了：<span style="color:rgb(255, 0, 0)">指数是散户的最佳选择，玩个股不如玩指数</span>，你费劲巴拉搞半天，可能根本跑不赢指数。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">现在操作也方便，直接在微信里就能搞定。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">比如下面这个</span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">场内</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">ETF</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">优选榜</span></span><span style="color:rgba(0, 0, 0, 0.9)">，它综合评估了目前的性价比和行业风向，从估值、景气度、拥挤度等几个维度进行分析，筛选出值得关注的指数</span><span style="color:rgba(0, 0, 0, 0.9)">ETF</span><span style="color:rgba(0, 0, 0, 0.9)">，辅助大家更好地做比较。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">感兴趣的朋友可以点击下方的卡片看看：</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">比如</span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">人工智能</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">ETF</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">易方达（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">159819</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">）</span></span><span style="color:rgba(0, 0, 0, 0.9)">，跟踪的是中证</span><span style="color:rgba(0, 0, 0, 0.9)">AI</span><span style="color:rgba(0, 0, 0, 0.9)">主题指数，在同类产品中规模最大（超</span><span style="color:rgba(0, 0, 0, 0.9)">235</span><span style="color:rgba(0, 0, 0, 0.9)">亿元）、流动性极其出色，费率较低。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">该基金聚焦</span><span style="color:rgba(0, 0, 0, 0.9)">AI</span><span style="color:rgba(0, 0, 0, 0.9)">核心赛道，囊括光模块、国产</span><span style="color:rgba(0, 0, 0, 0.9)">AI</span><span style="color:rgba(0, 0, 0, 0.9)">算力、服务器等硬科技，全是产业链里能打的，有效避免了“伪</span><span style="color:rgba(0, 0, 0, 0.9)">AI</span><span style="color:rgba(0, 0, 0, 0.9)">”的干扰。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">说白了，咱们跟专业团队相比不占优势，毕竟消息滞后、精力有限。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这种<span style="font-weight:bold">打包一篮子核心资产</span>的玩法，就是把选股的难题交给市场，咱们只要认准大方向就行</span><span style="color:rgba(0, 0, 0, 0.9)">——最近这行情，恰恰证明了配置指数比盲目折腾个股要香得多。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">此外，</span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">自由现金流</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">ETF</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">易方达（</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">159222</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">）</span></span><span style="color:rgba(0, 0, 0, 0.9)">，也可以看看：跟踪国证自由现金流指数，自去年</span><span style="color:rgba(0, 0, 0, 0.9)">4</span><span style="color:rgba(0, 0, 0, 0.9)">月上市以来表现优异。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">从行业权重分布来看，该产品覆盖了典型的抗通胀行业，包括石化、有色、化工、电力设备等，在全球大通胀背景下，具备更强的业绩弹性和现金流修复能力。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">如果你重视企业的盈利质量和长期增长动能，可以考虑一下。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">除了这些，如果大家想更全面地了解更多热门</span><span style="color:rgba(0, 0, 0, 0.9)">ETF</span><span style="color:rgba(0, 0, 0, 0.9)">，可以直接在微信搜索</span><span style="color:rgba(0, 0, 0, 0.9)">“<span style="font-weight:bold">易方达</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">ETF</span></span><span style="color:rgba(0, 0, 0, 0.9)">”</span><span style="color:rgba(0, 0, 0, 0.9)">，或者点击下方卡片查看，里面还有更多精选赛道的动态更新。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">风险提示及免责声明：本文所有内容均不构成任何投资建议，请务必独立判断。市场有风险，投资须谨慎。</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">P1068352100008</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">。</span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 金融-公众号-评论</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e9e1ccc310520948515e53?channel_id=68060c00303fabc7419af262">https://lingowhale.com/reader/web/69e9e1ccc310520948515e53?channel_id=68060c00303fabc7419af262</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

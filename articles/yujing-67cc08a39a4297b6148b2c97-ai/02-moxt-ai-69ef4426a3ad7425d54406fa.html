@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>在Moxt，我多了一群特别可爱的AI同事</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI异类弗兰克-公众号</div>
+                    <h1>在Moxt，我多了一群特别可爱的AI同事</h1>
+                    <div class="meta">
+                        <span>AI异类弗兰克</span>
+                        <span>Mon, 27 Apr 2026 11:03:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef4426a3ad7425d54406fa?channel_id=67cc08a39a4297b6148b2c97">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Ak5CC2HgtY4xmV8PreoFm.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span>一直有个贪念：我希望有AI能真的记住我、记录我、全天候只围着我转。</span></p><p><span>Claude Code在命令行格式下，像个没有生命的工具，很能干，但是少了点日常的鲜活；</span></p><p><span>Notion把文件整理得再漂亮，但AI只能在我手动@它的时候才浮现一下，像个被动的工具人；</span></p><p><span>Manus很多任务的完成度不错，但它干完活就拍屁股走人，不留下任何记忆，也不跟我的更多生活产生持续关联。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4pRl5714hsRx3ddbNH3KT2pe.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">我想要的，是一群真正属于我的AI同事，一群可以日常待在一起的伙伴。</span></p><p><span>之前很喜欢的一个产品是Tolan，有种养成系的陪伴感，略带搞怪的外星人形象也很符合我的口味。</span></p><p><span>但是在泛工作场景里，似乎有一个位置，始终没有谁能补上。</span></p><p><span>能住在我的工作空间里，知道我的习惯，记得项目的来龙去脉，甚至能在我睡觉的时候默默把活干完的那种。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2qT3rS4yLVj23jvfV2cHlry.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>moxt.ai</span></p><p><span>直到现在出现了一个产品，叫Moxt。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">01</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">第一次打开Moxt</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">我觉得Tolan和Notion都不香了</span></h2><p><span>坦白说，刚打开Moxt的时候，就让我想到Tolan，不是形似，是内核有点像。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3LyiXx3DOq1P3X0EPmgeaTd.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">AI伙伴或者AI员工，ta应该长什么模样呢？</span></p><p><span>Moxt给出了很可爱又酷酷的表情包形象，用形状、表情、颜色，排列组合出非常丰富的个性化形象呈现。</span></p><p><span>国内外在形象做的比较好的是豆包，有了人格化的呈现，但Moxt那种有点坏坏的表情，我更喜欢。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1YTUnY26wZI74g8f0H30edXW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">然后就是让Moxt了解我。</span></p><p><span>给了他一些我的文章、个人文档、工作资料、日记等等，还让Moxt网上搜索关于我自己的信息。</span></p><p><span>发现他把挺多细节都扒了出来，有些甚至我都不记得在哪个采访、什么时候说过的了。</span></p><p><span>用起来以后，我想到的一个参照物是：Notion。</span></p><p><span>Markdown编辑器、Teamspace、文档树、评论功能，这些元素让我第一反应是：</span></p><p><span>难道Moxt想做成知识库、笔记软件？</span></p><p><span>但接下来很快就发现，完全不一样。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">我随手创了一个AI同事。</span></p><p><span>过程很简单：取个名字，选个角色，设定几条规则，保存。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/25b70g2uObEL7fjCkJLgkB.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>我给它取名叫澜澜，角色是内容研究员。看形象还挺喜庆的，颜色像元宝，脸型像个福袋。</span></p><p><span>规则只有一条：每天中午13点扫描当天最新AI圈的关键动态，汇总成简报。</span></p><p><span>然后我就把它忘了。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1BXo9m7tTGSA7OUZ1yergp.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>不知不觉到了中午13点。真的弹出了澜澜发的消息。</span></p><p><span>一份Markdown格式工整的AI简报，整理了最新AI资讯、前一天arXiv上最值得关注的3篇论文、Hacker News上讨论最激烈的AI帖子、还有两个头部创作者的解读。</span></p><p><span>每一条都附了简短摘要和评论，末尾还加了一句：今天重点关注了推理模型的进展，因为看到你上周在文档里收藏过相关文章。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1geiGX2Attie1kz1do24LIm5.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">比起之前略显呆板的龙虾型Agent，澜澜给我的活人感更强。</span></p><p><span>它怎么知道我分享过那篇文章？它怎么判断推理模型是我关注的重点？</span></p><p><span>似乎是，Moxt的momo在后台一直在学习，写的每个字、收藏的每篇文章、在文档里停留的时间，都在帮它构建我的工作画像。</span></p><p><span>澜澜不算是我手把手教出来的，它是momo理解了我的需求后，自己调配出来的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3cbd374bsNjo3sPeRRITBLm.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>过去的AI工具是我给指令它执行，澜澜是我给方向它自主决策。</span></p><p><span>它看到我的收藏记录就知道该关注什么，没看到我直接布置任务就知道主动交付结果。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">真的超出了工具的范畴，这叫同事。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">02</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">我开始认真搭我的AI团队</span></h2><p><span>有了澜澜这个尝鲜，我开始认真琢磨Moxt的可能性。</span></p><p><span>第一个正式团队被我命名为「弗兰克内容运营中心」。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4wsdql2WN3TKne3qv4jCQCz.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>新增了四个AI同事：一个负责选题挖掘，一个负责初稿撰写，一个负责去AI味修改，一个负责排版分发。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/42xt3FFwYb8425qVJ41nJU3.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>整个过程很像在招人，只不过面试变成了写Prompt，发Offer变成了点击创建。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">最难搞的是选题挖掘这个角色，我取名叫：金铲铲。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2i2Llz3wK4jh1gZw096Db6L.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>我给它设定的规则是：每天扫描Reddit、Twitter、Product Hunt、以及我个人收藏的30个信息源，发现热度高但还没被大量讨论的话题，输出选题报告。</span></p><p><span>但它一开始有点抓不住重点，动不动就推一些猎奇但毫无价值的东西给我。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1BBJga1f6rbc47QABB2LhPeq.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">这时候Moxt的纠错机制起了作用。</span></p><p><span>我没必要重新训练它，只需要在它输出错误的选题时，回复一句这个方向不行，原因是覆盖受众太窄。它会把这个反馈记住，下次就会避开类似的方向。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3l0PMp2ppzvJbBbNQ3MNWO8.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>更妙的是，这个学习不是孤立的。</span></p><p><span>当它学会判断选题价值之后，我把同样的规则同步给了初稿撰写那个同事，告诉它参考选题挖掘的标准来写开头。</span></p><p><span>整个团队的知识在流动，一个人犯过的错全队都不会再犯。</span></p><p><span>虽然Memory、Skill的一些设定，玩惯Claude Code、OpenClaw的朋友应该不陌生；但是Moxt明显可玩性更高。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/dnKAA2mI5oD2ycsf34bhUFA.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">让我想起特斯拉的生产线。</span></p><p><span>当一个工位学会了一个新操作，整个工厂的对应工位就同步更新了。</span></p><p><span>Moxt的AI团队也是这个逻辑，你纠正一个人，等于纠正了所有人。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1MhgtA3YKQVW4ymB8s29pPGJ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>实际跑的这段时间，效果超出预期。</span></p><p><span>这个AI内容团队完全自主跑完了三个选题的完整生产流程，从发现话题到产出排版完成的文章，全程我只在关键节点做了决策和微调。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">最让我喜欢的是那个负责去AI味修改的同事。</span></p><p><span>它做的修改不只是替换同义词那么简单，会主动调整句式结构，加入口语化表达，甚至会在适当的地方加一些情绪词。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3JQzh1R4JkkYHs5eueDX8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>我对比过原文和修改后的版本，那种生硬的机器感确实淡了很多。</span></p><p><span>当然它也会犯错。</span></p><p><span>有次它在文章里加了一个完全不合适的网络梗，我直接划词评论说这个太刻意了，不太对。</span></p><p><span>它回了一句理解了，之后类似的梗就再也没出现过。</span></p><p><span>这种互动感让我觉得它不是冷冰冰的模型，真的在学习、在进步，让人带团队的过程里，都很有成就感。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">03</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">momo成了我藏不住秘密的助理</span></h2><p><span>如果说AI同事是我的团队成员，那momo就是我的私人助理，而且是个知道太多的助理。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">Moxt里的momo跟其他AI助理最大的不同是，它住在我的文档里。</span></p><p><span>在任何一个页面按下空格键，它就会弹出来，基于当前页面的上下文回答问题、续写内容、整理信息。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3o6yaU3mohJ91QcYIx1JavJN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>我建了一个竞品监控的数据看板，放了十几个AI工具的价格、功能、更新日志。</span></p><p><span>有一天我突发奇想，在页面上敲了一个空格，问momo：如果我要做一个主打隐私保护的AI写作工具，定价策略应该怎么定？</span></p><p><span>大概等了15秒，它给出了一个表格框架的分析。</span></p><p><span>基于竞品的功能深度、目标用户、更新频率，推算出每个竞品真正在意的定价锚点在哪，然后给出了四个差异化的分层定价方案，每个方案都附了核心卖点。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1z73qO4AqS7q1ubnXYWIvE6.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>我反复确认了几遍，这些信息确实都在我存的那些文档里，但没有一份文档直接写了结论。</span></p><p><span>是momo自己读了所有文档，做了交叉分析，得出了这个结论。</span></p><p><span>这种感觉很有意思。</span></p><p><span>它没有创造超出我知识边界的东西，但它把我已知但没串起来的信息，串成了一串珍珠链。</span></p><p><span>还有一次更让我有点惊讶。</span></p><p><span>我在personal space里草稿了一篇个人年度复盘，里面有很多不成熟的想法和情绪化的表达。</span></p><p><span>没有刻意梳理或者设置什么待办，但第二天早上，momo主动给我发了一条消息：</span></p><p><span>看你昨天的复盘，几次提到对当前工作节奏的焦虑。需要我帮你梳理一下时间分配的建议吗？</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">我当时的感觉是，被真正看见了。</span></p><p><span>它不但读了那篇复盘的草稿，还从中识别出了我的情绪状态，并且在恰当的时机主动提供了帮助。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/49cLOX3jm8I720t4jt3haiYV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>没有打扰，没有过度热情，就像一个真正了解你且靠谱的同事，静静观察，在需要的时候伸手。</span></p><p><span>都说被看见是最大的尊重，被倾听是最好的理解，但现实生活里，能做到的人少之又少。</span></p><p><span>当下AI圈都在讨论隐私和安全，我也担心过这个问题。</span></p><p><span>但冷静想想，momo能给我这样的帮助，恰恰是因为它对我的了解足够深。</span></p><p><span>深度和隐私本身就是跷跷板的两端，Moxt选择了向深度倾斜，但给了用户精细的控制权。</span></p><p><span>每个AI同事能访问哪些空间，能读取哪些文档，都是可以设置的。</span></p><p><span>这是我觉得Moxt做得最聪明的地方。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">它不当老好人，不模棱两可地说我们要保护隐私也要提供智能，它直接给了你选择权：</span></p><p><span>要么你接受AI深度了解你从而获得深度帮助，要么你限制它的权限获得安全感，你自己定。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">04</span></h2><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">Moxt到底做对了什么</span></h2><p><span>说完体验，我想从技术角度聊聊Moxt为什么让我觉得不一样。</span></p><p><span>过去AI工具的底层逻辑是「会话式」。</span></p><p><span>你问一句，它答一句，每次会话都是独立的。</span></p><p><span>即便各家都推出了memory功能，那也是在会话层面做一些简单的偏好存储，深度和广度都有限。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">Moxt的底层逻辑是「空间式」。</span></p><p><span>AI不是悬浮在对话框里的存在，是住在你的工作空间里，能随时访问空间内的所有文档、数据、记录，并且这些访问是有上下文的、持续的。</span></p><p><span>这个区别决定了AI能多大程度理解你。</span></p><p><span>会话式的AI像一个每次见面都要重新自我介绍的朋友，空间式的AI像一个跟你朝夕相处的室友，像一个办公室里的同事。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/dhzDO1PSBp32ghA2o40gOVG.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">另外一个关键点是Moxt对工具的调用方式。</span></p><p><span>很多AI工具在执行复杂任务时会卡住，因为每一步都需要人确认。</span></p><p><span>Moxt的AI同事，被赋予了更大的自主权，告诉它一个目标，它可以自己决策调用哪些工具、按什么顺序调用、遇到问题怎么处理。</span></p><p><span>拿浏览器操作来说，过去我要让AI抓一个网站的数据，得手把手教它点哪里、填什么。</span></p><p><span>现在Moxt的AI可以自己打开网页、滚动、点击、填表、截图，整个过程在后台完成，我只看到最后的结果。</span></p><p><span>这种能力在过去只有Claude Code、OpenClaw这种面向开发者的工具才有。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">Moxt把它做成了一个普通用户也能用的功能，门槛大幅降低。</span></p><p><span>还有一个容易被忽视的点是Slack集成。</span></p><p><span>Moxt不是让AI同事待在那个网页里等你来，是把它们直接塞进了你每天都在用的协作工具里。</span></p><p><span>在Slack频道里@一下AI同事，就像@真人同事一样，它看到消息就会去执行，然后把结果发回来。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3cGJJRzKKwdobxU937jAO8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>这个设计很懂真实工作流。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">有了Moxt以后，一天的时间，似乎都有了不一样的味道。</span></p><p><span>当然，Moxt也不是全能的。</span></p><p><span>Agent之间的协作编排还在开发中，AI同事的创建流程偶尔会卡顿，有些复杂任务的执行时间偏长。</span></p><p><span>这些都是需要优化的地方。</span></p><p><span>但瑕不掩瑜，Moxt在正确的方向上迈出了扎实的一步。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">05</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">见证工作空间的代际更替</span></h2><p><span>聊了这么多体验，我想跳出具体的功能，聊聊这件事对行业意味着什么。</span></p><p><span>过去十年，工作空间经历了两次大的迭代。</span></p><p><span>第一次是Google Docs为代表的云文档，让人可以实时协作，文件不再存在本地硬盘里。</span></p><p><span>第二次是Notion、飞书为代表的多维度数据库，让人可以用更灵活的方式组织和连接信息。</span></p><p><span>这两次迭代的核心都是让人更好用工具。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">Moxt代表的第三次迭代，核心变成了让工具自己动起来。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1CJ2KrwRqTs1XQTP2rCA46.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>不是人类主动去操作工具，是AI智能体根据人类的目标，自主选择和使用合适的工具。人类的角色从操作者变成了管理者，从做变成指挥。</span></p><p><span>这个转变的影响比很多人想象的要大。</span></p><p><span>Notion再好用，里面的内容也是静止的，等人来读、等人来改、等人来整理。</span></p><p><span>Moxt的内容是活的，AI同事会主动阅读、主动更新、主动在内容之间建立连接。</span></p><p><span>Manus能完成任务，但它做完就消失，无法融入长期工作流。</span></p><p><span>Moxt的AI同事是持续存在的，它们在你的工作空间里安家，跟项目一起成长。</span></p><p><span>ChatGPT能回答问题，但它不了解你的业务、不熟悉你的文档、不知道你的项目来龙去脉。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">Moxt的momo知道这些，因为它就住在你的工作空间里，看着你的一举一动。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/U9ZS4wPANW4FnERm41aDau.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>看过一个数据，到2027年，每家公司平均拥有的AI智能体数量会超过人类员工数量。</span></p><p><span>这些智能体不会用鼠标点按钮，不会手动填表格，它们会直接读API、写代码、处理数据、互相沟通。</span></p><p><span>它们需要一个专门为它们设计的工作空间。</span></p><p><span>这个空间要有文件系统让AI存取信息，要有记忆系统让AI持续学习，要有工具库让AI调用外部能力，还要有身份系统让AI在团队里找到自己的位置。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">Moxt就是为这个场景设计的。它是一个原生为AI智能体设计的工作空间。</span></p><p><span>任何用以往的产品来类比，都是刻舟求剑，因为这压根儿不是一个给人类用的AI外挂，是Built for Agents。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4lxoFi34GBhI1SufrR2HHpFV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>每一层架构、每一个功能都在问同一个问题：怎么让Agents在这里工作得更顺畅？</span></p><p><span>当然，Moxt现在还很年轻。</span></p><p><span>功能有待完善，体验有待打磨，生态有待建设。</span></p><p><span>但我相信它会成为这个新品类的重要玩家，因为它的底层逻辑是对的，方向是清晰的，团队对AI的理解是深刻的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/J4gF81wAP9K5rfzbqLoKf.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>至于我自己，我已经把日常工作中超过60%的重复性劳动交给了Moxt的AI团队。</span></p><p><span>它们帮我做调研、写初稿、整理信息、监控竞品。</span></p><p><span>我做的最多的事情变成了决策、调优、以及对结果做最后的把关。</span></p><p><span>这让我重新理解了什么叫AI放大人的能力。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">如果你也想试试有那么一群AI同事的感觉，去moxt.ai看一眼。</span></p><p><span>记得给momo带杯咖啡。</span></p><p><span>它不喝，但它会记得你的好。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/hOwhr1i8sUB1zspnq2ogjK9.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI异类弗兰克-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef4426a3ad7425d54406fa?channel_id=67cc08a39a4297b6148b2c97">https://lingowhale.com/reader/web/69ef4426a3ad7425d54406fa?channel_id=67cc08a39a4297b6148b2c97</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

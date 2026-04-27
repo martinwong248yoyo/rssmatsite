@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GPT 5.5发布 重夺第一宝座 能力全面解析...</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 小互AI-公众号</div>
+                    <h1>GPT 5.5发布 重夺第一宝座 能力全面解析...</h1>
+                    <div class="meta">
+                        <span>小互AI</span>
+                        <span>Fri, 24 Apr 2026 02:03:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ead1a1cb0c6578b6977868?channel_id=67cc08a89a4297b6148b34f0">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><p style="color:rgba(255,255,255,0.5)">小互AI · 深度解读</p><h1 style="font-weight:800">GPT-5.5 发布：登顶综合智能榜，Agent 甩开 Claude，但幻觉率是短板</h1><p style="color:rgba(255,255,255,0.75)">OpenAI 今天推出 <span style="color:#7DD3FC;font-weight:600">GPT-5.5</span>，和 <span style="font-weight:600;color:#7DD3FC">GPT-5.5 Pro</span> 一起上线，ChatGPT 里 Plus、Pro、Business、Enterprise 四档和 Codex 用户今日起陆续开通，API 很快会开放（官方措辞 very soon，API 价格已经公布但还没点火）。这是 OpenAI 自 GPT-5.4 以来的下一代主力模型。</p></section><section><p style="color:#333333">OpenAI 今天推出 <strong><span style="color:rgb(14, 165, 233);font-weight:600">GPT-5.5</span></strong>，和 <strong>GPT-5.5 Pro</strong> 一起上线，ChatGPT 里 Plus、Pro、Business、Enterprise 四档和 Codex 用户今日起陆续开通，API 很快会开放（官方措辞 very soon，API 价格已经公布但还没点火）。</p><p style="color:#333333">这是 OpenAI 自 GPT-5.4 以来的下一代主力模型。</p><p style="color:#333333"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2XS2AJ3gO7DQ3qp1R61PMWsh.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:#333333"><strong>一分钟速览：</strong></p><section><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333">在 Artificial Analysis 独立评测里，<span style="color:rgb(14, 165, 233);font-weight:600">GPT-5.5 重回第一</span>，以 3 分优势打破和 Anthropic、Google 的三方僵局</span></p><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333">Terminal-Bench 2.0 拿到 82.7%，比 GPT-5.4 的 75.1% 跳了整整 7 个点，<span style="color:rgb(14, 165, 233);font-weight:600">编码基准全面提升</span></span></p><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333">API 定价每百万输入 5 美元、输出 30 美元，<span style="color:rgb(14, 165, 233);font-weight:600">比 GPT-5.4 翻了一倍</span>，但<span style="font-weight:600;color:rgb(14, 165, 233)"> token 消耗减少约 40%</span>，跑同样的活综合成本净增 20%</span></p><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333">OpenAI 自己用 <span style="font-weight:600;color:rgb(14, 165, 233)">GPT-5.5 写算法优化了 GPT-5.5</span> 的推理基建，Codex 分析数周生产流量写出的自定义负载均衡算法，让 token 生成<span style="color:rgb(14, 165, 233);font-weight:600">速度提升超过 20%</span></span></p><p><span style="font-weight:bold;color:#0EA5E9">•</span><span style="color:#333"><span style="color:rgb(14, 165, 233);font-weight:600">Codex 同步升级三级自动化</span>：能开浏览器做测试、能写 Office 和 Google Drive 文档、能直接操控你电脑上的应用</span></p><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333">AA-Omniscience 知识准确率 57% 创史上新高，但幻觉率 86%，同榜 Claude Opus 4.7 是 36%、Gemini 3.1 Pro 是 50%，答不上来的时候 GPT-5.5 <span style="color:rgb(14, 165, 233);font-weight:600">更爱瞎编</span></span></p><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333">ChatGPT <span style="color:rgb(14, 165, 233);font-weight:600">新增视频输入 </span>tab，Android Beta 用户已经能看到，5.5 时代向所有人开放</span></p><p>【视频】跳转到原文查看</p></section></section><section><p><span style="color:rgba(14, 165, 233, 0.12);font-weight:900">01</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">两个版本，一个基调：新一类智能，为实际工作和 Agent 设计</h2><p style="color:rgb(51, 51, 51);font-weight:400">OpenAI 官方原话是 a new class of intelligence for real work，一种为实际工作设计的新类智能。</p><p style="color:rgb(51, 51, 51);font-weight:400">翻译成人话：以前的 GPT 更像个聊天对象，这一代明确往干活方向拉。给它一个多步乱摊子，它会自己拆、自己用工具、自己检查、一路推到完成。GPT-5.5 比 GPT-5.4 更擅长跨上下文推理、长时间保持在目标上、在模糊处作判断。</p><p style="color:rgb(51, 51, 51);font-weight:400">它做得最好的四件事：</p><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)">写代码和调代码</span></p><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)">在线查资料做研究</span></p><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)">分析数据、做电子表格和文档</span></p><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)">操作电脑上的软件，在工具之间跳来跳去把活干完</span></p></section><p style="color:rgb(51, 51, 51);font-weight:400">两个版本的分工很清楚：</p><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)"><strong>GPT-5.5</strong>（在 ChatGPT 里叫 GPT-5.5 Thinking）：Plus 及以上用户日常用，更快更聪明更省 token</span></p><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)"><strong>GPT-5.5 Pro</strong>：Pro、Business、Enterprise 才有，面对更难的问题，追求高准确度的工作</span></p></section><p style="color:rgb(51, 51, 51);font-weight:400">一个之前少见的指标：<strong>GPT-5.5 每个 token 的响应时间和 GPT-5.4 完全一样</strong>。模型更强一般意味着更慢，这次没慢。OpenAI 在推理基建上动了不少心思，后面会讲。</p><p><span style="color:rgba(14,165,233,0.12);font-weight:900">02</span></p><h2 style="font-weight:700;color:#1a1a1a">Agent 编程：能看懂系统在哪里坏了</h2><p style="color:#333333">OpenAI 把 GPT-5.5 定位成“最强 Agent 编程模型”，重点不是单轮写代码，而是能跟着一个真实工程问题走很长的路：</p><section><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333"><strong>Terminal-Bench 2.0</strong>（82.7% SOTA）测复杂命令行工作流，要模型自己规划、反复迭代、调度工具</span></p><section><span style="color:#333"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/nZ5619OP7z1hMyEb3uHA2G.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333"><strong>SWE-Bench Pro</strong>（58.6%）测真实 GitHub issue 的端到端修复（这一项 Claude Opus 4.7 依然领先，64.3%）</span></p><section><span style="color:#333"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1MOvqC1WLVqp1webBt2KBO6G.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333"><strong>Expert-SWE</strong>（73.1%）是 OpenAI 内部评测，人类专家中位完成时间 20 小时的长周期任务</span></p></section><p style="color:#333333">三个评测 GPT-5.5 都比 GPT-5.4 分数更高，且用更少的 token 完成。</p><p style="color:#333333">官方主 demo 是 Artemis II 月球任务的 3D 可视化：用单张参考图 + 一句话提示，GPT-5.5 在 Vite + WebGL 里写出一个交互式 3D 轨道模拟器，用的是 NASA/JPL Horizons 的真实天体矢量数据（猎户座飞船、月球、太阳），包含真实轨道力学。这个案例能直观看出模型的“视觉理解 + 自主实现 + 自测”三件事怎么串起来。</p><p>【视频】跳转到原文查看</p><blockquote style="color:#075985;font-style:italic"><p style="color:#075985">Every CEO Dan Shipper 发布了新 app 后遇到一个 bug，debug 了好几天，最后叫来一位资深工程师重写了系统的一部分。为了测试 GPT-5.5，他把时间“倒回”到代码损坏的状态，问：模型能不能做出工程师最终采取的同款重写？GPT-5.4 做不到，GPT-5.5 做到了。</p><p style="color:#075985">一位在 NVIDIA 做早期测试的工程师说：“失去 GPT-5.5 的访问权就像被截肢了一条胳膊。”</p></blockquote><p style="color:#333333">Cursor CEO Michael Truell 的原话是：“GPT-5.5 比 GPT-5.4 更聪明也更执着，编程表现更强、工具调用更可靠，能在任务上坚持更久不提前放弃。”</p><p>【视频】跳转到原文查看</p><p style="color:rgb(51, 51, 51)"><span>地震追踪器</span></p><p style="color:#333333">NVIDIA 企业 AI 副总裁 Justin Boitano ：“模型运行在 NVIDIA GB200 NVL72 上，让团队可以从自然语言提示端到端交付功能，debug 时间从几天压到几小时，以前需要几周实验的工作一夜之间就能在复杂代码库里推进。”</p><p>【视频】跳转到原文查看</p><p style="color:#333333"><span style="color:rgb(0, 0, 0);font-weight:400">一个使用 Codex 和 GPT 模型构建的可玩 3D 地牢竞技场原型。Codex 负责处理游戏架构、TypeScript/Three.js 实现、战斗系统、敌人遭遇、HUD 反馈以及 GPT 生成的环境纹理。角色模型、角色纹理和动画是使用第三方资产生成工具创建的，并使用 OpenAI API 生成角色对话。</span></p><p style="color:rgb(51, 51, 51)">MagicPath CEO Pietro Schirano 让它把一条包含几百处前端和重构修改的分支，合并进一条也已经大幅变化的主干，GPT-5.5 用了大约 20 分钟一次合完。</p><p>【视频】跳转到原文查看</p><p style="color:rgb(51, 51, 51)"><span style="font-weight:400;color:rgb(0, 0, 0)">由 MagicPath 首席执行官 Pietro Schirano 创作的游戏，<span style="font-weight:400;color:rgb(0, 0, 0)">提示词：使用 three.js 创建一个 3D 游戏。这应该是一款 UFO 射击游戏，由我控制一辆坦克并击落头顶飞过的 UFO...</span></span></p></section><section><p><span style="color:rgba(14, 165, 233, 0.12);font-weight:900">03</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">Codex 升级：从会写代码扩到会跨应用干活</h2><p style="color:rgb(51, 51, 51);font-weight:400">同一天 OpenAI Developers 官推宣布 Codex 接上 GPT-5.5，升了三个方向的自动化能力。</p><h3 style="font-weight:700;color:rgb(26, 26, 26)">浏览器级</h3><p style="color:rgb(51, 51, 51);font-weight:400">以前 Codex 写代码就停在代码里。现在 Codex 能开浏览器，和 Web App 互动，执行测试流程、点页面、截屏、根据看到的结果迭代，一直跑到任务完成。从写测试用例变成自己跑测试用例再根据结果改代码。</p><h3 style="font-weight:700;color:rgb(26, 26, 26)">Office 和 Google Drive 级</h3><p style="color:rgb(51, 51, 51);font-weight:400">能生成更高质量的电子表格、幻灯片、文档。应用里新加了文件查看器，审阅和修改迭代更快。以前你让 AI 写个 PPT 得自己去 PPT 里粘贴，现在它能在 Office 或 Drive 里直接出货。</p><h3 style="color:rgb(26, 26, 26);font-weight:700">桌面级</h3><p style="font-weight:400;color:rgb(51, 51, 51)">从看屏幕上显示什么，到点击、输入、导航、在不同工具之间转移上下文。给一个多工具流程（比如先看 Notion 需求，再到 Figma 看设计，再到 VS Code 改代码，再到 iTerm 跑测试），Codex 能一路贯穿。</p><p style="color:rgb(51, 51, 51);font-weight:400">Codex 还给 GPT-5.5 开了个专属的 <strong>Fast 模式</strong>：token 生成速度快 1.5 倍，费用 2.5 倍。配给你要立即看到结果的交互场景。</p><p style="color:rgb(51, 51, 51);font-weight:400">Codex 的上下文窗口给到 <strong>400K</strong>，API 给到 <strong>1M</strong>。</p><p><span style="color:rgba(14, 165, 233, 0.12);font-weight:900">04</span></p><h2 style="font-weight:700;color:rgb(26, 26, 26)">工程自指：OpenAI 用 GPT-5.5 优化 GPT-5.5 的基建</h2><p style="color:rgb(51, 51, 51);font-weight:400">要让 GPT-5.5 跑得和 GPT-5.4 一样快，OpenAI 做了件不太寻常的事：让 GPT-5.5 自己去优化自己的推理基建。</p><p style="font-weight:400;color:rgb(51, 51, 51)">具体的改进举了一个：<strong>Codex 分析了数周的生产流量模式，写出自定义的负载均衡和分区启发式算法，使 token 生成速度提升超过 20%</strong>。</p><p style="font-weight:400;color:rgb(51, 51, 51)">打个比方理解一下。原本 OpenAI 处理请求的方式，像快递公司把每单包裹都切成相同大小再寄走，保证大单小单能挤同一辆车。但真实流量从来不均匀，有时大单扎堆、有时小单密集，固定切法会浪费。Codex 看了几周真实的流量曲线，自己写出了一套动态切法，取代了原来的固定切法。</p><p style="color:rgb(51, 51, 51);font-weight:400">这件事比任何基准分都值得记住：不是 demo，不是论文里的假设，是一张跑在 OpenAI 生产 GPU 上、让 token 吐得快 20% 的算法，作者栏写着 Codex。</p><p style="color:rgb(51, 51, 51);font-weight:400">不止这个。OpenAI 一个内部版本的 GPT-5.5（带定制 harness）还帮助发现了关于 Ramsey 数的<strong>新数学证明</strong>，结果已经用 Lean 形式化验证。Ramsey 数是组合数学里的核心对象之一，问一个网络要多大才能保证某种秩序出现。这块的新结果很少且技术门槛高。不是代码、不是解释，是一个真的有用的数学论证。</p><p style="color:rgb(51, 51, 51);font-weight:400">OpenAI 官方公布的内部使用数据：</p><section style="color:rgb(0, 0, 0);font-weight:400"><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)"><strong>85% 的员工每周使用 Codex</strong>，覆盖软件工程、财务、公关、市场、数据科学、产品管理各部门</span></p><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)"><strong>Comms 团队</strong>用 Codex 分析六个月演讲请求数据，搭了评分和风险框架，训了自动 Slack Agent，低风险请求自动处理，高风险才路由到人</span></p><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)"><strong>Finance 团队</strong>用 Codex 审了 24,771 份 K-1 税表（71,637 页），工作流屏蔽个人信息，比去年同期提前两周完成</span></p><p><span style="color:rgb(14, 165, 233);font-weight:bold">•</span><span style="color:rgb(51, 51, 51)"><strong>Go-to-Market 团队</strong>某员工把每周业务报告的生成自动化了，一周省 5 到 10 小时</span></p></section><p><span style="color:rgba(14, 165, 233, 0.12);font-weight:900">05</span></p><h2 style="color:rgb(26, 26, 26);font-weight:700">研究与知识工作：从答问到研究伙伴</h2><p style="color:rgb(51, 51, 51);font-weight:400">研究工作的循环是：探索想法、收集证据、测假设、解释结果、决定下一步试什么。GPT-5.5 的提升在于能跨这整个循环持续推进，而不是每步都要重新启动。</p><section><p style="color:#333333">这部分是这次发布里最“非编程”的一段，也是最值得单独看的部分。</p><blockquote style="color:#075985;font-style:italic"><p style="color:#075985">Jackson Laboratory 免疫学教授 Derya Unutmaz 用 GPT-5.5 Pro 分析了一个包含 62 个样本、将近 28,000 个基因的表达数据集，输出一份详细的研究报告。他说这份工作如果由他的团队自己做，得花几个月。</p><p style="color:#075985">Adam Mickiewicz 大学数学助理教授 Bartosz Naskręcki 用 Codex 里的 GPT-5.5，从一条提示词开始 11 分钟做出一个代数几何 app：可视化两个二次曲面的交线，再把交线转成 Weierstrass 模型。</p></blockquote><p style="color:#333333">Bartosz 用的提示词：</p><p style="color:#333333"><strong>英文原版：</strong></p><p></p># Algebraic geometry surface intersectionMake an app which draws two quadratic surfaces and colors in red the intersection curve. Use computational Riemann-Roch theorem to convert this into Weierstrass curve.## Main windowTwo tinted surfaces with a slightly transparent shading, high quality rendering intersect along a red colored algebraic curveRotation with mouses in both directions, full pinch mechanism for zoom, haptic press to show the little menu with sliders for changing the coefficients of each surface; detection via Z-buffor level## Side right windowShort Weierstrass equation (over Q or quadratic field extension) computed on the go via effective Riemann-Roch theorem formulas## Ambient mode where all the controls are hidden and the user can admire the beauty of the shapes## SpecsApp is running in the browser, light-weight implementation with full stack newest libraries, portable, deployable## DocsGit repo, journal, plan (Markdown files)<p></p><p style="color:#333333"><strong>中文参考：</strong></p><p></p># 代数几何曲面交线做一个 app，画两个二次曲面，并用红色标出它们的交线。用计算型黎曼-洛赫定理把它转换成 Weierstrass 曲线。## 主窗口两个带轻微透明着色的曲面，高质量渲染，沿红色代数曲线相交支持鼠标双向旋转、完整缩放捏合机制、长按显示带滑条的小菜单用于修改每个曲面系数；通过 Z-buffer 层做检测## 右侧窗口通过有效黎曼-洛赫定理公式，实时计算短 Weierstrass 方程（在 Q 上或二次域扩张上）## Ambient 模式隐藏所有控件，让用户欣赏曲面之美## 技术规格浏览器运行，轻量级实现，使用最新全栈库，可移植，可部署## 文档Git repo、journal、plan（Markdown 文件）<p></p><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/13urqJrvaq4fHAyorPi9X.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#333333">官方还提到一个更硬的案例：GPT-5.5 的内部版本在定制 harness 下发现了一个关于 Ramsey 数的新证明，后续用 Lean 验证通过。Ramsey 数是组合数学的核心对象，这次的结论是关于非对角 Ramsey 数的一个长期未解渐近事实。</p><p style="color:#333333">Axiom Bio CEO Brandon White 说，用 GPT-5.5 在他们的药物发现评测上做生化数据推理，准确率有明显提升。</p><p style="color:#333333">AA 测的 CritPt（前沿物理问题）里 GPT-5.5 拿 27%，GPT-5.4 是 23%，Claude Opus 4.7 只有 12%。这一项 Claude 和 Gemini 差距特别明显。</p></section><p style="color:rgb(51, 51, 51);font-weight:400">早期测试者对 GPT-5.5 Pro 的评价是像一个迭代式的研究伙伴。不是一次性回答问题，而是多轮批评手稿、压力测试论点、提出分析方案、配合文档和插件上下文。</p><p style="color:rgb(51, 51, 51);font-weight:400">表外补充一项数据：<strong>内部投资银行建模任务 GPT-5.5 拿 88.5%</strong>，GPT-5.4 Pro 是 83.6%。金融建模类的硬活也有肉眼可见的提升。</p><p>【视频】跳转到原文查看</p></section><section><p><span style="color:rgba(14,165,233,0.12);font-weight:900">06</span></p><h2 style="color:#1a1a1a;font-weight:700">长上下文出现跳跃式进步</h2><p style="color:#333333">这是这次发布里最容易被忽略、但幅度最大的一块。在 OpenAI MRCR v2 和 Graphwalks 这两个长上下文评测上，GPT-5.5 相对 GPT-5.4 有明显跳跃：</p><div><p>评测</p><p>段位</p><p>GPT-5.5</p><p>GPT-5.4</p><p>MRCR v2（8 needle）</p><p>128K-256K</p><p>87.5%</p><p>79.3%</p><p>MRCR v2（8 needle）</p><p>256K-512K</p><p>81.5%</p><p>57.5%</p><p>MRCR v2（8 needle）</p><p>512K-1M</p><p>74.0%</p><p>36.6%</p><p>Graphwalks BFS</p><p>1M</p><p>45.4%</p><p>9.4%</p><p>Graphwalks parents</p><p>1M</p><p>58.5%</p><p>44.4%</p></div><p style="color:#333333">换个说法，在百万 token 级别的长上下文检索和图遍历上，GPT-5.4 之前基本不可用，GPT-5.5 开始变成可用状态。这对 RAG 场景、大代码库分析、长合同审阅这类工作影响最大。</p><p style="color:#333333">AA 独立测的 AA-LCR（Long Context Reasoning）里 GPT-5.5 拿 74%，和 GPT-5.4 齐平，落后 GPT-5.2 Codex（76%）和 GPT-5.1（75%），说明 AA 的测法和 OpenAI 的 MRCR 不完全对齐，但 OpenAI 自己的数据趋势很清楚。</p><p><span style="color:rgba(14,165,233,0.12);font-weight:900">07</span></p><h2 style="color:#1a1a1a;font-weight:700">关键跑分一览（OpenAI 官方 + Artificial Analysis 独立测）</h2><p style="color:#333333"><strong>Artificial Analysis Intelligence Index v4.0（10 项综合）</strong></p><div><p>模型</p><p>综合分</p><strong>GPT-5.5 (xhigh)</strong><strong>60</strong><p>Claude Opus 4.7 (max）</p><p>57</p><p>Gemini 3.1 Pro Preview</p><p>57</p><p>GPT-5.4 (xhigh）</p><p>54</p><p>Kimi K2.6</p><p>54</p><p>MiMo-V2.5-Pro</p><p>54</p><p>GPT-5.3 Codex (xhigh）</p><p>53</p></div><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/EdYIe2UX9eZ2wrDTYp9uBd.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#333333"><strong>分项评测</strong></p><div><p>评测</p><p>测什么</p><p>GPT-5.5</p><p>GPT-5.4</p><p>Claude Opus 4.7</p><p>Gemini 3.1 Pro</p><p>Terminal-Bench 2.0（OAI）</p><p>复杂命令行 Agent</p><strong>82.7%</strong><p>75.1%</p><p>69.4%</p><p>68.5%</p><p>Terminal-Bench Hard（AA）</p><p>终端长任务</p><strong>61%</strong><p>58%</p><p>55%（非推理）</p><p>54%</p><p>Expert-SWE（内部）</p><p>20 小时级长周期编程</p><strong>73.1%</strong><p>68.5%</p><p>-</p><p>-</p><p>SWE-Bench Pro</p><p>真实 GitHub issue</p><p>58.6%</p><p>57.7%</p><strong>64.3%</strong><p>54.2%</p><p>MCP Atlas</p><p>MCP 工具调用</p><p>75.3%</p><p>70.6%</p><strong>79.1%</strong><p>78.2%</p><p>GDPval（OAI）</p><p>44 个职业的知识工作</p><strong>84.9%</strong><p>83.0%</p><p>80.3%</p><p>67.3%</p><p>GDPval-AA（AA 独立测）</p><p>同上</p><strong>64%</strong><p>59%</p><p>63%</p><p>-</p><p>OSWorld-Verified</p><p>操作真实电脑</p><p>78.7%</p><p>75.0%</p><p>78.0%</p><p>-</p><p>Tau2-bench Telecom</p><p>电信客服工作流</p><strong>98.0%</strong><p>92.8%</p><p>-</p><p>-</p><p>Toolathlon</p><p>复杂工具使用</p><strong>55.6%</strong><p>54.6%</p><p>-</p><p>48.8%</p><p>OfficeQA Pro</p><p>Office 文档类</p><strong>54.1%</strong><p>53.2%</p><p>43.6%</p><p>18.1%</p><p>FinanceAgent v1.1</p><p>金融 Agent</p><p>60.0%</p><p>56.0%</p><strong>64.4%</strong><p>59.7%</p><p>MMMU Pro（有工具）</p><p>多模态理解</p><p>83.2%</p><p>82.1%</p><p>-</p><p>-</p><p>CyberGym</p><p>网络安全漏洞</p><strong>81.8%</strong><p>79.0%</p><p>73.1%</p><p>-</p><p>GPQA Diamond</p><p>研究生级理科</p><p>93.6%</p><p>92.8%</p><p>94.2%</p><strong>94.3%</strong><p>FrontierMath Tier 4</p><p>最难的前沿数学题</p><p>35.4%</p><p>27.1%</p><p>22.9%</p><p>16.7%</p><p>CritPt（AA）</p><p>前沿物理</p><strong>27%</strong><p>23%</p><p>12%</p><p>18%</p><p>ARC-AGI-2</p><p>抽象推理</p><strong>85.0%</strong><p>73.3%</p><p>75.8%</p><p>77.1%</p></div><p style="color:#333333">GPT-5.5 Pro 在 BrowseComp（90.1%）和 FrontierMath Tier 4（39.6%）</p><p style="color:#333333"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2tUuwE3qlSg8rPnp2QWWxG.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span> 上是所有已发布模型里最高的。</p><p style="color:#333333">有几个明显趋势：<strong>跨多步、跨工具、跨长上下文</strong>的 Agent 任务 GPT-5.5 把 Claude Opus 4.7 甩开一档；但<strong>单点端到端修 bug（SWE-Bench Pro）、MCP 工具调用（MCP Atlas）、金融 Agent（FinanceAgent）</strong>这三项 Claude Opus 4.7 还在前面。</p></section><section><p><span style="color:rgba(14,165,233,0.12);font-weight:900">08</span></p><h2 style="color:#1a1a1a;font-weight:700">必须单独点一下的限制：幻觉率</h2><p style="color:#333333">这点 OpenAI 官方博客没强调，但 Artificial Analysis 独立测了一个叫 AA-Omniscience Non-Hallucination Rate 的评测，反差很大：</p><div><p>模型</p><p>准确率</p><p>不幻觉率</p><strong>GPT-5.5 (xhigh)</strong><strong>57%（第一）</strong><strong>14%（第二十三名）</strong><p>Gemini 3 Pro</p><p>56%</p><p>9%</p><p>Gemini 3.1 Pro Preview</p><p>55%</p><p>50%</p><p>Claude Opus 4.7 (max）</p><p>46%</p><strong>64%（第七）</strong><p>Claude Opus 4.7 非推理</p><p>44%</p><p>48%</p><p>Claude Sonnet 4.6</p><p>40%</p><p>54%</p><p>Grok 4.20 0309 v2</p><p>11%</p><p>83%（第一）</p></div><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/NrjQL3lnRxc42eo5yxvYW8.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#333333">怎么看这张表：GPT-5.5 是“知道得最多”的模型，但它“敢说自己不知道”的比例很低。Claude Opus 4.7 反过来，准确率低 11 个百分点，但不幻觉率高出 50 个百分点。如果工作是“高风险、对错误零容忍”的（法律、医疗、金融合规），Claude 这组数据更让人踏实。如果是“要覆盖面广、可以复核”的（信息搜集、研究初筛、头脑风暴），GPT-5.5 的综合分更香。</p><p style="color:#333333">AA 另一项 IFBench（指令遵循）GPT-5.5 76%，Claude Opus 4.7（max）只有 59%（非推理 44%）。Claude 在“严格按格式/约束输出”这件事上也弱于 GPT-5.5。</p><p><span style="color:rgba(14,165,233,0.12);font-weight:900">09</span></p><h2 style="color:#1a1a1a;font-weight:700">API 价格：和 GPT-5.4、Claude Opus 4.7 正面对比</h2><p style="color:#333333">GPT-5.5 API 暂未开放，OpenAI 说是“需要和合作伙伴一起做大规模服务的安全和合规准备”，原话 “very soon”。开放后的定价已经公布。单价对比如下：</p><div><p>模型</p><p>输入价格</p><p>输出价格</p><p>按 3:1 折算的综合价</p><p>上下文</p><strong>GPT-5.5 (xhigh)</strong><strong>$5 / 百万</strong><strong>$30 / 百万</strong><strong>$11.25 / 百万</strong><p>1M</p><p>GPT-5.5 Pro</p><p>$30 / 百万</p><p>$180 / 百万</p><p>$67.50 / 百万</p><p>1M</p><p>GPT-5.4 (xhigh）</p><p>$2.50 / 百万</p><p>$15 / 百万</p><p>$5.63 / 百万</p><p>2M</p><p>Claude Opus 4.7 (max）</p><p>$5 / 百万</p><p>$25 / 百万</p><p>$10.00 / 百万</p><p>1M</p><p>Gemini 3.1 Pro Preview</p><p>$2 / 百万</p><p>$12 / 百万</p><p>$4.50 / 百万</p><p>1M</p></div><p style="color:#333333">（数据来源：OpenAI 官方 + Artificial Analysis；3:1 折算是 AA 惯用的加权方式，对应真实任务里 input token 通常多于 output token）</p><p style="color:#333333">几个要点：</p><section><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333"><strong>GPT-5.5 比 GPT-5.4 贵一倍</strong>（综合价 $11.25 vs $5.63）。贵的不是输入 token（$5 vs $2.50）而是输出 token（$30 vs $15）</span></p><p><span style="font-weight:bold;color:#0EA5E9">•</span><span style="color:#333"><strong>GPT-5.5 和 Claude Opus 4.7 输入价同为 $5</strong>，输出价 $30 vs $25，GPT-5.5 稍贵一点</span></p><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333"><strong>GPT-5.4 上下文是 2M，其他三个都是 1M</strong>，长上下文场景 GPT-5.4 还有位置</span></p><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333"><strong>Gemini 3.1 Pro 是价格杀手</strong>：AA 智能榜上和 Claude Opus 4.7 并列 57 分，综合价只要 GPT-5.5 的 40%</span></p></section><p style="color:#333333">但“单价贵”不等于“总开销高”。AA 跑完整 Intelligence Index v4.0（10 项评测）的实际总费用：</p><div><p>模型</p><p>跑完整套评测的总花费</p><p>Claude Opus 4.7 (max）</p><p>$4,811</p><p>Claude Sonnet 4.6 (max）</p><p>$3,959</p><strong>GPT-5.5 (xhigh)</strong><strong>$3,357</strong><p>GPT-5.4 (xhigh）</p><p>$2,851</p><p>Gemini 3.1 Pro Preview</p><p>$892</p></div><section style="color:#333333"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/YUQmS34Xoo030TEXg1jCQbI.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#333333">跑同一套任务，GPT-5.5 总开销比 Claude Opus 4.7 低 30%，因为 token 效率更高（同样的任务用的思考 token + 答案 token 更少）。和 GPT-5.4 比，GPT-5.5 贵 18%，但智能指数高 6 分（60 vs 54），平均每多 1 分智能多花约 $85。Gemini 3.1 Pro 在这个维度最抢眼，用 GPT-5.5 不到 1/4 的钱跑出和 Claude Opus 4.7 并列第二的分数。</p><p style="color:#333333"><strong>各端的可用性：</strong></p><section><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333"><strong>ChatGPT</strong>：GPT-5.5 Thinking 对 Plus/Pro/Business/Enterprise 开放；GPT-5.5 Pro 对 Pro/Business/Enterprise 开放</span></p><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333"><strong>Codex</strong>：GPT-5.5 全订阅方案可用（Plus/Pro/Business/Enterprise/Edu/Go），400K 上下文，Fast 模式生成速度 1.5x、价格 2.5x</span></p><p><span style="color:#0EA5E9;font-weight:bold">•</span><span style="color:#333"><strong>API</strong>：GPT-5.5 和 GPT-5.5 Pro 都还没开放</span></p><p><span style="font-weight:bold;color:#0EA5E9">•</span><span style="color:#333"><strong>Batch / Flex 模式</strong>：标准价一半；<strong>Priority 模式</strong>：标准价 2.5 倍</span></p></section></section><section><p><span style="color:rgba(14,165,233,0.12);font-weight:900">10</span></p><h2 style="color:#1a1a1a;font-weight:700">这次发布里有几件比跑分更有意思的事</h2><p style="color:#333333"><strong>一是 OpenAI 明说“GPT-5.5 帮我们改进了服务 GPT-5.5 的基础设施”。</strong> 过去模型在 GPU 上按固定 chunk 数切分请求做负载均衡，这不是最优方案。Codex 分析了几周生产流量模式，自己写出定制的负载均衡和分区启发式算法，token 生成速度提了 20% 以上。这是第一次 OpenAI 在官方发布里，把“模型参与底层推理栈优化”作为一个独立案例讲出来。</p><p style="color:#333333"><strong>二是 GPT-5.5 的生物/化学和网络安全能力同时被归为 Preparedness Framework 里的 High 级别。</strong> 之前 GPT-5.2 只把 cyber 标成 High，这次生物一起升级。配套做法是一个 Trusted Access for Cyber 项目：普通 API 走严格分类器（会比之前更容易拒答和被标记），安全防御方走认证后的宽松通道；关键基础设施防御方（比如电网、供水、税务）可以单独申请一个 GPT-5.4-Cyber 模型，OpenAI 还在和政府合作探索这块。这是“强模型分级放行”范式的第二次落地，后续前沿模型发布的新模板。</p><p style="color:#333333"><strong>三是 AA 综合智能榜上 GPT-5.5 领先 Claude Opus 4.7 三分。</strong> 这三分的来源不是单项碾压，而是分布性胜出：Agent 编程、知识工作、物理推理、指令遵循、准确率几个维度都压一点。但不幻觉率、SWE-Bench Pro、MCP Atlas、FinanceAgent 这几项 Claude 还守着。这不是“Claude 完蛋了”的局面，更像“OpenAI 用跨维度堆积领先分数，Claude 在高信任任务上还有位置”。</p><p style="color:#333333"><strong>四是 Gemini 3.1 Pro 此次存在感比预期强。</strong> 智能指数上和 Claude Opus 4.7 并列 57 分，价格只有 GPT-5.5 的四分之一左右。如果 OpenAI 和 Anthropic 是在打旗舰战，Gemini 就是在价格/智能曲线上做功。</p><p><span style="font-weight:900;color:rgba(14, 165, 233, 0.12)">11</span></p><h2 style="font-weight:700;color:rgb(26, 26, 26)">彩蛋：视频输入</h2><p style="color:rgb(51, 51, 51);font-weight:400"> GPT-5.5 将支持视频输入，很多用户前不得不总切回 Gemini 的原因，现在 ChatGPT 里补齐了。</p><p style="color:rgb(51, 51, 51);font-weight:400">现在已经有用户看到 ChatGPT 多了个 <strong>video tab</strong>。按特定按钮就能上传视频，支持 1M 上下文。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3MCs8n2NL8gwtDtsk4jH2iq.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(51, 51, 51)">该功能随 GPT-5.5 将很快向所有人开放。</p><p style="color:rgb(51, 51, 51);font-weight:400">Gemini 3 对多模态视频理解一直领先，OpenAI 在这一代补上。对日常场景（做视频教程提问、会议记录回溯、产品演示视频总结）这是补齐核心能力。官方页面里没直接大篇幅讲视频输入，但几个独立来源都证实了这件事。</p><p style="color:#333333"><span>官方文章：https://openai.com/index/introducing-gpt-5-5/</span><span> System card：deploymentsafety.openai.com/gpt-5-5</span><span> Artificial Analysis 独立评测：artificialanalysis.ai/models/gpt-5-5</span></p></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 小互AI-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ead1a1cb0c6578b6977868?channel_id=67cc08a89a4297b6148b34f0">https://lingowhale.com/reader/web/69ead1a1cb0c6578b6977868?channel_id=67cc08a89a4297b6148b34f0</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

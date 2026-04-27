@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>找100个被资本选中的答案｜2026“最受关注”企业名册评选启动</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 暗涌Waves-公众号</div>
+                    <h1>找100个被资本选中的答案｜2026“最受关注”企业名册评选启动</h1>
+                    <div class="meta">
+                        <span>暗涌Waves</span>
+                        <span>Wed, 15 Apr 2026 02:17:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69def69130e0fd7522b37054?channel_id=67cc08a29a4297b6148b29ed">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1PEDec1sIMb218phnA3Iw2R2.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 175, 0)"><strong><span>「</span></strong></span><span style="color:rgb(16, 46, 91)"><strong><span>谁被看见，谁被押注。</span></strong></span><span style="color:rgb(0, 175, 0)"><strong><span>」</span></strong></span></p><p><span style="color:rgb(178, 178, 178)">出品</span><span style="color:rgb(0, 175, 0)">｜</span><span style="color:rgb(16, 46, 91)"><strong>36氪创投研究院</strong></span></p><p><span style="color:rgb(16, 46, 91)"><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2vz8YAamVYV1PcB4FrkwTz.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></span></p><p><span style="color:rgb(85, 85, 85)">当资本褪去浮躁、回归理性，当概念让位于落地、实效成为行业硬通货，当AI深度重构产业格局、硬科技筑牢行业发展底色，</span><strong><span style="color:rgb(0, 175, 0);font-weight:bold">2026年的一级市场，已然迈入真实价值主导的全新创投时代。</span></strong></p><p><strong><span style="color:rgb(85, 85, 85)">又一波浪潮袭来，谁在被看见，谁在被押注？</span></strong></p><p><span style="color:rgb(85, 85, 85)">市场逻辑已然彻底迭代：从盲目追逐风口，转向审慎布局长期；从为资本故事买单，转向为技术壁垒、商业增长、成熟商业化路径下注。行业用最直白的规则印证：能赢得市场认可、能穿越经济周期的，从来不是虚无的资本泡沫，而是扎实的核心技术、清晰的商业闭环、可验证的稳健成长。</span></p><p><span style="color:rgb(85, 85, 85)">从技术趋势看，AI早已跳出实验室范畴，深度融入产业底座，大模型、智能体、具身智能、机器人全面迈向规模化落地；国产算力、算法、数据工具形成全栈自主可控，AI与千行百业深度融合，跑出可复制、可盈利的成熟发展路径。从资本投资逻辑来看，行业彻底告别烧钱换规模的粗放模式，转向营收可验证、壁垒可量化、增长可持续的严苛评判标准，资金持续向技术领先、场景扎实、商业化闭环跑通的优质企业集中。</span></p><p><span style="color:rgb(85, 85, 85)">站在产业重构与价值重塑的关键节点，</span><span style="font-weight:bold"><span style="color:rgb(85, 85, 85)">36 氪「2026 年度“最受关注”企业名册」</span><span style="color:rgb(85, 85, 85)">正式启动征集！</span></span><span style="color:rgb(85, 85, 85)">“最受关注” 并非简单的流量热度，而是被市场与资本共同验证的成长确定性 —— </span><span style="color:rgb(0, 175, 0);font-weight:bold">它意味着更多顶级投资人的聚焦、全网曝光与深度报道机会，助力企业获得权威行业认证，最终站上产业趋势的核心。</span></p><p><span style="color:rgb(85, 85, 85)">我们将立足投资人视角、依托产业专业维度、恪守严苛数据标准，筛选能够穿越周期、具备长期投资价值的标杆企业，记录那些被资本选中的答案，让更多优质创新企业与项目，被关注，被看见！</span></p><h2><strong><span style="color:rgb(0, 175, 0);font-weight:bold">Part01-</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">评选设置</span></strong></h2><h2><strong><span style="color:rgb(85, 85, 85)">我们寻</span><span style="font-weight:bold"><span style="color:rgb(85, 85, 85)">找两</span></span><span style="font-weight:bold"><span style="color:rgb(85, 85, 85)">类，资本</span></span><span style="font-weight:bold"><span style="color:rgb(85, 85, 85)">必</span></span><span style="color:rgb(85, 85, 85)">看的时代标的</span></strong></h2><p><strong><span style="font-weight:bold"><span style="color:rgb(16, 46, 91)">「最受投资人关注企业 100」</span></span></strong></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">全赛道、全阶段，选出</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">年度 100 家最具投资价值未上市企业。</span></strong><span style="font-weight:bold;color:rgb(0, 175, 0)">你可以是：</span></p><p><span style="color:rgb(85, 85, 85)">硬科技、智能制造、企业服务、医疗健康、新能源、新材料、消费科技、产业互联网领域；商业模式清晰、数据增长亮眼的初创企业；已获一线机构背书，或正在开启下一轮融资；在细分赛道占据头部，或具备颠覆式创新能力。</span></p><p><strong><span style="font-weight:bold"><span style="color:rgb(16, 46, 91)">「最受投资人关注人工智能/具身智能项目」</span></span></strong></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">锚定AI主航道，寻找</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">技术硬、场景实、商业化跑通</span></strong><span style="color:rgb(0, 175, 0);font-weight:bold">的标杆项目。包括但不限于：</span></p><p><span style="color:rgb(85, 85, 85)">大模型、小模型、多模态；AI Infra、算力、算法、数据工具；具身智能、机器人、自动驾驶、AI + 行业应用；能落地、能交付、能产生真实收入的 AI 公司。</span></p><h2><strong><span style="color:rgb(0, 175, 0);font-weight:bold">Part0</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">2</span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold">-评选标准</span></strong></h2><h2><strong><span style="font-weight:bold"><span style="color:rgb(16, 46, 91)">用投资人的逻辑，选有真正的价值公司</span></span></strong></h2><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold"><span style="color:rgb(16, 46, 91)">成长力</span></span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold"><span style="color:rgb(16, 46, 91)">30%：</span></span></strong><span style="color:rgb(85, 85, 85)">营收/订单/用户增速，商业闭环与可持续性；</span></p><p><span style="color:rgb(0, 175, 0);font-weight:bold"><span style="color:rgb(16, 46, 91)">技术力</span></span><strong><span style="color:rgb(0, 175, 0);font-weight:bold"><span style="color:rgb(16, 46, 91)">30%：</span></span></strong><span style="color:rgb(85, 85, 85)">核心壁垒、研发投入、专利与创新；</span></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold"><span style="color:rgb(16, 46, 91)">资本力</span></span></strong><strong><span style="color:rgb(0, 175, 0);font-weight:bold"><span style="color:rgb(16, 46, 91)">30%：</span></span></strong><span style="color:rgb(85, 85, 85)">机构认可度、融资节奏、后续增长空间；</span></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold"><span style="color:rgb(16, 46, 91)">产业力15%：</span></span></strong><span style="color:rgb(85, 85, 85)">场景落地、产业链位置、行业赋能；</span></p><p><strong><span style="font-weight:bold;color:rgb(0, 175, 0)"><span style="color:rgb(16, 46, 91)">影响力15%：</span></span></strong><span style="color:rgb(85, 85, 85)">团队背景、赛道标杆性、长期确定性。</span></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">36氪「2026年度“最受关注”企业名册」</span></strong></p><p><strong><span style="color:rgb(0, 175, 0);font-weight:bold">正式启动征集!</span></strong></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 暗涌Waves-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69def69130e0fd7522b37054?channel_id=67cc08a29a4297b6148b29ed">https://lingowhale.com/reader/web/69def69130e0fd7522b37054?channel_id=67cc08a29a4297b6148b29ed</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

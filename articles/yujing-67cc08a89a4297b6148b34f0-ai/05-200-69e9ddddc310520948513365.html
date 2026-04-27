@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>麻省理工学院做出人工肌肉纤维：牙签粗细，能举起自身200倍的重量</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 小互AI-公众号</div>
+                    <h1>麻省理工学院做出人工肌肉纤维：牙签粗细，能举起自身200倍的重量</h1>
+                    <div class="meta">
+                        <span>小互AI</span>
+                        <span>Thu, 23 Apr 2026 08:48:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e9ddddc310520948513365?channel_id=67cc08a89a4297b6148b34f0">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <blockquote><p style="color:rgb(51, 65, 85)"><span style="color:rgb(14, 165, 233);font-weight:600"><span>一根牙签粗细的透明管子，施加电压，它自己收缩、自己发力，功率密度跟你身上的骨骼肌一样(50 瓦每公斤)，响应时间 0.3 秒，能举起自身 200 倍的重量。</span></span></p><p style="color:rgb(51, 65, 85)"><span style="color:rgb(14, 165, 233);font-weight:600"><span>不带外挂泵，不带马达，静音工作，还能编进织物里。</span></span></p></blockquote><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1dOl951NHzrU3iIAM76miNp.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p style="color:#334155">AI 的脑子两年换了三代，从 GPT-3 到 GPT-5，参数涨了上百倍，推理能力直接飞起来。</p><p style="color:#334155">可是你打开任何一个双足机器人、机械臂、人形机器人的拆机图，里面嗡嗡响的那个东西，还是伺服电机。一个圆柱形、金属、带齿轮、靠旋转再转成直线的老家伙。</p><p style="color:#334155">这玩意儿的原型，1940 年代就定型了。</p><p style="color:#334155">AI 的大脑已经飞到 2026 年，机器人的身体，还穿着八十多年前的骨架。</p><section style="color:#334155"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/mvT4W1FINmh4iK8F42LTgz6.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#334155">2026 年 4 月，MIT Media Lab 和意大利巴里理工学院联合开发的一种电驱动人工肌肉纤维同时，论文发表在《Science Robotics》上《电流体纤维肌肉》。</p><p style="color:#334155">这东西可能是过去二十年里，第一个真正朝这副骨架下手的方案。</p><p style="color:rgb(51, 65, 85)">这东西只有一根牙签那么粗，几克重，通电就能像真肌肉一样收缩和舒张，不需要外挂泵、马达或者其他任何大块硬件。</p><p>【视频】跳转到原文查看</p><p style="color:rgb(51, 65, 85)"><span style="font-weight:bold">主要亮点有五个：</span></p><p style="color:rgb(51, 65, 85)"><span style="font-weight:bold">体积和真肌肉接近：</span>一根粗细接近牙签，几克重，可以像真肌肉那样几十上百根捆在一起形成肌肉束</p><p style="color:rgb(51, 65, 85)"><span style="font-weight:bold">完全电驱动，不用外挂设备：</span>泵直接做在了纤维内部，整套肌肉系统接根电线就能用，不用拖着液压站或者气泵</p><p style="color:rgb(51, 65, 85)"><span style="font-weight:bold">静音</span>：泵里没有任何运动部件，没有齿轮也没有活塞，工作时悄无声息</p><p style="color:rgb(51, 65, 85)"><span style="font-weight:bold">力气和速度都能打：</span>一束能举起 4 公斤重物，差不多一个西瓜的重量，也可以在 0.2 秒内把小物体弹射出去</p><p style="color:rgb(51, 65, 85)"><span style="font-weight:bold">柔软到可以和人接触：</span>按"二头肌-三头肌"编织法做出的机械臂能自如弯曲，但同时柔软到可以和人握手而不会把人夹疼</p><p style="color:rgb(51, 65, 85)">【视频】<span>跳转到原文查看</span></p><h3 style="font-weight:500;color:rgb(71, 85, 105)"><span>先说为什么这件事重要</span></h3><p style="color:rgb(51, 65, 85)">做"像真肌肉一样的东西"这个课题，工程师已经追了几十年。难点在于真肌肉是一个很奇怪的组合：力气大、反应快、尺寸可大可小、控制精确，还柔软到你可以抱小孩。同时具备这么多特性的人造装置非常难做。</p><p style="color:rgb(51, 65, 85)">现在市面上的机器人和义肢几乎都绕开了这个问题，用的是电动伺服马达。马达确实成熟、好买、控制精准，但有两个绕不过去的缺点。</p><p style="color:rgb(51, 65, 85)"><span style="font-weight:bold">第一，</span>马达转的是一根轴，输出的是旋转运动，而真肌肉的动作是直线收缩。为了让机器人手臂像人那样弯曲，工程师得在马达外面套一堆连杆、齿轮和传动机构，把旋转变成直线运动。这些东西又大又占地方。</p><p style="color:rgb(51, 65, 85)"><span style="font-weight:bold">第二，</span>马达只能塞在关节旁边，结果机器人的质量全压在关节上。你的小臂肌肉是均匀分布在整条前臂的，但机器人的"肌肉"是一坨金属块扣在肘关节附近，整个手臂的重心很奇怪，动起来也笨。</p><p style="color:rgb(51, 65, 85)">所以有一部分研究者走了另一条路，用流体驱动的软体肌肉。这类肌肉和真肌肉一样可以直线伸缩，柔软度也够。但以前这类方案要拖着一整套笨重、吵、不便携的液压设备，装在机器人身上走到哪都要扛一个泵站。实验室里能演示，出门一步都难。</p><p style="color:rgb(51, 65, 85)">MIT 这次的思路是把泵本身做成纤维，直接塞进肌肉里面。</p><h2 style="color:#475569;font-weight:500"><span>2 克的一根线，能举 4 公斤</span></h2><p style="color:#334155">先说最直观的。</p><p style="color:#334155">他们做出来的这根<span style="font-weight:bold">「肌肉」</span>，是<span style="font-weight:bold">一根纤维</span>。<span style="font-weight:bold">几毫米粗</span>，比牙签厚不了多少，<span style="font-weight:bold">单根重约 2 克</span>。</p><p style="color:#334155"><span style="font-weight:bold">通电，它就像真肌肉一样收缩、放开、再收缩。</span></p><p style="color:#334155">没有马达嗡嗡响，没有液压管在背后拖着，不需要背一个泵，不需要挂一个罐子。就是一根透明的细线，通电就动。</p><p style="color:#334155">这根 2 克的细线，成束捆一捆，能举起 4 公斤的东西，相当于自身重量的两千倍。并联几根，它能在 0.2 秒内把一个物体弹飞出去。论文里展示的那根杠杆臂，通电瞬间橘色小球直接射出去。</p><section style="color:#334155"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2rJriM180Q8114hmdI1chxxo.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#334155">软体机器人不是早就有了吗？章鱼手、气动手指，不也是柔软的吗？</p><p style="color:#334155">区别在哪儿？</p><h2 style="font-weight:500;color:#475569"><span>过去的「柔软」，都是挂了外设的</span></h2><p style="color:#334155">过去十年，软体机器人确实发展了一大波。气动的、液压的，都能做到柔软、有弹性、甚至贴合人体。</p><p style="color:#334155">但有一个致命问题：它们只是<strong>执行端</strong>柔软。</p><p style="color:#334155">真正的泵、压缩机、储液罐，还在几米之外。管子从机器人身上拖出来，接到一台嗡嗡响的大盒子上。那台盒子才是真正干活的那个，机器人只是它伸出来的爪子。</p><p style="color:#334155">这就像你手再灵活，拖着一根氧气管，能走多远？</p><p style="color:#334155">论文一作 Afsar(MIT Media Lab 博士候选人)在论文里把这个说成<strong>「根本性瓶颈」</strong>:绝大多数软执行器都得拖着外部的液压设备，笨重、庞大、还吵，想装进对移动性、紧凑度有要求的系统里立刻卡住。</p><p style="color:#334155">六个字说完了过去几十年软体机器人为什么只能停在实验室 demo 阶段。</p><p style="color:#334155">这次 MIT 这帮人，就是冲着这个卡点去的。</p><h2 style="color:#475569;font-weight:500"><span>两件旧零件，拼出新器官</span></h2><p style="color:#334155">第一件旧零件，叫 McKibben 执行器。</p><p style="color:#334155">这是一种薄壁的弹性管，外面缠上交叉编织的纤维网，里面充液体。压力一加，管子本想同时变粗、变长，但外面的纤维网只允许它变粗，不让它变长，于是整根反而缩短，产生收缩力。</p><p style="color:#334155">这东西模仿肌肉已经六十年。医疗康复领域的气动外骨骼、研究用的柔性机械臂，背后都是它。</p><p style="color:#334155">问题是：压力从哪儿来？过去只能靠外接的泵。气不会凭空出现在管子里。</p><p style="color:#334155">第二件旧零件，叫电流体动力泵(EHD 泵)。</p><p style="color:#334155">原理听起来吓人，其实可以这么理解。一根细管里灌上一种特殊的油，叫介电流体，本身不导电。管子两端各有一个电极。给电极加高电压，它不会像金属导线那样直接通电，而是从电极尖端往油里「注入」电荷，让油里的一些分子变成带电离子。</p><p style="color:#334155">这些离子被电场推着跑，从一端朝另一端飞。关键来了：<strong>离子在油里飞的过程中会「拖」着周围的油分子一起走</strong>。离子是前锋，油是大部队，被电场一推，整根管子里的油就流动起来了。</p><p style="color:#334155">整个过程没有一个机械零件在动，没有齿轮，没有叶片，全靠电场把液体「拉着走」。</p><p style="color:#334155">小、轻、静是它的天然优势：几克重，几毫米粗，通电就工作，几乎听不见声音。</p><p style="color:#334155">但它有一个硬限制：需要一个开放的液体储罐才能持续工作。一旦塞进机器人身体里，没地方放罐子。</p><p style="color:#334155">MIT 团队做的，是把这两个各有短板的东西，逼进一根纤维里。</p><p style="color:#334155">思路干脆利落：把一根 EHD 泵，夹在两根 McKibben 执行器中间，三段首尾相连，形成一个<strong>封闭的回路</strong>。液体从左推到右，右边鼓起来收缩，左边瘪下去伸长。反过来推，角色互换。</p><p style="color:#334155">这一下，外挂的储液罐没了。笨重的液压系统没了。外面那根拖着的管子，也没了。</p><section style="color:#334155"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/45UZh7hNwCB1tA4Z842NeDw.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#334155">Afsar 自己说了一句很戳的话：</p><blockquote style="color:#475569"><p style="color:#475569">我们没有为了仿生而仿生。是需要一个在肌肉内部储液的办法，自然就走到了这个结构上。</p></blockquote><p style="color:#334155"><span style="font-weight:bold">生物进化几亿年解过的题，从工程角度再解一遍，答案撞在一起了。</span>它不是硬套生物结构，是从工程上绕不开，顺手跟生物对上了答案。</p><h2 style="color:#475569;font-weight:500"><span>为什么生物肌肉都是成对的</span></h2><p style="color:#334155">这里多说一句为什么是「成对」。</p><p style="color:#334155">感受一下你的胳膊。你弯胳膊的时候，前面的肱二头肌在收缩，后面的肱三头肌在拉长。伸胳膊反过来。两块肌肉永远在配合，一个发力一个放松，这叫拮抗。</p><p style="color:#334155">为什么生物要这么设计？因为<strong>肌肉只能「拉」不能「推」</strong>。肌纤维收缩时能产生拉力，但它放松时不会主动伸长，只能被另一块肌肉或者重力拉回来。所以身体任何一个关节，都至少需要两组拮抗肌肉，一组往东拉，一组往西拉。</p><p style="color:#334155">回头看 MIT 这套设计。两根 McKibben 首尾相连，一根瘪下去释放空间，另一根鼓起来容纳流体，整根肌肉本身就是自己的储液罐。仿生只是表象，核心是用生物学架构<strong>顺便解掉</strong>了 EHD 最大的工程障碍：液体往哪儿存。</p><h2 style="font-weight:500;color:#475569"><span>一根像一根肌肉，一束像一整条大肌肉</span></h2><p style="color:#334155">真肌肉还有一个特别漂亮的特性：<strong>模块化</strong>。</p><p style="color:#334155">你手臂上的肱二头肌，不是一块完整的肉，而是成千上万根肌纤维捆在一起。需要大力气，就一起收缩。需要精细控制，就只收缩几根。</p><p style="color:#334155">MIT 这套纤维肌肉，走的也是这条路。</p><section style="color:#334155"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2bAuTH1DWpJq1evOIg185fg2.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#334155">两根并联，举一点小东西。十根编成一束，能举起 4 公斤。执行器多、泵少，慢但有劲；泵多、执行器少，响应快到吓人，0.2 秒就能把东西弹出去。</p><p style="color:#334155">同一种基础单元，按需要搭配，就能变成不同功能的「肌肉群」。想要爆发力，配一套；想要精细动作，换一套；想要持久出力，再换一套。</p><section style="color:#334155"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1TREzh1G49VR3eYpxJ2CKDVr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:#334155">共同负责人 Cacucciolo(意大利巴里理工学院)指出了一个更本质的区别：传统机器人围着伺服电机设计，电机很难密集打包，质量集中在关节附近。纤维肌肉可以塞进整个结构里，<strong>质量是分布的</strong>。</p><p style="color:#334155">真肌肉就是这样。从肩膀一路均匀铺到手腕。这样一来，手臂又轻又稳，能做出比机器优雅千百倍的动作。</p><p style="color:#334155"><strong>动力架构不同了，整个机器人的设计哲学都会跟着变</strong>。</p><h2 style="color:#475569;font-weight:500"><span>一个决定成败的工程细节：预压</span></h2><p style="color:#334155">论文里还有一个细节，很多介绍不会展开，它是那种看起来不起眼、但决定成败的工程关键。</p><p style="color:#334155">团队发现，光把油灌满不够，必须给整个液路<strong>预先加压</strong>。他们管这个叫 bias pressure，翻译就是「预压」或「底气」。</p><p style="color:#334155">为什么？因为一种叫<strong>空化</strong>(cavitation)的现象。</p><p style="color:#334155">想象你在泡温泉，池子里水很热但没烧开。你用手在水里猛地一扒拉，手掌经过的地方水压瞬间变低，那一瞬间，水会「假沸腾」，冒出一些小气泡。这些气泡不是空气，是水自己汽化产生的蒸汽泡。</p><p style="color:#334155">EHD 泵工作时，进水口那端的油会被剧烈「吸」走。如果整个系统压力不够高，进水口就会汽化产生气泡。<strong>对 EHD 泵来说这是致命的</strong>：气泡两端会积累电荷，瞬间短路，泵直接罢工。</p><p style="color:#334155">解决办法是给整个系统预先打一个底压，让最低点也高于油的蒸气压。但底压不能太高，太高会限制肌肉最大收缩。最终这就变成一个可调参数：<strong>抓鸡蛋就调低压，打拳就调高压</strong>。</p><p style="color:#334155">一个看起来只是「要不要加压」的工程细节，背后串着流体力学、电介质物理、和最终机器人行为。这是扎实工程研究和糊弄 demo 之间的分界线。</p><h2 style="color:#475569;font-weight:500"><span>第三方评价</span></h2><p style="color:#334155">瑞士洛桑联邦理工(EPFL)软传感器实验室的 Herbert Shea 教授，这个领域的资深研究者，给了一段相当克制但分量很重的评价：</p><blockquote style="color:#475569"><p style="color:#475569">这项工作解决了纤维软执行领域若干长期存在的障碍，特别是在便携性和功率密度方面。泵没有运动部件使得这些肌肉完全静音，这对假肢和辅助衣物是一个重大优势。</p></blockquote><p style="color:#334155">Shea 长期做软体机器人评审，这几个词从他嘴里出来分量不轻。</p><p style="color:#334155">尤其「静音」这个评价。对假肢、对辅助衣物这种贴身设备，噪音就是用户体验的死亡因素。现在的仿生手、外骨骼走到哪儿都嗡嗡响，你不会希望每次弯一下胳膊家里人都能听见。这套肌肉没有任何机械部件在动，工作起来几乎听不见声音。</p><h2 style="color:#475569;font-weight:500"><span>剩下的问题</span></h2><p style="color:#334155">这篇论文不是终点。几个现实问题需要说清楚。</p><p style="color:#334155"><strong>电压高</strong>：EHD 泵工作需要高压电(通常是千伏级别)，可穿戴设备肯定不能直接挂这种电源，电源管理模块的工程问题要解决。</p><p style="color:#334155"><strong>寿命和可靠性</strong>：McKibben 弹性管反复充放会疲劳，介电流体会不会长期使用劣化，论文展示的是短期 demo，商用至少要跑万次级别的循环测试。</p><p style="color:#334155"><strong>价格和规模化</strong>；现在是实验室手工做，后面要量产需要新的纺线工艺。团队提到「可连续生产」，但从「可以连续生产」到「一米多少钱」还有很远距离。</p><p style="color:#334155"><strong>精细控制</strong>：演示里有大力举重、高速弹射、柔顺握手，但做精细动作，比如捏起一枚硬币、系一颗扣子，需要多根肌肉的精确协同控制。这方面论文还没展开。</p><p style="color:#334155">这些不是否定，是一个真正有价值的方向应该有的待办事项。真正重要的突破从来不是「一步到位」，是打开了一条之前没有的路。</p><h2 style="color:#475569;font-weight:500"><span>能用它的地方，远比一台人形机器人多</span></h2><p style="color:#334155">Cacucciolo 论文：「我们发现这种纤维适用于<strong>所有流体驱动</strong>的机器人系统。」</p><p style="color:#334155"><span style="font-weight:bold">应用场景：</span></p><p style="color:#334155"><strong>外骨骼</strong>：一个老人穿上去，能帮他抬腿、撑腰、上楼梯，不需要后面拖着一个嗡嗡响的液压箱。重量轻到可以整天穿。</p><p style="color:#334155"><strong>假肢</strong>：截肢的人装一只手，不再是那种「动一下嗡一声」的机械爪，而是真的柔软、真的安静、真的贴合皮肤。</p><p style="color:#334155"><strong>康复机器人</strong>;术后要做手部训练，现在的设备又硬又贵又吵。换成这套，可以像手套一样戴上，安静地陪你做几百次抓握。</p><p style="color:#334155"><strong>人形机器人</strong>:现在所有的人形机器人，重心都卡在关节电机处，走起路来像踩高跷，跑不起来，跳不高，摔一下就是大修。如果手臂里铺的是分布式纤维肌肉，重量均匀，反应柔顺，整个形态会和现在的机器人完全不是同一个物种。</p><p style="color:#334155">这些不是新应用方向，十几年前软体机器人圈子就在喊这些场景。喊了十几年没落地，卡住的一直是同一件事：缺一个没有外挂的动力源。</p><p style="color:#334155">这次，那个动力源做出来了。</p><p style="color:#334155">演示视频(点击观看)<sup>[1]</sup></p><h2 style="color:#475569;font-weight:500"><span>脑子跑太快，身体没跟上</span></h2><p style="color:#334155">回头再看一眼 AI 这几年的进化曲线。</p><p style="color:#334155">语言模型从 100 亿参数跑到万亿，视频生成从几秒钟糊图跑到几分钟电影级，多模态、推理、编码、规划，每隔半年就换一轮天。</p><p style="color:#334155">大脑层的迭代速度，快得没道理。</p><p style="color:#334155">可是身体这一层，过去八十年几乎没动过。伺服电机、齿轮减速、液压泵，一代代机器人，不过是把同样的零件重新排列组合。</p><p style="color:#334155">真正困住机器人走进人的世界的，从来不是智能，<strong>是身体</strong>。</p><p style="color:#334155">是它太重、太吵、太僵硬、太难装配、太需要外挂设备。</p><p style="color:#334155">这根 2 克的纤维肌肉，不是说一下子就把问题全解决了。它现在还在实验室阶段，还有很多工程问题要磨。但它指出了一条很不同的路子：<strong>机器人的肌肉，真的应该像肌肉</strong>。</p><p style="color:#334155">又轻、又柔、又静，分布铺在整条手臂里，想大力就并联，想精细就单根出力，不再需要背一个泵。</p><p style="color:#334155">当这条路子走通，AI 的脑子终于可以长在一个配得上它的身体里。</p><p style="color:#334155">到那时候，你家里那个帮你拿水、扶老人、陪孩子玩的机器人，动起来可能不再像机器，而是像一个<strong>活物</strong>。</p><blockquote style="color:#475569"><p style="color:#475569"><span>来源:</span><span> - MIT News: A new type of electrically driven artificial muscle fiber</span><sup><span>[2]</span></sup><span> | David L. Chandler, 2026-04-09</span><span> - Science Robotics 论文</span><sup><span>[3]</span></sup><span> - MIT Media Lab 演示视频</span><sup><span>[4]</span></sup><span> - 论文作者：一作 Ozgun Kilic Afsar(MIT Media Lab 博士候选人)，共同负责人 Vito Cacucciolo(意大利巴里理工学院教授)，合作者 Hiroshi Ishii(MIT Media Lab 教授、Afsar 导师、Tangible Media 研究先驱)</span></p></blockquote>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 小互AI-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e9ddddc310520948513365?channel_id=67cc08a89a4297b6148b34f0">https://lingowhale.com/reader/web/69e9ddddc310520948513365?channel_id=67cc08a89a4297b6148b34f0</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

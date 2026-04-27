@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>超短片开启 | 这就像地球在自拍</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / FIRST青年电影展-公众号</div>
+                    <h1>超短片开启 | 这就像地球在自拍</h1>
+                    <div class="meta">
+                        <span>FIRST青年电影展</span>
+                        <span>Thu, 26 Mar 2026 04:13:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69c4b3fcdf0c2174ad1c5835?channel_id=68a7bfd8a2a8009ba9ba576e">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4rNwJ6NFBGJ16oLxU3newbB.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+     
+    <p>1990年2月14日，NASA 的旅行者 1 号探测器完成了原定的行星探测任务，以每小时 6.4 万公里的速度飞向太阳系边缘。在它即将永久关闭相机、深入星际空间之前，天文学家<span style="color:rgb(0, 0, 0);font-weight:bold">卡尔·萨根</span>提议：<span style="font-weight:bold">让探测器调转镜头，为太阳系拍一张“全家福”。</span></p> 
+    <p>这个提议曾多次被拒，理由很务实：从那么远的地方看，行星只是几个像素的小点，对科学研究毫无用处，且可能损坏相机光学系统。但萨根坚持认为，这张照片具有无可替代的哲学与人文价值。最终，NASA 同意了。</p> 
+    <p>于是，在距离地球约 60 亿公里的深空，旅行者 1 号缓缓转动，在 4 小时内拍摄了 60 张照片，拼接成了太阳系的第一张肖像。在这张广角全景中，地球只是一个几乎 <span style="color:rgb(10, 10, 230);font-weight:bold">0.12 像素大小的淡蓝色光点。</span></p> 
+    <p>最初，这张照片并未引起巨大轰动，它太模糊、太抽象了。但卡尔·萨根为这张照片写下的文字，赋予了它灵魂：</p> 
+    <blockquote> 
+     <p><span>“再看看那个光点，它就在这里。那是我们的家园，我们的一切。你所爱的每一个人，你认识的每一个人，你听说过的每一个人，曾经有过的每一个人，都在它上面度过他们的一生。我们的悲喜相加，千百个自以为是的宗教、意识形态和经济学说，每一个猎人与强盗，每一个英雄与懦夫，每一个文明的缔造者与毁灭者，每一个国王与农夫，每一对青春爱侣，每一对母亲父亲，憧憬的孩童，发明家与探险家，每一个德行崇高的教师，每一个贪污腐败的政客，每一个“超级明星”，每一个“最高领袖”、人类历史上的每一个圣人与罪人，都住在这里……我们的装模作样，我们的自以为是，我们的错觉以为自己在宇宙里的位置有多优越，都被这个暗淡的光点所挑战。”</span></p> 
+    </blockquote> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2FBVuh1zD7Ux1VYrht4sgxWQ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+    <p>像来自 2300 年前那块战国石刻上的留言“后世的君子们你们好呀！”一样，即使这个遥远的信号来自深邃太空，但关于存在本身的微弱确认，永远在催生人类最原始的记录冲动。<span style="color:rgb(10, 10, 230);font-weight:bold">从岩壁涂鸦到数字日志，人类始终在用自己的方式，回应着那份宏大的虚无。</span></p> 
+    <p>而现在，在距那个蓝点不远的地方，<span style="font-weight:bold">小皮</span>坐在观测者一号的舷窗边，打开了一包压缩宇航餐。窗外那个著名的暗淡蓝点，正像一颗被随手丢弃在黑色丝绒布上的、微微发光的人造水钻。</p> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4vww6J1LXAGe1xUW0m2r6lgV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+    <p>AI 日志助手突然出声：小皮，如果一个 5 分钟的短片里百分之三十以上的画面都是我帮你生成的，你还觉得那是你的日志吗？还是我的回忆录？”他吓得差点把手里的铝箔包装挤到氧气循环阀里去。自从 Claude 有了跨越对话的记忆能力，他才意识到现在的 AI 已进化到了一种带着窥视癖色彩的、“我记得你”的冒犯地步。</p> 
+    <p>太空里，小皮一直用 AI 生成生活日志，输入“日期、作息、想家”就能得到优美文字与配图。回到地球后，他去拜访了 Claude 的数据中心。在服务器低沉的嗡鸣中，他问 AI 是否记得自己在某次洗碗后拍到的七星瓢虫。Claude 可以调出那天的天气、星云数据，甚至模拟出数百种瓢虫，但无法复制那天的水温、气味，与按下快门前后五分钟那团乱麻的心情。<span style="color:rgb(10, 10, 230);font-weight:bold">这种独属于人的、瞬间的感受质地，成了小皮想要追寻的东西。</span></p> 
+    <p>后来小皮在大学讲课，他再次打开那个 0.12 像素的暗淡蓝点，问放大后会看见什么。学生猜大陆海洋或城市灯光，他播放了一段由数百个片段组成的混剪：地铁里镜头凌乱的碎碎念，面条店柜台上一张皱巴巴的纸币，电梯上上下下的每一个窗口，一个后视镜里的 58 秒红灯时间，小红书里的直播录屏，监控里老人抱着猫嘤咛......</p> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Sot1D3W1AYX1j5MYM1yG0oL.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+          <section style="color:rgb(160, 160, 160)"> 
+           <p><span>第十九届FIRST超短片vivo手机创作奖</span></p> 
+           <p><span>《最贵的面条》涂海伦</span></p> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1OSMZG4kKTfQ1HK7gY3sTGZw.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+          <section style="color:rgb(160, 160, 160)"> 
+           <p><span>第十五届FIRST超短片特别提及</span></p> 
+           <p><span>《个命虚拟》黎晓亮&amp;张天译</span></p> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2r5VqJ477hgA1iNCtyTlm06.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+          <section style="color:rgb(160, 160, 160)"> 
+           <p><span>第十九届FIRST超短片入围影片</span></p> 
+           <p><span>《今天我去动物园》林欣</span><span>谊</span><span>&amp;胡力夫</span></p> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1NKJ3e4xW8skiGkgh1a2mxa.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+          <section style="color:rgb(160, 160, 160)"> 
+           <p><span>第十九届FIRST超短片评审团大奖</span></p> 
+           <p><span>《篱笆房，苹果园》周白羽</span></p> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1VI9xvIvHKdrfQna4nq3uR.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+          <section style="color:rgb(160, 160, 160)"> 
+           <p><span>第十九届FIRST超短片入围影片</span></p> 
+           <p><span>《阿珍》陈友学</span></p> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Sx7x3taFVS208fpg1VbEXZ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+          <section style="color:rgb(160, 160, 160)"> 
+           <p><span>第十九届FIRST超短片入围影片</span></p> 
+           <p><span>《上下》钟念</span><span>语</span></p> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <section> 
+           <section> 
+            <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1SXo134dIAwU2dISyS3k0n3m.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+           </section> 
+          </section> 
+          <section style="color:rgb(160, 160, 160)"> 
+           <p><span>第十九届FIRST超短片展映影片《一个红灯的时间》王昊楠</span></p> 
+          </section> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+    </section> 
+    <p>那晚，小皮在公寓翻看《纽约客》，读到摄影师<span style="font-weight:bold">托马斯·霍尔顿</span>的故事。二十多年前，这个摄影系研究生在唐人街持续拍摄一个华人家庭 22 年。有一张照片叫《七人晚餐》，餐桌旁坐了五个人，摆了六套餐具——多出来那套，是给画面外的霍尔顿准备的。</p> 
+     
+    <section style="color:rgb(62, 62, 62);font-weight:400"> 
+     <section> 
+      <section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1dJhmc4yrKsg33vt4HvfxDs.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/64kge3oJNvrX4qyW35yw7g.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/43W54o3fd1o73HxCRF29S3um.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1nnEswWCoxF3flpRD2GOlQU.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+       <section> 
+        <section> 
+         <section> 
+          <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2eyAcH4tNLAB4FJ6uX1B34OI.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+         </section> 
+        </section> 
+       </section> 
+      </section> 
+     </section> 
+     <section style="color:rgb(62, 62, 62);font-weight:400"> 
+      <section> 
+       <p><span style="color:rgb(178, 178, 178)"> 托马斯·霍尔顿 华裔家庭摄影展</span></p> 
+      </section> 
+     </section> 
+    </section> 
+    <p>小皮看着这些照片，想起自己在数据中心大门前的絮语：记录不是关于发生了什么，而是关于发生时的“感觉质地”。 霍尔顿拍下了那种质地：拥挤中的亲密，局促中的生机，时间在床单颜色和窗外天际线变化中的缓慢流逝。</p> 
+    <p><span>记录是向虚无的借贷。明知终将归还，仍要借来此刻。</span>以前的人在绳子上打结来记住捕获了几只野猪，现在的人在云端缓存 5 秒、5 分钟的短视频，来记住自己在那一刻还没彻底死掉。</p> 
+    <p>在这个叙事权已悄然交接的 2026 年，在这个手机成为默认器官的当下，<span style="font-weight:bold;color:rgb(10, 10, 230)">人类最宝贵的东西，可以是影史上那些被精确定义的美学，也可以是散落在无数个未经训练的“赛博日志”里的、活人的记忆。</span></p> 
+    <p>小皮站在消防通道里，第一千次审视自己所在的这块荧光牌。上面的白色小人永远保持着奔跑的姿势，但你永远看不出他究竟是在逃出火场，还是正要冲进火里。只是<span style="color:rgb(10, 10, 230);font-weight:bold">所有精心设计的逃生通道，在非灾难时刻，都是城市里最诚实的公共客厅</span>：午后三点，保洁员会坐在台阶上花 5 分钟放空吃苹果；摸鱼的年轻人靠着防火门用 5 分钟点燃一支烟；备考的学生在这里背诵 5 分钟单词……</p> 
+    <p>安全出口当然是另一种入口。 当你开始靠近它，它就从“逃离此处”的箭头，变成了“进入彼处”的门扉。</p> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4ygJl745OCyDcoIVH2EY1qB.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+    <p>这种荧光色的箭头也在邀请着小皮，和更多小皮，按下录制键，进入更真实的自己，进入更广阔的人类经验共同体，用 <span style="color:rgb(10, 10, 230);font-weight:bold">5 分钟</span>，把无数个人的安全出口连接起来，形成新的城邦网络，找到理解这个时代最重要的赛博线索。</p> 
+    <p><span style="font-weight:bold">由FIRST青年电影展和战略合作伙伴 vivo 携手发起，第二十届FIRST超短片单元征片今日开启，小红书线上独家短电影赛道同步开启，至 5月31日 截止。请点击文末“阅读原文”链接跳转FIRST官网查看相关信息并完成报名！</span></p> 
+    <section> 
+     <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/WKFQX1A6YpZ3c6lg74sV5rn.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /> 
+    </section> 
+    <p><span style="color:rgb(178, 178, 178)"> 第20届 FIRST超短片 主视觉</span></p> 
+    <p>旧世界的叙事逻辑是一个抽象的标准，看谁更接近那个虚无缥缈的艺术殿堂；新逻辑是承认真实存在的创作形态，承认那些拼贴碎片的混合影像，然后去问：在这条汹涌的潮水里，谁把那些私人化的情绪变成了可共享的公共经验，谁的情绪被承认，谁的身边进入了公共记忆。</p> 
+    <p>当很多个小皮都在那一刻按下了 <span style="color:rgb(217, 33, 66);font-weight:bold">REC 键</span>，素材不必经过任何过度包装的处理，就有资格被放进人类的记忆库里。<span style="color:rgb(10, 10, 230);font-weight:bold">它们本身就足够有力，来决定将来如何讲述这个名为 2026 的年份。</span></p> 
+    <p> 
+     【视频】跳转到原文查看 
+    </p> 
+    <span><span><span><span style="color:rgb(178, 178, 178)"> 第20届 FIRST超短片 动态主视觉</span></span></span></span><span>Designed by FIRST设计师：罗骞</span>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / FIRST青年电影展-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69c4b3fcdf0c2174ad1c5835?channel_id=68a7bfd8a2a8009ba9ba576e">https://lingowhale.com/reader/web/69c4b3fcdf0c2174ad1c5835?channel_id=68a7bfd8a2a8009ba9ba576e</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

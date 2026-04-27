@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>用【M2.7 + Hermes Agent】搭了一套多Agent研究团队，说说体验</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI异类弗兰克-公众号</div>
+                    <h1>用【M2.7 + Hermes Agent】搭了一套多Agent研究团队，说说体验</h1>
+                    <div class="meta">
+                        <span>AI异类弗兰克</span>
+                        <span>Fri, 24 Apr 2026 15:12:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eb8a22cb0c6578b6a0e0c1?channel_id=67cc08a39a4297b6148b2c97">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Ak5CC2HgtY4xmV8PreoFm.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>Agent Harness这段时间一直很火。</span></p><p><span>从MiniMax持续更新的M2系列模型开始，海外开发者的注意力，越来越多集中过来。</span></p><p><span>一直有关注到，从M2.1到M2.5再到M2.7，模型对Agent的适配能力一直在优化，工具调用的准确度再提高、指令遵循能力逐渐到位、长期运行的可靠性也日渐磨了出来。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">直到M2.7和Agent Harness的深度结合，自我进化似乎有了真正的落地性。</span></p><p><span>模型开始能深度参与Agent迭代的完整闭环，具备了构建复杂Agent Harness的能力。</span></p><p><span>所谓Harness，可以理解为模型与真实计算机环境之间的操作台，包括Skills能力、记忆系统、工具检索、子代理协作这些核心组件。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4yWv5p4pa8x03AFF862SY86b.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>以往这些能力，需要开发者手动搭建、反复调试，但在MiniMax上却是简单了很多，成本也很低。</span></p><p><span>LangChain独立评估的结论显示，在文件操作、工具调用、指令遵循等核心Agent任务上，M2.7已经达到甚至超越闭源前沿模型的水平，而成本只需它们的零头。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">让Agent不仅会操作，更能学会如何操作得更好。</span></p><p><span>Agent Harness正是那只手，它把模型的知识转化成了动作——从文档编辑、代码编写到网页操作、数据分析，这些能力才是评价模型交付能力的标准。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2aay9z2Qp7uR2QpkaN4C2xfV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>在40个超2000 token的复杂Skills场景，仍能保持97%的遵循率，这种稳定性是Agent长期运行所必须具备的底线能力。</span></p><p><span>接下来带大家看看我做的几个案例</span></p><p><span>官网在这里：agent.minimaxi.com/max-hermes</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">01</span></h2><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">我用Max Hermes搭了一个团队</span></h2><p><span>多Agent协作的方案在圈子里讨论了好几年，考验的不只是单个Agent的智商，还有沟通、任务分配、错误协调这些超复杂的工程化能力。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">我尝试用Max Hermes，搭建了一套Agent研究团队。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1y73oO3Jx3KE1k6AF1tGWTx.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>结合跨会话持久化记忆、自然语言定时任务配置、多个子代理并行运行的机制，MaxHermes更接近一个真正能长期运营、不断成长的AI助手。</span></p><p><span>MaxHermes实际的响应也很迅速，很快就帮我把Agent的分工和角色定位呈现了出来。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/73HS9yXw472B1ZDzYLsBd.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>结合多个Agent能力，最终直接给我交付了一个即开即用的分角色研究型网站。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/44N7O3JZkCt2Qx29a2qklt0.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>输入话题、主题、选项等等，可以多Agent分头行动、分别为我工作。</span></p><p><span>比起之前只是一个PPT式的网站，现在背后的多Agent能力完成度高了非常多。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1mrpl1r4nJa9nWff2NONSi.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>怪不得，随着M2.5和M2.7持续迭代，Hermes Agent都是第一时间上线了新版本支持，目前MiniMax模型已经是整个Hermes生态中使用量最高的模型之一。</span></p><p><span>我还尝试了一下，给50个Agent，做一个统一的监测面板，能实时看到各Agent的工作状态，量化看到各Agent的执行指标。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4y9pn43GxSsJ3Hnykxucl7F.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">我还尝试了一下，搭建三个不同角色的子代理协作网络：</span></p><p><span>数据分析师子代理负责加载和处理数据集，研究员子代理负责进行深度分析和逻辑推理，报告撰写员子代理负责将结论整合成结构完整的文档。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4DJ1X71LHBiX4BIdcA2BbqeP.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>整个过程非常省心，多Agent配置机制已经相当成熟，多个专门化Agent在同一台机器上并行运行，每个Agent都有独立的记忆系统、工具集和Gateway，彼此之间不会产生冲突。</span></p><p><span>准备的数据是一份近500MB的市场调研原始问卷，包含来自全国32个城市的2.3万份有效样本，光是字段就有接近三百个，涉及用户行为习惯、产品偏好、价格敏感度等多类信息。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1sOFW9Dw1FP2yFzqO44qFYv.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>如果完全由人工走完这份报告的完整流程，差不多需要一个三到五人的研究团队至少一周的工作量。</span></p><p><span>启动研究任务后，M2.7首先自行进行了一次全局任务拆解，将整个流程切分成数据清洗、深度分析、交叉关联、可视化、报告撰写五个主要阶段，并将每个阶段动态分配到对应的子代理。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/UOCvS2MieTyJLdQK2cyD8C.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>数据分析师子代理最先开始工作，加载数据包并排除异常数据，同时识别出几个明显的录入错误进行自动修复。每完成一个节点，M2.7都会把中间结果和Log信息同步给研究员子代理。</span></p><p><span>紧接着研究员子代理接手执行交叉分析和群体画像归纳，在与数据分析师反复沟通确认逻辑后，将分析结果转换为结构清晰的洞察。</span></p><p><span>最后报告撰写员子代理自动汇集所有输出内容，按照预设大纲生成多版本文档。</span></p><p><span>全部工具调用超过150次，没有出现过因逻辑错乱导致的任务中断。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3yHYHRFFjpA2G1HF14dfdN3.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>更让我开心的是，学习闭环机制在整个过程中一直默默运转，完成报告后它自动将整个流程沉淀为一个新Skill并保存起来。</span></p><p><span>我再使用这套研究团队去处理其他类似的数据分析项目时，整个操作会越来越顺滑，因为Hermes记住了上一次的经验，学会了我的工作习惯和偏好。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/25ShNMREYOT1BMJKK2qfq5E.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">在专业办公场景的表现，同样值得一提。</span></p><p><span>我们最常用的办公三件套：Excel、PPT、Word，</span><span>M2.7对实现了更多、更复杂的编辑。不像之前的很多AI产品，经常会出现格式不支持、无法编辑等问题。</span></p><p><span style="font-weight:bold;color:rgb(0, 0, 0)">我尝试让Agent团队根据之前生成的调研报告，自动制作一份包含数据图表的季度汇报PPT。</span></p><p><span>M2.7的数据分析师子代理负责提取关键数据，研究员子代理进行结论梳理，报告撰写员子代理则将内容按演讲逻辑编排到PPT中。</span></p><p><span>最终产出的文件可以直接用于内部汇报，图表风格和内容结构都符合预期，中间不需要我进行额外的人工插足。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1bi9pmNam2v4r0Y8E1GbV0s.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>不过在个别格式的调整上，会有细微问题，有的数字大小和版式还不能严丝合缝。</span></p><p><span>记得两年前行业里还在激烈争论Agent是不是伪需求，有人说大模型自身的能力都不够成熟，哪来的余力去做Agent。</span></p><p><span>今天已经比较明朗了：Agent不只不是伪需求，反而是模型能力向上突破之后最应该自然延伸的方向。</span></p><p><span>M2.7用这次完整的AI研究团队搭建，让我看到了多Agent协作的真实可能。</span></p><p><span>更重要的是，Hermes Agent的学习闭环让这种协作，从一次性任务，进化成可持续积累的生产力。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">02</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">代码自循环，让AI修复自身Harness</span></h2><p><span>如果说让AI完成一个研究项目已经初步让人满意，那让模型自己优化自己运行所依赖的Harness代码，听起来就有点未来科幻的感觉了。</span></p><p><span>而这刚好是M2.7很有比较优势的进阶能力。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/28363N3TjqB74fM9jb4AEWNW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>MiniMax内部有一个真实的工程实践，他们将一个模型的软件开发框架优化任务交给M2.7自主把控。</span></p><p><span>M2.7在没有任何人工干预的前提下，全程自行执行分析失败轨迹、规划代码改动、修改Harness代码结构、运行评测集对比、决定保留或回退的完整迭代循环流程，这个循环持续了超过100轮。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2muZrR3vg5Nf4skzIu18iKAg.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>迭代告一段落后对比评测效果，M2.7让该框架的内部评测性能直接提升了30%。在部分研发场景中，M2.7可承担约三到五成的工程化工作量。</span></p><p><span>为了亲身体验M2.7在Harness自我优化方面的真实能力，我设计了一个竞赛数据集的实战测试。</span></p><p><span>选了kaggle竞赛数据库，要求运行在Hermes Agent上的M2.7以一个独立的核查角色介入，探索数据并且自主训练模型。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/8pOcq1ahXPh4cDE91Tu1Nz.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>启动指令给出后，M2.7的第一个动作是加载目标代码库并进行完整的静态分析。</span></p><p><span>对特征工程，它识别出Title, FamilySize, IsAlone等新特征，并且指出不同模块之间的循环依赖可能会在特定情况下触发不可预期的异常。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/22kbbJIGk5G4gaj8V3WxpDv.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>给我印象最深的是，它还更新了迭代进度，每一轮迭代都有打分，以及改进内容的展示。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4yPwiw3E5zp7104Ch31z1HeQ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>整个优化任务执行期间，M2.7一共完成了4轮自我迭代。</span></p><p><span>每轮都会基于上一轮的执行反馈调整下一个动作，动作决策完全包含代码编辑、编译测试、结果评估和回滚策略的闭环。</span></p><p><span>如果放在实验室场景里，研究者可以把实验方向给到Agent，Agent就会承担起文献调研、数据流水线对接、实验启动、日志监控和指标分析的完整链路，研究员只需要在关键节点做出决策和方向性讨论即可介入。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">行业观点认为模型可能吃掉Agent，垂类Agent功能或被基座大模型逐步兼容。</span></p><p><span>从M2.7的表现来看这个过程正在进行，但表现形式不是模型单方面吞掉一切，是模型在Agent Harness层面不断扩展能力边界，让过去需要多个专用Agent配合完成的工作，渐渐被一个足够强大的模型和它的Harness所覆盖。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3hAffVO8ids7mGvm1gyu2y.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>而Hermes Agent这种开源框架的存在，其实为这种融合过程提供了绝佳的试验场，让各种有差异化的工作流都能在同一个生态里找到自己的位置。</span></p><p><span>未来那些重复性较高的代码调试和Harness维护工作可以逐步移交给AI完成，让开发者集中精力在更高级别的架构设计和创新探索上。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">03</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">Hermes在云端，MaxHermes的流畅体验</span></h2><p><span>围绕M2.7和Hermes Agent的整个生态中，MaxHermes在云端的表现是我尤其喜欢的。</span></p><p><span>尽管M2.7有着出色的表现，但Hermes Agent的本地部署仍然不是所有用户都能轻松拥抱的流程。</span></p><p><span>配置长期运行的Agent需要准备服务器、配置运行环境、设置API密钥、处理各种兼容性问题。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">MaxHermes的存在恰好封堵了这个缺口。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4wf4RLSHLCgOBFHw427gtT.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>就像之前MaxClaw给我的感觉一样，不用管服务器是什么配置，不用纠结环境变量该写什么，更不用处理Docker容器里各种奇怪的报错。</span></p><p><span>云端运行的Hermes依然保留了完整的Skills学习闭环、持久化记忆、子代理协作等核心功能，同时没有了本地机器需要一直开着、网络随时保持连接的烦恼。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">实际体验下来，MaxHermes在任务执行的流畅度上，与自建的本地实例几乎没有可感知的差异。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3e2bkx35If1W1J9ufGb60mu.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>应对数据分析、文档撰写、信息调研这些典型场景，响应速度和动作执行的准确率都非常稳定。</span></p><p><span>更重要的是，MaxHermes同样原生支持Agent Teams多角色协作机制，依然可以在Web端搭建一套研究团队，Agent团队依然能在云端自行学习和进化。</span></p><p><span>对于每天都要面对各种AI工具的从业者来说，MaxHermes节省的时间也许只是几条命令。</span></p><p><span>但对于大量核心工作不是研究AI而是用AI来提高生产力的普通用户来说，这种低门槛的体验方式可能是他们真正上手Agent的第一步。</span></p><p><span>一个小问题，就是等待时长上，MaxHermes有时候会有波动，比起普通Agent响应时间略长。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">我只觉得，一代人有一代人的工具门槛。</span></p><p><span>预计未来会有越来越多的Agent应用以这种轻量级云端形式出现在大众视野中，而MaxHermes在这个方向上迈出了很扎实的一步。</span></p><p><span>使用入口在这里: agent.minimaxi.com/max-hermes</span></p><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">04</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">自进化Agent是下一个风口吗</span></h2><p><span>2026年的行业焦点，早就从谁的模型更强，转向了谁能结合Agent真正交付结果。</span></p><p><span>模型能力的上限，很可能不再只由预训练决定，而更多地取决于Harness的完整度和持续进化的动力。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/NA0kP1KR9ZP1ZAF9apFLXD.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>大模型不断拉升认知的天花板，智能体则持续压实执行的地基。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">M2.7的开源，给所有这些讨论提供了可实操的落脚点。</span></p><p><span>有人争论模型与Agent之间谁会更占上风，更值得关注的其实是二者边界不断在互相渗透。</span></p><p><span>M2.7的自我进化模式，给出了一个不错的解法：模型正在从静态的训练产物，演变成一个持续运行的进化主体，不再能被单一角色定义。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4rcytaepPQV14c4beLuKMY.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>在专业领域，软件工程层面的端到端交付、复杂系统深层理解、机器学习全流程自我优化，正在以看得见的方式改写开发者的日常工作体验。</span></p><p><span>专业办公场景下的复杂文档多轮修改、高保真内容编辑、数据可视化自动化输出，生产力提升的感觉非常真实。</span></p><p><span>开源大模型之间的竞争还在继续，Kimi、GLM、Qwen等玩家也在推进各自的迭代。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">但M2.7走出了一条很不一样的路，当别人还在努力改模型参数量时，M2.7已经把焦点转向了让模型学会自己改造自己。</span></p><p><span>接下来的故事，更精彩了……</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/hOwhr1i8sUB1zspnq2ogjK9.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI异类弗兰克-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eb8a22cb0c6578b6a0e0c1?channel_id=67cc08a39a4297b6148b2c97">https://lingowhale.com/reader/web/69eb8a22cb0c6578b6a0e0c1?channel_id=67cc08a39a4297b6148b2c97</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

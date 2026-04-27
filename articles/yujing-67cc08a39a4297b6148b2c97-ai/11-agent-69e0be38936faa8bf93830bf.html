@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>有道龙虾又进化了，多Agent很酷</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI异类弗兰克-公众号</div>
+                    <h1>有道龙虾又进化了，多Agent很酷</h1>
+                    <div class="meta">
+                        <span>AI异类弗兰克</span>
+                        <span>Thu, 16 Apr 2026 10:38:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e0be38936faa8bf93830bf?channel_id=67cc08a39a4297b6148b2c97">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Ak5CC2HgtY4xmV8PreoFm.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>Agent圈现在很热闹，从OpenClaw火到了Hermes爱马仕，新范式仍在建立中。</span></p><p><span>之前介绍过网易有道的国产方案，LobsterAI有道龙虾，国内第一个100%代码全开源的AI Agent产品。</span></p><p><span>体验上，很完整，很丝滑，从MCP到Skills、Memory，效果的处理都不错。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2c9yay2zZoN82Ajexq4y5YYJ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>官网：https://lobsterai.youdao.com/</span></p><p><span>让我感到有意思的，是最新版本里，有道龙虾内核对多Agent架构的处理方式。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">它对持久Agent和子Agent的区分非常清晰。</span></p><p><span>持久Agent是多套长期存在、彼此隔离的脑子，各有各的工作空间、身份配置和会话历史；</span></p><p><span>子Agent则是当前任务临时派出去的worker，做完把结果汇报回来就归档了。</span></p><p><span>群聊协同、长期分工协作必须用持久Agent，比如你给工作Agent配一个独立账号处理工作消息，给生活Agent配另一个账号处理私人消息，它们互不干扰，各管一摊；</span></p><p><span>临时补充任务用子Agent，比如主Agent在处理复杂需求时，再临时派一个子Agent去查资料或跑检查。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2i8bxJ3YWCjh1FMwCK30REMZ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">之前玩OpenClaw遇到的成本高、响应慢、记忆连续性差等问题，在有道龙虾上，因为对Agent的处理，有了很好的控制。</span></p><p><span>拿Subagent、Multi-agent，去分类管理任务，更有团队协作的感觉了。</span></p><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">01</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">多Agent组合，帮我分析公众号</span></h2><p><span>先说说Multi-agent怎么用。</span></p><p><span>在My Agents中，创建New Agent。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1gaEmL37vitd3xNlzy2dCR6X.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>可以根据自己的诉求，选择头像、基本信息等等，通过Prompt和Identity的描述，来形成稳定的Agent类型。</span></p><p><span>也可以加上需要的Skills，和常用的社交软件相绑定。</span></p><p><span>我先是给自己创建了一个分身。</span></p><p><span>希望分身可以承担起帮我完成日常工作的任务。</span></p><p><span>我公众号做了快三年，新年想做点增长规划。</span></p><p><span>最近90天的数据——11条视频的播放、点赞、涨粉逐条数据，加上每天的粉丝变化时间序列，两份CSV摆在那，问题很简单：从15万涨到100万粉，我的内容策略到底哪里有问题？</span></p><p><span>这个问题我想了很久，但一直懒得认真算。拉公式、做交叉分析、写结论，这套流程太磨人了。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">正好拿LobsterAI试试。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/tonI73zd59v2PJjFR2n2BOg.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>操作很直观。对话框下面有按钮，挂上两份CSV，选一个专门做数据分析的Skill。</span></p><p><span>LobsterAI读完数据后，没有直接给我一段分析文字。</span></p><p><span>它启动了一个多专家深度分析工作流，同时开了四个并行的分析Agent，各自从不同角度切入同一份数据。</span></p><p><span>一个负责流量趋势分析，一个负责用户画像推断，一个做内容维度拆解，还有一个做竞品对比。它们同时在后台跑，互不干扰，跑完之后把各自的分析结果汇总回来。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/33DDSO3aGGaq3yt9Yz3dhtj1.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 82, 255);font-weight:bold">这就是子Agent的典型应用场景：适合调研、慢工具调用、批量检查、并行处理。</span></p><p><span>我在对话里不用等，它自己把活拆开、分出去、收回来、拼好，然后告诉我结论。一套在后台完成，完全不阻塞当前的对话流程。</span></p><p><span>大概三四分钟后，LobsterAI给了我一整套策略建议：</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/18zzvh48El9eSYYn1A7DAv.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>我的粉丝增长曲线存在明显的波峰波谷周期，数据好的视频主要集中在三个选题方向上，而那几个播放量低的视频问题不在内容质量本身，而在封面和标题的转化率上。</span></p><p><span>它甚至建议我把每周的发片时间从周三调整到周五晚，因为数据显示那个时间段粉丝的互动意愿更高。</span></p><p><span>说实话，这些结论我自己其实隐约有感觉，但从来没有这么系统地被摊在面前过。</span></p><p><span>一个AI能把我脑子里模糊的直觉转化成结构化的数据结论，这种体验非常微妙。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">02</span></h2><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">微信文件夹的考古清理</span></h2><p><span>之前用下来跑得挺顺，我决定给Agents上点强度。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">我选了一个所有职场人都头痛过的顽疾：微信PC端的文件夹整理。</span></p><p><span>众所周知，微信PC端的文件目录不仅深得像迷宫，而且你每次转发同一个文件，它都会在本地悄悄生成一个新副本，常年累月下来，几百G的硬盘空间就这么被吃掉了。</span></p><p><span>我的微信文件夹已经膨胀到187G，找了半天都不知道是什么在占空间。</span></p><p><span>我把路径丢给LobsterAI，下指令：帮我整理这个路径下的文件，把完全相同的重复文件标出来。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3275ED3WjSYYs1I2V2pPvfy.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>配置的时候有个细节值得一提。</span></p><p><span>LobsterAI默认优先使用沙箱隔离环境来保证安全，只有在你明确授权之后才会触及本地硬盘。我在设置里把执行模式从自动切换为本地运行，这才给了它访问本机资源的权限。</span></p><p><span>这个设计我觉得挺克制的，不像有些AI工具上来就要你给全部权限，它的默认行为是沙盒执行，只在指定文件夹里操作，动不了系统的其他文件。</span></p><p><span>而且针对涉及交易或密码等敏感操作，系统还有主动预警拦截机制。</span></p><p><span>LobsterAI扫描了十几分钟，把所有重复文件按照MD5值做了比对，给我生成了一个完整的重复文件清单，并列出了每个文件存在的副本数量和位置。我按照清单删了一遍，直接释放了43G空间。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/225fYS2bgxmP2zTKF83Oq4hB.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>我还尝试了一下整理我的桌面文件，很多文档时间久了，早就忘记存在了哪里，也有些历史文件找不到了。</span></p><p><span>让我的桌面都变得整齐干净了。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/35FYCO3jhHzf1B1bgLyGyuC.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>但这还不是最让我吃惊的部分。当天晚上我躺在床上刷手机的时候，突然收到飞书上一段完成的通知。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">LobsterAI已经按照我设的定时任务，把当天的重复文件增量扫描又跑了一遍，还把结果自动整理成了表格发给我。</span></p><p><span>它打通了移动端和PC端，我不在电脑前也能通过手机在飞书里远程指挥它干活，真正实现了数字分身随时待命。</span></p><p><span>LobsterAI把AI直接放进了微信、钉钉、飞书、QQ这些我们每天在用的聊天工具里。</span></p><p><span>只需要在群里@它一下，说一句帮我把今天的销售数据整理成可视化周报，它就能像团队里一个随叫随到的虚拟同事，自主完成数据抓取、分析、报表制作全流程，把结果直接发回聊天框。</span></p><p><span>这种感觉不像在用AI，更像是多了一个不用睡觉的同事。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">03</span></h2><h2><span style="font-weight:bold;color:rgb(0, 82, 255)">多Agent长期分工</span></h2><p><span>前两个测试用到的都是子Agent机制——临时派任务、并行执行、结果汇总。但我真正想试的是Multi-agent的长期分工协作。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">我配置了两个持久Agent，一个叫工作助手，专门处理工作消息和文档任务，另一个叫生活管家，负责日程管理、信息搜集和个人事务。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1OKqMx1H7RC23ON20H33kJJn.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>两个Agent完全隔离，各自有独立的对话上下文、工作目录和身份配置。工作助手绑定了我的飞书和钉钉，生活管家绑定了微信和QQ。</span></p><p><span>我把日常的所有任务按类型分流。工作上的事情直接在工作助手的频道里说，它处理完之后数据存在自己的workspace里，跟我的个人数据完全分开。</span></p><p><span>私人的事情，比如帮我规划周末安排、整理每天的新闻简报，就交给生活管家。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">运行了一个星期之后，最大的感受是两个字：清爽。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/tOitPE5o1Z6Qg5C2DEfSG.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>以前我在同一个对话窗口里既要聊工作又要聊生活，上下文混杂，Agent经常把两个场景的事情搞混。现在两个Agent各管一摊，互相不串门，每个Agent的记忆都保持着高度的场景纯净度。</span></p><p><span>工作助手记住了我常用的PPT模板和数据口径，生活管家知道我喜欢哪一类新闻资讯。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">这其实就是AI回复的，Multi-agent解决的是隔离和路由问题，不是并行问题。</span></p><p><span>它给每个角色配了一套独立的记忆系统和工具链，就像给不同的工作场景配了不同的专属助理。</span></p><p><span>而且Muti-agent支持多频道接入，工作助手可以在飞书群里响应团队需求，生活管家单独处理个人任务，入口层面就做了分流，不用用户手动切来切去。</span></p><h2><span style="color:rgb(0, 82, 255);font-weight:bold">04</span></h2><h2><span style="color:rgb(0, 82, 255);font-weight:bold">为什么2026年所有人都在谈多Agent</span></h2><p><span>用有道龙虾这些日子，越来越感受到，多Agent不是一个选项，是一种必然。</span></p><p><span>2026年的行业共识已经非常明确了。多智能体系统，正在决定AI应用的上限，就是Agent时代的TCP/IP。</span></p><p><span>企业竞争的焦点，正在从招多少人，转向指挥多少硅基军团，因为单智能体的天花板太明显了。</span></p><p><span>一个Agent全包所有角色的时候，系统提示词和历史会越来越臃肿，模型更容易遗忘约束、推理漂移、成本上升。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">把任务拆给专业Agent，相当于把上下文按职责切片，通常更稳、更便宜。</span></p><p><span>从技术架构上看，OpenClaw采用三层解构：Tools、Agent、Channels，把调度、推理、执行分离，兼顾安全、扩展和本地隐私。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/NyhjW1ajyLMNDZd15qU7O.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>这就是它能在本地安全地干那么多活的技术底气，也是有道龙虾进一步发展完善的一个基本框架。</span></p><p><span>更有意思的是，多Agent系统还有一层认知上的价值。</span></p><p><span style="font-weight:bold;color:rgb(0, 82, 255)">不再是在跟一个AI对话，越来越像在管理一支AI团队了。</span></p><p><span>以前我问AI一个问题，它给我一个答案，这是一对一的线性交互。</span></p><p><span>现在我对着工作助手说一句帮我分析一下Q1的销售数据，它自己决定要不要派子Agent去拉数据、要不要调另一个Agent去做预测模型、要不要把结果转给第三个Agent生成PPT。</span></p><p><span>我只需要给目标，不需要告诉它怎么拆解任务。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">有道龙虾在这套架构上做得很扎实。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2A7VxH4j9SDY1oCB3j4jrv0N.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>它覆盖了基于OpenClaw打造的5000+技能，支持GitHub全量skills安装和实时更新。</span></p><p><span>除了官方商店提供的技能外，还可以从GitHub直接导入第三方技能，或者从本地装自定义技能。我把自己在Claude Code里积攒的十几个自定义Skill——数据分析、内容审校、信息搜索、配图生成。</span></p><p><span>打包导进LobsterAI，全部可用，相当于把我另一个工具上的工作流资产直接迁移过来了。</span></p><p><span>而且它对国内办公场景的适配深度、覆盖度，都很到位。</span></p><p><span>不只是接入了微信、钉钉、飞书、QQ这些主流IM，更重要的是打通了移动端和PC端的连接，用户可以通过手机远程调度本地的Agent处理紧急任务。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">上线首月，LobsterAI的访问量就突破了27万次，也是唯一一个被OpenCLaw创始人单独认可的龙虾产品。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/135Xxn4lBjdi2xAMrN1lLeVX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>市场对好用、安全、全场景的Agent产品，有着巨大的需求，还未被满足于。</span></p><p><span>但我的判断不止于此。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">2026年，也许将是「多智能体规模化部署」的真正元年。</span></p><p><span>通信协议正在标准化，MCP和A2A的成熟让Agent之间有了通用的语言；模型推理成本在持续下降，多Agent调用的token消耗不再是一个不可承受之重；</span></p><p><span>企业认知已经到位，他们开始意识到多Agent不是替代单个人，而是替代一个完整的协作链路。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">有道龙虾做的多Agent系统，也是在做一个更好的协作框架。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3XHyQv4pvQ2MDPQZR1vBQJz.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>用开源和本地优先解决安全和信任问题，用GUI降低使用门槛，用多Agent架构支撑复杂工作流。这不是一个完美的产品，但它把方向选对了。</span></p><p><span style="color:rgb(0, 82, 255);font-weight:bold">AI的终局不是一个单独的聊天框，是真正融入工作流。</span></p><p><span>当它不再需要你主动打开、主动提问、主动等待，而是像一个靠谱的同事一样随时待命、自动干活的时候，这场技术变革才算真正落地。</span></p><p><span style="font-style:italic">关于有道龙虾和Agent，还有</span><span style="font-style:italic">更多AI实操资料，关注公众号后私信“frank"可以获得福利～</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2wWa6o49qCyi1PwW0Q4bETGZ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI异类弗兰克-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e0be38936faa8bf93830bf?channel_id=67cc08a39a4297b6148b2c97">https://lingowhale.com/reader/web/69e0be38936faa8bf93830bf?channel_id=67cc08a39a4297b6148b2c97</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
