@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>E226｜聊聊DeepMind创始人哈萨比斯：一个科学家与失控的AI竞赛</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 硅谷101-播客</div>
+                    <h1>E226｜聊聊DeepMind创始人哈萨比斯：一个科学家与失控的AI竞赛</h1>
+                    <div class="meta">
+                        <span>硅谷101</span>
+                        <span>Thu, 26 Feb 2026 00:29:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69a056c941fee60fbcb9f37b?channel_id=68d9ff9fc3cd8ada000f1cf3">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <div>泓君</div>
+            <p>哈喽，大家好，欢迎收听硅谷101，我是红军。</p>
+            <p>今天我们来聊一聊 Deepmind 的创始人德米斯哈萨比斯，他掌管着整个谷歌 AI 的研发，也是站在这场全球 AI 军备竞赛最前线的人。</p>
+            <p>最近，英国作家塞巴斯蒂安马拉比，他出版了一本关于哈萨比斯的新书，中文的名字叫做哈萨比斯谷歌 AI 之脑。</p>
+            <p>正好呢，借着这个由头，是可以聊一聊我想聊很久的这样的一个人啊。</p>
+            <p>那我先简单介绍一下哈萨比斯他整个的一个经历。</p>
+            <p>他4岁开始侠国际象棋，13岁成为大师，15岁被欧洲顶级的游戏公司录用。</p>
+            <p>从剑桥毕业以后呢，又回到学校继续读神经科学的博士。</p>
+            <p>因为他觉得要造出真正的 AI， 得先搞明白人脑是怎么工作的。</p>
+            <p>他创建的 Deepmind 打败了围棋世界冠军，破解了困扰生物学家半个世纪的蛋白质折叠难题，还因此拿了诺贝尔化学奖。</p>
+            <p>但是呢，这个人最打动我的倒不是说他的这些成就，而是驱动他的东西。</p>
+            <p>哈萨比斯造 AI 呀，他不是为了做产品，不是为了赚钱，用他自己的话说，是为了理解宇宙。</p>
+            <p>他说对我来说，科学是一种精神追求。</p>
+            <p>而且很巧的是，在他创办 Deepmind 的办公室旁边，就是当年物理学家希拉德蒙发核链式反应堆想法的那个路口。</p>
+            <p>他说他自己每天经过那里的时候，都会想现在正在做的事情，重要性跟原子弹呢是不相上下的。</p>
+            <p>一个人一生只想造出比人类更聪明的东西，同时又比谁都清楚这件事情可能失控。</p>
+            <p>今天我们就带着这种矛盾感，请到了这本书中文版的译者周建功老师，一起来聊一聊哈萨比斯与 Deepmind 崛起的故事。</p>
+            <p>哈喽，周老师您好，</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 硅谷101-播客</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69a056c941fee60fbcb9f37b?channel_id=68d9ff9fc3cd8ada000f1cf3">https://lingowhale.com/reader/web/69a056c941fee60fbcb9f37b?channel_id=68d9ff9fc3cd8ada000f1cf3</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

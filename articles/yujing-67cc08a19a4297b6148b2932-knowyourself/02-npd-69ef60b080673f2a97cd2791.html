@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>感情中最会表演的一类人，比NPD藏得还深</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / KnowYourself-公众号</div>
+                    <h1>感情中最会表演的一类人，比NPD藏得还深</h1>
+                    <div class="meta">
+                        <span>KnowYourself</span>
+                        <span>Mon, 27 Apr 2026 12:51:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef60b080673f2a97cd2791?channel_id=67cc08a19a4297b6148b2932">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><section><a href="https://mp.weixin.qq.com/s?__biz=MzA4NjcyMDU1NQ==&amp;mid=2247925141&amp;idx=1&amp;sn=5fe0bdd46e971f5fdf67f851635cc4d2&amp;scene=4#wechat_redirect"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2cf4khpRtyR4DQ2Kc2sscA3.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></a></section></section><section style="color:rgb(51, 48, 48)"><p>NPD，一个2025年流行热词，只要人坏一点儿都能往上套。</p><p>但实际上 NPD 是指自恋型人格障碍（Narcissistic Personality Disorder），这是一种被列入DSM-5的人格障碍类型，人群中的患病率大概在1%-6%之间<span style="color:rgb(136, 136, 136)"><sup>[1]</sup></span>。</p><p><strong><span>我们生活中遇到的那些缺乏共情能力、总是 PUA 别人的「自恋者」，实际上指的是在黑暗三人格中「自恋」这一个特征中得分较高的人。</span></strong></p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/25UKrQ4jddMu4yyOTQ20GmYn.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(51, 48, 48)"><p>与自恋得分高的人（下文称为「自恋者」）做朋友、进入恋爱关系，并不一定就会有毁灭性的后果，但他<span>们多少</span>都会存在过度表演、过度控制的问题。</p><p>而且，他们会比真正的 NPD 更有迷惑性——因为他们是正常人。</p><p>他们比 NPD 更明白怎么扮演一个好恋人，也比经常失控的 NPD 更能控制自己的行为。</p><p><strong><span>谈上一个自恋者，我们可能需要花更长的时间才能发现他们不适合自己，因为他们能演上好几年的。</span></strong></p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1IPNMAAXlQewtJFh2RZliH.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><strong>自恋者的危险之处在于，</strong></p><p><strong>不稳定的「时好时坏」</strong></p></section><section style="color:rgb(54, 49, 49)"><p>自恋是一个非常常见且含义广泛的词语，在不同流派的心理学中都有不同的解释。</p><p>在本文中，我们说的自恋者是黑暗三人格中的自恋。<strong><span style="color:rgb(51, 48, 48)">它指的是一种人格特质，其特点包括夸大自我、感觉自己有特权，以及冷漠、缺乏共情，会利用他人来达成自己的目的</span></strong><span style="color:rgb(136, 136, 136)"><sup>[2]</sup></span>。</p><p><strong><span style="color:rgb(51, 48, 48)">自恋者所有行为的目的都是「维持夸大的自我认知」，他们会做很多事情来保证自己看起来是最棒的。</span></strong>这些事情包括：高估自己的吸引力和智力，以及对外的人际行为，同时贬低他人等，其目的都是保持「我是优越的」这个认知。</p><p>也就是说，在这个语境里，自恋不是自我欣赏。如果一个人只是爱自己，爱自己超过爱别人，不算自恋；或者只是过于自信，对自己的能力有所高估，也不算。</p><p><strong><span style="color:rgba(124, 0, 0, 0.75)">要达到自恋这个人格特征的定义，个体一定要在根本上觉得自己的存在高于他人，甚至拥有统治和剥削他人的权力</span></strong>。他们会通过操纵他人来维持自己的优越，努力地保持一个自恋的幻象。</p><p>自恋并不是一个全或无的特征，有的人的得分高，有的人得分低。研究发现，对社会性别特质的认同会影响自恋水平，那些越「认同男性特质」的人得分越高<span style="color:rgb(136, 136, 136)"><sup>[3]</sup></span>。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1fcj7u1SgOOg128E4UKkYNM.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1RGOUv1cSf8V1z02Ta1NQZJz.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><section style="color:rgba(124, 0, 0, 0.75)"><p><strong>自恋欣赏（narcissistic admiration）</strong></p></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4tIsVe1A1e3Q46FgZb2nsOHT.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section style="color:rgb(51, 48, 48)"><p>自恋者中的自恋欣赏部分，会引导自恋者努力进行自我提升。</p><p>他们会为了获取更积极的社会评价、争取社会赞赏，而强调、提升自身才能。</p><p><strong>他们也会努力和更成功的群体建立联系，让自己也显得更加成功。</strong></p></section></section></section><section style="color:rgb(51, 48, 48)"><p><strong>这可以说是自恋这个特质中比较积极的部分，很多人就是在这个部分谈上的自恋者。</strong></p><p>自恋者的自恋型欣赏会让他们显得很上进、自信，也让他们显得很合群，很愿意为群体奉献，也是他们能够吸引到更多伴侣的关键。</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2W5SPI1oZOQ617orRU3jvcPI.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><section style="color:rgba(124, 0, 0, 0.75)"><p><strong>自恋攻击（narcissistic rivalry）</strong></p></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3HQ8cU2L6DA2468bNR2R7pvE.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section style="color:rgb(51, 48, 48)"><p>自恋攻击一旦占了更多的部分，自恋者就会倾向于认为别人对自己有攻击性、更不值得信任。</p><p>同时，自恋攻击会引导自恋者通过支配行为、贬低他人和攻击性来积极防御自我威胁。</p><p><strong>当自恋者自身成功但群体表现不佳时，自恋攻击可能促使他们贬低内群体成员，或试图换个群体。</strong></p></section></section></section><section style="color:rgb(51, 48, 48)"><p><strong>这就是自恋者被诟病最多的地方，因为他们会通过贬损他人而抬高自己。</strong></p><p>这时，恋人就有可能发现自恋者试图操控自己，试图通过贬低自己而对自己进行 PUA 。</p><p><strong><span style="color:rgba(124, 0, 0, 0.75)">注意，自恋欣赏和自恋攻击一般都同时处在一位自恋者体内，只是他们会在不同境遇、不同时期和面对不同的人时，展现出不同的一面。</span></strong></p><p>这才是自恋者同伴比较危险的部分：你不知道他们什么时候是「好人」，什么时候是「坏人」，什么时候会对某些人好，什么时候对某些人坏。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4apGIGDEtrL1LJ6pw1i9tkl.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><span><section style="color:rgb(62, 62, 62);font-weight:400"><section style="color:rgb(51, 48, 48)"><span><p>我们将这种时好时坏称作「间歇性好转」，它是一种极具隐秘性的操纵手法。除此之外，自恋者还擅长使用内外不统一、隔离、示弱等操纵技巧。</p><p>如果你怀疑自己正身处一段PUA关系，建议你来测测KY出品的<strong><span style="color:rgba(124, 0, 0, 0.75);font-weight:bold">【被PUA可能性评估】</span></strong>。测试会分析对方可能具备的<strong>黑暗人格特征、对你使用的PUA技巧，以及你身上会被ta利用的弱点</strong>。</p><span><p style="color:#494949"><span><a href="https://mp.weixin.qq.com/s?__biz=MzA4NjcyMDU1NQ==&amp;mid=2247925141&amp;idx=1&amp;sn=5fe0bdd46e971f5fdf67f851635cc4d2&amp;scene=4#wechat_redirect"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/i3Qqy1jY760KVIUi2PUK7x.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></a></span></p></span></span></section></section></span></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4hjPO42wpHlu1YtwEQ3V8LDz.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(51, 48, 48)"><p><strong>我们常常会被</strong></p><p><strong>自恋型伴侣「硬控」，</strong></p><p><strong>因为 ta 们真的</strong></p><p><strong>能一直「演好人」</strong></p></section><section style="color:rgb(51, 48, 48)"><p>正如我们经常讨论的「 NPD 恋人」一样，和自恋者恋爱，一开始感觉可能很好。这可能是因为他们体内的自恋欣赏在主导，也可能是因为他们在「演」。</p><p>为什么一定要说是「演」呢？</p><p><strong><span style="color:rgba(124, 0, 0, 0.75)">因为就自恋的本质来说，一个人的自恋得分越高，ta 就离「真心爱人」越远。</span></strong><strong><span>自恋者会倾向于利用恋爱伴侣来建立、维持和提升自我形象，或者利用恋人来完善自己对自己想象，而不是专注于发展关系中的关爱和亲密</span></strong><span style="color:rgb(136, 136, 136)"><sup>[5]</sup></span>。</p><p>也就是说，恋人是否能提升他们自己的形象、是否能符合他们的「人设」，比起恋人本身是谁更重要。他们或许有亲密关系的需求，但在自恋的需求面前，这就显得微不足道。</p><p>自恋欣赏会让他们去寻找那些高地位、或者符合他们自身对伴侣的要求「模板」更贴近的人建立联系<span style="color:rgb(136, 136, 136)"><sup>[6]</sup></span>，且在这个过程中，他们会散发魅力，以求这个伴侣留在他们身边。</p><p><strong><span>当这个伴侣特别能够维持他们的个人形象时，他们是愿意一直展现这一面，甚至愿意假装自己有和对方一样的亲密需求。</span></strong>这既能增强他们自身的自我价值感，也能彰显他们作为交配伴侣的价值。</p><p><strong><span style="color:rgba(124, 0, 0, 0.75)">然而，自恋攻击又会让他们感到不得不对伴侣进行控制，他们可能会通过各种方式贬低伴侣，以维持自身的自我价值感和支配地位</span></strong><span style="color:rgb(136, 136, 136)"><sup>[7]</sup></span>。</p><p>他们能够熟练地运用一些「游戏式」的恋爱风格，通过故意引发伴侣嫉妒、降低对伴侣的关注等等方式，让伴侣产生自我怀疑和不安。</p><p><strong><span>同时，他们也有可能时时刻刻都在寻找更高价值的伴侣——自恋水平和婚姻中的不忠相关</span></strong><span style="color:rgb(136, 136, 136)"><sup>[8]</sup></span>。</p><p>也就是说，当自恋者认为伴侣能够体现 ta 的优越时，他们能「演」得很好，而这中间难免混杂着一些控制。而当他们觉得自己的伴侣并不足以体现 ta 的价值时，他们可能时刻在寻找新的伴侣。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/382DgN2ik1e69nsYq2nP9kT.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(51, 48, 48)"><p>因此正如大众一直说的「避雷 NPD 恋人」一样，和自恋者谈恋爱一般质量都不高。</p><p><strong><span style="color:rgba(124, 0, 0, 0.75)">然而，由于自恋者的自恋欣赏和自恋攻击一般都是共存的，这让他们往往能够「硬控」伴侣很久。</span></strong></p><p><strong><span>在一项2026年的研究中，研究者对自恋者的亲密关系进行了长达6年的追踪研究，他们发现，和自恋者的恋爱并不是一下子就急剧下降的，而是缓慢的、焦灼的</span></strong><span style="color:rgb(136, 136, 136)"><sup>[9]</sup></span>。</p><p>当自恋者伴侣的自恋欣赏处于高位时，即自恋者认为当前的伴侣能体现自己的优越时，在一两年内的新婚夫妇的感情都相当好，婚姻质量较高；</p><p>而当自恋者伴侣的自恋竞争占据高位时，关系要么急速破裂（伴侣意识到了不对劲），要么以一种纠结的姿态极其缓慢地恶化。</p><p><strong><span>也就是说，如果可以他们可以一直演下去，即使有时他们会露出自恋竞争的阴暗面。但只要他们还认可伴侣的价值，自恋欣赏的存在依旧能蒙蔽伴侣的眼睛，让这段关系继续。</span></strong></p><p>然而可以确定的是，随着时间推移，自恋者的自恋竞争会逐渐侵蚀伴侣的自主感和自尊，让伴侣深陷其中。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/e2qPA1IeLSL2A4NCY2o9ioG.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/21mMP11MmcTz2NHqdP2rYOOy.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><strong>手头这个有点自恋的恋人</strong></p><p><strong>还能要吗？</strong></p><p><strong>这需要持续的观察</strong></p></section><section style="color:rgb(51, 48, 48)"><p>当然，并不是所有有自恋特征的人都不适合进入亲密关系，很多人的自恋水平可能只是偏高，而没有那么极端。</p><p>即使你的伴侣符合前面提到的一些表现，也绝不意味着你必须立刻分手。</p><p>因为现实是，即使没有「自恋问题」，一段关系里也仍然会有无数别的问题：沟通方式、依恋模式、压力反应、原生家庭影响、价值观差异……恋爱本来就不是性格完美匹配，而是两个人如何处理差异。</p><p>很多时候，因为自恋而产生的冲突，在表面上看，与其他性格差异引发的争吵并没有那么不同。真正需要判断的，不是「 ta 是不是自恋」，而是这种特质在你们关系中具体造成了什么后果。</p><p>我们可以从几个更现实的问题来判断，并且持续观察。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1whCY0xhKRhLMPXB2tCdBK.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(51, 48, 48)"><p><strong><span>1. Ta 到底需不需要真实的亲密关系？</span></strong></p><p>这是最关键的一点。有些自恋特质强的人，并不真正需要「关系」，关系只是他们满足自恋的一种手段。</p><p>而另一些人虽然带有自恋特质，却仍然渴望被理解、被靠近、被稳定地爱着。他们可能防御心强、爱自我吹嘘，但并没有放弃亲密本身。</p><p>我们可以观察：</p><p>●Ta 是否愿意谈脆弱的话题？</p><p>●是否能承认「自己也有不确定或失败的时候」？</p><p>●当我们的「价值」下降时（失业、生病等），ta 是否撤回了 ta 的关注和关心？</p><p>●……</p><p><strong><span>2. Ta 是自恋欣赏更多，还是自恋攻击更多？</span></strong></p><p>这二者的区别通常出现在挫折时刻。</p><p>当 ta 失败、被否定、被拒绝时，是不是会下意识开始指责、攻击、否认责任？当 ta 身边的人表现不佳时，ta 会不会立刻贬低他们、试图撇清关系？</p><p>自恋攻击更多的自恋者，上述两个问题的答案都是「是」。</p><p>而当伴侣双方发生冲突时，是不是任何反馈都会触发 ta 的攻击？比如：</p><p>●反击</p><p>●贬低</p><p>●冷处理</p><p>●反过来指责</p><p>久而久之，我们必须开始缩小自己来维持关系，这就是被自恋攻击占据的样子。</p><p><strong><span>3.我们在这段关系里，正在变成谁？</span></strong></p><p>在这段关系里，我们：</p><p>●比以前更自信，还是更怀疑自己？</p><p>●表达需求变多了，还是越来越不敢？</p><p>●是在成长，还是在适应？</p><p>●……</p><p><strong><span>和自恋者的关系，就是一场「自我」的拉锯战，我们必须要持续观察这段关系把我们变成了什么样的人，持续审视我们到底愿不愿意长期生活在其中。</span></strong></p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Zm8st3B2HlnSGP73KcDr0.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(51, 48, 48)"><p><strong><span style="color:rgba(124, 0, 0, 0.75)">有些自恋者确实难以建立稳定关系，但也有一些自恋者有真实的情感需求，能在安全的关系中逐渐放下防御。</span></strong></p><p><strong><span>当然，我们不是说要成为自恋伴侣的心理咨询师，也不是什么「拯救」、「感化」的戏码，而是要持续观察当两个人在一起时，彼此变成了什么样的人。</span></strong></p><p>如果在一起时我们变得更自由，变得更靠近，自恋就只是一个性格缺陷；</p><p>如果我们感觉被对方贬损了自尊、被禁锢，那就要早做打算。</p></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FQnI159UZn3dZ7hQ3bP8zl.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/EP0fE3Zs1QecotlX3pZdtN.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(249, 110, 87)"><p><span style="color:rgba(124, 0, 0, 0.75)"><strong>今日互动</strong></span></p></section><section style="color:rgb(51, 48, 48)"><p><strong><span style="color:rgba(124, 0, 0, 0.75)">你遇见过最自恋的人，是什么样的？</span></strong></p></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4lX1Uh3NvFCghK0d83EGIsj.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section style="color:rgb(136, 136, 136)"><p>References：</p></section></section><section><section><section><section style="color:rgb(136, 136, 136)"><p><span>[1] Dhawan, N., Kunik, M. E., Oldham, J., &amp; Coverdale, J. (2010). Prevalence and treatment of narcissistic personality disorder in the community: a systematic review.<em>Comprehensive psychiatry, 51</em>(4), 333-339.</span></p><p>[2] Paulhus, D. L., &amp; Williams, K. M. (2002). The dark triad of personality: Narcissism, Machiavellianism, and psychopathy.<em>Journal of research in personality, 36</em>(6), 556-563.</p><p>[3] Jonason, P. K., &amp; Davis, M. D. (2018). A gender role view of the Dark Triad traits.<em>Personality and Individual Differences, 125,</em> 102-105.</p><p>[4] Back, M. D. (2018). The narcissistic admiration and rivalry concept. In <em>Handbook of trait narcissism: Key advances, research methods, and controversies </em>(pp. 57-67). Cham: Springer International Publishing.</p><p>[5] Foster, J. D., &amp; Brunell, A. B. (2018). Narcissism and romantic relationships. In <em>Handbook of trait narcissism: Key advances, research methods, and controversies </em>(pp. 317-326). Cham: Springer International Publishing.</p><p>[6] Campbell, W. K. (1999). Narcissism and romantic attraction.<em>Journal of Personality and social Psychology, 77</em>(6), 1254.</p><p>[7] Campbell, W. K., Foster, C. A., &amp; Finkel, E. J. (2002). Does self-love lead to love for others? A story of narcissistic game playing.<em>Journal of personality and social psychology, 83</em>(2), 340.</p><p>[8] Shackelford, T. K., &amp; Buss, D. M. (1997). Cues to infidelity.<em>Personality and Social Psychology Bulletin, 23</em>(10), 1034-1045.</p><p>[9] Seidman, G., &amp; Chopik, W. J. (2026). From Spark to Strain? Changes in Relationship Satisfaction as a Function of Narcissistic Admiration and Rivalry.<em>Journal of Personality.</em></p><p>[10] Czarna, A. Z., Śmieja, M., Wider, M., Dufner, M., &amp; Sedikides, C. (2022). Narcissism and partner-enhancement at different relationship stages.<em>Journal of Research in Personality, 98, </em>104212.</p><p>[11] Oliver, E., Coates, A., Bennett, J. M., &amp; Willis, M. L. (2024). Narcissism and intimate partner violence: A systematic review and meta-analysis.<em>Trauma, Violence, &amp; Abuse, 25</em>(3), 1871-1884.</p></section></section></section></section><section><section style="color:rgb(136, 136, 136)"><p><span>本文关键词：自恋</span></p><p><span>欢迎大家在 KY 账号内搜索你需要的科普，如果没提到，也可以在文章下留言～</span></p></section></section></section></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1HFhWmoNgyB2Sn3hZ2te8IY.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / KnowYourself-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef60b080673f2a97cd2791?channel_id=67cc08a19a4297b6148b2932">https://lingowhale.com/reader/web/69ef60b080673f2a97cd2791?channel_id=67cc08a19a4297b6148b2932</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

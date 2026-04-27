@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>一个家庭能不能过好，看妻子的状态就知道</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / KnowYourself-公众号</div>
+                    <h1>一个家庭能不能过好，看妻子的状态就知道</h1>
+                    <div class="meta">
+                        <span>KnowYourself</span>
+                        <span>Thu, 16 Apr 2026 12:50:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e0dcd4c310520948df3ba2?channel_id=67cc08a19a4297b6148b2932">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=MzA4NjcyMDU1NQ==&amp;mid=2247924806&amp;idx=1&amp;sn=53fb1eeffbd5c43258ffc14a4c586aa2&amp;scene=4#wechat_redirect"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Gir8Z1QlIeT2a2AMkEC2IO.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></a></section></section></section></section><section style="color:rgb(51, 48, 48)"><p><span>在我家，爸爸是个老好人，我每天回家踏进家门那一刻感受到的氛围，几乎都由我妈的心情决定。</span></p><p>妈妈心情好了，家里点着灯，饭香四溢，我的傻爹捧着手机歪在沙发上傻乐，一派温馨和谐。</p><p>一旦妈妈要是心情不好，傻爹也不乐了，家里冷冷清清的。此时我一定要积极甩锅：<strong>「爸，你又惹我妈生气啦！」</strong></p></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/9KDzI4vPIk32mwuN02iF74.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section style="color:rgb(51, 48, 48)"><p>虽然不绝对，但身边的朋友经常也有此感受：比起爸爸，妈妈的状态，更能影响整个家庭的氛围（当然，这一切都是以家里并没有人用暴力等行为拖垮家庭下限为前提）。</p><p>换句话说，家庭成员中的状态总是互相影响，而女性成员的状态，似乎总是影响更大一些。一起来看今天的文章吧！</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3A9ztegaehB1v5Koe3fEEdL.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><strong>Happy wife, happy life</strong></p><p><strong>被研究证实是真的</strong></p></section></section></section><section style="color:rgb(51, 48, 48)"><p><strong>快乐的妻子和母亲，能造就快乐的丈夫和小孩，从而造就快乐的家庭生活，这是真的。</strong></p><p>通常来讲，个体对婚姻的满意程度，能够预测对生活满意的程度，和即时幸福感。即，对婚姻满意，那么对生活整体就越满意、个人也感觉越幸福，这是毋庸置疑的，对于妻子和丈夫来说都是如此。</p><p><strong><span style="color:rgba(124, 0, 0, 0.75)"><span>而当妻子越满意自己的婚姻时，丈夫的这个效应会增强；当妻子不满意自己的婚姻时，丈夫即使对婚姻感到满意，也不会因此变得更幸福</span><sup><span>[1]</span></sup><span>。</span></span></strong></p><p>比起新婚的小家庭，这个效应在已经经历了多年风雨的老家庭中更显著。</p><p>俄亥俄州立大学的研究者们安排了新婚和老婚夫妻们参与了一项「吵架研究」，发现在发生冲突时，如果伴侣表现得越积极、越支持，新婚妻子的负性情绪变化与皮质醇反应越小（即压力反应小），双方的血压都会更低；</p><p><strong><span>而对于年长的老婚丈夫们来说，当他们的妻子越不支持他们的看法，他们就会有越强的皮质醇反应，而在妻子身上则没有表现出变化</span><sup><span>[2]</span></sup><span>。</span></strong></p><p>新婚夫妻吵架：🥺🥲🙏🏻</p><p>老婚丈夫吵架：🤯🤯🤯</p><p>老婚妻子吵架：</p></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/454LzM2QiEft2oSFMr2bh8mH.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section style="color:rgb(51, 48, 48)"><p>母亲的整体状态对孩子成长的影响也是毋庸置疑的。</p><p><strong>首先，母性敏感性</strong><span style="color:rgb(136, 136, 136)">（maternal sensitivity）</span><strong>是婴儿依恋安全的重要的影响因素，也是儿童获得最佳发展的前提条件。</strong></p><p>母性敏感性是指母亲是否能够准确理解孩子发出的信号，并正确地理解孩子的需求，及时、合适地回应。</p><p><span>大量研究发现，包括经济压力、婚姻压力、养育压力和心境压力等多种压力的情况下，母亲的母性敏感性都会被削弱，从而影响对孩子的照顾质量</span><sup><span>[3]</span></sup><span>。</span></p><p><span>一项追踪研究将母亲的情绪分为一般情绪症状因子（整合抑郁与焦虑症状）和积极心理健康因子，结果发现一般情绪症状因子与儿童的社会情绪问题相关，而积极心理健康因子，则与孩子的共情能力、模仿游戏、认知发展、沟通能力等的发展有强相关</span><sup><span>[4]</span></sup><span>。</span></p></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/fyjX93MGv8L2G0opX4mrQtT.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section style="color:rgb(51, 48, 48)"><p><strong><span>与之相反地，当母亲面临抑郁状态时，她的精神状态会通过童年时期的无力感和创伤感影响孩子。母亲的抑郁程度能够显著预测孩子在青少年时期的自杀观念</span><sup><span>[5]</span></sup><span>。</span></strong></p><p><span>在一项2023年的研究中，研究人员跟踪了541对母子后发现，当母亲在童年经历逆境时，会对其孕期及产后的心理健康产生负面影响，而这种心理状态进一步影响孩子的心理健康，孩子更容易出现与焦虑相关的表现，例如对表现的过度担忧，躯体化症状，坐立不安等</span><sup><span>[6]</span></sup><span>。</span></p><p><strong><span style="color:rgba(124, 0, 0, 0.75)">以上的大量研究都提示我们，母亲的心理状态好坏呈现出一种跨代传递的趋势，在育儿这件事上，伴侣和社会都应该为女性提供更充分的心理干预与支持。</span></strong></p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3fuhwaaRyKP2s6zr1obQXy.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><strong>承担更多情绪劳动的人</strong></p><p><strong>往往更能影响家庭的「风水」</strong></p></section></section></section><section style="color:rgb(51, 48, 48)"><p>好了，说了半天，难道我们是在说，女性对家庭氛围的调节有着致命影响，女性要对孩子的发展不良负全责？</p><p>并不是。</p><p><strong>目前家庭中呈现这样的状况，主要是由于传统家庭和社会分工下，女性经常负责承担更多的情绪劳动</strong><span style="color:rgb(136, 136, 136)">（emotional labor）</span><strong>，更有可能成为家庭中的情绪调节中枢。</strong></p><p>要不然家里不管有啥事，我们第一反应都是喊妈呢。</p></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4tY3G3YApfa29VSdenTYUI.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section style="color:rgb(51, 48, 48)"><p><span>通常这种情况会被认为是「女性对识别情绪有更强的敏锐度」，因此女性更适合承担家庭的情绪调节，但实际上近年的研究发现，男女两性情绪识别的能力差距不绝对，只是女性或许更能识别微弱的情绪线索</span><sup><span>[7]</span></sup><span>。</span></p><p>因此很多时候，家庭里的双方都可以承担情绪调节的责任，只是女性检测到的更多，因此就做了更多。</p><p>而在某人承担了某件事更多的情况下，另一方可能就会产生依赖。</p><p><strong>同时，孩子的养育者也通常是母亲，孩子和母亲相处的时间更长。</strong></p><p><span>由于婴幼儿并不会自己调节情绪，对于情绪，他们通常借用的是养育者的大脑。养育者情绪稳定，孩子也学会稳定；照料者焦虑不安，孩子的神经系统也会长时间处于警觉的状态</span><sup><span>[8]</span></sup><span>——这通常就是依恋系统形成的神经原理。</span></p></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4nmHuT2gSkGitoOhN3kpvSM.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section style="color:rgb(51, 48, 48)"><p>因此，女性的状态看起来最能影响整个家庭的状态，是因为大多数情况下是承担最多家庭里的情绪劳动，安抚孩子、提供温馨的环境、照料焦虑的丈夫。</p><p><strong><span style="color:rgba(124, 0, 0, 0.75)">换言之，也是只有那些承担着舒缓和调动家庭情绪的人，才会最大程度地影响家庭的状态。</span></strong></p><p>当然，家庭中并不承担这个角色的人也并不就完全「免责」。在传统家庭里，母亲是家庭状态的一级杠杆，而父亲就是二级杠杆，通过影响母亲的状态，来影响家庭气氛和孩子的发展。</p><p>想要家庭中「风水」变得最好、后代成长得最顺利，家庭中的每个成员都同等重要。</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3GPg6s3yHmpN4bf248VeYbM.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><strong>有娃家庭最需要建立的</strong></p><p><strong>两个系统</strong></p><p><strong>家长们可自行分工</strong></p></section></section></section><section style="color:rgb(51, 48, 48)"><p>那么我们假设在一个核心小家庭中，有一位家长是情绪劳动提供者，那另一个要干什么，这个家庭会最好呢？</p><p>加拿大发展心理学家Daniel Paquette曾提出过一个激活关系理论<span style="color:rgb(136, 136, 136)">（activation relationship theory）</span>，<strong><span>他认为在传统家庭中，母亲提供的是安抚式的关系，而父亲则应该提供激活式的关系</span><sup><span><span>[9]</span></span></sup><span>。</span></strong></p><p>由于在传统的亲子互动中，父亲和孩子经常是在游戏打闹中度过时光，而父亲经常会鼓励孩子去挑战、尝试新事物。</p><p>如果一位父亲在这件事上做得好，那么孩子就会更勇于探索环境，他们的社会自信更高，风险评估能力也会更强。</p><p><strong><span>同时在传统的家庭结构里，父亲常被儿童无意识地当作社会规则的第一代表</span><sup><span>[10]</span></sup><span>，儿童通过父亲来了解何为权威、何为规则。</span></strong></p><p><span>因此父亲长期缺席或情绪不可预测时，孩子可能会更容易有社交焦虑、自我价值不稳定等问题，同时也可能产生面对权威时的惧怕，以及对权威的反抗</span><sup><span>[11]</span></sup><span>。</span></p></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/321XmY2hEqXp2zRp7B3SM0wm.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section style="color:rgb(51, 48, 48)"><p><strong><span>如今传统家庭的模式正在分解，父职和母职已经不再像从前那样清晰，但对于儿童发展来说，这两种职能依旧必不可少。</span></strong></p><p>父母双方需要能提供情绪的安全港湾，也要提供探索这个世界的勇气，并不拘泥于是由谁提供的。</p><p><strong><span style="color:rgba(124, 0, 0, 0.75)">一个要让孩子「感到安全」，一个要让孩子「敢于离开安全」，这在现实生活中，父母能给小孩最好的东西。</span></strong></p><p>当然，这也是夫妻双方能给彼此最好的东西——一个好的家庭能让我飞，也有回去的窝。</p></section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1LkNek3Ld9Ym1GucRlKH8W5.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1TcouS430NvO3JGp6O3FSSRW.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(249, 110, 87)"><p><span style="color:rgba(124, 0, 0, 0.75)"><strong>今日互动</strong></span></p></section><section style="color:rgb(51, 48, 48)"><p><strong><span style="color:rgba(124, 0, 0, 0.75)">在你们家，谁掌握着家里的「风水」？</span></strong></p></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3rAm2w79c511RRXa1sPycs.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section style="color:rgb(136, 136, 136)"><p>References：</p></section></section><section><section><section><section style="color:rgb(136, 136, 136)"><p>[1] Carr, D., Freedman, V. A., Cornman, J. C., &amp; Schwarz, N. (2014). Happy marriage, happy life? Marital quality and subjective well‐being in later life. Journal of marriage and family, 76(5), 930-948.</p><p>[2] Heffner, K. L., Kiecolt-Glaser, J. K., Loving, T. J., Glaser, R., &amp; Malarkey, W. B. (2004). Spousal support satisfaction as a modifier of physiological responses to marital conflict in younger and older couples. Journal of Behavioral Medicine, 27(3), 233-254.</p><p>[3] Booth, A. T., Macdonald, J. A., &amp; Youssef, G. J. (2018). Contextual stress and maternal sensitivity: A meta-analytic review of stress associations with the Maternal Behavior Q-Sort in observational studies. Developmental Review, 48, 145-177.</p><p>[4] Phua, D. Y., Kee, M. K., Koh, D. X., Rifkin-Graboi, A., Daniels, M., Chen, H., ... &amp; Meaney, M. J. (2017). Positive maternal mental health during pregnancy associated with specific forms of adaptive development in early childhood: Evidence from a longitudinal study. Development and Psychopathology, 29(5), 1573-1587.</p><p>[5] Ying-Yan, Z. H. O. N. G., Yu-Ting, L. I., Jian-Hua, C. H. E. N., Ru-Meng, C. H. E. N., En-Zhao, C. O. N. G., &amp; Yi-Feng, X. U. (2025). Maternal depressive symptoms and adolescent suicidal ideation: the chain mediating roles of childhood trauma and ineffectiveness. Chinese Journal of Contemporary Pediatrics, 27(11), 1317.</p><p>[6] Uy, J. P., Tan, A. P., Broeckman, B. B., Gluckman, P. D., Chong, Y. S., Chen, H., ... &amp; Callaghan, B. L. (2023). Effects of maternal childhood trauma on child emotional health: maternal mental health and frontoamygdala pathways. Journal of Child Psychology and Psychiatry, 64(3), 426-436.</p><p>[7] Fischer, A. H., Kret, M. E., &amp; Broekens, J. (2018). Gender differences in emotion perception and self-reported emotional intelligence: A test of the emotion sensitivity hypothesis. PloS one, 13(1), e0190712.</p><p>[8] Fletcher, H. K., &amp; Gallichan, D. J. (2016). An overview of attachment theory: Bowlby and beyond. Attachment in intellectual and developmental disability: A clinician's guide to practice and research, 8-32.</p><p>[9] Paquette, D., Gagnon, C., &amp; Macario de Medeiros, J. (2020). Fathers and the activation relationship. In Handbook of fathers and child development: Prenatal to preschool (pp. 291-313). Cham: Springer International Publishing.</p><p>[10] Lamb, M. E. (Ed.). (2004). The role of the father in child development. John Wiley &amp; Sons.</p><p>[11] Sarkadi, A., Kristiansson, R., Oberklaid, F., &amp; Bremberg, S. (2008). Fathers' involvement and children's developmental outcomes: A systematic review of longitudinal studies. Acta paediatrica, 97(2), 153-158.</p></section></section></section></section><section><section style="color:rgb(136, 136, 136)"><p><span>本文关键词：情绪劳动、母姓敏感性</span></p></section></section></section></section></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / KnowYourself-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e0dcd4c310520948df3ba2?channel_id=67cc08a19a4297b6148b2932">https://lingowhale.com/reader/web/69e0dcd4c310520948df3ba2?channel_id=67cc08a19a4297b6148b2932</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

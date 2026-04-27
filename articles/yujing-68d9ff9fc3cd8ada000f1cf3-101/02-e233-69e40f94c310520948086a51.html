@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>E233｜硅谷右翼的权力网如何形成？聊聊彼得·蒂尔的思想启蒙拼图</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 硅谷101-播客</div>
+                    <h1>E233｜硅谷右翼的权力网如何形成？聊聊彼得·蒂尔的思想启蒙拼图</h1>
+                    <div class="meta">
+                        <span>硅谷101</span>
+                        <span>Thu, 16 Apr 2026 23:34:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e40f94c310520948086a51?channel_id=68d9ff9fc3cd8ada000f1cf3">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <div>Yiwen</div>
+            <p>大家好，欢迎回到硅谷101，我是退位研究员易文。</p>
+            <p>在硅谷101，我们不仅关注技术，还关注这些技术背后的人，以及他们所代表的硅谷精神。</p>
+            <p>那在硅谷的一众人物里啊，我近年来最好奇的应该就是 Peter til 了。</p>
+            <p>他广为人知的标签呢，是 Founders、found Teletier、Paypal 等一众顶尖公司和机构的创始人。</p>
+            <p>但让他最近频繁进入大众视野的，是他对美国政治越来越深的介入。</p>
+            <p>ipetertilim not a politician，but neither is Donald Trump公开支持特朗普，扶持 jdvance 一路走进白宫。</p>
+            <p>与此同时，他个人那套主张垄断和对科技的激进信仰，也让他被称为硅谷教父。</p>
+            <p>围绕着它，硅谷形成了一股被称为科技又一的新思潮，公开挑战这个圈子曾经信奉的自由主义价值观。</p>
+            <p>那么自然啊，我们会想问，Peter to 这套离京叛道、备受争议的世界观到底是怎么形成的？</p>
+            <p>我们想要答案，可能要追溯到1987年的斯坦福校园。</p>
+            <p>那年，大三学生 Peter to 创办了一本叫做斯坦福评论的学生杂志。</p>
+            <p>从这本杂志出发，我们聊到了对他影响最深的三位哲学家，以及这些思想是具体如何落地的。</p>
+            <p>他们怎么影响了 Paypal 的创立逻辑、Facebook 的早期投资，以及 Parentier 这家争议极大的数据公司背后的哲学依据。</p>
+            <p>可以说啊，Peter til 的几乎每一个选择都是有迹可循的，而通过它的选择，我们或许可以更了解硅谷右翼这个近年来不容忽视的权力网络。</p>
+            <p>由于这期播客涉及的人物、机构和理论比较多，我们在 shownos 里按照出场顺序做了名词说明，欢迎大家对照收听。</p>
+            <p>那今天呢，和我一起聊 Peter two 的有两位嘉宾。</p>
+            <p>首先是房天宇，他是一名哈佛大学科技史专业的博士生。</p>
+            <p>天宇介绍一下自己吧。</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 硅谷101-播客</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e40f94c310520948086a51?channel_id=68d9ff9fc3cd8ada000f1cf3">https://lingowhale.com/reader/web/69e40f94c310520948086a51?channel_id=68d9ff9fc3cd8ada000f1cf3</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

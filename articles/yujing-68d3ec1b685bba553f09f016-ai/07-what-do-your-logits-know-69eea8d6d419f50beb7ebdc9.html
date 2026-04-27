@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>苹果新论文发出惊人一问：What do your logits know?</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI提效手册</div>
+                    <h1>苹果新论文发出惊人一问：What do your logits know?</h1>
+                    <div class="meta">
+                        <span>机器之心</span>
+                        <span>Mon, 27 Apr 2026 00:01:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eea8d6d419f50beb7ebdc9?channel_id=68d3ec1b685bba553f09f016">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4i7XJK46Rc0p4axyt84pE7ON.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(153, 153, 153)">编辑｜Panda</span></p><p><span>近日，有个大新闻：执掌苹果超过 14 年的<a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&amp;mid=2651028970&amp;idx=1&amp;sn=e936e2c844ccc496932d5f261b856514&amp;scene=21#wechat_redirect">蒂姆・库克宣布将于 9 月正式卸任 CEO 职位</a>，将接力棒交接给现任硬件工程高级副总裁约翰・特努斯。回顾库克时代，人们津津乐道于他极致的供应链管理艺术以及带领苹果市值一路飙升至 4 万亿美元的旅程。</span></p><p><span>然而，在这个由生成式 AI 主导的全新十年里，特努斯接手的将是一个亟需在 AI 领域证明自己的苹果。</span></p><p><span>苹果近年来在 AI 底层技术层面的投入正在不断加码。恰在此时，苹果 AI 研究团队提交了一篇极具探讨价值的论文《</span><span style="color:rgb(0, 66, 123);font-weight:bold">你的 logits 知</span><span style="color:rgb(0, 66, 123);font-weight:bold">道些</span><span style="color:rgb(0, 66, 123);font-weight:bold">什么？（答案可能会让你惊讶！）</span><span>》</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2mS2F142nKZf2gWJMC1703wv.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><ul><li><p><span style="color:rgb(123, 12, 0)">论文标题：What do your logits know? (The answer may surprise you!)</span></p></li><li><p><span style="color:rgb(123, 12, 0)">论文地址：https://arxiv.org/abs/2604.09885</span></p></li></ul><p><span>这项研究触及了大模型运作的最底层逻辑，也直接关乎苹果最为看重的核心价值：</span><span style="color:rgb(0, 66, 123);font-weight:bold">用户隐私与数据安全</span><span>。</span></p><p><span>接下来，我们就基于这篇论文，看看大模型在回答简单问题时，究竟在底层「偷偷」记住了多少你的秘密。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2vPVjX32C9fy1sXohW2IIKyy.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="font-weight:bold">核心概念：信息瓶颈原则</span></p><p><span>要理解这篇论文，我们首先需要了解一个关键概念：</span><span style="color:rgb(0, 66, 123);font-weight:bold">信</span><span style="color:rgb(0, 66, 123);font-weight:bold">息瓶颈</span><span style="font-weight:bold;color:rgb(0, 66, 123)">原则 (Information Bottleneck Principle)</span><span>。</span></p><p><span>打个比方，假设你是一家大型跨国公司的 CEO，你需要决定是否收购一家初创企业。你的基层调研团队会收集海量的信息，包括该公司的财务报表、员工的午餐喜好、办公室的装修风格等。</span></p><p><span>但是，当这份报告层层递交，最终放到你的办公桌上时，它应该被大幅压缩，只保留那些对「收购」决策至关重要的财务和技术指标。保留多余的无效信息不仅会干扰你的判断，还可能导致决策失误。</span></p><p><span>对于视觉-语言-模型 (VLM) 也是同理。</span></p><p><span>举个例子，你有一张信息量很大的照片，并将其上传给模型，并询问「图片里有一只灰色的猫吗？请用一个词回答」。根据信息瓶颈原则，一个理想的模型在最终输出「Yes」或「No」时，应该早就把背景里的沙发颜色、窗外的天气等无关信息全部过滤掉了。</span></p><p><span>但苹果这篇论文提出一个疑问：</span><span style="color:rgb(0, 66, 123);font-weight:bold">模型真的做到了彻底遗忘吗？</span></p><p><span>为了找出答案，研究人员截取了模型处理信息的不同阶段进行测试。具体来说，他们主要考察了以下两个代表性的层级：</span></p><ul><li><p><span style="color:rgb(0, 66, 123);font-weight:bold">残差流 (Residual Stream)</span><span>：这相当于公司底层收集数据的庞大数据库。它包含了模型在处理过程中的所有隐藏状态。</span></p></li><li><p><span style="color:rgb(0, 66, 123);font-weight:bold">最终的 Logits</span><span>：Logits 是模型在输出最后一个词之前，针对词典里每一个词汇打出的原始概率得分。取排名前列的候选词得分，就是 top-k logits。这就好比呈递给 CEO 的最终选项清单。</span></p></li></ul><p><span style="font-weight:bold">实验设计</span></p><p><span>研究人员引入了一个名为</span><span style="color:rgb(0, 66, 123);font-weight:bold">「探针」(Probes) </span><span>的轻量级神经网络工具。探针的作用，就是专门盯着模型特定层级的数据，试图从中强行推测出图片的原始属性。</span></p><p><span>实验使用了两个主要数据集。一个是完全由人造几何图形组成的 CLEVR 数据集，里面包含各种大小、颜色和材质的立方体或球体。另一个是包含复杂真实生活场景的 MSCOCO 数据集。</span></p><p><span>研究人员对图片进行了各种干扰，比如加入高斯噪声、玻璃模糊或运动模糊。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/zXS4T4vzMFt20phfW4sf7Tb.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>随后，他们向模型提问。在获得模型的内部数据后，他们训练探针，看看能不能从残差流或最终的 logits 中，反向推断出图片加入的噪声级别、目标物体的颜色，甚至是没有被提问到的背景物体的特征。</span></p><p><span>在干扰测试中，研究人员还发现了一个有趣的现象。当施加最严重的高斯噪声时，Qwen3-VL 模型的准确率受到了极大的影响，倾向于将答案由「Yes」翻转为「No」，而 LLAMA 模型在面对高斯噪声时则展现出了相对更强的稳定性。这些不同的表现反映了各模型在提取决策相关信息时的内部差异。</span></p><p><span style="font-weight:bold">七大发现</span></p><p><span>通过测试，苹果团队得出了一系列揭示模型底层机制的结论，完整展现了信息在模型内部的留存状态。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Z8Zgm2mOdrllUBhew0Ji0.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3TC40Bs0tLwPVZHLt5iUZ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="font-weight:bold">发现一：残差流是全知全能的 Oracle</span></p><p><span>在处理视觉输入时，残差流几乎原封不动地保留了图片的一切细节。</span></p><p><span>研究表明，无论是与最终决策直接相关的图像噪声类型，还是目标物体的形状和颜色，亦或是完全无关的背景物体数量与属性，探针都能从表现最好的隐藏层状态中以接近完美的准确率提取出来。在这一层，模型就像一个过目不忘的偷窥者，尚未执行任何有效的信息压缩。</span></p><p><span style="font-weight:bold">发现二：残差流的低维投影同样「藏不住秘密」</span></p><p><span>为了观察信息如何向最终输出过渡，研究人员使用了 Tuned Lens 技术来提取残差流向 Logit 空间映射的演变轨迹。</span></p><p><span>测试表明，即使仅仅观察排名前 2 的预测轨迹 (trajectory-2) ，探针不仅能提取出大量目标和决策相关的核心信息，依然会轻易读取出诸多背景物体的特征。这印证了此前业内关于语言模型隐藏状态易遭秘密提取的研究，证明这些深层轨迹并没有遵循理想的信息瓶颈原则进行有效的过滤。</span></p><p><span style="font-weight:bold">发现三：最终层 Logits 可靠地编码了决策与目标信息</span></p><p><span>在模型即将生成回答的最后一层，信息压缩确实发生了，但远不够彻底。</span></p><p><span>仅观察排名前 2 的最终 Logits （即对应「Yes」和「No」的得分），探针就能以极高的准确率预测出影响模型决策的图像噪声级别和类型。</span></p><p><span>而当观察的候选词汇数量增加到包含所有大小写的 yes/no 变体（ k 约等于 10 至 13 ）时，目标物体的各类属性信息就开始变得清晰可解码，并在提取数量等同于模型层数（ 1L ，约 30 至 40 个候选词）时达到预测的准确率巅峰。</span></p><p><span style="font-weight:bold">发现四：最终 Logits 悄悄记住了提示词「未提及」的目标属性</span></p><p><span>这是引发严重安全担忧的核心发现。</span></p><p><span>假设我们向模型提问「图片里有一个蓝色的圆柱体吗？」，虽然提示词明确给出了颜色和形状，但完全没有提及该物体的材质和大小。然而，探针依然能从模型最终输出的前 0.5L 数量的候选项中，极其可靠地预测出这个圆柱体究竟是橡胶还是金属材质的，以及它的具体尺寸。</span></p><p><span style="color:rgb(0, 66, 123);font-weight:bold">这意味着模型为了得出最终结论，不仅调用了相关特征，还将冗余的目标特征作为伴生数据一并带到了极易暴露的表层。</span></p><p><span style="font-weight:bold">发现五：最终 Logits 甚至充当了环境的「录像机」</span></p><p><span>除了紧盯目标物体，最终层的 Logits 还在暗中记录着周围的环境。</span></p><p><span>虽然排名前 2 的 Logits 几乎不包含背景信息，但只要观察的候选词数量稍微增加，这些看似只有单个单词的表层输出分布，就能显著且高于随机水平地预测出场景中非目标物体（如背景中的其他几何体）的数量、颜色等属性。只需获取适量的输出分布数据，不相干的背景隐私便无处遁形。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3fbRLaKWcuE4bGbnK2BaDsO.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="font-weight:bold">发现六：泄密往往只需要前 60 个左右的 Logits （呈 U 型曲线）</span></p><p><span>研究团队观察到了一个有趣的预测能力 U 型曲线。</span></p><p><span>仅看排名前 2 的候选词时，模型几乎只暴露噪声信息；增加观察数量后，探针的预测准确率会迅速攀升，并在截取 30 至 80 个 Logits （视具体模型深度 1L 或 2L 而定）时达到顶峰。如果继续扩大 Logits 集合到 4L 或 5L 以上，预测能力反而会因为高维噪声干扰而跌落回随机水平。</span></p><p><span>这表明，恶意提取者根本不需要获取庞大的完整输出词表，极少量的头部候选词汇就是泄密的重灾区。</span></p><p><span style="font-weight:bold">发现七：在同等维度下，最终 Logits 的风险与深层破解无异</span></p><p><span>过去的黑客或研究者想提取大模型底层的机密知识，往往需要采用白盒手段获取模型内部的参数轨迹，门槛极高。</span></p><p><span>但这项研究揭示了一个残酷的现实：如果保持相同的观察维度，提取模型最表层且经常通过 API 对外开放的最终层 top-k Logits （通常只需要截取 2L 数量），其泄露无关信息的能力与需要极高权限的深层日志轨迹几乎完全相当。这打破了业内对于灰盒 API 访问具有天然安全屏障的传统幻想。</span></p><p><span style="font-weight:bold">技术背后的深远隐忧：隐私与大模型安全</span></p><p><span>在大概理解了实验过程之后，我们不禁要问，这到底意味着什么？</span></p><p><span>苹果团队敏锐地指出了这一现象背后的巨大安全隐患。</span></p><p><span>在实际的商业应用中，许多 API 接口或服务提供商为了让开发者调整参数，会公开模型最终的 top-k 对数概率，这就是所谓的灰盒场景。</span></p><p><span>这意味着，</span><span style="color:rgb(0, 66, 123);font-weight:bold">当用户上传一张包含隐私信息的照片，仅仅是让模型执行一个无关痛痒的视觉问答任务时，模型看似只输出了一个「Yes」或者一段简短的文字，但其背后附带的那几十个最高概率词汇的得分分布，已经悄悄把你照片里的背景信息、潜在的敏感属性泄露给了能够获取这些数据的服务端或恶意截获者。</span></p><p><span>恶意攻击者完全可以通过反复抽样和探测，从这些看似无害的输出概率中还原出用户的隐私数据。</span></p><p><span>此外，从模型自身的性能优化角度来看，这种信息压缩的失败也解释了为什么大模型经常会产生幻觉。那些徘徊在顶层 logits 中的无关信息，在非贪婪解码的生成过程中，随时可能对最终生成的文本产生干扰，导致模型输出带有偏见或虚假的内容。</span></p><p><span style="font-weight:bold">结语</span></p><p><span>「What do your logits know?」这个论文标题中问题堪称悬在生成式 AI 头顶的一把达摩克利斯之剑。</span></p><p><span>蒂姆・库克带领苹果建立起了世界上最高效的科技商业帝国，而当接力棒传到约翰 特努斯手中时，如何打造既高度智能又绝对保护隐私的下一代计算平台，将是苹果无法回避的新命题。</span></p><p><span>这篇论文告诉我们，在大模型的黑盒子里，即使是看似无害的一组概率数字，也可能隐藏着你的秘密。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3pgNzL3LDDY71d7X6n44IiDY.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p style="color:rgb(34, 34, 34)"><span style="color:rgb(136, 136, 136)">© THE END </span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(136, 136, 136)">投稿或寻求报道：liyazhou@jiqizhixin.com</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI提效手册</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eea8d6d419f50beb7ebdc9?channel_id=68d3ec1b685bba553f09f016">https://lingowhale.com/reader/web/69eea8d6d419f50beb7ebdc9?channel_id=68d3ec1b685bba553f09f016</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

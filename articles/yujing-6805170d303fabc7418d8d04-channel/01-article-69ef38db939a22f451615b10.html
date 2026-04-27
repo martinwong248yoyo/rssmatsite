@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>首要法则：不要莫名其妙地亏大钱</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 时政</div>
+                    <h1>首要法则：不要莫名其妙地亏大钱</h1>
+                    <div class="meta">
+                        <span>简无知</span>
+                        <span>Mon, 27 Apr 2026 09:57:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef38db939a22f451615b10?channel_id=6805170d303fabc7418d8d04">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="font-weight:bold">交易里面的首要法则，不是赚钱，而是不要莫名其妙地亏大钱。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">这句话看似简单，却道尽了交易的本质——风险控制先于收益追求。当你感到搞不懂、弄不清的时候，最好的选择就是离场。不懂不做，不是因为害怕，而是因为尊重市场的不确定性。模糊状态下做出的决策，往往是最容易付出代价的。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="font-weight:bold">一、交易成功的基石：纪律与自律</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">真正的交易者并非靠运气取胜。在压力下保持理性，并且恪守交易纪律，这是所有成功交易者共同的特质。他们意志坚强、性格独立，懂得物极必反的道理。<span style="color:#f00">在其他人不愿意持仓的时候，他们敢于持仓；在众人狂热追涨的时候，他们保持冷静。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">这种能力并非天生，而是源于严格的自律和约束。他们知道自己能承受多大的风险，因此持仓头寸总是规模适当，不会因为一次失误就被迫离场。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">交易中真正能让你赚钱的机会，往往最容易被错过、被忽视。如果你能持有头寸并且坚守交易纪律，赚钱就不再是偶然，而是一种必然的结果。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="font-weight:bold">二、坦然接受犯错：交易的必修课</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">另一个成功交易者的必备修养是：必须乐于经常犯错。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00">很多人把交易亏损等同于失败，这种心态恰恰是进步的障碍。事实是，交易本身就是一连串概率决策的过程。做出你的最佳判断，如果错了，再做下一次最佳判断；如果再错了，那就做出第三次最佳判断。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">这并不是鼓励草率交易，而是强调：<span style="color:#f00;font-weight:bold">犯错并不可怕，可怕的是因为害怕犯错而不敢决策，或者在犯错后拒绝承认、不肯止损。</span>如果你能在每一次判断失误后迅速调整，并且始终坚持这一流程，你的资金不仅能保住，还能实现翻倍增长。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="font-weight:bold">三、技术分析与基本面分析的融合之道</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">我经常给大家讲八个字：<span style="color:#f00;font-weight:bold">逻辑选股，量价择时。</span>这就是基本面和技术的结合。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">很多纯粹的基本面分析者从不关注技术图表，这种做法在我看来相当危险。<span style="color:#f00">量价分析就像是体温表，一个医生不打算给病人量体温就下诊断，显然极其愚蠢。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">作为市场中一位负责任的参与者，你总是想知道市场处在哪个阶段：是热火朝天、兴奋激昂，还是冷冷清清、一片萧条？你想知道你所能知道的关于市场的一切信息，只有这样才能真正提升你的交易优势。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00">量价分析反映了全部市场参与者的投票情况</span>——所有人的选择、意向与决定，而且能够捕捉不同寻常的价格行为。任何新的图表模式背后，必有不同寻常的东西等待你去发现。研究价格运动的细节至关重要，它能对市场中存在的不均衡状态以及潜在的变化发出预警。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">更关键的是：<span style="color:#f00">量价分析通常会使基本面变得更加明晰透彻，因为市场已经对基本面信息进行了集体投票。当基本面发生重要变化时，市场一开始所选择的方向，往往就是长期趋势开启的良好征兆。</span><span style="color:#f00;font-weight:bold">原因很简单——市场上总有人比你知道得更多、更早，他们会先你一步行动，市场价格因此提前做出反应。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="font-weight:bold">四、核心操作逻辑：方向、择时与纪律的统一</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">综合以上所有原则，我们可以提炼出一套清晰的操作框架：</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00">第一，逻辑和方向要对。</span> 这是所有交易的前提。方向判断错误，再好的技术操作也无法弥补。你要对市场所处的宏观环境、行业趋势、资金流向有清晰的认知，形成自己经得起推敲的逻辑链条。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00">第二，基本面要优秀。</span> 优秀的基本面是底气和安全边际的来源。它不一定意味着低估值，而是指企业或资产具备持续的竞争力、健康的财务状况、合理的增长前景。当你持有基本面优秀的头寸时，即便短期波动，你也能保持理性。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00">第三，技术层面加速不追涨。</span>这是一条铁律。再好的逻辑、再优秀的基本面，一旦价格进入加速上涨阶段，风险收益比就会急剧恶化。追涨的结果往往是买在高位，随后陷入漫长的调整。这时候需要的不是冲动，而是耐心等待。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00">第四，利用极端情况低吸。</span> 这正是“物极必反”原则的具体运用。当市场陷入恐慌、情绪极度悲观、技术指标出现极端偏离时，往往是最好的介入时机。那些在别人都不敢持仓的时候勇于建仓的交易者，最终赚到了最大的利润。</span></p><section style="color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Aj5k31KRZlq3cf6cs31aCZF.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">交易是一门关于概率、纪律与自我认知的学问。它不像表面看起来那样充满激情与冒险，相反，成功的交易者往往是冷静的、自律的、善于从错误中学习的。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">所以，<span style="color:#f00">从今天开始，请你始终记住：不要莫名其妙地亏大钱，不要激情交易。当你感到迷惑时，离场等待；当你做出判断后，严守纪律；当你犯错之后，果断调整。在这个基础上，坚持“方向对、基本面优、不追加速、低吸极端”的操作框架，你的收益率大概率会非常出色。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">交易的终极答案，并不在什么神秘的指标或内幕消息里，而是在你自己的修养和纪律之中。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#000">我只能帮你到这里了。</span><span style="color:#000;font-weight:bold">如果你还是迟迟不能改变，请读读我的书：</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:rgb(178, 178, 178)">（免责声明：本文内容及观点仅为记录个人交易思路，不涉及任何与个股有关的分析和推荐，不提供任何投资咨询服务，不构成投资建议，不作为投资依据。股市有风险，投资需谨慎：</span></span><span><span style="color:rgb(178, 178, 178)">必读声明</span></span><span><span style="color:rgb(178, 178, 178)">）</span></span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 时政</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef38db939a22f451615b10?channel_id=6805170d303fabc7418d8d04">https://lingowhale.com/reader/web/69ef38db939a22f451615b10?channel_id=6805170d303fabc7418d8d04</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

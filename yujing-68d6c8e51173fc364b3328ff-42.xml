@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>42章经-播客 - 语鲸</title><link>https://lingowhale.com/channels?channel_id=68d6c8e51173fc364b3328ff</link><atom:link href="https://martinwong248yoyo.github.io/rssmatsite/yujing-68d6c8e51173fc364b3328ff-42.xml" rel="self" type="application/rss+xml"/><description>42章经-播客 的本地语鲸公众号归档 RSS，共 10 篇文章。 - Powered by RSSHub</description><generator>RSSHub</generator><webMaster>contact@rsshub.app (RSSHub)</webMaster><language>zh-CN</language><lastBuildDate>Mon, 27 Apr 2026 16:01:15 GMT</lastBuildDate><ttl>5</ttl><item><title>用 Agent 动力学，和 40 个 Agents 一起为「人 + AI」做产品｜对谈 Slock.ai 创始人 RC</title><description><![CDATA[<div>RC</div>
+            <p>CLI 就是之前人们在电脑上面啊运行程序，我们大家看到的都是 GUI 的 APP 对吧，就是图形界面的 APP。</p>
+            <p>但实际上在有图形界面之前，人们在电脑上做任何事情的时候，其实都是以一个命令行的界面去做的。</p>
+            <p>那 COI 程序就是全称就叫 command line INTERFACE， 它其实就是命令行界面的这种程序诶，在之前主要是程序员去用。</p>
+            <p>但是呢，随着大模型的出来啊，大模型是一个文本 base 的东西，它天然不适合读机。</p>
+            <p>y嗯，对，然后呢，人们就发现啊，你在这个 terminal 上，这个并行界面的这个形态是非常适合给大模型去看或者去理解的。</p>
+            <p>所以 CLI 这个形态呢，也就是在 agent 这个时代，它就活起来了。</p>]]></description><content:encoded><![CDATA[<div>RC</div>
+            <p>CLI 就是之前人们在电脑上面啊运行程序，我们大家看到的都是 GUI 的 APP 对吧，就是图形界面的 APP。</p>
+            <p>但实际上在有图形界面之前，人们在电脑上做任何事情的时候，其实都是以一个命令行的界面去做的。</p>
+            <p>那 COI 程序就是全称就叫 command line INTERFACE， 它其实就是命令行界面的这种程序诶，在之前主要是程序员去用。</p>
+            <p>但是呢，随着大模型的出来啊，大模型是一个文本 base 的东西，它天然不适合读机。</p>
+            <p>y嗯，对，然后呢，人们就发现啊，你在这个 terminal 上，这个并行界面的这个形态是非常适合给大模型去看或者去理解的。</p>
+            <p>所以 CLI 这个形态呢，也就是在 agent 这个时代，它就活起来了。</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/01-agent-40-agents-ai-slock-ai-rc-69ea309d3e9cda23808e34c4.html</link><guid isPermaLink="false">69ea309d3e9cda23808e34c4</guid><pubDate>Thu, 23 Apr 2026 13:32:00 GMT</pubDate><author>42章经</author></item><item><title>我们是如何定义 OpenClaw for Teams 新产品形态的｜对谈 Kuse&amp;Junior 联创兼 CTO 宇豪</title><description><![CDATA[<div>徐宇豪</div>
+            <p>我叫宇豪，是 QC i 的 CTO，然后我之前一直在 AI 行业，16岁在浙大，然后去 CMU 读硕士，之后在 FB， 也就是后来的 Meta，早年是在 FB 的 STORIES 项目，然后从它早期 Haxon 开始，一路到最后成为 Facebook DAU 和 revenue de 的这个产品线。</p>
+            <p>后来之后我在呃一家日本公司，叫 span news，主要是做 AI， 还有审核相关。</p>
+            <p>从23年开始就做了很多有一次的小事情，开始考虑创业的事情。</p>
+            <p>然后四年认识了我的 CO founder 们，创立了 QCI。</p>
+            <p>QCI 的这个产品也经历了一段时间的打磨和迭代，从1.0到25年10月份 launch 的2.0，然后现在也做到了大概千万美金的 AR。</p>
+            <p>QCI 的话，主要是一个 AI Workspace，它是一个三栏式的一个产品，左边是你的文件夹，中间是工作区，右边是 AI。</p>
+            <p>这个 AI IM 的 agent 可以主动调用左边文件夹的任何东西，然后它背后会有一个沙盒。</p>
+            <p>本质上我们就是在去年下半年押宝了这个 AI 对文件和文件夹系统的操作。</p>
+            <p>现在主要面向的场景或者说面向的市场是海外的艺人公司自雇的这种 agency 或者是高级白领。</p>
+            <p>我们也见过很多小公司会把自己的所有资料都搬到 Q4上，然后用这个 agents 携带很多人力。</p>
+            <p>嗯哼，</p>]]></description><content:encoded><![CDATA[<div>徐宇豪</div>
+            <p>我叫宇豪，是 QC i 的 CTO，然后我之前一直在 AI 行业，16岁在浙大，然后去 CMU 读硕士，之后在 FB， 也就是后来的 Meta，早年是在 FB 的 STORIES 项目，然后从它早期 Haxon 开始，一路到最后成为 Facebook DAU 和 revenue de 的这个产品线。</p>
+            <p>后来之后我在呃一家日本公司，叫 span news，主要是做 AI， 还有审核相关。</p>
+            <p>从23年开始就做了很多有一次的小事情，开始考虑创业的事情。</p>
+            <p>然后四年认识了我的 CO founder 们，创立了 QCI。</p>
+            <p>QCI 的这个产品也经历了一段时间的打磨和迭代，从1.0到25年10月份 launch 的2.0，然后现在也做到了大概千万美金的 AR。</p>
+            <p>QCI 的话，主要是一个 AI Workspace，它是一个三栏式的一个产品，左边是你的文件夹，中间是工作区，右边是 AI。</p>
+            <p>这个 AI IM 的 agent 可以主动调用左边文件夹的任何东西，然后它背后会有一个沙盒。</p>
+            <p>本质上我们就是在去年下半年押宝了这个 AI 对文件和文件夹系统的操作。</p>
+            <p>现在主要面向的场景或者说面向的市场是海外的艺人公司自雇的这种 agency 或者是高级白领。</p>
+            <p>我们也见过很多小公司会把自己的所有资料都搬到 Q4上，然后用这个 agents 携带很多人力。</p>
+            <p>嗯哼，</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/02-openclaw-for-teams-kuse-amp-junior-cto-69bcc9e2ca51b85fa0376aa1.html</link><guid isPermaLink="false">69bcc9e2ca51b85fa0376aa1</guid><pubDate>Thu, 19 Mar 2026 14:02:00 GMT</pubDate><author>42章经</author></item><item><title>OpenClaw 之后，我只想未来 3-6 个月的事情｜对谈 Sheet0 创始人王文锋</title><description><![CDATA[<div>王文锋</div>
+            <p>其实我没觉得有本质上的区别啊，我觉得 menus 跟 m crowd 有个共同点，就是他们都证明了一类新形态的产品。</p>
+            <p>嗯，对，像 menus 那会，其实刚出来的时候，其实主打的场景是 deep research 的场景，这个场景解锁的啊，核心的来源是录音模型带来的这个推理能力的思维链的能力。</p>
+            <p>那这一波 open crow， 我觉得它本质上起来的原因是 coding 的能力的释放。</p>
+            <p>对，就是很多人他分析版本 CRO 为什么火起来，有人会说他是可以在你的 IM 里面，比如像 telegram， DISCORD去直接很方便去使用啊。</p>
+            <p>有些人会把这个原因归在这，但从我的视角来讲，本账 open crow， 它可能是第一个真正的把现在最新模型的 coding 能力压榨到极限的一个形态。</p>
+            <p>在这种情况下，就是说以前大家没想到诶，这个事情能跑得通，能达到这样的效果，但是个问号把大家做出来之后发现哇，好厉害，所以这时候我觉得我们去年其实一整年很多人也都在关注 proactive agent 这个事情，那之前就我们都不知道 proactive agent 长什么样子，</p>]]></description><content:encoded><![CDATA[<div>王文锋</div>
+            <p>其实我没觉得有本质上的区别啊，我觉得 menus 跟 m crowd 有个共同点，就是他们都证明了一类新形态的产品。</p>
+            <p>嗯，对，像 menus 那会，其实刚出来的时候，其实主打的场景是 deep research 的场景，这个场景解锁的啊，核心的来源是录音模型带来的这个推理能力的思维链的能力。</p>
+            <p>那这一波 open crow， 我觉得它本质上起来的原因是 coding 的能力的释放。</p>
+            <p>对，就是很多人他分析版本 CRO 为什么火起来，有人会说他是可以在你的 IM 里面，比如像 telegram， DISCORD去直接很方便去使用啊。</p>
+            <p>有些人会把这个原因归在这，但从我的视角来讲，本账 open crow， 它可能是第一个真正的把现在最新模型的 coding 能力压榨到极限的一个形态。</p>
+            <p>在这种情况下，就是说以前大家没想到诶，这个事情能跑得通，能达到这样的效果，但是个问号把大家做出来之后发现哇，好厉害，所以这时候我觉得我们去年其实一整年很多人也都在关注 proactive agent 这个事情，那之前就我们都不知道 proactive agent 长什么样子，</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/03-openclaw-3-6-sheet0-69b666af6005c1e7b5ca756c.html</link><guid isPermaLink="false">69b666af6005c1e7b5ca756c</guid><pubDate>Sat, 14 Mar 2026 14:01:00 GMT</pubDate><author>42章经</author></item><item><title>优化胜率而非赔率，把一件事做到理论上该有的样子｜对谈连续创业者 Albert</title><description><![CDATA[<div>Albert</div>
+            <p>是吧，也不能算是做了很多方向吧。</p>
+            <p>我们其实到25年的10月份之前都还是相对来说比较专注在影像方面的产品上，然后对于智能本身一直在观察，但实际上参与的呀，思考的呀，实际去尝试的是比较有限的。</p>
+            <p>嗯哼，其实我们一开始在24年前后，智能方面和想象力方面同时都在做尝试，但实际上影像方面就想象力方面的产品更快的 PMF，智能方面就收缩，所以也错过了很多吧。</p>
+            <p>嗯，</p>]]></description><content:encoded><![CDATA[<div>Albert</div>
+            <p>是吧，也不能算是做了很多方向吧。</p>
+            <p>我们其实到25年的10月份之前都还是相对来说比较专注在影像方面的产品上，然后对于智能本身一直在观察，但实际上参与的呀，思考的呀，实际去尝试的是比较有限的。</p>
+            <p>嗯哼，其实我们一开始在24年前后，智能方面和想象力方面同时都在做尝试，但实际上影像方面就想象力方面的产品更快的 PMF，智能方面就收缩，所以也错过了很多吧。</p>
+            <p>嗯，</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/04-albert-69ad295bc87f1fbc99976183.html</link><guid isPermaLink="false">69ad295bc87f1fbc99976183</guid><pubDate>Sat, 07 Mar 2026 14:03:00 GMT</pubDate><author>42章经</author></item><item><title>AI + 游戏 + 社交的新演绎 | 对谈 Wanaka 创始人张阳</title><description><![CDATA[<div>张阳</div>
+            <p>自己创业，因为我其实也不是第一次。</p>
+            <p>对对对，我最早是在澳洲毕业之后创业，那个创业可能做了一年多，但是因为什么都不懂，所以整个那个创意做的我觉得效果其实比较差的。</p>
+            <p>在很多后面的职业选择里面，我其实也比较在想自己到底要不要去做1号位，做 CEO 这件事情，后面可能都是做2号位，或者做 cofounder，其实也挺好。</p>
+            <p>但是经历了上一段创业，我觉得在这种大的时代变革的来临的时候，如果你真的想去做一个很好的产品，你不做1号位，你是很难真的从底层去影响很多决策的，这是决定去自己创业以及自己去做 CEO 的一个比较大的原因。</p>
+            <p>嗯，我觉得自己做 CEO 有一个最大的感受就是你不能逃避是，就是所有的问题你面对的就是你自己，那做好做坏其实你都应该是没有什么借口的。</p>]]></description><content:encoded><![CDATA[<div>张阳</div>
+            <p>自己创业，因为我其实也不是第一次。</p>
+            <p>对对对，我最早是在澳洲毕业之后创业，那个创业可能做了一年多，但是因为什么都不懂，所以整个那个创意做的我觉得效果其实比较差的。</p>
+            <p>在很多后面的职业选择里面，我其实也比较在想自己到底要不要去做1号位，做 CEO 这件事情，后面可能都是做2号位，或者做 cofounder，其实也挺好。</p>
+            <p>但是经历了上一段创业，我觉得在这种大的时代变革的来临的时候，如果你真的想去做一个很好的产品，你不做1号位，你是很难真的从底层去影响很多决策的，这是决定去自己创业以及自己去做 CEO 的一个比较大的原因。</p>
+            <p>嗯，我觉得自己做 CEO 有一个最大的感受就是你不能逃避是，就是所有的问题你面对的就是你自己，那做好做坏其实你都应该是没有什么借口的。</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/05-ai-wanaka-69a369c4f29dae04bc2a5100.html</link><guid isPermaLink="false">69a369c4f29dae04bc2a5100</guid><pubDate>Sat, 28 Feb 2026 13:00:00 GMT</pubDate><author>42章经</author></item><item><title>从 Clawdbot 到 26 年 AI Coding 主题大爆发｜对谈 PingCAP CTO 东旭</title><description><![CDATA[<div>黄东旭</div>
+            <p>太好了。</p>
+            <p>因为确实我最近这个睡眠非常不好，就是天天都属于一个非常亢奋的状态。</p>
+            <p>就是我觉得大概是从去年的12月底那个时间点开始，先是从 Web CODING 这个领域里边一些非常大的进步吧，就是从用户的终端的体验来说，以前可能还只是能干活诶，但现在基本上已经可以完全 offhand，我觉得有一个飞跃的一个感觉。</p>
+            <p>同时这样的一个能力慢慢的在拓展到非编程领域里，我觉得像这个 cloud bot 就是一个很好的例子，所以现在天天有很多想法，也有很多事情，以前只有想法不能去做，但现在马上基本就可以做，所以我感觉非常的亢奋，哈哈，</p>]]></description><content:encoded><![CDATA[<div>黄东旭</div>
+            <p>太好了。</p>
+            <p>因为确实我最近这个睡眠非常不好，就是天天都属于一个非常亢奋的状态。</p>
+            <p>就是我觉得大概是从去年的12月底那个时间点开始，先是从 Web CODING 这个领域里边一些非常大的进步吧，就是从用户的终端的体验来说，以前可能还只是能干活诶，但现在基本上已经可以完全 offhand，我觉得有一个飞跃的一个感觉。</p>
+            <p>同时这样的一个能力慢慢的在拓展到非编程领域里，我觉得像这个 cloud bot 就是一个很好的例子，所以现在天天有很多想法，也有很多事情，以前只有想法不能去做，但现在马上基本就可以做，所以我感觉非常的亢奋，哈哈，</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/06-clawdbot-26-ai-coding-pingcap-cto-698771c5ccafdfd19a992412.html</link><guid isPermaLink="false">698771c5ccafdfd19a992412</guid><pubDate>Sat, 07 Feb 2026 14:00:00 GMT</pubDate><author>42章经</author></item><item><title>All in AI 的第一个三年｜对谈绿洲资本合伙人张津剑</title><description><![CDATA[<div>张津剑</div>
+            <p>还可以更猛，因为我觉得猛其实是一种心态嘛，就我觉得没有最猛，只有更猛的。</p>
+            <p>就是啊，我觉得第一肯定是可以更猛一些，第二呢，我觉得可以更开放一些，因为我们二三年的时候我们意识到其实聚胜智能是另外一条通往 AI 的路，这个我们回头可以再去详细地讲。</p>
+            <p>但是总体来讲，我们认为 API 这条路目前来看南坡、北坡啊，一条路是通过纯粹的大语言模型去不断地去迭代，然后让它走向世界模型，走向 API。</p>
+            <p>那还有一条路，其实就是通过机器和物理的互动去构建世界模型，再去走向 AG 啊，所以它其实很像去登山峰的南坡北坡。</p>
+            <p>然后我们当时在23年的时候意识到这件事情的时候，我们也非常积极地去投聚胜智能，也是因为那个时候其实没有那么多人去看聚胜智能，那个时候还没有聚胜智能这个词，当时我们内部就叫人形机器，因为当时我们觉得跟这个世界互动可能最好的机器就是人本身了，所以当时我们说这可能是人性机器。</p>
+            <p>然后当时美国有一些机构，我跟我们关系还不错，说诶诶，居然有人在投机器人，他要不你们来看看我们的 performance？</p>
+            <p>然后我们当时就去了美国建了这家公司，然后聊了很多，当时这个公司的估值大概在8亿美金的样子，所以我们融资特别难，如果你们愿意投的话，可能还有些 discount。</p>
+            <p>我们当时觉得说，噢，这是一个美国的项目，然后机器人项目一定是属于中国的啊，所以你可以说是一些判断，你也可以说是一些偏见。</p>
+            <p>那最后我们的结果是我们没有投，最新的一轮这个公司已经到了400亿美金啊，这个公司叫 figure AI。</p>
+            <p>那同时那个时期我觉得美国不仅仅是有机器人的公司，也有一些 AI 的公司，就是在整个 performance 的构建上可能可以更加开放啊，甚至包括二级市场级的公司。</p>
+            <p>其实那个时候也在非常非常的低谷对吧？</p>
+            <p>过去3年其实有很多投资人通过英伟达也赚到很多钱。</p>
+            <p>嗯</p>]]></description><content:encoded><![CDATA[<div>张津剑</div>
+            <p>还可以更猛，因为我觉得猛其实是一种心态嘛，就我觉得没有最猛，只有更猛的。</p>
+            <p>就是啊，我觉得第一肯定是可以更猛一些，第二呢，我觉得可以更开放一些，因为我们二三年的时候我们意识到其实聚胜智能是另外一条通往 AI 的路，这个我们回头可以再去详细地讲。</p>
+            <p>但是总体来讲，我们认为 API 这条路目前来看南坡、北坡啊，一条路是通过纯粹的大语言模型去不断地去迭代，然后让它走向世界模型，走向 API。</p>
+            <p>那还有一条路，其实就是通过机器和物理的互动去构建世界模型，再去走向 AG 啊，所以它其实很像去登山峰的南坡北坡。</p>
+            <p>然后我们当时在23年的时候意识到这件事情的时候，我们也非常积极地去投聚胜智能，也是因为那个时候其实没有那么多人去看聚胜智能，那个时候还没有聚胜智能这个词，当时我们内部就叫人形机器，因为当时我们觉得跟这个世界互动可能最好的机器就是人本身了，所以当时我们说这可能是人性机器。</p>
+            <p>然后当时美国有一些机构，我跟我们关系还不错，说诶诶，居然有人在投机器人，他要不你们来看看我们的 performance？</p>
+            <p>然后我们当时就去了美国建了这家公司，然后聊了很多，当时这个公司的估值大概在8亿美金的样子，所以我们融资特别难，如果你们愿意投的话，可能还有些 discount。</p>
+            <p>我们当时觉得说，噢，这是一个美国的项目，然后机器人项目一定是属于中国的啊，所以你可以说是一些判断，你也可以说是一些偏见。</p>
+            <p>那最后我们的结果是我们没有投，最新的一轮这个公司已经到了400亿美金啊，这个公司叫 figure AI。</p>
+            <p>那同时那个时期我觉得美国不仅仅是有机器人的公司，也有一些 AI 的公司，就是在整个 performance 的构建上可能可以更加开放啊，甚至包括二级市场级的公司。</p>
+            <p>其实那个时候也在非常非常的低谷对吧？</p>
+            <p>过去3年其实有很多投资人通过英伟达也赚到很多钱。</p>
+            <p>嗯</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/07-all-in-ai-69626260a99247bde2a22bea.html</link><guid isPermaLink="false">69626260a99247bde2a22bea</guid><pubDate>Sat, 10 Jan 2026 14:29:00 GMT</pubDate><author>42章经</author></item><item><title>中美 AI 创投的真实差异｜对谈 Leonis Capital 合伙人 Jenny</title><description><![CDATA[<div>Jenny Xiao</div>
+            <p>hello， 大家好，我是 Leonus capital 的 Jenny 肖，平时在硅谷，这次很有幸来北京，跟大家一起聊一聊中美创业者之间的一些差距和大习惯上的一些不同。</p>
+            <p>我知道很多中国的创业者想要去美国发展，想要出海，所以也是想要跟大家多多的交流一下啊。</p>
+            <p>我自己的背景呢是之前在 open AI 是早期员工，在此之前在哥伦比亚大学读博士。</p>
+            <p>我其实是在美国长大的，但是在中国生活了8年，初中高中在中国读的。</p>]]></description><content:encoded><![CDATA[<div>Jenny Xiao</div>
+            <p>hello， 大家好，我是 Leonus capital 的 Jenny 肖，平时在硅谷，这次很有幸来北京，跟大家一起聊一聊中美创业者之间的一些差距和大习惯上的一些不同。</p>
+            <p>我知道很多中国的创业者想要去美国发展，想要出海，所以也是想要跟大家多多的交流一下啊。</p>
+            <p>我自己的背景呢是之前在 open AI 是早期员工，在此之前在哥伦比亚大学读博士。</p>
+            <p>我其实是在美国长大的，但是在中国生活了8年，初中高中在中国读的。</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/08-ai-leonis-capital-jenny-695bc93ddc70b65d504b5d2a.html</link><guid isPermaLink="false">695bc93ddc70b65d504b5d2a</guid><pubDate>Sat, 27 Dec 2025 12:12:00 GMT</pubDate><author>42章经</author></item><item><title>Dify 从被低估到成为明星项目，到底做对了什么｜对谈 Dify 创始人路宇</title><description><![CDATA[<div>曲凯</div>
+            <p>对，开始开源，然后就开始一路嗯起飞，嗯啊是然后到今天唉，这个过程其实很多人是没想到的，我跟很多人讲，大家都觉得说诶Diffi 是他们过去两年里面没有想到能发展这么好的一个项目啊，啊哈，所以我觉得我们今天正好可以复盘一下这两年 DP 的发展吧。</p>
+            <p>诶，这两年其实整个市场经历了蛮多事情的，包括 AI， 其实变化非常快的。</p>
+            <p>我记得2年前其实大家不怎么会用 AI 啊，所以那期本质上在聊的是怎么用 AI， 什么是 RAG 呀之类的解释的那些基础的东西。</p>
+            <p>但其实到今天大家已经对这些问题都很熟悉了。</p>
+            <p>所以要不你先简单讲讲这两年你总的感受。</p>]]></description><content:encoded><![CDATA[<div>曲凯</div>
+            <p>对，开始开源，然后就开始一路嗯起飞，嗯啊是然后到今天唉，这个过程其实很多人是没想到的，我跟很多人讲，大家都觉得说诶Diffi 是他们过去两年里面没有想到能发展这么好的一个项目啊，啊哈，所以我觉得我们今天正好可以复盘一下这两年 DP 的发展吧。</p>
+            <p>诶，这两年其实整个市场经历了蛮多事情的，包括 AI， 其实变化非常快的。</p>
+            <p>我记得2年前其实大家不怎么会用 AI 啊，所以那期本质上在聊的是怎么用 AI， 什么是 RAG 呀之类的解释的那些基础的东西。</p>
+            <p>但其实到今天大家已经对这些问题都很熟悉了。</p>
+            <p>所以要不你先简单讲讲这两年你总的感受。</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/09-dify-dify-6934a82952da898502ef04ae.html</link><guid isPermaLink="false">6934a82952da898502ef04ae</guid><pubDate>Sat, 06 Dec 2025 14:11:00 GMT</pubDate><author>42章经</author></item><item><title>「你觉得 AI 有泡沫吗？」——有！</title><description><![CDATA[<div>莫傑麟</div>
+            <p>泡沫不是很重要？</p>
+            <p>有泡沫不一定是坏石嘛，然后泡沫也不一定随时会破，但肯定是有泡沫啊。</p>
+            <p>如果把泡沫定义为说是一个比现实高的预期的话，那现在肯定是有的，这样才能发展嘛。</p>
+            <p>嗯，所以你觉得有泡沫吗？</p>]]></description><content:encoded><![CDATA[<div>莫傑麟</div>
+            <p>泡沫不是很重要？</p>
+            <p>有泡沫不一定是坏石嘛，然后泡沫也不一定随时会破，但肯定是有泡沫啊。</p>
+            <p>如果把泡沫定义为说是一个比现实高的预期的话，那现在肯定是有的，这样才能发展嘛。</p>
+            <p>嗯，所以你觉得有泡沫吗？</p>]]></content:encoded><link>https://martinwong248yoyo.github.io/rssmatsite/articles/yujing-68d6c8e51173fc364b3328ff-42/10-ai-6921fbc8607db100cc052439.html</link><guid isPermaLink="false">6921fbc8607db100cc052439</guid><pubDate>Sat, 22 Nov 2025 13:59:00 GMT</pubDate><author>42章经</author></item></channel></rss>

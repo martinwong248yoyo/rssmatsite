@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GPT-5.5好到不敢睡觉，奥特曼连夜写下五大宣言！</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 新智元-公众号</div>
+                    <h1>GPT-5.5好到不敢睡觉，奥特曼连夜写下五大宣言！</h1>
+                    <div class="meta">
+                        <span>新智元</span>
+                        <span>Mon, 27 Apr 2026 04:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eee6fcc5730139dcc65b6f?channel_id=67cc08a19a4297b6148b2994">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <h3 style="color:rgb(34, 34, 34)"><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2QBB0xim0xm40jxCT12NCGV.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section></section></h3><section style="color:rgb(34, 34, 34)"><section><p></p><strong><span>【新智元导读】</span><span><span>GPT-5.5太强了，奥特曼自嘲「不敢睡觉」。今天，他还做了一件比发模型更重的事：亲笔写下五大原则，宣称AI必须属于每一个人。</span></span></strong><p></p></section></section><p><span style="color:rgba(0, 0, 0, 0.9)">正主回来了！</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">上一周，GPT-5.5+Image 2.0惊艳全场，OpenAI再次续写不败神话。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">奥特曼也是一改往日的神秘，在X上疯狂发帖。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">他甚至调侃「后AGI时代」的社会景象——没人工作，经济崩溃，转而又说：</span></p><section style="color:rgb(91, 91, 91)"><p>Codex中GPT-5.5太强了，自己不得不切换到「多相睡眠」模式，以免错过工作机会。</p></section><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4xxtflZkSgA2Qvwdh6W5pb.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">就在今天，奥特曼做了一件比发模型更重的事，在OpenAI官博亲自署名发布了一篇重磅长文——我们的原则。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">文章开篇便是掷地有声的一句：「未来不是少数人的特权」。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/QqwGw3TeWxVhFJSY4yhmdc.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>GPT-5.5好到不敢睡觉</strong></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">GPT-5.5代号「Spud」，可是OpenAI酝酿许久的新一代旗舰模型。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">在编码、推理、智能体等测试中，GPT-5.5直接把Opus 4.7甩在身后。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">更令人震撼的是，就连最难的ARC-AGI-3基准测试，也极有可能在GPT-5.5-xhigh（工具版）面前宣告破解。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/gzHYKhjxHr35oPWi6ZGLD.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/15n49W43OgQb3YixBm3cd4Bz.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">奥特曼的反应更加强烈，发了一句耐人寻味的的话——</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">5.5真的很「诚挚」，有一种「我一定能成」的那种韧劲儿。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2GER2t4dXIr33UsEYr2A7vyr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">开发者端的反馈同样凶猛。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">Codex上线后，独立开发者、创业团队、企业工程师密集晒出实测——</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">代码补全准确率跳了一个台阶，多步推理链条明显更稳。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">奥特曼那句「多相睡眠」不全是玩笑，Codex确实好用到让人不舍得关窗口。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1grmPS3BBP6H2nbqLR3YWmkU.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>五条原则，一条比一条狠</strong></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">一个CEO在产品口碑最好的时刻，不谈性能，不谈定价，转头写了一篇了关于OpenAI五大原则的长文。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1xQNr7b3Lfo3EfjFkQluFI.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">这个动作本身，比长文内容更值得注意，具体拆解来看：</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">第一条：民主化（Democratization）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">AI的权力不能集中在少数公司手里。不光要让每个人用得上AI，关键决策必须通过民主程序来做，而不是由几个实验室说了算。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">第二条：赋能（Empowerment）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">AI应该帮每个人实现目标、学到更多、过得更好。OpenAI要做的产品，得让用户「可靠地完成越来越有价值的任务」。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">第三条：普惠繁荣（Universal Prosperity）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">AI带来的财富必须被广泛分享。奥特曼直接点名：政府可能需要考虑全新的经济模式，确保每个人都能参与价值创造。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">第四条：韧性（Resilience）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">AI会制造新风险，OpenAI会和政府、社会一起应对。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">比如，超强模型可能让制造病原体变得更容易，所以社会需要建立「不依赖于特定病原体」的防御体系；AI的网络安全能力在提升，必须抢先用它来保护基础设施。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">其中，第五条适应性（Adaptability）最值得玩味。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">奥特曼亲口承认，当年发GPT-2的时候「过度紧张了」——当时OpenAI选择延迟发布完整模型，引发业内巨大争议。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">但他说，正是那次误判让团队摸索出了「迭代部署」的方法论：</span></p><section style="color:rgb(91, 91, 91)"><p>不是一步到位扔出超级智能，而是分阶段释放，观察社会反应，再调整下一步。</p></section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/12qKEq2lTj0Y27HIpF339FQb.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgba(0, 0, 0, 0.9)">一个看似失误的决定，反而成了OpenAI最重要的战略资产。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3iRHjdaJNonIN0P61YbUDV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>没人工作，不是玩笑</strong></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">现在回头看奥特曼那句「后AGI没人工作经济会崩」，味道就完全不一样了。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">因为五大原则里的「普惠繁荣」一条，专门提到了这句话：</span></p><section style="color:rgb(91, 91, 91)"><p>我们的政府可能需要考虑新的经济模式，以确保每个人都能参与到前方的价值创造中来。</p></section><p><span style="color:rgba(0, 0, 0, 0.9)">这不是随口一说，这实际上是在暗示UBI（全民基本收入）或类似机制。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">而且奥特曼自己把逻辑链说得很清楚，OpenAI现在做的那些「看起来很怪」的事情：</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">收入还不大的时候就疯狂买算力、拼命垂直整合压低成本、在全球各地拼命建数据中心，全都是为「普惠繁荣」这个终极目标服务的。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3fO08T3M6NHE2rDhcp1wIMIA.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">OpenAI的扩张逻辑是「我要让AI便宜到每个人都用得起」，至少奥特曼是这么说的。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">但这套逻辑的另一面是什么？如果AI真的让大部分人不需要工作了，谁来兜底？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">奥特曼的答案是：政府。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">OpenAI负责把技术做到极致、把成本压到极致，然后呼吁政府建立新的社会保障体系。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>纸上的原则，能跑赢AI吗？</strong></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">奥特曼这篇长文的真正信号不是五大原则本身，而是时间节点。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">GPT-5.5刚发布、口碑正好的时候，他选择谈原则而不是谈性能。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这说明OpenAI已经意识到，AGI竞赛的下半场，技术领先只是门票，谁能定义规则、赢得信任，谁才能笑到最后。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">GPT-5.5 Pro从发布到IQ跑出145，中间只隔了几天。这个速度差本身就是答案。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/mlByD3GXa0A4ug8ql23haZW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">蒸汽机时代，人类有充足的时间讨论规则、分配权力、修正错误。AI时代，留给讨论的窗口正在以月为单位缩小。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">五大原则写得漂亮，但真正的考验不在今天。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">当超级智能真的到来，当「没人工作」从段子变成现实，OpenAI愿不愿意兑现「必要时暂停研发」的承诺？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这个问题，奥特曼还没有回答。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgba(0, 0, 0, 0.9)">以下是，奥特曼发表在OpenAI官网的完整原文：</span></p><section><section><section><section style="color:inherit"><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/zna4q2IWUb44CF9sV4rbHps.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><p style="color:rgb(170, 170, 170)">可以上下滚动的图片 </p></section></section></section><p><span style="color:rgb(136, 136, 136)">参考资料：</span></p><p><span style="color:rgb(136, 136, 136)">https://x.com/sama/status/20485526774336d43427?s=20 </span></p><p><span style="color:rgb(136, 136, 136)">https://x.com/sama/status/2048426122854228141 </span></p><p><span style="color:rgb(136, 136, 136)">https://x.com/sama/status/2048554097985593849</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 新智元-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eee6fcc5730139dcc65b6f?channel_id=67cc08a19a4297b6148b2994">https://lingowhale.com/reader/web/69eee6fcc5730139dcc65b6f?channel_id=67cc08a19a4297b6148b2994</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>电影人也喜欢奇奇怪怪的电影</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 艺术电影-电影</div>
+                    <h1>电影人也喜欢奇奇怪怪的电影</h1>
+                    <div class="meta">
+                        <span>虹膜</span>
+                        <span>Sun, 26 Apr 2026 08:14:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69edca52c5d0f752ce6daeac?channel_id=68071d1b2c7742c740dc6aa3">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span>从最脏乱、破旧的电影院里让人顿悟的夜晚，到星光下令人着迷的放映，诸位电影人和影评人一同回忆起了去电影院看电影时那种共同的兴奋。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3qGTrz2ecyEHCMXJ42E61oC.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section><section style="color:rgb(0, 0, 0)"><section><section><p><span>「你得坐在流浪汉没撒过尿的地方」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>迈克·李</span></strong></p></section></section></section></section></section><p><span>在我还是个穷孩子的时候，尤斯顿有一家托尔默电影院，这是伦敦最便宜的电影院，甚至比其他地方的电影院都要便宜——两先令一张票。这是一座经过改造的教堂，虽然脏乱差，倒也是不拘一格。这个电影院找得到什么电影，就会放映什么电影，无论新旧。</span></p><p><span>《豹》——原版影片，没有字幕；《地狱机械舞》；《罗生门》；《瑞典混蛋》（暂译，Svenska Flickor I Franska Sexorgier）。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1ngD9uG9Vtl2YEm9M1YjDav.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《豹》（1963）</span></p><p><span>有的拷贝不完整，还会突然随机地跳到其他影片，放映机也可能会起火。妙极了。就像是在上电影课。但你得坐在流浪汉没撒过尿的地方。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「一支长矛从人群后面扔出来，钉在银幕上晃来晃去」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>蒂尔达·斯文顿</span></strong></p></section></section><p><span>那是1980年。一张床单挂在肯尼亚基图伊的一个村庄中间的树上。当时放映的是一部质量糟糕的西部片，而放映机和发电机甚至还要更糟糕。这些都是两个来自内罗毕的老家伙带来的，他们每两年就会从索马里到坦桑尼亚巡回放映。数百名观众从很远的地方聚集而来。</span></p><p><span>正放到酒吧枪战的那场戏时，一支长矛从人群后面扔出来正中坏蛋的胸部，钉在床单正中间位置晃来晃去，直到片尾的浪漫拥抱。这真令人难忘。梦中神奇的电影院，随时随地都让我们深感震撼——向星辰出发而复归，无休无止。令人肃然起敬。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4DR0EP2DjPb03zoYqB1sQpPx.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><section style="color:rgb(0, 0, 0)"><section><section><p><span>「没有一丝快餐的味道」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>肯·洛奇</span></strong></p></section></section><p><span>我要说的不是什么狂喜的时刻，而是半个世纪前三个电影院的故事。努尼顿剧院是一个古老的杂耍剧场，听说在它那褪色的天鹅绒座椅上还会有家畜。不管怎样，对于快要成年的青少年来说，悄悄地去看《艳情轮舞》这样的法国电影，是从工业化的中部地区逃去一个异国世界。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/12uPil1HGWl41AqLEy3tC7mr.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《艳情轮舞》（1964）</span></p><p><span>再来是五十年代后期的牛津的凤凰剧场，和英格玛·伯格曼、安杰伊·瓦伊达的电影，以及法国新浪潮第一次溅起的水花。最后是伦敦牛津街的学院，在那里我们一同享受了六十年代捷克电影带来的乐趣：《严密监视的列车》《金发女郎的爱情》等等。这些都是有着美好回忆的电影院——而且没有一丝快餐的味道！</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「我的心一直悬着」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>史蒂夫·麦奎因</span></strong></p></section></section><p><span>我第一次去电影院是在伦敦的汉默史密斯剧场看《豪勇七蛟龙》。我记得我的手沿着墙边摸过，惊讶地发现墙上铺了毯子。西印第安人和西部片渊源颇深，所以和我父亲一起看那部电影可是件大事。这部电影令人难以置信；声音和影像带来的嘈杂声令人惊讶。我的心一直悬着。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2RxmwP3q190miowKg3Z7T5l.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《豪勇七蛟龙》（1960）</span></p><p><span>我还得说说二十年前圣马丁巷的卢米埃尔影院（伦敦中心的地下影院，现在变成了健身房）午后场补放的《西北偏北》。你会下三、四层楼梯，感觉与伦敦的现实生活脱节了，然后发现自己身处这个华丽的椭圆形空间，就像是在鲸鱼的胸腔里一样。</span></p><p><span>阿尔弗雷德·希区柯克为观众创作了这部电影。他精心安排了他们的惊呼、尖叫，什么时候该向前倾，什么时候该往后缩。这跟在家看电影可不一样，你不是坐在沙发上，会被电话、门铃或去拿杯喝的而分心。这个地方充满了活力，最后每个人都站起来鼓掌；就像我在洛杉矶的聚光灯影院看《贫民窟的百万富翁》时一样。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/D4Z5h2AFgdW3vCIvhYsEDd.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《西北偏北》（1959）</span></p><p><span>你能想象独自坐过山车的感觉吗？大多数时候你都是和其他人一起，大家都很兴奋。这就是它令人兴奋的地方。没有什么比和其他人一起见证一个故事更好的了。这是一种集体性的东西，是人性的印证。我只是迫切希望人们能回到电影院。不然太痛苦了。我不希望这样的体验永远消失——我绝对不是一个人。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「我想要永远记得我在那一刻的感觉」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>艾玛·汤普森</span></strong></p></section></section><p><span>1978年看《超人》的时候。那是一个超大的电影院。我们那时候17岁。这部电影令人兴奋的，妙趣横生，一波三折。但最罕见的是，女主角和男主角一样有趣和鼓舞人心，尽管她不能独自飞行。当我离开电影院的时候，我想要永远记得我在那一刻的感觉。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1r9YVg2xjhynVdHyw48p94m.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《超人》（1978）</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「在黑暗中，在陌生人之间，我完全变了」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>萨拉·波莉</span></strong></p></section></section><p><span>我20岁的时候在加拿大多伦多的一家电影院看了《细细的红线》。我以好斗的无神论者的姿态沮丧地进入了影院，还觉得在电影行业工作是一件肤浅的事。离开影院时，我好像明白了信仰的意义，我不再悲伤，我希望有一天能拍出自己的电影。在黑暗的电影院里，在陌生人之间，我完全变了。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4rF4QUsIMJ611Eowz1OH0jk.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《细细的红线》（1998）</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「整个影院亮起了淡蓝色的光芒。令人沉醉。」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>史蒂夫·库根</span></strong></p></section></section><p><span>我还记得十月的一个晚上，我母亲带我和几个朋友去当地的破旧影院庆祝我的10岁生日，我们一口气看了《007之你死我活》和《007之女王密使》。现在想起来我还会起鸡皮疙瘩。我们好似来到了万里无云的沼泽地，看到了刺激的快艇追逐，随后便是在约翰·巴里的最佳配乐下，看到乔治·拉扎贝和黛安娜·里格在瑞士阿尔卑斯山上滑雪。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3UwFVW2hKApgg6HqC2SB6H.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《007之你死我活》（1973）</span></p><p><span>整个影院亮起了淡蓝色的光芒。令人沉醉。而我妈妈却睡着了。她怎么可以这样？我还记得我走出影院时寒冷潮湿的夜色所带来的现实的震撼。这确实是些愚蠢的电影，但那种童年的兴奋一直伴随着我。</span></p><p><span>精心构思的故事，一次电影体验，这都是独一无二的。在这两个小时内，你可以给人们一次深刻的体验，让他们质疑自己，让他们哭，让他们笑，让他们振作起来，让他们看到希望。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「我们读过书了，是不可能被吓到的」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>埃德加·赖特</span></strong></p></section></section><p><span>我的整个职业生涯都在试图复制我在电影中经历的各种高潮。一次在萨默塞特当地的电影院的观影经历让我难以忘却，那天下午我碰巧在10岁的时候看了这部15+的《小精灵》。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Utux01l28YA4hWsct4tWMwM.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《小精灵》（1984）</span></p><p><span>我和哥哥拿着《小精灵》的小说找到影院经理，解释说，我们读过书了，是不可能被真正的电影吓到的。令人惊讶的是，他让我们进去了。看电影时心潮澎湃，同时还想着我可能会被扔出去，这样的激动是从来没有过的。我仍在追求那种兴奋感。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「一种纯粹的人与人的交流形式，根植于欲望、神话和魔法之中」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>拉斯洛·奈迈施</span></strong></p></section></section><p><span>过去10年，电影院里安装了电视屏幕，这在很大程度上抹杀了实际放映电影的真实体验，我越来越怀念10多年前看到的斯坦利·库布里克的《巴里·林登》的修复拷贝。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1BAk2ykDjdB23KOkz4xLq1X.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《巴里·林登》（1975）</span></p><p><span>这真的是发自内心的，也引人深思，同时对我来说，这再次证明了一件以工艺为基础的作品的吸引力，它是在物质层面上制作的，每一次剪辑都经过了彻底的思考。那里没有电脑的容身之处，只有一种纯粹的人与人的交流形式，根植于欲望、神话和魔法之中。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「你可以听到胶片在链轮上的咔嗒声」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>迈克尔·温特伯顿</span></strong></p></section></section><p><span>在我15或16岁的时候，我发现在兰开夏郡的布莱克本有一个电影协会。它每周在图书馆顶层的一个小房间里放映一次电影。说实话，我不记得我在那里看的第一部电影是什么了，就记得他们策划了一次德国电影展，所以我看的第一部可能是赖纳·维尔纳·法斯宾德的《恐惧吞噬灵魂》，或者是维姆·文德斯的《爱丽丝城市漫游记》又或者是沃纳·赫尔佐格的《卡丝帕尔·豪泽尔之谜》。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2r2fyh1D3dyV1moAiu1y0MHz.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《恐惧吞噬灵魂》（1974）</span></p><p><span>这些电影是在房间里的16毫米放映机上放映的，所以你可以听到胶片在链轮上的咔嗒声。每放完一卷胶片，就会停顿一下，灯亮起来，观众中有人站起来，再接上下一卷胶片。你身边就坐着一个放映员，这会带来一种简单、机械又神奇的感觉——低成本、实景拍摄，常常由非专业演员出演，他们似乎既是熟悉的，又是陌生的，尽管简单，但蕴含了他们感觉无需解释的意义。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「完全的疯狂和欢乐」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>惠特·斯蒂尔曼</span></strong></p></section></section><p><span>最棒的一次体验是在纽约哈德逊河畔康沃尔的风暴王剧院里，当时正在进行圣诞节前的全卡通的儿童日场放映。那时，电影艺术达到了巅峰——完全的疯狂和快乐。在哈佛附近的奥森·威尔斯电影院，我那当放映员的哥哥会把《兔八哥》拼接在一起：这是影院经理拉里·杰克逊的超级明星，它还引发了卡通电影热潮。</span></p><p><span>然后便是我和我父亲一起看的战争片：《最长的一天》《北京55日》，以及夏天乘船游览时，在缅因州巴尔港豪华的标准剧院看了《祖鲁战争》。我和我母亲一起看了令人愉快的外国电影，比如《老爷车》《仁心与冠冕》和《意大利式离婚》。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/10uVGpc10beiBGoH2dEHNu.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《最长的一天》（1962） </span></p><p><span>但1971年，我在哈佛广场剧院看了两部电影，它们奠定了我的职业生涯：弗朗索瓦·特吕弗的《婚姻生活》和埃里克·侯麦的《克莱尔的膝盖》。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「电影必须成为我们新社会的车头灯」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>弗朗西斯·福特·科波拉</span></strong></p></section></section><p><span>在这些困难时期，人们害怕并渴望他们所谓的「回归正常」。但是现在谁会说最重要的问题是我们挣多少钱或者我们值多少钱？没有什么比我们所爱的人的健康和安全、普遍的教育、正义和对我们共同的家园——地球的关怀更重要的了。</span></p><p><span>也许现在需要扮演社会「车头灯」的角色是艺术家，尤其是电影艺术家：表达主题和原则，以刺激和改变我们以前长期坚持的优先事项。「我们到底要去哪里？」诺瓦利斯说。「答案总是我们的家。」</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「我几乎无法呼吸」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>崔茜雅·图</span></strong><strong><span>特勒（伦敦电影节的艺术总监）</span></strong></p></section></section><p><span>在任何平台上看一部好电影都是一种乐趣。然而，我最生动的观影记忆绝大多数是那些我和其他人一起在黑暗的房间里看闪烁的光影、沉浸在故事里的记忆。我在一个郊区的购物中心里的三屏独立小影院里看了彼得·杰克逊的《罪孽天使》。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3FAWWO3v5poK40efs61BynXN.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《罪孽天使》（1994）</span></p><p><span>当十几岁的朱丽叶和波林坠入爱河时，我被她们狂热、痴迷的私人世界所吸引，几乎无法呼吸；这是一次完全沉浸式的体验，杰克逊和凯特·温丝莱特口述了我的每一次心跳，同时电影把我拖向残酷的结局。我知道结局是不可避免的。波林的叙述已经告诉我了。但恐惧压倒了我。一条穿过树林和岩石的小路。可怕的事情结束了，灯光亮了，但几乎没有人离开电影院。</span></p><p><span>我突然被波林一定感受过的所有情感所压倒——突然地失落的同时又头脑清醒，因悔恨而心痛。我坐在灯光完全亮起的电影院里，和陌生人一起哭泣。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「蝙蝠掠过月光」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>卡梅隆·贝</span></strong><strong><span>利（多伦多电影节的艺术总监）</span></strong></p></section></section><p><span>我曾在多伦多电影节的罗伊·汤姆森音乐厅观看奥普拉·温弗瑞的节目，当时音乐厅里有2000人，令人头晕目眩；人们因为阿米达普·巴强坐在我们中间而小声议论。但我永远不会忘记「泛非影展」（瓦加杜古泛非电影电视节）。在布基纳法索，我和数百人一起坐在露天电影院里，同时蝙蝠掠过月光，明亮的银幕让我们沐浴在本土的芳香之中。我们成为了一个整体。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4eQvFB3XPdpj2IJyf243DvVE.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgb(0, 0, 0)"><section><section><p><span>「我心里被脏乱的座位吓到」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>彼得·布拉德肖</span></strong><strong><span>（《卫报》影评人）</span></strong></p></section></section><p><span>1985年，我22岁的时候，我在纽约工作。一天晚上，我大胆地一个人去格林尼治村的威弗利剧院看了一部名为《血迷宫》的电影。虽然我是一只胆小的英国乡下的老鼠，但我心里还是被脏乱、硬邦邦的座位、粘腻的地毯以及屈指可数的观众吓到。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4FGVTG41XjZzK5XSz47DLEA.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《血迷宫》（1984）</span></p><p><span>然后，电影本身甚至更吓人——同时也让我身临其境，为之困扰。当丹·哈达亚饰演的阴险的酒吧老板吐了一加仑的血时，我觉得血已经从屏幕上流出来，在我脚边令人毛骨悚然的泥泞地板上淤积起来。这部电影非常恐怖，它在我的脑海中与电影本体融为一体。当我回到令人毛骨悚然的科恩式的华威酒店时，我才完全意识到那次经历是多么奇妙的光荣。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「她坐在我旁边的货摊上——光着腹部，戴着珠宝和面纱」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>大卫·汤姆森</span></strong><strong><span>（《卫报》影评人）</span></strong></p></section></section><p><span>1949年，我8岁的时候，在图廷的格拉纳达看了《参孙与达莉拉》：我对宗教相关的没什么印象了，但很害怕理发的画面。所以我害怕维克多·迈彻拿着金剪刀，同时头发掉在地上发出响声。</span></p><p><span>接着，达莉拉来了，坐在我旁边的货摊上——光着腹部，戴着珠宝和面纱，散发着令人作呕的香水味。拉马小姐看着我，阴险地低声说：「不要害怕，亲爱的。」不，这不可能发生。但多年后，当人们发现海蒂还会电子发明时，我并不感到意外。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/F6pYg1Vw7p81kTw6xLDE7n.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《参孙与达莉拉》（1949） </span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「我的的确惊讶地合不拢嘴」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>哈德利·弗里曼</span></strong><strong><span>（</span></strong><strong><span>《卫报》撰稿人和专栏作家）</span></strong></p></section></section><p><span>1991年8月必看的电影当然是《终结者2》。因此，在我当时的生活指南《帝国》杂志中那篇五星级影评的鼓舞下，我前往位于肯辛顿高街的奥德翁剧院。电影院挤满了人。我并不感到惊讶。毕竟，《帝国》曾说过这部电影很重要。《帝国》说的没错。当T-1000穿过铁栅栏时，我的的确确惊讶得合不拢嘴。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3PNEij4ixQRS1Hwqa825duoG.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《终结者2》（1991）</span></p><p><span>那些由詹姆斯·卡梅隆创造的特技效果，完全——毫不夸张地说——让我为之折服。从那以后，我看了很多电影，也看了很多CGI。但没有什么能与第一次在大屏幕上看到这部电影相比。我觉得自己仿佛刚刚目睹了第一部有声电影的诞生。在某种程度上，我的确如此。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「一辆失控的婴儿车疾驰而下」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>山·布鲁克斯（《卫报》影评人）</span></strong></p></section></section><p><span>八十年代，180电影院是萨里郡索普公园的游乐场景点。我13岁的时候参加了一次学校旅行。你站在圆顶下，盯着环绕的屏幕。这像是从过山车或滑雪头盔的前部拍摄的主观镜头。这么做的目的是沉浸式体验；我完全沉浸其中。在压轴戏中，一辆失控的婴儿车从山上疾驰而下，奔上了一条繁忙的主干道。一辆卡车在最后时刻刹住了。这太让人震惊了，以至于我脸朝下地摔倒在地。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「你几乎能感觉到空气都消失了」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>安妮·比尔森</span><strong><span>（《卫报》影评人）</span></strong></strong></p></section></section><p><span>我曾在电视、录像带和DVD上看过杰克·克莱顿 1961年的电影《无辜的人》，但直到2015年布鲁塞尔电影科技公司将它搬上大银幕之前，我从未真正看过这部电影。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1qQvfY36ySB12d98bAuERfi.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《无辜的人》（1961）</span></p><p><span>我第一次真正欣赏到了弗雷迪·弗朗西斯精湛的黑白摄影技术，完美的宽银幕构图和美丽的深焦摄影——所有这些设计都是为了吓退你。所以，当鬼魂出现在吉登斯小姐身后的窗户时，你几乎能感觉到空气都消失了，而所有的观众都在齐声喘气。这是电影涅槃。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「吸烟区和禁烟区都爆发出掌声」</span></p></section></section><section style="color:rgb(160, 160, 160)"><p><strong><span>瑞恩·吉尔贝</span><strong><span>（《卫报》影评人）</span></strong></strong></p></section></section><p><span>当《夺宝奇兵》中的印第安纳·琼斯派缓缓一枪杀死剑客的时候，埃塞克斯哈洛·欧迪恩剧场的观众疯狂地鼓起掌来：影院左边的吸烟区和右边的禁烟区的每个人都在蓝色烟雾中疯狂地鼓掌。那是上世纪八十年代初的一个周末的晚上，我还是个11岁的孩子，当时我惊呆了。我从未在电影院听到过掌声。我一般不喜欢这样。除非导演在现场，否则请克制自己。但那次不同——那是一种情不自禁的、发自内心的喜悦。还记得这些吗？</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1tCU8V3nbFv24f14kG1X61zm.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《夺宝奇兵》（1981） </span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「人们尖叫着，哭泣着，互相抓着对方寻求安慰」</span></p></section></section></section><p><span>我在英国一家座无虚席的影院里看了《杀死比尔》，它在一片寂静中放映。两周后，我来到韩国。我在韩国看了续集。区别就像白天和黑夜。当电影放映到第一个套路——乌玛-瑟曼被射中的时候，全场一片混乱。人们尖叫着，哭泣着，互相抓着对方寻求安慰，直到片尾字幕才停止。我的老板后来告诉我，她真的觉得自己要吐了。她说这话是一种夸奖。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1a2UMPRYzm40IANT1fTkV9.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">《杀死比尔》（2003） </span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「《惊声尖叫4》是完美的纪念日的约会电影」</span></p></section></section></section><p><span>26岁的时候，我第一次坠入爱河。他聪明、英俊，讨厌插队，最具诱惑力的是，他还像我一样，在青少年时期为想象中的第四部《惊声尖叫》写过同人小说。这是命中注定的。因此，我们结婚一周年纪念日的那个周末，恰好也是真正的第四部《惊声尖叫》上映的时候，有趣而幸运。我的朋友们嘲笑我没什么恋爱经验，但对我们来说，我们年轻时痴迷于这一恐怖电影系列，感觉就像是完美的约会。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/yWG7s3Vx4bw5H6ni2KtU74.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《惊声尖叫4》（2011）</span></p><p><span>这也的确是一次完美的约会。不仅仅有着与一起长大的人物角色重聚的激动，同时也知道我们彼此都像对方一样激动。在我十几岁时，我习惯了一个人看电影，所以，在温暖的春天的傍晚，在一个价格过高、人少得可怕的电影院里和他手牵着手，深深沉迷于一系列恶性和致命的捅刺中，是一次巨大的安慰。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「我根本没有准备好迎接完全浸入式的创伤」</span></p></section></section></section><p><span>当你在一场接一场的放映中磕磕绊绊时，参加电影节可能是一件苦差事——但它们也可能让你收获惊喜，尤其是当你通常在看那些你几乎一无所知、甚至期望更低的电影时。比如那部「墨西哥狗狗电影」后来定名为《爱情是狗娘》并轰动一时；又或者是超级暴力的巴西黑帮事件变成了大家现在看到的《上帝之城》；拍过《死亡密码》的导演也带来了新作——由小胡伯特·塞尔比执笔的、本质上无比疯狂的《梦之安魂曲》。但令我至今印象深刻的是2015年《索尔之子》在戛纳的首映。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/7TCAf4ybxK12CdMLC2cL9ZW.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《索尔之子》（2015）</span></p><p><span>我模模糊糊地知道这是关于奥斯维辛的，但我根本没有准备好迎接随之而来的完全浸入式的创伤，这部电影完全不加掩饰地试图重现纳粹死亡集中营的惨无人道的噩梦。这是一次令人震惊的经历；我到现在还没恢复过来。</span></p><section style="color:rgb(0, 0, 0)"><section><section><p><span>「只有理查·基尔和知了」</span></p></section></section></section><p><span>这不是旅途中最好的一天。钱包快空了。脾气有点暴躁。我们离家已经很久（两个星期半！）、很远（希腊！）了。这是一个愚蠢的计划，整天背着背包在38摄氏度的高温下沿撒玛利亚峡谷而下。你不能回头。没有树荫，也没有咖啡。有个男人死在了回程的船上。</span></p><p><span>后来我们在帕乔科拉的户外电影院看了《纽约的秋天》。天哪，这部电影糟糕透了，但又无比完美。</span></p><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2laK4QhMGNb1UnY0p13lHZF.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></section><p><span style="color:rgb(136, 136, 136)">《纽约的秋天》（2000）</span></p><p><span>这个地方相当荒凉；只有我们，啤酒和希腊卷饼，知了和月亮，自鸣得意的理查·基尔，以及薇诺娜·瑞德饰演的疯狂的女帽商，人们难以信服，却又一下子爱上。多年以后，我们引用了这部作品。我曾经重温这部电影，但那温和的克里特人的威严已经不见了。</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 艺术电影-电影</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69edca52c5d0f752ce6daeac?channel_id=68071d1b2c7742c740dc6aa3">https://lingowhale.com/reader/web/69edca52c5d0f752ce6daeac?channel_id=68071d1b2c7742c740dc6aa3</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

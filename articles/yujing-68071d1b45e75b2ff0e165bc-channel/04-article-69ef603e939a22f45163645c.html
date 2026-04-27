@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>当年号称改变影史，真的改变了吗？</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 艺术电影-电影</div>
+                    <h1>当年号称改变影史，真的改变了吗？</h1>
+                    <div class="meta">
+                        <span>虹膜</span>
+                        <span>Mon, 27 Apr 2026 12:30:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef603e939a22f45163645c?channel_id=68071d1b2c7742c740dc6aa3">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span>《列夫·朗道：</span><span>娜塔莎》没有解释其存在背后的那个疯狂概念，但该片的内容就说明了一切。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2ztLsK3VA6VZ1athdO1paP2U.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><span style="color:rgb(136, 136, 136)">《列夫·朗道：</span><span style="color:rgb(136, 136, 136)">娜塔莎》</span></section><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span>这部由俄罗斯导演伊利亚·赫尔扎诺夫斯基执导的第二部长片，是继其2004年广受好评的处女作《四》之后的又一力作，然而不多见的是，人们完全理解他为什么消失了那么长时间才回归。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4aCFxKHe2UN1BDUChUviuJ.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">伊利亚·赫尔扎诺夫斯基</span></p><p><span>这部电影直言不讳地谈到了性，在最后一幕出现了令人咋舌的奥威尔式转折，并以可怕、痛苦的性侵结束全片，但这些戏剧背后的状况，使得某种令人不安的阴谋更加深刻，即十几年来定义了电影所描述的那种生活的阴谋。</span></p><p><span>赫尔扎诺夫斯基最初打算拍摄一部苏联时代的物理学家列夫·朗道的传记片，但后来这部作品变成了一部史诗般的装置作品，并最终成为历史上最具野心的电影制作实验。</span><span>导演在乌克兰哈尔科夫建造了一个占地42000平方英尺的巨型片场，让大约35.2万人24小时生活在一个精心打造的苏联科学研究所里。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3FtrTq18znPCVDjeq1nK2Ro.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">列夫·朗道</span></p><p><span>普通人过着正常的生活，从事着正常的工作，甚至使用在那个时代流通的货币——如果他们偏离了常规，就会受到现场管理部门的处罚。</span></p><p><span>多年来，英语媒体一直在猜测赫尔扎诺夫斯基这一骇人的实验，其中便有一篇文章的标题称其为「斯大林主义的『楚门的世界』」，此外，2011年《GQ》曾将这场虚构的暴政描述为「吞噬了自身的片场」。</span><span>然而它并没有。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1UCSur3Xrz9E1oFNzE1FhOAm.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)"><span>《列夫·朗道：</span></span><span style="color:rgb(136, 136, 136)"><span>娜塔莎》</span></span></p><p><span>赫尔扎诺夫斯基和他庞大的团队把麦克风丢在片场各处，并用一个35mm的镜头在片场里来回漫游，随着时间的推移，他们创作出了一个个迷你故事。</span><span>一开始，他们用这些素材在巴黎和伦敦举办了精心制作的展览，但人们更容易接触到其下一个阶段。</span></p><p><span>该项目会带来十几个完整的长片，而《列夫·朗道：</span><span>娜塔莎》便是第一部。</span><span>（该片在2020年柏林电影节的竞赛单元中首映，另有一部五小时的迷你剧在另一单元面世。</span><span>)</span></p><p><span>从项目的道德导向到其更广泛的意图，《列夫·朗道：</span><span>娜塔莎》的背景引发了各种各样的审视，但最耐人寻味的结论是，这部电影本身已经足够好了，足以证明未来几部电影的潜力。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1hv5Fj1C4HeCCAY6D4wTlym.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>赫尔扎诺夫斯基和该片的妆发设计师叶卡特琳娜·奥特尔共同导演了这部145分钟的电影，他设计了一种电影制作方法，将深度表演与恐怖的电视真人秀相结合，但有关于此，你并不会从电影中猜到分毫。</span></p><p><span>相反，这次实验刻意创造出了压抑的现实，而电影则展现了与这种现实有关的令人不安、慢热的角色研究。</span><span>娜塔莎（由娜塔丽娅·贝瑞兹娜亚饰演，她和其他演员一样是个新人）50年代的困境始于一段夹杂着友情与性的凄美故事，最后却迎来毁灭性的结局。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2zwLc61jjX3Z4m8uQSlQtIa.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>贝瑞兹娜亚在片中扮演一个当地酒吧的老板娘，正如那几个月她在研究所里所做的那样，同时，在间所研究所里，有着各种各样的科学家们在漫长的日子里进行着复杂的实验，而这些实验是任何没有物理学博士学位的人都不可能理解的。</span></p><p><span>早些时候，我们看到现实生活中的工程师阿列克谢·布里诺夫（去年秋天去世了）和前来访问的法国生物化学家吕克·贝格在开发用来提高工作效率的技术，而布里诺夫为此欣喜若狂。</span><span>（据我们所知，在其他《列夫·朗道》的装置中有着更多关于这方面的研究。</span><span>）</span></p><p><span>他们的劳动成果可能会对四十多岁的娜塔莎有用，因为她与她自由奔放的年轻同事奥尔加（奥尔加·什卡巴尼亚 饰）正在相互较量。</span><span>两人保持着一种有趣的爱恨交加的关系，她们互相讲述着各自孤独的生活和过往的爱情故事，但她们之间的角力关系是动态的、不断变化的。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/UbukdwBcgN34JvQRNvSZE.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>在漫长的一天结</span><span>束时，两人就爱和友谊进行了长时间的交谈，但奥尔加拒绝清理房间，两人最终陷入了一场旷日持久的肢体冲突，结果几乎成了闹剧。</span></p><p><span>虽然电影对一个女人平庸的日常生活的关注，可能会让人联想到《让娜·迪尔曼》，但这部电影一开始其实只是一部漆黑色调的伙伴电影，之后才转向一个更加灰暗的方向。</span></p><p><span>尽管如此，在影片的开头部分，娜塔莎还是面无表情地嬉笑着，她和奥尔加在深夜时分，一起参加了科学家们豪饮不停的酒会。</span><span>娜塔莎对吕克产生了好感，尽管两人之间存在语言障碍，吕克还是热情地接受了她的示好。</span></p><p><span>赫尔扎诺夫斯基和摄影师于尔根·俞格斯与他们的拍摄对象保持着密切的联系，他们使用了一种精致的手持方法，这种方法给人一种自然主义的感觉，但绝不是完全地纪实。</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/20GxKh1gZWPT1KuKvp1GbnEG.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>当娜塔莎和吕克最终睡在一起时，这种方法有了更多的情色内涵，这样生动的、并非模拟的性爱场景持续了好几分钟。</span><span>（自从《阿黛尔的生活》在戛纳首映以来，还没有哪部电影在这方面的刻意调度上引起过这样的争论。</span><span>）</span></p><p><span>然而，《列夫·朗道：</span><span>娜塔莎》拍摄并剪辑了这场性爱，以渲染这些陌生人之间的亲密关系，其结果与其说是情色的，不如说是情爱的。</span></p><p><span>更重要的是，它让一个轻浮的娜塔莎体验到一种温暖，这种温暖是前几场戏所暗示的她永远也体会不到的那种温暖。</span></p><p><span>这种程度的情感深度会让《列夫·朗道：</span><span>娜塔莎》充满吸引力，但也会让观众为接下来发生的事感到措手不及。</span><span>在令人心碎地回到正常生活后，克格勃（译者注：</span><span>前苏联国家安全委员会）特工弗拉基米尔（由弗拉基米尔·阿至伯饰演，他显然是一名前克格勃特工）把娜塔莎叫去接受残酷的审讯，此时的娜塔莎必须与控制着其一举一动的力量周旋。</span></p><p><span>娜塔莎被指控与外国人发生性关系，她被迫接受了一系列残酷的审讯，最后被性侵，这一幕注定要成为臭名昭著的「瓶戏」（译者注：</span><span>这场戏用瓶子作了道具）。</span></p><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4E53mj4gdCR93135xz1MOhVn.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>《列夫·朗道：</span><span>娜塔莎》在道德上越线了吗？</span><span>根据银幕上所展示的素材来全面评估这个问题是不可能的，但可以肯定的是，这部电影通过它的主角捕捉到了一次惊人的表演成就。</span></p><p><span>尽管娜塔莎被迫接受所有侮辱，娜塔莎——显然是对这些情况做出即时反应——勇敢地试图应付好这场审问，然后尽她最大的努力回去工作。</span></p><p><span>看到她竭力忍受种种虐待，是一次令人眼花缭乱的观影体验，并让人觉得《列夫·朗道》实验实际上集合了穿越时空的一些措施，费劲地为观众提供了一个窗口，来了解前苏联的统治方式，即使是最个人的日常生活也不放过。</span></p><p><span>不用说，《列夫·朗道》项目会以这种形式发布多部作品，而作为首秀的《娜塔莎》给人留下了深刻的第一印象。</span><span>早期的跨媒体理论家认为，任何在多个平台上讲述的故事自己本身也必须成立，而这部电影无疑做到了这一点。</span></p><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/EgxM62AT6C936cmYQ2h1ibd.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>与此同时，影片还有一种挥之不去的感觉，即受约束的叙述风格未能充分体现实验的总体性质；</span><span>这是一部令人身临其境的小体量的戏剧，它本身并没有解释其丰富的制作历史。</span><span>《列夫·朗道：</span><span>娜塔莎》令人难忘，卓有成效，但并不总是能化零为整，有时还有些拖沓。</span></p><p><span>即便如此，放完演职员表之后，影片依旧余音绕梁，并让人思忖《列夫·娜塔莎》的诸多方面，这也是一种独特的智力练习。</span></p><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/ZY4YX4nfxXs1NT0dB3yvpjB.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>看</span><span>完电影的人，都会产生一种强烈的欲望，想要更多地了解这部作品从何而来，以及没有被剪进影片的内</span><span>容。</span></p><p><span>然而，赫尔扎诺夫斯基以如此现实主义的方式抓住了他的主题，以至于我们可能会对自己所想要知道的内容小心翼翼。</span></p><p><span>《列夫·朗道：</span><span>娜塔莎》最可怕的一面并不是故事的结局，而是一种印象，即故事的某些方面永远不会真正结束。</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 艺术电影-电影</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef603e939a22f45163645c?channel_id=68071d1b2c7742c740dc6aa3">https://lingowhale.com/reader/web/69ef603e939a22f45163645c?channel_id=68071d1b2c7742c740dc6aa3</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

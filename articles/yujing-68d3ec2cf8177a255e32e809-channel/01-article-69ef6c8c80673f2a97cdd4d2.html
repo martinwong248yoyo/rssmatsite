@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>闪充和换电，一定要选边站？</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 创投风向标</div>
+                    <h1>闪充和换电，一定要选边站？</h1>
+                    <div class="meta">
+                        <span>远川研究所</span>
+                        <span>Mon, 27 Apr 2026 13:15:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef6c8c80673f2a97cdd4d2?channel_id=68d3ec2cf8177a255e32e809">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3MmD4G13qNycAgjk5ptUXm.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>很长一段时间里，舆论场上关于新能源车补能的讨论，总带着一种强烈的“站队情绪”。</span></p><p><span>因为Better Place的前车之鉴和手机行业的历史经验，有人坚定站在充电一边，认为只要功率够高、桩铺得够密，充电终将无限逼近加油；也有人看好换电，觉得只要标准统一、规模做大，换电才是电车补能的终极形态。</span></p><p><span>这场争论持续了将近十年，看起来像是技术路线之争，本质上却更像是一种思维惯性的延伸，因为人们习惯在复杂问题面前，寻找一个“唯一正确答案”。</span></p><p><span>但现实世界往往不是这样运转的。</span></p><p><span>今年，国内新能源车渗透率突破了50%的关键拐点，充换电网络也日益完善，但一个更尖锐的问题也逐渐浮现：为什么补能设施越建越多，用户的焦虑却没有等比例下降？</span></p><p><span>答案或许并不在于“充电速度不够快”或者“换电站不够多”，而在于，我们是否一开始就问错了问题，超充和换电真的只能二选一吗？</span></p><p><span>从一开始，宁德时代给出的答案就是否定的。</span></p><p><span style="font-weight:bold">打破二元对立论</span></p><p><span>在电池厂和车企的共同推动下，快充技术和快充网络近年来发展迅猛。</span></p><p><span>过去三年，中国充电基础设施从558.8万台增加到了2101万台，快充比例显著提升，高速公路服务区的覆盖率更是达到了98.8%，液冷超充、兆瓦闪充、充电5分钟续航数百公里，这些产品与口号，也在不断刷新公众对于充电上限的认知。</span></p><p><span>但随着新能源车保有量激增，充电功率飙升，超充的短板也日渐显现，比如电网负荷压力大，用户体验缺乏确定性，最典型的场景就是节假日高速充电站经常大排长龙，甚至出现为了抢桩而大打出手的现象。</span></p><p><span>此外，即便是比亚迪最新推出的“闪充”方案，也依赖储能，这既推高了建设成本，又会不可避免地导致电力浪费，按照宁德时代换电业务总经理、时代电服CEO杨峻的说法：</span></p><p><span style="color:rgb(0, 122, 170)">“</span><span style="color:rgb(0, 122, 170);font-weight:bold">配储的超充方案只是过渡方案。</span><span style="color:rgb(0, 122, 170)">”</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Vz9Z91Pwljq28jQHa37G493.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">宁德时代换电业务总经理、时代电服CEO杨峻</span></p><p><span>换句话说，充电网络再密、功率再高，但它始终无法同时兼顾极致</span><span style="font-weight:bold">补能效率、电网友好度和体验稳定性</span><span>，而这三点恰恰是换电最独特的优势。</span></p><p><span>换电最直观的优势就是快，宁德时代推出的巧克力换电站，单车单次换电最快只需99秒，一次换电成功率高达99.96%，而除了快，换电模式通过车电分离还能显著降低购车门槛，而且它不追求瞬间大功率爆发，对于电池寿命和电网都更友好。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/RxIQ03Sr7wW18ETac2uHW7H.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">宁德时代巧克力换电站</span></p><p><span>对车主来说，每次换电都相当于给电池做一次电池体检——高效、安全、舒适、稳定。</span></p><p><span>但换电的问题也从未凭空消失，单站投入大、标准不统一、下沉速度慢，截至目前，蔚来和宁德时代在国内建设的换电站数量也刚超过5000座，这也使得换电至今也只有少数人才能体验到。</span></p><p><span>在这样的背景下，超充和换电的对立总能被推上舆论的风口浪尖，尤其是比亚迪今年3月发布“闪充战略”之后，双方的论战更是到达顶点，超充派认为换电成本高，标准难统一，难以持续和普及，换电派则认为超充越快，对电网冲击越大，实际体验极不稳定。</span></p><p><span>然而，</span><span style="font-weight:bold">充电与换电从来都不是你死我活的敌人，而是场景高度互补的队友</span><span>，对于这点，恐怕没有谁比宁德时代理解得更深刻。</span></p><p><span style="font-weight:bold">重构能源底层效率</span></p><p><span>众所周知，宁德时代是全球最大的动力电池供应商，但很多人不知道的是，宁德时代也是全球第二大换电运营商，仅次于在这条路上已经布局了近十年的蔚来。</span></p><p><span>2021年，宁德时代成立了“时代电服”，次年推出了面向乘用车领域的“巧克力换电”，2023年推出了专门针对重卡行业的“骐骥换电”。截至目前，宁德时代累计建设的换电站数量接近2000座。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Qsbl835rKTS3MqiBT1SKBzj.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">宁德时代骐骥换电站</span></p><p><span>与此同时，宁德时代的超充技术也在快速迭代，第三代神行电池已经可以做到等效10C、峰值15C的补能速度，电池SOC从10%充到98%，仅需6分27秒。</span></p><p><span>宁德时代非常清楚，要彻底解决新能源车的“补能焦虑”，不仅要靠不同材料体系的技术进步，更要建立一张立体的补能网络，而在这张网络里，超充和换电都有无可替代的价值与壁垒。</span></p><p><span>按照宁德时代首席科学家、中国科学院院士吴凯的说法：</span><span style="color:rgb(0, 122, 170);font-weight:bold">“复杂世界需要多种答案”。</span></p><p><span>在4月22日的“超级科技日”上，宁德时代正式推出了超换一体站，不仅一举打破了关于超充和换电的“二元对立论”，更实现了1+1&gt;2的化学效应。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/25T9LD3EXiAm2FOjUZ2C2ba8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">宁德时代超换一体站</span></p><p><span>按照计划，宁德时代将在巧克力和骐骥换电站同时标配神行超充桩，这样一来，用户可以根据自身需求选择不同的补能方式，每一座站既可以是极速换电的服务节点，也可以是大功率充电的能源枢纽，真正实现了“</span><span style="font-weight:bold">可充可换、超换联动</span><span>”。</span></p><p><span>超换一体站意义远不止是把超充和换电置于同一个地理空间下，更底层的创新在于</span><span style="font-weight:bold">能源利用</span><span>。</span></p><p><span>传统超充方案对电网冲击巨大，一根峰值功率400kW的超充桩就相当于一栋普通居民楼的高峰用电总需求，配备了储能系统的“闪充站”虽然降低了对电网的冲击，但问题在于，两台储能柜的成本至少超过10万元，而且电能需要经过“电网→储能电池→车辆电池”两次转化，每次转化都存在电力损耗。</span></p><p><span>作为对比，宁德时代的超换一体站可以共享箱变、充电模块和应急需求时仓内电池向超充桩放电，相当于把原本要为充电站和换电站各自配备的变压器、高压开关等设备合并为一个统一的系统。</span></p><p><span>这个系统可以把高压电网的电一次性转换为直流电，然后按照实时需求集中调度，就像中央厨房对食材统一配送，如果遇到应急需求，换电站的储备电池甚至还能对充电桩放电。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/488TcZ3RR5k5348kHA20SgE2.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>因为能量转换环节减少，超换一体站的资源利用率就更高，综合电损率较市场最新的充电方案降低超过13个百分点，相当于电网每输出100度电，最终到车上能多13度，按照不同车型的百公里电耗计算，相当于能额外提供65到120公里续航。</span></p><p><span>这不仅是功能的简单叠加，更是对底层效率的重构，而这种效率优势也能直接转化为经济效益。</span></p><p><span>在同等土地与电力容量条件下，超换一体站的补能服务能力更强，单个车位的服务能力是配储充电站的3倍，但是单站固定投资成本只有配储充电站的五分之一。在同等投资规模下，超换一体站无论是设备复用率还是投资回报率都有明显优势。</span></p><p><span>效率重构的另一个维度，体现在</span><span style="font-weight:bold">电池的全生命周期管理</span><span>。</span></p><p><span>新能源车普遍存在一个问题：车电不同寿。动力电池的质保期通常是8年或12万公里，但问题在于，车身寿命可达15年以上，当车电无法分离时，电池衰减到无法使用时，换电池的成本可能让车辆提前报废。而采用车电分离的换电模式天然破解了这个问题，因为电池不归用户所有，电池衰减风险由运营方承担。</span></p><p><span>超换一体站把这个逻辑推进了一步，通过智能调度，它能让车辆电池参与电网调峰调频、绿电消纳、以及</span><span>V2B(vehicle to battery)</span><span>反向售电，</span><span style="font-weight:bold">把电池从单一动力源变成移动的能源资产</span><span>。</span></p><p><span>从今年下半年开始，巧克力换电用户可在电价峰值时段将满电电池反向售电给换电站，每天赚取几十元收益，这也就意味着电池不仅是消费品，还可以产生零钱收益，让每一位车主成为能源互联网的建设者与受益者。</span></p><p><span style="font-weight:bold">构建更强壁垒</span></p><p><span>要支撑超换一体站的高效运行，需要电池体系不断进化，以及换电联盟不断扩大。</span></p><p><span>在超级科技日上，宁德时代正式推出了26号巧克力电池块，采用800V高压架构，首批为75度电版本，后续将推出更大电量，全面适配B至C级800V车型，配合2024年年底就已经推出的20号和25号电池，巧克力换电将覆盖从A0至C级完整车型矩阵。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3myv6UqgQ1k4G5VCr3eVjAp.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span><span style="color:rgb(136, 136, 136)">宁德时代26</span><a href="https://mp.weixin.qq.com/s?__biz=MzIwMDY2NTgwMA==&amp;mid=2247526018&amp;idx=1&amp;sn=4d2a9cd123797a22eb4ad0d7eb0f3430&amp;scene=4#wechat_redirect"><span style="color:rgb(136, 136, 136)">#巧克力电池块</span></a></span></p><p><span>由于巧克力换电可以兼容不同的材料化学体系，甚至能够搭载宁德时代最新研发的先进技术，这也就意味着同一种型号的电池未来可以提供不同电量。</span></p><p><span>对于用户来说，他们就可以根据出行半径灵活选择电池度数，真正实现“平时小电池够用，长途大电池加持”的按需配电模式，不用因为偶尔的长途出行而背负更多的成本和负担。</span></p><p><span>过去，很多人因为担心电池不够安全或者电池技术进步太快影响残值而不愿购买电动车，而换电恰恰能解决这一层顾虑。</span></p><p><span>一方面，巧克力电池通过标准化结构设计与宁德时代极限制造工艺，实现了远超国标的全面防护，另一方面，由于车电分离，巧克力租电用户无需担忧电池衰减带来的使用不便和二手车贬值，甚至可以随时享受电池技术升级的红利，相当于终身质保、终身升级。</span></p><p><span>从这个意义上来说，</span><span style="font-weight:bold">不仅超充杀不死换电，固态也不行，相反，如果固态电池开始量产落地，换电用户反而因为租电模式可以先人一步享受技术进步的红利</span><span>。</span></p><p><span>凭借换电的体系化优势，巧克力换电的朋友圈过去两年不断扩军，宁德时代至今已经和长安、广汽、一汽红旗北汽、上汽、奇瑞等11家车企的18个乘用车品牌，合作了25款车型。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/G6eg12uU4oL4Fcl4M4g4X2u.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136)">宁德时代巧克力换电朋友圈</span></p><p><span>依托超换一体的产品技术优势，宁德时代正启动新一轮补能网络建设计划，预计推出超换一体标准站、4S店体验站两种形态，灵活适配城市核心区、高速干线、购车试驾等不同场景。</span></p><p><span>计划到2026年底，依托乘用车巧克力换电网络和重卡骐骥换电网络，宁德时代将累计建成4000座超换一体站，覆盖全国近190座城市和12纵11横高速网络，实现城区与城际补能的无缝衔接。</span></p><p><span>从这个角度看，</span><span style="font-weight:bold">宁德时代构建的已不再是一个个补能站，而是一套标准化的能源基础设施，它向下兼容不同的车型，向上对接复杂的电网，向后承接梯次利用的生态，最终能够将原本割裂的充换电设施，组合成一张立体高效的能源网络</span><span>。</span></p><p><span style="font-weight:bold">尾声</span></p><p><span>过去十年，补能赛道的主题是路线之争，充电派和换电派总是喜欢用自己擅长的场景去攻击对方的短板，但到了2026年，用户需要的早已不是“信仰”，而是补能的安心、高效、舒适与确定性。</span></p><p><span>超换一体站的出现，标志着这场旷日持久的路线之争终于落下帷幕，不是因为某一方认输了，而是因为争论的前提已经不存在了。</span></p><p><span style="font-weight:bold">当超充和换电能够在同一座站里协同运转，当电池从消耗品变成可以反向赚钱的资产，当一张网络同时服务不同品牌的车主，“选闪充还是选换电”这个问题本身就失去了意义。</span></p><p><span>宁德时代通过超换一体站也让补能回归了它的本质，让能源服务于人，服务于车，服务于每一次出行体验。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3b3rDV1QVKil4sjlKB1hUcut.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1fIGxUO0S3djni5EnYSrC.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4nMEBn3AIAXFnPo2F14a8Gj.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4bje394kNp7jOYzBGPqmeP.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/45jOgF2lULl1Jv57e2AdpfJ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 创投风向标</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef6c8c80673f2a97cdd4d2?channel_id=68d3ec2cf8177a255e32e809">https://lingowhale.com/reader/web/69ef6c8c80673f2a97cdd4d2?channel_id=68d3ec2cf8177a255e32e809</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

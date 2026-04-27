@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>南食召：从货架走向菜场，愈清晰，愈有生命力</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 拆解新消费</div>
+                    <h1>南食召：从货架走向菜场，愈清晰，愈有生命力</h1>
+                    <div class="meta">
+                        <span>品牌星球Brandstar</span>
+                        <span>Mon, 27 Apr 2026 03:31:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eedabcf3575d3aff388301?channel_id=68d3ec287c1c9536cd1cb7b8">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/sS8NYn9Uoz42pCso2SvYw4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p>2024 年，品牌星球曾与南食召进行过一次深入的对话。</p><p>彼时，品牌刚完成 VI 升级，正处在从电商店铺走向品牌化发展的时期，试图在料理产品与家庭餐桌之间，寻找一种更具生命力的表达。</p><p>两年过去，消费市场趋于理性、流量红利持续退潮，南食召却逆势连续两年实现 GMV 同比翻倍。与此同时，品牌的边界也在不断拓宽——落地料理主题书店、扎进市井菜场、在地饮食纪录片……</p><p>伴随着「盘菜生书店」在温州老城区正式落地，我们再次回到这里，和南食召团队坐下来，聊书店的生长、品牌的蜕变，以及如何把「做饭」这件最朴素的日常，做成一门长期的生意。</p><p>增长与改变的脉络里，我们清晰看见：南食召品牌的发展正变得越来越笃定——<strong>清楚地知道自己是谁、该做什么，更明确什么不做</strong>。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2oqIt64AClDc3JXhfk2G3YUf.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3SM3FK4hMub83LtTgK20curU.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><strong>书店，是品牌边界的延展</strong></p></section><section><p>从温州双井坊的 Demo 店，到如今正式落地的盘菜生书店，空间与老城街区的融合度，发生了鲜明而细腻的变化。</p><p>一侧是穿插在个体商店中间、几户住着老人的居民楼，一侧是依然保留着个体经营的菜场，而盘菜生书店就正好嵌在了这两条风格各异的街道交汇处。</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3k9cFb3MCA5L472F6f2t8xd4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1YacvV2iMPwf1QrXKn1aFptm.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">盘菜生书店正位于双井坊和菜场的交汇路口</span></p></section><section><p>我们到访时正值午后，菜场已经从早市的繁忙中缓过劲来了，只有几家生鲜店还开着门，摊主们从容悠闲地整理着门前的生鲜蔬果。远远望去的红色屋顶书店巧妙、低调地融入街角。若不仔细留意，几乎不会察觉这里藏着一家独立料理书店。</p><p>盘菜生书店的主理人小月提到，西涛设计工作室为空间定下的 「楔入」 概念，精准道出了书店的本质：楔子的功能是连接与加固，却不破坏原有结构。</p><p>它不仅是建筑与地理位置上的嵌入，更是文化层面的缝合——盘菜生便是以「楔子」的姿态在融入当地街巷，连接市井日常与饮食美学，<span style="font-weight:bold">让在地文化以更现代的方式被看见、被延续</span>。</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4EGkNo3ubGUZB3RpI277U1Y.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2v7Lsk2TgslddvPSH2s1uNT.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">一层为书店 &amp; 咖啡站，设有少量桌椅供大众坐下阅读</span></p></section><section><p>对南食召而言，盘菜生的意义，远不止一家线下主题书店。</p><p>最初 Demo 店阶段，小月在社交媒体上并没有刻意提及这是南食召旗下的书店，而是希望以独立书店的身份运营。虽然也有人通过网络慕名而来，但影响力仍有限，难以触及更广的人群。</p><p>小月和创始人杜克都逐渐意识到，在实体书店整体式微的环境下，脱离商业支撑的空间很难实现长效运营。而书店与品牌之间不应是单向的依附，而应是<span style="font-weight:bold">彼此成就、双向共生</span>。</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4tS3edGiVWU1hOjb63ll23W.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1AfxZvEWbDA2aBTVi1VWz6n.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">二层为料理活动室&amp;阅览室，活动室位于左侧，偶尔会举办小型分享会、展览等；右侧阅览室，供南食召店铺会员进入，可在此阅读大量国内外美食书籍及珍藏美食书</span></p></section><section><p>南食召作为商业品牌，天然存在表达边界：以品牌名义举办文化分享，容易显得功利；承载公共性的饮食议题，又缺少中立的可信度。而书店自带的<span style="font-weight:bold">平台属性与媒体属性</span>，恰好补上这一缺口，让饮食文化的讨论脱离营销语境，回归纯粹与深度。</p><p>于是，新店正式亮相时，盘菜生大方承认「南食召旗下」，但仍保持书店的独立性。</p><p>比如实际运营中，没有大张旗鼓地加入品牌元素和符号。它更像南食召与读者共有的<strong>精神角落</strong>：以食物为媒介，把餐桌议题延伸至料理研究、创作实践、生活方式与文化审美的交织之中。</p><blockquote><p>通过 「饭桌计划」 深耕在地，挖掘温州本土食材与菜场摊主的真实故事；</p><p>在专业料理典籍之外，推广各类和食物有关的创作，如餐盘、zine、香薰蜡烛等有趣的周边，甚至链接起全国乃至全球的饮食内容创作者；</p><p>也举办过飞行厨师活动，邀请日本甜点师藤嶋典子（Noriko）等创作者来到书店，让专业料理更贴近普通人的生活。</p></blockquote></section><section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2vvenJDVDDr1bQ1YJ18epSo.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2EX1G53A68lg19FIjx45iQQN.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Wu1TK2jHNBD2W7WvB4n5eY7.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1trNi9ZS1F7J7lvr6mLBt.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">日本甜点师藤嶋典子（Noriko）在烘焙工坊教学「柠檬玛德琳蛋糕」、「蔓越莓开心果饼干」配方与制作（左右滑动）</span></p></section><section><p>小月提及，未来还将持续引入飞行厨师课、料理工作坊、艺术家驻地计划，鼓励创作者以温州本地食材为基底，产出更多元、更深度的饮食内容。</p><p>可以说，盘菜生在南食召的影响力加持下，更快地找到了它精准的受众，而南食召则通过书店项目，突破了商业品牌的表达边界，承载起无法用产品与销售完成的<strong>文化功能与公共价值</strong>。</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/42FUwHlcuVSHmf6AmzU9F.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3EDjJU2E07jn4eeQvJ2YnlFy.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">《掺掺槟城》：一本有关槟城在地多元饮食文化的zine</span></p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1tDpfM28J7yh3QGCKp2scceA.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><strong>站稳立场，才能走好下一步</strong></p></section><section><p>被问及「为什么要做一家书店」，杜克的回答没有宏大叙事，只归于自己长久以来的兴趣与朴素的愿望。</p><p>小月和杜克都对美食和书怀有热爱与文艺情怀，杜克偏好收藏料理大部头，而小月则更爱饮食类的文学作品；杜克经营着南食召，而小月有过在美食平台「下厨房」与实体书店的从业经历，两人多年在美食行业各自耕耘，某种程度上促成了这次合作。</p><p><strong>「我们都爱看美食书，爱买书」。兴趣，成为了一切的起点。</strong></p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/7gz7G20Qt1z3mTeHC4eqTQo.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/g7H2X2NaiGq3fFxSU1MQaC7.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">杜克偏爱收藏的大部头饮食书以及有关瓯菜的书籍资料</span></p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3fGWIDw4j11QGrz4gXFa.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4bQ2EJxmt2E1SK9Nn1zpQ52.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">小月则喜欢和饮食相关的文学、杂志等泛生活方式类书籍</span></p></section><section><p>就和南食召最初开始卖干货一样，是因为杜克自己爱吃、喜欢研究，才诞生了第一个热门产品花菜干，并在用户口碑中自然生长出店铺与产品线。</p><p>但兴趣不等于随意。小月回忆，从 Demo 店到正式店，盘菜生经历了极具戏剧性的一年半，在过程中不断打磨经营模式。</p><p>Demo 店本不在计划之中——原选址的老建筑状态复杂，多方讨论后决定拆房重建，而重建工期远超预估。为了不让开业一再延期，才在几步之外的空房子里开出了临时门店。</p></section><section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/qOxpUkoGFX1WvOYnYWsFe.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4lEQkx1nwe0W2iyQLU2Rl1iV.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/IWs2d4jvGqY3sMIqi4fI2dM.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3EN55Z3lceaUtqQtq4aGFWd.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section></section></section><section><p>这段「意外」的经历，却为正式店扫清了大量的运营难题：开业初期曾被过度摆拍干扰氛围，随后做出禁止拍照的决定，虽然短期内损失了客流和收入，却筛选出真正关注阅读与交流的核心人群；最初设想的图书借阅制度，在实际运营中发现难以落地，也及时调整为会员阅读制，让空间回归文化交流本身。</p><p>这一从粗糙到清晰的过程，正是南食召做事方式的缩影：<strong>从兴趣和想法出发，然后在实践中不断校准。</strong></p><p>而这种「清晰」也指向了两个维度：</p><blockquote><p>一是对自身节奏的把控，不被市场的风向所轻易左右；二是不脱离提倡「本真食材，干净饮食」以及「家庭料理」的品牌底色。</p></blockquote><p>对比南食召近年的内容表达，实际我们能清晰看到一条沉淀的脉络：从早期单纯的产品介绍、厨房技巧，逐步拓展出新春贺岁片、在地饮食纪实等更具社会观察、公共价值的作品。</p></section><section></section><section><p>但在杜克看来，这并非是为了「做品牌内容」而刻意去拔高，而是把长期以来的生活观察、田野实践、零散思考，更集中和系统地梳理成可分享的表达。正如杜克所说：</p><p><span style="font-weight:bold">「现在的内容表达，都是过去经验的总结，把过去乱糟糟的观点提炼出来。先有行为，内容、产品是自然生发的。」</span></p></section><section><p>比如早期 Lab 栏目内容非常硬核，标题被大家笑称说「太干」，甚至很少直接提及南食召，却为品牌吸引了一批真正的料理爱好者，也为产品研发沉淀了大量专业依据。</p><p>《几经寻味》食材溯源栏目同样如此：初衷不是为了推广产品，来包装产地故事，而是在寻访食材、探索风味的过程中，真实记录、自然呈现，最终反哺产品研发方向。</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/xLaSO1gRw2W3RYtn32FGo18.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/47VkB64yk1Av24jUE71S5thp.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2ZUf5N21jg1el6EGEYqM4H.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4a9srA318DZgMR4Ok4aaXTD.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">《几经寻味》中探访的两个温州地区美食，</span><span style="color:rgb(136, 136, 136)">上图为温州高楼镇明前笋干，下图为温州苍南灰汤粽</span></p></section><p>近两年 GMV 的翻倍增长，也并非来自激进营销与预设的 KPI，在杜克眼中它更像是「一个自然而然的结果」。随着健康饮食的风潮和信息变得透明，大众消费者开始学习看配料表、追求没有过多添加剂的食品，南食召恰好有着多年的经验和产品，时机到了，增长自然来了。</p><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2ZWAV026f4ff1tRy7Q3EEqQa.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><strong>从直觉到体系：</strong></p><p><strong>品牌的聚焦与收束</strong></p></section><section><p>早期南食召的很多决策，来自团队直觉与审美偏好，不乏「碰巧做对」的偶然。而近两年，南食召坦言进入了一个更具主体性的阶段：不再仅依赖感觉，而是通过观察市场与用户，反思「为什么能做对」，进而沉淀出清晰的品牌准则与边界。</p><p><strong><span style="color:rgb(214, 168, 65)">➊</span></strong></p><p><strong><span>定位：从什么都卖，到聚焦家庭做饭场景</span></strong></p><p>创业初期，南食召的产品线相当宽泛：啤酒、零食、生鲜等都曾尝试，产品研发多跟随兴趣与灵感，缺少清晰的品类聚焦。</p><p>结果是：用户喜欢买南食召的东西，却说不清它到底是什么品牌、核心卖什么，很大程度上将它视为个人在经营的食品店。</p><p>为此，杜克在长期观察中找到突破口：中国传统副食品店<strong>「有品类、无品牌」</strong>。菜场周边遍布干货、调味品小摊，需求真实、场景日常，却一直缺少标准化、可信任的代表性品牌。南食召希望立足这片空白，成为这个品类的代表性品牌。</p><p><strong>「品牌是特性加品类，大部分消费者可能记不住品类，但至少会记得品牌的特性。</strong>」为此，南食召也进一步明确了品牌的特性——采用天然食材、还原食物本味、干净配料表。</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3vJPhi2g0IIF447uXB2j6Lhk.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1LC5IM3fl5tIU1Jl33jQuFY.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p>这就有了走向品牌化的更近一步——2024 年 VI 升级，让视觉系统统一，传递这一特质；内部甚至砍掉了许多过去深受顾客喜爱的零食类产品，来优化产品结构，并推出「本真」「本鲜」系列干货与调味品。</p><p>但这还不够，杜克补充<strong>「放大特性就需要依靠场景，让用户在做某个事的时候能最先想起你」</strong>，这个场景需要和食物有关，又要足够日常。于是，南食召更加清晰地勾勒出了一个图景：一个以本真食材为核心，聚焦「家庭做饭」场景，以干货与调味品为核心品类的食品品牌。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2aBI43yZoFT3zsDAV6UTLI.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><strong><span style="color:rgb(214, 168, 65)">➋</span></strong></p><p><strong><span>越简单的本味，越难做到</span></strong></p><p>定位收束之后，产品逻辑也随之清晰。</p><p>南食召不按市场常规食品分类划分产品，而是回归<strong>用户「做饭」的真实需求</strong>：一道菜所需的主食、辅料、干货、调味，构成完整的产品逻辑。</p><p>研发上，团队达成共识：不追风口、不快速造爆品，<strong>只做满足未被满足的真实需求、且符合品牌核心主张的产品</strong>，并规划「战略单品」的思路——能代表品牌精神、具备长期市场潜力的核心产品。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/fUYMvk70hd32G6lrYHM7p.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4zWmYb3EyxXJ5fEun3LgQ96.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/331T691hNjIi13tijQGer2a.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">本真系列腐竹：选用优质非转基因大豆，采用福建传统挂桨工艺保留豆香味，呈现自然质地</span></p></section><section><p>「鸡汁」就是最典型的代表，也是如今南食召卖得最好的产品之一。</p><p>它的畅销，并非单纯因为品类热门，而是精准解决了家庭烹饪 <strong>「自然提鲜」</strong> 的痛点：工业提鲜依赖味精、鸡精，方式单一、风味粗糙；南食召鸡汁以更天然的路径实现鲜度，把「无添加、本真」的理念落到可感知的产品里。为此，团队在供应链、提鲜技术、保鲜工艺上攻克了大量难题。</p></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1LE1RP2ZAxAy4bUj213o0DV0.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Aj882i3j2O1P3TtH2ZiWdl.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">本鲜系列鸡汁：选用清远老母鸡，6小时慢熬萃取，无添加、无农残</span></p></section><section><p>每一个产品的判断标准也由此变得清晰：<strong>它是在强化品牌特性，还是在消耗品牌价值？</strong>只为跟风热销而做，那是在「消费」品牌；为解决真实痛点、承载品牌主张而做，才值得长期投入。</p><p><strong><span style="color:rgb(214, 168, 65)">➌</span></strong></p><p><strong><span>线下验证：目标用户越来越清晰</span></strong></p><p>从品类认知到品牌认同，需要线下场景完成面对面的连接。成都麓湖 CPI 首家线下店的落地，正是南食召与用户直接沟通的重要试验。</p><p>在成都麓湖 CPI 门店落地后，杜克在门店观察到一个清晰现象：那些真正进店高频消费的人，是推婴儿车的年轻父母、带着父母周末出来逛的家庭、牵着宠物的夫妻；而单纯打卡拍照的人群，转化率极低。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/10Kw6w3wJ90o2VUxZVkdg7d.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1LTzyN1vTES23vyGt2xkawS.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/yECyj4k6nesBMHnY2TjYNZ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p><span style="color:rgb(136, 136, 136)">南食召首家实体店于成都麓湖 CPI 落地，店内售卖品牌全系列产品，也会不定时举行新品试吃体验、主题料理活动</span></p></section><section><p>这与盘菜生书店的受众形成互补：书店吸引饮食文化深度爱好者、专业料理创作者、审美向的年轻群体；而 CPI 门店则让南食召看见更广大的主流人群<strong>——他们未必钻研硬核料理知识，但对「给家人做一顿干净、好吃的饭」，有最朴素也稳定的需求。</strong></p><p>杜克还打趣地说，很多食品品牌习惯竖着切蛋糕——按品类、赛道、渠道划分市场；<strong>但南食召选择横向切蛋糕</strong>。围绕一群真正在意本真食材、有日常做饭需求的消费者，以他们的需求和生活场景，不断推出有市场差异化、解决痛点的产品。</p></section><section></section><p>成都店的验证，让南食召的用户画像变得更加完整：未来既要继续服务好饮食文化爱好者与内容受众，更要把<strong>拥有日常居家下厨需求的用户</strong>，作为核心深耕的核心人群。</p><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/HlPFn31XOKJ4rjwsY1tPIF9.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p>写在最后</p></section><section><p>美国品牌咨询机构 Red Antler 在 2026 年的报告中曾提出一个颇具启发的观点：<strong>2026 年的品牌，不再赢在「中间」，而是赢在「边缘」</strong>。在高度分化的市场环境里，态度模糊、立场温和、试图讨好所有人的品牌，正面临系统性失效。如今的品牌必须清晰选择立场，把极致与坚定当作辨识度，而非风险。</p><p>品牌星球同样观察到，空洞模糊的口号已越来越难以打动用户，唯有一贯、明确、可感知的立场，才能真正建立信任与说服力。面向未来，品牌的核心竞争力不只在于捕捉市场机会，更在于面对诱惑时，能否坚定守住自身的价值边界。</p><p>南食召这几年的变化，在我们看来恰恰回应了这一趋势。它不仅在思考如何生存，更在思考如何以自己的品牌准绳为边界，放大自身在市场中的独特性。</p><p>交谈中，杜克也分享了他的品牌观：在他看来，<strong>品牌与公司需要分开看待——公司求的是生存，品牌守的是心智</strong>。对南食召而言，品牌心智的核心，正是用户对它的根本认知：是否始终言行一致，坚守「本真食材」的承诺。</p><p>从一个念头到一家书店，从凭直觉到成体系，南食召正在用自己的方式向市场展现一个食材品牌在当下的生命力。而在我们看来，保护生命力的方式，不仅在于多元和丰富的内容，而在于品牌为自己清晰划定的那条<strong>边界与准则</strong>。<strong><span>BRANDSTAR</span></strong></p></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 拆解新消费</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eedabcf3575d3aff388301?channel_id=68d3ec287c1c9536cd1cb7b8">https://lingowhale.com/reader/web/69eedabcf3575d3aff388301?channel_id=68d3ec287c1c9536cd1cb7b8</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

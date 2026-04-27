@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>其实，核心逻辑就一个（20260427）</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 时政</div>
+                    <h1>其实，核心逻辑就一个（20260427）</h1>
+                    <div class="meta">
+                        <span>简放</span>
+                        <span>Sun, 26 Apr 2026 22:06:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ee8da1c5d0f752ce752dc1?channel_id=6805170d303fabc7418d8d04">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">周末消息面相对平淡，没有什么大的利空出现。</span></p><p style="color:rgb(34, 34, 34)">美伊双方谈判还是没有实质性进展，一会说谈，一会说不谈，整体还是在极限施压和反复博弈。之前我们也讲过，这种谈判，不太可能短期有结果，会反复拉扯。</p><p style="color:rgb(34, 34, 34)">国内科技方面，周末利好还是比较多的。国常会再次对科技进行了积极表态，讲到科技创新成果不断涌现，新质生产力稳步发展，提出关键核心技术攻关要加快推进，要锚定2035年建成科技强国的战略目标，加快实现高水平科技自立自强。</p><p style="color:rgb(34, 34, 34)">DeepSeek-V4新模型正式发布。在性能指标之外，市场聚焦的另一个亮点是，此次新模型适配华为等国产芯片，有望为“国产大模型适配国产半导体”带来了全新AI叙事空间。这又是一个标志性事件，利好国产算力方向。</p><p style="color:rgb(34, 34, 34)">国外科技方面，英特尔业绩大超预期，周五股价大涨23%，AMD大涨14%，核心就是CPU量价齐升。之前是GPU缺货涨价，现在轮到了CPU。除了英特尔，周五美股科技股普遍大涨，存储、光互联、半导体设备等个股，不断创历史新高，而费城半导体指数，更是收出惊人的18连阳，连创历史新高：</p><section style="color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/y5kPc1SmQbP1Lbj2lm7g5Q.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34)">其实全球科技那么强，<span style="color:rgb(255, 0, 0);font-weight:bold">核心就是一个逻辑：AI通胀。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:#f00;font-weight:bold">所谓AI通胀，就是由于AI产业链指数级爆发，导致的上游所有和AI沾边的，都出现缺货涨价</span><span style="color:#f00">，从GPU到存储、光通信、燃气轮机、半导体设备材料、电网设备、储能，再到现在的CPU、光芯片，本质都是需求拉动，甚至连资源品的涨价，在一定程度上都是受益于AI需求爆发的。</span></p><p style="color:rgb(34, 34, 34)">很多人还认为这是瞎炒，是炒概念。所以，你赚不到这个钱，也是必然的，是认知决定的。我们远了不说，就看年报和一季度，业绩最好的方向，就是和AI相关的这些方向了。</p><p style="color:rgb(34, 34, 34)"><span style="color:#f00;font-weight:bold">硅基消费（算力、存力等），不断增长，碳基消费（白酒地产等），不断萎缩。这就是底层大逻辑。</span></p><p style="color:rgb(34, 34, 34)">这就是轰轰烈烈的大时代。他们之所以能成为主线，是有原因的。</p><p style="color:rgb(34, 34, 34)">综上所述，策略上，<span style="color:rgb(255, 0, 0)">方向我们还是专注于这些增量逻辑不动摇，把握业绩爆发的阶段。但</span><span style="font-weight:bold;color:rgb(255, 0, 0)">操作层面，依然是波段操作，顺大势逆小势，加速不追，回踩低吸。</span></p><p style="color:rgb(34, 34, 34)">从大盘看，在强势反弹一段之后，现在进入小幅震荡，这都是正常的。且本周是五一长假之前的一周，估计会有些假期效应，叠加现在大盘处于波峰区强势震荡，所以，这里即便是有些调整，或者有点小幅回踩，也不要过度解读。</p><p style="color:rgb(34, 34, 34)">顺势选股，逆势交易，能有回踩，都是机会。</p><p style="color:rgb(34, 34, 34);font-weight:400"><span style="color:rgb(0, 82, 255);font-weight:bold">交易是向内求的过程。可以读读我的书：</span></p><p style="color:rgb(34, 34, 34)"><span><span><span><span style="color:rgb(136, 136, 136)">（免责声明：本文内容及观点仅为记录个人交易思路，不涉及任何与个股有关的分析和推荐，不提供任何投资咨询服务，不构成投资建议，不作为投资依据。股市有风险，投资需谨慎：</span><a href="https://mp.weixin.qq.com/s?__biz=MzI3MzA0ODc5MQ==&amp;mid=2457991769&amp;idx=1&amp;sn=ddfa6c707fd75b75febe558ce3c45160&amp;scene=21#wechat_redirect">必读声明</a><span style="color:rgb(136, 136, 136)">）</span></span></span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 时政</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ee8da1c5d0f752ce752dc1?channel_id=6805170d303fabc7418d8d04">https://lingowhale.com/reader/web/69ee8da1c5d0f752ce752dc1?channel_id=6805170d303fabc7418d8d04</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

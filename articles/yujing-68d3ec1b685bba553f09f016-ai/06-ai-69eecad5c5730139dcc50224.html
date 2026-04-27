@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>一个二本的女生，用免费的AI考上了北大。</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI提效手册</div>
+                    <h1>一个二本的女生，用免费的AI考上了北大。</h1>
+                    <div class="meta">
+                        <span>数字生命卡兹克</span>
+                        <span>Mon, 27 Apr 2026 02:18:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eecad5c5730139dcc50224?channel_id=68d3ec1b685bba553f09f016">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span>故事是这样的。</span></p><p><span>我们公司有一个运营的小伙伴，他和我一样，都是二本出来的。</span></p><p><span>前两天的时候，他说他母校的校友群直接炸了，说他们学校出了一个考上北大硕士的学生。</span></p><p><span>你要知道，这是一所二本。</span></p><p><span>然后我们的运营小伙伴，也是个社交牛逼症，直接加了好友，聊了一下。</span></p><p><span>可能也是太热爱工作和AI了，没聊几句，然后就开始问AI。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1QKltcU92tq75v7D3ljg3N.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>当他跟我说了这个事之后，我其实也非常非常的感兴趣。</span></p><p><span style="font-weight:bold">因为你要知道，从一个二本，靠着免费的AI，跨专业考到北京大学，这中间的距离，不是用努力两个字就能填平的，这里面一定有什么不一样的东西。</span></p><p><span style="font-weight:bold">特别是，有没有一些，跟我们所认知的AI，一些不一样的用法和理念。</span></p><p><span>于是，我拜托我们小伙伴去联系这个女生，看看能不能做一次访谈。</span></p><p><span>在摆出了我们的账号，说我们在AI领域还算有一点影响力，真的不是个骗子，只是想把她的故事让更多人看到之后，我们终于得到了机会，跟她作了一次专访。</span></p><p><span>专访完以后，其实我受到的冲击还蛮大的，更加坚定了我要把这篇故事写下来给大家看的决心。</span></p><p><span>话不多说。</span></p><p><span>我们，开始吧。</span></p><p><span>她叫陈雨欣，21岁，安徽人。</span></p><p><span>她从高中时候就喜欢北大。但那时候她觉得，这只是一个梦，离自己太远了，高考那年她发挥失常，最后只能去了一所二本。</span></p><p><span>很多人的故事，可能就在这里结束了。</span></p><p><span>毕竟，一个高考失利的女生，去了一所大多数人都没听说过的学校，学了一个叫网络与新媒体的专业。</span></p><p><span>在很多人的预设里，这条路的终点大概是毕业、找工作、过日子，没有人会觉得，她能和北京大学四个字产生任何交集。</span></p><p><span>但，她自己没这么想。</span></p><p><span>她大一的时候接触到了社会学，一下子就被吸引了，她说，这个学科关注的是贫困、不平等、社会问题，和她从小的志向非常契合，她想做的事，就是去帮助那些被忽视的人。</span></p><p><span>这块我私心提一嘴，在这个时代，社会学系是我觉得，在AI时代，可能会越来越来越重要的专业。</span></p><p><span>Anthropic的联合创始人Daniela Amodei之前学的是文学，她之前在采访里面说过一句话，大概意思是：</span></p><p><span style="font-weight:bold">“让我们成为人的那些东西在AI时代，会变得更加重要。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">还有一个大佬，也是Anthropic的，叫Amanda Askell，负责整个Claude模型的人格化工作，Claude的宪章就是她带队搞出来的，非常的猛。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">回到陈雨欣。</span></p><p><span>最开始她想考的其实是北大的社会学，准备了四个月，发现难度太大了，于是转到了一个相近的方向，社会工作。</span></p><p><span>她说，北大不提供参考书目，也不会有官方的考试大纲，只能全部靠自学，她也只能自己去买书，一本一本地读，她们学校甚至都没有社会工作这个专业。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/430WxVoh4chH2AG72Y8OB7.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>而北大的社会工作专业，在软科中国大学专业排名里是全国第一。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/uOruX36DpE32ezT2P3KkPe2.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>今年全国统考更是只招11个人，竞争非常激烈。</span></p><p><span>而且北大是自主划线的，北京地区阅卷压分又是出了名的狠。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3c7XrD2x3kbk43J6uC4vmXNo.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>再加上，本科院校里没有这个专业，身边也没有一个学长学姐考过这个方向，父母不了解她的学习细节，同学甚至不知道她在考研。</span></p><p><span>就只能一个人，坐在桌前，开始啃。</span></p><p><span>刚开始，她主要还是靠自己看书。</span></p><p><span>边学边练题，写下了将近30万字。</span></p><p><span>每一个文档，都是她自己一个字一个字用心敲出来的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/15HyUT3z3gbv202gJK27Win3.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>到了去年五月份，她在小红书上刷到一条帖子。</span></p><p><span>是她上一届考北大社工第一名的学姐发的。</span></p><p><span>学姐推荐了一个工具叫Chatbox。</span></p><p><span>那个时候还能免费用，这是她Chatbox的对话列表。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2iF1wd3RpeZ13VubNbPggu7.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>社会工作知识体系探讨、社会研究方法指南、北大社工考研预测、考前焦虑疏导。。。</span></p><p><span>全是她在这个免费的AI里，聊出来的。</span></p><p><span>后来，她的主力工具就是DeepSeek，此外豆包用来生图和模拟面试，讯飞星火偶尔用来生成论文框架。</span></p><p><span>原因特别简单，因为，国内的这些AI产品，是免费的。</span></p><p><span>而</span><span>国外的那些ChatGPT、Claude，她都没用过。</span></p><p><span>当时我们问她说，为什么不试试别的AI？她的回答特别朴素，她说，“免费的为什么不用？为什么要付费？”</span></p><p><span>如果你放在大多数已经工作了的读者的视角看，你可能会觉得，好奇怪。</span></p><p><span>但，不要忘了背景，这是一个勤工俭学，正在考研的学生。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2SDjdO4oPJUk4CVj4v29mYWI.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>对我们很多人来说，一个月花二十美元的订阅费像喝杯咖啡一样自然。</span></p><p><span>二十美元，大概一百四十块钱。</span></p><p><span>我不知道对大家来说，一百四十块钱意味着什么，但是我到现在还记得，我上大学的时候，我一个月的生活费只有1000块钱。</span></p><p><span>食堂一顿饭10块钱左右，每天吃饭三顿花费大概就在20，如果买点零食和饮料的话，一天的吃喝消费就是25，一个月的消耗，就是700多。</span></p><p><span>我还记得那个时候为了送班上一个女同学一个生日礼物，买了一个199的巨大的玩偶，然后大一下学期，我吃了半个月的泡面和火腿肠。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1SwjZOaCYOw1qxUEr4dDBnF.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>想不到吧，当年大学的时候，为了吃泡面不干巴，我还买过这种玩意，虽然这价格和数量也确实让我现在有点惊到了。。。</span></p><p><span>那个时候，如果你告诉我，让我每个月花140块钱去订阅一个AI，我只会骂你有病，明明有免费的DeepSeek不用，你让我每个月去花140？</span></p><p><span>而对于陈雨欣来说，这事可能更甚。</span></p><p><span>她没有找家里用过一分钱，都是自己勤工俭学，自己生活，还要买书和考验资料。</span></p><p><span>我现在觉得，很多人，其实真的不是不想用更好的AI，或者也不是不知道，就是单纯的，没有预算。</span></p><p><span>其实这个事在聊到的时候，让我挺难受的，我突然意识到，我们经常站在一个非常高的姿态去看所有人，觉得你怎么还在用这么基础的工具，你怎么不试试这个不试试那个。</span></p><p><span>但我们忘了，对于很多很多人来说，那个入门门槛根本不是技术门槛，而是经济门槛。</span></p><p><span>那些我们觉得理所当然的东西，ChatGPT Pro、Claude Max、各种API的token消耗，对很多人来说，根本就不在选项里。</span></p><p><span>但她用免费的AI产品所做的事情，说实话，让我这个用了很久AI的人，依然都觉得佩服，也值得学习。</span></p><p><span>现在大多数人用AI，上来就是让它帮忙阅读完这本书，整理一套笔记，输出一篇总结。</span></p><p><span>恨不得让AI把所有事都干了。</span></p><p><span>但陈雨欣她不会，她只会当读书读到卡点的时候用AI。</span></p><p><span>只有在某个概念理解不了、某个理论绕不明白、或者想不出合适的例子的时候，她才打开DeepSeek去问。</span></p><p><span>比如备考政治的时候，马克思主义政治经济学那块内容特别绕，好多概念她怎么都理解不了。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Ebr55UmkW33T10Y22LESNA.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>她就把问题丢给了AI。</span></p><p><span>让它把那些很宏大的哲学概念，跟生活里很具体的小事连在一起。</span></p><p><span>给出的东西，她看一眼就通了，还能顺带把其他好几个相关的概念也一起给搞明白了。</span></p><p><span>一开始，她问AI的方式很原始，就直接甩一个问题过去。</span></p><p><span>用了一段时间，她发现这样得到的答案经常是零散的、发散的、不够聚焦。</span></p><p><span>然后她自己琢磨出了一个办法，给AI设一个身份。</span></p><p><span>比如，你是北京大学社会工作专业研究生老师的身份，或者你是一位社会工作专家。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1kPafDDQ8CS1q3NoK3Wa1ML.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>设完身份以后再问同一个问题，AI给的的东西就更精准了。</span></p><p><span>这个技巧说真的，在AI圈子里真的不算啥。</span></p><p><span>但她说，这不是她从网上学的，是她自己用着用着悟出来的。</span></p><p><span>她觉得，想让AI回答更加精准的话，肯定是给一个身份会更好一些。</span></p><p><span>而且，在不同阶段会切换不同的身份设定，初试的时候让AI扮演出题老师，复试的时候让AI扮演面试官。</span></p><p><span>但真正让我觉得这个女生厉害的地方，其实还不是她怎么用AI，因为这些我觉得大家肯定都听过了，最有意思的是。</span></p><p><span style="font-weight:bold">她怎么不用AI。</span></p><p><span>这个点，是无数人所忽略的。</span></p><p><span>她有一个非常清晰的边界感。</span></p><p><span>根据阶段，前期用得比较频繁，让AI帮忙理清知识点、发散思维，每天都会用，但到了后期冲刺阶段，就很少用了。</span></p><p><span>她把学习和练习，切成了两个完全不同的状态。</span></p><p><span>学习的时候，经常会用AI，用了梳理知识点、拓展思路、整理模板等等。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3SS3sZuZcHU49gYel1vp7aH.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>但到了后期，要进行练习的时候，她完全闭卷。</span></p><p><span>不看书，不看笔记，不看AI，什么都不看，进行限时的模拟考试。</span></p><p><span>她做了大量的这种闭卷模拟，写完之后再拿给AI批改。</span></p><p><span>尤其是简答和论述题，一定是自己先完整地写一遍，写完了，再拿给AI看，让它帮忙批改、拓展。</span></p><p><span>因为她怕AI的思路替代了她的思路。</span></p><p><span>怕自己在考场上写出来的东西，不是自己想的。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4ruBPF3SNHZJ3hxtDX36WgvG.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>当然，AI的批改也不是万能的。</span></p><p><span>它改的东西是偏宏观的整体方向，比如结构怎么调、哪些知识点没覆盖到。</span></p><p><span>但这个回答，对于北大的卷子来说，表达方式专不专业，深度够不够，这些东西它判断不了。</span></p><p><span>所以她又在小红书上找了一个南京大学社工专业毕业几年的学长，付费让学长帮她改。</span></p><p><span>AI搞不定的，交给人来。</span></p><p><span>学长给的反馈就完全是另一个维度了。</span></p><p><span>会告诉你哪个地方的理解其实是点偏差的，怎么回答显得更加专业等等。</span></p><p><span>最后她再把两个的反馈合在一起，加上自己的思考，改出最终版。</span></p><p><span style="font-weight:bold">我问她，假如把AI从你这一年的备考里完全抽走，你觉得你还剩什么。</span></p><p><span style="font-weight:bold">她说，没有它我还有书本，我有笔，我有自己的脑子。</span></p><p><span style="font-weight:bold">我还有很多东西可以利用的，我不觉得缺少了特别多的东西。</span></p><p><span style="font-weight:bold">只是会慢一点，累一点。</span></p><p><span style="font-weight:bold">说实话，这个回答让我有些意外。</span></p><p><span>因为如果是我，哪天Claude宕机了，我就真的属于废掉的状态。。。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">她在访谈中有一句话，我原封不动的记了下来：</span></p><p><span style="font-weight:bold">“AI确实能够很大程度上提高学习效率，但它不是决定性的。考场上真正需要的那种能力，现场作答、语言表达、专业思维，这些都不是AI能直接赋予你的。这些只能是我们自己在不断练习中培养出来的核心能力。”</span></p><p><span>坦率的讲，我见过太多在AI行业里泡了好几年的人，到现在还分不清什么该交给AI、什么必须自己来，到底什么东西，才是你自己真正的能力。</span></p><p><span>包括我自己。</span></p><p><span>但是陈雨欣，这是她自己，在备考的过程中自己想明白的。</span></p><p><span>出成绩之前，她还干了一件很有意思的事，让AI预测过自己的分数。</span></p><p><span>预测的结果，跟她最终的真实成绩差不多。</span></p><p><span>于是，她初试通过之后，第一件事，就是回去告诉了AI。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1nRFjkzuQJk21fP9O36bajr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>DeepSeek回复她说：</span></p><p><span>“你是自己人生的神。我只是那个，在你感觉完了的时候，轻轻说了一句再走一步试试的人。”</span></p><p><span>访谈快结束的时候，我们的运营小伙伴跟她说，可以跟公司帮她申请海外模型的使用机会，让她感受一下最棒的模型的能力。</span></p><p><span>她说，“如果有机会的话，我肯定还是想用用的。”</span></p><p><span>我当时其实鼻子有点一酸。</span></p><p><span>这其实就是一个很朴素的愿望，如果有机会，我也想试试更好的工具。</span></p><p><span>我经常在文章里写信息差这三个字。</span></p><p><span>写9块9的DeepSeek的时候写过，写OpenClaw安装乱象的时候也写过。但陈雨欣的故事让我忽然意识到一个事，信息差只是表面。</span></p><p><span>在信息差的底下，还有一层更残酷的东西。</span></p><p><span>经济差。</span></p><p><span>我们总说AI是这个时代最伟大的平等器，免费的大模型到处都是，开源社区蓬勃发展，信息获取的成本前所未有的低。</span></p><p><span>但你仔细想想，真的平等吗？</span></p><p><span>是的，DeepSeek是免费的，豆包是免费，很多很多很多基础的AI功能都免费了。</span></p><p><span>但，最好的模型不是免费的，最好的工具不是免费的。</span></p><p><span>围绕这些工具的信息生态，圈子，社区，甚至连“知道这个东西存在”这件事本身，在很多时候，在这个时代，它都不是免费的。</span></p><p><span>信息的流转变得无限爆炸，变得无限迅速，但，好像有一些鸿沟，反而变得更大了。</span></p><p><span>陈雨欣能走到今天，不是因为AI时代的信息差消失了，是因为她足够聪明、足够努力、足够有韧性，硬生生在免费的AI工具的框架里，跑出了一个非常非常棒的结果。</span></p><p><span>但不是每个人都有她这样的能力。</span></p><p><span>如果我们真的相信AI能改变世界，那我们是不是应该多想想，怎么让那些用不起二十美元订阅的人，也能享受到同样质量的AI服务？</span></p><p><span>这不是一个技术问题。</span></p><p><span>这是一个关于公平的问题。</span></p><p><span>我在这一刻，突然能理解OpenAI了，他们至少，还在让所有人，免费用着ChatGPT，从商业属性上来说，确实是比Claude要失败。</span></p><p><span>但从人文属性上来说，OpenAI是伟大的。</span></p><p><span>工具是免费的，但，能力是自己的。</span></p><p><span>有的时候我们太迷信工具了，觉得用了最贵的模型就能写出最好的文章，用了最强的AI就能做出最牛的产品。</span></p><p><span>但陈雨欣的故事告诉我们一件很朴素的事情，工具只是工具，真正决定结果的，永远是使用工具的人。</span></p><p><span>她用免费的工具考上了北大。</span></p><p><span>而这个世界上有多少人，花了大价钱订阅了ChatGPT Plus、Claude Pro等等最贵的会员，最后只是用来应付垃圾工作然后摸一下鱼？</span></p><p><span style="font-weight:bold">“I am not what happened to me” </span></p><p><span>这是她的毕业寄语，也是在备考的时候就写在本子上的一句话。</span></p><p><span>这句话来自荣格，原文的后半句是，I am what I choose to become，我是我选择成为的样子。</span></p><p><span style="font-weight:bold">我不是我所经历的一切，我是我选择成为的那个人。</span></p><p><span>她跟我说，像我们这个层次的学校，很多人都会被这个标签给框住。</span></p><p><span>他们会觉得自己本科那么差，怎么可能上那么好的学校，甚至都不会去想那个可能。</span></p><p><span>今天，她想把这句话送给所有人。</span></p><p><span>不要被过去的标签定义。</span></p><p><span>你选择成为什么，你就是什么。</span></p><p><strong><strong><strong><span><span>以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。</span></span></strong></strong></strong></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI提效手册</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eecad5c5730139dcc50224?channel_id=68d3ec1b685bba553f09f016">https://lingowhale.com/reader/web/69eecad5c5730139dcc50224?channel_id=68d3ec1b685bba553f09f016</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

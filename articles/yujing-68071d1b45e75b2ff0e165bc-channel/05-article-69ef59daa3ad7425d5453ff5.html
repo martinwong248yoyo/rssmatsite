@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>这么多改编版本，有你满意的么？</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 艺术电影-电影</div>
+                    <h1>这么多改编版本，有你满意的么？</h1>
+                    <div class="meta">
+                        <span>虹膜</span>
+                        <span>Mon, 27 Apr 2026 12:30:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef59daa3ad7425d5453ff5?channel_id=68071d1b2c7742c740dc6aa3">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span>今年芬内尔</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>+玛格特·罗比版本的《呼啸山庄》，争议巨大。</span></span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3EYDuK3jP3re1RuBS42gFdxq.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">《呼啸山庄》（2026）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">喜欢或者不喜欢这部影片，当然都是每个人观影之后的自然感受，旁人没什么好说的。我这里想讨论的是另一问题，也就是导演在</span><span style="color:rgba(0, 0, 0, 0.9)">2026年的当下，推出这么一个所谓「违背原著精神」的版本，是否具备正当性？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">《呼啸山庄》</span><span style="color:rgba(0, 0, 0, 0.9)">一般被视为一则</span><span style="color:rgba(0, 0, 0, 0.9)">伟大</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">爱情故事，</span><span style="color:rgba(0, 0, 0, 0.9)">这样理解当然是可以的，不过在我看来</span><span style="color:rgba(0, 0, 0, 0.9)">勃朗特写的</span><span style="color:rgba(0, 0, 0, 0.9)">更像是一个</span><span style="color:rgba(0, 0, 0, 0.9)">形而上学寓言。凯瑟琳的著名宣言</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">他比我自己更是我自己</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">不管我们的灵魂是什么做的，他的和我的是一样的</span><span style="color:rgba(0, 0, 0, 0.9)">」就</span><span style="color:rgba(0, 0, 0, 0.9)">是</span><span style="color:rgba(0, 0, 0, 0.9)">一个关于</span><span style="color:rgba(0, 0, 0, 0.9)">灵魂同一性的命题。她和希斯克利夫</span><span style="color:rgba(0, 0, 0, 0.9)">可以说是</span><span style="color:rgba(0, 0, 0, 0.9)">同一存在的两个外形</span><span style="color:rgba(0, 0, 0, 0.9)">，两者不惜一切代价结合的</span><span style="color:rgba(0, 0, 0, 0.9)">激情具有</span><span style="color:rgba(0, 0, 0, 0.9)">强大的</span><span style="color:rgba(0, 0, 0, 0.9)">破坏性</span><span style="color:rgba(0, 0, 0, 0.9)">，是</span><span style="color:rgba(0, 0, 0, 0.9)">这种形而上学的张力赋予了小说永恒的生命力。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/pbHvx499YlD1NNXdl3K8eB3.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">1939年</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">威廉</span><span style="color:rgba(0, 0, 0, 0.9)">·惠勒版</span><span style="color:rgba(0, 0, 0, 0.9)">是最广为人知的一个电影版，它也奠</span><span style="color:rgba(0, 0, 0, 0.9)">定了</span><span style="color:rgba(0, 0, 0, 0.9)">之后大多数</span><span style="color:rgba(0, 0, 0, 0.9)">后续改编的基本范式</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">也奠定了它们共同的原罪。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">因为时长限制，影片选择</span><span style="color:rgba(0, 0, 0, 0.9)">仅改编原著前十六章，完全删除第二代故事，</span><span style="color:rgba(0, 0, 0, 0.9)">并</span><span style="color:rgba(0, 0, 0, 0.9)">将时代</span><span style="color:rgba(0, 0, 0, 0.9)">背景</span><span style="color:rgba(0, 0, 0, 0.9)">从摄政期挪至维多利亚中期。最具争议的改动是</span><span style="color:rgba(0, 0, 0, 0.9)">片厂</span><span style="color:rgba(0, 0, 0, 0.9)">强加的结尾</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">惠勒本人</span><span style="color:rgba(0, 0, 0, 0.9)">也</span><span style="color:rgba(0, 0, 0, 0.9)">反对的</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">鬼魂手牵手在雪中行走</span><span style="color:rgba(0, 0, 0, 0.9)">」的</span><span style="color:rgba(0, 0, 0, 0.9)">场景，由替身演员完成。</span><span style="color:rgba(0, 0, 0, 0.9)">制片人</span><span style="color:rgba(0, 0, 0, 0.9)">戈德温称此片为他平生最得意之作。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4bnZMp3qcrDK1DHig7Uocob.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">《呼啸山庄》（1939）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这一版的核心贡献在于</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">它在全球范围内把《呼啸山庄》从一部晦涩哥特小说，转化为一个通俗易懂的伟大爱情</span><span style="color:rgba(0, 0, 0, 0.9)">的原型</span><span style="color:rgba(0, 0, 0, 0.9)">。它的原罪</span><span style="color:rgba(0, 0, 0, 0.9)">是，为</span><span style="color:rgba(0, 0, 0, 0.9)">了实现这</span><span style="color:rgba(0, 0, 0, 0.9)">个</span><span style="color:rgba(0, 0, 0, 0.9)">转化，它切除了原著的阶级批判、种族维度</span><span style="color:rgba(0, 0, 0, 0.9)">、</span><span style="color:rgba(0, 0, 0, 0.9)">结构复杂性，让此后数十年的观众以为</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">希斯克利夫只是一个被爱伤害的白人绅士。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">1970年</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">罗伯特</span><span style="color:rgba(0, 0, 0, 0.9)">·富埃斯特版由美国国际影业英国分部制作，</span><span style="color:rgba(0, 0, 0, 0.9)">剧情</span><span style="color:rgba(0, 0, 0, 0.9)">同样止于凯瑟琳之死，但加入数项独特改动</span><span style="color:rgba(0, 0, 0, 0.9)">，包括</span><span style="color:rgba(0, 0, 0, 0.9)">暗示希斯克利夫是老厄恩肖先生的私生子</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">因此</span><span style="color:rgba(0, 0, 0, 0.9)">他和</span><span style="color:rgba(0, 0, 0, 0.9)">凯瑟琳是同父异母兄妹，乱伦暗示成为本片的</span><span style="color:rgba(0, 0, 0, 0.9)">隐秘驱动。而</span><span style="color:rgba(0, 0, 0, 0.9)">亨德利被改写为父权阴影下的悲剧人物</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">结尾</span><span style="color:rgba(0, 0, 0, 0.9)">他</span><span style="color:rgba(0, 0, 0, 0.9)">开枪打死希斯克利夫并保</span><span style="color:rgba(0, 0, 0, 0.9)">住了呼</span><span style="color:rgba(0, 0, 0, 0.9)">啸山庄</span><span style="color:rgba(0, 0, 0, 0.9)">，这和原著完全背道而驰</span><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2n3Ajo3HTru91gnthY4FVps0.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">《呼啸山庄》（1970）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">但</span><span style="color:rgba(0, 0, 0, 0.9)">这一版</span><span style="color:rgba(0, 0, 0, 0.9)">有它独特的贡献，就是引入了</span><span style="color:rgba(0, 0, 0, 0.9)">心理分析</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">维度。如果希斯克利夫是凯瑟琳同父异母的兄弟，他们的激情就不仅是超越阶级的灵魂吸引，而是一种被禁止的血缘冲动。这</span><span style="color:rgba(0, 0, 0, 0.9)">种</span><span style="color:rgba(0, 0, 0, 0.9)">解读虽然偏离原著，却触及了弗洛伊德之后那一代读者对《呼啸山庄》最深层的不安</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">希斯克利夫与凯瑟琳之间的</span><span style="color:rgba(0, 0, 0, 0.9)">情感</span><span style="color:rgba(0, 0, 0, 0.9)">力量，究竟是精神性的</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">还是</span><span style="color:rgba(0, 0, 0, 0.9)">出于某种</span><span style="color:rgba(0, 0, 0, 0.9)">本能？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">1992年</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">彼得</span><span style="color:rgba(0, 0, 0, 0.9)">·柯斯明斯基版是英语主流电影首次完整改编两代人故事。</span><span style="color:rgba(0, 0, 0, 0.9)">这个版本总体上难言成功，包括演员发挥在内在当年都被劣评，不过</span><span style="color:rgba(0, 0, 0, 0.9)">它</span><span style="color:rgba(0, 0, 0, 0.9)">的忠实度让书迷基本满意。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1R0Udx43Il9GIpNlf4Fb0Qf.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">《呼啸山庄》（1992）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">2011年</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">安德烈亚</span><span style="color:rgba(0, 0, 0, 0.9)">·阿诺德版是</span><span style="color:rgba(0, 0, 0, 0.9)">这本书</span><span style="color:rgba(0, 0, 0, 0.9)">改编史的</span><span style="color:rgba(0, 0, 0, 0.9)">一个</span><span style="color:rgba(0, 0, 0, 0.9)">转折点。</span><span style="color:rgba(0, 0, 0, 0.9)">导演运用了独特的视听语言风格</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">让本片同时具备</span><span style="color:rgba(0, 0, 0, 0.9)">社会现实主义</span><span style="color:rgba(0, 0, 0, 0.9)">和浪漫的哥特感。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">首位黑人希斯克利夫</span><span style="color:rgba(0, 0, 0, 0.9)">出现，</span><span style="color:rgba(0, 0, 0, 0.9)">奴隶制</span><span style="color:rgba(0, 0, 0, 0.9)">和</span><span style="color:rgba(0, 0, 0, 0.9)">种族压迫</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">主题</span><span style="color:rgba(0, 0, 0, 0.9)">凸显，这是本片最大的突破。</span><span style="color:rgba(0, 0, 0, 0.9)">观众在银幕上看到</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">希斯克利夫</span><span style="color:rgba(0, 0, 0, 0.9)">是</span><span style="color:rgba(0, 0, 0, 0.9)">一个</span><span style="color:rgba(0, 0, 0, 0.9)">遭受</span><span style="color:rgba(0, 0, 0, 0.9)">种族</span><span style="color:rgba(0, 0, 0, 0.9)">歧视</span><span style="color:rgba(0, 0, 0, 0.9)">的他者</span><span style="color:rgba(0, 0, 0, 0.9)">。</span><span style="color:rgba(0, 0, 0, 0.9)">他的愤怒不仅来自失去凯瑟琳，更来自一个系统性否认他人格的白人世界。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">但老问题仍在，</span><span style="color:rgba(0, 0, 0, 0.9)">阿诺德</span><span style="color:rgba(0, 0, 0, 0.9)">也</span><span style="color:rgba(0, 0, 0, 0.9)">只拍了前半部。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/sA3Nl143t397YfS94xy5Rl.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">《呼啸山庄》（2011）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">华语世界对《呼啸山庄》</span><span style="color:rgba(0, 0, 0, 0.9)">的阅读和接受源远流长。这部小说曾以《狭路冤家》</span><span style="color:rgba(0, 0, 0, 0.9)">《咆哮山庄》《魂归离恨天》</span><span style="color:rgba(0, 0, 0, 0.9)">等名行世，</span><span style="color:rgba(0, 0, 0, 0.9)">1956年杨苡</span><span style="color:rgba(0, 0, 0, 0.9)">受巴金鼓励重</span><span style="color:rgba(0, 0, 0, 0.9)">译</span><span style="color:rgba(0, 0, 0, 0.9)">定名为</span><span style="color:rgba(0, 0, 0, 0.9)">《呼啸山庄》</span><span style="color:rgba(0, 0, 0, 0.9)">，从此成为我们最熟悉的译名。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">每一种译名本身就是一次</span><span style="color:rgba(0, 0, 0, 0.9)">不同的</span><span style="color:rgba(0, 0, 0, 0.9)">文化选择</span><span style="color:rgba(0, 0, 0, 0.9)">。「</span><span style="color:rgba(0, 0, 0, 0.9)">狭路冤家</span><span style="color:rgba(0, 0, 0, 0.9)">」</span><span style="color:rgba(0, 0, 0, 0.9)">强调命运的纠缠，</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">咆哮山庄</span><span style="color:rgba(0, 0, 0, 0.9)">」</span><span style="color:rgba(0, 0, 0, 0.9)">突出声音的暴力，</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">魂归离恨天</span><span style="color:rgba(0, 0, 0, 0.9)">」充满</span><span style="color:rgba(0, 0, 0, 0.9)">古典诗词的哀怨，</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">呼啸山庄</span><span style="color:rgba(0, 0, 0, 0.9)">」较为平实和</span><span style="color:rgba(0, 0, 0, 0.9)">准确。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">电影方面，</span><span style="color:rgba(0, 0, 0, 0.9)">1940年香港马华公司拍过一部</span><span style="color:rgba(0, 0, 0, 0.9)">粤语版本</span><span style="color:rgba(0, 0, 0, 0.9)">《魂归离恨天》。</span><span style="color:rgba(0, 0, 0, 0.9)">1957年香港电懋公司由左几执导拍摄了另一部粤语片《魂归离恨天》，</span><span style="color:rgba(0, 0, 0, 0.9)">由</span><span style="color:rgba(0, 0, 0, 0.9)">张瑛饰养子萧大昌、梅绮饰养妹凯玲，将故事中国化为富家养子</span><span style="color:rgba(0, 0, 0, 0.9)">和</span><span style="color:rgba(0, 0, 0, 0.9)">养妹的悲剧。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/pUSus3k42tD1xrP2f4fSbXn.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">《魂归离恨天》（1957）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">但华语电影界有一个版本比上述两部电影都更有名，就是张爱玲执笔完成的剧本</span><span style="color:rgba(0, 0, 0, 0.9)">《魂归离恨天》</span><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">1964年，好友宋淇牵线，张爱玲为电懋公司写下她的第十部、也是最后一部电影剧本《魂归离恨天》。剧本开头明确标注</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">1947年北京西山大风雪之夜</span><span style="color:rgba(0, 0, 0, 0.9)">」。</span><span style="color:rgba(0, 0, 0, 0.9)">这延续了她一贯的</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">外国情节、中国情境</span><span style="color:rgba(0, 0, 0, 0.9)">」</span><span style="color:rgba(0, 0, 0, 0.9)">翻</span><span style="color:rgba(0, 0, 0, 0.9)">拍</span><span style="color:rgba(0, 0, 0, 0.9)">手法</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">此前的《情场如战场》改自美国舞台剧，《一曲难忘》脱胎于《魂断蓝桥》。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/yjK4119wkfp17pRfTWUaRa.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">《情场如战场》（1957）</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">张爱玲</span><span style="color:rgba(0, 0, 0, 0.9)">在和</span><span style="color:rgba(0, 0, 0, 0.9)">庄信正的通信</span><span style="color:rgba(0, 0, 0, 0.9)">中说，</span><span style="color:rgba(0, 0, 0, 0.9)">自己从未读过《呼啸山庄》原著</span><span style="color:rgba(0, 0, 0, 0.9)">。</span><span style="color:rgba(0, 0, 0, 0.9)">她写《魂归离恨天》时主要依据的是</span><span style="color:rgba(0, 0, 0, 0.9)">1939年威廉·惠勒的好莱坞电影和相关舞台剧改编本。这</span><span style="color:rgba(0, 0, 0, 0.9)">或许可以解释</span><span style="color:rgba(0, 0, 0, 0.9)">她的改编为何继承了惠勒版的浪漫化倾向</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">而</span><span style="color:rgba(0, 0, 0, 0.9)">不太能看到原著</span><span style="color:rgba(0, 0, 0, 0.9)">的哥特暴力。</span><span style="color:rgba(0, 0, 0, 0.9)">因为</span><span style="color:rgba(0, 0, 0, 0.9)">她</span><span style="color:rgba(0, 0, 0, 0.9)">参考的是</span><span style="color:rgba(0, 0, 0, 0.9)">好莱坞已经驯化过的勃朗特。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">剧本未能拍成，因为</span><span style="color:rgba(0, 0, 0, 0.9)">1964年电懋公司董事长陆运涛在台中神冈空难中罹难。公司次年改组为国泰机构，制片总监宋淇随后离职转入邵氏。剧本还没有来得及交到导演手上即夭折，成为张爱玲整个电影创作生涯的绝响。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">张爱玲的《魂归离恨天》</span><span style="color:rgba(0, 0, 0, 0.9)">虽然</span><span style="color:rgba(0, 0, 0, 0.9)">未拍成</span><span style="color:rgba(0, 0, 0, 0.9)">，或许它才是华语世界最重要的一个版本。我们可以凭想象去脑补，这个版本的</span><span style="color:rgba(0, 0, 0, 0.9)">希斯克利夫</span><span style="color:rgba(0, 0, 0, 0.9)">和</span><span style="color:rgba(0, 0, 0, 0.9)">凯瑟琳</span><span style="color:rgba(0, 0, 0, 0.9)">，大概不会有那种「</span><span style="color:rgba(0, 0, 0, 0.9)">灵魂同一性</span><span style="color:rgba(0, 0, 0, 0.9)">」</span><span style="color:rgba(0, 0, 0, 0.9)">的绝对激情</span><span style="color:rgba(0, 0, 0, 0.9)">，相反，我们会看到</span><span style="color:rgba(0, 0, 0, 0.9)">人们</span><span style="color:rgba(0, 0, 0, 0.9)">在一个苍凉的世俗世界</span><span style="color:rgba(0, 0, 0, 0.9)">如何妥协和算计。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">《呼啸山庄》还拥有各种音乐剧、芭蕾剧、歌剧、流行音乐的版本，这里就不提了。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">今年</span><span style="color:rgba(0, 0, 0, 0.9)">芬内尔的</span><span style="color:rgba(0, 0, 0, 0.9)">这个新版，若论争议性，似乎超越了以上所有</span><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3aESem1wsL6i15A0Sp3Zu8z.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">在英语世界，最大的</span><span style="color:rgba(0, 0, 0, 0.9)">争议</span><span style="color:rgba(0, 0, 0, 0.9)">是选角</span><span style="color:rgba(0, 0, 0, 0.9)">。文学学者几乎一致批评</span><span style="color:rgba(0, 0, 0, 0.9)">影片抹除了原著的种族模糊性。</span><span style="color:rgba(0, 0, 0, 0.9)">芬内尔的辩护</span><span style="color:rgba(0, 0, 0, 0.9)">比较简单，她说</span><span style="color:rgba(0, 0, 0, 0.9)">雅各布</span><span style="color:rgba(0, 0, 0, 0.9)">·艾洛蒂</span><span style="color:rgba(0, 0, 0, 0.9)">长得和她十几岁时第一次读这本书时，在封面上看到的插图一样。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">其次是虐恋元素和露骨场景。</span><span style="color:rgba(0, 0, 0, 0.9)">芬内尔列出</span><span style="color:rgba(0, 0, 0, 0.9)">她</span><span style="color:rgba(0, 0, 0, 0.9)">的风格影响来源</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">包括《午夜守门人》《吸血鬼</span><span style="color:rgba(0, 0, 0, 0.9)">惊情四百年</span><span style="color:rgba(0, 0, 0, 0.9)">》《欲望号快车》《小姐》</span><span style="color:rgba(0, 0, 0, 0.9)">等等</span><span style="color:rgba(0, 0, 0, 0.9)">。</span><span style="color:rgba(0, 0, 0, 0.9)">不过，在被炮轰之际</span><span style="color:rgba(0, 0, 0, 0.9)">，芬内尔版仍然提出了一个有价值的问题：如果《呼啸山庄》的核心力量</span><span style="color:rgba(0, 0, 0, 0.9)">，就是</span><span style="color:rgba(0, 0, 0, 0.9)">一种更原始的</span><span style="color:rgba(0, 0, 0, 0.9)">毁灭</span><span style="color:rgba(0, 0, 0, 0.9)">欲望呢？</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3ZJo8f1rb0qu1faPLIHdJ8S.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>这</span><span style="color:rgba(0, 0, 0, 0.9)">种</span><span style="color:rgba(0, 0, 0, 0.9)">解读</span><span style="color:rgba(0, 0, 0, 0.9)">方向</span><span style="color:rgba(0, 0, 0, 0.9)">虽然粗暴，却触及了当代文化的一个敏感地带</span><span style="color:rgba(0, 0, 0, 0.9)">。</span><span style="color:rgba(0, 0, 0, 0.9)">在人们普遍渴望安全关系的语境中，勃朗特笔下那种</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">我会打碎你也打碎我自己</span><span style="color:rgba(0, 0, 0, 0.9)">」</span><span style="color:rgba(0, 0, 0, 0.9)">的激情是否还有表达的空间？芬内尔用肉体取代灵魂，这固然是一种降维</span><span style="color:rgba(0, 0, 0, 0.9)">处理</span><span style="color:rgba(0, 0, 0, 0.9)">，但它也迫使观众重新面对一个问题</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">我们到底在向《呼啸山庄》投射什么？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">从</span><span style="color:rgba(0, 0, 0, 0.9)">今天的</span><span style="color:rgba(0, 0, 0, 0.9)">改编</span><span style="color:rgba(0, 0, 0, 0.9)">伦理</span><span style="color:rgba(0, 0, 0, 0.9)">来看，忠实度早已不再是衡量改编成功与否的唯一标准。每一部伟大的经典文本都有</span><span style="color:rgba(0, 0, 0, 0.9)">它「</span><span style="color:rgba(0, 0, 0, 0.9)">溢出</span><span style="color:rgba(0, 0, 0, 0.9)">」的</span><span style="color:rgba(0, 0, 0, 0.9)">部分，这些部分无法被任何单一的改编所穷尽。</span><span style="color:rgba(0, 0, 0, 0.9)">正如之前的若干版本，不断修正原著的各种特性和盲区，</span><span style="color:rgba(0, 0, 0, 0.9)">2026版是它的又一次分裂。就算很多人批评得有道理，这部影片失去了原著的灵魂，但它是想让我们低头去看支撑灵魂的那些物质结构，比如骨骼、肌肉，以及血。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2fsamn481mRB2VI3wpaNEg6.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)">艾米莉</span><span style="color:rgba(0, 0, 0, 0.9)">·勃朗特在三十岁去世时，</span><span style="color:rgba(0, 0, 0, 0.9)">肯定不会知道她</span><span style="color:rgba(0, 0, 0, 0.9)">唯一的小说将在</span><span style="color:rgba(0, 0, 0, 0.9)">168</span><span style="color:rgba(0, 0, 0, 0.9)">年后仍然让导演、学者</span><span style="color:rgba(0, 0, 0, 0.9)">、</span><span style="color:rgba(0, 0, 0, 0.9)">观众争吵不休。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">就像</span><span style="color:rgba(0, 0, 0, 0.9)">荒原上的回声</span><span style="color:rgba(0, 0, 0, 0.9)">，它</span><span style="color:rgba(0, 0, 0, 0.9)">永不消散</span><span style="color:rgba(0, 0, 0, 0.9)">。</span><span style="color:rgba(0, 0, 0, 0.9)">因为回荡的是沉默中未被说出的一切。</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 艺术电影-电影</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef59daa3ad7425d5453ff5?channel_id=68071d1b2c7742c740dc6aa3">https://lingowhale.com/reader/web/69ef59daa3ad7425d5453ff5?channel_id=68071d1b2c7742c740dc6aa3</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

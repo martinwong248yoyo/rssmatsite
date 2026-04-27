@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>反腐新规“公私同罪同罚”，三万可判刑？</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 时政</div>
+                    <h1>反腐新规“公私同罪同罚”，三万可判刑？</h1>
+                    <div class="meta">
+                        <span>卢克文工作室</span>
+                        <span>Sun, 26 Apr 2026 03:27:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ed8718d419f50beb7381fe?channel_id=6805170d303fabc7418d8d04">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span><span>反腐又加码了！</span></span></p><p><span><span>新的司法解释将于</span></span><span><span>5</span></span><span><span>月</span></span><span><span>1</span></span><span><span>日落地，民企腐败与公职人员腐败同罪</span></span><span><span>，</span></span><span><span>被称为</span></span><span><span>“更严反腐细则”。</span></span></p><p><span><span>这意味着，公私贪腐进入了</span></span><span><span>“同罪同罚”时代。</span></span></p><p><span><span>相比旧标准，这次调整的力度之大，可以用四个</span></span><span><span>“全”来概括：公私同罪同罚</span></span><span><span>、</span></span><span><span>隐性腐败全覆盖</span></span><span><span>、全周期追责、全门槛降低。</span></span></p><p><span><span>今天，我们就具体聊聊这事。</span></span></p><p><span><span>这</span></span><span><span>3</span></span><span><span>万块钱的门槛，到底会砸到谁的头上？</span></span></p><p><span><span>所谓的</span></span><span><span>“同罪同罚、同标同判”，又是怎么个同法？</span></span></p><p><span><span>一</span></span></p><p><span><span>具体条款就不一一介绍了，我们直接对比一下新旧标准。</span></span></p><p><span><span>非国家工作人员受贿罪/职务侵占罪：数额较大（三年以下）从</span></span><span><span>6</span></span><span><span>万元降至</span></span><span><span>3</span></span><span><span>万元；数额巨大（三年到十年）从</span></span><span><span>100</span></span><span><span>万元降至</span></span><span><span>20</span></span><span><span>万元。数额特别巨大（十年以上），降到</span></span><span><span>300</span></span><span><span>万。</span></span></p><p><span><span>非国家工作人员挪用资金罪：数额较大从</span></span><span><span>10</span></span><span><span>万元降至</span></span><span><span>5</span></span><span><span>万元；数额巨大从</span></span><span><span>400</span></span><span><span>万元降至</span></span><span><span>200</span></span><span><span>万元；进行非法活动标准从</span></span><span><span>6</span></span><span><span>万元降至</span></span><span><span>3</span></span><span><span>万元。</span></span></p><p><span><span>对非国家工作人员行贿罪：数额较大从</span></span><span><span>6</span></span><span><span>万元降至</span></span><span><span>3</span></span><span><span>万元；数额巨大从</span></span><span><span>200</span></span><span><span>万元降至</span></span><span><span>100</span></span><span><span>万元。</span></span></p><p><span><span>一句话概括就是，</span></span><span><span>入罪门槛从</span></span><span><span>6</span></span><span><span>万降到</span></span><span><span>3</span></span><span><span>万，十年以上重罪的门槛，从</span></span><span><span>“</span></span><span><span>千万级别</span></span><span><span>”</span></span><span><span>直接跳水到</span></span><span><span>300</span></span><span><span>万。</span></span></p><p><span><span>很多人纳闷，</span></span><span><span>这个</span></span><span><span>“</span></span><span><span>千万级别</span></span><span><span>”</span></span><span><span>是怎么来的？旧标准下，</span></span><span><span>对</span></span><span><span>“</span></span><span><span>数额特别巨大</span></span><span><span>”</span></span><span><span>没有明文规定，各省法院普遍参照</span></span><span><span>1500</span></span><span><span>万左右作为判十年以上的起步价。</span></span></p><p><span><span>现在呢？</span></span><span><span>300</span></span><span><span>万，就够蹲十年以上。</span></span></p><p><span><span>可以说，新规对民营企业的影响是非常大的，特别是采购部门和实权部门。</span></span></p><p><span><span>一家像样的制造企业，每年动辄几百万、上千万甚至过亿的采购额握在采购部经理手里。他能决定供应商能不能入围、能拿多大份额的订单、能按月收到多少货款。</span></span><span><span>几乎一手左右着供应商的生死。</span></span></p><p><span><span>我以前在许多企业待过，接触过不少采购经理，对他们的手法算是比较熟悉。提到采购腐败，很多人第一反应就是</span></span><span><span>“吃回扣”“拿返点”，这都算是比较直接的，其实他们的手段远比想象的丰富。</span></span></p><p><span><span>比如虚抬报价套差价，明明真实底价是</span></span><span><span>100</span></span><span><span>元，采购经理找来一家熟悉的供应商报价</span></span><span><span>150</span></span><span><span>元，多出的</span></span><span><span>50</span></span><span><span>元两人私下分成。</span></span></p><p><span><span>再比如私下成立皮包公司，以空壳公司的名义向真实供应商发出采购指令，低价拿货，再高价卖给公司，赚取中间的全部差价等等。</span></span></p><p><span><span>供应商</span></span><span><span>呢？</span></span><span><span>为了挤进门、为了不被踢出去、为了比竞争对手多拿一个点，宁愿拿出合同额的百分之几甚至百分之十几作为</span></span><span><span>“</span></span><span><span>好处费</span></span><span><span>”</span></span><span><span>。</span></span></p><p><span><span>这就是采购腐败的底层逻辑</span></span><span><span>。</span></span></p><p><span><span>我们就顺着这个逻辑，举例说明一下新规。</span></span></p><p><span><span>假如老张在一家年营收</span></span><span><span>5000</span></span><span><span>万的制造厂做采购经理。供应商为了让他长期下单，每笔订单给他</span></span><span><span>2%</span></span><span><span>的回扣。老张一年经手采购额</span></span><span><span>300</span></span><span><span>万，回扣拿了</span></span><span><span>6</span></span><span><span>万块。</span></span></p><p><span><span>但后来老张为了拿更多的好处，准备换供应商，收了人家的好处，却在出差过程中突发交通事故，没把事办成。</span></span></p><p><span><span>放在</span></span><span><span>2026</span></span><span><span>年</span></span><span><span>4</span></span><span><span>月</span></span><span><span>30</span></span><span><span>日之前，</span></span><span><span>6</span></span><span><span>万刚好够立案标准（旧标准</span></span><span><span>6</span></span><span><span>万），但很多地方会酌情缓刑。这时候，老张可能会心里想：大不了退钱，开除，还能怎样？</span></span></p><p><span><span>5</span></span><span><span>月</span></span><span><span>1</span></span><span><span>日之后呢？</span></span></p><p><span><span>新标准</span></span><span><span>3</span></span><span><span>万入刑。老张那</span></span><span><span>6</span></span><span><span>万块，已经超过入罪门槛一倍。</span></span></p><p><span><span>而且</span></span><span><span>“</span></span><span><span>数额较大</span></span><span><span>”</span></span><span><span>这一档，对应的是三年以下有期徒刑或者拘役。</span></span></p><p><span><span>再加上罚金</span></span><span><span>，</span></span><span><span>一般是受贿金额的</span></span><span><span>50%</span></span><span><span>到两倍，也就是</span></span><span><span>3</span></span><span><span>万到</span></span><span><span>12</span></span><span><span>万。老张不仅要退赃</span></span><span><span>6</span></span><span><span>万，还要交罚金，还要坐牢。</span></span></p><p><span><span>他甚至可能被公司起诉民事赔偿。一个中年采购</span></span><span><span>经理</span></span><span><span>，因为</span></span><span><span>6</span></span><span><span>万块钱，工作没了，案底有了，孩子将来考公都受影响。</span></span></p><p><span><span>与此同时，新规将请托列为同罪。</span></span></p><p><span><span>说白了，就是拿钱不办事，同样属于受贿。这叫</span></span><span><span>“承诺即构成”。</span></span></p><p><span><span>过去为什么有人敢收钱不办事？</span></span></p><p><span><span>因为旧司法实践对受贿有两条硬要求：一是收了钱，二是</span></span><span><span>“</span></span><span><span>为他人谋取利益</span></span><span><span>”</span></span><span><span>。</span></span></p><p><span><span>像老张这种</span></span><span><span>落马的人就</span></span><span><span>会</span></span><span><span>抓住第二条做文章。</span></span></p><p><span><span>收了</span></span><span><span>供应商的好处</span></span><span><span>，但事后什么都没批。庭审时，辩护律师说：你看，当事人收了钱，但一条政策没批，一个项目没放，一点事没办，怎么能算受贿？</span></span></p><p><span><span>这叫</span></span><span><span>“</span></span><span><span>收了钱但没谋利</span></span><span><span>”</span></span><span><span>，是民事层面的不当得利，不是刑事犯罪。</span></span></p><p><span><span>这就是旧规矩的口子。</span></span></p><p><span><span>这次新解释，直接把这个口子焊死了。</span></span></p><p><span><span>新解释明确规定：</span></span><span><span>“</span></span><span><span>明知请托人有不正当的具体请托事项而收受财物的，视为承诺为请托人谋取不正当利益。</span></span><span><span>”</span></span></p><p><span><span>新解释的核心变化在于：把一个过去需要严密证据链才能证明的主观要件，直接改成了客观认定</span></span><span><span>。</span></span><span><span>你收了钱，而且知道对方要办什么事，就推定你承诺了，罪名成立。</span></span><span><span>收钱这个动作本身就是证据，不需要再去调通话记录、找旁证证明你</span></span><span><span>“</span></span><span><span>实际办事</span></span><span><span>”</span></span><span><span>了。</span></span></p><p><span><span>为了这个逻辑能闭环，法律还顺手把</span></span><span><span>“职务便利”的定义给拓宽了。</span></span></p><p><span><span>以前认定</span></span><span><span>“职务便利”，得是直属上下级、有明确业务主管关系。</span></span></p><p><span><span>现在呢？</span></span><span><span>只要有</span></span><span><span>“</span></span><span><span>隶属、制约</span></span><span><span>”</span></span><span><span>关系，就算</span></span><span><span>。</span></span><span><span>哪怕你管不着这个人，但你能管着他领导，间接能拿捏他</span></span><span><span>，</span></span><span><span>这也算你的</span></span><span><span>“</span></span><span><span>职务便利</span></span><span><span>”</span></span><span><span>。</span></span></p><p><span><span>这一条重点针对的就是我们前面说的权力部门。</span></span></p><p><span><span>过去</span></span><span><span>但凡手里有点权力的人，最喜欢</span></span><span><span>玩的手法</span></span><span><span>就是</span></span><span><span>“</span></span><span><span>曲线救国</span></span><span><span>”</span></span><span><span>。</span></span><span><span>他可以</span></span><span><span>不直接捞钱，但</span></span><span><span>可以</span></span><span><span>打个招呼、递个条子。</span></span></p><p><span><span>一旦犯了事，</span></span><span><span>辩护律师可以主张</span></span><span><span>，</span></span><span><span>这是</span></span><span><span>“</span></span><span><span>利用影响力</span></span><span><span>”</span></span><span><span>，不是</span></span><span><span>“</span></span><span><span>利用职务便利</span></span><span><span>”</span></span><span><span>。利用影响力受贿，是刑法第</span></span><span><span>388</span></span><span><span>条之一专门规定的，量刑比普通受贿要轻得多。</span></span></p><p><span><span>这其中的差距有多大？</span></span></p><p><span><span>同样是收</span></span><span><span>300</span></span><span><span>万，利用影响力受贿最高判七年</span></span><span><span>。</span></span><span><span>但如果被认定为普通受贿，那就是</span></span><span><span>“</span></span><span><span>数额特别巨大</span></span><span><span>”</span></span><span><span>，十年以上，差的可不是一星半点。</span></span></p><p><span><span>于是，</span></span><span><span>所谓的</span></span><span><span>“利用影响力”</span></span><span><span>就成了腐败分子的安全通道。</span></span><span><span>他</span></span><span><span>只是牵个线、递个话，钱收了，责任却小得多。</span></span></p><p><span><span>新解释的厉害之处在于：它把利用隶属、制约关系的斡旋行为，直接归类为</span></span><span><span>“</span></span><span><span>职务便利</span></span><span><span>”</span></span><span><span>的组成部分。</span></span></p><p><span><span>你再也不用是直属上下级，也不用是同一个部门。你是办公室主任，他是处长，你觉得你们没关系？</span></span></p><p><span><span>不是的。</span></span></p><p><span><span>只要</span></span><span><span>有</span></span><span><span>一层</span></span><span><span>“</span></span><span><span>你说了</span></span><span><span>他听了</span></span><span><span>”</span></span><span><span>的</span></span><span><span>事实存在</span></span><span><span>，法律就不再认为这是</span></span><span><span>“</span></span><span><span>影响力</span></span><span><span>”</span></span><span><span>，而是实实在在的</span></span><span><span>“</span></span><span><span>职务便利</span></span><span><span>”</span></span><span><span>。</span></span></p><p><span><span>二</span></span></p><p><span><span>下面我们再聊聊大家最关注的，</span></span><span><span>“同罪同罚、同标同判”到底怎么个同法。</span></span></p><p><span><span>之前的标准只有民营企业职务犯罪额度达到公职人员的两倍和五倍，才能立案或者升档。</span></span></p><p><span><span>也就是说，同样贪一笔钱，公职人员</span></span><span><span>3</span></span><span><span>万就立案，民企员工得</span></span><span><span>6</span></span><span><span>万；同样是</span></span><span><span>“</span></span><span><span>数额巨大</span></span><span><span>”</span></span><span><span>，国企领导</span></span><span><span>20</span></span><span><span>万就够升档，民企高管得捞</span></span><span><span>100</span></span><span><span>万。</span></span></p><p><span><span>中间那</span></span><span><span>80</span></span><span><span>万的</span></span><span><span>“</span></span><span><span>安全区</span></span><span><span>”</span></span><span><span>，是旧法律留给民企员工的</span></span><span><span>“</span></span><span><span>灰色福利</span></span><span><span>”</span></span><span><span>。</span></span></p><p><span><span>为什么会有这种差别？</span></span></p><p><span><span>旧解释的理论是：公职人员掌握的是公权力，损害的是国家公信力，所以要从重。民企员工损害的是老板的私人财产，属于</span></span><span><span>“</span></span><span><span>民事纠纷的升级版</span></span><span><span>”</span></span><span><span>，所以可以轻。</span></span></p><p><span><span>我们就以</span></span><span><span>十年以上重罪的门槛</span></span><span><span>来举例，</span></span><span><span>公职人员贪</span></span><span><span>300</span></span><span><span>万，十年起步，可以到无期甚至死刑。民企员工贪</span></span><span><span>14</span></span><span><span>00</span></span><span><span>万</span></span><span><span>，</span></span><span><span>在很多地方，仍然只算</span></span><span><span>“</span></span><span><span>数额巨大</span></span><span><span>”</span></span><span><span>，三到十年。</span></span></p><p><span><span>要判十年以上，你得奔着</span></span><span><span>1500</span></span><span><span>万去。</span></span></p><p><span><span>现在好了，一碗水端平</span></span><span><span>了</span></span><span><span>：所有人，</span></span><span><span>3</span></span><span><span>万入刑。</span></span><span><span>数额特别巨大的标准，也跟公职人员完全对齐。民企腐败的惩罚力度，一夜之间翻了好几倍。</span></span></p><p><span><span>但在这里要特殊说明的是，不是所有罪名都完全对齐。</span></span></p><p><span><span>最高刑期还是差了一档。</span></span></p><p><span><span>贪污罪、受贿罪，最高可以判</span></span><span><span>死刑</span></span><span><span>。</span></span><span><span>职务侵占罪、非国家工作人员受贿罪，最高是无期徒刑</span></span><span><span>。</span></span></p><p><span><span>差了一个死刑。</span></span></p><p><span><span>为什么？</span></span></p><p><span><span>法理上的解释是：公职人员贪污、受贿，不仅侵犯财产权，还严重损害国家公信力和政治基础，性质更恶劣。民企员工侵占，主要侵犯的是私有财产权。</span></span></p><p><span><span>那么，这个差距合理吗？有争议。至少目前，这个差异还存在。</span></span></p><p><span><span>三</span></span></p><p><span><span>上面聊的都是明面上的金额与判罚。但真正让反腐部门头疼的，从来不是那些明目张胆往兜里塞钱的人。</span></span></p><p><span><span>2026</span></span><span><span>年第一季度查出来的腐败案子里，</span></span><span><span>隐</span></span><span><span>性</span></span><span><span>腐败</span></span><span><span>占比居然超过</span></span><span><span>60%</span></span><span><span>，退休人员涉案的比例更是涨到了</span></span><span><span>38.5%</span></span><span><span>。</span></span></p><p><span><span>隐性</span></span><span><span>腐败</span></span><span><span>已经成为主流。</span></span></p><p><span><span>啥是</span></span><span><span>隐性</span></span><span><span>腐败？</span></span></p><p><span><span>很多人觉得：一条中华</span></span><span><span>500</span></span><span><span>块，一瓶茅台</span></span><span><span>3000</span></span><span><span>块，逢年过节收两条，是人情。能出什么事？</span></span></p><p><span><span>那你就错了。</span></span></p><p><span><span>新规里说得</span></span><span><span>很清楚</span></span><span><span>，</span></span><span><span>只要是有财产价值的物品，全部折算成人民币。</span></span></p><p><span><span>一条烟</span></span><span><span>5</span></span><span><span>00</span></span><span><span>，一瓶酒</span></span><span><span>3000</span></span><span><span>，在法律眼里，跟你直接收了</span></span><span><span>3500</span></span><span><span>块现金，没有任何区别。</span></span></p><p><span><span>而且</span></span><span><span>小额会累计</span></span><span><span>。</span></span></p><p><span><span>你以为一次只收几百块不叫事？新规第十三条：多次受贿未经处理的，累计计算。</span></span></p><p><span><span>你今天收</span></span><span><span>500</span></span><span><span>，明天收</span></span><span><span>800</span></span><span><span>，后天收</span></span><span><span>1000</span></span><span><span>，一年下来超过</span></span><span><span>3</span></span><span><span>万，全部算进去。</span></span></p><p><span><span>累计到</span></span><span><span>3</span></span><span><span>万，就是</span></span><span><span>“</span></span><span><span>数额较大</span></span><span><span>”</span></span><span><span>；累计到</span></span><span><span>100</span></span><span><span>万，就是</span></span><span><span>“</span></span><span><span>数额巨大</span></span><span><span>”</span></span><span><span>。</span></span><span><span>到时候不仅要开除公职，还要判刑、交罚金。</span></span></p><p><span><span>以前很多人玩</span></span><span><span>“期权腐败”：在位时帮人办事，口头约定退休后再给钱。退休了，觉得安全了，收一笔大的。</span></span></p><p><span><span>新规第十五条：</span></span><span><span>辞职或者退休后三年内收受原请托人财物，且与其原职权有直接关联的，以受贿论处。</span></span></p><p><span><span>而且不管你退没退休，大数据会拉你家所有资产的流水，减去合法工资和投资收益，差额超过</span></span><span><span>3</span></span><span><span>万，你就要解释来源。解释不清？那就是受贿。</span></span></p><p><span><span>当然，有的受贿非常隐蔽。</span></span></p><p><span><span>比如</span></span><span><span>低价购买股票，然后高价卖出。或者说，送虚拟产品，数字货币，股权。甚至还有预期期权和预期工资</span></span><span><span>，</span></span><span><span>以及与合法财产共同转化的。</span></span></p><p><span><span>这些产品该如何定性</span></span><span><span>？</span></span><span><span>过去，这都是扯皮的重灾区。</span></span></p><p><span><span>就以著名的赃物青眼白龙卡举例，由于该卡牌缺乏证书且真伪无法完全核实，评估价仅为</span></span><span><span>100</span></span><span><span>元，起拍价为</span></span><span><span>80</span></span><span><span>元。最后居然被拍到</span></span><span><span>8732</span></span><span><span>万。虽然最后拍卖被法院终止，但实际上该卡牌价值也在上万元。</span></span></p><p><span><span>我们可以看出，这些</span></span><span><span>产品的价值认定不清晰。</span></span></p><p><span><span>再就是</span></span><span><span>数字货币和股权</span></span><span><span>，</span></span><span><span>这类物品</span></span><span><span>价值</span></span><span><span>同样非常</span></span><span><span>不确定。</span></span><span><span>2017</span></span><span><span>年</span></span><span><span>，</span></span><span><span>就出现过使用比特币行贿</span></span><span><span>、</span></span><span><span>结果比特币价值暴涨，导致涉案金额水涨船高的事情。但反过来，一些拿了股权的最后一路下跌，导致行贿金额大大缩水。</span></span></p><p><span><span>这些该如何计算</span></span><span><span>？</span></span></p><p><span><span>现在</span></span><span><span>新规定就明确</span></span><span><span>规定了，以上这些，一律按照</span></span><span><span>购入价值计算。</span></span></p><p><span><span>然后就是古董，古董先鉴定后评估，同时考虑行贿约定价值。</span></span></p><p><span><span>同样说个</span></span><span><span>现实的案例，某领导收过一个古董花瓶，违规批地，当时说的价值一千万，结果鉴定出来是假货，一下就卡</span></span><span><span>住</span></span><span><span>了。最后以职务便利起诉，弱化了受贿。</span></span></p><p><span><span>但是在新的解释中，哪怕是假的，也按行贿方的购买值计算。</span></span></p><p><span><span>最后是</span></span><span><span>合法财产共同转化。</span></span></p><p><span><span>比如，你花</span></span><span><span>10</span></span><span><span>万买了一套</span></span><span><span>20</span></span><span><span>万的房子，那么其中</span></span><span><span>10</span></span><span><span>万是合法资产，剩下</span></span><span><span>10</span></span><span><span>万则是受贿款。如果涨了一倍，就按受贿</span></span><span><span>20</span></span><span><span>万算。同时，</span></span><span><span>期</span></span><span><span>权和预期工资哪怕没有拿到手，只要有受贿事实，就按照预期值计算。</span></span></p><p><span><span>可以说，今天的反腐新解释，是对过去案件的深度总结，也是对我国反腐斗争的经验的归纳。</span></span></p><p><span><span>总结起来，就是魔高一尺道高一丈。既</span></span><span><span>反映了我国对于民营企业腐败的关注，也反映</span></span><span><span>了腐败隐蔽性的问题。</span></span></p><p><span><span>四</span></span></p><p><span><span>最后提个问题，反腐反了这么多年，为什么偏偏现在出台新规？</span></span></p><p><span><span>其实原因不复杂，因为这些年的腐败手段，已经超出旧法律的边界了。</span></span></p><p><span><span>旧司法解释是哪一年的？</span></span><span><span>2016</span></span><span><span>年。那一年，抖音还没火，比特币还没疯，“虚拟货币”“期权”“数字藏品”这些词，老百姓听都没听过。</span></span></p><p><span><span>而现在，</span></span><span><span>民营企业的贪腐是花样百出，问题不断。</span></span></p><p><span><span>核心分为互联网腐败治理需求和制造业腐败治理需求。</span></span></p><p><span><span>先说互联网</span></span><span><span>。</span></span><span><span>在互联网接入千家万户之后，互联网大厂的腐败很多时候跟黑灰产业是强绑定的，特别是那些需要流量</span></span><span><span>和</span></span><span><span>推广的产业，一直是互联网反腐的重灾区。</span></span></p><p><span><span>大家可能对灰产</span></span><span><span>的严重性没有直观概念</span></span><span><span>。</span></span><span><span>说小一点，在互联网责任压实到公司的情况下，</span></span><span><span>“违规广告扩散”这一项，就足够把公司干废</span></span><span><span>；</span></span><span><span>说严重一点，推广的赌博广告，不知道骗了多少老百姓的血汗钱啊。</span></span></p><p><span><span>民企腐败，危害的绝不仅仅是企业个体。当企业足够大时，它腐蚀的是整个经济环境。</span></span></p><p><span><span>那为什么民企腐败这么猖獗？</span></span><span><span>跟过去定罪太轻，有直接关系。</span></span></p><p><span><span>《中国民营企业腐败犯罪研究报告（</span></span><span><span>2025</span></span><span><span>）》显示，民企犯罪里，职务侵占、非公受贿、挪用资金这三项，占了</span></span><span><span>70%</span></span><span><span>以上。</span></span></p><p><span><span>而五年以下有期徒刑的，占了</span></span><span><span>83.5%</span></span><span><span>，缓刑率接近</span></span><span><span>50%</span></span><span><span>。</span></span></p><p><span><span>翻译一下：在民企搞腐败，调查难，判得轻，低风险、高回报。换了谁，胆子都得大三分。</span></span></p><p><span><span>同样是真实案例。</span></span><span><span>某互联网大厂，负责安全策略的人员，向外泄露内部安全策略信息，导致赌博网站广告得以大规模绕过审核、进行线上传播，其本人前后非法获利上百万元。在案件移交检察机关前夜，这名员工直接跑到了缅北。</span></span></p><p><span><span>再看制造业。同一份报告显示，制造业企业腐败违法，占了总数的</span></span><span><span>44%</span></span><span><span>。</span></span></p><p><span><span>这背后有深刻的历史原因。</span></span></p><p><span><span>过去大量民企，根本走不到司法程序。真正建立起内部审计、监察系统的民企，凤毛麟角。</span></span></p><p><span><span>为什么？因为中国很多民企，骨子里带着一种</span></span><span><span>“</span></span><span><span>大家一起打天下</span></span><span><span>”</span></span><span><span>的草莽气质。</span></span></p><p><span><span>企业的高管，往往是老板的亲戚、老乡、老部下。他们的逻辑是：你老板赚大钱，我兄弟帮你卖命，我吃点喝点拿点，那不是天经地义吗？</span></span></p><p><span><span>但时代变了。</span></span></p><p><span><span>现在越来越多的私营企业，变成了股份制公司。这时候，高管再侵占公司利益，就不再是</span></span><span><span>“</span></span><span><span>老板和兄弟的内部矛盾</span></span><span><span>”</span></span><span><span>了，而是直接侵害全体股东权益的问题。</span></span></p><p><span><span>股份制企业，往往是有投资潜力的，是中国潜力经济的重要一部分。所以新规保护的不只是股东，更是给整个潜力经济护航。</span></span></p><p><span><span>你可能会想：腐败都是高层的事，跟我基层员工没关系。</span></span></p><p><span><span>实际上，</span></span><span><span>32.3%</span></span><span><span>的民营企业犯罪，来自会计、业务员等基层岗位人员。</span></span></p><p><span><span>这也是本轮司法解释一定要降低犯罪门槛的原因。</span></span></p><p><span><span>所以，从小视角来看，民营企业腐败似乎只是企业内部的利益纠纷；但如果放到整个市场经济的角度来看，它侵蚀的其实是整个市场的活力，破坏的是公平竞争的基础。</span></span></p><p><span><span>而一个市场如果长期由这样一套逻辑支配，最后受损的，就绝不会只是某一家企业，而是整个经济环境本身。</span></span></p><p><span><span>所以，新的反腐解释，对应的是新的经济发展环境。</span></span></p><p><span><span>不是时代跟你过不去，而是规则，终于跟上了时代的脚步。</span></span></p><p><span><span>文章的最后，补充一句。</span></span></p><p><span><span>很多人看完</span></span><span><span>文章</span></span><span><span>，可能会害怕</span></span><span><span>。</span></span></p><p><span><span>其实没必要</span></span><span><span>怕。法律的完善，从来不是为了</span></span><span><span>针对</span></span><span><span>普通人，而是为了</span></span><span><span>将</span></span><span><span>那些长期钻空子的腐败分子</span></span><span><span>绳之以法</span></span><span><span>。</span></span></p><p><span><span>对于绝大多数守法打工人来说，只需要记住三条：</span></span></p><p><span><span>不管谁给钱、给物、给卡，只要跟你手中的权力（哪怕是经手权、建议权、审核权）相关，一律拒绝。拒绝不了的，上报公司监察部门，或者在</span></span><span><span>48</span></span><span><span>小时内退回并留下记录。</span></span></p><p><span><span>不要相信</span></span><span><span>“</span></span><span><span>小额没事</span></span><span><span>”“</span></span><span><span>就这一次</span></span><span><span>”“</span></span><span><span>大家都这么干</span></span><span><span>”</span></span><span><span>。新规有累计制、有追溯期、有大数据。</span></span></p><p><span><span>如果你已经收了，累计超过</span></span><span><span>3</span></span><span><span>万，建议在</span></span><span><span>2026</span></span><span><span>年</span></span><span><span>5</span></span><span><span>月</span></span><span><span>1</span></span><span><span>日之前主动向公司说明、退赃、争取内部处理。一旦新规落地，就是刑事立案，没有回头路。</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3eteUl1pEYQW36IkHa2jNyuH.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 时政</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ed8718d419f50beb7381fe?channel_id=6805170d303fabc7418d8d04">https://lingowhale.com/reader/web/69ed8718d419f50beb7381fe?channel_id=6805170d303fabc7418d8d04</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

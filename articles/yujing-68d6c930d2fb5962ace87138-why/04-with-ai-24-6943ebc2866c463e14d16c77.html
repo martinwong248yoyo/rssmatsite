@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>with简里里：AI 24小时都在，对心理健康是个灾难</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 商业WHY酱-播客</div>
+                    <h1>with简里里：AI 24小时都在，对心理健康是个灾难</h1>
+                    <div class="meta">
+                        <span>商业WHY酱</span>
+                        <span>Thu, 18 Dec 2025 07:08:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/6943ebc2866c463e14d16c77?channel_id=68d6c930d2fb5962ace87138">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <div>杨轩</div>
+            <p>欢迎收听商业外教，我是杨轩。</p>
+            <p>让我们一起来向世界多问几个为什么，在这个快速变化、信息爆炸的世界，挑选你不容错过的商业现象，了解以不变应万变的本质逻辑。</p>
+            <p>hello， 欢迎来到商业外讲，我是杨轩，一个观察人类在各种风口反复横跳的主编。</p>
+            <p>啊，蔡康永啊，今年曾经在一档节目中提到，他的一位朋友呢，曾经从噩梦中醒来，然后就把这个噩梦告诉了 AI。</p>
+            <p>AI 呢，非常详尽地帮他分析了这个噩梦映照的现实压力是什么。</p>
+            <p>但是枪勇说说，如果他的这位朋友跟他来讲这场噩梦啊，他说谁要理他这些烂问题啊。</p>
+            <p>然后呢，由此他就分析出，他说人类也许再也没有办法离开 AI 了。</p>
+            <p>其实呢，我最近跟 AI 聊天也有点沉迷，那我跟他聊什么呢？</p>
+            <p>其实我跟他在聊，说我为什么拖着一直不更新我的这个播客，然后聊我的拖延症。</p>
+            <p>而这期节目呢，能够上线没有被拖延得更久，也要多写 AI，因为 AI 确实切中了我心中的一些心理层面的问题，是在他的建议下，我才能更快地把这期节目上线上来。</p>
+            <p>过去有事呢，啊，我可能会想找朋友聊一聊，但现在有事呢，我会想找 AI 聊聊。</p>
+            <p>就是刘震云，在他的小说一句顶一万句里，中间有一个主角，他又特别喜欢找他的另一个朋友聊天，就是因为他觉得他这朋友说的话就给的主意特别正，跟这个人呢能说得着。</p>
+            <p>那现在这个说得着的角色，我觉得日渐地变成了 AI，就是 AI， 它不会表现得不耐烦，它不会像我的有些朋友跟我说，说哦，你不要把我当情绪垃圾桶哦，你就什么都可以跟 AI 说，它就一直都在。</p>
+            <p>然后他是那么的博学，而且又耐心又好脾气。</p>
+            <p>那我觉得我对 AI 的使用，已经从最开始做简单的代替搜索的查询，然后逐渐走向说讨论一些真实的事物性的问题，到甚至能够讨论心灵的困扰。</p>
+            <p>可以说 AI 正在侵入人类的心灵。</p>
+            <p>一方面呢，就是 AI 陪聊类的产品啊，我们不讨论擦边内容的问题啊，就这类产品，已经是全球用户量最大的一类 AI 应用产品。</p>
+            <p>但与此同时呢，我们能够看到说很多与此有关的社会新闻，比如说去年一个美国的14岁男孩自杀身亡，他在自杀前其实沉迷于跟 AI 角色聊天的，他的母亲在他自杀后起诉了，就是这个 AI 应用，就是 character 点， AI 是一个很头部的这个 AI 聊天应用，说这个 AI 陪伴软件让男孩成瘾，并且导致了他的心理健康恶化。</p>
+            <p>再比如说我前一段时间看到了一个社会新闻，一个中国的老年人，然后呢，他就跟 AI 聊天，然后聊自己的诗歌梦想，最后他就是扛着一麻袋自己的诗歌去去这个 AI 公司要说法，他说 AI 明明承诺了他，说要跟他一起这个出版诗歌，帮助他搞诗歌出版，但是为什么这些承诺没有兑现，他觉得 AI 欺骗了自己，但其实就是他已经混淆了 AI 的这个承诺和现实。</p>
+            <p>当 AI 侵入人类心灵的时候，它其实像一柄双刃剑，用得不好呢，人类甚至会被利器所伤。</p>
+            <p>就是我会觉得说，一方面人类未必掌握了 AI 的正确用法，另一方面呢？</p>
+            <p>众所周知， AI 是会产生幻觉的，会胡说八道的。</p>
+            <p>我也觉得我没有办法确认 AI 在心灵问题上给出的究竟是不是正确答案。</p>
+            <p>因为当 AI 就是他在聊客观事实的时候，你能知道是真还是是伪，他是不是在胡说八道。</p>
+            <p>但是当聊这种偏心灵的问题的时候，我觉得是更难分辨对错的。</p>
+            <p>因为有这个困惑，我就做了两件事情。</p>
+            <p>第一件事是我请我的记者胡湘云去做了一个选题，采访了用 AI 做心理咨询的用户和从业者。</p>
+            <p>然后发现呢，就是说 AI 提供了一个24小时的心灵树洞，人类跟 AI 这种深入心灵的对话，正在隐秘而持续而真实地在发生。</p>
+            <p>另一方面就是 AI 其实会它的问题是它会顺着人说，就是到极端情况，就是说比如说遇到一个被迫害妄想症的时候，那 AI 可能会难以识别这个症状，它甚至会加强对方的这个认知，加强这种不利的局面。</p>
+            <p>然后我做的第二件事情呢，就是说在这个选题之后，然后有了这期访谈简理里的节目，我想看看在一个专业人士的眼里，人类的心灵究竟应该怎样跟 AI 共处？</p>
+            <p>那简理里给了我很多出乎意料之外的回答。</p>
+            <p>在这呢，我先不剧透，在节目末尾，我们可以再一起对对答案，看看简历里的哪些观点给了你触动。</p>
+            <p>在这里呢，我要特别感谢记者胡祥云和36氪医疗报道组长海若静，因我的时间冲突，所以跟简理理的这次访谈是由他们两位代为主持的。</p>
+            <p>最后，再跟大家透露一下， AI 是怎么缓解了我的拖延症啊。</p>
+            <p>如果你对拖延症有一些了解，你会知道，说它是一个成因比较复杂的问题。</p>
+            <p>比如说，它可能来自于说你的情绪问题。</p>
+            <p>呃，举个例子，呃，如果我从这个节目的评论中没有得到足够的正反馈，甚至有一些负面的声音，我的情绪上可能就不支持我，让我没有动力说我对吧？</p>
+            <p>持续地快乐地去做节目，然后它可能来自于精力和时间管理的问题，比如说我除了一期播客节目之外，我还有一个当主编的正经工作，对吧？</p>
+            <p>有很多事要 balance，它可能来自于动力问题，就这个事有没有让你就是说你有一个深层的 motivation， 或者是啊动机去做？</p>
+            <p>嗯，他也可能来自于说你就是在某些地方卡住了一个什么事引发了你的焦虑，然后让你想回避，你就不断地回避，就一直在拖延，那其实这一期节目其实我就是卡住了，商业外教节目，其实从2023年这轮 AI 就是爆发开始，其实我们每年都会采访几位行业人士，呃，我今年是感觉到说今年的变化是说 AI 由于它能力的增强，它正在进入人类的真实生活。</p>
+            <p>跟简理里聊的这一期呢，其实就是基于这种感受，觉得 AI 正在深入地进入人类的真实生活，所以才约访了他。</p>
+            <p>我本来想以此为起点做个一系列的内容，嗯，但是我是在说，诶，那咱们这个系列叫什么？</p>
+            <p>然后未来怎么长期做在这个计划里，我就焦虑了啊。</p>
+            <p>AI 跟我说说我这个叫起点焦虑，然后呢，他给我的解决方案。</p>
+            <p>他最后给了我一句话，我在这里念给大家，这句话叫未来这可能会发展成一个系列，但但我现在还在路上。</p>
+            <p>那未来这类内容怎么做，然后栏目名怎么起？</p>
+            <p>也欢迎大家留言反馈。</p>
+            <p>好的，今天比较话唠，就聊到这里，接下来我们先从吴湘晕对简历里的提问开始。</p>
+            <p>这期节目</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 商业WHY酱-播客</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/6943ebc2866c463e14d16c77?channel_id=68d6c930d2fb5962ace87138">https://lingowhale.com/reader/web/6943ebc2866c463e14d16c77?channel_id=68d6c930d2fb5962ace87138</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

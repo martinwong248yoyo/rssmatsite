@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>with转转黄炜：活成闲鱼的B面，活出不可替代的自己</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 商业WHY酱-播客</div>
+                    <h1>with转转黄炜：活成闲鱼的B面，活出不可替代的自己</h1>
+                    <div class="meta">
+                        <span>商业WHY酱</span>
+                        <span>Thu, 22 Jan 2026 22:59:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/697304d52fdd42084a008336?channel_id=68d6c930d2fb5962ace87138">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <div>杨轩</div>
+            <p>嗨，欢迎来到商业外教，我是杨轩，一个观察人类在各种风口反复横跳的主编。</p>
+            <p>这一期呢，想跟大家聊聊二手经济。</p>
+            <p>啊就二手经济过去几年如火如荼，其实大家已经能看到说主流电商基本不增长了，但二手交易过去几年呢，每年都还保持着双位数的增长，是一个很难得的事情。</p>
+            <p>然后其中最热闹的呢，就是说大家能看到说年轻人在闲鱼上找跑腿，找 coser， 然后买券，就是买咖啡买奶茶，就一切你能想到的事，a 想省钱，然后你就会去说二二手交易市场，过去几年闲鱼它的就是热闹程度和这个流量可能都来自于这些，热火朝天的，就是各种各样的玩法，然后它的月活跃用户数在2025年其实也公布过，已经超过了2亿。</p>
+            <p>但是就是这么生龙活虎的个人交易市场，转转却说它要关停，这个是为什么？</p>
+            <p>因为转转是一家二手市场里面非常老的老公司，然后已经有10年的历史，它也是做 CTO c 交易起家的，但其实在过去十年，他已经长成了跟咸鱼非常不一样的样子，包括说他其实做得很重，他找了很多的，就是像手机的呃，检验师，然后他在过去十年租了两次收购，第一次收购了深圳的找靓机，第二次收购了红布林。</p>
+            <p>以及说他开了很多的线下店，包括就是他在北京有一家很有意思的店，在友谊商店，叫超级转转，是一个超大型的啊二手奢侈品的集合店。</p>
+            <p>就是为什么转转会变成这样，转转为什么会选择走这条路？</p>
+            <p>嗯，这是个很有意思的事情。</p>
+            <p>所以这一期的嘉宾我们邀请到了转转的创始人，嗯兼 CEO 黄伟。</p>
+            <p>他呢，清华毕业之后加入百度做产品经理，再之后去58当了副总裁，然后创办了转转这个业务。</p>
+            <p>一转眼转转10年了，黄伟做这个业务也十年了，他关于说怎么去做一家独特的公司，有很多他自己特别的思考。</p>
+            <p>那我们现在就开始这期节目，就是一晃转转已经10年了啊，你们最近不是有一个战略转型吗？</p>
+            <p>就是把 C2C 的自由交易市场关掉。</p>
+            <p>那我其实发现就是有网友是这么评论的啊，说转转关停 C2C 这个业务啊，呃闲鱼梦里都要笑醒了。</p>
+            <p>唉，这个决策你们你们没有说觉得不舍得吗？</p>
+            <p>你们怎么就能做出这么一个决策呢？</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 商业WHY酱-播客</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/697304d52fdd42084a008336?channel_id=68d6c930d2fb5962ace87138">https://lingowhale.com/reader/web/697304d52fdd42084a008336?channel_id=68d6c930d2fb5962ace87138</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>「适我主义」，正在改写年轻人的理想家</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 拆解新消费</div>
+                    <h1>「适我主义」，正在改写年轻人的理想家</h1>
+                    <div class="meta">
+                        <span>SocialBeta</span>
+                        <span>Sun, 26 Apr 2026 03:32:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ed87d3f3575d3aff2ac657?channel_id=68d3ec287c1c9536cd1cb7b8">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3rfRco18VSEL2a70NV1onYbC.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgb(136, 136, 136);font-weight:400">栏</span><span style="font-weight:400;color:rgb(136, 136, 136)">目主编推</span><span style="font-weight:400;color:rgb(136, 136, 136)">荐</span><span style="font-weight:400;color:rgb(136, 136, 136)">：</span><span style="color:rgb(136, 136, 136);font-weight:400">①「东方 Gelato」里，看见野人先生的「野」心 </span><span style="font-weight:400;color:rgb(136, 136, 136)"><span>② @所有人，请为地球一键暂停！</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><strong><span style="color:rgb(136, 136, 136);font-weight:400">文末扫码添加 SocialBeta 趋势小助手，备注【0426】获得本期部分精选报告合集。</span></strong></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/41l7gmVvQoO2eKXZK5wnHo.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2eiXwA2C4aXP2SHwnd1znzHo.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></span></p><p><span><span style="color:rgb(0, 0, 0)"><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247744812&amp;idx=1&amp;sn=a0cf9bdbfc603c4d5b41598cad83a3f0&amp;scene=21#wechat_redirect"><span style="color:rgb(33, 134, 244);font-weight:bold">「东方 Gelato」里，看见野人先生的「野」心</span></a></span></span></p><p><span style="color:rgb(0, 0, 0)"><span style="font-weight:bold">推荐理由：</span>前不久，野人先生在品牌成立 15 周年之际，将全球首家旗舰店落地上海东湖路，并以此为起点，开启了一场系统性的品牌焕新，提出「东方 Gelato」的核心主张。</span></p><p><span style="color:rgb(0, 0, 0)">一直以来，野人先生都在断为迈向这一全新品类，创造差异化突围的机会，但随着市场进入新阶段，挑战也随之涌现：如何为消费者提供持续复购的充分理由，并以更稳固的品牌力支撑价格与价值之间的平衡，或将成为野人先生下一阶段需要面对的重要课题。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247745008&amp;idx=1&amp;sn=4872c76d60a2e04ef357eaca84614bc7&amp;scene=21#wechat_redirect"><span style="color:rgb(33, 134, 244);font-weight:bold">@所有人，请为地球一键暂停！</span></a></span></p><p><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">推荐理由</span></span><span style="color:rgb(0, 0, 0);font-weight:400">：今年世界地球日，天猫旗下 ESG 专项 IP「天猫绿动生活」联合 a2奶粉推出了一组创意海报。在这个鼓励大家「动起来」的节点，却以巨大的「暂停键」作为视觉中心符号，倡导大家「暂停破坏，续写生机」。</span></p><p><span style="font-weight:400;color:rgb(0, 0, 0)">事实上，绿色营销从来不是单点单次的节点狂欢，而是一场考验长期定力与践行深度的长跑。而通过此次创意我们不难看出，天猫绿动生活正持续推动 ESG 相关议题，依托平台的行动力不断深化实践，并在与用户及社会的良性互动中让更多绿色消费真正融入日常，构筑起平台、品牌与社会共生共荣的可持续未来。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1xHMhG3knrxE4oUPAk4ElOyb.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span><a href="http://mp.weixin.qq.com/s?search_click_id=4757964337594717625-1777105583155-1417200409&amp;__biz=MzA5NjkzMjc1OA==&amp;mid=2649451231&amp;idx=1&amp;sn=631bc0e3925350de35c8ad64f6f8898e&amp;chksm=89aa409508d81f9b084d3f8915ebd43b9e8886a6c0680457d13725d3bde61a261a85f9201ced&amp;scene=21#wechat_redirect"><span style="color:rgb(33, 134, 244);font-weight:bold">「适我主义」，正在改写年轻人的理想家</span></a></span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">小红书对外发布「适我主义」成为 2026 年度居住趋势，并同步推出《家的 100 个适我主义提案》。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">小红书平台数据显示，「适我主义」相关话题已累计获得超过 626 万讨论，浏览量超过 20.4 亿。「适我主义」这一趋势的发布，标志着当代居住文化正从照搬「奶油风」「中古风」等标准化的审美模板，转向以个人真实需求、习惯和情绪为核心的居住形态。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">「适我主义」萌芽于小红书社区海量的「适 X 化」改造内容。从关注特定人群的适童化、适老化、适女化，到针对生活习惯的适懒化、适宠物化，其共同核心是空间对每一个居住生命体的尊重与适配。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">大家开始把「我」放在第一位，从「我」的标准出发，进行居住风格的选择。在《家的100个适我主义提案》中，这种「主体性」的回归，在具体场景中得到了验证。以提升生活效率、追求物理舒适的「适懒化」为例，过去一年，小红书关于「去家务化」的新发布笔记数同比增长了 131%。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/26V0HM3pULKr2CJFdr4B1nlM.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="font-weight:400;color:rgb(0, 0, 0)">其次是「平等居住」理念的落地。「适宠化」「适童化」搜索量分别增长 680% 和 500%，有孩家庭打造「一米高儿童视角」，养宠家庭安装猫咪「任意门」等，成为越来越普遍的家装实践。「适老化」搜索增长 149%，而大众对「适老」的理解，正从「基础安全」走向「身心适配」。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">此外，精神需求也在重构居住空间的逻辑。在小红书上，「家是我的能量场」搜索增长 3283%，许多用户为自己留出「逃避间」用于放空。与此同时，2025 年「痛屋」笔记数量增长 250%，可以看到，用户将二次元、手办等兴趣转化为物理空间的存在，建立专属情绪补给站。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1AwblLO08Q52BsA9H1QymIF.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 0, 0);font-weight:400">值得留意的是，「适我主义」的流行不仅限于家居领域，更折射出大众价值观的深层变迁。例如，过去半年颇为流行的「精神丰容」，便是「适我」趋势的另一种体现。也是在这一普遍的情绪流向下，拼豆、钩织等「适我」兴趣兴起，用户通过这种高正反馈的手作行为，在不确定的环境里，重获对生活的掌控感和满足感。</span></p><p><span style="font-weight:400;color:rgb(0, 0, 0)"><a href="https://mp.weixin.qq.com/s?__biz=MzUxNjYzMDQ5OA==&amp;mid=2247486591&amp;idx=1&amp;sn=35d3bb9c526ae8ea22be583dfbb52a07&amp;scene=21#wechat_redirect"><span style="color:rgb(33, 134, 244);font-weight:bold">2026 欧美社交趋势观察报告：把握欧美社会情绪的痛点与燃点</span></a></span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">袤则咨询自 2020 年以来，每年发布《大社交趋势观察报告》，基于这一 IP，在今年以欧美市场为观察坐标，推出《欧美大社交趋势观察报告》，提出 10 大关键趋势，解析全球背景下那些大众情绪、社会心态的共性与差异。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/CrOvh2mVfROW2pW3211FVN.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(34, 34, 34);font-weight:400"><span style="font-weight:400;color:rgb(34, 34, 34)">● </span></span><span style="color:rgb(0, 0, 0);font-weight:400">价值自证：过去人们的身份认同通过职位、收入、社会地位获取，今天则必须通过创造、输出，主动证明自己的能力与价值。</span></p><p><span style="color:rgb(34, 34, 34);font-weight:400"><span style="font-weight:400;color:rgb(34, 34, 34)">● </span></span><span style="color:rgb(0, 0, 0);font-weight:400">活人感溢价：在 AI 生成内容和高精度滤镜泛滥的时代，人们开始追求带有瑕疵、混乱但充满「活人感」的真实内容。</span></p><p><span style="font-weight:400;color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34);font-weight:400">● </span></span><span style="color:rgb(0, 0, 0);font-weight:400">后普世主义：全球社群都在自豪地展示自己的文化传统，多元化营销带来增长机会。</span></p><p><span style="font-weight:400;color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34);font-weight:400">● </span></span><span style="color:rgb(0, 0, 0);font-weight:400">工具化愤怒：在社交媒体的「眼球经济」之下，愤怒不再仅仅被当作一种情绪，而是一种高效吸引流量、聚合身份、动员行动的工具。愤怒使得连接更加迅速。</span></p><p><span style="font-weight:400;color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34);font-weight:400">● </span></span><span style="color:rgb(0, 0, 0);font-weight:400">可爱侵略：面对高压、不确定性加剧的社会环境，消费者正通过「可爱」「童趣」与「奇思妙想」的视觉与触觉设计，为日常生活注入低成本的情绪价值。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/aM7it2uKEw72GfhL24Bs3H6.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="font-weight:400;color:rgb(34, 34, 34)"><span style="font-weight:400;color:rgb(34, 34, 34)">● </span></span><span style="color:rgb(0, 0, 0);font-weight:400">如今，许多地缘冲突等宏观现实事件被转化为可交易的金融资产，实则反映出个体结构性的无力感。这提示品牌根据这一心理，提升用户真正的「参与感」，让用户获得对于品牌的「心理所有权」。</span></p><p><span style="font-weight:400;color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34);font-weight:400">● </span></span><span style="color:rgb(0, 0, 0);font-weight:400">风控亲密：许多进入亲密关系的人展现出高度理性、谨慎的姿态，亲密关系在如今的舆论中被拆解成可能导致自我崩塌的「安全隐患」。这提示品牌关注个体、成长叙事，并且关注女性友谊的叙事潜力。</span></p><p><span style="color:rgb(34, 34, 34);font-weight:400"><span style="font-weight:400;color:rgb(34, 34, 34)">● </span></span><span style="font-weight:400;color:rgb(0, 0, 0)">男性气质塑造：关于男性气质「旧榜样」的坍塌与真空出现，这在品牌叙事中指引出一条「去性别化」叙事的路径，相比起「表演」某种气质，摒弃刻意完美、展现真实形象更能击中当下的消费者。</span></p><p><span style="color:rgb(34, 34, 34);font-weight:400"><span style="color:rgb(34, 34, 34);font-weight:400">● </span></span><span style="font-weight:400;color:rgb(0, 0, 0)">低成本生活：个体在面对高压高成本的现代生活时，主动选择简化，降低消费，并且更加注重心理和身体的健康。</span></p><p><span style="color:rgb(34, 34, 34);font-weight:400"><span style="color:rgb(34, 34, 34);font-weight:400">● </span></span><span style="font-weight:400;color:rgb(0, 0, 0)">迟熟青年：年轻一代主动延后传统的成年责任，如经济独立、组建家庭等。这对品牌而言，意味着在叙事中拒绝宏大目标和压力，转而关注提供「高安全感」的环境与体验，成为年轻人的精神避风港。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=MjM5NTgyNzI5MQ==&amp;mid=2657663930&amp;idx=2&amp;sn=24e1e72020e3f00eb7484fe1f655c34e&amp;scene=21#wechat_redirect"><span style="font-weight:bold;color:rgb(33, 134, 244)">英敏特 2026 五一消费洞察前瞻：开启「轻负担」休闲模式</span></a></span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">英敏特发布《2026 五一消费洞察前瞻》，指出五一消费的主线是低成本切换节奏，短半径、内容密度高的出游成为主流，本市微度假紧随其后。</span></p><p><span style="font-weight:400;color:rgb(0, 0, 0)">从数据看，短途周边游是 2026 年五一假期计划最主流的选择，同时也有三成左右的被访者选择在本市活动、国内中长线旅行或是在家休息，且仍有相当比例的人尚未做出具体安排。这种分散而自由的选择结构，反映出五一假期安排由个人状态与即时需求驱动的弹性特质。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/opYhr3AW45h12qET53WLXZl.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="font-weight:400;color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34);font-weight:400">● </span></span><span style="font-weight:400;color:rgb(0, 0, 0)">低线 30+ 人群五一出游更积极，动机更偏向放松与家庭。三线及以下城市的 30-39 岁出游意愿尤为突出，尤其集中在短途周边游与国内中长线游上。他们更倾向于将旅行视为一种放松身心、经营家庭关系的方式。相较之下，一线城市的 30+ 人群则在个人成长及社交拓展导向的出游动机上占比相对更高。</span></p><p><span style="color:rgb(34, 34, 34);font-weight:400"><span style="font-weight:400;color:rgb(34, 34, 34)">● </span></span><span style="color:rgb(0, 0, 0);font-weight:400">五一海岛亲子游更走俏：相较总体人群，五一亲子游对海滨/海岛的偏好明显更高，源于其对亲子出行的高度适配性，行程节奏相对简单、活动空间集中，减少转场与排队消耗。同时，海岛自然环境本身具备强探索性，对孩子而言是天然的「游乐场」。</span></p><p><span style="color:rgb(34, 34, 34);font-weight:400"><span style="color:rgb(34, 34, 34);font-weight:400">● </span></span><span style="font-weight:400;color:rgb(0, 0, 0)">不同于 30+ 人群更乐于向外走，年轻人五一假期更倾向宅家回血。18-29 岁的年轻人有 34% 选择宅家休息娱乐，远高于其他年龄段，且与选择短途周边游或本市活动的占比趋近。而宅在家的偏好也驱动了年轻人在假期中增加线上娱乐与内容付费及数码产品/配件消费的意愿。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">玩乐主旋律之外，五一作为一个属于春天的小长假，消费结构也和春天的心理取向高度呼应：被访者五一期间会增加的支出并不局限于旅行，还同步延展至餐饮</span><span style="color:rgb(0, 0, 0);font-weight:400">美食、娱乐体验、服饰鞋包、美妆个护等多个品类，体现出春季心理状态向五一消费决策的自然外溢。</span></p><h2><span style="color:rgb(0, 0, 0);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=MzI1MTQ1MTQ2MQ==&amp;mid=2247533451&amp;idx=1&amp;sn=b806eec034b1c04a51e91e7aee54b360&amp;scene=21#wechat_redirect"><span style="color:rgb(33, 134, 244);font-weight:bold">2026 美奢人群消费洞察报告：从物质购买，转向体验享受</span></a></span></h2><p><span style="color:rgb(0, 0, 0);font-weight:400">哔哩哔哩联合凯度（Kantar）共同发布《观演之间——2026 bilibili 美奢人群消费洞察报告》，对美奢人群的特点与内容消费路径进行了深入剖析，助力高端美妆和奢侈品品牌洞悉市场变化，并与消费者建立情感链接与深度心智。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">报告指出，当下支撑高消费基本盘的「美奢人群」并非单一标签的「有钱人」，而是正在经历结构性演变的多层次群体——传统高净值人群、新兴年轻新贵、品质新中产等多圈层共生共存。其消费需求也呈现从外在彰显转向文化认同，从社交表达转向情绪滋养、从物质购买转向体验享受的转变。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/22ILFlCiUOW2zZICyIkmhG.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="font-weight:400;color:rgb(0, 0, 0)">具体来看，美奢人群消费支出依然保持韧性增长。凯度调研数据显示，近一年美奢人群购买过高端美妆/香水香氛占比 58%，奢侈品购买人群占 38.1%，黄金类饰品购买人群则达到 17.1%。</span></p><p><span style="font-weight:400;color:rgb(0, 0, 0)">消费近七成的高家庭收入（3w 以上/月）被访者表示，愿意为更好的品质与服务支付更高价格。</span></p><p><span style="font-weight:400;color:rgb(0, 0, 0)">在奢侈品领域，50%的消费者将「设计风格与美学」作为首要考虑因素，箱包、配饰等兼具高频使用与场景适配性的品类成为核心选择；在高端美妆领域，85% 的高家庭收入被访者年消费超过 2000 元，香水香氛等情绪性消费增速超越传统功效型消费，产品功效与真实口碑成为决策关键。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2GA2LO3xWXrf3dzsZTPvMF4.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="font-weight:400;color:rgb(0, 0, 0)">消费者越来越追求体验而非购买新的奢侈品。这一趋势表明，全球消费者正从符号消费转向「体验式享受」。这意味着，工艺与历史不再是唯一的溢价来源，品牌叙事是否足够真诚、能否引发价值观层面的深度共鸣，变得至关重要。</span></p><p><span style="font-weight:400;color:rgb(0, 0, 0)"><a href="https://mp.weixin.qq.com/s?__biz=MjM5MzkwMzg3MQ==&amp;mid=2650609596&amp;idx=1&amp;sn=1c0fe2bfa6db0986628043526ff1c478&amp;scene=21#wechat_redirect"><span style="color:rgb(33, 134, 244);font-weight:bold">2026 年亚洲消费者趋势研究：6 大应对策略构建长期优势</span></a></span></p><p><span style="font-weight:400;color:rgb(0, 0, 0)">罗兰贝格对亚洲地区，包括中国、日本、韩国、东南亚在内 11 个主要国家市场的 3500 名消费者进行了调研，聚焦关注消费者的消费情绪、各品类消费品的购买行为和驱动因素，发布《2026 年亚洲消费者趋势研究》。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">整体上，全品类消费者的购买决策由品质、价格与便利性三大核心因素驱动，合计贡献约 67% 的决策影响力。成熟价值型市场（日本、新加坡）价格敏感度持续攀升，而越南、菲律宾等增长加速型市场消费预期提升，对品质更加注重。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">奢侈品消费现已回归增长，尤其在服装、美妆与珠宝品类，有 44% 至 49% 的消费者计划增加相关支出。但奢侈品消费仍呈现显著的地域分化，增长集中于新兴市场，中国、日本、韩国等核心奢侈品市场面临增长压力。</span></p><p><span style="font-weight:400;color:rgb(0, 0, 0)">人群方面，报告在全亚洲划分出五大类消费者群体，分别为社交驱动型、传统坚守型、安全寻求型、地位塑造型和自我表达型，凸显出归属感、传统、安全感、成就感与自我表达等独特价值观。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/v7wktFEKCX2dSwh3xHcmT.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(0, 0, 0);font-weight:400">亚洲各地区市场呈现出消费格局差异，就中国市场而言，消费者对前景持谨慎乐观态度。有 60% 的人预期未来两年收入增长，这一信心体现在日常消费（如食品杂货、服饰、餐饮）的支出意愿提升，但同时也受到就业风险与经济焦虑影响。</span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">随着消费者愈发以价值为导向、情绪分化加剧，报告指出，亚洲品牌应对此实施针对性的策略布局，具体体现在：按品类实施本土化；有选择性地推进高端化，坚守价格纪律；建立品牌资产；以全渠道发展为基础；将可持续发展作为信任基石；精准、快速且以组织力为支撑落地执行。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Z3pI327VavLt0NCw1YrteE.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4mRusbv6A0t4AMtEm13pCnf.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgb(0, 0, 0);font-weight:400">本</span><span style="color:rgb(0, 0, 0);font-weight:400">周入选的有</span><span style="color:rgb(0, 0, 0);font-weight:400">京东、Moncler、珍宝珠等 7 个品牌。</span></p><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247745141&amp;idx=1&amp;sn=b6b701d3687b0ae4d9357c18d67ab500&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4lRnVv1ublO62Pb2o544scL9.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><p><span style="color:rgb(136, 136, 136)"><span style="color:rgb(136, 136, 136)"><span style="color:rgb(136, 136, 136);font-weight:400">© </span><span style="color:rgb(136, 136, 136);font-weight:400">以上所提及的报告系 SocialBeta 从公开渠道收集整理，报告内数据和观点仅供参考，不构成任何营销决策建议。</span></span></span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/13BQBe16ZVHsVkCGQxUcLf.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><section><section><section><section><section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247745100&amp;idx=1&amp;sn=f7b6d445e794a90be7cba546c8be12e6&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/5pLw73BTUw9lzhha1wkALV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section></section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247744487&amp;idx=1&amp;sn=4042d471ffb1d9ca1c25ab8753e9586a&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/eYyN31sjGcUiM0do1nwitS.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section></section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247745008&amp;idx=1&amp;sn=4872c76d60a2e04ef357eaca84614bc7&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/139O321yFrHC3WyxVByyYhh.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section></section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247744812&amp;idx=1&amp;sn=a0cf9bdbfc603c4d5b41598cad83a3f0&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4Eep5y274KbUeegor1BegA3.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section></section></section></section></section></section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/y4gNC1QXyHllbJZ3yGiTX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section><section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247745173&amp;idx=1&amp;sn=266744d60064f13e52b07b4e3aea8289&amp;scene=4#wechat_redirect"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3wJcSdSonil1wojkZ20wsF1.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></a></section></section></section></section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4vwyI21cl9KA3dOoyJhy3rV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 拆解新消费</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ed87d3f3575d3aff2ac657?channel_id=68d3ec287c1c9536cd1cb7b8">https://lingowhale.com/reader/web/69ed87d3f3575d3aff2ac657?channel_id=68d3ec287c1c9536cd1cb7b8</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

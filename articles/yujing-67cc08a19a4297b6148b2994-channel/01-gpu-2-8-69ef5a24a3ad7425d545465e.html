@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>不换GPU，性能飙升2.8倍！英伟达用软件暴打摩尔定律</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 新智元-公众号</div>
+                    <h1>不换GPU，性能飙升2.8倍！英伟达用软件暴打摩尔定律</h1>
+                    <div class="meta">
+                        <span>新智元</span>
+                        <span>Mon, 27 Apr 2026 12:15:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef5a24a3ad7425d545465e?channel_id=67cc08a19a4297b6148b2994">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <h3 style="color:rgb(34, 34, 34)"><section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4sGsUM1fn2hxfmvPL1H4bTS.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section></h3><section style="color:rgb(34, 34, 34)"><section><p></p><strong><span>【新智元导读】</span><span><span>MoE模型的稀疏激活本是优势，却常陷通信瓶颈。NVIDIA以软件为利剑，通过程序化依赖启动和全对全通信革新，在三个月内将GB200的单GPU吞吐提升2.8倍，真正释放Blackwell硬件潜力。</span></span></strong><p></p></section></section><p><span style="color:rgba(0, 0, 0, 0.9)">2026年1月8日，NVIDIA再次用硬核数据刷新AI推理的性能上限。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">英伟达官网披露：基于Blackwell架构的推理软件栈升级，让混合专家模型（MoE）的推理效率迎来「阶跃式」突破——</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">单GPU吞吐飙升2.8倍，显著降低了推理成本。</span></span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>GB200 NVL72：为MoE而生</strong></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">英伟达为何这次能只使用软件升级就实现如此显著的性能提升，这归因于MoE模型的特殊性。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">以DeepSeek-R1为例，这个6710亿参数的稀疏MoE模型，每次推理仅激活370亿参数（「稀疏激活」），看似「轻量」，实则暗藏算力挑战：专家模块间的动态路由需要高频数据交换，预填充（prefill）与解码（decode）阶段的计算负载差异大，传统架构极易因通信瓶颈或精度损失陷入「性能墙」。同时MoE架构中的多个模型需要频繁通信。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">英伟达给出的应对之法，是在本身的硬件基础上，通过软件针对性升级，从而发挥出硬件的潜力。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/GUNsc4oMLk63S5jFQifkcf.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">图1：GB200 NVL72机柜</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">GB200 NVL72机架级平台是本次突破的「物理基石」。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">它通过第五代NVLink互连72块Blackwell GPU，GPU之间具有1800GB/s双向带宽高速连接——这一设计是基于稀疏 MoE 架构模型专门进行的优化，相当于给72个「专家大脑」装上了「超高速神经突触」，让专家间的数据交换告别「拥堵」。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">软件层面的更新，首先是NVFP4四比特浮点格式。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">相比传统FP4，NVFP4通过NVIDIA自研的数值分布优化，在压缩数据量的同时，最大限度保留了模型精度（这对MoE的稀疏激活至关重要，避免因精度损失导致路由错误）。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">配合硬件级NVFP4加速单元，Blackwell让模型使用低精度计算，但却能够相比其他 FP4 格式，具有更高的准确性。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2HEIUL3ZY4wi1Llud1IkLW8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">图2：在 HGX B200 上，开启NVFP4与FP8时的吞吐量与交互性曲线对比</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">此外，「分解服务」（disaggregated serving）策略进一步释放了GB200的潜力：将预填充（计算密集型）与解码（内存密集型）分配到不同GPU组，利用NVLink Switch的灵活拓扑实现「计算-内存」解耦，避免单一资源成为瓶颈。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>软件引擎</strong></span></p><p><span style="color:rgb(0, 0, 0)"><strong>TensorRT-LLM三个月狂飙2.8倍吞吐</strong></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">如果说硬件是「基础」，软件则是「引擎调校」。NVIDIA TensorRT-LLM开源库的近期优化，让GB200 NVL72在DeepSeek-R1上的单GPU吞吐，过去三个月直接飙升2.8倍。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">具体来看，三大优化堪称「性能催化剂」：</span></span></p><section style="color:rgb(91, 91, 91)"><p><span style="font-weight:bold">1、</span><span style="font-weight:bold">程序化依赖启动（PDL） </span></p><p>通过减少内核启动延迟，让GPU「时刻待命」，尤其在低交互性（高吞吐）场景下，显著降低「空转」损耗； </p><p><span style="font-weight:bold">2、底层内核优化 </span></p><p>针对Blackwell Tensor Core的微架构特性，重构计算流水线，让每一份算力都用在「刀刃」上； </p><p><span style="font-weight:bold">3、全对全通信原语革新 </span></p><p>消除接收端中间缓冲区，直接减少数据传输的「绕路成本」——这对MoE的专家间高频通信而言，相当于减少了延迟。</p></section><p><span style="color:rgba(0, 0, 0, 0.9)">上述三项创新，使得GB200在运行DeepSeek R1时，相比2025年10月的软件版本，获得更高的吞吐量。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1u1oty3pRJC12zCNiu3hD3hr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">图3：软件更新给GB200带来的性能提升</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">随着AI从「能用」走向「好用」，用户对交互性的要求激增——聊天机器人要「秒回」，代码助手要「实时补全」，而吞吐量的上升，意味着更低的延迟。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/FcbxI27Hy5m1fmRmU4rGiae.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(0, 0, 0)"><strong>小机柜也适用，</strong></span></p><p><span style="color:rgb(0, 0, 0)"><strong>HGX B200也能跑满足DeepSeek</strong></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">并非所有场景都需要GB200 NVL72这样的包含72块显卡的「巨无霸」。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">对于风冷部署的企业或云服务商，NVIDIA HGX B200（8卡Blackwell）同样交出了惊艳答卷——其核心武器是</span><strong><span style="color:rgba(0, 0, 0, 0.9)">多token预测（MTP）</span></strong><span style="color:rgba(0, 0, 0, 0.9)">与</span><strong><span style="color:rgba(0, 0, 0, 0.9)">NVFP4</span></strong><span style="color:rgba(0, 0, 0, 0.9)">的组合拳。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">传统推理中，模型逐token生成，每一步都要等待前一步完成；而MTP通过预测多个候选token（而非单个），让GPU在一次计算中覆盖更多生成步骤，相当于在解码任务时批量处理，</span><strong><span style="color:rgba(0, 0, 0, 0.9)">「</span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)">一次思考，多步输出</span></strong><strong><span style="color:rgba(0, 0, 0, 0.9)">」</span></strong><span style="color:rgba(0, 0, 0, 0.9)">。</span></p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4F7SdhmSoc41qCvp24r8WRy.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">图4：MTP及不同精度带来的性能提升</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">实测显示，在1K/1K、8K/1K、1K/8K等多种输入输出序列组合下，MTP均显著提升了吞吐量，且交互性越高（延迟要求越严），收益越明显。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">当MTP遇上NVFP4，性能增益被进一步放大。NVFP4不仅通过四比特压缩降低内存带宽压力，更依托Blackwell的张量核心实现高效计算。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">结合TensorRT-LLM与TensorRT Model Optimizer的全栈支持，HGX B200在保持精度的前提下，吞吐曲线随MTP+NVFP4的启用持续右移——意味着在相同交互性下能服务更多用户，或在相同用户数下提供更流畅的体验。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">对企业与云服务商而言，现有Blackwell GPU通过软件升级即可获得2.8倍吞吐提升，相当于「免费扩容」，大幅延长硬件生命周期；对模型开发者，TensorRT-LLM 提供了一个高级的API。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">原生PyTorch架构给开发者提供了兼具易用性与扩展性的结果，这降低了优化门槛，让更多人能聚焦模型创新而非底层调优</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这种「不依赖换硬件就能升级性能」的能力，让英伟达在专业显卡领域的护城河相比AMD，英特尔等竞争者更深。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">Blackwell架构+TensorRT-LLM的组合，在MoE推理问题上，做到了在「高精度、低延迟、高吞吐、低成本」间的既要又要。英伟达的护城河不止是芯片，更是那套能「从石头里榨出血来」的软件生态。</span></p><p><span style="color:rgb(136, 136, 136)">参考资料：</span></p><p><span style="color:rgb(136, 136, 136)">https://developer.nvidia.com/blog/delivering-massive-performance-leaps-for-mixture-of-experts-inference-on-nvidia-blackwell/</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 新智元-公众号</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef5a24a3ad7425d545465e?channel_id=67cc08a19a4297b6148b2994">https://lingowhale.com/reader/web/69ef5a24a3ad7425d545465e?channel_id=67cc08a19a4297b6148b2994</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

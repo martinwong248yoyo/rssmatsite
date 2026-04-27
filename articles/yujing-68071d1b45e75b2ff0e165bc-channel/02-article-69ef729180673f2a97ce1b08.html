@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>第十届平遥国际电影展征片开启</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 艺术电影-电影</div>
+                    <h1>第十届平遥国际电影展征片开启</h1>
+                    <div class="meta">
+                        <span>深焦DeepFocus</span>
+                        <span>Mon, 27 Apr 2026 14:17:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef729180673f2a97ce1b08?channel_id=68071d1b2c7742c740dc6aa3">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/ZQwg63YvdHp4xdaBX1761jC.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:400;color:rgb(0, 0, 0)">第十届平遥国际电影展即日起正式面向全球征片，<span style="font-weight:bold">征片时间将持续至</span></span><span style="color:rgb(0, 0, 0)"><span style="font-weight:bold">202</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">6</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">年</span></span><span style="color:rgb(0, 0, 0)"><span style="font-weight:bold">7</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">月</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">15</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">日</span>。报名影片可登录平遥国际电影展官方网站（</span><span style="color:rgb(0, 0, 0);font-weight:400">https://www.pyiffestival.com</span><span style="color:rgb(0, 0, 0);font-weight:400">）进入影片报名通道，或点击文末</span><span style="font-weight:400;color:rgb(0, 0, 0)">“</span><span style="font-weight:400;color:rgb(0, 0, 0)">”</span><span style="color:rgb(0, 0, 0);font-weight:400">进行网上报名。</span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(0, 0, 0);font-weight:400">经平遥国际电</span><span style="font-weight:400;color:rgb(0, 0, 0)">影展艺术总</span><span style="color:rgb(0, 0, 0);font-weight:400">监、节目策划组成的选片委员会甄选，报名影片将有机会入围第</span><span style="color:rgb(0, 0, 0);font-weight:400">十</span><span style="color:rgb(0, 0, 0);font-weight:400">届平遥国际电影展官方展映单元进行展映。<span style="font-weight:bold">而在致力于发掘华语新导演的</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">“</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">藏龙</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">”</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">单元入围影片中，仍将有一部优秀影片获得</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">100</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">万元人民币现金奖励，同时将有一位优秀导演获得</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">20</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">万元人民币现金奖励</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">。</span></span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3zwL4H4gX8nwY0rX316vF2R.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:400;color:rgb(0, 0, 0)">平遥国际电影展分为展映、产业、学术、教育四大板块。其中，展映板块由四大官方展映单元组成，包括聚焦国际新导演的</span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">“</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">卧虎</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">”</span></span><span style="color:rgb(0, 0, 0);font-weight:400">单元，发掘华语新导演的</span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">“</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">藏龙</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">”</span></span><span style="color:rgb(0, 0, 0);font-weight:400">单元，展映年度重要商业电影、大师之作、年度重要电影节精选影片或值得关注佳作的</span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">“</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">首映</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">”</span></span><span style="color:rgb(0, 0, 0);font-weight:400">单元，以及</span><span style="color:rgb(0, 0, 0);font-weight:400">展映</span><span style="color:rgb(0, 0, 0);font-weight:400">影史经典</span><span style="color:rgb(0, 0, 0);font-weight:400">或向杰出电影人致敬的</span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">“</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">回顾</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">/</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">致敬</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">”</span>单元。</span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">第十届平遥国际电影展将</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">于</span></span><span style="color:rgb(0, 0, 0)"><span style="font-weight:bold">2026</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">年</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">9</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">月</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">24</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">日至</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">9</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">月</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="font-weight:bold">30</span></span><span style="font-weight:400;color:rgb(0, 0, 0)"><span style="font-weight:bold">日在山西省晋中市平遥古城举办</span>。</span><span style="color:rgb(0, 0, 0)"><span style="font-weight:400;color:rgb(0, 0, 0)">电影展创办于</span><span style="color:rgb(0, 0, 0)">2017</span><span style="color:rgb(0, 0, 0);font-weight:400">年，由平遥电影展有限公司、山西传媒学院山西电影学院联合主办，每年在拥有</span><span style="color:rgb(0, 0, 0);font-weight:400">2800</span><span style="color:rgb(0, 0, 0);font-weight:400">年历史的平遥古城举办，迄今为止已举办九届，曾发掘出文晏《嘉年华》、刘健《大世界》、赵婷《骑士》、白雪《过春天》、霍猛《过昭关》、陈哲艺《热带雨》、李冬梅《妈妈和七天的时间》、王晶《不止不休》、孔大山《宇宙探索编辑部》、菅浩栋《夜幕将至》、王沐《温柔壳》、魏书钧《河边的错误》《永安镇故事集》、梁鸣《日光之下》《逍遥</span><span style="color:rgb(0, 0, 0);font-weight:400">·</span><span style="color:rgb(0, 0, 0);font-weight:400">游》、耿子涵《小白船》、杨穗益《喀斯特》、唐永康《星星与月亮》、徐磊《前程似锦》、沈可尚《深度安静》、张中臣《你的眼睛比太阳明亮》等众多优秀电影作品，推动多位华人新锐导演进入大众视野。</span></span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4y1RN340li1Z1tCjUu2oRx5i.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(86, 124, 162);font-weight:bold"><strong><strong><span style="color:rgb(86, 124, 162);font-weight:bold"><span><span style="color:rgb(122, 68, 66)">第十届平遥国际电影展·</span></span></span></strong></strong></span><span style="color:rgb(86, 124, 162);font-weight:bold"><strong><strong><span style="color:rgb(86, 124, 162);font-weight:bold"><span><span style="color:rgb(122, 68, 66)">展映</span></span></span></strong></strong></span><strong><span><span style="color:rgb(122, 68, 66)">影片</span></span></strong></p><p><strong><span><span style="color:rgb(122, 68, 66)">报名指南</span></span></strong></p><section style="color:rgb(62, 62, 62);font-weight:400"><section><section style="color:rgba(85, 32, 32, 0.88)"><p><strong><span><span style="color:rgb(122, 68, 66);font-weight:bold">01</span></span></strong></p></section></section></section><section style="color:rgb(62, 62, 62);font-weight:400"><section style="color:rgba(85, 32, 32, 0.88)"><p><span style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(122, 68, 66);font-weight:bold">报名通道</span></span></p></section></section><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0);font-weight:400">登录平遥国际电影展官方网站</span><span style="color:rgb(0, 0, 0)">https://www.pyiffestival.com</span><span style="font-weight:400;color:rgb(0, 0, 0)">，进入影片报名通道；或扫描二维码，直接进入平遥国际电影展影片报名通道</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/wJngBMBgTz1YGP753UdhPL.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><section><section><section style="color:rgba(85, 32, 32, 0.88)"><p><strong><span><span style="color:rgb(122, 68, 66);font-weight:bold">02</span></span></strong></p></section></section></section><section><section style="color:rgba(85, 32, 32, 0.88)"><p><span style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(122, 68, 66);font-weight:bold">报名截止时间</span></span></p></section></section></section><p>2026年7月15日24时</p><p><strong><span style="color:rgba(85, 32, 32, 0.88);font-weight:bold"><span style="color:rgb(122, 68, 66)">03</span></span><span style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(122, 68, 66);font-weight:bold">报名流程</span></span></strong></p><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0)">1. 登录平遥国际电影展官方网站</span><span style="color:rgb(0, 0, 0)">https://www.pyiffestival.com，</span><span style="color:rgb(0, 0, 0)">进入影片报名通道</span><span style="color:rgb(0, 0, 0)">，按照指示填写报名</span><span style="color:rgb(0, 0, 0)">信息</span><span style="color:rgb(0, 0, 0)">；</span></p><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0)">2. 在提交报名信息前，须阅读、同意《第十届</span><span style="color:rgb(0, 0, 0)">平遥国际电影展展映单元章程》；</span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(0, 0, 0)">3. 支付报名费；</span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(0, 0, 0)">4. </span><span style="color:rgb(0, 0, 0)">向组委会提交影片样片。</span></p><p><span style="font-weight:bold;color:rgba(85, 32, 32, 0.88)"><span style="color:rgb(122, 68, 66)">04</span></span><span style="color:rgba(85, 32, 32, 0.88);font-weight:400"><span style="color:rgb(122, 68, 66);font-weight:bold">报名费用</span></span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(0, 0, 0)">1.</span><span style="color:rgb(0, 0, 0)">早鸟价：</span><span style="color:rgb(0, 0, 0)">征片起始日至</span><span style="color:rgb(0, 0, 0)">2026</span><span style="color:rgb(0, 0, 0)">年</span><span style="color:rgb(0, 0, 0)">6</span><span style="color:rgb(0, 0, 0)">月</span><span style="color:rgb(0, 0, 0)">15</span><span style="color:rgb(0, 0, 0)">日</span><span style="color:rgb(0, 0, 0)">2</span><span style="color:rgb(0, 0, 0)">4</span><span style="color:rgb(0, 0, 0)">时，人民币</span><span style="color:rgb(0, 0, 0)">2</span><span style="color:rgb(0, 0, 0)">00</span><span style="color:rgb(0, 0, 0)">元（或美金</span><span style="color:rgb(0, 0, 0)">3</span><span style="color:rgb(0, 0, 0)">0</span><span style="color:rgb(0, 0, 0)">元）</span></p><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0)">2.</span><span style="color:rgb(0, 0, 0)">标准价：</span><span style="color:rgb(0, 0, 0)">202</span><span style="color:rgb(0, 0, 0)">6</span><span style="color:rgb(0, 0, 0)">年</span><span style="color:rgb(0, 0, 0)">6</span><span style="color:rgb(0, 0, 0)">月</span><span style="color:rgb(0, 0, 0)">16</span><span style="color:rgb(0, 0, 0)">日</span><span style="color:rgb(0, 0, 0)">0</span><span style="color:rgb(0, 0, 0)">时至</span><span style="color:rgb(0, 0, 0)">7</span><span style="color:rgb(0, 0, 0)">月</span><span style="color:rgb(0, 0, 0)">1</span><span style="color:rgb(0, 0, 0)">5</span><span style="color:rgb(0, 0, 0)">日</span><span style="color:rgb(0, 0, 0)">24</span><span style="color:rgb(0, 0, 0)">时，</span><span style="color:rgb(0, 0, 0)">人民币</span><span style="color:rgb(0, 0, 0)">350</span><span style="color:rgb(0, 0, 0)">元</span><span style="color:rgb(0, 0, 0)">（或</span><span style="color:rgb(0, 0, 0)">美金</span><span style="color:rgb(0, 0, 0)">60</span><span style="color:rgb(0, 0, 0)">元</span><span style="color:rgb(0, 0, 0)">）</span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgba(85, 32, 32, 0.88);font-weight:bold"><span style="color:rgb(122, 68, 66)">05</span></span><span style="font-weight:400;color:rgba(85, 32, 32, 0.88)"><span style="font-weight:bold;color:rgb(122, 68, 66)">报名条件</span></span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(0, 0, 0)">1.</span><span style="color:rgb(0, 0, 0)">时长大于或等于</span><span style="color:rgb(0, 0, 0)">70</span><span style="color:rgb(0, 0, 0)">分钟的剧情片、动画片或纪录片。</span></p><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0)">2.</span><span style="color:rgb(0, 0, 0)">报名影片须未以任何形式、任何版本参与过中国大陆的电影活动或展映、或公映</span><span style="color:rgb(0, 0, 0)">。</span></p><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0)">3.</span><span style="color:rgb(0, 0, 0)">报名影片未曾在网络发布（在网络可观看或下载的影片不具备报名条件）</span><span style="color:rgb(0, 0, 0)">。</span></p><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0)">4.</span><span style="color:rgb(0, 0, 0)">组委会优先选择可在平遥电影展进行全球首映、国际首映或亚洲首映的影片。</span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(0, 0, 0)">5.</span><span style="color:rgb(0, 0, 0)">报名影片需确保在</span><span style="color:rgb(0, 0, 0)">202</span><span style="color:rgb(0, 0, 0)">6</span><span style="color:rgb(0, 0, 0)">年</span><span style="color:rgb(0, 0, 0)">9</span><span style="color:rgb(0, 0, 0)">月</span><span style="color:rgb(0, 0, 0)">1</span><span style="color:rgb(0, 0, 0)">日前完成</span><span style="color:rgb(0, 0, 0)">DCP</span><span style="color:rgb(0, 0, 0)">（数字电影包）转制，电影展不接受其它放映格式。</span></p><p style="font-weight:400;color:rgb(0, 0, 0)"><span style="color:rgb(0, 0, 0)">6.</span><span style="color:rgb(0, 0, 0)">如报名影片对白为非汉语普通话或非英文，则必须配有中文或英文字幕。</span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(0, 0, 0)">7.</span><span style="color:rgb(0, 0, 0)">报名影片的样片须以线上链接的形式提交，可包含画面水印；所提交样片版本可为制作中版本，但电影展放映版本必须为行政审批通过版本；申请人如多次提交同一影片的不同版本，组委会将以申请人第一次提交的版本为准。</span></p><p style="font-weight:400;color:rgb(0, 0, 0)"><strong><span style="color:rgba(85, 32, 32, 0.88);font-weight:bold"><span style="color:rgb(122, 68, 66)">06</span></span><span style="color:rgba(85, 32, 32, 0.88)"><span style="color:rgb(122, 68, 66);font-weight:bold">关于选片</span></span></strong></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(0, 0, 0)">1.</span><span style="color:rgb(0, 0, 0)">电影展组委会将任命艺术总监、选片顾问及节目策划人组成选片委员会，对所有符合条件的报名影片进行评选，选片委员会对报名影片的评选享有独立自主权。</span></p><p style="color:rgb(0, 0, 0);font-weight:400"><span style="color:rgb(0, 0, 0)">2.</span><span style="color:rgb(0, 0, 0)">申请人可选择希望报名影片入围的展映单元，最终的入围名单和入围单元由选片委员</span><span style="color:rgb(0, 0, 0)">会决定，并由组委会在官方公布之前与申请人沟通确认。</span></p><p><strong><span><span style="font-weight:bold"><span><span style="color:rgb(122, 68, 66)">07 </span></span></span><span style="font-weight:bold;color:rgba(85, 32, 32, 0.88)"><span><span style="color:rgb(122, 68, 66)">联系方式</span></span></span></span></strong></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgb(0, 0, 0)">平遥国际电影展·组委会影片部submission@pyiffestival.com</span></p><p><em><span style="color:rgb(0, 0, 0)">《第十届平遥国际电影展展映单元章程》</span></em></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2cb7s13TL7hrrET6v1pOUCT.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="font-weight:400;color:rgb(126, 92, 82)"><p><span><span>———— 平遥国际电影展 ————</span></span></p><p><span><span>平遥国际电影展（Pingyao Crouching Tiger Hidden Dragon International Film Festival）创办于2017年，每年在拥有2800年历史的平遥古城举办。前九届电影展已于2017年至2025年成功举行。</span></span></p><p><span><span>平遥国际电影展以“卧虎藏龙”为名，由展映、产业、学术、教育四大板块构成。在展映世界各国优秀影片的基础上，平遥国际电影展尤为注重发现并积极推广新兴及发展中国家青年导演的优秀作品，为这些影片提供发声的平台，旨在增强世界各国电影工作者之间的交流，以激活、繁荣世界电影的创作。</span></span></p><p><span><span>2026第十届平遥</span></span><span><span>国际</span></span><span><span>电影展</span></span></p><p><span><span>2026.9.24-9.30</span></span></p><p><span><span>敬请期待</span></span></p></section><section style="color:rgb(62, 62, 62);font-weight:400"><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3lJqBX3QOliy28qXqw2vj8NA.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 艺术电影-电影</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef729180673f2a97ce1b08?channel_id=68071d1b2c7742c740dc6aa3">https://lingowhale.com/reader/web/69ef729180673f2a97ce1b08?channel_id=68071d1b2c7742c740dc6aa3</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

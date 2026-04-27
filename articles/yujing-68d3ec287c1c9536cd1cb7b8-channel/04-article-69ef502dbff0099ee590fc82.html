@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>中国品牌，为何齐聚这个设计界的天花板？</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 拆解新消费</div>
+                    <h1>中国品牌，为何齐聚这个设计界的天花板？</h1>
+                    <div class="meta">
+                        <span>SocialBeta</span>
+                        <span>Mon, 27 Apr 2026 11:54:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef502dbff0099ee590fc82?channel_id=68d3ec287c1c9536cd1cb7b8">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2BuMLG2uXyoukZKLG3n2gZ8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><strong><span>封面品牌 | </span></strong><span>天猫</span></p><p><span>世界的目光又一次聚焦米兰。</span></p><p><span>上周，一年一度的米兰设计周正式启幕。作为继冬奥会之后的首个重要文化节点，整座米兰都化身为了流动的艺术现场，让人沉浸在设计与创意的狂欢之中。</span></p><p><span>米兰设计周最重磅的核心部分，无疑是被誉为家装设计界「奥斯卡」的米兰国际家具展。今年，展会以「物载其道」为主题，汇聚来自 32 个国家的 1900 多家参展商，在超 16.9 万平方米的展区内，集中呈现当代家居设计最前沿的理念与实践。</span></p><p><span>值得一提的是，</span><span>随着</span><span><span>近年来中国品牌快速发展</span></span><span><span>，</span></span><span><span>今年众多中国品牌也积极亮相这场世界级舞台，将东方美学、哲学思辨与当代生活方式融入国际语境，向世界传递中国设计的新声音。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这场集体「走出去」的盛况</span><span style="color:rgba(0, 0, 0, 0.9)">里</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">我们</span><span style="color:rgba(0, 0, 0, 0.9)">看到</span><span style="color:rgba(0, 0, 0, 0.9)">有</span><span style="color:rgba(0, 0, 0, 0.9)">一个</span><span style="color:rgba(0, 0, 0, 0.9)">特别的</span><span style="color:rgba(0, 0, 0, 0.9)">角色</span><span style="color:rgba(0, 0, 0, 0.9)">——</span><span style="color:rgba(0, 0, 0, 0.9)">天猫。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3lpWM4LLtsp21XX7P4AASdb.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><h2><strong><span>明星达人带头探展，</span></strong></h2><h2><strong><span>中国品牌迎来「米兰时刻」</span></strong></h2><p><span>从主展到卫星展的主题延续，再到几大多元板块的前瞻布局，米兰国际家具展将材料创新、手工精神与未来场景交织一体，集中呈现了当下最前沿的趋势与思潮。</span><strong><span>但对于无法到场的从业者与消费者来说，</span></strong><strong><span>始终</span></strong><strong><span>缺乏一个深入</span></strong><strong><span>探索展览内容</span></strong><strong><span>的入口。</span></strong></p><p><span>这一次，天猫以旗下 IP「天猫小黑盒体验派」为支点，和天猫家享生活行业、淘宝直播卖空行动一起，全面联动国内外参展品牌、明星体验官、家居媒体，打造米兰国际家具展主展直播及一系列明星、设计师、达人逛展体验内容。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Jugle3Sk4QI2Ly6604EU7RI.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>在设计周开幕后的前三天核心时段，天猫特邀吉杰、姜思达两位特约体验官以直播形式，实时导览、深度解读各个品牌展区的核心理念、先锋装置与重磅新品，让国内观众足不出户，即可同步获取全球设计前沿的一手资讯。</span></p><p><span>透过吉杰的镜头，今年米兰国际家具展主展的几大创新方向清晰可见，同时一批值得关注的国际品牌也借此进入国内观众视野——以创新塑料设计闻名的 kartell、融合地中海风情的户外家具品牌 NARDI、百年奢华床垫品牌 TRECA 等等，</span><strong><span>这些品牌也均已入驻天猫，为中国消费者带来了独特的家装美学与生活方式选择。</span></strong></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/G1KK3UgcE4euiGX11CBhe.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>姜思达则实地探访了 Baxter、NATUZZI、Moooi、FLOS、Artemide、kartell 等品牌旗舰店展区，亲身体验重磅新品，在淘宝直播卖空行动直播间向大家讲述。</span></p><section style="color:rgb(62, 62, 62)"><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1JN5IM4tpgon3p7MICMLCdF.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/22P3v1btfIm4u4VmS3wT78s.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section><p><span>事实上，米兰设计周的魅力不仅在于官方主办的米兰国际家具展，更在于遍布全城的 Fuorisalone 外展，各大品牌在街头巷尾争奇斗艳，将整座城市化为一场全民共享的设计狂欢。</span></p><p><span>此次天猫小黑盒就携多个中国品牌深度参与其中，将中国设计自然融入米兰的街巷与展厅，让来自世界各地的专业观众与游客亲身感受中国品牌的创新力与美学表达。明星体验官吴尊等也从主展漫步至城市街头，亲身感受各大品牌设计周展区，形成节目矩阵，为国内观众呈现属于天猫家装家居品牌的「天猫米兰时刻」。</span></p><p><span>除了明星及专业人士的讲解，天猫小黑盒体验派和天猫家装还邀请了末儿 Monica、元正熙 YUAN 等五位家居、时尚评论领域的头部博主来到米兰，结合自身独特的审美与设计知识储备，将设计周的多元魅力拆解、放大。</span><strong><span>这些充满个性的视角不仅丰富了内容的表达维度，更在国内社交平台掀起多轮热议，激发大众对家居美学的广泛参与和讨论。</span></strong></p><section style="color:rgb(62, 62, 62)"><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/mf3k41OlpxN23kUMBuZLZx.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2zZwWP1iKzWyCTzC23PnmPr.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section><p><span>甚至在设计周开始之前，天猫小黑盒就已经用一扇「米兰灵感之门」横跨时空，将「物载其道」的理念提前落地上海，联合九牧、美的、芝华仕三大品牌打造「10㎡上海瘫艺术家具展」，搭建沉浸式的生活场景，让米兰的松弛美学直接进入年轻人的日常。</span></p><section><section><section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4tGH034rDrci3scsrw7n3vb.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2M5DvaRYaG71K5XDQ4rfpRK.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1YG6j84boTor13E8In3eZ9oX.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section></section></section><p><span>通过直播，天猫打破时空限制，首次将这场全球设计盛会实时呈现给中国观众。同时平台串联起官方直播、明星达人 Vlog 及线下展览等多元形式，</span><span style="font-weight:bold">以一场沉浸式、多视角的内容体验，带领大众深度参与到这场当代设计美学对话当中，见证品牌闪耀国际舞台的高光时刻。</span></p><p><span>眼下正值家装消费旺季，天猫呈现最新全球家居趋势和新品，可谓精准承接了消费者对实用与美感兼顾的真实需求。而这种融合体验与内容的联动方式，不仅有效提升了用户的决策效率，也让更多品牌看到依托天猫探索体验营销出海的新可能。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3lpWM4LLtsp21XX7P4AASdb.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><h2><strong><span>携手《安邸AD》，</span></strong></h2><h2><strong><span>共探「生活设计」的未来</span></strong></h2><p><span>在大众传播之外，天猫更以专业姿态构建起了一个行业对话主场。4 月 23 日在米兰蒸汽工厂，天猫小黑盒及家享生活联合顶级家居媒体《安邸AD》打造了「天猫中国日」活动，进一步参与到行业议题的深度探讨之中。</span></p><p><strong><span>在这场论坛中，讨论的重点并未停留在具体产品或风格之上，而是回到「生活」本身。</span></strong></p><p><span>一方面，天猫联合吴尊、</span><span><span>意大利设计师/CIBIC WORKSHOP 创始人 Aldo Cibic、</span></span><span>设计师蔡烈超等专业人士，展开了关于东方设计如何影响当代生活方式的探讨；</span></p><p><span>另一方面，</span><span>《安邸AD》</span><span>品牌总监路遥、天猫家装总经理冬一、超集建筑创始人 Tiffany Shi、十上建筑创始人陈暄等，也讨论了设计该如何参与到日常生活的重构之中，使空间成为承载多重情绪的复合场域。</span></p><section style="color:rgb(62, 62, 62)"><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4ur1gK3Y84aU3qmgMpa6t4X.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3ZRZlPwgtmL3rKel41lwWQf.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section><p><span>同时，借着米兰国际家具展这个国际性盛会，天猫还联合</span><span>《安邸AD》</span><span>发布天猫家居设计大奖 T+DESIGN AWARDS，以最佳设计美学和最佳智能创新为核心赛道，挖掘出一批优秀的中国原创设计和智能产品。</span></p><section style="color:rgb(62, 62, 62)"><section><section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3v7GNy4gJbvP3FNx8l1r6HAb.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/945tjJUqMY3lwPrx1wKN0U.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Wysi3nPFGW13zatm1pJZaI.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2VGadb3oNxru2CbCxc43xLMv.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2KO02w1bA9Na4vQHX2R45NM.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1wioZNpt2R33oSLwv2wM64T.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/ePkKr1g6yay2WS9Ku1IUEV1.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1v7F0U1Ix0rGitteC3DAPqk.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/10knv8FguIulhit31g42VM.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Ka3dD2T1V2efj2Pd1H1yC4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section></section></section><p><span>可以看到，当论坛围绕着「设计在中国，东方新叙事」这一核心命题展开，其实也是在试图回答一个更大的问题：</span><strong><span>「Made in China」成为既有认知后，中国设计要如何走向「Design in China」的价值表达</span></strong><span>。</span></p><p><span>在此基础上，天猫没有让这些讨论仅仅停留在抽象理论层面，而是通过从趋势讨论到场景呈现的路径，将设计语言转化为消费者语言。</span></p><p><span>例如基于此前曾联合家享生活提出的中国当代消费者居住趋势——「十平米生活空间」，天猫小黑盒联动</span><span>《安邸AD》</span><span>及水星家纺与美的两大品牌，围绕「疗愈型卧室」、「沉浸式客餐厅」这两大趋势方向继续深挖，落地了一场沉浸式线下家居展。</span></p><p><span>在「疗愈型卧室」这一展厅中，来自米兰当地的陶土灰砖、花砖围合出一个简洁复古风的床架，与水星家纺夏凉雪糕床品套组相呼应，展示了品牌的夏日睡眠解决方案；而在「沉浸式客餐厅」里，美的可爱多咖啡机、美的花瓣 PRO 电饭煲与精致的意式早餐一起，让美好早晨的想象，立刻跃然于屏幕之上。</span></p><section><section><section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3qTTxPBEh4U1S70l22V1zZ0.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/WsG0q3HQ5pa11XKYk1tndHr.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/33HCCB47tTVk2kXfCz1Iix5J.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section></section></section><p><span>不仅于此，天猫还邀请到知名设计师陈暄与 Tiffany Shi，带领消费者在线上观展，给出了一系列提升家居氛围的小技巧。</span></p><p><span>在陈暄看来，所谓「疗愈型卧室」，并不依赖复杂的改造，而是可以通过微小但有效的调整，让空间更贴合个体需求，比如一滴助眠精油、一盏柔和夜灯，或是一套高品质床品与舒适枕头，都是提升睡眠体验的关键要点。</span></p><p>【视频】跳转到原文查看</p><p><span>而对 Tiffany Shi 来说，「沉浸式客餐厅」的核心，在于弱化设计的存在感。可自由拼搭的模块化沙发加一张小茶几，就可以换来随时随地的大小躺，一台咖啡机加上一盏暖黄氛围灯，就能在家实现咖啡店自由。</span></p><p><strong><span>从趋势提出，到空间呈现，再到设计师们压箱底的技巧分享，天猫小黑盒将原本属于设计领域的专业语言，转化为了消费者可以理解并直接应用的生活小提案，再度打出了一个</span></strong><strong><span>体验式营销</span></strong><strong><span>范本。</span></strong></p><p><span>论坛现场，天猫家装总经理冬一，向在场的国际品牌代表，发布了天猫针对国际品牌的最新招商计划。身为国内最大规模线上付费会员拥有者，天猫能借助平台数据能力与消费洞察，帮助海外品牌更深入地读懂中国家庭在不同生活阶段下不断变化的居住需求。</span></p><p><span>对国际品牌而言，在中国组建本地运营团队长期面临成本高、流程复杂、启动周期长等挑战。为此，天猫家装总经理冬一重点介绍了</span><span style="font-weight:bold">「喵住自营」</span><span>这一解决方案。</span></p><p><span>作为天猫家享生活旗下以家装为主的直营品牌，喵住官方旗舰店可帮助国际品牌进行一站式托管运营：国际品牌负责发货和售后，喵住负责实际运营</span><span>，</span><span><span>通过清晰的分工协作，助力国际品牌快速进入中国市场。之后喵住还将上线一系列扶持资源，如进口品牌专区、站外种草以及与上千名设计师合作等，深度赋能品牌本土化落地。</span></span></p><p><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/MUz9l6aBxFgZor82DajR4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/rhYxI248gqR4g4gDi4bDpnw.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span>当前，国际家居大牌 Kartell、FLOS、Artemide、NATUZZI、Vitra、louis poulsen、Herman Miller、ALESSI、SELETTI、&amp;Tradition、NARDI 等均已入驻天猫，将天猫作为进入中国的首站。可以说，从扶持中国品牌持续做大做强，到成为国际家居品牌进入中国的第一站，天猫正在构建一个连接全球设计资源与中国消费市场的枢纽平台。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3lpWM4LLtsp21XX7P4AASdb.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><h2><strong><span>全球家装品牌，为什么都在天猫？</span></strong></h2><p><span>直播、展览、论坛......回顾天猫在米兰国际家具展期间的持续发声，还有一个问题值得追问：</span><strong><span>为什么天猫要在当下这个时间点，以这样的姿态，展开对家装行业的探讨。</span></strong></p><p><span>在 SocialBeta 看来，它们指向的，是天猫对家装行业底层逻辑变化的判断：无论是头部家装品牌，还是更具个性的设计师品牌，今天的家装产品不应该只是功能性的存在，而是要成为进入某种生活方式的入口。</span></p><p><span>换句话说，居住，不再只有物理层面的意义，而逐渐转向一种关于情绪与日常生活节奏的组织方式。也正因如此，</span><strong><span>家的形态开始走向高度个体化：没有唯一风格，也没有标准答案，而是成为每个人表达自我的容器。</span></strong></p><p><span>对应这种变化，人们对家装产品的期待也在发生转移——从「是否好用」，转向「是否适我」。这意味着，单一品牌或单一风格已经很难承载这种分化的需求。消费者需要的是一个能够同时容纳不同审美、不同需求与不同价格带的供给集合，并在其中完成选择与组合。</span></p><p><strong><span>这也是为什么，越来越多品牌会把天猫视为关键阵地。</span></strong><span>一方面，它汇聚了从国产品牌到海外设计师品牌、新锐品牌在内的丰富供给，能够承接消费者不断细分的生活方式需求；另一方面，这些原本分散、甚至略显抽象的「生活想象」，又能通过天猫对趋势场景的深入洞察以及产品的重新组合，转化为可被直接购买的具体选择。</span></p><p><span>而基于米兰国际家具展在全世界范围内，独一无二的先锋影响力，天猫在这里对话全球家装品牌，也是再合适不过的选择，因为它能够将最前沿的设计时尚，转为消费趋势，并落地到真实生活中，切实助力各个品牌的生意。</span></p><p><span>从更深层来看，天猫就像是连接品牌、设计与生活方式的纽带：一端承接供给，一端组织需求，并在中间不断完成表达与转译，使「好设计—好产品—好生活」的链路得以真正闭合。</span></p><p><span style="color:rgb(136, 136, 136)">© 本文系 SocialBeta 作者原创，著作权归 SocialBeta 所有，未经许可，不得转载使用。</span></p><section><section><section><section><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/ZB6MQ2HOAU71tadcM4Co7qq.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p>【视频】跳转到原文查看</p></section></section></section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3lmP3M3Nol0e3x6idM2phiNf.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section><section><section><section><section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247745100&amp;idx=1&amp;sn=f7b6d445e794a90be7cba546c8be12e6&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/5pLw73BTUw9lzhha1wkALV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section></section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247744487&amp;idx=1&amp;sn=4042d471ffb1d9ca1c25ab8753e9586a&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/eYyN31sjGcUiM0do1nwitS.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section></section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247745008&amp;idx=1&amp;sn=4872c76d60a2e04ef357eaca84614bc7&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/139O321yFrHC3WyxVByyYhh.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section></section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247744812&amp;idx=1&amp;sn=a0cf9bdbfc603c4d5b41598cad83a3f0&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4Eep5y274KbUeegor1BegA3.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section></section></section></section></section></section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/y4gNC1QXyHllbJZ3yGiTX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section><section><section><section><section><a href="https://mp.weixin.qq.com/s?__biz=Mzg2Mzg5NTgwMw==&amp;mid=2247745376&amp;idx=2&amp;sn=d30e33c4e22971142a968ef53a094be5&amp;scene=4#wechat_redirect"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3wJcSdSonil1wojkZ20wsF1.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></a></section></section></section></section><section><section><section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4vwyI21cl9KA3dOoyJhy3rV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section></section></section></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 拆解新消费</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef502dbff0099ee590fc82?channel_id=68d3ec287c1c9536cd1cb7b8">https://lingowhale.com/reader/web/69ef502dbff0099ee590fc82?channel_id=68d3ec287c1c9536cd1cb7b8</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

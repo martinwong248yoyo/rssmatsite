@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>一棵树的百年孤独和第一次“性体验”</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 艺术电影-电影</div>
+                    <h1>一棵树的百年孤独和第一次“性体验”</h1>
+                    <div class="meta">
+                        <span>深焦DeepFocus</span>
+                        <span>Mon, 27 Apr 2026 14:17:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef7792939a22f45164972d?channel_id=68071d1b45e75b2ff0e165bc">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgb(62, 62, 62);font-weight:400"><section style="color:rgb(62, 62, 62);font-weight:400"><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgb(0, 0, 0)"><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Cp41U3ijfRg26bwHS4lNMjh.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></span></p><section><a href="https://mp.weixin.qq.com/s?__biz=MzAwMjMzNTEzNg==&amp;mid=2652530407&amp;idx=1&amp;sn=43af8c95c9ad8ffbec4209a21726a505&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/39YHCIQJ6nx1ydRiB4bkhHx.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section></section><section><section><section><section><section><section style="color:rgba(196, 196, 196, 0.54)"><p>策划 深焦编辑部</p></section></section></section></section></section></section><section><section><section><section style="color:rgb(93, 93, 94)"><p><span>由匈牙利导演伊尔蒂科·茵叶蒂指导，梁朝伟、蕾雅·赛杜与卢娜·韦德勒等主演的影片《寂静的朋友》，曾入围第82届威尼斯国际电影节主竞赛单元，并以其独树一帜的影像风格引发广泛关注。</span></p><p><span>《寂静的朋友》以跨越两个世纪、三段彼此映照的时空叙事，将植物学、神经科学、人类情感与自然感知编织在一起，展开一场关于“聆听”的银幕实验。故事围绕同一所德国大学中的三位研究者展开：19世纪末打破性别壁垒的女性学生、1970年代帮助室友测试天竺葵的梦想家学生，以及2020年新冠疫情期间滞留校园、转而测量银杏树脑电波的香港神经科学家。三条时间线由种植于1832年的银杏树为纽带而彼此缠绕，在冷静幽默与感性想象之间，探问人类如何与植物、与环境、与彼此建立隐秘而深刻的联系。</span></p><p><span style="color:rgb(93, 93, 94)">作为欧洲作者电影的重要代表，茵叶蒂曾凭《肉与灵》获得第67届柏林国际电影节金熊奖，并凭该片提名第90届奥斯卡最佳外语片；早期作品《我的二十世纪》也曾在戛纳国际电影节获得金摄影机奖特别提及。延续其一贯对感知与存在的探索，《寂静的朋友》进一步跳脱固有叙事与认知框架，在当下愈发趋于封闭的现实语境中，呈现出一种更为开放、包容且富于想象的世界观。因此，我们可以看见在片尾字幕中植物与人类演员的名字被并列呈现。</span></p><p><span style="color:rgb(93, 93, 94)">为此，我们特别编译了一篇由瑞士电影推广平台 Der Andere Film 整理发布的影片访谈，希望借此为更进一步理解茵叶蒂如何构想这部关于感知、共处与想象力的作品提供一定参考。</span></p></section></section></section></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4owh4R2kVyuE4dIc7t3OTF5l.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><p><span>片名：寂静的朋友    </span></p><p><span>导演：伊尔蒂科·茵叶蒂    </span></p><p><span>编剧：伊尔蒂科·茵叶蒂    </span></p><p><span>主演：梁朝伟 / 卢娜·韦德勒 / 恩佐·布鲁姆 / 蕾雅·赛杜 / 西尔维斯特·格罗特 / 黄云 </span></p><p><span>类型：剧情 / 科幻  </span></p><p><span>制片国家/地区：德国 / 匈牙利 / 法国 / 中国大陆</span></p><p><span>语言：英语 / 粤语 / 德语  </span></p><p><span>上映：2026-04-25(中国大陆) / 2025-09-05(威尼斯电影节) / 2026-01-15(德国) / 2026-04-01(法国)    </span></p><p><span>片长：147分钟    </span></p></section><section><p><em>采访链接：</em>https://der-andere-film.ch/filme/filme/titel/pqrs/silent-friend</p><p><strong><span style="color:rgb(117, 14, 14)">Q：《寂静的朋友》涉及了您早期电影中已经出现过的主题：与无形力量建立联结的可能性、人际关系的复杂性、科学对日常生活的影响。</span></strong></p><p><span style="font-weight:bold">伊尔蒂科·茵叶蒂：</span>我的初衷是提出问题，并将某些令我着迷的主题带入聚光灯下，以供进一步探索。这些问题与我个人的成长经历密切相关，因为我所有的电影都非常私人。</p><p>我在七十年代还是个少年。我曾在法国蒙彼利埃的保罗·瓦莱里大学度过了意义重大的两年——作为一名来自东方阵营的高中生，我获得了特别许可。您可以想象，对于一个十六到十七岁的少女来说，置身于1968年之后那个充满活力、热烈奔放的大学生活是多么深刻的影响。</p><p>那是一个充满好奇心、对众多议题开放的年代，当时正好迎来了第一波植物通讯实验的浪潮。这对我而言极为令人兴奋。当然，那时的研究或许还带着几分天真，但那种基本态度至今依然成立。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/W40054B7VIC2Vi5ld1POWdH.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p>值得关注的是，在那个一切都被质疑、被重新发明的年代，我没有选择政治行动主义，而是选择了对其他生命形式的好奇。在我的第二部剧情长片《魔法猎人》中——该片曾入选威尼斯竞赛单元——我追随一棵橡树跨越了六百余年的足迹。在《魔术师西蒙的爱情》中，一株盆栽植物揭开了一桩谋杀案。我不是一个有"绿拇指"的人，而是一个与自然隔绝、生活在城市中的人。我感受到生命之间的距离，渴望建立联结——就像《寂静的朋友》中的那些人类主角一样。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/j0Pog9Nh4r3nfurS1sg8t9.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《魔术师西蒙的爱情》剧照</p></section><section><p><span style="color:rgb(117, 14, 14)"><strong><strong><span style="color:rgb(117, 14, 14)">Q：</span></strong>围绕三位主角的故事分别发生在不同的时代，一棵树作为核心意象贯穿其中。这棵树本身是您项目的出发点吗？</strong></span></p><p><span style="font-weight:bold">伊尔蒂科·茵叶蒂：</span>卡尔·鲍姆加特纳——这位极具远见的独立制片人，整个电影行业都在痛切地怀念他——来找我，提议拍摄一部关于植物的电影。他从我早期的电影中知道，我以好奇的眼光审视植物。当我们开始这个项目时，我立刻想到了一座植物园作为核心拍摄地——不是野生自然，而是一个由人类为植物创造的人工生存空间。我想让植物园中心那棵古老的银杏树与三位人类主角形成对照，每位主角都以自己的方式，通过与植物世界的接触经历一场奇妙的转变。因此，这棵树作为象征对我的电影固然至关重要——但《寂静的朋友》毕竟是由人类制作的，也将在电影院中被人类用所有感官去感知。所以我将这部电影视为一份邀请，邀请观众与他人建立联结。</p><p>我绝不会妄称能够解释一棵树如何感知世界。我只想提醒人们：树是一种复杂的生命，拥有自己的感知世界，这个世界与人类的感知世界同样有效、同样重要。我们在这个世界上并非万物的尺度，我们的感知并不能以客观的方式描述世界。由于我们无法超越自身感知的边界，我选择通过三次相遇、三次碰撞、三次不完美而略显笨拙的尝试，去触及人类可感知范围之外的世界。托马斯·内格尔1974年那篇著名论文《作为一只蝙蝠是什么样？》对我在这方面影响深远。它概括了我这部电影的核心方法论：我们的精神由我们的身体所定义，承认无法沉浸于另一个生命的感知世界，并不意味着那个世界不存在。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2vd3lE2f4gJq2DpTHP2QXhoN.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《作为一只蝙蝠是什么样？》</p></section><section><p><span style="color:rgb(117, 14, 14)"><strong>《无声的朋友》发生在三个时代：1908年、1972年和2020年。三位不同年龄的主角处于故事中心，从一位年轻学生到一位资深科学家。这是您展示几代人如何随时间演变的方式吗？</strong></span></p><p><span style="font-weight:bold">伊尔蒂科·茵叶蒂：</span>是的，尽管我宁愿说"变化"而非"演变"。这近百年来的三个不同时刻，旨在展示我们看似坚不可摧的现实感究竟变化得多么剧烈、多么迅速。它不仅由我们的感官所定义，也是一种文化建构，作为建构，它相当短暂易逝。我们的人类主角走在同一座花园的同一条小径上，走进同一个校园的建筑——但每一个人所感知的却是不同的世界。当他们试图与银杏树及周围的植物建立联结时，他们发现的不仅是各种植物，也是他们自己。</p><p>神经科学家阿尼尔·赛斯的新书《意识机器：成为你自己》以及他关于意识的全部研究，是我准备这部电影时最重要的灵感来源。</p><p><strong><span style="color:rgb(117, 14, 14)">现实的概念在这里与时间的概念相连。相比您早期的电影，您在这里更多地将其作为一种戏剧手段：神经科学家故事的叙事节奏与格蕾特的故事不同，后者又与汉内斯和他的天竺葵那段故事的叙事节奏不同。</span></strong></p><p><span style="font-weight:bold">伊尔蒂科·茵叶蒂：</span>我们每个人都对第一次封控有着强烈的亲身体验。对时间流逝感知的那种激进而突然的改变，是其中最深刻的体验之一。《寂静的朋友》的主线——以梁朝伟饰演的神经科学家为中心——恰恰讲述的就是他时间节律的这种突然转变。梁朝伟在空旷大学校园那种修道院般的寂静中对现实的感知，给了他机会去接近其他的时间感知方式——比如一棵树的时间感知。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3X2RTn2gCRz33ZGNnL4s4o9m.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p><span>由蕾雅·赛杜饰演的植物通讯科学家爱丽丝，在她的TED演讲中反思了我们对其他时间节律的可笑盲目。我们认为含羞草是一种有智慧的植物，因为它在我们人类的时间感知范围内行动。这纯属巧合，但我们为此兴奋不已——仿佛我们的生命形式是绝对的标准，所有其他生命都必须以此为参照！对于某些节奏快得多的生命形式而言，我们人类在它们眼中大概就像一动不动的雕像。</span></p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1g8TW52IaCv13Dr0mE44j1FU.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p><span>与托尼那种被感知为冥想式的时间相比，格蕾特（露娜·韦德勒 饰）的日子是高度结构化的，受特定规则、正式习惯和仪式的约束。她的世界是主动的、反应性的、充满冲突的、言辞性的。她通过摄影来凝固时间，从而找到自由。她的拍摄对象是植物——通过黑白照片，格蕾特发现了生命的普遍结构。安娜·阿特金斯，尤其是卡尔·布洛斯费尔特的作品，是格蕾特理解世界之方式的主要灵感来源。布洛斯费尔特的照片以令人叹为观止的方式呈现日常植物——仿佛从未有人见过它们。</span></p><p><span>汉内斯（恩佐·布鲁姆饰），一位七十年代的年轻学生，在《寂静的朋友》中看起来像是迷失在一幅印象派画作中。</span></p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3JiPbb3MZHn03zGhb42iYNYI.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p><span>在为格蕾特的故事选择35毫米黑白胶片的同时，我们为汉内斯的故事选择了浓郁而模糊的16毫米胶片，再与托尼故事中数字摄影的穿透性精准形成对比。数字影像映照出托尼在2020年的孤独，并旨在作为电影中不同时代之间的纽带。</span></p><p><strong><span style="color:rgb(117, 14, 14)">Q：有一场戏在形式和长度上与其他场景大相径庭：格蕾特在大学的入学考试。她面对着一群教授，全都是男性，对她颐指气使。1908年这种权力失衡与王博士在2020年与女性建立的近乎友谊式的关系之间，存在着巨大的鸿沟。您是否有意探讨男女关系——无论是在性别、社会还是政治层面——在一个世纪中的演变？</span></strong></p><p><span style="font-weight:bold">伊尔蒂科·茵叶蒂：</span><span>上个世纪是性别角色变革的世纪。一所大学——新生代在此开始成年生活——是思考这一问题的合适场所。三位人类角色都深深扎根于各自的时代。格蕾特必须在一个纯男性的环境中生存，那个环境视她为不平等的存在。发型、严肃的长袍、冷峻的院系建筑，乃至植物园里修剪整齐的草坪周围那些小铁栅栏，都传递出一种永恒不变的感觉。仅仅是格蕾特出现在这个环境中，本身就是一种反叛。除了教授与她之间这种不公平的权力游戏之外，这场戏还涉及格蕾特考试题目本身的内容——卡尔·冯·林奈根据植物性别对其进行分类的体系。植物不仅繁殖，它们还拥有性别，拥有感官性。这是格蕾特入学考试那挑衅性的主题，同时也是整部电影的核心母题。</span></p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/WQqiC3y0PtE1eQXBF22FxA3.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p><span>Gundula（玛莱内·布罗饰）是我们腼腆内敛的汉内斯所爱慕的对象，在我电影的另一段故事中，她是一位充满自信的年轻女性，尽情享受着属于自己时代的新获自由——但即便如此，纵使她自信满满，她仍感到自己必须一次次向外界证明内心的力量。</span></p><p><span>七十年代，校园和花园里的生活也突然与格蕾特时代的世纪之交截然不同。在高高的、野蛮生长的草地上，身着五彩斑斓服装、留着蓬乱长发和胡须的年轻男女，正在探讨着生命中的宏大问题。</span></p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2atnvl2XqLtM1tkMlN4EW6Hk.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p><span>爱丽丝，这位年轻却已享誉世界的科学家，对2020年的托尼而言如同一位导师。两人地位平等，在各自领域都备受尊重，但托尼踏入了爱丽丝的领域，在那里他只是个初学者。年轻的女性成为导师——以一种轻松、自然的方式。我最喜欢的托尼的场景之一，是他刚抵达繁忙的德国校园，手捧一杯热饮，隔着食堂的窗玻璃注视着外面抽烟聊天的学生。那是来自四面八方、不同肤色的年轻男女，来到这座中世纪城市求学。他们彼此间那种轻松、温暖、充满活力的交流，与1908年僵化的校园生活形成了鲜明的对比。</span></p><p><span>我们的植物主角——银杏树——是雌性的。因为我们的植物园里没有雄树。所以它是一个孤独的灵魂。我不确定，但我希望当爱丽丝和托尼共同帮助这棵数百年历史的古树迎来它的第一次"性体验"时，那一丝幽默能够得以传达。</span></p><p><span style="color:rgb(117, 14, 14)"><strong>Q：这种希望电影观众获得感官体验的愿望，是否也影响了《寂静的朋友》的选角？</strong></span></p><p><span style="font-weight:bold">伊尔蒂科·茵叶蒂：</span>是的，但我们的主角——银杏树——也应当带来一种特别的感官性。因此我们找到了三棵不同年龄但形态相近的银杏树用于拍摄。我们进行了大量讨论，然后与一个小团队和摄影师盖尔盖伊·帕洛什共同花费了许多天，去捕捉那种原初的、丰盛的感官性，并将其呈现于银幕之上。我们不是专业的自然纪录片摄制者，因此学到了很多关于专注、耐心和警觉的东西，也学到了适应另一种节律的必要性。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/38JnYG1XxCZz4vranA11eehE.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p>主线情节是两个沉默生命之间笨拙而不确定的相遇：一棵强大的树，与一位内心深处充满隐痛、渴望和温柔的孤独科学家。我为梁朝伟写了这个角色。我需要的不仅是那位杰出的演员，更是我在观看他几次访谈时所感受到的那个人。我的制片人们试图说服我另觅他人。他们说，他非常挑剔，拒绝了大多数邀约，从未拍过欧洲独立电影。我非常感激他冒了这个险，在读完剧本后立即接受了这个角色。更令我感激的是，他能够认同剧本更深层的内涵。在我们第一次Zoom会议上，我们谈论的不是角色本身，而是那些对我至关重要的深层维度。我们共同准备了半年，就神经科学中关于意识的研究以及植物通讯研究进行了大量交流。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Io3c42p2Ma01FgbaT2u0J6V.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p>作为这位特立独行的教授的对手戏演员，我需要一位同样具有强大、迷人存在感的人——因此我邀请了蕾雅·赛杜出演爱丽丝一角。她的魅力如此强大，轻松克服了只能通过屏幕与托尼接触的局限。托尼和爱丽丝分别在马尔堡和巴黎经历的那种各自的孤立，是电影的主旋律——独处，渴望联结。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2pYD3t1dn6Q92azlqJ1qqwHQ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p>我曾与卢娜·韦德勒合作过，对她赞叹不已，邀请她出演格蕾特一角几乎是顺理成章的。她是一股自然之力，脆弱与坚韧并存，还有极好的幽默感。我应该有朝一日为她写一个喜剧角色。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1jJCAp1DJNj51RiPv81Tc5vH.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p>我们花了将近一年的时间才找到扮演汉内斯的演员，那种带着男孩气、笨手笨脚、四肢修长的魅力。我真心感谢选角导演尼娜·豪恩发现了恩佐·布鲁姆这位年轻而有才华的演员。</p><p>他的搭档，光彩照人的玛琳·布罗，已在多部电影中展现了她的卓越才华。她令人印象深刻的存在感、力量、智慧和原初的感官性，胜过任何台词。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/20mFBw4tbRwC3uajgTFBWZY.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p><span style="color:rgb(117, 14, 14)"><strong>Q：以一位亚洲演员、一位法国和一位瑞士女演员及德国演员组成阵容，并在德国、匈牙利和法国联合制作这部电影，也说明了这个项目的普世性。</strong></span></p><p><span style="font-weight:bold">伊尔蒂科·茵叶蒂：</span>这是一部主要以德语为主的电影，背景是一座拥有五百多年历史的大学所在的中世纪城市。在这里求学或在世界知名的顶尖实验室从事研究的人们，与我们的演员阵容同样出类拔萃——除梁朝伟和蕾雅·赛杜之外，其余全部是德国演员，如西尔维斯特·格罗特、马丁·乌特克或赖纳·博克。我要感谢他们的慷慨——他们看到并理解了这些角色的意义，即便拍摄天数寥寥无几。在我的电影中，没有任何一场戏是可以忽略的——因此我需要特别出色的演员，能够为戏份短暂的角色奉献出层次丰富、深度饱满的表演。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1W6xyWzkRrMraNWK3g6K2k.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》剧照</p></section><section><p>我们所有的主角——无论植物还是人类——都是局外人。他们不属于某个体系，都是孤独的灵魂。植物园里的植物被从它们自己的生境、从多物种共生的丰富群落中连根拔起，被带到这个遥远的花园，供人类观赏。我们今天对动物园的看法，同样可以用于植物园。而银杏树比它周围的其他植物更为孤独——它矗立在一个几乎将它赶尽杀绝的物种当中。格蕾特是纯男性校园里唯一的女学生。汉内斯，一个来自农场的男孩，在这个知识分子的环境中找不到自己的位置。托尼来自另一个大陆。这不仅关乎困难，也关乎孤独与局外者身份所带来的自由与强度。当你将他人的常规看在眼里，你发现新事物的机会反而更大。</p><p><span style="color:rgb(117, 14, 14)"><strong>Q：那棵美丽的树和那座花园在哪里？</strong></span></p><p><span style="font-weight:bold">伊尔蒂科·茵叶蒂：</span>我有一位出色的德国丈夫，一位来自北莱茵-威斯特法伦州的文学爱好者，三十五年前他带我见识了这座坐落在马尔堡市中心的古老而迷人的植物园。我知道它如何变化，我熟悉其中的某些树木。在这座花园的小池塘旁，躺着一根巨大的倒伏树干，如今它已成为许多昆虫和真菌的家园。我看着它，仿佛看见一棵高耸巍峨的垂柳，将阴影投落于水面之上。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2yzc5N3hUTam3vewf63Lh0ME.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section style="color:rgb(160, 160, 160)"><p>《寂静的朋友》幕后工作照</p></section><section><p><span style="color:rgb(117, 14, 14)"><strong>Q：在这样一个科学几乎遭到某些势力公然攻击的时代，拍摄一部关于理解科学之意义的电影，此刻站在这个过程的终点，您有何感受？</strong></span></p><p><span style="font-weight:bold">伊尔蒂科·茵叶蒂：</span>非常感谢您提出这个问题。因为《寂静的朋友》也应当是一声警示：不要抛弃人类最宝贵、最美好的那一面，而是要捍卫它、保护它、弘扬它——那就是尊重和珍视科学研究。</p><p>"温柔的经验主义"——歌德关于参与式科学的这一概念，其中研究者不是一个神般客观的观察者，而是实验本身不可或缺的一部分——最好地描述了我们的人类主角托尼、格蕾特、汉内斯和贡杜拉所从事的事业。他们以真正科学家那种天真而热情的好奇心去做这一切。</p></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 艺术电影-电影</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef7792939a22f45164972d?channel_id=68071d1b45e75b2ff0e165bc">https://lingowhale.com/reader/web/69ef7792939a22f45164972d?channel_id=68071d1b45e75b2ff0e165bc</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

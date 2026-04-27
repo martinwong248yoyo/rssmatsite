@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>世界杯营销七十年，谁在定义世界杯？| Morketing2026体育营销特辑①</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 拆解新消费</div>
+                    <h1>世界杯营销七十年，谁在定义世界杯？| Morketing2026体育营销特辑①</h1>
+                    <div class="meta">
+                        <span>Morketing</span>
+                        <span>Mon, 27 Apr 2026 09:05:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef2d7899987a80e3e795cd?channel_id=68d3ec287c1c9536cd1cb7b8">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4vaPyI1JJfpO4ghgqw7F8d4.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/YLnnLHe1H210pNtt1BWqVo.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><p>1950年巴西，马拉卡纳球场。决赛日，里约热内卢全城几乎停摆，人们涌向收音机和刚刚兴起的黑白电视机，等待乌拉圭与东道主的终极对决。</p><p>就在那片被全世界注视的草皮边上，一块写着“Coca-Cola”的广告牌安静地立着，这是世界杯历史上第一次加入了品牌赞助，尽管彼时并未这一举动并未受到广泛的关注，但它标志着有关世界杯营销的漫长故事的开端——品牌第一次意识到，世界杯可以不只是足球，还可以是一门生意。</p><p><span>70多年后的今天，2026年美加墨世界杯即将打响。</span><strong><span>FIFA赞助收入预计突破18亿美元，16个全球赞助席位悉数售罄，全球观众预计达60亿人次</span></strong><span>。无论是线上还是线下，品牌们在社交媒体上争分夺秒地蹭热点。</span></p><p><span>一切看起来如此理所当然——</span><strong><span>巨额赞助、铺天盖地的广告、品牌集体狂欢。</span></strong></p><p>但今天这种“理所当然”的商业繁荣，其实是一点点被建构出来的。回溯世界杯营销的历史，体育并不是一开始就属于品牌的。</p><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/7kBKaapROW3lX80E3yWzWc.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34)"><span style="color:rgb(216, 57, 49)"><strong><span style="color:rgb(255, 46, 46)">第一阶段：</span></strong></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(216, 57, 49)"><strong><span style="color:rgb(255, 46, 46)">电视霸权时代，曝光即正义</span></strong></span></p><p>1930年首届世界杯在乌拉圭举办时，足球还不是一门生意。</p><p>东道主政府将赛事视为改善国家形象的筹码，投入大量资源兴建球场、为参赛球队报销费用，但赛事的财务状况难言健康。彼时的国际足联领导层仍更看重“通过体育促进跨文化理解”的奥林匹克理想，赛事作为商业权利持有人的概念根本不存在。</p><p>早期世界杯中，所谓的“赞助活动”仅限于少数嗅觉灵敏的商人在日益增长的观众面前自发摆放产品，他们从未为此向国际足联支付过任何费用。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Vxrj01BYOxv1gUw9PphBJ9.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span>然而，暗流已经涌动。</span><strong><span>阿迪达斯在世界杯上的崛起始于1954年，这一年品牌的创始人阿迪·达斯勒发明了鞋上的可旋入式鞋钉，使德国队在一场大雨中赢得了世界杯。</span></strong><span>这也让阿迪达斯很快成为了全世界消费者家喻户晓的名字。也就是从那时起，阿迪达斯成为了足球的代名词。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2mMFhAlUGOmnglN62YO09j.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><strong><span>而在70年代，时任阿迪达斯的总裁霍斯特·达斯勒甚至在国际足联的商业化中发挥了重要的作用。</span></strong><span>1974年，来自足球王国巴西的若昂·阿维兰热当选国际足联主席，随即展开大刀阔斧的改革：将参赛队伍从16支增至24支，引入电视转播制度，并大力推动亚洲、非洲等新兴市场的足球发展。而在这一进程中，阿迪达斯通过推动与国际足联的合作，首度推出了“将品牌与体育赛事打包、出售独家赞助权”的概念，而这种紧密的链接，不仅让国际足联从一个艰难维系的非官方机构，成长为年营收数十亿美元的体育印钞机，也让阿迪达斯在足球领域确立了绝对的领先地位。</span></p><p><span>同时，这一改革也基本上确立了电视时代世界杯营销的基本格局。</span><strong><span>1978年，可口可乐正式成为世界杯官方赞助商，此后46年间从未缺席——截至2026年，它已成为世界杯历史上最悠久的连续合作伙伴。从1982年西班牙世界杯起，阿维兰热不断扩大赞助商数量，富士胶片、吉列、万事达卡、麦当劳等全球品牌相继入局，赞助体系逐渐从零散走向制度化</span></strong><span>。</span></p><p><span>在那个电视仍然是唯一入口的年代，世界杯更像是一种被集体共享的观看仪式，谁能出现在屏幕上，谁就掌握了用户注意力，谁就拥有了话语权。可口可乐、阿迪达斯甚至不需要讲太多故事。场边的一块广告牌，或者在转播间隙播一条TVC，就能触达数亿人。</span><strong><span>没有人质疑这种模式的效率，因为几乎没有替代方案</span></strong><span>。</span></p></section><section><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1EQjoK3bTnHLIHg4k328cZi.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span><span style="color:rgb(255, 46, 46);font-weight:bold">第二阶段：</span></section><p><span style="color:rgb(255, 46, 46);font-weight:bold">品牌逐渐掌握叙事权的主动</span></p><p>1994年美国世界杯前后，耐克在足球领域几乎为零，24支参赛队伍中没有一支由耐克赞助。其全球足球产品的销售额将将突破4000万美元。而正是这次在美国本土举行的世界杯赛事，让耐克看到了足球运动的巨大潜力，那一年的总决赛，巴西队在玫瑰碗体育场创纪录的观众面前捧得大力神杯，这种跨越族群的狂欢让耐克意识到，想要真正成为全球化的世界体育品牌，足球领域绝对是耐克不能错过的重要版图，这也让耐克下决心在足球赛道上发起进攻。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3hYovr1aJAkW2Pu5dJ1kzk0O.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><strong><span>1996年，耐克以10年两亿美元的天价签约巴西国家队。到了</span></strong><span>1998年法国世界杯前，耐克推出了由吴宇森执导、巴西全队出演的“Airport 98”广告。广告影片中，他们将乘飞机前往法国争夺冠军。不巧的是，航班延误了，而候机时间又总是单调乏味的，于是世界冠军们想出了一个打发时间的好办法——即兴的花式足球，机场成了他们表演的舞台。</span><strong><span>这支充满桑巴即兴风格的广告播出后轰动全球，仅仅花费2400万英镑进行伏击式营销，就获得了32%的球迷支持率，甚至有球迷认为耐克才是世界杯的主赞助商</span></strong><span>。而真正的主赞助商阿迪达斯却在投入了大把金钱后只换来35%球迷的支持，耐克此轮伏击式营销大获全胜，从足球世界的局外人一跃成为能与阿迪达斯正面抗衡的挑战者。</span></p><p>2002年世界杯，耐克推出“Secret Tournament”广告，将旗下24位球星聚集在一艘废弃油轮上进行三人制足球比赛，配合全球13国52座城市的线下活动，将品牌叙事推向了新的高度。而在2010年南非世界杯期间，耐克打造的“Write the Future”广告——汇集C罗、鲁尼、卡卡等球星，用3分钟的叙事短片呈现“一个动作改变一生”的戏剧性场景——在YouTube上创下当时体育广告的播放纪录，彻底打破了体育营销对“比赛期间曝光”的路径依赖。</p><p><span>而当这种以创意为中心，</span><strong><span>强调品牌主体性和审美气质的叙事逻辑被证明有效之后，世界杯的营销迅速进入一个高度工业化的阶段。</span></strong><span>某体育品牌营销部门的负责人表示，</span><strong><span>时至今日，世界杯赞助已经成为可以被高度量化的体系，而这一点在体育品牌的竞争中更加突出，因为锁定了世界排名靠前，或是在欧洲、美洲地区拥有竞争力的球队成为合作伙伴，就意味着锁定了一个庞大的球迷基本盘，同时，品牌也有机会通过更刁钻的眼光找到更好的赞助对象，实现弯道超车。</span></strong><span>在2022年的卡塔尔世界杯上，彪马赞助的摩洛哥国家队就是典型例子。尽管它并不如法国、德国、意大利这样的球队一样，拥有世界范围内庞大体量的粉丝群体，但摩洛哥在西亚和非洲地区的人气实际上非常惊人。这让彪马也成为了卡塔尔世界杯上的潜在大赢家。</span></p><p>另一方面，也正是在这样真刀真枪的比拼中，品牌的创意能力可以说在很短的时间里快速的进化，甚至，得益于体育营销这种充满情绪也因此成为了各大品牌比拼创意的秀场。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/9lDXY1nCTdH3GoyeE3mTJ0n.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(255, 46, 46);font-weight:bold">第三阶段：社交媒体兴起，</span></p><p><span style="color:rgb(255, 46, 46);font-weight:bold">世界杯营销的闪速时代</span></p><p>而社交媒体的出现，再次改变了体育营销的格局。</p><p><span>2014年的巴西世界杯，伴随着社交媒体平台的急速崛起，世界杯第一次被大规模地“实时讨论”。</span><strong><span>比赛不再是需要被完整观看的过程，而是被拆解成一个个可以即时传播的瞬间</span></strong><span>。进球、失误、争议判罚，在发生的同时就被转化为内容，进入Twitter、Facebook、微博等平台流动。</span><strong><span>品牌迅速适应了这种节奏，开始强调“反应速度”，试图在第一时间跟进热点。</span></strong></p><p>如果说社交媒体让世界杯变快，那么平台算法则彻底改变了它的形态。在YouTube、TikTok这样的分发体系中，比赛被切割成无数可以被算法推流的短视频片段。球场上的关键进球也因此有了传播意义上的新价值和新形态。而当内容开始脱离原本的时间结构，进入一种由算法主导的再分发逻辑，品牌也就逐渐失去了对传播路径的控制权，换句话说，在人人靠短视频云看球的今天，是否拥有赞助身份，已经无法决定内容是否被看到。</p><p><span>到了2022年卡塔尔世界杯期间，超过5亿人通过电视、社交和数字平台与赛事产生互动。</span><strong><span>数字触点的爆发性增长重新定义了“观看”的含义。</span></strong></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1GeP7K16ZwXJFz6kY26Wjfa.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><strong><span>进入2026年，这一趋势达到了前所未有的高度。FIFA与TikTok达成具有里程碑意义的合作，指定其为2026年世界杯“首选平台”，允许版权持有人在社交平台上直播比赛的前10分钟，并首次向创作者开放FIFA的珍贵数字档案。</span></strong><span>据IAB UK与Footballco联合发布的调研，94%的球迷使用第二屏观看比赛，61%的体育迷以短视频和集锦形式消费比赛内容。一个新时代已经到来：</span><strong><span>世界杯不再是一个单一事件，而是遍布在TikTok、YouTube、Instagram和WhatsApp上的数百万个碎片化时刻</span></strong><span>。</span></p><p>用户不再只是观看者，而是成为真正的内容生产者：剪辑、解说、二次创作、甚至重新编排比赛的意义。</p><p><strong><span>所谓“球迷”的边界被极大地扩展，参与方式也变得高度多样化</span></strong><span>。与此同时，商业体系本身也在发生调整，从表面上看，这催生了二级平台冠名的价值，许多无法购入FIFA官方权益席位的品牌，开始围绕着赛事转播的流媒体发力，通过冠名专栏等方式主导叙事，但实际上的效果却并没有想象的那么理想，但对于品牌来说，这仍然是把握赛事流量的关键机遇。</span></p><p><span><span>总而言之，正如某品牌营销负责人对Morketing表示的：“</span><strong><span>在社交媒体时代，体育营销的衡量标准正在从触达了多少人转向在每个碎片化场景中保持品牌的相关性</span></strong><span>。”</span></span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Fh2Bj36KwWL25QygOAlLUw.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(255, 46, 46);font-weight:bold">2026：</span></p><p><span style="color:rgb(255, 46, 46);font-weight:bold">技术主导下的世界杯营销新时代</span></p><p><span>毫无疑问，</span><strong><span>世界杯营销正在不断失去一个清晰的话语中心，而这也解释了为什么今天的世界杯看起来比以往任何时候都更热闹，却更难留下真正持久的品牌记忆。</span></strong></p><p>也正是在这样的趋势下，2026年的美加墨世界杯或将体育营销推向一个新的方向。不久前，联想官宣成为FIFA历史上首位官方技术合作伙伴，为世界杯提供端到端的全栈AI解决方案——Football AI Pro为所有参赛队伍提供战术数据分析，3D数字人可视化方案辅助判罚，AI驱动的内容系统为球迷提供个性化观赛体验。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/18xu52gdUH41dSdt84x6XnI.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><strong><span>海信连续第三次成为官方赞助商，其自研的</span></strong><strong><span>RGB</span></strong><strong><span>三维控色液晶显示技术成为VAR显示技术的官方合作伙伴。这些技术品牌不再满足于场边广告牌，而是试图将自己嵌入赛事的核心运营</span></strong><strong><span>，即</span></strong><strong><span>AI</span></strong><strong><span>判罚辅助、VAR显示技术、战术分析系统</span></strong><span>。它们想成为“赛事合伙人”而非赞助商，试图在技术层面重建一个中心。</span></p><p>但这会不会只是另一种昂贵的幻觉？品牌在赛事期间的存在感，真的能转化为消费者的情感认同吗？答案并不确定。</p><p>当世界杯既是一个全球同步的直播事件，又是一个被无限拆解的内容池；既有严格的商业控制体系，又允许无数个体自由再创造，体育营销面对的，已经不再是一个单一的机会窗口，而是一套复杂的、不断变化的分发系统。</p><p><span>问题因此变得更具体，也更现实：品牌不再只是思考“如何利用世界杯”，</span><strong><span>而是必须回答</span></strong><strong><span>：</span></strong><strong><span>在这样一个没有稳定中心的结构里，自己究竟还能以什么方式存在</span></strong><span>。</span></p><p><span>但这并不意味着品牌只能被动接受这种失序。恰恰相反，一个更古老、也更本质的概念正在重新回到舞台中央：</span><strong><span>体验</span></strong><span>。</span></p><p>在注意力被无限切割的时代，能够被真切“感受到”的瞬间，反而变得稀缺。一场球迷节的狂欢、一次与球星面对面的击掌、一件印有主队徽章的球衣被亲手递上的那一刻，这些无法被算法压缩、无法被二次编辑、无法被TikTok加速的原始体验，正在成为品牌与球迷之间最坚固的纽带。</p><p>在今年的世界杯营销中，我们也可以看到这样一批品牌开始朝着体验发力，American Airlines将会员里程兑换为现场门票，Total Wireless把免费球票藏在街头的传单里，Valvoline将营销重心从赛场转移到球迷跨越三国的旅途之中。这些案例的共同逻辑是，品牌不再试图触达球迷，而是试图陪伴球迷。它不再争夺注意力，而是创造值得记忆的瞬间。</p><p><span>当中心弥散、当流量碎片化、当AI生成的内容充斥屏幕，体验成为了少数无法被复制、无法被算法推荐的品牌资产。它不是技术的对立面，而是技术的目的地——</span><strong><span>AI可以让体验更个性化、更可衡量，但它永远无法替代那个真实的、与万人</span></strong><strong><span>同呼吸</span></strong><strong><span>的瞬间</span></strong><span>。</span></p><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3CUAgL1Qytp15sYdR2Oje1W.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><section><section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4pSrqdFFv0L278oztc6Bc4.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3OzWFx2zC5gf4zYQC01fhahv.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section></section></section></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 拆解新消费</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef2d7899987a80e3e795cd?channel_id=68d3ec287c1c9536cd1cb7b8">https://lingowhale.com/reader/web/69ef2d7899987a80e3e795cd?channel_id=68d3ec287c1c9536cd1cb7b8</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

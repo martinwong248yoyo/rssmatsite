@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>首发| 顺丰红杉IDG，投一位清华90后</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 创投风向标</div>
+                    <h1>首发| 顺丰红杉IDG，投一位清华90后</h1>
+                    <div class="meta">
+                        <span>投资界</span>
+                        <span>Mon, 27 Apr 2026 00:45:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eeb29a936faa8bf9e319e4?channel_id=68d3ec2cf8177a255e32e809">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/sq9ZGLc32K2VW4xF42p75J.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><section><section style="color:rgb(54, 107, 158)"><p><strong>拐点已现。</strong></p></section></section></section></section></section></section><section><p>投资界获悉，今日（4月27日），星动纪元宣布完成2亿美元新一轮融资。投资方阵容豪华——</p>顺丰集团领投；红杉中国、IDG资本、中金资本、京铭资本、朝希资本、鲁信创投、聚合资本、隆启投资等知名财务机构联合注资；科捷智能、东风产投、工银资本、联通旗下基金等多家头部产业方共同参与；老股东清控天诚、鸿瑞达亦持续加码增持。顺丰领投，是产业巨头为具身智能真实落地投下的信任票。<p>这距离星动纪元上一轮10亿元融资才刚刚过去1个月，市场投资意向远超原定融资目标。</p><p>【视频】跳转到原文查看</p><p>始于2023年，星动纪元是一家“清华系”百亿具身独角兽。身后创始人陈建宇，自创业起就坚持软硬件一体化全栈自研，打造“通用本体”和“通用大脑”构建AI NATIVE的具身终极落地系统化迭代能力。至今，星动纪元商业化落地领跑行业，在物流与工业场景已实现规模化交付。</p><p>放眼望去，具身分水岭渐渐出现。掉队就代表出局，所有人都在奋力抢跑。</p></section><section><section><section><section style="color:rgb(54, 107, 158)"><p><strong>清华「最牛」博导</strong></p><p><strong>造起机器人，“越干活越聪明”</strong></p></section></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4fYprL2j47Gs1IkleU3MxqvH.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p>星动纪元的故事，要从清华90后博导陈建宇说起。</p><p>1992年出生的陈建宇，于2011年被保送至清华大学精密仪器系，这是国内最早从事双足人形机器人研究的单位之一。本科期间，他开始研究双足机器人的步态规划，后来赴加州大学伯克利分校直博，师从美国工程院院士、机电控制领域的先驱Masayoshi Tomizuka教授，期间参与了多个无人驾驶项目，积累了深厚的控制理论和AI算法功底。</p><p>2020年博士毕业后，受图灵奖得主、中国科学院院士姚期智的邀请，陈建宇回国加入清华大学交叉信息研究院，担任助理教授。28岁时，他成为当时<strong>清华最年轻的博士生导师之一</strong>。在学院的鼓励下，陈建宇坚定了研发通用人形机器人的信心。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2NJ7hy2Q4KDn2EyvDK2fay8p.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(136, 136, 136);font-style:italic">陈建宇</span></p><p>彼时清华大学启动机器人技术成果转化，2023年8月学校把陈建宇团队研发的机器人腿部核心专利，作价176万元直接作为技术投资。由此，陈建宇带队的北京星动纪元科技有限公司正式起航，星动纪元成为<span style="font-weight:bold">清华大学唯一持股的具身智能企业</span>。</p><p>从本质来说，陈建宇的创业想法源于一个核心判断：要实现真正的通用智能，机器人必须同时拥有聪明的“大脑”和灵巧的“身体”——没有大脑的机器人容易沦为废铁，而没有本体的大脑难以称之为机器人。</p><p>因此，与许多初创公司不同，星动纪元从诞生之初就选择了一条最艰难但最具壁垒的道路：从Day1起，<span style="font-weight:bold">坚持具身大脑及机器人本体AI Native理念</span>，软硬一体、全栈自研。这种模式虽然在起步阶段异常艰难，但能实现软硬件的深度协同，在技术迭代、成本控制和性能优化上足以建立起系统性优势。因此，全栈自研不是重资产包袱，在未来将构建出具身智能最扎实的系统能力、最低的长期成本，最坚固的竞争壁垒。</p><p>此后两年时间里，星动纪元开启了本体与大脑的不断迭代：自2024年发布首款产品级高性能通用人形机器人星动STAR1后，又接连发布全直驱五指灵巧手星动XHAND 1、面向服务业的星动Q5、全尺寸双足人形机器人星动L7&amp;星动M7等。</p><p>更具突破性的是「大脑」。眼下世界模型风暴席卷全球，而2024年至今，正是星动纪元<span style="font-weight:bold">第一个提出具身界的全球首个世界模型成果</span>，并在此后成为世界模型成果最多的具身团队——</p><p>2024年11月，星动纪元发布PAD模型，这是行业首款原生搭载世界模型架构的机器人通用基础模型。一个月后，他们又推出全球首个具身领域的世界模型VPP，让机器人干活时脑中不仅预测未来的画面，还同时预测产生这个画面所需的精确控制动作。</p><p>这两个开创性的算法框架，解决了具身智能的两个核心难题——数据稀缺和物理世界理解。在此基础上，星动纪元很快推出了国内首个真正意义上的端到端原生机器人大模型ERA-42，它能驱动机器人完成前所未有的复杂操作。</p><p>后面我们看到，陈建宇带领团队让VLA与世界模型深度融合，协同进化。在2025年1月推出UP-VLA，同年10月携手斯坦福大学Chelsea Finn（PI创始人）团队推出Ctrl-World，把世界模型作为数据仿真器，无需大量真机数据。今年1月，双方又推出VLAW，让世界模型不仅「看起来对」，也能做到「物理上对」。</p><p>至此，星动纪元构建了“大脑-运控-数据-五指灵巧手-人形本体”的全栈自研体系，硬件自研率超过95%。值得一提的是，<span style="font-weight:bold">星动纪元是当前拥有灵巧手数据最多的企业</span>——硬件决定大脑发挥上限，而灵巧手则决定操作上限。</p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2K7b4A2a2CXeJ1H6TE61lO.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p>技术的突围，带来了全球范围的认可。今年2月末，星动纪元斩获世界模型权威测评Worldarena具身任务全球第一；4月初，星动纪元全球具身灵巧操作难度顶尖的真机赛事Benjie's Olympics中包揽三项任务全球第一，在剥橘子、开锁、翻袜子三项任务全面刷新 Physical Intelligence（PI）保持的世界纪录，成为唯一上榜的中国具身企业。</p><p>星动纪元正在实现“越干活越聪明”的正向循环。此时此刻，全球不少同行的目光都聚集在这里。</p></section><section><section><section><section style="color:rgb(54, 107, 158)"><p><strong>顶级投资人集结</strong></p><p><strong>商业化里程碑：千台交付在即</strong></p></section></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1vBGEY2EizDb2SGITcU1WiS.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p>短短3年，陈建宇身后已经排起了长长的投资人队伍。</p><p>公司不仅集齐了高瓴、鼎晖VGC、红杉中国、IDG资本、中金资本等全球顶级财务资本的加持，更是成为产业资本、跨界阵容加持数量最多最全的具身智能企业之一：先后吸引了顺丰集团、阿里巴巴、吉利资本、北汽、东风、三星集团、联想、海尔、世纪金源、新加坡电信、联通旗下基金、韩国友利金融集团、工银资本、科捷智能等海内外产业巨头。</p><p>重要的是，各产业投资方均拥有真实应用场景与订单，携手星动纪元协同探索规划落地方向，实现深度产业赋能。</p><p>记得今年3月，星动纪元完成10亿元战略轮融资，估值突破了百亿大关。短短一个月后，2亿美元的新融资再度到位。投资人共同下注的背后，是对星动纪元技术路线+生产力级别能力的看好。</p><p>据了解，星动纪元坚持“先B端后C端”的商业化路径，优先在工业制造、物流仓储等场景落地。标志性的一幕已经到来：日前星动纪元完成首个完成具身智能行业PMF（Product-Market Fit）——携手中国邮政、顺丰集团等落地10余个物流中心，在部分恶劣、艰苦环境下工作，具身智能机器人在效率、节拍、成功率等性能指标已超过人类水平的85%，且能24小时稳定运行。</p><p>至今，星动纪元在5省市10多个城市的物流集散地完成布局，部分场景运营效率已达85%；还与顺丰合作推出全球首个跨境物流具身智能查验解决方案，正式上岗海关开展跨境货物查验。</p><p>至此，星动纪元成为业内首个打通物流领域具身智能商业化闭环的企业，正式从“技术验证期”跨越到了“规模化商业爆发期”。这也再度证明，具身智能机器人不再是昂贵的科研玩具，而是真正能为企业创造价值、能盈利的“新质生产力”。</p><p>在此之前，星动纪元已完成汽车制造、3C电子、商业服务等场景探索，与吉利、雷诺、海尔、联想、三星等企业深度合作，未来会重点拓展电商、工业制造、医药流通等领域。据悉，星动纪元将在2026第二季度开启千台级机器人批量交付，增速高达300%。而随着千台级交付的开启，规模效应带来的成本优化将推动毛利率稳步提升。</p><p>回过头来看，强大的产业资本加持带来的场景需求和资源支持，将进一步推动星动纪元深化场景应用：规模效应势必带来成本优化，也将带动整体毛利率稳步提升，让星动纪元进入商业化高速上行周期。</p></section><section><section><section><section style="color:rgb(54, 107, 158)"><p><strong>落后即出局</strong></p><p><strong>迎接中国具身大厮杀</strong></p></section></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/46wyIG3O68Sn4AU2yj4B5hGW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section><section><p>一场前所未有的资本核爆在这里发生。</p><p>如你所见，今年具身智能融资全面爆发，大额融资常态化，成为硬科技领域最火热的赛道——不仅十亿级融资频出，独角兽批量涌现，估值狂飙之下，百亿元估值公司数量迎来井喷。</p><p>当资本对具身智能的定价体系被重构，行业正进入技术验证到规模化落地的关键拐点。眼前每一家都在奋力突围。得益于AI Native软硬一体全栈自研的系统能力，星动纪元至今交出了一份落地数据：</p><p><span style="font-style:italic">累计订单超5亿元，物流单笔最大近5000万元，从场景验证进入批量化交付初期；</span></p><p><span style="font-style:italic">在这些订单中，海外业务占比50%，占据半壁江山。可能很多人并不了解，全球TOP10科技公司9家是星动纪元的客户，单客户最高复购6次；</span></p><p><span style="font-style:italic">灵巧手XHAND系列2025年出货近千只，是国内为数不多的核心部件规模化出货案例。</span></p><p>物理世界的交付能力，已然成为资本估值定价的核心基石。</p><p>另外，星动纪元硬件体系不但对内支撑，也赋能全球顶尖科技巨头与前沿科研机构、构建具身开发者生态；成为OpenAI、英伟达、苹果、谷歌、亚马逊、字节跳动、MIT、UC伯克利、斯坦福大学、清华大学、上海期智研究院等全球科技机构的共同选择。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2JcjHK1bn0pB2t96zU1GUGn4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p>当产业潮水涌来，机遇与洗牌同时上演。</p><p>粗略算下来，现在中国具身智能公司有100-200家，所有人都想成为最后活下来的一批。而过往无数经验表明，当技术收敛、行业共识达成的时候，竞争会很激烈，资源遵守马太效应，大家都想投头部——成为头部，你才有机会留在牌桌上。</p><p>一个较为普遍的判断是，中国具身智能的“ChatGPT时刻”仍需五年甚至更久。因此，各方都在为接下来数年的漫长探索期储备弹药。落后即出局，一场生死拼杀正在上演。</p></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2ysDPj3quAVBkN6X53KhArQ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><a href="https://mp.weixin.qq.com/s?__biz=MzI5ODk1NjY1MA==&amp;mid=2247722094&amp;idx=1&amp;sn=b4ff97e58d37b0454df3706679a3c0ba&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/mYIR2k9EEYbF6k52yR49Y.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/cLAN033Uod53H8x7b1VmD1f.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><a href="https://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0OA==&amp;mid=2247631224&amp;idx=1&amp;sn=53052797b30bae11d6065d8de7b3cf80&amp;scene=21&amp;click_id=7#wechat_redirect"><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/33cZSh2SAdHy31g9uIU5tvK.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></a><a href="https://mp.weixin.qq.com/s?__biz=MzI5ODk1NjY1MA==&amp;mid=2247628075&amp;idx=4&amp;sn=712b2b93d6a4d6ac1bd5513e88291ca4&amp;scene=21#wechat_redirect"><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/qM0ZK49O7SwoiO7ntCHna.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></a><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4FPkJx3zDACr27cgv51d3hVx.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1tkU1tmjf1d2ozuPB2joI67.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 创投风向标</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eeb29a936faa8bf9e319e4?channel_id=68d3ec2cf8177a255e32e809">https://lingowhale.com/reader/web/69eeb29a936faa8bf9e319e4?channel_id=68d3ec2cf8177a255e32e809</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>老登，你在哪里躲牛市？</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 时政</div>
+                    <h1>老登，你在哪里躲牛市？</h1>
+                    <div class="meta">
+                        <span>简无知</span>
+                        <span>Sat, 25 Apr 2026 10:23:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ec97f9d419f50beb6a4480?channel_id=6805170d303fabc7418d8d04">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">就在很多人还沉浸在中东战争的影响里的时候，创业板50指数、创业板综指数不知不觉的居然突破2015年大牛股高点，创出历史新高了。</span></p><p><span style="color:rgb(34, 34, 34)">而过去一年，光通信、半导体、电网设备牛股倍出，很多股涨了数倍，一年内翻倍的ETF达到了七八十只，最强的就是这些AI相关的方向，也就是时代大方向：</span></p><section style="color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3lF1BL2kpyMg3TZdsM1Uzhb8.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(34, 34, 34)">与此同时，有些方向跌跌不休，白酒ETF过去一年跌幅达20%。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">创业板指数之所以能率先创历史新高，是因为汇聚了大量科技、医药、新能源等新兴产业公司，这些行业正是当前政策重点扶持的领域，也是符合时代的大方向。</span></p><p><span style="color:rgb(34, 34, 34)">把时间再拉长一点，2024年924行情启动以来，体现出的突出特征是结构性行情极为明显，成长类及符合时代方向的板块大涨特涨，人工智能、机器人、芯片半导体等科技成长板块成为绝对主角，涨幅亮眼；而其他板块或原地踏步，或震荡小幅上行，板块间的分化程度堪称“冰火两重天”。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">这种分化并非短期现象，而是资金对产业趋势的集中投票。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">A股历史上从未有过慢牛，但此轮行情和过去的牛市并不一样。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">本轮行情，市场呈现出明显的“进二退一”节奏，回调后行情仍会沿着主线向前，不再轻易陷入短周期熊市，哪怕是关税战、美伊战争只改变了短期节奏，但都没有改变大的走势结构。</span><span style="color:rgb(34, 34, 34)">与以往牛市相比，本轮行情最显著的差异之一是指数未出现暴涨，整体呈现温和上涨态势，给人以 "被压节奏" 的感觉。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">以往牛市中表现抢眼的券商股，在本轮行情中却表现平平，过去一年涨幅仅有8%，而创业板指数过去一年涨幅达到了89%。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">为何“牛市旗手”这次不行了？我认为，其表现平平的原因主要有三方面：</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">一是业务模式同质化严重，经纪业务占比高，在市场交易量增长中受益但想象空间有限；</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">二是机构投资者更青睐具有长期成长空间的科技板块，对券商配置需求相对减弱；</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">三是可能被用作了压制指数的工具了，今年这个行情，如果券商再大涨，可能又会变成疯牛了，和村里期望的慢牛不符。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">总结一下就是，<span style="color:#f00">市场进入新常态，核心是市场逻辑的重构。以往牛市中 "齐涨齐跌"" 券商领涨 ""散户主导" 的模式已被打破，取而代之的是 "结构分化"" 产业引领 ""机构主导" 的新特征。</span>这种转变标志着 A 股正在向成熟市场靠拢，市场定价效率提升，资源配置功能增强，为实体经济转型升级提供了有力支撑。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">如果你还是老思维，总是想去蹲后排，或者拿着上个时代的股不动，自然会“躲过”本轮牛市。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">过去两年，<span style="color:#f00">我一直提醒大家，聚焦在核心逻辑和灵魂板块中，不要出圈，不要动不动就去蹲后排，你会发现，今年以来涨幅最好的板块，基本都是我讲的几个最强逻辑方向，包括人工智能的算力、半导体、电网设备、资源、创新药等。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">这不是马后炮吧？你可以随便翻我前面的文章，互联网是有记忆的，这些方向的逻辑，我都是早早就给大家普及的，方向也是早就确定下来的。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">今天刷到一个图：</span></p><section style="color:rgb(34, 34, 34)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/dm5yZ1qPUcZ37bqJx4jzMjA.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">很多人看到这个图，幸灾乐祸，尤其是那些错过AI时代的，这个图足以让他获得心理安慰，甚至以为抓住了事物的本质。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)">然而，与时俱进的思维是什么呢？</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00;font-weight:bold">还是那句话，我们每个人都会死，但是不能现在就躺下来等死，而是要享受当下。</span></span><span style="color:rgb(34, 34, 34)">这里面的股，海天、爱尔、隆基、通策我都买过，也没有一直拿着等死啊。</span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00">陪着它成长，只做业绩爆发的一段，只做量价齐升的增量逻辑那一段，然后等这个逻辑变了趋势变了就退出，这才是与时俱进。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00">这些当年的牛股，在当年，没有一个不是符合“增量逻辑”的，只不过，时代变了而已。长期看，产业趋势和业绩爆发也是牛股的摇篮，一定要让自己专注于“增量逻辑”，远离“缩量逻辑”。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:#f00;font-weight:bold">不要做时代的看客，然后，等一轮牛市过去，这些股最终是跌了下来，然后认为验证了自己的判断，沉醉于当初看透了终局，岂不知，自己错过了一个时代的大机会。</span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:rgb(0, 82, 255)">改变思维，可以读读我的书：</span></span></span></p><p style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:rgb(34, 34, 34)"><span style="color:rgb(178, 178, 178)">（免责声明：本文内容及观点仅为记录个人交易思路，不涉及任何与个股有关的分析和推荐，不提供任何投资咨询服务，不构成投资建议，不作为投资依据。股市有风险，投资需谨慎：</span></span><span><span style="color:rgb(178, 178, 178)">必读声明</span></span><span><span style="color:rgb(178, 178, 178)">）</span></span></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 时政</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ec97f9d419f50beb6a4480?channel_id=6805170d303fabc7418d8d04">https://lingowhale.com/reader/web/69ec97f9d419f50beb6a4480?channel_id=6805170d303fabc7418d8d04</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
