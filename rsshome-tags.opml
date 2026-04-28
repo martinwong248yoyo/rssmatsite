@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>rssHome 分类订阅</title>
+    <dateCreated>Tue, 28 Apr 2026 08:26:45 GMT</dateCreated>
+  </head>
+  <body>
+    <outline text="文章" title="文章">
+      <outline type="rss" text="热映推荐" title="热映推荐" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--文章__热映推荐.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--文章__热映推荐.xml" />
+      <outline type="rss" text="电影史" title="电影史" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--文章__电影史.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--文章__电影史.xml" />
+      <outline type="rss" text="院线观察" title="院线观察" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--文章__院线观察.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--文章__院线观察.xml" />
+    </outline>
+    <outline text="活动" title="活动">
+      <outline type="rss" text="创投训练营" title="创投训练营" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__创投训练营.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__创投训练营.xml" />
+      <outline type="rss" text="征片" title="征片" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__征片.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__征片.xml" />
+      <outline type="rss" text="线上活动" title="线上活动" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__线上活动.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__线上活动.xml" />
+      <outline type="rss" text="线下活动 / 电影节活动" title="线下活动 / 电影节活动" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__线下活动__电影节活动.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__线下活动__电影节活动.xml" />
+      <outline type="rss" text="线下活动 / 线下交流" title="线下活动 / 线下交流" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__线下活动__线下交流.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--活动__线下活动__线下交流.xml" />
+    </outline>
+    <outline text="电影节展" title="电影节展">
+      <outline type="rss" text="短片电影节 / 电影节活动" title="短片电影节 / 电影节活动" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--电影节展__短片电影节__电影节活动.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--电影节展__短片电影节__电影节活动.xml" />
+      <outline type="rss" text="长片电影节 / 电影节活动" title="长片电影节 / 电影节活动" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--电影节展__长片电影节__电影节活动.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--电影节展__长片电影节__电影节活动.xml" />
+    </outline>
+    <outline text="资料" title="资料">
+      <outline type="rss" text="技术资料 / AIGC" title="技术资料 / AIGC" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__技术资料__aigc.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__技术资料__aigc.xml" />
+      <outline type="rss" text="技术资料 / 创作访谈" title="技术资料 / 创作访谈" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__技术资料__创作访谈.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__技术资料__创作访谈.xml" />
+      <outline type="rss" text="技术资料 / 后期" title="技术资料 / 后期" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__技术资料__后期.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__技术资料__后期.xml" />
+      <outline type="rss" text="技术资料 / 器材" title="技术资料 / 器材" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__技术资料__器材.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__技术资料__器材.xml" />
+      <outline type="rss" text="组讯" title="组讯" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__组讯.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/feeds/tags/rssreclassify--资料__组讯.xml" />
+    </outline>
+  </body>
+</opml>
