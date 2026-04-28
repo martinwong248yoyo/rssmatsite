@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>OpenAI 和微软，官宣分手</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 热门AI公众号更新追踪</div>
+                    <h1>OpenAI 和微软，官宣分手</h1>
+                    <div class="meta">
+                        <span>赛博禅心</span>
+                        <span>Mon, 27 Apr 2026 17:37:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef9fc21094587cab5e20d1?channel_id=67e5334abf856a52db04e0b7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><p style="color:#4a4a45">大晚上的，OpenAI 和微软发了个「分手信」，准确来说是 amended agreement</p><p style="color:rgb(74, 74, 69)">在这个里面，有两个实质性变化：</p><ul><li><p style="color:rgb(74, 74, 69)"><span style="color:rgb(207, 68, 54);font-weight:bold">微软赚钱不用给 OpenAI 分了</span>，当然也不独家享用 OpenAI 授权</p></li><li><p style="color:rgb(74, 74, 69)"><span style="color:rgb(207, 68, 54);font-weight:bold">协议里</span><strong><span style="color:rgb(207, 68, 54);font-weight:bold">不再提 AGI 的事儿了</span><span>，</span><span>OpenAI 会持续向微软分账至 2030 年</span></strong></p></li></ul><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1KtXeT3Tz9mV3mVD7pasZKS.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><p style="color:rgb(138, 138, 130)">https://openai.com/index/next-phase-of-microsoft-partnership/</p></section><p style="color:#4a4a45">官方给这次修订的理由是三个词：flexibility、certainty、scale，换个说法：<span style="color:rgb(207, 68, 54);font-weight:bold">从忠贞恋人，走向开放式关系</span></p></section><section><h2 style="color:#cf4436;font-weight:700">原文与翻译</h2><p style="color:#4a4a45">这里，我先贴一下公告全文</p><p style="color:#4a4a45"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/11U0MH29RyB3gECKa3xGvtH.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:#4a4a45">翻译成中文，就是：</p><p style="color:#4a4a45">创新速度太快，我们需要继续调整合作关系，让客户和两家公司都受益。今天，我们宣布一份修订协议，用来简化双方的合作关系和协作方式。这份协议建立在灵活性、确定性，以及更广泛交付 AI 价值的目标之上。修订协议带来的更高可预测性，会增强双方大规模构建和运营 AI 平台的能力，同时也让两家公司都能更灵活地追求新机会。协议写明了以下内容：</p><ul><li><p style="color:#4a4a45">微软继续担任 OpenAI 的主要云伙伴。OpenAI 产品仍然优先在 Azure 上发布，除非微软既无法、也不愿意支持必要能力。OpenAI 现在可以通过任何云服务商向客户提供所有产品</p></li><li><p style="color:#4a4a45">微软继续拥有 OpenAI 模型和产品 IP 的授权，期限到 2032 年。微软的授权现在变成 non-exclusive</p></li><li><p style="color:#4a4a45">微软将不再向 OpenAI 支付 revenue share</p></li><li><p style="color:#4a4a45">OpenAI 向微软支付的 revenue share 继续到 2030 年，不再取决于 OpenAI 的技术进展，比例不变，但有总额上限</p></li><li><p style="color:#4a4a45">微软继续以大股东身份，直接参与 OpenAI 的增长</p></li></ul><p style="color:#b8b7b0;font-style:italic"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3TER7Fa6Z901bfADa4DTjMw.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:#4a4a45">虽然这次修订简化了合作关系，但双方一起做的事情仍然很有野心。从扩建 gigawatts 级别的新数据中心能力，到合作下一代芯片，再到用 AI 推进网络安全等，我们期待继续合作，为全球个人和组织推进并扩展 AI 能力</p></section><section><h2 style="color:#cf4436;font-weight:700">关系简史</h2><p style="color:#4a4a45">微软和 OpenAI 的七年，从算力绑定一路走到非独家合作</p><h3 style="font-weight:600;color:rgb(26, 26, 24)">2019 年，先把算力关系绑上</h3><p style="color:#4a4a45">2019 年，微软投资 OpenAI，Azure 成为 OpenAI 的关键算力底座</p><p style="color:#4a4a45">那时的 OpenAI 还没有 ChatGPT，双方主要围绕云、资金和训练大模型的工程能力合作</p><h3 style="color:rgb(26, 26, 24);font-weight:600">ChatGPT 之后，微软坐上第一排</h3><p style="color:#4a4a45">ChatGPT 爆发之后，OpenAI 模型进入 Azure OpenAI Service，也进入 Copilot</p><p style="color:#4a4a45">微软一边把 OpenAI 能力卖给企业客户，一边把模型塞进 Office、Windows、GitHub 和安全产品里</p><p style="color:#4a4a45">那几年外界看到的是两家公司高度合体，OpenAI 负责最强模型，微软负责云、渠道和企业客户</p><h3 style="color:rgb(26, 26, 24);font-weight:600">2025 年 10 月，关系开始松绑</h3><p style="color:#4a4a45"><span>2025 年 10 月那份 next chapter 协议，已经开始把双方关系从绑定改成更清楚的商业合同：<a href="https://mp.weixin.qq.com/s?__biz=MzkzNDQxOTU2MQ==&amp;mid=2247507650&amp;idx=1&amp;sn=712dcfc8e2a3896d4878cf272a0ace2a&amp;scene=21#wechat_redirect">2500 亿美金：OpenAI 与微软的分手费</a></span></p><p style="color:#4a4a45"><strong>那次是个交换</strong>。微软放弃 OpenAI 算力供应的 right of first refusal，换来 IP 权限延伸到 2032 年、覆盖 post-AGI 模型；OpenAI 承诺增购 2500 亿美元 Azure 服务</p><p style="color:#4a4a45">这一步之后，微软仍然是大伙伴，OpenAI 也给多云和更大规模的自主扩张留了出口</p><h3 style="color:rgb(26, 26, 24);font-weight:600">2026 年 4 月，分手</h3><p style="color:#4a4a45">两个月前，2026 年 2 月，OpenAI 和 Amazon 签了战略合作，Amazon 投资最高 500 亿。AWS 协议从 380 亿扩大 1000 亿，期限八年。AWS 还成了 OpenAI 企业平台 Frontier 的独家第三方云分发商</p><p style="color:#4a4a45">至此，OpenAI 可以通过任何云服务商交付所有产品。微软对 OpenAI 模型和产品的授权延续到 2032 年，但从 exclusive 改成 non-exclusive</p><p style="color:#4a4a45">同时，微软不再向 OpenAI 支付 revenue share，OpenAI 向微软支付的 revenue share 延续到 2030 年，并且有总额上限</p><p style="color:#4a4a45"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/ucuQM2TAyxp1PNZSN4DEVAw.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p style="color:#4a4a45"><strong>独家这件事，至此告一段落</strong></p></section><section><h2 style="color:#cf4436;font-weight:700">素材和来源</h2><section><p style="color:#4a4a45"><span style="color:#cf4436">→</span> OpenAI：The next phase of the Microsoft OpenAI partnership</p><p style="color:#8a8a82">https://openai.com/index/next-phase-of-microsoft-partnership/</p></section><section><p style="color:#4a4a45"><span style="color:#cf4436">→</span> Microsoft：The next phase of the Microsoft-OpenAI partnership</p><p style="color:#8a8a82">https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/</p></section><section><p style="color:#4a4a45"><span style="color:#cf4436">→</span> OpenAI：The next chapter of the Microsoft-OpenAI partnership</p><p style="color:#8a8a82">https://openai.com/index/next-chapter-of-microsoft-openai-partnership/</p></section><section><p style="color:#4a4a45"><span style="color:#cf4436">→</span> Microsoft：The next chapter of the Microsoft-OpenAI partnership</p><p style="color:#8a8a82">https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/</p></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 热门AI公众号更新追踪</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef9fc21094587cab5e20d1?channel_id=67e5334abf856a52db04e0b7">https://lingowhale.com/reader/web/69ef9fc21094587cab5e20d1?channel_id=67e5334abf856a52db04e0b7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

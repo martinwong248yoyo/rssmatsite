@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>对话周鸿祎： 美国Mythos改变攻防规则，AI正在制造新的“网络核武器”</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 中国AI创业者最新采访</div>
+                    <h1>对话周鸿祎： 美国Mythos改变攻防规则，AI正在制造新的“网络核武器”</h1>
+                    <div class="meta">
+                        <span>科工力量</span>
+                        <span>Mon, 27 Apr 2026 13:38:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef8a3ea3ad7425d54765e8?channel_id=67e5334abf856a52db04e013">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p>一个没有公开发布的AI模型，却在全球网络攻防领域掀起轩然大波。</p><p>近期，美国大模型公司Anthropic研发的“Mythos”，被曝出在无需人类干预的情况下，自主发现了OpenBSD中潜伏27年的漏洞、FreeBSD中存在17年的远程代码执行漏洞，以及躲过了超500万次模糊测试的FFmpeg漏洞。漏洞发现成本被拉低近百倍，效率提升两个数量级以上。</p><p>过去顶尖黑客团队以“年”为单位的工作，AI只需数分钟到数小时。</p><p>紧随其后，外媒曝出Anthropic联合AWS、苹果、谷歌、微软、英伟达、思科等10余家科技巨头组建“玻璃翼”（Glass Wing）联盟，将Mythos封闭在一个仅供盟友使用的安全防御圈内。</p><p>这意味着，非联盟国家或许会面临一个危险的局面：美国可以批量发现他们的漏洞，而他们却无法对等发现美国的漏洞，网络空间重新形成了“单向透明”的战略失衡。</p><p>“如果攻击方有Mythos能力，对被攻击方常见的代码库进行扫描，就能获得比原来可能多数百倍的漏洞，也就是说我们的关键基础信息设施，很多企业和政府的系统被攻击的概率可能提升了数百倍，攻击的难度也降低了数百倍，这是游戏规则的改变。”360集团创始人周鸿祎对观察者网称。</p><p>在他看来，Mythos把过去“人和人”的对抗，变成了算法、算力、机器和人力的对抗，“对没有这种能力的国家来说，Mythos肯定是一个灾难。”这意味着传统安全体系正全面失效，安全行业将迎来一次范式迁移，智能体将成为新的基础能力形态。</p><h2>美国“神秘模型”改变游戏规则</h2><p>漏洞是网络攻防最核心的战略资产。</p><p>一个能控制Windows系统的“零日漏洞”，在黑市上可以卖到上百万美元；沙特阿拉伯曾斥资6000万美元购买一个针对iPhone的漏洞。昂贵背后是极度的稀缺，发现一个有价值的漏洞，周期通常以年为单位，需要顶尖黑客团队反复尝试，且结果极不确定。</p><p>“漏洞不是一眼就能看出来的，一眼看出来的错误叫bug。人类发现漏洞的能力很弱，需要一批特殊才能的专业黑客，通过很长时间对代码的分析研判，还有各种测试。”周鸿祎把这种模式比作“中彩票”：这个月中500万，不一定下个月还能中，所以漏洞极其稀缺。</p><p>正因漏洞难以批量发现，全球网络攻防长期维持着一种脆弱的平衡，攻击方手里可用的漏洞寥寥无几，防守方也无需面对“千疮百孔”的威胁。</p><p>Mythos的出现打破了这一平衡。</p><p>它不是专门的安全模型，而是大模型逻辑推理与智能体自主决策能力进化后的“副产品”。但它展现出的漏洞挖掘能力，让所有安全专家倒吸一口冷气，72.4%的漏洞利用开发测试成功率，数分钟到数小时内完成过去一个团队数年才能完成的工作。这意味着，原本极其稀缺的漏洞，现在可以被AI批量“开采”。</p><p>周鸿祎判断，如果攻击方掌握了类似Mythos的能力，对被攻击方常见的代码库进行扫描，就能获得比原来多数百倍的漏洞。这就意味着在攻击方眼中，被攻击方犹如一个筛子似的，到处是可以进攻的点，这就形成了一个“单向透明”的禁地。</p><p>这是质变。过去防守方可以依靠“漏洞不会太多”来构建层层防御体系，投入大量防火墙、入侵检测设备。但当漏洞变得像海滩上的沙子一样随处可见时，原有的防御逻辑就失效了。</p><p>更令人不安的是，漏洞的“供给侧”还在扩大。随着AI编程工具的普及，AI生成代码的占比越来越高。而AI代码同样会引入漏洞，Anthropic做Mythos的初衷，恰恰是为了解决自家AI编程产品留下的隐患。</p><p>周鸿祎指出，“每1000行代码里都会留下两到三个漏洞。AI写代码的产能是人类的几十倍，如果不用AI来自动发现漏洞，那对行业就是灾难。”</p><h2>联盟背后的地缘政治底色</h2><p>Glass Wing联盟的成立，暴露了这场范式革命的政治底色。</p><p>Anthropic声称，Mythos具有不可思议的能力，可以发现并利用全球银行、电网和政府机构运行软件中的隐藏漏洞。这意味着，该模型可能成为一个地缘政治筹码，而且掌握在一家美国公司手中。加拿大财长将其威胁比作霍尔木兹海峡的关闭。</p><p>12家美国科技巨头把Mythos锁在联盟内部，不对外公开，不授权第三方。表面上是为了“防止漏洞被恶意利用”，实际上构建了一个高度排他的安全防御网络，联盟成员之间互相扫描漏洞、共享情报、提前修补，形成“双向透明”的防御闭环。而闭环之外的国家和企业，面对的是单向透明的攻击劣势。</p><p>周鸿祎对此毫不意外。“他们也很担心技术扩散后，像微软、谷歌、苹果等公司大量的漏洞，如果被世界其他地方的黑客组织大量挖出，那他们马上就面临一个千疮百孔的基础设施体系，面临这种高强度的攻击，他们非常担心。所以无论从进攻和防守的角度来说，他们都要拉帮结派的，那我们国家肯定是被排在外面的，这是毫无疑问。”</p><p>中国是网络攻击最重要的受害者。周鸿祎透露，360在过去20年累计发现了60个对中国发起APT攻击的境外组织，数量全球第一。“对方在某大型单位的核心机房潜伏超过10年——你可以想想他们从什么时候就开始渗透了。”</p><p>如今，有了AI漏洞挖掘能力，渗透的门槛被急剧拉低，规模被急剧放大。</p><p>面对这场“技术圈地”，中国网络安全行业并非束手无策。周鸿祎表示，360在三年前就确立了“AI+安全”双线战略，并在保密状态下研发了两大类智能体：一类是代码漏洞自动挖掘智能体，另一类是自动防御智能体。前者不仅能扫描源代码，还能扫描二进制代码，即使像Windows这样没有源码的系统，也能“批量、稳定、持续”地发现漏洞，全程由智能体自动完成。</p><p>他还提到，360的智能体系统累计发现近1000个漏洞，其中50个被国家漏洞库认定为高危。最近公布的Windows内核提权漏洞和Office远程代码执行漏洞，潜伏期分别长达5年和8年，影响面覆盖全球超10亿用户。该公司已通过官方渠道提交给微软，并获得微软致谢。业内人士认为，漏洞挖掘智能体正在成为AI时代的“网络核武器”，其决定的是国家在网络空间中的攻防主动权。</p><p>“如果中国和世界上其他国家，大家挖漏洞的速度继续保持平衡，那么大家都能以同样的速度来修补自己的漏洞，同时发现新的漏洞，那会达到平衡。只要有一方跟不上，那一方对另外一方就会形成碾压的姿态。”周鸿祎说道。</p><p>但在技术路线上，360与Mythos走了不同的方向。</p><p>Mythos号称“纯大模型能力，没有任何安全训练”，完全依靠模型对代码逻辑的理解力。而360走的是“大模型+安全专家蒸馏”路线，将20年来积累的攻防样本、漏洞利用战术、顶级白帽子（安全专家）的经验，通过蒸馏技术赋能给智能体。</p><p>哪种路线更优尚难定论，但两者都已证明自己有能力批量挖掘高危漏洞。</p><p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1SX4Jl2PjRZL3qVELI4cT75r.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></p><h2>当1万个黑客智能体围攻一个目标</h2><p>漏洞挖掘只是第一步，真正改变攻防格局的，是智能体对黑客能力的“批量复制”。周鸿祎今年初预判：2024是大模型之年，2025是智能体之年，2026将是百亿智能体之年。</p><p>智能体的核心威力在于“蒸馏”，把一个顶级黑客的作战经验、攻击手法、漏洞利用策略，做成专业技能包，让智能体学习。即使每个智能体只能达到原专家的六成能力，但只要有算力，就可以把一个黑客复制出100个、1000个甚至1万个。</p><p>“这些智能体不需要睡觉，不用吃饭，只要有算力就可以7×24小时持续工作，在每个攻击路径上不断尝试。”周鸿祎描述了一个令人不寒而栗的场景。</p><p>过去，一个国家要发动网络攻击，只能靠有限的几支黑客战队、手里仅有的几个珍贵漏洞，精心挑选目标。而现在，1万个黑客智能体可以同时对目标单位的各个系统发起无死角试探，任何关键单位都可能会不堪一击。</p><p>这就是攻防范式的根本转变，从“人与人对战”变成了“算力对抗算力、智能体对抗智能体”。</p><p>周鸿祎认为，美国在AI加安全领域正在形成新的“单向透明”优势。360对此的应对是加速研发网络安全防御智能体，目标是实现“无人驾驶式”安全运营，从侦测发现、应对响应到攻击溯源和反制，全流程交给智能体集群。</p><p>他打了个比方：“过去你一个人一天看1000次报警，很快就倦了。现在手底下有100个智能体，每个处理一个报警，把假报警过滤掉，只有最关键的那个让你亲自处理，你的精力就可以用在战略决策上。”</p><p>智能体本身也是软件，同样存在漏洞和后门风险。</p><p>周鸿祎区分了两种安全问题：漏洞挖掘智能体是“专用智能体”，任务目标明确，工具使用受限，可以在封闭环境中安全运行；而通用智能体“啥都能干”反而最容易出问题。</p><p>他强调，“如果人类在AI上出问题，我预言一定是这种通用人，通用智能体就是啥都能干的智能体出问题。人类要尽量搞专用的智能体，在受控环境里按照设定的游戏规则工作。”</p><p>无论如何，一个确定性的趋势已经形成：未来几年，网络攻击的频次、广度和深度将出现至少10倍的跃升。关键基础设施、政府单位、大型企业将进入网络攻击的高发期。而胜负手，就在于谁能用智能体和算力，率先构建起新一代的攻防体系。</p><p>“有心人肯定会用Mythos挖掘中国更多的漏洞，会加大攻击强度，这是不能不防的。所以我认为它会颠覆掉很多传统网络安全的作战和防御游戏规则。”周鸿祎说道。</p><p>既然Glass Wing已经把门关上了，中国能做的，是造出自己的钥匙。</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 中国AI创业者最新采访</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef8a3ea3ad7425d54765e8?channel_id=67e5334abf856a52db04e013">https://lingowhale.com/reader/web/69ef8a3ea3ad7425d54765e8?channel_id=67e5334abf856a52db04e013</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

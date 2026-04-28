@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>速递｜AI存储Vast Data融资10亿美元，估值300亿美元，IPO进行中</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI行业最新融资案例解读</div>
+                    <h1>速递｜AI存储Vast Data融资10亿美元，估值300亿美元，IPO进行中</h1>
+                    <div class="meta">
+                        <span>Z Potentials</span>
+                        <span>Thu, 23 Apr 2026 02:50:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e99080d419f50beb454286?channel_id=67e5334abf856a52db04e024">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/k3K144jWfH2MYR2qPiITX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1FSDr72goMTIyN1f9GZyyV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="font-style:italic">图片来源：</span><span style="font-style:italic">Vast Data</span></p><p>由 NVIDIA  支持的 Vast Data （一家为人工智能任务开发数据存储软件的公司）表示，已筹集约 10 亿美元，估值超过三倍增至 300 亿美元。</p><p><span>这些资金分为一级和二级资本，员工和早期投资者可以出售他们的股份，这给</span><span>Vast Data </span><span>在是否以及何时采取首次公开募股步骤方面提供了灵活性</span>，公司联合创始人兼首席执行官 Renen Hallak 在接受采访时表示。本轮融资由 Drive Capital 和 Access Industries 共同领导，并包括来自 NVIDIA、Fidelity 和 NEA 等现有投资者的参与。</p><p>Vast Data 的客户包括摩根大通公司、埃隆·马斯克的 xAI 和 CoreWeave ，<span>该公司上一次融资是在 </span><span>2023 </span><span>年，当时公司估值为 </span><span>91 </span><span>亿美元。</span><span style="font-weight:bold">Vast Data </span><span style="font-weight:bold">在运营基础上是盈利的，自成立以来十年间已产生 </span><span style="font-weight:bold">40 </span><span style="font-weight:bold">亿美元的预订额，其中大部分是在过去一年内产生的</span>，Hallak 表示。他表示，公司正在考虑使用这笔新资金进行收购和对 AI 生态系统中其他公司的投资。</p><p>该公司销售软件和设备，旨在替代更传统的存储和数据库产品，以更好地使客户能够访问他们的信息，用于训练和运行 AI 程序。Vast Data 正在努力赢得更多和更大的商业客户，以增加目前主要由 AI 客户组成的客户名单。该公司还与阿联酋和新加坡的基金合作，以帮助扩大其在这些地区的业务。</p><p>Drive Capital  联合创始人 Chris Olsen 表示，Vast 提供"改变世界的技术，加上恰当的时机和非常有吸引力的商业模式"。挑战在于让人们从现有技术转换过来。"现实是这些系统都没有坏。它们运行得非常好。"但如果你将 Vast 作为一种设置 AI 工作负载的方式来推销，那就是一个成功的推销，他说。</p><p>该公司约 18 个月前聘请首席财务官艾米·沙佩罗(Amy Shapero)，部分原因是为了<span style="font-weight:bold">让公司为公开股票发行做好准备</span>。</p><p>"我们应该在今年年底前做好准备，然后我们可以决定是否以及何时启动 IPO，"哈拉克说。"对我来说真正重要的是我们如何更快地增长。"</p><p><span style="color:rgb(136, 136, 136);font-style:italic">参考资料：</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">https://www.bloomberg.com/news/articles/2026-04-22/nvidia-backed-vast-data-raises-1-billion-triples-valuation-to-30-billion?srnd=phx-technology</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span><strong><strong><span><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247506405&amp;idx=1&amp;sn=29bdac1ee34aaceade9e66e9b0867d8f&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Rb4gq1Kttj0C6sdJ2kzkXN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></span></strong></strong></span></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247503698&amp;idx=4&amp;sn=ade3fdbb8a82ca59be3212c4843bb1a0&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3tGylYOPsWP3H0UuD3uCS.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247494663&amp;idx=1&amp;sn=8fab67231b9ebc593ac65864fd8f7e00&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Gk8PW1BuRCX32iMfWVNdAr.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/rZlKD3H6UGSB7dB44beqy5.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1xV3SiPYUz63Vrtzu4c8WQ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/28FG1544LRlz14bI5T15sCkZ.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI行业最新融资案例解读</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e99080d419f50beb454286?channel_id=67e5334abf856a52db04e024">https://lingowhale.com/reader/web/69e99080d419f50beb454286?channel_id=67e5334abf856a52db04e024</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

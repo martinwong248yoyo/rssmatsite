@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>从仓库到工厂，具身智能产业应用的“GPT时刻”还有多远？</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 热门AI公众号更新追踪</div>
+                    <h1>从仓库到工厂，具身智能产业应用的“GPT时刻”还有多远？</h1>
+                    <div class="meta">
+                        <span>钛媒体AGI</span>
+                        <span>Mon, 27 Apr 2026 06:18:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef00ec3e9cda2380c3a7b7?channel_id=67e5334abf856a52db04e0b7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">2026年，具身智能的叙事逻辑正在发生根本性转变。2025年的舞台炫技、发布会演示已经退潮，取而代之的是一个更务实的问题：机器人到底能不能干活、能挣多少钱、什么时候能大规模铺开？</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">目前业内有很多专家的共识：人形机器人正处于从技术突破迈向规模化商业化的关键时期，2026年有望成为量产落地和场景验证的重要节点。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">在这个转折之年，物流与工业两大B端场景成为具身智能最先“登岸”的滩头阵地，而关于“大脑”技术路线的争论也愈演愈烈。更令人好奇的是，人们反复追问的那个问题——具身智能的“ChatGPT时刻”何时到来？“iPhone时刻”又何时才能出现？或许答案远比我们想象的复杂。</span></p><section><section><section><section><section style="color:rgb(62, 62, 62);font-weight:400"><section><section><section><section><section><section><p>1</p></section></section></section></section></section><section><section><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">物流、工业成具身智能产业应用的切入点</span></p></section></section></section></section></section></section></section></section><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">在众多具身智能潜在应用场景中，物流仓储被认为是条件最为成熟的突破口之一。逻辑并不复杂：需求刚性、场景边界清晰、价值可量化。装卸、拣选等环节纯人力依赖程度极高，而招工难、人力成本上涨是物流行业的普遍痛点。与此同时，仓库环境相对结构化，任务目标明确，不需要像家庭场景那样应对无限开放的复杂环境。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">从市场规模来看，物流仓储的潜力确实巨大。据中商产业研究院2026年3月数据显示，2026年中国智能仓储设备市场规模将突破1800亿元人民币，具身智能设备增速远超传统AGV/AMR。更长远来看，思瀚研究院预计全球智能场内物流机器人市场规模到2030年将达到人民币3441亿元，2024年至2030年的复合年增长率为19.5%；中国市场到2030年有望达到1339亿元。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">然而，这些光鲜的数字背后存在一个被忽略的尴尬：物流机器人的整体渗透率仍然偏低，且大多数已部署的设备还停留在传统AGV（自动导引车）或AMR（自主移动机器人）层面，真正具备具身智能能力的机器人（即能够感知、理解、自主决策并执行复杂操作的机器人）才刚刚起步。有业内人士直言，中国超过1000万装卸工的存量市场，智能装备渗透率不到1%。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">这一差距背后存在多重现实挑战。技术瓶颈首当其冲：人形机器人续航不足，难以满足8小时满负荷作业；低温、高湿、金属密集场景中传感器信号衰减，定位精度待提升；大规模集群协同调度算法仍需优化。其次是成本问题：当前小批量量产前的机器人硬件成本仍在30万元左右，即使小批量生产（如100台规模）后能降至十几万元，对物流行业这类低毛利产业而言仍然是笔大开销。正如智往未来CEO孙浚凯所言，京东、顺丰这类物流企业每一单利润都是几毛、几分钱，采购自动化设备希望投资回报周期（ROI）一年回正，而当前具身智能机器人的ROI周期能做到2~3年已经算是很好了，普遍需要长达4~5年才能回正。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">不过，变化正在加速发生。2026年以来，多家企业已在物流场景取得实质性进展：极智嘉于2026年2月发布仓储通用人形机器人Gino1，可从事拣货、搬箱、打包、巡检等多项任务；菜鸟于2026年4月在MODEX 2026国际物流展发布首款自研“攀爬机器人”ZeeBot，首个由该机器人进行智能作业的仓储项目已在广东省交付并投入使用；德马科技早在2025年7月已建成人形机器人物流场景训练与数据采集工厂，并联合鹿明机器人推出重载具身机器人.....</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">而智往未来也在这一赛道快速推进。据悉，智往未来已与某头部电商物流签署了POC协议，将机器人部署到其仓库中开始实际作业并采集数据；与全球头部医疗健康巨头，以及某一线汽车主机厂商等跨国公司的合作也在洽谈中。孙浚凯预测，2026年物流领域的分拣场景下，具身智能机器人总出货量可能在几百台级别，而智往未来有望占据约30%的市场份额。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1TT8qe21V0h0POedv1XjCC3.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><span style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgb(178, 178, 178)">智往未来创始人兼CEO孙浚凯与智往未来具身智能产品Armstrong Pro</span></span></section><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">与此同时，孙浚凯表示，物流场景正在成为具身智能“数据飞轮”的启动点。仓储物流中涉及的物品类型（如饮料、包裹、日用品），与零售商超和家庭场景高度相似，使得机器人在物流场景中积累的技术能力和数据沉淀，能够更容易地迁移和复用到商超零售乃至家庭服务中。正如孙浚凯所规划的演进路径：从仓储物流起步，逐步迈向商超零售，最终延伸至家庭服务——这不仅是技术成熟度的逐步提升，更是一条精心设计的“从简向繁”路线。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">相较于物流，工业制造场景对具身智能的需求同样强烈，但挑战截然不同。传统工业机器人（“四大家族”为代表）在精度、速度、可靠性上已臻化境，但它们被困在“笼子”里，依赖高精度的夹具和严格编程，无法适应小批量、多品种的柔性生产趋势。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">具身智能为工业柔性制造带来了曙光。它有望让机器人像熟练工人一样，通过视觉识别不同的工件，自主规划抓取姿态和装配动作，完成螺丝拧紧、线束装配、质检等复杂任务。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">不过，工业场景的“繁荣”之下，分化同样明显。正如孙浚凯在与笔者交流时指出的：工业生产场景千差万别，侧重于精度与效率，大模型并非其核心需求。当前头部玩家倡导的柔性制造，虽涉及任务泛化，但并未充分发挥大模型技术的潜力。“这就造成了工业场景下的泛化能力不如物流场景中那般凸显，且在工业场景下，传统工业机器人供应商的行业壁垒更为明显，行业Know-how让新晋玩家望而却步，”拓斯达具身智能业务线-矩阵智拓CMO王琪曾对笔者表示。</span></p><section><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">相比之下，仓储场景追求绝对泛化能力，需要应对各种复杂情况，在孙浚凯看来，这才是大模型技术真正的用武之地。</span><section><section><section><section style="color:rgb(62, 62, 62);font-weight:400"><section><section><section><section><section><section><p>2</p></section></section></section></section></section><section><section><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">大脑技术逐渐收敛的一年</span></span></p></section></section></section></section></section></section></section></section><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">2026年，具身智能产业完成了从“叙事驱动”到“基本面驱动”的根本性转变。据厦门具身智能产业联盟的报告，2026年中国具身智能产业综合指数达7.4/10，已跨越技术验证期，进入商业化落地攻坚与生态格局塑造的关键阶段。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">孙浚凯也观察到了这种现象，他表示，2024年是行业元年，2025年资本市场活跃，而2026年，行业已整体进入“卷落地”阶段，大家从拼技术故事，转向拼真实的场景验证和订单获取。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">这个过程中，价值锚点从技术炫酷转向场景穿透力，资本从押注梦想转为验证商业模型，客户从技术尝鲜变为生产力工具采购。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">如果说2024-2025年具身智能行业的焦点是“会不会动”，那么2026年的焦点已经转移到“脑子好不好用”。当前，围绕机器人大脑的技术路线之争愈演愈烈，最具代表性的两条路径是VLA（视觉-语言-动作）模型与世界模型。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">VLA模型曾一度被视为具身智能的主流技术路径，即让机器人基于视觉输入和语言指令，直接完成动作生成与执行。这一路线的核心优势是端到端的简洁性——看到、理解、行动，一气呵成。端到端VLA大模型已成为行业技术共识，中国企业已率先实现“全身控制+移动轨迹”的统一输出，部分开源模型综合性能超越国际标杆30%。例如，小米于2026年2月开源首代机器人VLA大模型Xiaomi-Robotics-0，采用“大脑+小脑”混合架构实现实时控制，在三大主流的仿真测试和真实真机任务中均获得优异成绩。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">然而，随着机器人开始进入更复杂、更长链条的任务场景，仅仅“看懂指令并做出动作”已不够。机器人还需要理解任务目标、预测动作后果、在多种可能路径中做出最优选择。而这正是世界模型正在试图解决的问题。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">世界模型的核心思想是让机器人学习物理世界的底层规律，从而能够“想象”动作的后果，进行规划与推理。2026年以来，世界模型领域动作频频：BeingBeyond发布基于大规模人类行为数据训练的具身智能世界模型Being-H0.7，魔法原子也将在全球首届具身智能大会上发布其世界模型产品。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">在英伟达GTC 2026大会上，VLA与世界模型的技术路线分歧公开激化。但越来越多业内人士认为，VLA和世界模型并非“替代与被替代”的关系，而是可能走向融合。孙浚凯的判断颇具代表性，他认为，2026年应该会是一个技术相对收敛的阶段，行业将围绕“哪种技术范式更适合落地交付”得出初步结论。据悉，智往未来在VLA路线上已走了两年，同时也在积极探索世界模型和基座模型的训练，计划在系统性测试后，根据投资回报比做出技术路线的最终选择。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">无论选择哪条技术路线，数据都是决定成败的核心变量。据统计，全国已建立超43座人形机器人训练场，累计汇聚近3000万条具身智能数据，国家与地方共建创新中心正牵头制定数据互联互通标准。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">然而，“鸡与蛋”的困境依然存在：机器人模型的泛化能力弱，不成熟就无法批量部署，没有批量部署就收不回真实场景数据。孙浚凯的破解策略是：将场景收敛到一个非常窄的范围内，用相对成熟的技术解决真实的客户需求，从而让商业飞轮转起来。“我们采用离在线融合的强化学习算法，先在离线环境中训练使任务成功率达60%-70%，再通过真机在线交互提升剩余的成功率，”孙浚凯介绍道，“比如在物流拣选场景中，面对尺寸和材质各异的未知包裹，我们不需要海量的穷举数据，仅需几十到一百条真实操作数据，就能让机器人迅速适应并实现稳定抓取。”</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">值得注意的是，决定了具身智能能否真正好用的因素，不仅是大脑的“打造”，还在于“大小脑”融合的技术路径。对此，孙浚凯表示，很难严格区分“大脑”和“小脑”——当机器人看到目标、理解任务、规划并执行抓取时，整个流程是一体的。当遇到遮挡需要身体前倾或侧身调整抓取角度时，就需要全身运动控制能力来协调移动与上肢操作。孙浚凯强调：“大脑、小脑和本体在这些环节中无法割裂，缺一不可。硬件定义决定了产品性能的下限，算法能力决定了上限，二者密不可分。”</span></p><section><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">从产业链角度看，当前具身智能创业公司大致可分为三个阵营：一是专注于大脑算法的AI公司，如千诀科技（目标让行业一半机器人用上千诀大脑，2026年上半年接入设备将超过10万台）；二是软硬一体的全栈公司，如智元机器人、星动纪元等；三是硬件本体公司，如宇树科技等。这三类公司的技术侧重点和商业模式各有不同，但随着“大小脑融合”趋势的深化，边界正在变得模糊。</span><section><section><section><section style="color:rgb(62, 62, 62);font-weight:400"><section><section><section><section><section><section><p>3</p></section></section></section></section></section><section><section><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">离“iPhone时刻”尚远</span></span></p></section></section></section></section></section></section></section></section><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">当前，有很多人拿具身智能或者物理AI这个领域与当初的ChatGPT和iPhone相比。畅想着具身智能什么时候能出现“GPT时刻”和“iPhone时刻”。对此，孙浚凯表示，“GPT时刻”可能很快就会到来，但“iPhone时刻”离我尚远，“GPT时刻可能很快到来，在数据、资金、人才涌入下，这项技术可能在两三年内达到那个突破点”，孙浚凯判断。而2028年被他视为一个关键的技术收敛窗口期，届时各种技术范式的可行性将被验证，行业将结束早期的百家争鸣，进入第一轮洗牌。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">不过业内也有一些比较“激进”的声音，千寻智能联合创始人高阳曾指出，如果与大语言模型的发展阶段比较，具身智能行业在2025年正处于GPT-2阶段——数据基础设施建设取得进展，但模型能力尚未实现质的飞跃。他判断，2026年年末至2027年年初，行业有望迎来具身智能的GPT-3时刻。银河通用等头部玩家的判断也趋于一致：2026年末到2027年年中，行业有望迎来具身智能的GPT3.0时刻。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">虽然在“GPT时刻”的到来上，业内有些许分歧，但在“iPhone时刻”的到来方面，则比较一致。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">如果说“GPT时刻”回答的是“技术能不能突破”的问题，那么“iPhone时刻”回答的则是“商业能不能爆发”的问题。两者之间存在根本性差异。对此，孙浚凯表示，“GPT时刻”和“iPhone时刻”完全是两个概念。“GPT本质上还是一个技术，还不是一个成熟的产品。它还没达到一个产品级的成熟度。”而iPhone时刻则意味着“它对整个产业形成了巨大变革，并且能持续盈利，同时无人能超越”。这个判断的关键洞察在于：iPhone时刻的关键点是商业模式发生了变革——iPhone开启了移动互联网，成就了数以万亿美元计的新赛道和市场。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">这一定义也被行业普遍认同。具身智能的“iPhone时刻”要求机器人达到高度的产品成熟度，即能够大规模量产、低成本部署、开箱即用、容错率极低、交互体验极佳。星动纪元创始人陈建宇在博鳌论坛上也强调，机器人进入工业场景“不是做演示，而是要满足很高的节拍效率、很高的成功率以及99%以上的可靠性。不只是‘能做一次’，还要能够可靠、持续、低成本地完成任务”。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">孙浚凯认为，在iPhone时刻到来之前，具身智能还需要经历一个漫长的软硬件收敛过程——2028年左右技术路线初步收敛，再经过3到5年的产品打磨和商业模式探索，才能真正迎来爆发。届时，iPhone时刻的特征是：双足双灵巧手、低成本、硬件可靠，能够全行业开箱即用，并对整个社会的商业形态产生颠覆性影响。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">回到当下，具身智能产业应用正处在一个关键的阶梯式上升期。从量级上看，2026年的人形机器人出货量预计在6.25万至10万台之间，其中相当一部分仍处于POC和试点阶段，真正的规模化商用才刚刚起步。正如孙浚凯所预判的，物流场景2026年所有玩家加在一起的出货量“可能将将破千”，距离真正的规模化部署还有不小差距。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">但从另一个角度看，这条路径的确定性正在增强。中国在供应链韧性、场景落地速度和资本热度上全球领先，已形成中美双核、多极并存的全球格局。摩根士丹利预计，到2050年人形机器人市场规模将达到5万亿美元，部署量达10亿台；中国具身智能市场规模有望在2030年达到4000亿元，2035年突破万亿元。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">从“千台”到“十万台”再到“无处不在”，具身智能的产业应用正在经历一个从技术验证到商业验证、再到生态变革的阶梯式跨越。“GPT时刻”解决的是技术能不能的问题，而“iPhone时刻”解决的是商业能不能的问题——前者决定能不能起步，后者决定能走多远。</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 热门AI公众号更新追踪</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef00ec3e9cda2380c3a7b7?channel_id=67e5334abf856a52db04e0b7">https://lingowhale.com/reader/web/69ef00ec3e9cda2380c3a7b7?channel_id=67e5334abf856a52db04e0b7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

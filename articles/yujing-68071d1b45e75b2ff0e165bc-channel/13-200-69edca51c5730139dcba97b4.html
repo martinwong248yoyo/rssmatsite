@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>票房仅200万，却是梁朝伟近年最佳</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 艺术电影-电影</div>
+                    <h1>票房仅200万，却是梁朝伟近年最佳</h1>
+                    <div class="meta">
+                        <span>虹膜</span>
+                        <span>Sun, 26 Apr 2026 08:14:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69edca51c5730139dcba97b4?channel_id=68071d1b2c7742c740dc6aa3">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span style="color:rgba(0, 0, 0, 0.9)"><span>一棵树能否成为电影的主角？</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这个问题在伊尔蒂科</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>·埃涅迪提出之前，几乎没有导演正面回答</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>过</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>让一棵树，凭借它</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>自身</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>感知维度，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>以及</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>它的时间尺度</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>注视着人类在它脚下上演的一幕幕悲喜。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3DiIXB2Fu9jNshGJQ2q42TD.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:#888888">《寂</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:#888888">静的朋友</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:#888888">》</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>电影提出了一个问题：</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>在人类的感知疆域之外，是否存在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>其他</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>同样深邃的意识？</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>埃涅迪选择了三联画的结构来承载这个追问。影片围绕德国马尔堡大学老植物园中的同一棵银杏树，编织了三个时代的故事。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>1908年的段落用银灰色的35毫米黑白胶片拍摄，讲述第一位进入马尔堡大学植物学系的女学生格蕾特</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>如何在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>社会环境的歧视下，发</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>现植物摄影的启示性力量。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3ERAne1iSCUQ2xYT8i2ng66T.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>1972年的段落切换为温暖而颗粒感明显的16毫米彩色胶片，追踪一个痴迷里尔克的农家少年如何爱上室友，而</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>室友</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>正在窗台上用测谎仪对天竺葵进行电信号实验。</span></span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/slxxJkX3mx2gCUdzpxlnW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>2020年的段落则以锐利的数字影像呈现，穿插着微距拍摄的植物细胞图像，讲述香港神经科学家黄博士</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>因新冠封城滞留</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>马尔堡，通过电磁传感器试图聆听那棵孤独的雌性银杏树的声音。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>三个故事从不在叙事层面上交汇。它们之间的连接完全依赖那棵银杏本身的持存。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这棵</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>1832年栽种的古树以近两百年的生命跨度，将三个时代中笨拙的、不得其法的人类探索者串联在一起。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2KrgId46Pc74217ywx2hjGHU.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>在片尾字幕中，每一个出现在画面里的植物品种都与人类演员一起获得了署名。这个细节</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>就像</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>整部影片</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>认识论立场</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>一样，生命的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>等级制度</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>在此瓦解</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>理解这部影片的影像调性，必须从三种胶片介质的选择说起。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>埃涅迪和她的摄影指导格尔盖伊</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>·帕洛什并不是在追求某种怀旧的视觉游戏。35毫米黑白胶片对应的是一个尚未被科学实证主义完全统治的时代，在那个世界里，植物仍然可能拥有某种神圣的几何秩序，格蕾特的照片记录下的叶脉和花瓣结构暗示着宇宙隐藏在最卑微的生命形式中的模式。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2aB22x3Nfj6pSaQB846bTCr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>16毫米彩色胶片的颗粒感</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，加上</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>偶</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>尔的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>色温漂移</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>对应</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>的是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>七十年代那种既天真又大胆的科学乌托邦气质，那个时代的人相信</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>一株天竺葵的电信号波动可以打开一扇花园门，而这种信念既是荒诞的也是动人的。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>数字影像的清晰度和它所承载的微距植物图像构成了第三种认知框架</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，代表</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>当代神经科学的客观化视野，它试图用仪器和数据捕捉植物的感知活动，但最终发现仪器捕捉到的可能只是自身噪音的回声。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2JmO9V2bVMDu4a8OHXXhsvO.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>三种介质之间的切换</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>就像</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>三种认识论的视觉化呈现。每一种胶片都在追问同一个问题，但追问的方式本身</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，就</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>预设了</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>存在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>不同答案。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>摄影机与银杏树之间的关系构成了影片最微妙的视觉策略。在前两个半小时里，帕洛什的镜头始终以一种克制的、侧面的、甚至回避的方式框取这棵树。它出现在画面边缘，出现在焦点之外，出现在窗框和建筑物的缝隙之间。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这是一种深思熟虑的伦理姿态</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>影片拒绝将银杏树客体化为景观，拒绝用正面特写的方式将它纳入人类的凝视权力之中。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>只有在最后一幕，当梁朝伟饰演的黄博士赤身站在暴雨中的银杏树下，达成了某种近乎宗教性的身体交流之后，镜头才第一次正面逼近树冠，而此时的画面已经不再是人在看树，变成某种更模糊、更对等的相互注视。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1mkiYN3hk0NQ1U3jrV4soVHh.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这种视觉策略背后是埃涅迪一以贯之的现象学关怀。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>从她</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>1989年的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>第一部长片</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>《我的二十世纪》开始，她就在追问感知的边界问题。那部影片里，会说话的星星从宇宙深处注视着世纪之交布达佩斯的双胞胎姐妹，一只被囚禁的猩猩发表了一段令人心碎的独白。宇宙意识、动物意识</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>、</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>人类意识在同一个叙事空间里共存，彼此之间没有高低之分。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>1999年的《魔术师西蒙</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>的爱情</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>》更是直接预演了《寂静的朋友》的核心设定</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>。</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>主角通过读取一株室内植物的电化学信号来破解一桩巴黎谋杀案。</span></span></p><section><span style="color:#888888"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/UMZ8l3EsYEhVyVzc25bsMc.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:#888888">《魔术师西蒙</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:#888888">的爱情</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:#888888">》</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>2017年的《肉与灵》让布达佩斯屠宰场里两个受损的灵魂发现他们在梦中共享着</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>两头鹿</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>的身份，人与动物的感知在梦境的中间地带达成了交融。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>如果说《我的二十世纪》处理的是宇宙尺度上的意识分布，《肉与灵》处理的是哺乳动物王国内部的意识共振，那么《寂静的朋友》则将这个探索推进到了植物界。它完成了一个跨越三十六年的意识三部曲</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>——</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>从星辰到鹿群到银杏。</span></span></p><section><span style="color:#888888"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/25ziPI2Ic2Xn4n20W31e7B58.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:#888888">《肉与灵》</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>但《寂静的朋友》与</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>之前那些作品</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>存在一个根本性的区别。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>在《肉与灵》中，人与鹿的连接通过共享梦境来实现，这至少还保留了一个可以被叙事化的中间地带。梦是可以讲述的，梦中的森林是可以被摄影机拍摄的。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>但</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>植物的感知世界则完全拒绝这种叙事化的可能。一棵银杏树不做梦，不奔跑，不凝视。它的存在方式与人类之间的鸿沟</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>比人与鹿之间的鸿沟要深邃得多。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>埃涅迪面对的挑战是：如何用一种本质上属于人类感知模式的媒介</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，也就是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>电影</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>去呈现一种从根本上拒绝被人类感知的存在方式？</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>她的回答是拒绝弥合这个鸿沟，她想让鸿沟本身成为影片的主题。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>三个时代的主人公都在试图跨越这个鸿沟，都失败了，但他们的失败本身</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>也</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>构成了一种</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>正视分离的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>伦理姿态。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/34kpEW1BIpYxjbUsv34hzeF.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>在埃涅迪的访谈中反复出现的一个思想资源是歌德的参与性科学。歌德反对牛顿式的客观化实验方法，主张一种通过直接体验和想象力参与自然的认知方式。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>影片中三个时代的主人公都在无意识地践行歌德的路径</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>。</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>格蕾特通过摄影而非分类学来认识植物，汉内斯通过训练天竺葵开门而非解剖它来建立关系，黄博士通过将传感器连接到银杏树</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>并为这棵孤独的雌树</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>投递</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>花粉来实现一种跨物种的照护。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>歌德本人在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>1815年写过一首名为《</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>二裂</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>银杏叶》的情诗，将银杏的两瓣叶片视为自我与他者合一的象征。这个典故在影片中从未被明确提及，但它</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>似乎</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>构成了整部作品的潜文本。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>再说说</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>梁朝伟在这部影片中的表演，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>他也完成了一次真正意义上的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>认知转向。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/LqOC1CcQkOKcJvR3UoNfP.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>我们都很熟悉</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>梁朝伟</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>过去的作品，比如他</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>在王家卫的电影中建立起来的表演范式，核心是一种内向性的情感压缩。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>从《花样年华》到《</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>2046》，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>梁朝伟的银幕魅力长期依赖于一种特定的情感表达模式</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，即人物内心</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>巨大的激流</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，被呈现为</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>极其微小的外</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>部</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>暗示。观众需要穿透他的沉默和静止去推测底下翻涌着什么。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这种表演方法在王家卫的美学体系中近乎完美，因为王家卫的电影本身就是关于无法说出口的情感</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>关于错过和延迟。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>但埃涅迪要求的是完全不同的东西。在《寂静的朋友》中，梁朝伟面对的不是另一个隐藏着秘密的人类，他面对的是一棵根本不拥有人类可以辨识的情感维度的植物。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>他的沉默不再是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>为了</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>压抑情感，而必须成为一种积极的感知姿态</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，因为他在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>学习一种全新的聆听。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>他的面部表情在影片进程中经历了一个微妙的演变</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>。</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>从最初到达马尔堡时的职业性好奇，到封</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>闭</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>期间的困顿无聊，到开始将传感器连接到银杏树后的专注和不安，最终到达暴雨中赤裸站在树下那一刻的某种超越语言的敞开。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/sZvoJ4omsfJ2R7ncb2kCNm4.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这个敞开状态不同于他在王家卫电影中的任何时刻。王家卫电影中的梁朝伟是一个在人类情感密度中窒息的人</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，此刻的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>梁朝伟是一个在人类感知局限性面前谦卑下来的人。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这种转变</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>无疑很</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>困难。梁朝伟此前从未拍过欧洲电影。他在片中用英语和蕾雅</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>·赛杜饰演的法国植物学家通过视频通话交流，用粤语进行</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>个人</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>独白。他为这个角色进行了大约半年的密集准备，每天花四到六个小时阅读神经科学、植物生物学和哲学著作，拜访香港大学的脑科学教授，观摩真实的脑电图检查。埃涅迪</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>也</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>给他寄了大量书籍和讲座视频。这种准备方式本身就构成了影片主题的一个现实映射</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>一个演员试图打开自己的感知维度，去进入一个他此前完全陌生的认知领域。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>梁朝伟自己谈到这次经历时说过一句耐人寻味的话：拍完这部电影之后，他每天在太平山顶跑步时经过那些树木，感觉变得不一样了，它们似乎有了某种生命力和觉知。当他看着它们的时候，它们是否也在看着他？</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这个问题</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>矫情的文艺感慨</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>吗？</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>托马斯</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>·内格尔</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>有一</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>篇著名</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>论文</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，文中问道，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>成为一只蝙蝠是什么感觉？埃涅迪</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>将这个追问从动物界推进到了植物界。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>将《寂静的朋友》放到更广阔的电影史脉络中观察，它所做的事情比表面上看起来更加激进。电影作为一种媒介，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>它的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>根本假设</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>对应着人</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>类的视听感知模式：摄影机模拟人眼，麦克风模拟人耳，剪辑模拟人类的注意力转移。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1NFnow4ccV9byQmef36ct1r.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>所有的电影叙事都建立在人类的时间体验之上</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>即便是塔可夫斯基</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>和贝拉</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>·塔尔的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>长镜头也仍然在人类的时间尺度内运作。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>但一棵银杏树的时间体验是什么样的？它不是以分钟和小时为单位来感知世界的，它的时间单位是季节和世纪。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>它的一次生长反应可能持续数周，它的一生跨越数百年。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>电影如何容纳这种时间尺度？埃涅迪的三联画结构是她对这个问题的回答</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>。</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>通过将一百多年压缩为三个段落，她让观众隐约感受到银杏树自身时间体验的轮廓。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>对这棵树而言，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>1908年的格蕾特和2020年的黄博士可能只是同一个漫长午后中的两个转瞬即逝的访客。</span></span></p><p><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Nsuf84mOUTb3wAB7E1ZJDOs.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这种时间观的转换</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>又</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>带来</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>一个新的问题</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>。当代生态话语往往以危机修辞为主导</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，我们说</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>冰川在融化，物种在灭绝，碳排放在攀升。这些都是真实的，但它们全部建立在人类的时间焦虑之上。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>埃涅迪</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>跳出了</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>这条路</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>她的生态关怀并非通过展示</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>当下的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>破坏和灾难来唤起紧迫感，而是通过展示植物自身的存在节奏，来邀请观众进入一种完全不同的时间体验。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这是一种安静得多的生态主义，它</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>关心的不是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>政策</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，它选择跳进</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>感知层面</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，邀请人类去「</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>真正看见</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>」</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>那些与我们共享这个星球的非人类生命。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>影片中蕾雅</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>·赛杜饰演的法国植物学家是另一个</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>重要的人类</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>维度。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2cDvBN1d5W8n1yKAzH1G0yut.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>她与梁朝伟的全部交流都通过视频通话完成，这意味着他们之间始终隔着一个屏幕。两个人类之间的交流已经是中介化的、不完整的，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>那</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>他们试图理解的植物世界</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>肯定是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>更加遥不可及。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>赛杜的角色最终为那棵孤独的雌性银杏寄送了花粉，使它在马尔堡植物园中度过了近两百年的独身生活之后第一次获得了繁殖的可能。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>这个行为</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>同时具备科学属性和情感属性，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>它构成了影片中最接近叙事高潮的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>一个</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>时刻，但它的动人之处在于</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>它的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>目标</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>对象不是人类。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>埃涅迪用</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>这样</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>一部电影完成了她整个创作生涯所指向的终极追问。从</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>1989年到2025年，三十六年的时间跨度中，她的作品目录稀疏而连贯，每一部都在试探感知的又一个边界。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>《寂静的朋友》之所以令人信服，不仅因为它</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>雄心勃勃的概念</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>，更因为它在执行上的诚实。它没有假装植物是可以被理解的，没有假装人类的感知可以无限扩展，没有假装摄影机可以呈现银杏树的主观体验。它承认了所有这些不可能性，然后在这些不可能性的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>荒原</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>上建造了一座温柔而幽默的感知纪念碑。</span></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2NRzVpe2ICl493KotnTIHU.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)"><span>梁朝伟站在暴雨中的银杏树下，剃着光头，赤裸着身体，那个画面在整部影片的语境中获得了一种超越</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>性的</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>力量</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>。</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>它是一个人类在非人类面前放弃了所有社会建构的伪装之后，试图以最原始的方式存在于世界之中的瞬间。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>可能人类和植物，始终分属</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>两个完全不同的感知宇宙，</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>它们之间存在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>永远无法逾越的本体论鸿沟。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)"><span>但也正是</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span>这道鸿沟，使得任何微弱的跨越尝试都获得了近乎崇高的意义。埃涅迪终其一生都在拍摄这种尝试。这一次，她终于拍到了它最纯粹的形态。</span></span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4yTVMH2Yvi5vXcR5d4rHWMC.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 艺术电影-电影</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69edca51c5730139dcba97b4?channel_id=68071d1b2c7742c740dc6aa3">https://lingowhale.com/reader/web/69edca51c5730139dcba97b4?channel_id=68071d1b2c7742c740dc6aa3</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>写什么能写59年</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 人间故事铺</div>
+                    <h1>写什么能写59年</h1>
+                    <div class="meta">
+                        <span>冰点周刊</span>
+                        <span>Sat, 25 Apr 2026 00:15:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ec0925c3105209486b8403?channel_id=68d3ec300d8694abdfcdf913">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/rACNQ12P60J3achjjKmqzF.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">陈达生和谢新娥在嫁接小桑苗。马思洋/摄影制图</span></span><p><span style="color:rgba(0, 0, 0, 0.9)">陈达生是地道的浙江桐乡农民，皮肤被阳光晒得黝黑，抬头纹和川字纹快交错到一起，嘴巴常抿成一条直线。这没什么特别的。特别的是小学三年级辍学的他，坚持写了59年日记，一天未曾间断。一辈子和土地打交道的他，日记本上没有留下任何泥迹。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">59年，写了59本日记。他不仅记录了家庭联产承包责任制、新农村建设这样的大事，也记录了女儿上大学、亲戚结婚这样的小事。大事影响着小事，他家先后在1984年、1988年、2010年和2025年修建房屋。</span></p><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 122, 170);font-weight:bold">“我们都稀里糊涂地过日子，他怎么把日子记得那么清楚”</span></span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">陈达生的家位于陈家埭村。“埭”在杭嘉湖平原的地名中很常见，意为“挡水的土坝”。陈家埭村的不少人知道陈达生写日记的事，有村民来陈家做客，打趣问他：“会把我写进日记里吗？”陈达生手上的活儿没有停下，点点头，用乡音回答：“有什么变化我都要记在日记里的。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">陈达生不觉得自己写日记是个多么了不起的事。女儿陈梅娟记得，每天午睡前后，父亲都会搬个小椅子坐在床边或走廊上写东西，哪怕家里有客人来了，也不能耽误他写日记。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">小学三年级辍学，没能再读书是他的遗憾。因为读书不多，所以一开始日记里错字频出。他跟着广播学习，向女儿询问，女儿给他买来《新华字典》，他掌握的字也就越来越多。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">日记本上栩栩如生的白鹤、老虎、山峦、将军，是陈达生有美术天分的证明。陈梅娟回忆，小时候过年，父亲买来年历画，调好颜料，在老房子的墙上画老虎，“一根一根毛那样画，像工笔画一样”。后来，陈达生还在家里的墙上画了各式各样的公鸡，村民看了都说“画得真好”。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/DtiL31lS70be8e0oOMoOW.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136)">陈达生日记中的绘画 马思洋/摄</span></span><p><span>写日记这件事，妻子谢新娥曾表示过反对。那时正值“文化大革命”期间，谢新娥担心陈达生的日记被人拿去做文章，一把火烧了两本日记。陈达生不管不顾地把日记捡回来，补写了部分内容。陈梅娟觉得这件事很神奇，“想想也很不容易，我们都稀里糊涂地过日子，他怎么把日子记得那么清楚”。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">以前，谢新娥对丈夫因为写日记耽误干活而恼火，用方言形容他写日记是“白相”，意思是不务正业。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">后来，或许是被老伴的坚持打动，谢新娥不再阻止陈达生继续写日记，“随他了，不管了”。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">女儿们小时候对父亲写日记的事不太感兴趣，只是偶尔会翻翻，因为父亲的字七扭八扭，“像画出来的一样，看不太懂”。2019年，陈梅娟获得“全国优秀教师”称号，当地电视台的人来采访，在聊天中她告诉了记者父亲写日记的事。成堆的日记呈现在陈梅娟眼前。“之前没有好好关注父亲写日记的事，看到这些照片，还是很佩服他的。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">59本日记，被陈达生整整齐齐地收纳进老祖宗的木柜子，放在了床底。为了防止本子泛潮，每15本左右的日记就会被他用大的密封袋整合在一起，遇到有人来看的时候，他像扛麻袋一样，把日记本搬出来。尽管如此费心保管，泛黄的日记本还是透出潮湿的气味。</span></p><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 122, 170);font-weight:bold">“造房子像做了一场大梦”</span></span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">在老家建房子，对很多农村人来说是天大的事。有网友曾在关于陈达生的报道下评论：“这一辈农民一生都在造房子拆房子然后再造房子，从草棚、平房、楼房，再到小别墅！钱么也花在房子上了！”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">有学者曾在研究中指出，住房是农民在社会阶层中的外在标志，“提高居住条件、改善生活质量是农民家庭的不懈追求”。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">新农村建设拆掉的房子是陈达生在2010年修建的。老房子的样式在浙江农村随处可见，盖了两层，水泥现浇，墙面从原来的石灰变成了漆面。这座原来花费了28万元建造的房子，如今价值60万元。在政策支持下，陈达生住进新房只需要自己掏装修的钱。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这并非个例。陈家埭村党组织委员周学芳说，这样的事早在2023年10月就开始了。那时，陈家埭村启动了全域土地整治项目，第一批白墙黛瓦的浙派民居率先建了起来。这次统一建新房，旧房评估后折价70%，这笔钱基本能覆盖村民建毛坯房的支出。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">2024年，浙江城乡居民收入倍差缩小至1.83，是全国城乡差距最小的地区之一。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">陈达生的新房预计在今年年底落成。新房是别墅样式，共有4层，有落地窗，为了方便上下楼还安装了电梯。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这次建房，陈达生很省心。他不用操心什么时候拆房，什么时候去买水泥，泥水工一天多少钱。大部分的工作都由村里包办完成。老两口干活干累了，从田地里抬头往东北方一望，就能望见他家的新房子。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这和陈达生以往的造房经历大不相同。1984年4月，陈达生在日记里写道：“不（承）想造房还搞农业，身体要倒下了。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">那是陈达生第一次建房，家庭联产承包责任制的改革让陈达生一家的生活好了起来。1982年秋，陈家埭村正式推广包产到户，和村民签订合同。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">陈家埭村规定，成年男性可以分到1亩左右的田地，老幼妇孺在这个基础上打七折。陈达生家里五口人，一共分到了3亩多田地。在插秧前夕，为了让秧苗长得好，陈达生跑到很远的地方挑河泥。那一天，他来来回回挑了130担，但他没觉得累，“劳动给自己，收获也给自己”。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">1982年，他卖小桑苗挣了2000多元，加上别的作物，一共赚了3000元。从那时候开始，他就张罗着造房。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">34岁的陈达生，第一次开始独立建房。他自己买瓦片、五孔板、石灰、砖头，请泥水工来刮泥。当时的泥水工一天2元。上午架五孔板，下午他挑了一担啤酒，请小工们喝。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">1984年正月十三，他在日记里写下：“我家造房就在眼前了。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">造房子很累，陈达生在日记里忍不住抱怨造房的辛苦，但他又觉得高兴。3月11日和4月1日，同一句话两次出现在他的日记里：“造房子象（像）做了一场大梦。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">4月26日，房子竣工，造了两层楼。这一年造房子总共花了3000元。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">那天，他在日记里写道：“做人是要好起来了。”</span></p><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 122, 170);font-weight:bold">蚕茧、桑树和湖羊</span></span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">造房的金钱来源离不开陈达生在这片土地上的劳作。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">4月，正是种小桑苗的季节。阴天，陈达生和妻子谢新娥就在库房里嫁接小桑苗。谢新娥负责剪砧木，她把砧木握成一排，熟练地用剪刀在根部斜着剪出四五十度的斜面。陈达生负责削接穗，他从枝条上选一个饱满的芽，在芽的反面下刀，把枝条下端削成一个薄薄的楔形。再用手指捏开砧木剪口的皮层，将其撑成袋状，插入削好的接穗。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">晴天，老两口就把长在一起的接穗和砧木移栽到地里，一人翻土，一人插苗。去年他卖小桑苗得了4万多元。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">前些年村里搞土地流转，很多人把地包了出去，但陈达生没有。周学芳说，村里没把地包出去的，大多都是六七十岁的人。陈达生想把土地牢牢攥在手里——一闲下来，他就想给自己找点事做。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">陈梅娟觉得父亲还挺“老派”的。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">陈达生拒绝使用智能手机，还是用着老年机，谢新娥对他不带手机这件事有些不满意：“手机么从来不看的。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">他遵循着“日出而作，日落而息”的规律生活。他每年都要复盘自己种地的情况，日记里仔细记录着哪个节气应当做什么劳动，哪个月份应该播种什么作物。他尊重自然。他日记里记录着：正月应当“施肥、耕地和挑泥”，谷雨时节“麦出花，草开花”，到了小满“麦黄草枯”。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">他关心着天气。他现在每天都要精准记录当日的天气，几年前还整理出一本《五十四年天气记录》，详细记录并计算每一年高温日的数量、低温日的数量。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">对于蚕桑为业的陈达生来说，房屋的大小在某种程度上决定了他一家的生计。一张蚕卵，最后会占满8张蚕匾。1984年房子落成之前，由于场地有限，陈达生每年只能养一两张蚕卵。房子建成当年，他就买了3张蚕卵，年底蚕茧一共卖了700元。和1983年卖蚕茧的钱相比，几乎翻了一番。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">1988年1月，陈达生又在老房子前面多盖了一间屋子，目的还是为了养蚕。2月11日的日记里记录着他当时的心情：“今年的一年变了样，去年不想今年造房。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">房子扩建到了200平方米。蚕匾在竹架上一层接一层垒得高高的，屋里沙沙响，是桑叶被蚕宝宝啃食的声音。陈达生听着这个声音，心里就踏实。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">而到了2010年新房翻修后，陈达生买来了5张蚕卵，茧最后卖了9376元。那年，他和老伴的收入共计41326元。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">村子里另一特色农业是湖羊，这也与栽桑养蚕密切相关——湖羊春夏吃青桑叶，冬季啃枯桑叶，吃的几乎和蚕宝宝一样。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这些劳作，让陈达生1986年和1987年把两个女儿相继送入师范学院就读，让他的家里在1989年添置了第一台电视机，让他在日记里密密麻麻地在年末总结丰收的喜悦。</span></p><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(0, 122, 170);font-weight:bold">一亩三分地，一天三次日记</span></span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">陈达生的日记里不仅记录着自己，还记录着这个村庄和其他村民。1984年年底，陈达生在日记里写道：“今年孝荣办木根厂，听他说大有可为的。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">木根是用木头做的鞋后跟。弟弟陈孝荣1984年开始做生意，是村里最早办厂的那批人。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">1984年，浙江省委、省政府印发《关于加快发展乡镇企业的若干规定》，首次将发展乡镇企业作为全省经济发展的战略重点，从资源、人才、资金等方面给予全方位保障。“村村点火，家家冒烟”成了那个年代的真实写照。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">后来陈孝荣的生意慢慢大了，从小厂变成了“海星集团”。1987年，陈孝荣重新修建了房子，三间房、三层楼、有旋转楼梯、有吊顶……那时是村里最气派的房子。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">村里的厂在那时越建越多。陈家埭村前村支书姜炳兴回忆，20世纪80至90年代，村里的村办企业越来越多，开起了经编厂、皮鞋厂、羊毛衫厂、明胶厂……村里半农半工的家庭也越来越多。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">2010年，沪杭高铁正式开通，桐乡到杭州最快只需17分钟，到上海也不过半个多小时。这个100年前因为“破坏风水”而让铁路绕道的小城，终于等来了自己的铁路。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">但陈达生还是守着自己的一亩三分地，就像他现在仍然固执地一天写3次日记。他自认为“做不来生意”，觉得“种地挺好的”。对他来说，种地才是最踏实的事，翻土、播种、施肥应当在哪个时节他信手拈来。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">在陈梅娟的印象里，父亲对家长里短、人情世故不感兴趣，但如果聊起种地，他就能侃侃而谈。“他很温和，能静下心来做事情。如果能一直读书，说不定能做点小研究。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">他的一生似乎像他20岁给自己写的小传那样运行：“十四岁割草和劳动，十五岁前要看戏，十六岁时有气力，十六岁也董德（懂得）事，摇船劳动经（精）力强……养猪六只真劳露（碌），起早买菜可幸（辛）苦。”</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">“高山大海的世界，不知是那样能活动。”他在日记里提过七大洲四大洋，提过世界上有三大人种，他畅想过其他地方的生活是怎样的，但最终他还是在平原地区当了一辈子农民，在这三亩地上创造了属于自己的、踏实的财富。</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 人间故事铺</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ec0925c3105209486b8403?channel_id=68d3ec300d8694abdfcdf913">https://lingowhale.com/reader/web/69ec0925c3105209486b8403?channel_id=68d3ec300d8694abdfcdf913</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

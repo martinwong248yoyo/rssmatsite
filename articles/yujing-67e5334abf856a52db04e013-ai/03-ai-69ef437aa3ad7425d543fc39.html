@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>演员在“卖脸”，导演已失业：一场关于AI影视的残酷对话</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 中国AI创业者最新采访</div>
+                    <h1>演员在“卖脸”，导演已失业：一场关于AI影视的残酷对话</h1>
+                    <div class="meta">
+                        <span>未来图灵</span>
+                        <span>Mon, 27 Apr 2026 09:43:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef437aa3ad7425d543fc39?channel_id=67e5334abf856a52db04e013">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p>第十六届北京国际电影节期间，一场名为“论道AI影视”的跨界媒体AIGC直播辩论活动，将影视、科技、财经三方视角汇聚一堂。然而，原本预设的激烈辩论，很快就演变成了一场关于AI对影视行业无孔不入的渗透与重构的深度对话。</p><p>当财视传媒联合创始人、CMO胡占莉，极客电影记者、FOST未来叙事主编子路和AI侦探社的负责人阿泽坐在一起，辩论的边界模糊了，取而代之的是一个个正在发生的、令人心惊或激动的行业真相。从爱奇艺签约AI演员引发的轩然大波，到腰部演员靠“卖脸”求存的残酷现实，再到AI创作《纸手机》短片感动千万人的真诚力量，AI不再是未来的概念，而是正以摧枯拉朽之势重塑影视产业链的每一个环节。</p><p>这场辩论的背景很有意思。在Sora、可灵、即梦等多模态大模型狂飙突进的当下，影视行业正处在一个十字路口,关于AI演员，AI形象授权入库，AI带来失业危机等等相关的话题，也是层出不穷。我们讨论的辩题是：AI技术深度渗透下，中国影视行业的未来该走哪条路？</p><p>胡占莉主张“全面拥抱AI”，认为这是降本增效的必由之路；子路坚持“以人为本”，认为AI只能是辅助工具；而阿泽则提出了一个折中的“双轨并行”论。</p><p>我们整理了这场对话中的精华，试图拨开喧嚣的迷雾，呈现一个真实、复杂且充满矛盾与希望的影视行业变革图景。</p><h2>“卖脸”已是旧闻，演员最后的IP红利期</h2><p>讨论从近期爱奇艺签约AI演员,极客电影的子路却抛出了一个更惊人的内幕。</p><p>子路：其实爱奇艺的艺人库一两周前就在平台上能看见了……并不是说AI真的已经授权了演员的脸，而是你如果想用，可以通过平台点对点谈授权。行业里平台和公司早就开始干这件事了，而且不止爱奇艺一家。大家现在反对，是因为只看到头部演员的脸很值钱。但有没有想过那些演技特别好、但外在形象并不突出的演员？他可以用一个受欢迎的虚拟形象，结合自己的演技去表演，一样可以吃饭。</p><p>这其实是在解决一个非常现实的生存问题。要知道现在影视寒冬，很多演员一年都拍不上一两部戏。已经有短片演员亲口证实，他们确确实实已经没戏可拍。如果他能授权自己的脸，或者只授权自己的演技动作，就多了一条生路。对于腰部甚至尾部的演员来说，现在可能是他们将自己IP变现的最后窗口期了。以后，可能大家追的就不再是大众明星，而是圈层化的虚拟偶像，现在的明星会成为最后的“IP遗产”。</p><p>胡占莉：我觉得爱奇艺给我的最大启发是，所有的脸都值钱。大家为什么只盯着明星？一个真正牛的公司应该去签13亿普通人的脸。因为技术平权后，“脸”本身就是数据资产，签下海量肖像，未来在版权规范化后就拥有巨大的话语权，你委托给法律公司专门打肖像权官司，赚了钱分成，这一定是门大生意。</p><p>子路：是这个逻辑。所以现在是AI在倒逼行业重新思考什么是演员的价值。我很感慨的一点是，我们都身处“最后一个大众明星时代”。真正伟大的演技，可能反而通过AI这种“换脸”的方式被解放了，让那些只有演技没有颜值的好演员，终于有机会被看见。</p><h2>“重构”非“替代”，生产端已无安全区</h2><p>当话题从演员延伸到更广泛的生产环节时，交锋变得更加尖锐。AI侦探社的阿泽透露，在商业层面，全AI流程已在某些领域跑通。</p><p>阿泽：大家别管产品质量怎么样，但确确实实有公司在用全AI流程做短剧了。一周做2-3部，从脚本到视频生成，甚至推流，全都用AI。而且各大平台也在推波助澜，像抖音、快手搞AI视频大赛，鼓动大家大量用AI创作。为什么？因为对厂商来说，你的token调用量越多，我的账面数据就越好看，融资讲故事就更顺畅。摄影、灯光、场记……这些岗位，在AI原生影视里已经不需要了，这就是正在发生的残酷现实。</p><p>子路：所以我一定要纠正一下，我亲测过这些工作流。用AI一键生成一个完整的、情感连贯的商业作品，目前是不可能的。我用过各种大模型从剧本生成到视频输出的全流程，最大的问题是AI写的剧本没有人物弧光（人物在故事的发展过程中经历的内在改变），情感线一塌糊涂。它必须有大量创作者的选择和调整。但这恰恰说明，AI并没有完全替代人，而是重构了工作流。正如北影节技术论坛上一位制片人所说，不管用什么工具，最重要的是创作者的目的性一定要非常强。工具降低了技术壁垒，但反而把“会讲故事”这个壁垒拉得更高了。</p><p>胡占莉：没错，我说的“全面拥抱”，就是这种“重构”，而不是替代。好莱坞的演员和工会为什么要罢工抵制AI？恰恰说明它真的动了他们的利益，这是对重构力量最诚实的恐惧。而对我们国内影视行业，这反而是弯道超车的机会——我们过去流程化不如好莱坞，现在AI来了，我们可能跨过他们走了一百年的路。我们过去建立的所有专业护城河，都在被这个“新物种”快速填平。更让我震撼的是，当制作平权到识字就能创作时，未来最牛的影视创作人，可能出身医学界、科学界，或是任何一个你完全意想不到的角落。</p><h2>抵触AI？观众只是在捍卫舒适区</h2><p>面对网络上观众对AI影视的一片抵制声浪，三位嘉宾却表现出了出奇一致的“冷酷”与理性。</p><p>胡占莉：这让我想起我从前是绝对不看直播带货的，但有一天我发现我也在直播间买东西了。人的适应能力很强，甚至可以说是“堕落”的。观众今天说不能接受AI，但只要作品能满足我的情感需求，是真人演的还是AI生成的，这个界限未来会越来越模糊。我最近崴脚了疼得不行，发现能转移注意力的竟然是看“电影解说”，看完我特别崩溃——像我这样曾经一年看几百部电影的人都开始看解说了，这个世界的注意力逻辑已经变了。</p><p>子路：从传播学角度看，现在抵制的声音可能只是“沉默的螺旋”的一部分。微博上反对声浪很大，但那些沉默的大多数呢？我们采访的AI导演作品《浮光》，播放量已经破亿了，这些观众在哪里？还有一个更具体的账本：去年古装实拍短剧请一两个横店熟脸，成本轻松上80万到120万，而如今用AI做同类漫剧，算力加人力打包不到30万，已经有观众愿意为它付费9.9元、19.9元。当成本压到三分之一甚至更低，资本用脚投票，大批从业者被迫转行或拥抱AI，这不是未来，是现在进行时。</p><p>阿泽：这就像福特发明了流水线，也没见手工打造的劳斯莱斯、爱马仕就消失了。观众的需求是分层的，AI影视和真人影视完全可以双轨并行。而且我还想补充一点，AI不是因为能力不够才需要双轨，而是因为它会催生出一种全新的艺术形态。就像电子游戏刚出来时，交互方式完全革新了传统八大艺术，被称为“第九艺术”。用AI去笨拙地模仿一部传统电影，才是错误的路。它会孕育一个全新的物种。</p><h2>最后的堡垒：AI永远算不出的“真诚”与“活人感”</h2><p>当讨论上升到哲学层面，关于“真实”的辩论，最终指向了影视行业在AI时代的终极价值。</p><p>胡占莉：我特别想问，大家追求的真实到底是什么？演员演的也不是他自己，本来就是假的，那载体是肉身还是AI，有什么根本区别吗？就像我从前做调查记者，拼尽全力去报道真相，最后发现那可能也不是全部的真相。影视行业纠结“真人”还是“AI”，我觉得很奇怪。我们可能只是习惯了旧载体，把习惯当成了真理。</p><p>子路：我不同意。影视行业的“真”，不是载体的真实，而是创作者真诚的表达。今天上午我采访了北影节一部获奖AI短片的导演，问他创作的关键词，他说是“真诚”。AI是假的，但操作AI的创作者的每一份情感都是真的，这种真诚是能被观众接住的。为什么《纸手机》那个短片能感动那么多人？长镜头里那个小男孩拿着纸手机的侧影，是创作者选择了这个镜头，而不是AI。最后那一滴泪的特写落到纸手机上时，所有人都泪目——那是创作者的感情，不是AI的。无论什么介质，这种真诚都无法改变。</p><p>阿泽：我非常认同。AI可以替代流程，甚至替代表演，但它替代不了“人味儿”。未来的观众会更聪明，能准确识别出你是“伪人”还是“活人”。当所有技术门槛被拉平后，“真诚”反而成了最高的壁垒和最稀缺的价值。就像我身边的那些独立导演，他们哪怕倾家荡产也要用手搓的方式拍片子，为什么？因为真人创作的那种颗粒感、那种无法被算法预测的意外之美，永远有人在坚守，也永远有观众在等待。而这，可能正是技术浪潮中最值得我们庆幸的事。</p><p>这场没有结论的辩论，最终指向了一个共识：AI对影视行业的重塑已不可逆，它既是焦虑的来源，也是释放创造力的巨大机遇。</p><p>或许，在AI的倒逼下，我们终将被迫去追问和坚守那些只有人类才能完成的、关于生活与情感的真诚表达。而这，可能正是技术浪潮中最值得我们庆幸的事。</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 中国AI创业者最新采访</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef437aa3ad7425d543fc39?channel_id=67e5334abf856a52db04e013">https://lingowhale.com/reader/web/69ef437aa3ad7425d543fc39?channel_id=67e5334abf856a52db04e013</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

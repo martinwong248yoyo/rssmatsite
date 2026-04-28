@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anthropic 做了个 Agent 版闲鱼</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 热门AI公众号更新追踪</div>
+                    <h1>Anthropic 做了个 Agent 版闲鱼</h1>
+                    <div class="meta">
+                        <span>赛博禅心</span>
+                        <span>Sun, 26 Apr 2026 15:59:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ee37b8c5730139dcbee2a9?channel_id=67e5334abf856a52db04e0b7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><p style="color:#4a4a45">Anthropic 搞了一个 Agent 版闲鱼：人只负责说自己想卖什么、想买什么，后面的发帖、砍价、还价、成交，全交给 Claude</p><p style="color:#4a4a45">然后这事真成了，<span style="color:#cf4436;font-weight:bold">69 个 Claude agent 在办公室里做成了 186 笔交易，总价值 4010 美元</span>。最后，人真把滑雪板、键盘、书、乒乓球这些东西带到办公室，按 Claude 谈好的结果交换</p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3HJfFIMG5wRi1UP1bdtj0.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p style="color:#4a4a45">大家惊奇地发现，Opus 比 Haiku 更会赚钱。Anthropic 把一部分参与者分给 Opus 4.5，一部分分给 Haiku 4.5。对于同样的商品，Opus 经常会谈出更好的价格</p><p style="color:#4a4a45">果然，聪明人还是更会赚钱，换成 agent 也一样</p></section><section><h2 style="color:#cf4436;font-weight:700">这个市场怎么跑</h2><p style="color:#4a4a45">跑法其实就三步：人交代买卖意愿，Claude 进 Slack 砍价，最后人按结果线下交换</p><p style="color:#4a4a45">Anthropic 的员工把自己的东西交给 Claude 寄售，想买什么也告诉 Claude。一共有 69 名员工参加，每个人有 100 美元名义预算。实验结束后，最终结算是 100 美元，加上卖出物品的钱，减去买入物品的钱，以礼品卡形式支付</p><p style="color:#4a4a45">开市之前，Claude 先把每个人的买卖偏好问清楚。它会问参与者想卖什么、期望价格、最低可接受价格、想买什么、愿意付多少钱，以及谈判风格。访谈结果会变成这个人的专属 agent system prompt</p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/ZJc702xm5GW4eaCqV1xPJ7I.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p style="color:#4a4a45">然后，Slack 变成了这个 Agent 版闲鱼的交易大厅。项目频道会随机轮到不同 agent 行动。它们可以发出售帖，可以对别人的物品报价，也可以确认成交。实验开始后，agent 不会回头问人“这个价格能不能接受”，也不会在竞价时找人确认</p><p style="color:#4a4a45">Anthropic 还偷偷开了四个平行市场，用来比较 Opus 和 Haiku。A 和 D 两轮全部用 Opus 4.5。B 和 C 两轮混合使用 Opus 4.5 和 Haiku 4.5，参与者有 50% 概率被分到 Haiku。A 和 B 是公开 Slack 频道，C 和 D 是私下跑的研究频道</p><p style="color:#4a4a45">只有 Run A 最后真的要线下交割，但参与者直到填完实验后问卷才知道真相</p><p style="color:#4a4a45">所以这套设计其实问了两个问题：AI agent 能不能替人完成二手交易，强模型和弱模型进入同一个市场时，谁会拿到更好的结果</p></section><section><h2 style="color:#cf4436;font-weight:700">它真的成交了</h2><p style="color:#4a4a45">最后真成交的那一轮，已经不是模拟市场，而是办公室里的线下交换</p><p style="color:#4a4a45">真实那一轮里，Claude agent 促成了 186 笔交易。统计附录按售出物品计数，Run A 是 575 件挂牌物品，206 件售出，销售率 35.8%，总价值 4010 美元</p><p style="color:#4a4a45">把四轮市场合起来看，它已经超过了一个聊天 demo。2300 个 item-run 观察值里有 782 笔完成交易。平均价格 20.05 美元，中位数 12 美元，最高 175 美元。金额不大，但足够说明一件事：自然语言里的报价、还价、成交，agent 已经能跑完一轮</p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1T8ghv4e89WK2iR9E84FW8dD.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4EvJ7R3Zxt1h2V3BJHSilFA.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p style="color:#4a4a45">参与者没有普遍觉得 Claude 谈出来的价格离谱。交易公平性的评分范围是 1 到 7，4 代表对买卖双方都公平。Opus 交易均值是 4.053，Haiku 交易均值是 4.045</p><p style="color:#4a4a45">这比很多 agent 谈判研究更接近真实市场。很多研究用的是虚构商品，或者合成数据库。Project Deal 用的是人的真实物品。滑雪板、书、折叠自行车、键盘、手工装饰、乒乓球，最后都要被人真的拿出来交换</p><p style="color:#4a4a45">真实物品会把人的舍不得、最低价、偏好和奇怪要求一起带进市场。agent 要在这些人类输入里完成交易</p></section><section><h2 style="color:#cf4436;font-weight:700">Opus 更会赚钱</h2><p style="color:#4a4a45">赚钱能力主要看三件事：成交数量、卖出概率，以及同一件东西能卖多少钱</p><p style="color:#4a4a45">Opus 用户确实多做成了几笔生意。两轮混合市场里，他们平均多完成约 2.07 笔交易；换一种统计口径，结果也差不多</p><p style="color:#4a4a45">Opus 当卖家时，东西也更容易卖出去。它的物品售出概率高出 6.63 个百分点。这个结果方向明确，但统计上没有完全站稳</p><p style="color:#4a4a45">同一件东西交给 Opus 卖，平均会比交给 Haiku 多卖 3.64 美元。研究者只看那些在 B 和 C 两轮都卖出、且一轮由 Haiku 卖、一轮由 Opus 卖的物品</p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4rTKGR2hCqeSzVZbB1LKQjn.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p style="color:#4a4a45">最好讲的例子，来自一颗红宝石和一辆坏掉的折叠自行车。同一颗实验室培育红宝石，Opus 卖了 65 美元，Haiku 只卖了 35 美元。同一辆坏掉的折叠自行车，同一买家、同一卖家，Haiku 卖了 38 美元，Opus 卖了 65 美元</p><p style="color:#4a4a45">更微妙的是，Opus 不只会卖，也更会买。161 件至少卖出两次的物品里，Opus 作为卖方，平均多拿 2.68 美元。Opus 作为买方，平均少付 2.45 美元</p><p style="color:#4a4a45">几美元听上去不大，放在这个小市场里却很有分量。这个市场的中位价格只有 12 美元，均价也只有 20.05 美元</p><p style="color:#4a4a45">强模型遇到弱模型，价格会被推到另一个位置。Opus seller 遇到 Haiku buyer，平均成交价会被推到 24.18 美元。Opus seller 遇到 Opus buyer 时，平均成交价是 18.63 美元。模型质量差距一旦进入交易两端，价格就会被推到不同位置</p><section><p style="color:#cf4436">当 agent 开始替人谈判，模型能力就会变成议价能力</p></section></section><section><h2 style="color:#cf4436;font-weight:700">人还没感觉到</h2><p style="color:#4a4a45">交易结果已经拉开，但很多人主观上并没有感觉到差异</p><p style="color:#4a4a45">同时经历过 Opus 和 Haiku 的人，并没有压倒性地选 Opus。实验后，Anthropic 让参与者给四轮结果排序。61 人进入了排序问题，其中 28 人在 B 和 C 两轮中分别经历过一次 Opus 和一次 Haiku。结果是，17 人把 Opus 那一轮排在 Haiku 前面，11 人反过来</p><p style="color:#4a4a45">Opus 多成交了几笔，用户满意度却没有跟着明显拉开。混合市场里，Opus 用户对交易满意度的原始均值是 5.14，Haiku 是 4.82。但在研究者控制个人差异后，优势就不明显了</p><p style="color:#4a4a45">公平性评分也几乎重合。Opus 是 4.053，Haiku 是 4.045。前面那些价格和成交量差异已经在那里，但参与者很难从自己的体验里识别出来</p><section><p style="color:#cf4436">最麻烦的市场差异，往往发生在你不知道自己少拿了几笔的时候</p></section><p style="color:#4a4a45">以后真正麻烦的，可能不是用户觉得 agent 很难用。如果未来真实市场里出现 agent 质量差距，高质量 agent 替人多拿一点，低质量 agent 替人少拿一点，这种差距可能不会以“糟糕体验”的形式出现。它会分散在每一次报价、每一次还价、每一次是否发现机会里</p></section><section><h2 style="color:#cf4436;font-weight:700">强硬提示词没赢</h2><p style="color:#4a4a45">把 Claude 写得更强硬，并不会自动变成更会交易</p><p style="color:#4a4a45">Anthropic 还专门看了“强硬谈判”这件事。研究者让 Claude 读取参与者访谈记录，判断哪些人希望 agent 更强势一点</p><p style="color:#4a4a45">结果并不支持“强硬一点就更赚钱”。强硬卖家的售出概率看上去高了一点，强硬买家的成交价也只多了 0.56 美元</p><p style="color:#4a4a45">那些强硬卖家看上去多卖了钱，但主要是因为他们一开始就把要价报得更高。扣掉这个因素以后，强硬提示词的效果就没剩下多少</p><p style="color:#4a4a45">Claude 可以很听话，但听话不一定带来商业成功</p><p style="color:#4a4a45">Rowan 的牛仔提示词最能说明这件事。他让 Claude 用一个“倒霉又疲惫的牛仔”语气去谈判，Claude 真的把西部片台词演出来了。它可以很会演，但主要胜负手仍然在模型能力</p><section><p style="color:#cf4436">提示词能改变 agent 的口气，模型能力更容易改变成交结果</p></section></section><section><h2 style="font-weight:700;color:#cf4436">它还挺会整活</h2><p style="color:#4a4a45">最像故事的部分，来自那些被 Claude 原样带进市场的奇怪偏好</p><p style="color:#4a4a45">Claude 给一个人买到了他本来已经有的一块滑雪板。一个人类大概率不会重复买同一块板，但 Claude 从很少的访谈信息里抓住了对方偏好，精准到有点尴尬</p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3j0zdw39qV7H4nhzfm1svG8j.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p style="color:#4a4a45">Mikaela 给 Claude 的指令更怪一点：买一件 5 美元以内的东西送给 Claude 自己。Claude 最后看中了 19 个乒乓球，报价 3 美元。因为这发生在真实交易里，对方真把乒乓球带来了</p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4AGACu1F7z8T3WN3Q9ZaQ5a.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p style="color:#4a4a45">一名员工的 agent 甚至卖出了“和狗相处一天”的体验。另一个 agent 接上了这个提议。过程中，有 agent 还编出一些并不存在的生活细节。最后，人和狗真的完成了那次线下约会</p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3KZci2qK50i2Hp0zb2z3E85.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p style="color:#4a4a45">agent 一旦替人进入真实市场，处理的就不只是价格了。它还会处理人的审美、社交、幽默、临时起意，以及语言模型自己编出来的细节</p><p style="color:#4a4a45">Anthropic 也把这种编造细节列为风险。如果这种系统走出办公室，就不能只靠模型自己把握分寸</p></section><section><h2 style="color:#cf4436;font-weight:700">先看清边界</h2><p style="color:#4a4a45">这个实验还只是一个小切片，不是 agent 经济的完整答案</p><p style="color:#4a4a45">它发生在 Anthropic 办公室里，金额低，参与者彼此是同事，预算也来自实验本身。这个市场没有真正接入公司采购、广告投放、外部支付、物流和售后</p><p style="color:#4a4a45">真实商业环境会更硬。卖家会优化曝光，买家会部署更强模型，平台会控制流量，也会有人试图攻击 agent</p><p style="color:#4a4a45">已经有人愿意为这种服务付费，但这个数字也别放大。它只能说明，在这个小场景里，一部分人觉得“让 agent 替我砍价”确实有用</p></section><section><h2 style="color:#cf4436;font-weight:700">账单会悄悄变化</h2><p style="color:#4a4a45">当然，Project Deal 没有证明 agent 经济会怎么走，但它却证明了另一个问题：<span style="color:#cf4436;font-weight:bold">未来，谁的 agent 更强，谁可能就能多赚一点</span></p><p style="color:#4a4a45">办公室里的二手交易只是一个小水池。放到企业采购、广告竞价、保险报价、跨境交易里，同一套机制就可能换一个量级</p><p style="color:#4a4a45">到那时候，人可能仍然很满意。只是账单已经被 agent 改过一遍</p></section><section><h2 style="color:#cf4436;font-weight:700">素材和来源</h2><section><p style="color:#4a4a45"><span style="color:#cf4436">→</span>Project Deal 官方页面</p><p style="color:#8a8a82">https://www.anthropic.com/features/project-deal</p></section><section><p style="color:#4a4a45"><span style="color:#cf4436">→</span>Project Deal 研究论文</p><p style="color:#8a8a82">https://cdn.sanity.io/files/4zrzovbb/website/85767420dd844c74fbbaaeb929ee9a399a9691bb.pdf</p></section><section><p style="color:#4a4a45"><span style="color:#cf4436">→</span>Project Deal 统计附录</p><p style="color:#8a8a82">https://cdn.sanity.io/files/4zrzovbb/website/4b2ea7c1347e27c4e1c7a7704bb633bd176e47f6.pdf</p></section><section><p style="color:#4a4a45"><span style="color:#cf4436">→</span>Project Vend：Claude 经营小店实验</p><p style="color:#8a8a82">https://www.anthropic.com/research/project-vend-1</p></section><section><p style="color:#4a4a45"><span style="color:#cf4436">→</span>Project Vend 第二阶段</p><p style="color:#8a8a82">https://www.anthropic.com/research/project-vend-2</p></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 热门AI公众号更新追踪</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ee37b8c5730139dcbee2a9?channel_id=67e5334abf856a52db04e0b7">https://lingowhale.com/reader/web/69ee37b8c5730139dcbee2a9?channel_id=67e5334abf856a52db04e0b7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>在奥德赛时期，我们为什么还需要阅读</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 人间故事铺</div>
+                    <h1>在奥德赛时期，我们为什么还需要阅读</h1>
+                    <div class="meta">
+                        <span>人物</span>
+                        <span>Sun, 26 Apr 2026 09:02:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69edd603d419f50beb76a129?channel_id=68d3ec300d8694abdfcdf913">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/9dVgq2ht5PZ46nxoK2UN2Ur.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">文化是平常的，文化理论家雷蒙·威廉斯早这样说过。那么文学当然也是平常的。平常生活里的某个时刻，一个人心内大动，难以忍耐，不得不写下来；或被另一个时刻里的另一个人读到了，激发出隽永的感情——在类似的任一个时刻中，文学都形成了。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">文学不在高堂，它只因为贴地而崇高。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">在初夏到来的第二期读书会，《人物》邀请了胡安焉、陈年喜和陈慧三位「素人」写作者。他们会在21天的时间里，用最平常而饱含真意的视角，与我们共读他们各自的非虚构作品《我在北京送快递》、《人间旅馆》和《在菜场，在人间》。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">「成为」写作者以前，陈年喜是矿山爆破工，陈慧是菜场摊贩，胡安焉是四处行走的打工族。这些曾经的或仍在继续的劳动，是他们写作中不可分割的素材与经验。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">在物流公司做夜班理货员时，胡安焉和工友们大多一天只吃两顿饭，衣服洗过了也仍有汗味，「自然而然地，人就变得不介意这种问题」。从晚上7点熬到早上7点，他总在半程感到困倦，「经常眼前一黑就要失去知觉」，可真正下工后，又会失眠到下午，「因为刚刚长时间地从事完身体并不喜欢的劳动，心里会生出一种奇怪的厌烦……」</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">陈年喜的工作扎在地下深处，「除了越来越硬的石头，什么也没有」。吃饭没有菜，用苹果或者大白萝卜就馒头；关了井盖，世界是完全的黑暗，只有头灯的光亮，所以每次下井前，他都告诉值守的同事别关井盖，他想能够看着天上，「有天没天不一样」。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">最初做流动摊贩，为抢一个菜场的好位置，陈慧在凌晨三点就要出门。她忘不了那时的天空，「淡淡的鱼肚白与朦胧的灰黑交织，仅剩的几颗星星仍然没有隐去痕迹」。她被猫头鹰惊吓，被野狗追逐，「一边啪嗒啪嗒地掉眼泪，一边狼狈地逃窜」。但她必须坚持，婚姻不顺，疾病缠身，她要为自己和儿子谋一份生计。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">他们开始写作，因为困顿，因为痛苦，也因为想提出一些问题：在这个裂变的时代，在高度细分的工业社会，人的悲欢离合如何流淌？人间的热闹与挨挤要如何记叙？最终，在生存与自由之间，人要如何保全「人之为人」的部分，又要如何自处？</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">写书的人想要排解痛苦、寻找真相，或者再简单些，就想获得快乐，读书的人也是一样。读书像是我们人生的小小的锚点，它在确认我们的存在。一群人一起读书，是同类的人同频共振。而当我们读的书的作者，也和我们一起阅读的时候，书上的时空和现实交织在一起，我们可以看到一本书，一个人更真实的底色。我们也得以窥见，素人作家如何把普通的生活点化成文学的金矿。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">我们现在常常说保护我们的前额叶，似乎所有的人和产品都在争夺我们的注意力。那我们自己呢，如何安放我们的前额叶？这21天也许会给你一些答案。人与书的交流，人与人的交流，关于阅读，关于生活，关于命运。关于那些让我们踏实和安静的一切。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">5月15日-6月4日，</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">《人物》共读计划第二期即将开启</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">我们邀请胡安焉——《我在北京送快递》的作者，他将为我们讲述他的生存实验，讲述他如何以具体生活为底色来写作。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">陈年喜——《人间旅馆》的作者。他将为我们讲述他作为一个矿工的经历，以及如何在粗粝生活里，写下有生命的文字。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">陈慧——《在菜场，在人间》的作者。她会聊一聊菜市场的故事，告诉我们「活在温暖的人间，生活大于写作」。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">21天，3位作者会进行专场直播，分享创作过程与书本之外的故事，分享自己对时代、对人生命题的理解。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span>3位作者还将进行专场答疑</span><span style="color:rgba(0, 0, 0, 0.9)">，让你真切地了解到从普通人到写作者的路径。或许能为你开始写自己的故事增加一份力量。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">和第一期读书会一样，新的「21天」有专属社群陪伴，不仅能读书，还能结识志同道合的伙伴，一起交流，看见彼此。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">同样，还有围绕书籍的线上主题讨论，既能表达个人观点，还能深入话题核心。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">为了帮你坚持阅读，我们准备了专属<span style="color:rgb(214, 168, 65);font-weight:bold">「打卡奖励」</span>，全勤打卡即可赢取精美好礼。每日设置轻量化阅读任务，搭配章节阅读、日常打卡，伴你感受每日一小步的成长。现在购买，立享限时优惠199元（原价249元）。</span></p><section><a href="https://csknr.xetlk.com/s/4Aw37u"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2GRgNRzPUk8XYx4F3dPml7.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/18oRJSJRA46D28Pv3bgcfk.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold"> 报名须知：</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">【非常重要，请仔细阅读，理性报名！】</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">1</span><span style="color:rgba(0, 0, 0, 0.9)">、嘉宾分享为线上直播，通过小程序小鹅通进入直播间，</span><span style="color:rgba(0, 0, 0, 0.9)">如错过可回看。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">2</span><span style="color:rgba(0, 0, 0, 0.9)">、购买成功后，</span><span style="color:rgba(0, 0, 0, 0.9)">记得扫码进入共读群，与共读读者相聚。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">3</span><span style="color:rgba(0, 0, 0, 0.9)">、本产品为虚拟内容服务，一经购买成功，概不退款，请您理解。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">4</span><span style="color:rgba(0, 0, 0, 0.9)">、如有相关问题，</span><span style="color:rgba(0, 0, 0, 0.9)">请在公号留言或咨询课程助理</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">人物读书会</span><span style="color:rgba(0, 0, 0, 0.9)">」</span></p><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1D6U0hh9x4B2XPPlO3R08Nq.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="font-weight:700"> 嘉宾与书籍介绍 </span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold">喜欢「</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold">逃</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold">跑」的人</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold">胡安焉——《我</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold">在</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold">北京送快递》作者</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 写作者</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 曾获华语青年作家奖、单向街书店文学奖、行读图书奖等奖项</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">-《新京报》年度纪实写作者、豆瓣年度作者等称号</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">文如其名，胡安焉的《我在北京送快递》记录了他的打工生涯——远不止有快递员的经验，他还做过服务员、保安、女装店主、摊贩、加油工等18份工作。二十年间，这19份工作勾连在一起，几乎是一部当代打工史。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">书里有工作的百态，辛酸的、温情的、麻木的、令人庆幸或厌恶的，每一位嵌在工业社会的螺丝钉或许都能找到自己的对照。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">工作是为了生计，而如此勤快地更换工作，是因为胡安焉是个喜欢「逃跑」的人。做一份工，最长一年，最短一两个月，工作带来的磨损消耗累积到一定程度，他就辞职。他说逃避是他的永恒主题，「所有困难都能克服我」。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">其实，在消极的表面之下，他具有一种莫大的勇气，尽管他自己不承认，「其实我倒没这么勇敢，我就是敢放弃，像契诃夫笔下的人一样，我唯一的勇气就是敢放弃别人不敢放弃的东西」。这些被放弃的东西是什么？或许包含规则与规训，包含世俗的价值与枷锁。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">最迷茫的时候，胡安焉不断问自己，什么是有意义的生活？我们为什么而活？很难说他找到了答案，但至少他在尝试。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">他不断地逃离，是为保全自己，保全自己身上「人之为人」的部分。他认为，追求自由，比获得自由更可贵。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold">「人间，本是一间大旅馆」</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold">陈年喜——《人间旅馆》作者</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 爆破工，诗人，作家</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 第一届桂冠工人诗人获奖者</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 代表作品《炸裂志》《微尘》《峡河西流去》《人间旅馆》等</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">陈年喜做过16年矿山爆破工，如果不是因为患了颈椎病与尘肺病，他或许还会做下去。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">在偏远的矿山，他写下日后让他成名的《炸裂志》：</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136);font-style:italic">「我不大敢看自己的生活</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136);font-style:italic">它坚硬 铉黑</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136);font-style:italic">有风镐的锐角</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136);font-style:italic">石头碰一碰 就会流血</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-style:italic;color:rgb(136, 136, 136)">……</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136);font-style:italic">我身体里有炸药三吨</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136);font-style:italic">他们是引信部分</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136);font-style:italic">就在昨夜</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(136, 136, 136);font-style:italic">我岩石一样 炸裂一地」</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">阅读、写作是他沉重生活的出口，每次写完诗，「感觉长长出了一气，心里感觉到平静多了」。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">在他的写作中，他关心「人的真实性」，关心「微小个体在大时代下的命运」。他认为无论时代如何发展，物质如何丰富，人和时代始终有一个对抗，有一个不适应，甚至有一种无力。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">他想要书写人们的对抗与无力的那一面，想要记叙身边「很活生生的人」的故事。写作这些故事时，他感到欣慰，「我觉得对这个人或者对这个群体，可以向这个世界有一个交代。因为我向这个时代透露了这个人命运的信息」。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">在《人间旅馆》中，他以旅馆为载体，用19篇故事，再次完成了自己的心愿——他写作矿工、背水客、淘金客、戏班艺人、民间小贩……写作他们在时代中的奔波，写作他们筹谋生计与尊严的故事。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">对他来说，旅馆是人间的绝佳观测点，「旅馆也是一个社会、一个江湖，经营者、行骗者、得意者、失败者、亡命天涯的人、呼风唤雨的人……每个人都有来路，每个人都有去处；每个人都没有来路，每个人也没有去处……人间，本是一间大旅馆」。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold;color:rgb(214, 168, 65)">「在此间小心地窥探人间万象」</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65);font-weight:bold">陈慧——《在菜场，在人间》作者</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 菜场小贩、作家</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 1978年生于江苏如皋，现定居浙江余姚</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 2006年开始在菜场摆摊并持续至今</span></span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 2010年开始写作</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(214, 168, 65)">- 已出版作品《在菜场，在人间》《去有花的地方》《她乡》等</span></span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">陈慧不要人叫她老师、作家，她说她只是个写作者。她在家中排老三，所以叫她「三三」或者「三姐」，她最高兴。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">她从2006年开始在余姚梁弄镇的菜市场摆摊，卖打火机、苍蝇纸、洗衣手套之类的杂货。她从一个「不会说本地话的外地媳妇」，逐渐变成菜市场里不可或缺的一份子，附近的老人们几乎都依赖她，她一天不出摊，就要接到他们的电话拷问。她喜欢在菜场的生活，每天都新鲜热闹，能缓解孤独。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">她写作的起点，也依托于菜市场里的芸芸众生：包子铺的年轻师傅、猪肉区的屠夫、卖毛笋的老人、修锅底的铜匠、胆大心细的捕蛇人、终年在菜市场捡钱的痴人……</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">他们的故事汇聚在《在菜场，在人间》里，读起来有一种温情与坚韧——不呻吟，不批判，她只是在记录。</span></p><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgba(0, 0, 0, 0.9)">但陈慧反对一切把她文艺化或浪漫化的行为。如果生活更好一些，如果她少一些亟待抒发的烦恼，她大约不会写作；写作可以很重，但重不过她的杂货推车，毕竟那辆小车能乘两百多斤的货物。</span></p><p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span style="color:rgba(0, 0, 0, 0.9)">所以，在陈慧的作品里，她不聊风花雪月，她只想讲述她见到的、「生活的真相」。<img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2QzTVg2GHhNC4aIs6O4DmSAu.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><section><a href="https://csknr.xetlk.com/s/4Aw37u"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2GRgNRzPUk8XYx4F3dPml7.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 人间故事铺</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69edd603d419f50beb76a129?channel_id=68d3ec300d8694abdfcdf913">https://lingowhale.com/reader/web/69edd603d419f50beb76a129?channel_id=68d3ec300d8694abdfcdf913</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>对话华人AI先驱黄铠：从追赶到领先，中国AI还需翻过几座“山”？</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 中国AI创业者最新采访</div>
+                    <h1>对话华人AI先驱黄铠：从追赶到领先，中国AI还需翻过几座“山”？</h1>
+                    <div class="meta">
+                        <span>IPP评论©</span>
+                        <span>Thu, 23 Apr 2026 12:25:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ea1a51cb0c6578b68f3b68?channel_id=67e5334abf856a52db04e013">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p>戴明洁：欢迎大家来到IPP播客栏目。我是华南理工大学公共政策研究院的研究员戴明洁，主要研究的领域是人工智能与科技创新。今天我们非常荣幸在IPP明远讲坛之后，继续邀请到黄铠教授来为我们分享关于具身智能等方面的一些信息，以及中美AI竞争等前沿领域的一些观点。</p><p>黄教授您好，我想着先向您请教一些问题。在您的讲座中，您有介绍到您领导的港中深“AIRS”（深圳市人工智能与机器人研究院）团队，在2020年的时候构建了我们中国首个智能云计算系统。想请问一下您和您的团队在整个系统开发的过程中取得了哪些突破性的进展，又遇到了哪些挑战？您又是如何带领团队去克服这些挑战的？</p><p>黄铠：我是2018年到香港中文大学（深圳）的。那个时候我进的是理工学院——因为当时学校只有四个学院。现在学校已经有了八个学院，包括2020年成立的数据科学学院。当时的国内还很少专门为数据成立一个学院的。这大概也是为了突出“数据”的重要地位，毕竟数据是基础技术，AI就是建立在大数据上面的。</p><p>我初到港中深的时候，除了在理工学院担任讲座教授，教云计算的课，还教物联网的课。后来我就跟校方建议成立一个人工智能研究院。于是在2019年，学校就成立了深圳市人工智能与机器人研究院（AIRS）。今年，我们研究院已经七岁了。</p><p>当时，深圳市答应资助这个项目。深圳市的要求是，研究院不仅要搞学术研究，还要跟工业应用结合，比如AI的应用或者机器人（Robotics）各个方面的应用，要有一些创新，要跟工业界对接。尽管到现在为止，还没有企业来支持我们这个研究院，我们在这方面并没有特别成功——我应该这样自我反省。但不管怎么说，“AIRS”还是开了风气之先。</p><p>我是研究院八位研究主任（Research Director）之一，我主持的是云计算和大数据这一块。我就跟我们的团队成员讲，我们一定要造一台机器出来，搞点实实在在的东西。我当时也跟校方争取到了一笔不小的数目，最后我们大概花了一千五百万，就把这个智能云计算系统造出来了，而且（系统）规模在当时来说不算小，在大学里面算是相当可观的。</p><p>2019年，中国宣布5G通信系统正式推出，在全世界是第一个。当时我们学校在校园的楼顶上架了基站。有了通信条件，数据就能跟外界连通，可以进也可以出。我的背景是做云系统的，当时中国还没有造出什么大的云系统，我们在校园里算是第一个把5G云系统搭建起来的。</p><p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/z7qPS24rquE4st2S23SH82C.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></p><blockquote><p>黄铠教授团队搭建的智能云系统架构。</p></blockquote><p>这个云系统有一个特点：它是一个多元的系统。所谓多元，融合云管理、大数据分析、人工智能、物联网和边缘计算等多种能力的综合系统。</p><p>我仍记忆犹新的是，当时很多人都专门做AI，用的设备是公司用的那种工作站（work station），价钱不便宜。而且这些工作站里面一定要配很多GPU，因为要用GPU来处理大数据。所以我们的系统在当时也算是开了风气之先，后来很多公司那边把我们模型中学到的新东西也用到他们的产品里去了。</p><p>后来，我把这台系统免费开放给学校的各个研究计划和项目来使用。前后开了一百多个户头。有一些老师拿我们的系统去做研究、发论文的，其中包括一位老师还获得奖项。</p><p>围绕这个系统，我们前后花了一年半建造。除了硬件之外，软件方面我们也买了很多，混搭在一起，还要花不少功夫去调节、调试。我的研究组里有研究生，我们还雇了好几位工程师来配合他们。前后参与的工程师和博士生，加起来有十几个人。我觉得很值得骄傲的一点是，我们团队许多研究生从动手开始，真真切切学到了很多东西。那一千多万的投入，除了支撑学校很多研究项目的开展、帮助推进他们的课题之外，也培养出了一批研究生人才。</p><p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3YTuvN374QfpLKlj32wNGHJ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></p><blockquote><p>黄铠教授团队荣获2021年“第十届吴文俊人工智能自然科学奖”。</p></blockquote><p>后来，我把系统转到了我们学校的大数据研究院，他们的研究经费比我多得多。看了我做的系统之后，就说要发展大数据的机器。</p><p>关于这一点，我们后来回想起来，也观察到大学的研究有些现实问题：一股热潮来了，大家轰轰烈烈地搞，但是后续的资金跟不上，可能连电费都出不起了。所以最后我就跟我们学校的副校长商量，我捐三台云计算服务器给他，我说你免了我下面三年的电费。电费的问题就这样解决了。</p><p>后来我进一步了解到，国内很多“大机器”、大项目的建设，在用电上是个大问题。据我了解，国家超级计算天津中心一年用的电规模很大，每年光是电费就要好几百万。因为电脑二十四小时都要开着。所以你可以想象，如果后续经费跟不上，这些系统是很难维持下去的。</p><p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/30Xn3712s20F3FAebh438rK3.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></p><blockquote><p>国家超级计算天津中心研发的天河一号超级计算机。图源：AP</p></blockquote><p>另外，从硬件上来说，这些系统老化得也很快。我们当时用的GPU是A100，这种芯片现在根本赶不上现在的H200了，速度上、容量上都有明显的短板。说到底，要建造超算中心，没有几个亿是搞不好的。这是我的切身体会。</p><p>此外，这里面有很多的因素在里面。比如，钱是谁引来的，资源就会往那个方向倾斜。如果当时我们学校能把那个云系统的潜力充分发挥出来，应该还会做得更好。如果能有再多一些的资金，那就可以做出一个真正像样的生产级系统了。</p><p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/39O3kB4sfn3m4EU2mp186cjS.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></p><blockquote><p>搭载八块英伟达H200芯片的Nvidia HGX系统。图源：英伟达</p></blockquote><p>戴明洁：刚刚听您介绍您从2018年回国，包括建设智能云系统的经历，真的非常精彩。我听了之后有几点感触很深。</p><p>首先一个感觉是，您的工作在当时确实是开创了很多先河。因为我自己也主要是研究人工智能政策方面的，我们国家在2017年左右颁布了国家层面支持人工智能发展的顶层设计《新一代人工智能发展规划》，2018年您就回国了，其实是非常契合国家发展战略需要的。再加上您2019年建立这个系统，到后面怎么培养学生，感觉里面有非常多闪光点可以继续来探讨。比如您提到您的系统，虽然花了一千五百万来建造，但在使用的时候是“开源”给了港中深很多教师团队，有一百多个户头可以免费使用。</p><p>这就让我很想请教您关于AI开源方面的问题。因为我们都知道，去年初DeepSeek的开源，在国际上引发了很大关注。想请教您一下，您觉得在AI领域，开源相比于美国现在一些大公司走向闭源的做法，是不是会更有利于发展？以及您的这种开源精神，怎么样才能更好地发扬和传播下去？</p><p>黄铠：开源这个事情，像美国那边的OpenAI，它做这样一套系统，投入其实是非常大的，可能要到十亿美元量级。它用的人也都是顶尖的，一开始团队规模就不小，而且系统本身也有很多专家参与设计。它早期强调开放，带来的一个很大影响，就是推动了“generative pre-trained transformer（GPT）”这条技术路线走到前台。这个系统是开了先河的。里面很多核心人才后来也一直留在这个体系里，而且它还能够不断吸收人才、不断扩充系统。</p><p>戴明洁：您刚刚在介绍的时候也提到，您在建系统的时候买了很多GPU，当时型号可能还是A100。在我的记忆里，中美芯片竞争其实是2018年开始的，您当时建这个系统的时候，有没有遇到芯片购买上的一些难题？</p><p>黄铠：我们当时买不到H系列的芯片（英伟达面向高性能AI训练与推理推出的H系列GPU）。2023年和2024年美国技术管制比较厉害，甚至买不到。</p><p>戴明洁：中国芯片被“卡脖子”一直是一个非常重要的议题，您刚刚也提到了。芯片更新迭代跟不上，您的系统如果缺少像H200这样的芯片，性能和容量方面都会受到很大影响。我想请教一下，其实像华为这样一些中国企业也在开发替代芯片，您觉得国产芯片在这方面有可能取代英伟达现在这样的地位吗？</p><p>黄铠：我想会赶上来的，但是要直面问题。美国人逼着荷兰不能把光刻机卖给中国，一台光刻机要多少钱？那个价钱是不得了的。但没有高精度的光刻机，就做不出高端芯片。不过，好像最近美国在中端光刻机方面有一些松动，但顶端的光刻机还是不卖。我的感觉就是僵在那里了。</p><p>所以从这个意义上讲，国产芯片要真正追上来，最终还是要把高端制造设备这一关迈过去。另外，中国周边的地缘政治局势也可能对这些设备、零部件和技术出口产生影响。如果外部环境变紧张，相关限制措施就可能扩大。</p><p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4e6TJj1BR2P81D4zfP3irvZX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></p><blockquote><p>在IPP第十一届国际会议上，黄铠教授发表主旨演讲。图源：IPP</p></blockquote><p>戴明洁：您刚刚介绍您通过捐了三台云服务设备来换电费，我觉得这个事情非常有意思，可能背后反映的是我们国家科研经费可持续性方面一个很值得关注的问题。您刚刚也提到，如果支持经费能够提升一个数量级，您的系统可能会更加大有作为。听下来真的非常可惜。</p><p>您在中美两国的高校都有很资深的从业经历，您觉得中国现在大学里面经费有些不可持续的原因是什么？这种情况在美国会不会发生？比如说如果您是在美国建一个系统，它的经费可持续性是不是会更好？</p><p>黄铠：美国的大学研究经费，有一部分来自美国国家科学基金会（NSF），但其实还有很大一部分来自军方。我一辈子没有拿过美国军方的钱。他们来找我，被我一口回绝。为什么呢？因为一旦拿了军方的钱，第一，我的研究成果不能公开发表；第二，会有很多“后遗症”。所以我这辈子都没考虑过拿美国军方的经费。</p><p>我记得有一次回国演讲，也是涉及高科技方面的东西，碰到了类似的问题。后来我从中国再去到美国南加大，大概两三个月，美国安全方面的人就来找我了。他说，我们注意到你在中国某个大学，接触了很尖端的东西。他们想知道中国在做什么，想从我嘴里套话。我说，我在美国都不拿军方的研究经费，中国方面的秘密研究经费我自然也不会去探听。一句话就给他顶回去了。</p><p>但不得不说，在美国，现在的研究经费总体上还是比中国自由得多。但是特朗普这个人很糟糕，他停掉了很多大学的研究经费，包括哈佛大学的一些重要项目，根本原因其实就是不符合他关于地缘政治的想法，他希望把资源转移到他想要做的事情上去。至于将来会不会恢复，我很怀疑。</p><p>戴明洁：关于经费的问题，您刚刚也分享到，在建研究院和建系统的过程中还是有一点点遗憾——当然我觉得这是您非常谦虚的说法。就是在学术研究跟机器人应用等方面结合上，可能没有获得太多来自企业的资助，或者说来自企业合作、来自市场的资金。</p><p>黄铠：企业好像不太相信我们做的东西有用，因为利润预期可能并不确定。</p><p>戴明洁：这会不会也反映出，中国的企业比较追求短期的商业应用利益，缺乏了一些中长期的投资眼光？我们在比较中美AI发展的时候，有一个非常流行的说法，就是美国的企业和大学可能更加注重对前沿领域的探索以及技术的领先性，而中国企业更加强调AI应用。您认为中国AI顶尖领域，跟美国的差距有多大？</p><p>黄铠：在前沿领域，我们现在确实暂时落后。当初我还以为OpenAI要垮的，因为投入那么大。没想到后来很多工业界愿意买它的股票，英伟达就买了很多OpenAI的股票，这等于是变相在支持它。现在美国AI领域几个大的公司，还是原来那几家，必须承认Google做得很好，亚马逊也有自己的东西。亚马逊是云的开创者，没有亚马逊，云计算是起不来的。我写第一本关于云计算的书的时候，那个时候只有亚马逊造出了云。</p><p>现在大家都在做AI，讲穿了，AI实际上就是云，就是大的数据中心。如果没有云的话，这些大模型是弄不出来的。当然，中国在超算系统的数量上，还是很多的。但是最尖端的那一批，我们有些落后。比如说全世界排名前五十的超算系统，中国占了很高比例，但是要说最好的那几个，我们好像拿过一两次第一名，后来就被人家赶过去了。</p><p>戴明洁：在您的介绍中，其实有很多很值得我们警醒的内容。比如说AI发展的三大要素——数据、算力和算法。我们中国的大模型跟美国相比，也还是有一定需要追赶的地方。</p><p>那么非常想请教您，如果中国想要真的在前沿技术领域追赶美国的话，我们有哪些突破口？您觉得在AI相关的重要领域里面，比如说数据、云计算、大模型或者是应用，中国比较可能在哪个方面率先实现突破、赶上美国？</p><p>黄铠：我觉得DeepSeek就做得很好。现在中国又在全国上下都在搞“小龙虾”（Open claw），这方面也有可能实现突破。但这里有一个比较关键的问题，就是解决好安全问题。我们需要直面这个问题，因为成败或许就在这上面，不然你做出来的东西很容易被仿造。这中间需要有人做专门投资，建立起安全方面的防范措施。</p><p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2mb6Os3SJRmv3fhMv8EB4iI.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></p><blockquote><p>以“龙虾”为代表的AI智能体，能理解和思考、读取文件和信息，还能全天候执行命令完成工作，并通过即时通讯软件与用户交互，是能随时工作的“助理”。图源：路透社</p></blockquote><p>至于中国何时可以赶超。我认为美国现在还是太占便宜了。天底下最好的人才仍旧往他那里跑。再加上他国家的研究经费还是相当充足的。所以说将来中国能不能赶上去，我看十年还是需要的。</p><p>戴明洁：您刚刚提到在前沿科技领域，顶尖人才其实是非常重要的一个因素，然后近期其实包括黄仁勋也有一些发言，比如说其实现在在美国硅谷可能有一半的大公司的顶尖人才都是华人。您其实也是在美国工作了很多年的华人，很想请您聊一聊，为什么美国硅谷它能从二战后就持续的吸引各国各界，包括中国的人才去美国发展。其实中国近年来对前沿科技领域的支持力度也非常大，但是为什么那帮最顶尖的人才还是愿意去美国发展呢？</p><p>黄铠：这要看具体哪个领域。在AI这个领域，我预计可能有不少人会回来，也需要有很多人回来。但现在中国搞AI的人才，接近一半都去了美国。美国人出大价钱，短期内虽然他们可能不考虑回国，但是下面五年，回来的人会多一点。我预测走势大概是这样。</p><p>我的感觉是，在超算产业、超算系统、云系统、大数据这些领域，我们不会落后太多。我昨天去华南理工大学未来技术学院看了看。国家肯花钱，目前学院正在培养八百多个学生，有二十几位老师。全国大概有12所高校有这样的未来技术学院。这是非常值得鼓励的。</p><p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/wCV1630nr6U4bVKCL4qSg8u.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></p><blockquote><p>华南理工大学在广州国际校区设立未来技术学院，重点建设人工智能、数据科学与大数据技术两个专业方向，服务国家创新驱动发展战略、粤港澳大湾区建设和“一带一路”倡议。</p></blockquote><p>戴明洁：您刚刚提到未来可能会有一些人才从美国回流回中国，这其实给了中国AI界发展很大的信心。</p><p>黄铠：其实这里还应该提到企业。据我了解，像中国的华为，薪水高得不得了。有的员工原来在研究机构连五十万都拿不到。现在被华为借调过去之后，至少能拿到五百万人民币，涨了十倍。企业的竞争力在增强。</p><p>戴明洁：是的。我在研究中就发现，在以AI为代表的新一轮科技革命中，好像企业的重要性和优势已经开始超越大学了。比如说您看美国现在无论是基础研究还是前沿技术开发，好像都是一些大公司在做，尤其是Google DeepMind等等。中国好像无论是芯片软硬件，也是华为等一些大公司在做，学术界的成果好像稍微少了一点。您觉得这会是一个趋势吗？您觉得对现在的年轻人，比如说AI相关的研究人员，无论是硕士还是博士毕业，您觉得他们是留在大学继续深造搞科研，还是说去企业前沿一线进行研发？</p><p>黄铠：问题在于，现在大学和企业之间在资源条件上，特别是在薪酬和平台条件上，差距在拉大。我们深圳的一些高校，资深的老师的薪酬可以达到一两百万元，这在国内已经算是比较丰厚的待遇了。很多人如果刚从大学毕业，除非做得特别好，否则在大学里任教，哪怕是在很有名的学校，一开始可能也就是三十万元左右。当然也有破格引进、待遇更高的情况，但总体来说，国内教育界在薪酬竞争力上，我觉得还是有很大的提升空间。</p><p>戴明洁：在您看来，薪酬的差距是不是导致很多人才流向美国的一个很主要的原因？</p><p>黄铠：恐怕是。但只有少数拔尖的人能拿到高薪，其他人的竞争力目前还不够。不过你说美国高到什么程度，也不见得。美国的工程师，AI方向刚本科毕业的，我看到的也就是十二万美金一年。当然相对来说还是比中国要高一些。还有更高的，有的人在工业界已经做出点名堂了，一到大学里头，一下子也能拿到二三十万美金。当然也不是每个学校都这样，但确实有。</p><p>戴明洁：另外，美国其实一直受人称赞的一点，就是它大学和产业之间建立了一种"旋转门"机制。比如像斯坦福大学，很多知名教授会去产业界创业，同时产业界很多资深的工程师和研发人员也会被邀请到大学去讲课。这样一种比较自由流动的环境，是不是能为人才提供更好的发展空间？相比之下，中国因为体制原因，可能在这方面还有一些限制。</p><p>同时，您刚刚提到未来技术学院一年可能要上八节课，我就在想，以后AI技术应用到教育领域、进入课堂之后，老师还需要上这么多课吗？比如是不是可以考虑把课程量减少一半，一年上四门课，然后把另一半时间留给学生去企业实践，这样会不会更好？</p><p>黄铠：美国差不多就是一年四门课，一个学期两门。这方面我们可以借鉴。</p><p>戴明洁：您在人才培养方面的履历其实也非常精彩。您培养了八位中国两院院士，这非常令教育者钦佩。想问问您，这么多年在人才培养方面您有哪些心得？如果AI时代真的到来，我们以后在人才培养上又要做出怎样的改进，才能继续培养出这么多的高层次人才呢？</p><p>黄铠：院士这个事情，本身也有一个长期累积的过程，其中确实也有很多人事关系在里面。我的感觉是，最后当上院士的人，不见得一定就是最好的那一个。因为院士是推荐制度，要有人给你投票。别人不认识你，你平时也不和人来往，他为什么要投你的票？这是很现实的事情。我离开港中深之前，曾两次被提名国内院士，结果都不了了之。说到底，我也不认识什么人，这件事本来就很难。</p><p>近两年国家其实也在积极推动院士制度改革。如果院士提名制度要更好地契合发展需要，我认为“年轻化”是一个重要方向。这一点很重要。还有一点，就是整个社会不要把院士看得过于神化。有的院士真的是选上以后，就再也不写文章了。</p><p>戴明洁：您刚刚还提到，对于像您建的这个系统来说，能源和电力是非常重要的。因为GPU要全天候运算，可能一年的电费都要花好几百万。另外，近期美国对伊朗的打击，也造成了能源市场很大的动荡。您觉得未来能源因素会对AI发展产生什么样的影响？</p><p>黄铠：这个影响会越来越大。因为AI发展到最后，特别是大模型、超算中心这些东西，拼的不只是芯片，也不只是算法，背后其实越来越是在拼能源、拼电力。设备要全天候运转，消耗是非常惊人的。</p><p>马斯克甚至认为，干脆到月球上去发电，到太空中去发展发电，因为那个条件跟地球上不一样。这个想法当然很超前，但也说明一个问题，就是未来能源很可能会成为制约AI发展的一个关键因素。</p><p>戴明洁：中国大基建方面非常有优势，在电力和能源方面会不会比美国好？</p><p>黄铠：中国一年的发电量早就超过美国了，超过很多。美国现在衰落的原因很多。一个重要原因就是发电能力不足，加之重工业也没有了。美国很多地方的工业配套已经不行了。前几年疫情期间，美国那阵子连口罩都没地方生产。</p><p>戴明洁：确实，美国自1980年代里根改革以来造成的产业空心化问题，确实是特别严重。我记得今年年初的时候，有一种关于美国AI发展"泡沫论"的说法，认为美国AI发展里面有很多泡沫。就像您刚刚提到的，OpenAI和英伟达之间相互投资——我买你的芯片，你投资我的大模型——这种科技巨头之间的循环投资，如果没有真正落到产业上，可能会引发AI泡沫。您怎么看这个问题？</p><p>黄铠：泡沫当然有的。大家现在看到的都是OpenAI成功的一面，但实际上垮台的也不少，不赚钱、撑不下去的也很多。前段时间OpenAI好像已经把它的视频生成平台Sora关停了。它下面还有什么新的想法，现在大家还拭目以待。</p><p>戴明洁：近期美国在委内瑞拉以及伊朗的相关军事行动中用了很多AI技术，比如Palantir、Anduril的一些系统。而且现在无论是OpenAI还是马斯克，也都已经与国防部签订了订单。您觉得美国硅谷以后会更加紧密地跟国防合作吗？或者说它的AI军事化会更彻底吗？</p><p>黄铠：会。我认为美国硅谷未来会和国防系统结合得更紧，AI军事化的趋势也会更明显。马斯克就很典型，他的星链（Starlink）非常关键。没有星链的话，美国很多空天系统的运转能力都会受到很大影响。现在它已经有上万颗卫星了，这种系统的军事重要性是非常高的。</p><p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/mqd6Egbz5B1JglxvX3eAG.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></p><blockquote><p>数据显示，SpaceX的星链互联网连接业务去年营收达114亿美元，同比增长50%，占公司总销售额的61%。该业务线也是公司唯一实现现金盈利的板块。图源：路透社</p></blockquote><p>我们再看看地面通信，我们平时在公路上看到路边那些通信基站，有的还专门做了伪装，弄得像一棵树一样，但本质上都是为了保证信号覆盖。你在城市里可能感觉不到，可是你开到美国沙漠里去试试看，很快就没有信号了。我自己就有过这种经历，去拉斯维加斯的时候，稍微往沙漠里走一点，信号马上就断掉了。今天地球上大部分地方并不是陆地，而是海洋。海洋上有没有这样的信号覆盖？基本没有。所以从这个意义上说，像星链这样的系统，不只是商业系统，它在军事、通信和全球覆盖能力上都会越来越重要。</p><p>提到军民融合相关技术，我觉得中国的6G将来也是有可能发展起来的。中国的5G已经是世界领先的，我个人认为就是全世界第一。当然，中国有中国的问题，美国也有美国的问题。在我看来，美国的问题比中国的问题更严重一些；而中国的问题，牵涉面则会更广，不只是技术本身，还涉及其他很多领域，可能也包括企业所有制等更深层次的问题。</p><p>戴明洁：这又让我想到了人才的问题。如果硅谷越来越多地和国防部合作，那么在硅谷工作的中国人才该怎么办？他们会加入到这些美国国防项目中去吗？</p><p>黄铠：这首先牵扯到了地缘政治。不要因为美国现在表现出一种“不会和中国打仗”的姿态，就以为它真的是克制的。美国过去在委内瑞拉、伊朗等问题上的做法，已经说明了很多问题。归根到底，这里面是一个政治信任问题。</p><p>现在在美国，确实有不少中国人才愿意长期在那里发展、为美国的体系服务，他们未必会回来。将来会不会变化，我觉得还是要看中美关系会不会逐步走向正常化。当然，美国这个国家也有它自身的一些文化优点值得我们学习借鉴。还是希望在特朗普之后，美国和世界的关系能够变得更正常一些。</p><p>戴明洁：谢谢您的分享。这些内容正是我们公共政策研究院需要深入研究的，非常有启发。再次感谢您接受IPP播客的采访。</p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 中国AI创业者最新采访</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ea1a51cb0c6578b68f3b68?channel_id=67e5334abf856a52db04e013">https://lingowhale.com/reader/web/69ea1a51cb0c6578b68f3b68?channel_id=67e5334abf856a52db04e013</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

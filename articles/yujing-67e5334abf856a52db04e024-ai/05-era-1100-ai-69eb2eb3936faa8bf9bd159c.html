@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>速递｜Era融资1100万美元，为AI硬件设备构建智能编排软件层</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI行业最新融资案例解读</div>
+                    <h1>速递｜Era融资1100万美元，为AI硬件设备构建智能编排软件层</h1>
+                    <div class="meta">
+                        <span>Z Potentials</span>
+                        <span>Fri, 24 Apr 2026 08:44:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eb2eb3936faa8bf9bd159c?channel_id=67e5334abf856a52db04e024">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/k3K144jWfH2MYR2qPiITX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><em><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2q5i3ZpancDROCSXJDZqg.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></em></p><p><em><span><span>图</span></span><em><span><span><span>片来源：</span></span><span style="font-style:italic"><span>Era</span></span></span></em></em></p><p>4 月初，初创公司 Era 在纽约为收到其开发套件的艺术家们举办了一场聚会。艺术家们展示了他们制作的各种迷你小装置，比如一个能为你讲解关于法国的趣闻和笑话的纪念品，一个类似手机、能查看你的股票并告诉你今天是否可以辞职的设备，以及一个能告知你空气质量的小工具 。</p><p>虽然这些设备都处于实验阶段，但它们的共同点是 Era 的平台，<span style="font-weight:bold">该平台允许硬件制造商为 </span><span style="font-weight:bold">AI </span><span style="font-weight:bold">设备创建 </span><span style="font-weight:bold">AI </span><span style="font-weight:bold">智能体和编排。</span>该公司并不打算自己制造设备，而是旨在通过提供一个软件层来赋能他人，该软件层可以处理诸如定制语音创建或为耳机等传统设备添加智能等任务。</p><p>这家初创公司至今已筹集了1100 万美元的资金。其中包括由 Abstract Ventures 和 BoxGroup 领投的 900 万美元种子轮融资，Collaborative Fund 和 Mozilla Ventures 也参与其中。此前，该公司曾从 Topology Ventures 和 Betaworks 筹集了 200 万美元的种子前轮融资。</p><p>个人天使投资人包括Flickr 联合创始人 Caterina Fake、iPhone 键盘发明者 Ken Kocienda、OAS 创始人 Tony Wang、Little Guy 联合创始人 Daniel Kuntz、Sandbar 联合创始人 Mina Fahmi、前 Rabbit 首席产品官 ShaoBo Z 以及 Poetry Camera 发明者 Kelin Zhang。</p><p>Era 由首席执行官 Liz Dorman、首席技术官 Alex Ollman 和首席产品官 Megan Gole 于去年创立。Dorman 曾在 Humane 负责 AI 编排工作，并作为公司收购的一部分加入 HP。Ollman 曾在 HP 负责企业级智能体框架。Gole 曾在 Sutter Hill Ventures 参与 Jony Ive 和 Sam Altman 的 io 项目，随后加入了 Era。</p><p>Era 投资者 Casey Caruso（Topology Ventures 的创始人兼管理合伙人）表示，该初创公司的编排平台之所以脱颖而出，是因为<span style="font-weight:bold">它能够在不同模型之间进行动态路由，并能处理连接性等现实世界的限制因素</span>。</p><p>Dorman 表示，Era 背后的核心理念是<span style="font-weight:bold">构建一个能够为下一代设备提供动力的平台，而这些设备可能会抛弃应用模式</span>。</p><p>“我认为，利用当今这些 AI 模型，我们能做的最不可思议的事情之一就是取代那个应用层。因此，我们正在构建的是智能层，让任何人都能创造这类智能物体和智能设备。我们坚信，科技的未来不应该由旧金山的人们来决定……不应该由那些身处高塔、脱离现实的人制造设备并强加给每个人。我希望能重新拥有对设备的自主选择权，”Dorman 说道。</p><p>目前，该公司提供来自 14 多家供应商的 130 多种 LLMs，以支持眼镜、珠宝和家用音箱等不同形态的 AI 硬件。Era 认为，随着更多形态的设备脱颖而出，硬件制造商将需要一个能够处理多模态输入和推理的软件层，来为这些智能功能提供动力。</p><p>“你可以想象这种智能层被应用到许多不同类型的硬件中。因此，我们相信未来不仅仅是眼镜、戒指或手镯。我们将迎来一场可能性的大爆发，就像寒武纪生命大爆发一样，这是因为技术已经商品化了，”她说道。</p><p>Dorman 指出，该初创公司的平台旨在扩展至数百万台设备。此外，它还可以满足品牌为吸引特定用户而进行的定制化 AI 设备实验。</p><p><span style="font-weight:bold">该初创公司的愿景是，随着更多用户采用</span><span style="font-weight:bold">AI </span><span style="font-weight:bold">硬件，它希望让用户能够以保护隐私的方式选择自己的记忆和模型供应商。</span>正如它曾与艺术家共同举办展示会一样，它计划向开源和创客社区开放其平台，以展示其平台如何为各种不同类型的设备提供动力。</p><p>AI 硬件领域面临的一个巨大挑战是，目前还没有一家公司能成为成功的典范。Humane 已被出售给 HP，而 Rabbit 则一直保持沉默。Plaud 在会议记录领域取得了一定成功，而像 Sandbar 和 Taya 这样的初创公司尚处于早期阶段。然而，Era 认为，随着用户看到更多 AI 设备的用例，其中一些用户将会坚持使用下去。</p><p><span style="color:rgb(136, 136, 136);font-style:italic">参考资料：</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">https://techcrunch.com/2026/04/23/era-computer-raises-11m-to-build-a-software-platform-for-ai-gadgets/</span></p><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span><strong><strong><span><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247506405&amp;idx=1&amp;sn=29bdac1ee34aaceade9e66e9b0867d8f&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Rb4gq1Kttj0C6sdJ2kzkXN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></span></strong></strong></span></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247503698&amp;idx=4&amp;sn=ade3fdbb8a82ca59be3212c4843bb1a0&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3tGylYOPsWP3H0UuD3uCS.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247494663&amp;idx=1&amp;sn=8fab67231b9ebc593ac65864fd8f7e00&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Gk8PW1BuRCX32iMfWVNdAr.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1xV3SiPYUz63Vrtzu4c8WQ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI行业最新融资案例解读</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eb2eb3936faa8bf9bd159c?channel_id=67e5334abf856a52db04e024">https://lingowhale.com/reader/web/69eb2eb3936faa8bf9bd159c?channel_id=67e5334abf856a52db04e024</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

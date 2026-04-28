@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>1092亿！史上最大单项技术债务融资诞生</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI行业最新融资案例解读</div>
+                    <h1>1092亿！史上最大单项技术债务融资诞生</h1>
+                    <div class="meta">
+                        <span>智东西</span>
+                        <span>Mon, 27 Apr 2026 11:16:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef4c1a939a22f451627c60?channel_id=67e5334abf856a52db04e024">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3n8VuV1stIyG2aR1Ju1VGjmg.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><strong>甲骨文2026财年资本支出预计将达500亿美元，这一空前规模的投资已给其资产负债表带来巨大压力。</strong></p><p><span>智东西4月27日消息，据多家外媒报道，甲骨文公司已为其位于密歇根州的超级数据中心园区完成160亿美元（折合人民币约1092亿元）融资，</span><strong><span style="color:#0f59a4"><span>这是有史以来规模最大的单项技术债务融资</span></span></strong><span>。该项目不仅将直接服务OpenAI，也是总投资高达5000亿美元的“星门计划”（Stargate）核心组成部分。</span></p><p><span>在美国银行因担忧AI需求可持续性而退出后，该项目最终需要通过债券基金来承销。</span></p><p><span>据彭博社报道，全球最大的主动型固定收益管理公司</span><strong><span style="color:#0f59a4"><span>PIMCO认购了约140亿美元债券中的约100亿美元</span></span></strong><span>。剩余的资金结构包括数据中心开发商</span><strong><span style="color:#0f59a4"><span>Related Digital和黑石集团提供的约20亿美元股权投资</span></span></strong><span>。</span></p><p><span>为支撑这一庞大的AI基础设施布局，</span><strong><span style="color:#0f59a4"><span>甲骨文2026财年资本支出预计将达500亿美元（折合人民币约3411亿元），较上年翻倍有余。这一空前规模的投资已给其资产负债表带来巨大压力，标普与穆迪均已下调其信用评级展望至负面</span></span></strong><span>。</span></p><p><span>除此之外，甲骨文5530亿美元的剩余履约义务高度</span><strong><span style="color:#0f59a4"><span>集中于单一交易对手OpenAI</span></span></strong><span>，这进一步加剧了其自身的财务风险。</span></p><p><strong><em><span>01</span></em></strong><span style="color:#00b0ec"><strong><em>.</em></strong></span></p><p><strong>史上最大单项技术债务融资的细节</strong></p><p><span>萨林数据中心的核心定位是支撑甲骨文的AI业务发展，甲骨文预计到2027年，其AI业务将创造约900亿美元的收入。该项目是甲骨文、OpenAI与软银牵头的“星门计划”的重要一环。这项耗资5000亿美元的计划，旨在全美范围内搭建AI基础设施，助力美国巩固在全球AI竞争中的主导地位。目前，该项目已于2026年2月启动建设，建成后将成为美国规模最大的数据中心园区之一。</span></p><p><span>根据披露信息，该笔融资由两部分构成：一是瑞联数字与黑石集团提供的约20亿美元股权投资；二是由PIMCO主导承销的固定利率长期债务融资，其中PIMCO认购了140亿美元债券中的约100亿美元，剩余债务由其他机构投资者承接。值得注意的是，这一融资方案的形成并非一帆风顺。由于</span><strong><span style="color:#0f59a4"><span>美国银行对AI基础设施需求的可持续性存疑，纷纷退出该交易</span></span></strong><span>，最终由PIMCO接手核心承销工作，美国银行负责交易结构设计，高盛和富国银行则为瑞联数字提供咨询服务。</span></p><p><span>从融资结构来看，此次发行的债券呈现高成本、长期限的特点：票面利率达7.5%，期限长达19.5年，采用“前6年仅付息、后13年摊销”的模式。这一利率显著高于甲骨文自身债券的交易利差，溢价背后是项目融资的特殊性质。债券以萨林数据中心园区本身为抵押，而非甲骨文的资产负债表，投资者需基于单一设施的预期现金流而非甲骨文的企业信用进行决策。这种结构虽能隔离风险，却也推高了融资成本，</span><strong><span style="color:#0f59a4"><span>近20年的7.5%利率意味着总利息成本将超过本金，只有确保设施启用后持续产生收入并维持高入住率，才能支撑这一融资负担</span></span></strong><span>。</span></p><p><span>萨林项目的融资，只是甲骨文AI基础设施布局的冰山一角。目前，甲骨文已通过三大融资项目，累计为数据中心合作伙伴筹集至少720亿美元债务，涵盖密歇根、德克萨斯、威斯康星和新墨西哥四州的项目。</span><span style="color:#0f59a4"><span>为</span><strong><span>支撑这一庞大布局，甲骨文2026财年的资本支出预计将达500亿美元，是上一年的两倍多，这一规模空前的投资已对其资产负债表造成巨大压力，标普和穆迪已分别将其信用评级展望下调至负面</span></strong></span><span>。此外，甲骨文5530亿美元的剩余履约义务高度</span><strong><span style="color:#0f59a4"><span>集中在单一交易对手OpenAI身上</span></span></strong><span>，进一步加剧了其财务风险。</span></p><p><span>这一融资案例也折射出AI基础设施领域的金融新趋势：随着AI数据中心资本需求远超企业自身资产负债表承载能力，一套并行的金融基础设施正在形成。从Jane Street参与CoreWeave融资，到黑石集团在澳大利亚推进数据中心债务融资，再到贝恩资本出售数据中心股份，私募股权、资产管理公司正将AI数据中心基础设施视为可交易的固定收益资产，其融资模式已逐渐向房地产靠拢，以实物资产和长期租赁义务作为债务担保。</span></p><p><strong><em><span>02</span></em></strong><span style="color:#00b0ec"><strong><em>.</em></strong></span></p><p><strong>雄心背后的多重挑战</strong></p><p><span>尽管萨林数据中心被寄予推动经济增长、创造就业的期望，且开发商宣称将采用“闭环冷却系统”保护当地水资源，也承诺承担更大比例的能源成本，但项目落地过程中仍遭遇当地居民的强烈反对。去年12月，萨林镇的抗议者聚集发声，担忧项目庞大的耗电量会对当地电网造成冲击，同时可能引发空气、河流污染，影响社区生活质量。在密歇根州举行的相关听证会上，反对者更是直言，项目审批是“屈从于政治压力，牺牲居民利益”，有居民形容项目工地“看起来简直就是末日景象”。</span></p><p><span>居民的担忧并非空穴来风。数据显示，一座1吉瓦的数据中心园区需要专用发电设施、输电升级和水冷系统，对电力和水资源的需求巨大，而电力供应已成为美国数据中心扩张的核心制约因素。据测算，到2030年，为支持AI数据中心的电力需求，公用事业资本支出将高达1.4万亿美元。尽管密歇根州通过税收优惠和加快审批流程吸引数据中心落地，且当地供电方DTE能源公司表示有责任为包括数据中心在内的所有客户提供服务，但花旗集团分析指出，甲骨文数据中心在系统紧急状态下将被优先断电，以避免“数据中心灯火通明、公众遭遇停电”的场景。</span></p><p><span>萨林项目的争议，也是美国AI数据中心扩张热潮的一个缩影。Business insider去年的调查显示，</span><strong><span style="color:#0f59a4"><span>截至2024年，全美现有或计划建设的数据中心达1240个，较2010年的311个大幅增长</span></span></strong><span>，其中相当一部分集中在中西部地区。当前，美国农村地区已成为科技巨头争夺数据容量的首选目的地，</span><strong><span style="color:#0f59a4"><span>谷歌、亚马逊、Meta等巨头今年合计将投资约6500亿美元扩大AI相关基础设施</span></span></strong><span>，但这股热潮背后，是行业面临的多重困境。</span></p><p><span>一方面，是需求可持续性的争议。</span><strong><span style="color:#0f59a4"><span>目前全球AI相关年收入约为600亿美元，而数据中心年资本支出已高达3700亿至4000亿美元</span></span></strong><span>，两者存在六倍鸿沟，远超历史上铁路泡沫、光纤泡沫时期的资本支出与收入比。尽管甲骨文强调，其履约义务基于合同承诺而非投机，但最大交易对手OpenAI从未实现年度盈利，现金消耗速度加快，且正处于非营利向营利转型的法律争议中，其可持续运营能力直接影响甲骨文履约义务的兑现。</span></p><p><span>另一方面，是行业过度建设的隐忧。技术基础设施发展史充斥着过度建设周期：上世纪90年代末的光纤热潮、2006至2008年的数据中心热潮，以及第一波云计算浪潮中AWS的产能过剩，均表明技术最终会证明投资价值，但早期融资方往往难以从中获益。如今，AI数据中心的大规模投资是否会重蹈覆辙，成为行业普遍担忧的问题。此外，DeepSeek等高效AI模型的出现，也可能动摇“算力越多越好”的行业逻辑，导致当前规划的大量算力永久闲置。</span></p><p><strong><em><span>03</span></em></strong><span style="color:#00b0ec"><strong><em>.</em></strong></span></p><p><strong>结语：AI基础设施的繁荣与阴影</strong></p><p><span>甲骨文完成萨林数据中心163亿美元融资，既是甲骨文从数据库软件公司向AI基础设施提供商转型的关键赌注，也是“星门计划”推进的重要支撑，其背后是科技巨头抢占AI赛道的迫切需求，以及金融资本对AI基础设施领域的重新审视。然而，高成本融资带来的财务压力、当地居民的强烈反对、电力供应的制约，以及行业过度建设的隐忧，都为这一雄心勃勃的项目蒙上了一层阴影。</span></p><p><span>美国银行的退出与PIMCO的接手，彰显了市场对AI基础设施风险的分歧；甲骨文5530亿美元履约义务的集中风险，以及信用评级展望的下调，预示着这场豪赌的不确定性。但可以肯定的是，随着AI技术的持续发展，数据中心作为核心基础设施的地位将愈发重要，如何平衡技术进步、资本利益与社会公共利益，将成为科技巨头与行业监管者必须面对的长期课题。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3I5TJm3o1vqq1D3LhD4o29mM.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/To3043pv2tJ3m44mJ1dxtyA.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/g6RmJ3377COQLYt530lFjj.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/VfjHh3H511sO4zhGB3MMV.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2zbML62SFLJO4tnQ8fVDdAu.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" />
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI行业最新融资案例解读</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef4c1a939a22f451627c60?channel_id=67e5334abf856a52db04e024">https://lingowhale.com/reader/web/69ef4c1a939a22f451627c60?channel_id=67e5334abf856a52db04e024</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

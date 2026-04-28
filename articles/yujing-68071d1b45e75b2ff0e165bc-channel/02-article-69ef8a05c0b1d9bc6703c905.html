@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>上影节“一带一路”电影周（上）丨圣丹斯最新获奖作品亮相上海</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 艺术电影-电影</div>
+                    <h1>上影节“一带一路”电影周（上）丨圣丹斯最新获奖作品亮相上海</h1>
+                    <div class="meta">
+                        <span>导筒directube</span>
+                        <span>Mon, 27 Apr 2026 16:03:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef8a05c0b1d9bc6703c905?channel_id=68071d1b45e75b2ff0e165bc">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2drlEi28mTiM25vCxfUIXb9.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section><section><section><section style="color:rgb(0, 0, 0)"><p>今年，“一带一路”电影周以“万里同屏”为年度主题。这不仅是一次空间的连接，更是一场文化与情感的深度共振。我们让来自不同国度、不同文明的珍贵影像，突破地域与语言的边界，在此刻、此地，被同一块银幕承载，被同一束光点亮——让跨越万里的故事彼此对话，让多元的生命经验在光影中交织、共鸣。</p><p>自“一带一路”电影周创办以来，上海观众仿佛拥有了一扇光影窗口，得以透过银幕一窥丝路沿线各国独特影像风貌，感受多元鲜活的民族风情与深厚隽永的人文底蕴。所展映的诸多影片源自小众国别，平日里难得一见，银幕恰似文明纽带，持续串联丝路情谊，助力共建多元共生的人类文化共同体。</p><p>本届“一带一路”电影周入选佳作，大多入围洛迦诺、卡罗维发利、圣塞巴斯蒂安国际电影节等海内外顶级节展核心单元，兼具过硬品质与良好口碑。光影跨越山海，文明共鸣相通，电影作为跨越国界的通用艺术，始终在跨文化对话中发挥关键作用，成为中外人文交融、文明互学互鉴的重要桥梁。</p></section></section></section></section></section></section><p>本单元公布的首批片单如下：</p><section><section><section style="color:rgb(0, 0, 0)"><p><strong><span>亡命警探（2025）</span></strong></p><p><span style="color:rgb(169, 169, 169)">A LOOSE END</span></p><p><span style="color:rgb(169, 169, 169)">导演/Director：</span></p><p><span style="color:rgb(169, 169, 169)">丹尼尔·亨德尔/Daniel Hendler</span></p></section></section></section><section><p><span style="color:rgb(212, 174, 42)"><strong>看点：</strong></span></p><p><span style="color:rgb(212, 174, 42)"><strong>跨国逃亡遇温柔救赎，拉美诗意治愈人心</strong></span></p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3VhXBO4rYBMDd2dXI2VY91C.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgb(0, 0, 0)"><p>乌拉圭实力派影人丹尼尔·亨德尔跨界执导的温情新作，讲述阿根廷警察圣地亚哥被卷入一桩警务风波后，为躲避同僚追捕，越境逃往乌拉圭避难。身无分文、居无定所的他，凭借善良与机敏在异乡扎根，更邂逅了令他倾心的挚爱，开启一段充满暖意的新生之旅。这部糅合了浪漫喜剧、西部片、公路电影与警匪悬疑片等多种类型影片风格的佳作，荣获第73届圣塞巴斯蒂安国际电影节地平线单元特别提及奖项。导演以拉美电影特有的细腻笔触，将逃亡困境与人间温情巧妙融合，节奏舒缓治愈、情感真挚动人，也将乌拉圭南部海岸的绝美风光呈现给观众。主演塞尔吉奥·普里纳、皮拉尔·甘博亚表演自然质朴，把异乡漂泊的忐忑与心动刻画得入木三分。</p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1iG9nK3LY3h4KNWRmjJ8QO.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section style="color:rgb(0, 0, 0)"><p><strong><span>母鸡（2025）</span></strong></p><p><span style="color:rgb(169, 169, 169)">HEN</span></p><p><span style="color:rgb(169, 169, 169)">导演/Director：</span></p><p><span style="color:rgb(169, 169, 169)">乔治·巴勒菲/György Pálfi</span></p></section></section></section><section><p><span style="color:rgb(212, 174, 42)"><strong>看点：</strong></span></p><p><span style="color:rgb(212, 174, 42)"><strong>彪悍鸡生谱写生存寓言，怪诞幽默与诗意隐喻并存</strong></span></p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2cvkGP15j0JQ37cuyA3k8Zi6.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgb(0, 0, 0)"><p>以先锋影像风格享誉国际影坛的导演乔治·巴勒菲，推出了又一脑洞大开的奇幻寓言新作。影片讲述一只母鸡从养殖场成功“越狱”，在这片混乱的世界里找到一处安身立命角落的故事。它要适应鸡群中森严的等级秩序，要邂逅意外降临的爱情，更要不惜一切代价守护自己珍贵的蛋，提防贪婪的餐厅老板将它们连锅端走。作为2025年最受瞩目的欧洲独立电影之一，本片完全以真实动物拍摄，主角由八只来自匈牙利的真实母鸡扮演，全程未使用任何数字特效或AI技术，仅凭精湛的动物训练和摄影师的低角度镜头完成。导演以拟人化视角构建出充满黑色幽默的动物世界，将生存、抗争与温情巧妙融为一体，留下对当今世界的诸多隐喻及反讽。值得一提的是，曾在去年担任上海国际电影节主竞赛单元评审的希腊制片人萨纳西斯·卡拉萨诺斯，也是本片的制片之一。</p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4fOaP23PxZyf1xWp6naRjyR.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section style="color:rgb(0, 0, 0)"><p><strong><span>上帝不会帮忙（2025）</span></strong></p><p><span style="color:rgb(169, 169, 169)">GOD WILL NOT HELP</span></p><p><span style="color:rgb(169, 169, 169)">导演/Director：</span></p><p><span style="color:rgb(169, 169, 169)">哈娜·贾西克/Hana Jušić</span></p></section></section></section><section><p><span style="color:rgb(212, 174, 42)"><strong>看点：</strong></span></p><p><span style="color:rgb(212, 174, 42)"><strong>异乡女子闯入封闭荒原，以一己之力撼动古老秩序</strong></span></p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1zDE7VEyk87GXygh49R5Rx.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgb(0, 0, 0)"><p>在这部入围第78届洛迦诺电影节主竞赛单元的影片中，两位女主角凭借极具张力的表演，共同斩获金豹奖最佳表演奖。新锐女导演哈娜·贾西克在这部倾力打造的史诗剧情新作中，将故事背景置于二十世纪初的达尔马提亚内陆。智利女子特蕾莎闯入与世隔绝的游牧社群，自称是村长之弟的遗孀。面对语言不通的牧羊人家族，她的到来撼动了这片土地固有的秩序，却也为一群被父权压制已久的女性带来了自由与救赎的希望。影片以雄浑辽阔的地域风光为底色，镜头沉稳大气，将女性觉醒、族群秩序与时代洪流交织呈现。</p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1qXaSU2TwZC513dDyf4uCVxt.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section style="color:rgb(0, 0, 0)"><p><strong><span>破碎的声线（2025）</span></strong></p><p><span style="color:rgb(169, 169, 169)">BROKEN VOICES</span></p><p><span style="color:rgb(169, 169, 169)">导演/Director：</span></p><p><span style="color:rgb(169, 169, 169)">翁德雷·普罗瓦兹尼克/Ondřej Provazník</span></p></section></section></section><section><p><span style="color:rgb(212, 174, 42)"><strong>看点：</strong></span></p><p><span style="color:rgb(212, 174, 42)"><strong>根据真实丑闻改编，堪称年度令人窒息的欧洲惊悚佳作</strong></span></p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/b05Gq2W3zrA2sZmqF3BOWFP.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgb(0, 0, 0)"><p>本片是捷克新锐导演翁德雷·普罗瓦兹尼克执导的重磅心理剧。13岁的天才少女歌手卡罗利娜，成功入选世界著名的女童合唱团，她的出众天赋很快引起了威严的传奇指挥的格外注意。然而当团员间的嫉妒在合唱团里暗自发酵，纯洁的赞美诗背后开始弥漫起一股令人不安的气息。影片取材自震惊世界的“布拉格之子合唱团”真实丑闻，导演以极致克制、零煽情的镜头语言，撕开艺术光环下的权力阴影与纯真献祭。作为第59届卡罗维发利国际电影节的口碑爆款，影片全程张力紧绷，将人性黑暗与孩童脆弱描摹得淋漓尽致。</p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/314TfS3QgLt3pQCF23O6eea.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section style="color:rgb(0, 0, 0)"><p><strong><span>艾瑞丝的忧夏（2026）</span></strong></p><p><span style="color:rgb(169, 169, 169)">HOLD ONTO ME</span></p><p><span style="color:rgb(169, 169, 169)">导演/Director：</span></p><p><span style="color:rgb(169, 169, 169)">米尔西尼·阿里斯迪杜/Myrsini Aristidou</span></p></section></section></section><section><p><span style="color:rgb(212, 174, 42)"><strong>看点：</strong></span></p><p><span style="color:rgb(212, 174, 42)"><strong>地中海夏日治愈系亲情，缺席父女的温柔和解之旅</strong></span></p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3yYkwu2NRDUl3puH8q24iJ0x.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgb(0, 0, 0)"><p>夏日炎炎，11岁的少女艾瑞丝在街头肆意奔跑，突然得知多年未见的生父阿里斯为奔丧回到城中。母亲远行在外、哥哥缺席，她仿佛被全世界遗忘。带着一股不服输的倔强，她找到试图避世的父亲，一场始于固执的纠缠，缓缓展开成一段脆弱却动人的重逢。作为导演首部剧情长片，阿里斯迪杜以诗意克制的镜头，捕捉地中海夏日的慵懒光影，用极简叙事勾勒父女间笨拙又真挚的情感修复。本片一举拿下第42届圣丹斯电影节世界电影剧情片竞赛单元观众奖，缔造了塞浦路斯电影史上里程碑式的成就。</p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1hwRrHuMylf3RnJQU1f9zUB.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section style="color:rgb(0, 0, 0)"><p><strong><span>诈死（2025）</span></strong></p><p><span style="color:rgb(169, 169, 169)">DIYA</span></p><p><span style="color:rgb(169, 169, 169)">导演/Director：</span></p><p><span style="color:rgb(169, 169, 169)">阿希尔・罗纳伊穆/Achille Ronaimou</span></p></section></section></section><section><p><span style="color:rgb(212, 174, 42)"><strong>看点：</strong></span></p><p><span style="color:rgb(212, 174, 42)"><strong>来自撒哈拉边缘的惊悚黑马之作</strong></span></p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1O81yM2t8pkbT3GFZ4umzz9.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgb(0, 0, 0)"><p>非洲喧嚣街头，司机戴恩分神之间撞飞了一名放学回家的男孩。他将孩子送至医院，次日返回时却被告知男孩已死。死者家庭要求天价赔偿金。这是一笔他根本无力承担的血债，为此戴恩入狱、失业、婚姻破碎，在绝望的谷底追踪男孩母亲试图赎罪，却意外发现了一个足以颠覆一切的真相：几个月前被他“撞死”的孩子，还活着！作为近年非洲影坛最受瞩目的黑马，导演罗纳伊穆以冷峻凌厉的镜头语言，打造出一部节奏紧凑、张力十足的现实主义惊悚片。本片曾亮相瓦加杜古泛非电影节与多伦多国际电影节，收获诸多好评，是不容错过的非洲电影新声。</p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2pGB3527ZtOs1eMkN01f25I4.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section style="color:rgb(0, 0, 0)"><p><strong><span>配角（2026）</span></strong></p><p><span style="color:rgb(169, 169, 169)">SUPPORTING ROLE</span></p><p><span style="color:rgb(169, 169, 169)">导演/Director：</span></p><p><span style="color:rgb(169, 169, 169)">安娜·乌鲁沙泽/Ana Urushadze</span></p></section></section></section><section><p><span style="color:rgb(212, 174, 42)"><strong>看点：</strong></span></p><p><span style="color:rgb(212, 174, 42)"><strong>写意镜头解构明星陨落，直击当代人身份焦虑</strong></span></p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/14WGcm21D7fBmerFF1tHU2Z.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="color:rgb(0, 0, 0)"><p>格鲁吉亚天才女导演安娜·乌鲁沙泽继凭借《惊慌妈妈》斩获第70届洛迦诺电影节长片首作竞赛奖后，携全新力作《配角》惊艳回归。影片聚焦一位过气的格鲁吉亚影星，讲述了他在事业沉寂多年后参加了一位年轻女导演试镜的故事。这是他人生中第一次被要求饰演一个古怪而不讨喜的配角，习惯了扮演迷人英雄的他，愤然离去。然而被时代抛弃的他，不得不在即将谢幕的舞台上重新审视自己的职业、尊严与生命。安娜·乌鲁沙泽以标志性的写意镜头与漫游式叙事，剥离煽情，用极致克制的笔触，深刻审视演员在标签化体系下的职业困境与生命意义。在刚刚落幕的第16届北京国际电影节上，本片荣获“天坛奖”最佳音乐奖。</p></section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3aqyWX2wr2wh3Ft2ww271492.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2iB7HV1kvHiG3np7c8FwLCK.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section></section></section></section><section style="color:rgb(130, 0, 0)"><p><strong>注：如遇片目变动，请以实际排片为准。</strong></p></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 艺术电影-电影</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef8a05c0b1d9bc6703c905?channel_id=68071d1b45e75b2ff0e165bc">https://lingowhale.com/reader/web/69ef8a05c0b1d9bc6703c905?channel_id=68071d1b45e75b2ff0e165bc</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

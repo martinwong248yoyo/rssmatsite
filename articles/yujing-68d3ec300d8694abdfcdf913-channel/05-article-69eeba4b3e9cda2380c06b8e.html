@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>「你会陪着我，直到我死去吗？」</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 人间故事铺</div>
+                    <h1>「你会陪着我，直到我死去吗？」</h1>
+                    <div class="meta">
+                        <span>人物</span>
+                        <span>Mon, 27 Apr 2026 01:04:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eeba4b3e9cda2380c06b8e?channel_id=68d3ec300d8694abdfcdf913">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2PJUPs2KiDgg4fnC622N0EMu.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="font-weight:400;color:rgb(34, 34, 34)"><section><section style="color:rgb(62, 62, 62)"><section><p><span>她们是原本不太熟悉的两个女人。故事的开始，只是一个女人去帮另一个女人拍一组全家福。接着一次，两次，三次……她们都没有想到，这场拍摄被延续了下去。直至其中一个人死亡。</span></p><p><span>她们不是亲人，不是挚友，不是照护者和被照护者。不是关系保证了拍摄，而是拍摄本身，一点点生成了关系。</span></p><p><span>该如何描述她们的关系？我找不到恰当的词语。它打破了我对「亲密」的理解。不是单纯的陪伴，不仅是友谊，也不只是女性互助。而是一种在生死边缘形成的、几乎没有名称的关系。</span></p></section></section></section></section><p><span style="font-weight:bold">一位女性</span></p><p><span>她叫九儿。承德人，生在9月，能饮酒，于是大家都叫她九儿。</span></p><p><span>她是苦出身，很小的时候父母离异，跟着奶奶长大。她性格沉静，很像奶奶。十几岁，九儿便出来闯社会，大家都说，她很有灵性，后来接触翡翠生意，以眼光准著称。翡翠是高风险的生意，一块原石在切开之前，内部完全不可见，就像开盲盒，业内人都说，「一刀穷，一刀富，一刀披麻布」。</span></p><p><span>在云南的「赌石鬼市」，原石商们喜欢夜间交易，没有灯，大家凭着手电筒和眼睛来选石头，九儿对原石有特殊的直觉，几千块买的原石，切开之后价值十万甚至更高，九儿因此积累了第一桶金。</span></p><p><span>22岁那年，九儿有了自己的门店，做翡翠生意。那年，她认识了丈夫亦啸，他们因为买玉相识，亦啸比较闷，九儿活泼，两人一见如故，认识半年不到就结婚了，之后生下三个女儿，小名分别叫橘子、竹子、金子。</span></p><p><span>「九儿是一个什么样的人？」</span></p><p><span>「像黄蓉」。听到这个问题，亦啸几乎没有任何停顿地回答。他们是很幸福的一家人，在辽宁小城，住一套很大的复式，夫妇俩感情很好，各有各的生意打理。但就算再忙，这个家也常有吉他声，亦啸经常晚上给九儿弹吉他，偶尔，他们还会喝点小酒。</span></p><p><span>在这个家里，孩子们也是自由生长的。九儿从来不强迫孩子学习，也不主动给孩子报任何补习班，除非孩子自己要求。她曾对孩子们说：「将来即使一事无成也不必难过，没有世俗认同的成就的人是多数，你们活得有趣、平凡最好。」</span></p><p><span>如果没有癌症，日子或许会一直这么平顺下去。2019年，九儿36岁，确诊癌症，一家人全力寻求救治，去到北京手术，化疗。但一年多之后，癌细胞还是转移了。</span></p><p><span>朋友们都说，九儿很特别，「她确实不是一个普通的人，不是芸芸大众的那种」。</span></p><p><span>用东北话讲，九儿很有刚儿。癌痛得厉害时，枕头都被汗浸湿了，孩子在外屋敲小黑板玩过家家，再远处，窗外的小树林里，有人跳广场舞，音乐传过来，就像伯格曼电影里的画面，这面是痛，那面是生活，两者交织时，九儿很平静。</span></p><p><span>她不只平静，还幽默。化疗掉头发了，她说，「感觉上辈子就是个蒲公英」。长胖了，「是对生活过敏而导致的水肿」。术后淋巴清扫留下淋巴水肿，她的两只脚差距很大，一只35码，一只38码，她讲的是，「告诉你一个秘密，我其实是个天使，之所以留在人间，只是因为腿重」。看到丈夫忧伤的背影，她在笔记本上写：不要垂头丧气了，显矮。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4of0HJ4z14Wpnvam34mU2jH.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>九儿和丈夫</span></p><p><span style="font-weight:bold">另一位女性</span></p><p><span>她叫王乃功，70年代生人。在那座辽西小城，她不是什么传奇人物，甚至刻意躲着人群，待在一个不被注意的位置。</span></p><p><span>但她内心像是有团火，她形容小时候的自己，「像陀螺一样」。几个月大被送到托儿所，是照管阿姨「带过最难带的孩子」，因为她「嗷嗷不睡觉」。念小学时，王乃功迷上了跑步，早上5点钟就起床，去外头跑步，跑到6点多，回家用凉水洗把脸，吃点汤泡饭，奶奶说她，「这孩子天养活」。到学校她也不闲着，给大家开门，出黑板报，扫地擦地。同样出生在这个家庭里，姐姐就不跑步，活得很安逸，但她，「总是不安，总感觉时间不够用，每天都好像在抢，这个感受从生就带来」。</span></p><p><span>但外表看上去，她是一个安静的人。按部就班地结婚生子，做着一份普通职员的工作，每天按时上下班，不喜社交，在东北这片人均E人的土地上，王乃功是一个「白人儿」（方言，指单纯，不懂世故）。她喜欢文学，爱好摄影，结婚时，提的最重要的要求是：得有个书桌，她要写东西。丈夫老孙买了张两米多长的大桌子带回家。她当时眼睛就亮了，「1997年那时候，那个板台，在我们家房间里头得斜着摆」。</span></p><p><span>这张书桌陪伴了她近30年。她在这张书桌上怀着孕写一万多字的报告文学，在《辽宁日报》上整版刊登，也是这张书桌，见证了一位女性爱上摄影的全过程。</span></p><p><span>30岁那年，王乃功才有了第一台自己的相机——她是一个会冒着大雨送孩子去辅导班的妈妈，等孩子坐在课堂上，她在旁边等，身上往下滴水，「就像搁水里游出来似的」。她也是一位成天背着相机出去拍照的普通女性，这在那座小城并不多见。她又要上班又要带孩子还非要出去照相。长辈曾暗示她，要贤惠一些，不要「不务正业」，她不听，每到周末，她「自觉」地把家里都收拾干净，衣服洗好，饭做好，才出门摄影，「生怕我出去拍照落人话柄。」</span></p><p><span>一直以来，她都睡得很晚，因为只有安静的夜晚，她才有足够的时间学摄影，整理照片，「没有办法，你就是想维持自己。」</span></p><p><span>丈夫老孙曾经也是文艺青年，玩过理光相机，也想去海边流浪。婚后，他入世了。「没办法，一个家只能有一个人是这样的。」老孙说，「我缺少她的韧性，我欲望太多了。」</span></p><p><span>老孙很懂吃，哪家饭馆点什么菜，油扣鱼怎么煎可以煎得酥，他门儿清。他的心很细，带鱼会去掉两边的刺再夹给王乃功。在饭桌上，大家聊到吃，王乃功会很不好意思，她说自己是个乏味的人，老孙停下来纠正她，「别老是说自己乏味，你的精神世界可太不乏味了。」</span></p><p><span>这个家有五位成员，三个人类以及一猫一狗，狗送来时已经经历了三个家庭，还骨折了，王乃功抱了它一晚上，之后乖得不得了，取名「巴扎黑」。在这个家，三个人类都有共识，猫第一位，王乃功第二位，狗第三位，儿子第四，老孙是「五把手」。喝多了的时候，「五把手」老孙说过两次，「我这一生你就造吧，你造就完了」，王乃功一开始以为是拍照的照，后来才知道，原来是胡造的造。</span></p><p><span>儿子高三那年，王乃功跑去学校拍了一组照片，名叫《家有考生》，这组照片入选了第26届全国摄影艺术展览，在辽宁美术馆展出。那一年，王乃功44岁，她带着全家人去参观了这次展览，孩子也特别争气，考上了一所好大学，那也是第一次，她拍照这件事在长辈们眼里变成了「正经事儿」。</span></p><p><span>儿子上大学后，王乃功彻底转向纪实摄影和大画幅摄影，拍卖萝卜糖的老奶奶，拍摄傩戏表演者，冬天下大雪，夜里12点多，在雪里走一步都会陷进去，她出去拍走在夜路上的人。家里没有暗房，她就在卫生间里冲洗照片。</span></p><p><span>2019年，王乃功搬进了现在住的家。当初看上这套房子，是因为它有地下一层——46岁这一年，她终于有了自己的暗房。</span></p><p><span>那是一个只属于王乃功自己的世界——通往暗房的楼梯承载着这个家庭的影像记忆，两侧挂满了她的摄影作品，上面还贴着两句话：Home is where our story begins；never forget your hopes and dreams。暗房里头像个实验室，有不锈钢台面、水池，和大大小小整齐摆放的药水瓶。第一次进入她暗房的人，很容易联想到美剧《绝命毒师》。王乃功家里也有个内部梗，「可别得罪她，她会配药」。</span></p><p><span>她对暗房的一切无比熟悉，在全黑的环境里，走几步迈到哪，伸手会打开哪个水龙头，她心里了然。这里是她过去这些年夜晚待得最多的地方，也是她感受到最浓烈快乐的地方。暗房门口那几平米小空地，她曾因为一张片子冲洗出来效果很好，一个人在那里跳起了舞。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/46hIQn1hyhdV48kd724zoeFV.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>王乃功家通往暗房的楼梯</span><span style="color:rgb(136, 136, 136)">罗芊 摄</span></p><p><span style="font-weight:bold">全家福</span></p><p><span>在很长的一段时间里，王乃功和九儿顶多算认识，因为两人的丈夫是发小。在王乃功的印象里，九儿长得有些像周迅，小巧精致，说话语速慢慢的，声音有点儿烟嗓，聚会时酒品非常好，不论多少人，喝多久，状态都一个样，安静地笑。</span></p><p><span>九儿生病的消息，都是老孙带回来的。2019年，老孙告诉她，九儿得了癌症，晚期，在北京做的手术；一年后，老孙告诉她，「九儿癌症复发了」。没过多久，老孙又带回来一个新消息，九儿想找王乃功拍全家福，「用大机器拍」。</span></p><p><span>九儿说的大机器，是王乃功近十年来的摄影方向——大画幅摄影。这是一种传统的、操作复杂的纪实摄影方式，拍摄过程漫长，需要架设三脚架、组装好相机、在倒置的毛玻璃构图、对焦、测光、插暗板，这是个慢活。</span></p><p><span>在此之前，王乃功很少收到这样的邀约。她拍摄大画幅照片多是黑白胶片，在数码摄影如此快捷方便的当下，大画幅摄影的缓慢、黑白、繁琐，都显得有些不合时宜。但她还是应邀去到了九儿家里，她想看看九儿的状态，也熟悉一下九儿的家人和拍摄环境。</span></p><p><span>王乃功是一个安静的观察者，看到九儿头顶扎着个冲天辫，脸庞依然精致干净，只是左眼下眼睑处多了一个红色的小瘤子，应该是化疗后新长出来的，完全不是想象中癌症晚期患者骨瘦嶙峋、走不动路的样子。</span></p><p><span>心中的疑惑不忍问出口，趁男人们在聊天，她用手机偷偷搜了一下「癌症晚期」——在医疗概念中，只要癌细胞发生转移，就会被称为晚期，这是一个医学定义，许多癌症晚期患者刚开始会没什么症状，看起来和常人无异。</span></p><p><span>那天的一切看起来都很平淡，九儿寒暄了几句，招呼大家吃东西，然后就不怎么说话了，只是一袋接一袋吃着面前的零食。很久以后，王乃功才反应过来，那天的九儿只是在装作正常，通过不停吃零食证明自己胃口很好。但王乃功依旧注意到了一个瞬间，在给孩子们拍照时，她看到九儿坐在窗边，眼眶湿润了，把脸望向窗外，一会儿又把眼泪憋了回去。</span></p><p><span>经过商量，她们决定这组全家福的正式拍摄分成两部分，一部分在九儿家里拍，因为那里承载着九儿的家庭印记，另一部分在王乃功的摄影棚里拍，那里设备齐全，是摄影师熟悉的主场。</span></p><p><span>十天过后，先拍在九儿家的部分。一大清早，王乃功就在暗房上好底片，取下已经充好的各种电池，把外拍器材装箱：8×10机身、三个镜头、三个脚架、两盏影楼灯、两个柔光箱，还有测光表、冠布、快门线、放大镜、手电……经过两个多小时，终于装车。丈夫老孙也一同前往，打下手帮忙。</span></p><p><span>到九儿家时，他们全家已经整装等着她。夜里，从拍摄地返回的路上，王乃功心情沉郁，整座城市都暗了下来，只有广济寺塔的灯特别亮，900多年，古塔就这样沉默无声地伫立在那里。</span></p><p><span>一周后，在王乃功家里，九儿和亦啸带着3个孩子来了，在那个王乃功跳起舞的暗房门口，她为九儿拍摄了全家福。这场拍摄就此结束。但没想到，告别前，</span><span>九儿主动对王乃功说</span><span>：「嫂子，以后有时间的话也拍拍我吧？我想把和孩子们最后在一起的时光留下来。」</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/nyMyx40NF8H4B5O7t1UCkyS.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>王乃功为九儿拍摄的第一张全家福</span></p><p><span style="font-weight:bold">允许</span></p><p><span>6年前的初冬，两个本该告别的女人再一次被命运短暂地捏在了一起。她们的拍摄开始了，至于这场拍摄怎么拍，持续多久，什么时候停止，都是未知。</span></p><p><span>王乃功很坦诚，作为摄影师和创作者，她接到九儿的邀约，内心有一种兴奋，那是创作者遇到好题材的天然反应，「冥冥中我好像一直在等待，等待一个关于生命、关于死亡、关于家庭、关于女性的项目，现在它仿佛真的到来了。」</span></p><p><span>接着很快就是迷茫。这样一个题材，要怎么拍，她心里全是问题：九儿会是合适的拍摄对象吗？她家庭条件非常好，会不会不具备普遍性？面对九儿生命的倒计时，自己有勇气、有能力去承受这一趟注定悲伤的拍摄旅程吗？九儿和她的家人们会如何看待这场拍摄？他们只是想留下一些美好的回忆，还是愿意走得更深、更远？</span></p><p><span>甚至，关于拍摄方式她都陷入了怀疑。她想过拍纪录片，那样更有真实感和动态感。她也想过是否用自己使用了20多年的135相机，机器小巧而且非常适合家庭记录。</span></p><p><span>但最终，她还是选择了大画幅相机。纪录片往往需要一个「终点」，她不想将九儿的死亡作为一个作品的终点。135相机适合抓拍，被拍摄者有时并不知情自己被拍了，对一个癌症晚期患者而言，她觉得太残忍。</span></p><p><span>而大画幅，天然是「被看见的摄影」。它几乎不可能「顺手拍」，被拍摄者一定知情，这样一来，这场拍摄就不是窥探，不是猎取，而是和九儿的合作。而且大画幅很慢，拍摄慢，片子出来也慢，这样漫长的、具有仪式感的过程，王乃功觉得像是一场祈祷。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1uxpx12nubDr3ZFCUo1IgRvG.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>王乃功</span></p><p><span>拍摄头几个月，长达小半年时间，王乃功大约以周为单位去到九儿家。她很清楚自己的定位，她是一位拍摄者。她们之间的关系，也没有多么亲近。王乃功在九儿生命中，不承担照护职责，不参与家庭决策，不在生存系统里，她是九儿生命中，看似并不必要的存在。但九儿允许她留在这里。</span></p><p><span>九儿的家人也很支持这次拍摄，王乃功去拍摄的第一天，九儿的妈妈就给她煮了自己亲手包的馄饨，生怕她饿着。九儿的丈夫亦啸也很支持，觉得九儿有事情可干，才不会胡思乱想。拍摄繁琐，但王乃功从不觉得麻烦，至于这场拍摄最后会做成什么，她也不去想所谓的结果，九儿让她拍，她也想拍，那就这样一直拍。</span></p><p><span>如果将王乃功拍摄九儿的时光拉一条时间线，故事的前半段像是部闷片，没有什么波澜壮阔，起承转合，都是日常。王乃功一次又一次地去到九儿家里，陪她说话，去医院，或者是什么也不干，两个人就那么待着。九儿也依循着自己的生活节奏，该吃饭吃饭，该出门出门，东北停暖了，为了避寒，她还去海南住了两个月。</span></p><p><span>2021年5月，九儿从海南过冬回来，她们约着一起去拍春景。走过玉兰、山桃、柳树，九儿走着走着突然问，「嫂子，你怕死吗？」王乃功愣了一下，「怕，说不怕是假的，我还有好多事情没做呢，你呢？」</span></p><p><span>九儿说，她又怕，又不怕。对于必将到来的死亡，她很坦然。怕的是，怕不能见证和陪伴孩子们的成长，怕三个孩子没有了妈妈会受欺负，怕自己走了家人难过。人有牵挂才会痛。</span></p><p><span>那天，她们一边晒太阳，一边聊天，九儿说了很多不敢和家人说的话。她说，病友群里，昨天又走了一个。她还说，家人总宽她的心，想给她生的希望，但那些刻意压低声音说的话，母亲偷偷抹去的泪，九儿都看在眼里。这次癌症复发，家人本想瞒着她，可他们不知道，九儿久病成医，是家里最能看明白化验单的人。全家人为了不让彼此伤心，都在互相装没事，九儿也一起装，「他们费了这么多心思，我又能怎么办呢，演戏呗」。</span></p><p><span>夕阳西下，九儿长长舒了口气，她对王乃功说，「谢谢你，嫂子，今天轻松多了。」</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2sO94G3OiIeX10vZiGqOJx0.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="font-weight:bold">秘密</span></p><p><span>那次春游过后，两个女人有了一个更具体的计划，她们想把这些家庭影像做成一本相册，九儿可以在每张照片下面写下她的心情和寄语，可以悲伤，可以调侃，可以揶揄，也可以碎碎念。这是给孩子未来的礼物，每当捧起这本相册，就像接到了妈妈从远方打来的跨时空电话。这个计划，她们谁也没告诉，那是属于她们俩的秘密。</span></p><p><span>那段时间，王乃功每次都会连夜冲洗出当天的胶片。九儿会看到这些照片，然后为每张照片写下自己想说的话——</span></p><p><span>她写自己水肿的身体：春天来了，没有长成一朵花，却不小心长成了多肉；</span></p><p><span>她记录疼痛的感受：谁把我的觉睡了，我睡不着了，疼死了，莫不是我上辈子是盏路灯；</span></p><p><span>她调侃：生活给我那么多磨难，是不是就因为我是主角？</span></p><p><span>她想对孩子们说：宝贝，我只是提前去了另外一个世界为你们布置新家了，就如同你们还没来到这个世上的时候，我已经布置好了这个家。</span></p><p><span>因为这个新的计划，许多事情像是被按下了加速键。九儿的话变多了，每次拍摄完，她都会很期待，把自己对照片的感受记下来。九儿变得很期待王乃功的到来。她说，「如果你不来，我都不爱起床，我谁也不见，我觉得见谁都是浪费。」</span></p><p><span>不见面的日子，两个人时常微信聊天，聊的都是最普通平常的事，九儿会问王乃功，吃饭了吗，吃的啥？两个人互相转发网上的金句，女性的人生故事，好笑的段子，王乃功干活到后半夜会失眠，九儿马上转来一个音频文件，告诉她睡不着可以听听。</span></p><p><span>她们之间从来没有哪一刻，有谁说，我们是朋友了。很多事情都是自然地沉默地发生着。</span></p><p><span>在九儿还有胃口吃东西的日子，王乃功给她买过很多次好吃的。羊角蜜、大红枣、榴莲披萨、佛跳墙、酱塔板、金枪鱼寿司，都是九儿爱吃的。九儿曾开玩笑说，她在王乃功身上感受到了母爱。</span></p><p><span>可惜平淡温馨的日子没有维持太久。2021年深秋，九儿的状态开始越来越差。癌细胞吞噬着她，她开始不想见人，血液检查结果，全是代表异常的箭头，有一天，她在卫生间晕倒了。</span></p><p><span>亦啸打电话给王乃功，她立刻赶往医院。病床上，刚刚经过急救的九儿脸色苍白，她问王乃功，「你会陪着我，直到我死去吗？」王乃功找不到任何语言来回应这句话，她只是点头，然后再一次点头。那是2021年11月6日。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1x8ZhI1TCOg74sqcwB1o5ZWD.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>2021年年底，病床上的九儿</span></p><p><span>她们都知道，接下来的日子，不会太长了。九儿说想出去洗个澡，王乃功就带她去澡堂里洗了一次澡。那是九儿最后一次在外面洗浴，王乃功特意找了一位细心的搓澡大姐，姓刘，刘大姐用最柔最薄的澡巾，给九儿搓得很细致。</span></p><p><span>那时，每天拍摄完成后，王乃功都会做一些简单的记录，记录自己的心情，没有什么章法，都是最直给的感受。她必须写下来，若不写下来，好多情绪她不知道还有什么办法去纾解。一天，九儿的婆婆买了几件新衣服，九儿精神状态不错，套着婆婆的新裙子，扭着斗牛士的舞步走来走去，又顺手拿起孩子的头饰别在耳边，哈哈大笑，刚收住一阵，又爆发出另一阵大笑。一屋子人都坐在那儿笑，王乃功后来在日记里写：她笑，我笑，婆婆笑，妈妈笑，笑四个女人表里不一的悲伤。</span></p><p><span>九儿失去的东西越来越多。先是失去顺畅的排便。她开始怀念自己「该死的大肠」，怀念到吐出一个脏字，又因为自己说脏话感到内疚，王乃功立刻安慰九儿，「没关系，说了又怎样？说实话，我也想说。」九儿笑了，她们你一声我一声，声音越来越大，一直到喊，喊到气息不够，笑到流泪，心里却很痛快。</span></p><p><span>后来，九儿失去了她有力的嗓音。东北的残雪还没有完全融化，九儿发现自己在房间里喊人，可无论怎么使劲儿，就是出不来什么声音。</span></p><p><span>等到了来年4月，九儿开始失去胃口，失去清晰的记忆，如何止痛成为每天头等大事。九儿的生活里，大段大段的沉默。在这之前，她们已经准备好了九儿葬礼上要播放的视频，都是九儿自己选的照片和配乐，她还配了音：各位亲，这回我真的要走了，别伤感，这一生我无怨无悔，接下来你们都要好好的，我会想念你们的。</span></p><p><span>那段时间，像是有心灵感应，王乃功乱了神，刷牙时挤的是洗面奶，洗脸时用的却是牙膏。冰箱里九儿妈妈送她的馄饨就剩最后几个，她不舍得吃，怕吃完了会是什么不好的隐喻。拍摄九儿的整个过程，王乃功一直很克制，但那些天，她实在是忍不住，在夜里冲洗完照片后大哭了几次。</span></p><p><span>她还忽然想到，自己居然从来没有和九儿拥抱过。这两个内敛的人，此前做的最亲密的举动只是握过手。不能再等了，等九儿再一次睁眼时，王乃功提出要抱抱她，九儿微微点了点头。那个拥抱很轻，也很久。</span></p><p><span>死亡就像房间里一直亮着的一盏灯，所有人都知道，但没人敢看，直到这一天真正到来——2022年4月26日，九儿离开了，终年39岁。守灵时，王乃功给她拍了最后的生命肖像，这是她们当初的约定。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3tDkhW3r5AkA4mqMJ528gGEk.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>2022年4月26日，九儿最后的照片</span></p><p><span style="font-weight:bold">I Am Still With You</span></p><p><span>女性摄影师南·戈尔丁（Nan Goldin）是「私摄影」的标志性人物，她曾说，摄影是她的一双手，是去爱抚和触摸眼前的这个人——这句话也给了王乃功一种释放和宽慰。她说，自己从没想过，会有一个人，在自己即将离开世界的时候邀请她去拍摄，而且是用大机器拍，有这种认知的人很少，在九儿之前，她身边几乎没有。</span></p><p><span>九儿去世后，王乃功花了3个多月的时间，制作了九儿留给孩子们的礼物，那本计划中的家庭相册，她们提前起好了名字，就叫《和你在一起》。</span></p><p><span>这本相册一共139页，150多张照片，半个小时就能看完。相册封面是浅黄色的牛皮纸做的，上面写着「九儿」，旁边还写着：</span><span>无论我在哪里/终将以相顾无言的微笑回应你/永恒不变的心爱你/快乐/心安。</span><span>相册只印了500本，王乃功说，要送给那些真正记得九儿的、重要的人。</span></p><p><span>九儿还在的时候，她们也曾畅想过，这些照片是否有可能被更多人看到，九儿很明确地表示，自己并不希望被遗忘，她希望被更多人看见。王乃功把两年多来的照片一一整理，开始向各种影展、媒体投稿。她不敢抱什么希望，毕竟自己只是一个普通的摄影师，九儿也只是一个普通的女性。但她给自己定了一个时间线，九儿离开的这一年，王乃功49岁，她说，十年，接下来十年时间，她会带着对九儿的承诺，将这个作品有尊严地带去更大的世界。她愿意等，她说自己最大的天分就是能耐住性子。</span></p><p><span>九儿走后第二年，王乃功收到了平遥摄影展的邀约，这是对九儿的还愿展。九儿还在世时，曾说过有机会自己也想去平遥看展。所有人都很激动，大家开着九儿的车，带着锦州海边的狗尾巴草，一路开车去平遥布展。</span></p><p><span>在锦州，人们喜欢叫狗尾巴草「毛毛狗」，之所以带着「毛毛狗」去平遥，王乃功并没有赋予它什么了不得的意义。她只是记得，九儿还在的时候，她们一起去海边拍照，那时候九儿还能独自开车，她载着三个女儿，王乃功带了解暑的雪糕，九儿好久没吃雪糕了，拿了一根，慢慢把一整根雪糕都吃完了。还有一次，她们去海滨草场散步，九儿很开心，「阳光，真好！岁月，真好！不疼了，真好！大象腿，真好！有你，真好！活着，真好！ 」王乃功说她，「像个诗人」。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1UVI3X1nAEGT2NyEZE44IeFW.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>默默注视这一切的，除了锦州的海，还有海边的「毛毛狗」，王乃功就是想把这些「毛毛狗」放在九儿的照片旁边——人生如草芥，毛毛狗是最不值钱的，但是第二年春天，它又活了。</span></p><p><span>在平遥，展览开始前一天晚上，王乃功睡不着，下半夜，她跟着展馆保洁员溜进了展馆，带着香，点燃了开始和九儿说话。</span></p><p><span>也没讲什么特别的东西，就和从前一样，唠嗑，说说自己这一年的经历，「我就跟她讲，我虽然能力有限，但是尽力了。」唠完了王乃功也没有回去，就坐在展馆等，看光线一点点变亮。</span></p><p><span>这是九儿的照片第一次参展，展位不大，是长条形的，开展不到两小时，就挤满了人。桌上摆的一包抽纸，小半天就用完了，很多人哭得不成样子。王乃功准备了速溶咖啡，只要有人过来，每个人递一杯咖啡，一块焦糖饼干。没有人要求她做这些，但她知道，人们在这里走进九儿的故事，这里便是九儿的客厅，「九儿是很讲究的人，九儿她会善待每一个身边的人，我在替她做事」。</span></p><p><span>平遥摄影展过后，有好几个人建议王乃功，试试把这组作品投稿荷赛奖。那时候，王乃功并不懂这个奖项意味着什么，她上网查，查到荷赛获奖作品能够全世界巡展，她心动了。她不懂英语，但还是想方法填了表，把照片投递了出去。</span></p><p><span>荷赛奖，全称是世界新闻摄影大赛（World Press Photo Contest），因为发起于荷兰，被大家简称为荷赛奖，那是摄影界的殊荣，被称为「摄影界的普利策」。每年，全球分为六大地区评奖，像九儿这种长期摄影项目，每个地区只有唯一一位获奖者。</span></p><p><span>2024年农历春节期间，王乃功在父母家吃完饭，突然收到一封邮件，那是荷赛官方发来的获奖确认邮件。这组照片，王乃功送去参赛时依旧起名为「和你在一起」，在荷赛官网上，它被写作：I Am Still With You。</span></p><p><span>2024年4月，九儿离开整整两年后，这组照片获得了当年荷赛奖的亚洲长期项目奖。</span></p><p><span>后来，荷赛官网显示，当年的获奖作品是从来自130个国家3851名摄影师的61062份参赛作品中选出，评审团被这个充满感情的项目所感动——「它描绘了一位母亲勇敢地决定与摄影师分享她的日常生活，为她的家人留下了永恒的记忆。它挑战了刻板印象，突出了人与人之间亲密联系的持久性，为人们提供了一个难得的中国家庭生活的一瞥。这些亲切、人性化的肖像传达了爱、自豪和面对死亡时的坦然」。</span></p><p><span>王乃功去荷兰领奖。飞往阿姆斯特丹的飞机上，她再次听起了张行的那首《一条路》。这是她的「人生歌曲」，上一次在飞机上听还是她到珠海探望自己的摄影老师纪永强先生，她说，这首歌唱出了她过去很多年的人生感受，她感觉自己好像一直独行在某一条路上，后来，她遇到九儿，送别九儿，她依旧独行在那条路上，只是这一次，她是带着九儿一起——</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">一条路</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">落叶无迹</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">走过我</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">走过你</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">我想问你的足迹</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">山无言水无语</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">走过春天</span></p><p><span style="font-style:italic;color:rgb(136, 136, 136)">走过四季</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">走过春天</span></p><p><span style="font-style:italic;color:rgb(136, 136, 136)">走过我自己</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">……</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4Dbvb2FFZDUx56Fq1shg1X.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="font-weight:bold">没有名称的关系</span></p><p><span>去年年底，我收到了一本书，书名叫《照见》，这是九儿这组照片的摄影手记，里面收录了140张九儿的照片，以及王乃功写下的，那几年的心路历程——九儿走后第三年，她们终于有了属于她们的，正式出版的书籍。</span></p><p><span>广西师范大学出版社的图书编辑陈凌云说，当他们看到这个故事，15分钟之内就决定要做成一本书。这个故事最打动他们编辑部的，不是荷赛奖，而是关系，是「普通人的勇气」。王乃功是普通人，九儿也是普通人，两个普通女人相遇，一个记录，一个表达，散发出了普通人身上很高贵的东西。</span></p><p><span>我同样被这种「关系」打动，该如何描述这组关系？我找不到恰当的词语。它打破了我对「亲密」的理解。不是单纯的陪伴，不仅是友谊，也不只是女性互助，而是一种在生死边缘形成的、几乎没有名称的关系。</span></p><p><span>我去到锦州，为了能够书写这种关系。</span></p><p><span>火车到达是个傍晚，王乃功第一站就带我去了海边。《照见》的封面照片是在这里拍的，九儿照片每次展览用到的毛毛狗也来自这里。海对于锦州人而言是特殊的存在，夏天踏浪，冬天看海冰，当地人说，锦州的海冰是「支楞巴翘」的，很倔强，很有性格。王乃功也说，锦州的海冰很漂亮，她顿了一下，然后说，不是漂亮，是壮阔。</span></p><p><span>那天风很大，空气清冷干燥，一颗又大又圆的月亮高高地悬在天上，四下无人，我们没有说话，看了会儿月亮，任凭海风吹过。九儿离开三年多，海边也发生了许多变化，从前阔阔的草地被围栏圈起来，旁边有施工的痕迹，只有毛毛狗还是老样子，冬天枯黄，春天再绿。</span></p><p><span>接下来的几天，不擅长社交的王乃功联系了几位九儿的朋友，我们一起交谈，吃饭，王乃功此前和九儿的朋友们并不熟悉，只是告别式见过一次，这是第二次。</span></p><p><span>说起九儿，我们不像在谈论一个逝去的人，而是像在谈论一个去了远方的朋友。我试图通过这些讲述去拼凑九儿的过往，王乃功也同样对九儿充满了好奇——尽管陪伴九儿经历生死，但她们的交流始终保持着一种边界，九儿不主动讲起的，王乃功绝不开口去问。因此，朋友们的讲述，也让王乃功走近了那个她还没来得及了解的九儿。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2a3Whl4bHq2V1z432qnfqyt.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>玲因为一个偶然的聚会和九儿相识，她们性格很投缘，逐渐成为好友。玲眼中的九儿，是很素净的，不咋呼，几乎从不发脾气，也不将自己局限在家长里短中。在九儿手机里，玲也是和九儿合影最多的人。外人看来，她们的人生阶段很不一样，九儿有三个孩子，玲是丁克，玲说，这么多年，从来没听九儿叨叨过夫妻关系、婆媳关系这些话题。</span></p><p><span>玲和九儿在一起很快意，谁得了一瓶好的红酒，「咱俩找个地方喝了呗」。如果玲有什么不开心的事，给九儿打电话，约她出来吃吃饭，「你说她就听，也会帮你分析，你要不说她也不问，就静静地陪着你」。</span></p><p><span>小螃蟹也是九儿的好朋友，这个外号还是九儿起的，因为拍照时她总是比两个耶在头顶上像螃蟹，她和九儿相识相知15年。</span></p><p><span>我们见面之前的那个晚上，小螃蟹想了很多很多，这15年里，小螃蟹和九儿有太多回忆，她说，「我们俩的故事很长又很短，因为还没经历够就结束了。」说着，小螃蟹打开手机，放了一首歌，她说，这首歌唱出了她心中的九儿。那是电视剧《人世间》的主题曲，「草木会发芽，孩子会长大，岁月的列车不为谁停下，命运的站台，悲欢离合都是刹那，人像雪花一样飞很高，也融化……」整首歌4分13秒，我们静静地听完，屋子里只有轻轻的啜泣声。</span></p><p><span>歌放完了，有几秒的安静。小螃蟹说，直到今天，她有时候喝酒，都会倒一杯给九儿，想念九儿时，她就会听这首《人世间》，她最喜欢这首歌的最后几句，「我们像种子一样一生向阳」，她说，那是九儿想要活成的样子。</span></p><p><span>九儿的朋友很多，这是王乃功从未有过的人生体验。她形容自己的过往人生，像独脚大盗，「挺孤独的其实」。她没有要好的朋友，说话最多的人是丈夫老孙，但她也不认为老孙能真的了解她的内心世界。九儿还在的时候，她们一起整理告别式的照片，王乃功看到九儿手机里各种和闺蜜脸贴在一起的自拍合影，她会好奇地问九儿，「像你们都有闺蜜的感觉是啥样啊？」</span></p><p><span>但在九儿生命的末期，她最亲近、最依赖的人，是王乃功。很多话，她只和王乃功说，她们不是亲姐妹，不是家人，也不是互相陪伴多年的挚友，可能正因如此，九儿面对王乃功时也很真实，很放松，没有那么多亏欠感和顾虑。在死亡即将到来的时候，王乃功成了一个可以承载九儿恐惧、犹豫、死亡想象的人。</span></p><p><span>九儿最后的嘱托也只告诉了王乃功一个人：一旦出现状况，放弃有创治疗，包括有创抢救。她还特别嘱咐，万一丈夫亦啸悲伤过度，坚持抢救，一定要制止。她想平静、温和、有尊严地离开。她说，她希望往生后的妆容由大女儿橘子来化。</span></p><p><span>九儿走后，亦啸专门问王乃功，是否要让孩子去殡仪馆见妈妈最后一面？王乃功给了他确定的答案，孩子们去殡仪馆与妈妈完成了郑重的告别，大女儿橘子为妈妈化了最后一次妆。</span></p><p><span>九儿去世后，王乃功内心一度很纠结，她很害怕自己的讲述变成对九儿的占有，她也会犹疑，自己是否有权继续把九儿带向世界？但亦啸很支持她，他去过九儿照片的展览现场，看着那些照片，心里是一种「疼过的感觉」，看到九儿被那么多人看见、记住，他感到欣慰，「能被看到，能够真的感动哪怕是一个人，这劲儿都没白费」。</span></p><p><span>这两年，九儿的照片被越来越多人看见。从荷兰到英国、德国、加拿大、西班牙、澳大利亚、意大利……在一些特别展里，九儿的照片和猫王、曼德拉的放在了一起。</span></p><p><span>但王乃功对于九儿的一切依旧保持着一种审慎。这是活着的人为逝者承担的责任。她愿意接受媒体的报道，希望九儿被更多人看见，同时又对报道的细节感到不安。她很在意，所有的叙述是否真实，是否能传递九儿真正想传递的东西。</span></p><p><span>我们再次聊起她去荷兰领奖的经历，王乃功说，她知道自己只是替九儿站在那里，阿姆斯特丹古老的教堂里，大提琴声响起，一切都很庄严，她抬头往上看了看，她相信，九儿应该也在见证这一切。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1O3p2p2SqE5Z3TusHJ2LA2Dm.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>《九儿》摄影手记</span><span>《照见》</span></p><p><span style="font-weight:bold">「连起来了」</span></p><p><span>烧烤店二楼包间的圆桌旁坐满了人，饭桌上，大家剥蒜，喝酒，聊笔架山那边涨潮了，现在狗虾正肥正是时候，羊肉串、鸡胗、螃蟹一盘盘端上来，王乃功是饭桌上最安静的人，抱着她的小狗巴扎黑，很早就吃饱了。</span></p><p><span>在这座小城里，她还是一个每天上班的普通职员，睡很晚，夜里通常在处理照片。小城里，并没有多少人关心一个万里之外的摄影奖项。在所谓的当地摄影圈里，她还是一个普通的爱好者，一个站在边缘的人。</span></p><p><span>她仍不愿意将摄影这件事多么神圣化，就是一个独来独往惯了的女性，找到了一件愿意一直做的事而已。她称之为「出口」。偶尔有人说起获奖的事，说起她带着九儿的照片去了那么多地方，她的回答也很简单，「我想，我对自己，对九儿，都有了相应的交代」。</span></p><p><span>但一些变化也真实地发生了。</span></p><p><span>王乃功不是一个很会表达情感的人。梦到九儿了，正好开海，她想，九儿肯定惦记孩子，买了螃蟹煮好给孩子们送过去。从前她并不爱花，觉得买花还不如买两张底片，但九儿喜欢花。不知道是不是给九儿买花买习惯了，九儿走后，她的案头也常常放着一束百合。</span></p><p><span>她开始信「命」。关于这几年发生的事，她总能捕捉到很多巧合，用以证明，这是九儿的力量。平遥摄影展，帮忙布展的朋友叫三伟，平遥方的对接人叫三元，布展做背景墙的供应商叫三疯，「三伟三疯三元，三三得九，和九儿多有缘」。荷赛奖官宣期间正值清明。《照见》下印厂的时间被推后了好几次，最后真正印刷的那天，是中元节。这些巧合都让她感念，这一定是命运暗示。九儿一直陪着她呢。</span></p><p><span>从前，王乃功和父亲关系有些紧张。俩人都倔，最长的时候半年不说话。经历过这次死亡练习，王乃功变了，开始学会和父亲找时间相处，接退休返聘的父亲下班，给他买澡票，聊父亲心底深处的愿望。去年6月，老头有一天来电，说自己洗了一个最贵的澡，用的她买的澡票，「太好了太舒服了」。几个月后，王乃功的父亲去世。她内心感谢九儿，是九儿教会她，想到就要去做，不要等明天。</span></p><p><span>辽宁之行，我见到了亦啸，见到老孙，见到王乃功以及九儿的好朋友们。东北人如此热情，和我单独聊完，大家还会组织一起吃饭。本以为热闹的饭桌上，大家不会谈起九儿，但九儿就是那样自然地出现在每一个饭局里。是啊，大家因为她才坐在这里。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4rSo881Wg7nR3ldrOc3ISKKN.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>亦啸和三个女儿</span></p><p><span>亦啸的话很少，很多对九儿的想念，藏在他的行动里。想九儿的时候，他会给她发微信，给她拍她登上了报纸。提醒她，6月11日，今天是他们的结婚纪念日。给她写诗。给她拍孩子学会了洗碗。有时候，还给她打视频，只是没有人接。</span></p><p><span>孩子们都在长大。大女儿橘子还记得，妈妈生前最后一张自拍，是特意到她房间里和她一起拍的，那张照片虽然不是最好看的一张，但却是她一闭上眼就能想到的。橘子已经18岁了，成年礼那天，她发了一张小时候过生日和妈妈的合影，18岁的愿望，她许的是，永远幸福。</span></p><p><span>二女儿竹子，印象里从未对妈妈说过「我爱你」。九儿走后的日子，竹子断断续续给妈妈写了许多信，「你会看见吗？我想应该会的吧，不知道你现在怎么样。许多的事挺遗憾的。人来人往，又想你了，妈妈。」</span></p><p><span>最小的女儿金子，是九儿最放心不下的孩子，九儿刚走那会儿，她在殡仪馆问姥姥，妈妈去哪了？妈妈还回来吗？现在，她知道，妈妈不会再回来了，和妈妈唠嗑的多肉也死了，她开始变得懂事，小时候调皮，不小心把零花钱打赏给主播，现在她看到衣服很贵转身就走，说不喜欢。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/NBkBjENme3qLZQN3WI0F1.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>九儿和三个女儿</span></p><p><span>九儿的好朋友小伟，在饭桌上说起九儿的过往，忍不住哭了，一边擦眼泪一边说，不能哭，大家聚在一起，痛哭流涕不是九儿想要的。九儿还看着呢，不能哭。</span></p><p><span>亦啸和老孙都喝了酒，亦啸说到，今年是他和老孙认识的45周年。小学时，他俩就在一起玩，亦啸给老师写了首小诗，老孙就用毛笔字誊一遍。两个男人的友谊，现在延续到两个女人的羁绊，「两家都连起来了」，亦啸说。</span></p><p><span>九儿和王乃功也曾经聊过，会不会有一天，因为这组作品，她们合二为一，就像一个人一样——前不久在北京展览，这种情况真的出现了，布展那天，北京和艺术馆的艺术总监在展厅里大喊：「九儿，九儿在哪呢？」王乃功小跑过去，没有人意识到有什么不对劲。那一刻，她们俩真的合二为一了。<img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3GVTfy2kjsoxbiP0d2TEcwp.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/29B2Qk2P8Z4b2lNXFIYAqjj.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span>拍摄中的王乃功和九儿</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 人间故事铺</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eeba4b3e9cda2380c06b8e?channel_id=68d3ec300d8694abdfcdf913">https://lingowhale.com/reader/web/69eeba4b3e9cda2380c06b8e?channel_id=68d3ec300d8694abdfcdf913</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

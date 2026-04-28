@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>张家齐：走下跳台，我又一次对自己下手了</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 人间故事铺</div>
+                    <h1>张家齐：走下跳台，我又一次对自己下手了</h1>
+                    <div class="meta">
+                        <span>人物</span>
+                        <span>Sat, 25 Apr 2026 02:00:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ec278af3575d3aff1c4503?channel_id=68d3ec300d8694abdfcdf913">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p style="color:rgba(0, 0, 0, 0.9);font-weight:400"><strong><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4Lm572uaMeXjjwzqpv0d8.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></strong></p><section style="font-weight:400;color:rgb(34, 34, 34)"><section><section style="color:rgb(62, 62, 62)"><section><section><p><span>2025年12月，张家齐正式退役。做运动员的时候，野心很直白，就是想赢，想拿奥运冠军。她经历了非常残酷的竞争，度过了发育之苦，也曾做了3年替补队员，为跳水付出了自己的所有。她收获了奥运冠军，也可以问心无愧地表态——「我是一名优秀的运动员，在跳台上，我拿出了我能拿出的全部，我也部分实现了自己的野心。」</span></p><p><span>走下跳台，她自由了，终于可以解放身上的一些枷锁，不管是自己锁起来的，还是跳水给她的。她不想一直待在体育圈里，想去体验很多东西，她计划学习跳舞，学习骑马，今年还要去学开车。因为，「让自己的技能更多一点，那样人生才好玩」。</span></p><p><span>她去录综艺、尝试直播带货，尽管新的困难一个接一个，她也勇敢面对，因为，她早就学会了对自己狠一点，要在别人下手之前，自己先对自己下手。她希望通过自己的努力赚钱，自己决定自己的人生，对于未来，她也有了新的野心——要成为一个独立的人，一个自由的女性。</span></p><p><span>以下，是张家齐的讲述——</span></p></section></section></section></section></section><p>【视频】跳转到原文查看</p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">大家好，我是张家齐。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">21岁之前，我是一名跳水运动员。做运动员的时候，野心很直白，就是想赢，想拿奥运冠军。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">我最有野心的时候，大概是14岁，刚刚参加世界级比赛，就拿到了那年两站跳水世界杯的四枚金牌。当时，我觉得自己未来会一直这么赢下去。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">但几个月后，我的身体就进入了发育期，变得越来越沉重。站在十米台上，用比之前大两倍的劲儿，翻过来都很吃力。我只能苛刻地控制体重，不断跑步、减肥，压制自己的天性和欲望，尤其是食欲。发育期我经常一天只吃一顿饭，每天都很饿，饿得不行了吃一点，但基本上都是硬扛。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">女子十米跳台是世界上最残酷的竞技项目之一，教练很早就告诉我们，女台选手的更新换代很快，每两年就会出来一个新人，这是一个规律。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">发育期那几年我过得很煎熬，我记得我做过一个梦，梦到207c这个动作，总是很慌张，三周半只转了三周，身体就打开了，然后摔了下去。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">我有时候也想逃，不想跳了。但我知道，如果我想继续再拼一把，除了直面、硬跳，没有更好的方法。因为站在十米台的，只有你自己，只有自己帮自己。躲肯定是躲不掉的。我们发烧，来例假也会遇到比赛，怎么办？要不你就弃权，要不你就只能跳。机会都是经过激烈的竞争，自己争取来的，如果弃权，这个机会就只能给别人了。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">我有时候会用最极端的方法想，它能不能整死我，如果整不死我，那应该就没有问题，跳呗。毕竟竞技体育本身就是挑战人体和人类的极限，挑战极限，没有什么东西可以绕弯。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">但不管跳了多少年，站在十米台上我也还是会害怕。跳水就是一直在面对让自己害怕的东西，害怕这个高度，害怕难点动作，害怕跳不好会被教练和领队说。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">为了克服这种害怕，我想过一个办法。我之前很害怕蜘蛛这些爬虫，有一次我特意找了个爬虫馆去摸了一下，这些东西放在手上，是一个非常不一样的体验。你害怕的东西，你能忍受放在你的手上，或者你主动去摸它，这是对自己的一种掌控。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">就这样，我度过了发育期，参加了东京奥运会，也拿下了双人十米跳台的奥运金牌。</span></p><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2dz1H3V05XU3eu7Ik3Uyi6W.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span>2020年东京奥运会张家齐（左）和陈芋汐（右）夺金</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">东京奥运会结束之后，可能也是觉得作为运动员的任务完成了，我有了一种强烈的愿望，我想过一种更自由，更丰富的生活。我想自己掌控自己的人生。但后来的事大家都知道了，国家队依然有新的任务需要我去完成，作为巴黎奥运会的替补运动员，我又回到了国家队训练，练到队友们准备出发去巴黎的前一刻。然后，她们去了巴黎，我回到了北京队。这之后，我又代表北京队参加了一届全运会。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">去年12月，我正式退役，跳水的一切，都结束了。我终于自由了，终于可以解放身上的一些枷锁，不管是我自己锁起来的，还是跳水给我的。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">其实退役后，我用了一段时间来找回自信。毕竟从小在一个有点打压式的环境下成长起来，父母对我会有很多要求，为人处事上要有礼貌，谈恋爱要找有责任心的，学业上训练上要听教练的话。在运动队，我需要配合集体 ，需要懂事、识大体，为了动作做到最好，教练还会一直挑你的毛病，很少会肯定你。而且在国家队，大家的成绩都很亮眼，天才太多了，很难建立自我认同。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">但现在，经过了一段时间，重新回顾自己的成绩，拿到的荣誉，我觉得我还挺厉害的，慢慢树立了自己还不错的心态，也开始欣赏自己。我是世界冠军，全世界都认可我了，我为什么不认可我自己？现在，我可以非常肯定地说，我是一名优秀的运动员，在跳台上，我拿出了我能拿出的全部，我也部分实现了自己的野心，我问心无愧。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">刚退役的生活的确很快乐，很新鲜，不再紧张，没有压力。跟朋友一起出去露营，一起玩密室，认识了跳水之外的朋友。第一次做了美甲，剪了新的发型。之前和朋友出去玩，吃什么都要犹豫，现在也完全没有顾虑。但一段时间之后，我发现，外面的世界真的好大，好空旷，很陌生。为人处事、和人交流，感觉都要重新学习，比起同龄人，我接触社会晚很多。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">以前生活的细节都被队里包办好了，不需要自己动脑子。办护照，队里会直接联系好，我们去拍个照，摁个指纹就可以。学校需要什么证明，跟队里说一声，队里开好就会寄过来。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">但退役后要自己去办身份证，自己去预约。学校有很多资料也要自己去查，包括怎么选课，开各种证明，要自己去跑找人签字。出去玩，也要自己订票，自己去景区买票。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">一开始，面对这些生活的细节，我有点恐慌，不知道怎么弄。我的社会阅历太少了，有些要求和要准备的东西，我看都看不懂。我一度变得有点社恐，我小的时候不这样，以前非常的E人和开放。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">但后面我觉得，我要在这个世界上生活，早晚都要学会这些，早学总比晚学好。学这些，也有一种好的体验，从一点点小事堆起来，我好像也在一点点掌控自己的人生。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">退役之后，我也要面临重新找工作的状况。我不想一直呆在体育圈里。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">大部分时候，运动员的出路要不就去进修，要不就继续学，要不就变成教练或者坐办公室的人。但我不想一直都在一条线上走。我看别人都会说很多国家的语言，做过很多份工作，跨度都特别大，我就想，我为什么从始至终只会跳水这一件事啊？我也有很多东西想去体验，</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">我想学学跳舞，也想学骑马。今年我要去学开车。我想让自己的技能更多一点，那样人生才好玩。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">当然，我也需要去努力赚钱，养活自己。我去参加了综艺，也做了一段时间直播带货。这些对我来说都是新的东西。我原来不知道直播背后要付出这么多。第一次尝试，内心当然会有一点惶恐和害怕。刚开始面对镜头，我也挺紧张的。但总得先试试嘛，先勇敢迈出第一步。毕竟很多事情再难，也没有跳水难。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">直播的工作强度很大，有一次连着两场直播，晚上8点到12点一场，第二天早上10点又一场。还有一次发烧的时候直播，工作人员说要不要休息一下，我说不用，以前发烧还要在水里跳动作都可以，比赛也ok。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">这也要感谢跳水带给我的毅力。我很早就学会了对自己狠一点。因为我发现，自己对自己不狠的话，会有人对你狠的。命运不会放过你的，人生该吃的苦一个都不会少吃。所以，我要在别人下手之前，自己先对自己下手，这样接受起来会容易点。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">我也看到有一些不好的言论，说我直播是什么天才的陨落，捞钱。但我不太会在意。直播现在是一个很主流的行业，也有很多优秀的人在这个行业里工作，更何况我是靠自己劳动来赚钱，那些言论，都是别人要给我上枷锁，我自己做得又没有错，为什么要因为别人的一些错误认知和言论来否定自己。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">做直播虽然我目前的销量还比较少，还没有特别大的成就感，但是我已经觉得自己很厉害了，我在通过自己的努力赚钱。不管我数据好不好，只要开播，我都会有钱赚。毕竟对于任何一个女性来说，经济自由才是最大的自由。</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1n5e6A3fmkCc3Bc0X63EEqUe.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">一个月前，我又做了一个决定，一个人从北京搬到了上海定居。之前在北京住了21年，有点腻，想换一个新的环境住一下试试。我搬家很快，离开北京，只带了两个行李箱。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">我又体验到了一种更新的自由。一个人住想干啥干啥，想咋躺咋躺。以前在队里，早上5点50就得起床，去赶6点或6点10分的班车。现在早上醒来，脑海中第一个念头是，吃点啥。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">当然，自由是有代价的，可能会有点孤独，房间里只有我一个人，想找人说话或者找人玩的时候，发现身边没有人。但我现在不怕这些代价，来之前我就有心理准备，我会经历这种孤独，我也知道我可以解决。我养了一只猫，也在交新的朋友。养猫要给它换粮、换水，陪它玩一玩，给它喂小零食。这些小事，让我觉得生活在一点点变得充实。</span></p><p><span style="color:rgba(0, 0, 0, 0.9);font-weight:400">前段时间有天凌晨，小猫突然生病，我看它实在太难受了，就打车带它去了医院。那是我第一次一个人带宠物看病，这之前，我连自己看病都没有一个人过。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">新的生活就是这样，一个又一个的困难出现，然后我去解决，解决好了，我就觉得自己真棒，真厉害，我又进步了。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">这就是我现在的生活，一个普通的、21岁女孩的生活，好像听起来没什么野心。其实现在对于未来要做什么，我还没有明确的想法，都只是在尝试，毕竟新的人生才刚刚开始。但我的目标也在一点点变得清晰，我想成为一个独立的人，一个自由的女性。我想自己决定自己的生活——对于一个21岁才走出运动队，开始接触真实社会的女孩来说，这就是我最大的野心。</span></p><p><span style="font-weight:400;color:rgba(0, 0, 0, 0.9)">有句话已经被说烂了，妈妈，人生是旷野，这就是我现在想追求的，和所有普通的努力生活的女孩一样，自己挣钱养活自己，自己掌控和主导自己的人生，拥有一个更健全、独立和丰富的人格。我是张家齐，谢谢大家。<img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2QzTVg2GHhNC4aIs6O4DmSAu.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/26fMHf1MkFM73ZsTJlysou3.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" />
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 人间故事铺</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ec278af3575d3aff1c4503?channel_id=68d3ec300d8694abdfcdf913">https://lingowhale.com/reader/web/69ec278af3575d3aff1c4503?channel_id=68d3ec300d8694abdfcdf913</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

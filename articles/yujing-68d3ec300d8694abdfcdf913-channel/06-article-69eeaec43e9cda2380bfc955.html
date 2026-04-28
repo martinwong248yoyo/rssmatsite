@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>《我在故宫修文物》导演叶君：“笨小孩”与他的孤独宇宙|逝者</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 人间故事铺</div>
+                    <h1>《我在故宫修文物》导演叶君：“笨小孩”与他的孤独宇宙|逝者</h1>
+                    <div class="meta">
+                        <span>剥洋葱people</span>
+                        <span>Mon, 27 Apr 2026 00:26:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eeaec43e9cda2380bfc955?channel_id=68d3ec300d8694abdfcdf913">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3Jacq32w0Zlx3V90Ly3eL5IY.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><strong><strong><span><span style="color:rgb(122, 68, 66);font-weight:bold"><span>在朋友们眼中，把自己称为“笨小孩”的叶君执拗但自洽地，活在自己创造的、每日都在膨胀的孤独宇宙中。</span></span></span></strong></strong></p><p><span style="color:rgb(51, 51, 51)">“拍完我在故宫修文物，这些年我在做什么？”叶君在视频号里介绍自己，开始不间断地分享了一共1759条视频，包括他的各种所思所想与随手拍。在视频里，一段十分钟的路程，叶君可以走上半小时，花时间观察阳光在树叶上的反射，蹲下来拍掉落在马路上的一次性手套。这导致约了人吃饭，他常常最后一个到场。</span></p><p><span style="color:rgb(51, 51, 51)">叶君带着好奇与谦卑观察周围习以为常的一切，他曾列过一个信手拈来可以拍摄的选题清单，包括“麦田里的宋朝古代超级工程、景德镇大运河和基建狂魔、跳动的猪杂、好大一只蜗牛、广州地名为什么有很多动物……”</span></p><p><span style="color:rgb(51, 51, 51)">在长视频平台刚刚兴起的2015年，叶君执导了《我在故宫修文物》，后又参与编导《如果国宝会说话》。这个系列纪录片堪称现象级火爆，影响了很多人对于传统文化的观念。</span></p><p><span style="color:rgb(51, 51, 51)">但辉煌停留在十年前。那之后，叶君不再有令人瞩目的作品推出。他不愿意“在烂项目里赚生活费”，只能偶尔接一些策划、顾问的工作维持生活。</span></p><p><span style="color:rgb(51, 51, 51)">在朋友们眼中，把自己称为“笨小孩”的叶君执拗但自洽地，活在自己创造的、每日都在膨胀的孤独宇宙中。</span></p><p><span style="color:rgb(51, 51, 51)">急性胃出血时，叶君独自租住在武汉，因错过最佳抢救时机，于2026年4月18日不幸去世，终年43岁。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2aTg8m2cfDGr3r4zn948N95T.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><section style="font-weight:400;color:rgb(0, 0, 0)"><section style="color:rgb(0, 0, 0);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/wbRgB2F9mFbFBGqt2NfVJh.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(0, 0, 0);font-weight:400"><strong><span style="color:rgb(122, 68, 66);font-weight:bold">“你先颠覆了你的剪辑思路，再来和我对话”</span></strong></p><p><strong><span style="color:rgb(51, 51, 51)"><span>思维活跃，“一般人接不住”，对认定的事有些固执。这是叶君学生时代留给朋友们的印象。</span></span></strong></p></section><p><span style="color:rgb(51, 51, 51)">叶君1983年出生在湖北大冶市叶家坝村，他还有两个妹妹，父母靠卖菜为生。2002年高考，叶君以黄石市文科状元的身份考入清华大学新闻学院。本科毕业后，叶君继续在清华大学读研，修读影视传播方向</span><span style="color:rgb(51, 51, 51)">。</span></p><p><span style="color:rgb(51, 51, 51)">叶君和申睿相识于2007年，同在清华大学新闻学院读研究生。两人第一次见面在宿舍盥洗间，叶君开口就说：“你的头发很浓密，我很羡慕。”</span></p><p><span style="color:rgb(51, 51, 51)">没等申睿回应，叶君接着解释，“我的头发以前也很浓密，但去青海支教了一年，那里紫外线强烈，营养也没跟上，开始稀疏了，现在头发有点秃。”然后径直离开，留下有些发愣的申睿。</span></p><p><span style="color:rgb(51, 51, 51)">叶君的一位同学回忆，硕士期间，在一门影视剪辑课上，因为对一个镜头的处理意见不同，同学们激烈讨论了起来。</span></p><p><span style="color:rgb(51, 51, 51)">就在大家各执一词、谁也说服不了谁的时候，叶君说了一句至今被大家津津乐道的话，他说：“你先颠覆了你的剪辑思路，再来和我对话。”这句无厘头的话，让在场所有人笑到拍桌子，这也成了毕业后同学聚会仍会反复重温，当作佳话来回忆的故事。</span></p><p><span style="color:rgb(51, 51, 51)">叶君曾评价在清华大学的时光，让他变得越来越自信，“且这种自信有时候觉得好像是特别不能忍受的。”</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2gxtCf1Pl7Yw4wXAQf1GoREF.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgb(51, 51, 51)"><span style="font-weight:bold">叶君在清华大学读本科期间的留影。图源/纪录片《大肆》</span></span></p><p><span style="color:rgb(51, 51, 51)">叶君的高中同学胡鹏也觉得，上了大学后叶君变化很大。本科期间，叶君常去历史系、考古系、社会学系甚至建筑学院“蹭课”。他喜欢问很多为什么，就连考驾照，叶君都要琢磨发动机的原理。</span></p><p><span style="color:rgb(51, 51, 51)">毕业后，叶君还曾找到申睿，提出想跟拍他在金融行业的工作。他想参照《2008·纪》，那是他硕士期间跟随导师雷建军一起拍摄的纪录片，通过主人公投资创业的故事，记录了2008年诸多社会事件。</span></p><p><span style="color:rgb(51, 51, 51)">申睿觉得不太现实，拒绝了叶君，但还是给他介绍了不少金融圈的人，带他去参加投资者大会。没想到的是，叶君当场拉着几个基金行业的人，聊了整整半个小时中国影视教育和影视行业。</span></p><p><span style="color:rgb(51, 51, 51)">除了胖一些，头发少了一些，成了一个圆头圆脑的中年人，申睿觉得，叶君还始终停留在大学阶段的纯真。他还是喜欢天马行空地谈论“不切实际”的东西，像一个大学生在侃侃而谈他的创业项目。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3PajfRdmkg51kFTfY3ngkf6.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><strong><strong><span style="color:rgb(122, 68, 66);font-weight:bold">“这部片子把身体给伤了，把心也伤了”</span></strong></strong></p></section><p><span style="color:rgb(51, 51, 51)">毕业后成为一名纪录片导演，叶君觉得是机缘巧合。</span></p><p><span style="color:rgb(51, 51, 51)">他的硕士毕业论文研究的是儿童读物，毕业后第一份工作是在上海电视台地方频道，在上海世博会期间看了一整年各国博物馆展陈和场馆内的屏幕短片，开启了他与文博项目的缘分。2011年，叶君作为分集导演参与拍摄纪录片《故宫100》。</span></p><p><span style="color:rgb(51, 51, 51)">之后，他回到北京，先后供职于爱奇艺和中央电视台。2015年，正好赶上故宫博物院建院90周年，《我在故宫修文物》这个搁置了五年的项目得以重启，交到了叶君手上。</span></p><p><span style="color:rgb(51, 51, 51)">关于《我在故宫修文物》，一个被广为接受的叙事是：精简的团队、有限的资金，却拍出了一个“大爆款”。对于导演叶君本人更是如此，一个学新闻的门外汉，摄影师和他谈“叙事线向下延伸”，他听不懂，自侃最后是靠着“旁门左道”的经验完成的。</span></p><p><span style="color:rgb(51, 51, 51)">叶君觉得，这部片子受欢迎的原因很简单。在历史的纵横感中，它讲述了一个人应该怎样对待自己的工作，为此拍摄者需要真正走进修复师的内心。为了不显得采访痕迹感太重，他安排摄影师和修复师闲聊，聊他们怎么看待自己的生活，工作之外有什么兴趣，和家人的关系怎么样。</span></p><p><span style="color:rgb(51, 51, 51)">片子拍了三个月，三万多个镜头，短的十几秒，长的十几分钟，能剪进去的只有150分钟。这部作品同时又涉及青铜、书画、钟表、陶瓷等十几种工艺，就像《水浒传》里有108个好汉，叶君需要考量每一种工艺的顺序与串场。</span></p><p><span style="color:rgb(51, 51, 51)">于是光剪辑又花了三个月。叶君用了很多五颜六色的小纸条给素材分类，像做阅读理解一样，逐一判断素材里人物、故事、情感哪个最优，再单独择出来保留。</span></p><p><span style="color:rgb(51, 51, 51)">叶君不觉得这是一部成功的片子，因为技术粗糙、资源有限，生产体系保障不足，版权的产供销链条也并不规范。相比国外，国内的影视行业在体系规划、兜底机制和专业性上都更为薄弱。2025年的一场采访中，叶君做了一个对比：如果是国外的影视体系来拍摄《我在故宫修文物》，前前后后至少会涉及几百号人力。</span></p><p><span style="color:rgb(51, 51, 51)">但他当时的团队只有五个人，叶君独自承担了大部分的剪辑与后期。回忆起来他只觉得“痛苦”。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3eoJTa4x0IweT8b8Oqas3D.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgb(51, 51, 51)"><span style="font-weight:bold">《我在故宫修文物》拍摄团队工作照，右一为叶君。图源/清华大学影视传播研究中心</span></span></p><p><span style="color:rgb(51, 51, 51)">2017年，在一场公开讲座上，叶君提到了拍摄这部纪录片的经过。“这部片子把身体给伤了，把心也伤了。”叶君说完，台下一片哗然。</span></p><p><span style="color:rgb(51, 51, 51)">《我在故宫修文物》公映后，曾经参与制作的剪辑师张岚对此感受到的情绪更加浓烈。她觉得叶君的态度是一种厌恶——“厌恶做纪录片，或者说非常厌恶影视行业的一切与创作无关的潜规则。他一直抱怨做片子毁掉了他的身体。”</span></p><p><span style="color:rgb(51, 51, 51)">叶君也坦言，对于纪录片行业，他没有太多认同感，“把人关在一个黑屋子里一起看电视，是一件很残忍的事情。”</span></p><p><span style="color:rgb(51, 51, 51)">出名后，陆续有商业合作找来。申睿劝过叶君，趁热打铁把名气立住。但叶君都拒绝了，说“想沉下心一段时间”，他离开央视，主动选择了失业。</span></p><p><span style="color:rgb(51, 51, 51)">叶君自述，那段时间里他过得苦闷。想不清楚跳出这个行业之后，他该做什么。</span></p><p><span style="color:rgb(51, 51, 51)">申睿记得，刚拍完《我在故宫修文物》没多久，叶君曾和他谈到想去北大读人类学博士；2021年左右，叶君又提到想做儿童读物，觉得出版行业能够满足他对博物志的设想。</span></p><p><span style="color:rgb(51, 51, 51)">比起“导演”这个身份，叶君更希望被称为一个创作者。2017年的那场讲座中，叶君以自己为例，谈到如果进入自己不喜欢的专业该怎么办，最后他总结，“我真正想做的是想为中国启蒙运动做配角的工作。所以说不管挣不挣钱，如果项目有公共空间的讨论，这才是我真正想做的东西。”</span></p><p><span style="color:rgb(51, 51, 51)">但他始终没有等到一个合适的机遇。</span></p><p><span style="color:rgb(51, 51, 51)">叶君开始大量阅读，从《达尔文的物种起源》到《孟德斯鸠论》《语言学》《史论》《宗教》等经典著作，试图从书籍中寻找安定，带着书在球场一待就是整个下午。</span></p><p><span style="color:rgb(51, 51, 51)">叶君兴趣广泛，他喜欢踢球，喜欢炒菜，喜欢街拍、漫无目的到处瞎逛，喜欢研究怎么造房子造院。他既想写小说，也想拍电影。因为想做得太多，反而找不到一个能套进去的模板。</span></p><p><span style="color:rgb(51, 51, 51)">当年和叶君一起拍纪录片的人，有的已经离开这个行业，有的在商业化上小有成绩。最后，只留下叶君一个人，在原地探索这个难解的命题。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/24BWHq40N3q0230Kfyc9pXq.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><strong><strong><strong><span style="font-weight:bold;color:rgb(122, 68, 66)">自己的宇宙</span></strong></strong></strong></p></section><p><span style="color:rgb(51, 51, 51)">无业期间，叶君偶尔接一些策划、顾问的工作维持生活，跟随项目奔波于广东、江浙等地。</span></p><p><span style="color:rgb(51, 51, 51)">2022年，叶君下定决心，“不在烂项目里赚生活费，把自己的时间投入到更有价值的事情上去。”2023年，他回到武汉，开始了新的自我探索，项目名字叫“从何开始（Where to Begin）”，也就是他在视频号上发的1759条视频。他觉得这就像李时珍整理《本草纲目》，每天放进去一点有意思的东西，最后成为一个私人博物馆。</span></p><p><span style="color:rgb(51, 51, 51)">他为自己的工作室取名“叶作家能力有限绝不躺平”，试图用各种艺术形态实现表达，“同时也在探索创作者权益保护和商业循环机制。”</span></p><p><span style="color:rgb(51, 51, 51)">叶君向身边不少人袒露过，自己过得并不富裕。朋友们遇到合适的投资方或拍摄资源都会主动介绍给他，最后却都不了了之。一笔钱值不值得投入，投资方要考虑能否落地、收益如何，可叶君每次拿出来的都只是一些设想，“他有自己的宇宙。”申睿觉得，叶君想要一个愿意等待他十年的“伯乐”，一个能和他一起探索新的游戏规则的人。</span></p><p><span style="color:rgb(51, 51, 51)">代磊是湖北美术学院的讲师，在代磊认识的人里，叶君认识世界、表达世界的方式是独一份的。叶君曾给他推荐过一本书，叫《维米尔的帽子》，作者从一顶帽子切入，串联起世界各地的政经变化。代磊觉得这就是叶君的思维逻辑，从一个细小的入口，看见别人看不见的整个世界。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1UMMYRLrdQ82QVcJ22W7kWr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgb(51, 51, 51)"><span style="font-weight:bold">叶君在拍摄地面上出现的手套。受访者供图。</span></span></p><p><span style="color:rgb(51, 51, 51)">代磊骄傲于自己有这样一个朋友，一位片子被播放二十亿次的著名纪录片导演。他的不少学生都受过《我在故宫修文物》的影响，因此代磊也时常邀请叶君来学校给学生讲课。</span></p><p><span style="color:rgb(51, 51, 51)">代磊还留存着叶君的讲座PPT，没有任何装饰，只有两列看上去毫无关联的词汇：莫比乌斯环、反乌托邦、齐物论、红辣椒、秒速五厘米、黑客帝国……但大多数时候，原定一小时的讲座叶君讲了五分钟就结束了，这让代磊很“尴尬”。</span></p><p><span style="color:rgb(51, 51, 51)">“他有100个线索，但每一个都要深入讲，他又觉得大家可能根本没有跟上，所以他就算了，不讲了。”剩下的五十五分钟，靠代磊不断向他提问才撑了过来。</span></p><p><span style="color:rgb(51, 51, 51)">身边许多朋友也委婉地劝叶君，尝试拍一些故事片或是市场接受度更高的项目。一旦谈及这些，叶君几乎不正面回复，自顾跳转到下一个话题，或谈论他的其他想法。他偶尔还会回呛，甚至为对方的世俗生活感到惋惜。“这没法聊”，叶君一位朋友觉得。</span></p><p><span style="color:rgb(51, 51, 51)">理想主义的另一面是来自家庭的压力。家人期待叶君找一份正经能赚钱的工作，娶妻生子。叶君读过一本书叫《边育儿边开店的幸福生活》，他说其实这也是他的理想生活，但条件并不允许他追求“人生圆满”。</span></p><p><span style="color:rgb(51, 51, 51)">于是，2025年，41岁，在同龄人都已经结婚生子、事业有成的时候，叶君的自我介绍仍然是未婚、无业、收入零，“一个看上去一直在一个赚不到钱的行业里面瞎混的人。”但他觉得，生活已经开始接近他想要的样子，虽然还未完全实现。</span></p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/301yWoTthSO30OFaG3s2E6t.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><strong><strong><span style="font-weight:bold;color:rgb(122, 68, 66)">“他有过璀璨的人生”</span></strong></strong></p></section><p><span style="color:rgb(51, 51, 51)">直到叶君去世后，身边的朋友才发现，不是只有自己一个人每天都会收到叶君发来的消息，这些消息多是他读到的文章链接，以及大段的思考笔记。叶君记得每个人关注的领域，不同行业的朋友收到的内容也不尽相同。</span></p><p><span style="color:rgb(51, 51, 51)">这些群发的消息很少有人回复。代磊觉得叶君有一种孤独感，与周围环境“好像不太搭调”。</span></p><p><span style="color:rgb(51, 51, 51)">AI的出现让他找到了现实中无法得到的理解。叶君开始频繁与AI聊天。</span></p><p><span style="color:rgb(51, 51, 51)">在一段他发给朋友的聊天记录里，叶君告诉AI，发起的对话常常“没人接得住”。</span></p><p><span style="color:rgb(51, 51, 51)">AI回复，“你的同学群里讨论的购车、育儿、投资、职场技巧，全是典型的‘第二等重要的事情’……我们的教育体系和公共话语，极少训练人们如何有结构、有深度、心平气和地探讨根本性、整全性的问题，而讨论根本性问题，意味着可能要质疑自己安身立命体系的某些根基，这在心理和现实层面都成本极高。”</span></p><p><span style="color:rgb(51, 51, 51)">他把AI的解答又群发分享给朋友，仍旧没有得到回复。“我们听不懂他说话。”张岚觉得。</span></p><p><span style="color:rgb(51, 51, 51)">王一南是叶君硕士班级的班长，她说，同学们都挺惭愧，后悔平时没有回应叶君，哪怕问问他，有没有需要帮助的。</span></p><p><span style="color:rgb(51, 51, 51)">按照计划，5月11日，一个难得让叶君满意的合作即将开始。他在武汉租了一个小房间，既充当住处也当工作室。工作室存放着许多友人赠送的文博书籍，摆放随意。</span></p><p><span style="color:rgb(51, 51, 51)">4月17日，叶君告诉胡鹏，他因“胃疼”去了趟医院，胡鹏想着第二天下午再去看他。没想到，18日上午，胡鹏接到了叶君母亲的电话。等赶到叶君住处时，他已经没有了生命体征。送到医院后才知道，叶君因为急性胃出血，错过了最佳抢救时间。</span></p><p><span style="color:rgb(51, 51, 51)">4月19日凌晨，申睿在朋友圈看到讣告，感到难以置信。2023年初春，两人还在济南见了一面，聊到深夜。叶君不喝酒，一喝脸就通红，那晚却少见地喝了几杯。当时申睿还觉得来日方长，却没想到是最后一面。</span></p><p><span style="color:rgb(51, 51, 51)">4月22日，叶君的追悼会在湖北大冶市叶家坝社区祠堂举行，有百余人参加，包括叶君生前的高中同学，清华校友与曾经的同事。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3YUCYB41xmAf2Do1yM4EbCmN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgb(51, 51, 51)"><span style="font-weight:bold">《大肆》纪录片最后，叶君关灯离开宿舍。图源/纪录片《大肆》</span></span></p><p><span style="color:rgb(51, 51, 51)">追悼会现场播放了清华同学们为叶君剪辑的一则纪念视频，素材来自纪录片《大肆》，是叶君在大四毕业时执导的班级纪录片，拍摄计划由对他影响深刻的导师雷建军提议。</span></p><p><span style="color:rgb(51, 51, 51)">《大肆》里，22岁的叶君说，他的“民生理想是走遍中国的每一个省，尽量深入各个县”，想对中国社会有更深的认识。除此之外，他只想赶紧忙完纪录片去湖边大哭一场。</span></p><p><span style="color:rgb(51, 51, 51)">影片最后，叶君背着黑色斜挎包，拎着水桶和捆好的凉席，走到宿舍门口，对着镜头说，“这算不算一个结束啊？”</span></p><p><span style="color:rgb(51, 51, 51)">然后，他关了灯，转头离开空无一人的漆黑宿舍，只留下一句，“再不回来了。”</span></p><p><span style="color:rgb(51, 51, 51)">4月20日，雷建军在朋友圈转发了这条视频，“纪念叶君……他有过璀璨的人生。”</span></p><p><span style="color:rgb(51, 51, 51)">两天后，雷建军又转发了一遍，写道，“也罢。”</span></p><p><span style="color:rgb(51, 51, 51)">（应受访者要求，文中张岚为化名）</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 人间故事铺</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eeaec43e9cda2380bfc955?channel_id=68d3ec300d8694abdfcdf913">https://lingowhale.com/reader/web/69eeaec43e9cda2380bfc955?channel_id=68d3ec300d8694abdfcdf913</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

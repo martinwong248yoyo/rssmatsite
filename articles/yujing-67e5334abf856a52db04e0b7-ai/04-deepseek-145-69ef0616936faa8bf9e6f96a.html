@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>等待DeepSeek的145天｜钛媒体深度</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 热门AI公众号更新追踪</div>
+                    <h1>等待DeepSeek的145天｜钛媒体深度</h1>
+                    <div class="meta">
+                        <span>钛媒体AGI</span>
+                        <span>Mon, 27 Apr 2026 06:18:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef0616936faa8bf9e6f96a?channel_id=67e5334abf856a52db04e0b7">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><p>DeepSeek的拥趸正在流失。</p><p>至少在2026年4月24日之前，是这样的光景。</p><p>过去几个月里，不少以DeepSeek为主题，缀以“布道者”“走向未来”“铁粉”等的账号停更、转型。在不同的社交平台上，针对DeepSeek的失意之语，叠加了意思若有若无的落寞，“为什么DeepSeek会变成这样了”。</p><p>原本不是这样的——2024年底至2025年初接连V3和R1后，这款中国AI模型红遍全球，诸多光环加身，赢得一众拥趸。</p><p>“早期对比过后，很明显DeepSeek在生成中文对话，甚至铺排情节、预写方面都是最强的。没那么多AI味，水文的比例更少。”一位自称“忠粉”的用户王冰（化名）曾如此总结，他与DeepSeek结缘于副业：用后者调试自己创作的网络小说。</p><p>长期的对话与助益，也让他对DeepSeek的认同感愈发深入，会在各类场合积极为自己的“偶像”说话甚至与人争吵。当然，“理想主义”“颠覆者”“国产之光”等标签，也让当一名DeepSeek粉丝被赋予了更多的意义。</p><p>裂缝出现在今年2月，一次更新后，DeepSeek输出的内容突然变得陈腐、老套，无论怎么调整提示词，效果都不理想。更多用户反馈DeepSeek变冷淡了，缺少温度甚至“登味十足”，包括所谓“粉丝”在内的一些社群甚至兴起了“联名书”项目，希望在各渠道发声让DeepSeek“找回自己”。</p><p>DeepSeek自己生成的答案一度被当作官方回应：并非刻意冷淡，而是因为效率上的调整和对边界感的注重。</p><p>“挺不好受的，想脱粉的肯定不少，但我觉得还要等”，王冰说。</p><p>愿意留下来的人，等的正是V4的发布。作为同样需要经营自己读者的网文创作者来说，这一回答可能比事实本身更让人失望，但因为有更大的事件即将到来，关注和期待仍然持续。</p><p>事实上，关于DeepSeek V4的上线时间，一直牵动人心。从去年12月1日V3.2正式版发布后，DeepSeek就“断更”了，但The Information等媒体早已“预告”，这家公司会在春节期间发布V4。不少人满怀期冀，畅想一年前的“DeepSeek时刻”再次上演。</p><p>外界的期待在膨胀，但故事的主角，却愈发沉默。</p><p>今年初接连发布两篇重要论文后，DeepSeek几乎缺席了这个冬春之交的所有重要事件。</p><p>春节大战、龙虾Agent，AI世界的主线剧情频繁切换，而DeepSeek的故事线，却始终若即若离。</p><p>渐渐地，人们适应了DeepSeek的缺席。而等待，也已变成了一种习惯。</p><p>网文作者在等待中尝试了很多其他工具，包括频繁迭代的国产大模型、专门辅助创作的Agent等等。</p><p>“重新用起来才发现，AI能力发展得太快，认为DeepSeek一直有独一无二的优势，才是幻觉吧。”袪魅来得有些突然，但似乎也顺理成章，甚至都没等到新模型的正式发布。</p><p>如今看来，所有人等待DeepSeek，并不仅仅是等待这个大模型本身——人们等待的，是一个新的高光时刻，正如一年多之前，那个被标识为中国AI的“破圈”的时刻。</p><p>那时，对于更广泛的国内受众来说，ChatGPT等顶级大模型的能力仍是“只闻其名，未见其实”。即使只是聊天，能多数能用到的模型也不尽如人意，它们无论在性能、知名度还是期待值上，都囿于有限圈层内。</p><p>直到DeepSeek横空出世，在那个氛围感十足的春节档，才让人们看到了AI会思考、说人话，甚至能干活，这是本土产出的大模型第一次具备比肩全球顶级的性能。对于很多人来说，这是第一次真正接触AI，除了手机里多了一个App，生活、生产方式也开始悄然变化；对于很多人来说，大预言模型、提示词、训练与推理等AI术语第一次有了实体，甚至不少人对复杂的参数和Benchmark的榜单有了兴趣。</p><p>这缘于DeepSeek，行业也在这种气氛下加速。竞争激烈了起来，大家都在加速，DeepSeek却好像慢了下来。</p><p>在漫长的等待中，他们会通过各种契机接触到所谓“竞品”或新事物，并惊觉它们能够填补那个缺席的空洞。</p><p>而即使对于更为硬核的开发者、业内人士，对DeepSeek的看法和心态，似乎也已被重置。</p><p>4月24日，V4终于正式登场，人们等来了新的世界最强开源模型，等来了大幅提升的Agent能力，也等来了“国产模型+国产芯片”的深度适配。</p><p>如果回到V3.2发布时的节点来看，这似乎正是曾经的期许。</p><p>但社群、评论区的关注已不在此，一些不满的声音认为DeepSeek在“固步自封”，而且没有在自己专精的道路上真正挤进“最强梯队”。而关于迟到的原因与代价，包括与国产算力的深度绑定，也愈发成为争议焦点。</p><p>两次更新之间，145天过去了，DeepSeek还在“深度求索”那个答案，关于颠覆性创新、关于开源生态、关于AGI。</p><p>可它面对的问题，却变了。</p></section><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><section><section><section><section><section style="color:rgb(62, 62, 62);font-weight:400"><section><section><section><section><section><section><p>1</p></section></section></section></section></section><section><section><p><span style="font-weight:bold">气氛到了，V4却没来</span></p></section></section></section></section></section></section></section></section><p>在等待DeepSeek的时间里，AI行业发生了很多事。</p><p>最新的感知是，AI需要赚钱了。</p><p>这是2025年底到2026年初行业最重要的事情。</p><p>Meta重金收购Agent初创公司Manus，无疑是其中最大的故事。后者是2025年继DeepSeek后又一个引发全球关注的由中国团队主导的AI公司。</p><p>这一年，始于DeepSeek横空出世，终于Manus委身巨头。</p><p>跨年后，剧情再次加速。1月8日，智谱率先敲钟，Minimax次日挂牌——自此，大模型厂商有了明确的市场价格，而且将不断接受“何时盈利”的诘问。</p><p>作为全球风向标的OpenAI和Anthropic，也都在开年宣布入局“AI+医疗”，前者还启动了广告业务。</p><p>相较于迭代速度和性能指标的较量，模型发布时的“商业变现”能力被更加凸显了出来，几乎每款重要模型都会精准锁定一些办公或商业场景，锚定更加直接的“经济价值兑现”。</p><p>那时的DeepSeek，仍被认为是“合唱”的一员。尽管彼时在这家刻意低调的公司身上还看不到太多商业诉求，但其对Agent能力、编程等领域的探索，均是行业主流方向。而且，毕竟梁文锋的老本行是量化投资，毕竟，“把价格打下来”这件事，DeepSeek也一直是最重要的推手。</p><p>行业里，几乎每天都有新变化。热闹的间歇，总有人在等着DeepSeek。</p><p>零星的消息偶尔传来。The Information报道称DeepSeek 将于2月中旬的马年春节前后发布新一代模型，知情人士则透露其主打编码能力，内部初步测试超越了“编程之王”Claude。而在1月1日和13日，DeepSeek发布了两篇论文，分别聚焦mHC和Engram，解决规模和记忆这两大关键问题，被当作新模型的前奏。</p><p>一位开发者回忆称，由于一直在与全球顶级模型“掰手腕”，大家会习惯性地认为DeepSeek会与OpenAI、Anthropic一直在同一擂台上较量，而且对国产大模型有引领作用。“提升生产力和实用价值是一定的，至于商业变现，很多人预期DeepSeek会在发布新模型的同时找到自己的商业模式，而这并不影响开源的生态。”</p><p>一切看起来，都是蓄势待发的模样，但事后看来，很多时间节点，更像是外界强加的想象——那一时期外界AI商业化浪潮的冲击，远较DeepSeek自己预期的节奏更猛烈。</p><p>根据晚点等媒体的报道，王炳宣、魏浩然、郭达雅等核心贡献者在2025年底至今年3月间相继出走大厂，虽然单看流失率还不到2%，但此前“DeepSeek员工极难挖角”的叙事已经松动。而“不融资”导致员工手中期权兑现无期甚至难以估价，被视为人才流失的重要原因。</p><p>在内部，梁文锋开始考虑融资，更多提及产品化，同时还要推进V4，面对其与国产芯片深度适配的复杂问题；而竞争对手在快速迭代模型，并持续挖角DeepSeek的人才……</p><p>当然，人们事后才知道这些暗流。但在水面上，仍不乏线索，比如1月到2月期间DeepSeek在模型性能排名、下载量、活跃用户排行榜上出现下滑。而不少外媒和机构也关注到了，这家致力于开发全球最顶尖大模型的公司，在因地缘问题无法持续获取英伟达先进芯片的情况下，可能面临着较为严峻的算力制约。</p><p>情况不乐观，但只要V4足够强，以那时的氛围来看，就能扭转势头。</p><p>1月中旬起，DeepSeek鲜少“抛头露面”，被认为进入了重大模型更新前的“静默期”。</p><p>1月下旬至春节前，以“龙虾”为标志的Agent——OpenClaw、字节的视频模型Seedance 2.0相继爆火。曾为DeepSeek给出高度评价的OpenAI联合创始人安德烈·卡帕西（Andrej Karpathy）、打造出《黑神话：悟空》的游戏科学创始人冯骥，以类似的风格分别给予了新事物极大赞许。</p><p>而在讨论中，它们也常被称作“2026年的DeepSeek时刻”，这让属于DeepSeek自己的时刻，被愈发寄予厚望。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3wTkKh2paoQLrR9Ll3sFama.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p>此后的马年春节，AI圈愈发不平静，甚至席卷了更多的领域。</p><p>Anthorpic发布的插件导致Saas行业遭遇“替代危机”，美股软件板块持续暴跌；而腾讯、阿里、字节、百度等中国大厂则打起了一场耗资近百亿元人民币的“春节AI大战”。</p><p>气氛烘托到这，人们也一度十分笃定，V4会在某个时刻登场。</p><p>但直到春节结束，人们才真的相信DeepSeek“爽约”了，尽管官方从未给出过任何发布时间线。</p><p>一位GPU“小龙”公司的研发人员对我们回忆称，为了在24小时以内给V4做适配，公司提前做了不少准备，假期也一直安排员工待命，但没怎么想到最终会是“一场空等”。</p><p>实际上，从芯片、云厂商，到以DeepSeek为主模型的腾讯等大厂、竞争对手，以及更渴求用到新品的AI应用企业和开发者，都在苦等V4的“闪亮登场”。</p><p>这种热切到有些焦急的盼望，在3月有了归宿，不过主角不是DeepSeek，而是OpenClaw。</p></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><section><section><section><section><section style="color:rgb(62, 62, 62);font-weight:400"><section><section><section><section><section><section><p>2</p></section></section></section></section></section><section><section><p><span style="font-weight:bold">“龙虾”与“鲸鱼”</span></p></section></section></section></section></section></section></section></section><p>OpenClaw在中国的火爆有些突然。</p><p>这只号称让“AI长了手和脚，能动手干活”的“龙虾”Agent早在1月下旬就从硅谷“破圈”。</p><p>但在国内更广泛的知名度，则集中在春节过后，两会期间。</p><p>在上海，出现了三百多人排队安装“龙虾”的景象；在深圳，腾讯在自己的大厦前摆摊派“虾”吸引了千人到场。有人花100多元买“站票”只为听一堂“手把手教养虾”的课课程，也有人在闲鱼上做起了上门安装的生意，据说单价都要500元，有人月入六位数。</p><p>腾讯、字节、阿里等巨头随之下场，密集进行在线部署，并推出了多款“虾”系产品。</p><p>这一切，都像极了2025年春节期间，由以鲸鱼为标志的DeepSeek所引发的那波热潮。</p><p>而很大程度上，正是DeepSeek V4的“迟到”，促成了OpenClaw的火爆。</p><p>那时盛行的一个段子，是美国AI在卷技术、卷编程、卷生产力，而中国的春节AI大战在卷补贴、卷红包、卷奶茶。</p><p>人们在等待一个新的爆款，最好能够代表技术前沿，最好能够许诺开启新的时代，最好还能富有故事性且平易近人。</p><p>去年的那条“鲸鱼”始终不肯浮出水面，积攒的情绪就找到了“龙虾”。它的诞生同样充满了极客精神和戏剧性，甚至多了些游戏感，它还被视作“AI进入Agent时代”的标志性事件。</p><p>这个早春需要这只“虾”，即使它是舶来品，即使早在一个多月前就火过一轮了。</p><p>端边AI芯片厂商后摩智能的一位高管告诉我们，无论是DeepSeek还是OpenClaw，跑通并不是问题。这些新事物的意义更类似“风”，能把芯片、算力企业带到市场面前。</p><p>他举例称，DeepSeek V3问世后，国产推理芯片的商业机会不断释放，与客户的“沟通成本”降低很多，只要以DeepSeek为例，用户就能明白。而“龙虾”作为一个新物种，也让大家看到了Agent是一个确定性的趋势，对于芯片行业来说，它带来的算力需求暴增、轻量化本地化部署场景的增多、对异构计算的推动，都是机会所在。</p><p>就连行业老大英伟达也在全速跟进，在3月中旬的GTC大会上，“龙虾”成为了贯穿全场的主角，该公司推出了自己的“龙虾”平台NemoClaw，黄仁勋更是将其作为“Agentic AI拐点已至”的重要论据。有趣的是，DeepSeek在2025年被称作GTC大会上潜在的主角，虽然黄仁勋未过多直接提及，但彼时英伟达芯片在推理场景、MoE架构上的调整和阐发，背后都是DeepSeek的影子。毕竟，它曾经让这个全球市值最高公司的股价一天跌了约17%。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/ZqSE33fioYT1V9Y327lXy.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span style="color:rgb(178, 178, 178)">截图来自英伟达GTC大会官方直播视频</span></p><p>当然，“等风来”的不只芯片层，从云、模型，到应用、设备，所有环节都在忙着给自己贴上“虾标”。</p><p>“龙虾”产品对大模型的调用量形成了单独的榜单，而“龙虾本”、Agent box等新的设备也相继走红，就像DeepSeek去年爆火时批量面世的DeepSeek一体机一样。</p><p>而压力，也再次来到了DeepSeek身上。</p><p>一位开发者解释称，OpenClaw等Agent框架，既依赖大模型进行工作的执行调度，给模型厂商带来Token消耗的增量，也在一定程度上能拉平各个模型的性能表现。</p><p>频繁更新、更能适配OpenClaw的竞争对手，以及手头握有有“大龙虾”之称的Codex和Claude Code的OpenAI和Anthropic，在这波浪潮中风头更劲。</p><p>而对于仍然只有一个聊天机器人产品的DeepSeek来说，人们的兴趣在减弱。这个3月，是“龙虾月”，是属于Agent的月份，也是DeepSeek被谈论最少的一个月。</p><p>等待也变得愈发不耐烦，更多对“拖更”的吐槽冒了出来。就在V4发布之前，人们谈论DeepSeek的坐标已经不一样了。</p></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><section><section><section><section><section style="color:rgb(62, 62, 62);font-weight:400"><section><section><section><section><section><section><p>3</p></section></section></section></section></section><section><section><p><span style="font-weight:bold">答案依旧，问题变了</span></p></section></section></section></section></section></section></section></section><p>3月29日晚到31日，DeepSeek连续三天遭遇宕机，最长的一次长达13个小时。</p><p>较为意外地，对于这次让DeepSeek重登热搜的“史上最大事故”，期待甚至盖过了埋怨，业界猜测故障是因“为V4进行灰度测试”。至少，DeepSeek不再沉默，人们始终希望它“搞出些大事”。</p><p>果然，在不乏大事件的4月，DeepSeek仍频频成为舆论焦点。</p><p>晚点、The Information等媒体接连发布报道，包括上文提及的员工跳槽大厂、公司寻求首次外部融资等信息为更多人所知。</p><p>而且，V4的发布时间也终于相对可靠地被锚定在了4月下旬，据称这是梁文锋在内部沟通中给出的时间，而且得到了多方信源确认。</p><p>这让关于DeepSeek近况的解析一直持续到V4登场。</p><p>但是，如果回看100多天前的讨论，会发现人们更多会谈及DeepSeek将在Agent、记忆模块和编程等场景上实现哪些技术和性能上的突破。</p><p>而在发布前的20多天中，经过业内“不要抱太高期待”的“预防针”，和被视为已具有V4基因的网页版、APP并不惊艳的表现，技术和性能层面的讨论变得越来越少。</p><p>而被推向台前的，一是DeepSeek的融资和估值；二是与国产算力的深度适配；三是这家公司将何时及如何开启模商业化变现之路。</p><p>从目前的信息来看，融资金额尚无定论，流传较多的是200亿美金，而国资和互联网大厂很可能率先进场。人们对这一转变的态度也颇有些矛盾。“不融资”的DeepSeek，更能成就一个特立独行的形象，坚持自己并名满天下，一直是最受欢迎的故事。但如果这个象征走向失败，就会让一切索然无味。出于对商业逻辑的信奉，多数观点仍对DeepSeek拿出股权“待价而沽”给予认可。</p><p>而在国产算力适配方面，争议显得更大，某种程度上期待也更大。</p><p>实际上，作为此次深度适配传言中的主角之一，寒武纪方面曾提示我们，早在去年9月DeepSeek发布V3.2-Exp（实验版）发布时，公司就完成了Day 0适配。作为国产顶级模型和国产芯片，这种合作很正常也并不神秘。而在12月V3.2正式版发布时，华为昇腾、寒武纪、海光信息三家国产芯片厂商也都宣布在当天完成适配。</p><p>不过，在近期的相关讨论中，不少消息都将V4迟到的原因指向“去英伟达CUDA”而迁移到国产芯片生态上，进而，值不值得以及谁主导了相关决策，都引起了不同的看法。一位芯片从业者即认为，DeepSeek更多是被交办了一项任务，而这项任务的复杂性和难度，超过了公司在这个阶段的能力和预期。</p><p>另一方面，从结果上来说，这次深度适配又不断刺激出庞大的期待。尤其是黄仁勋在4月中旬做客达瓦克什·帕特尔（Dwarkesh Patel）的播客节目时，将DeepSeek优先适配国产芯片视为美国的“重大损失”，更让这次事先张扬的生态协作引发了更多遐想。</p><p>而对于商业化变现，人们从DeepSeek的招聘信息到4月网页版更新时的“快速模式”与“专家模式”分层，孜孜寻找着蛛丝马迹，但似乎都很难论证它如何坚持免费开源、专注AGI探索的同时，还能赚到市场的钱。实际上，DeepSeek公开的商业化路径目前只有API调用，而且，在其他模型快速迭代的背景下，这一模式也越来因云服务商越来越多地免费部署而出现波动。</p><p>这些新的问题、新的讨论，就是V4发布前的氛围。</p><p>在4月24日这一天，DeepSeek交出的技术答卷仍是完整的：100万Token上下文，通过架构创新大幅提升长文本处理和记忆能力；Agent得到凸显，V4-Pro在Agentic Coding评测中获得高分；而且性价比仍大幅领先业内同行。</p><p>虽然性能的提升和“价格屠夫”的属性仍得到不少赞许，但这款史上最强开源模型，也在不少反馈中被冠以“失望”的评语。</p><p>我们在部分开发者社群看到的评价也不算积极，有开发者注意到其技术报告对比的仍是闭源巨头的上一代模型，认为DeepSeek将性能测评“说得很含蓄”，实际上与GPT与Claude的差距变大了，甚至在国产模型中优势也不明显。还有开发者直言，其“Pro版本的发布太匆忙”，推理过程变得十分漫长，简单问题也要吐几万token的思维链，逻辑和输出结果却显得怪异，不少不符合常识的内容，可能是后训练没做安全对齐。更多声音则认为，在多模态、Agent越来越强，还不断冒出“新玩法”的当下，V4显得有些平庸和无趣。</p><p>而且，关于备受期待的国产模型与国产芯片的深度适配，这次发布同样鲜少着墨，50余页的技术报告仅提到华为一次。虽然更多的国产芯片宣布了Day 0适配，但至少目前还看不到对CUDA生态的真正冲击。</p><p>也有从业者提示，适配问题需等待进一步消息的披露。但考虑到性能和表现并不惊艳，后续更新的细节能激起多大浪花，还有待观察。值得注意的是，DeepSeek在V4的token价格表后附言：受限于高端算力，目前Pro的服务吞吐十分有限，预计下半年昇腾950超节点批量上市后，Pro的价格会大幅下调。这也成了未来一段时间颇值得期待的进展。</p><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/319EZ2RRyjm2Hu4o3u0ahd.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p><span style="color:rgb(178, 178, 178)">截图来自DeepSeek官微</span></p><p>或许是感受到了周身氛围的变化，DeepSeek在V4发布文章的末尾写下了一段话：</p><p>“不诱于誉，不恐于诽，率道而行，端然正己。”</p><p>并称公司将“始终秉持长期主义的原则理念，在尝试与思考中踏实前行，努力向实现 AGI 的目标不断靠近”。</p><p>这场漫长的等待终于结束了。我们也能更清晰地看到，等待DeepSeek的人们，究竟在等待些什么。</p><p>是远不止一个版本的迭代，一次性能的提升，抑或一家公司再次证明自己的故事。人们在等待预期之外的技术和故事，这也是AI时代所独特赋予的：永远超乎想象。</p><p>V4没有交出这份不存在标准答案的答卷，但它依然高举着AGI的旗帜。正如行业内曾流行一句话：假装AGI已经存在的人，才能先做出AGI。</p><p>DeepSeek会在未来再次成为时代颠覆者吗？或许，在多年后再回看这次等待，我们才更能了解其意义。</p></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 热门AI公众号更新追踪</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef0616936faa8bf9e6f96a?channel_id=67e5334abf856a52db04e0b7">https://lingowhale.com/reader/web/69ef0616936faa8bf9e6f96a?channel_id=67e5334abf856a52db04e0b7</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

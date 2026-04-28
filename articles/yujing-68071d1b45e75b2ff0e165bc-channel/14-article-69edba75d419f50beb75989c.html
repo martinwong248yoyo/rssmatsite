@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>第十六届北京国际电影节主竞赛单元“天坛奖”荣誉揭晓，于和伟获影帝</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 艺术电影-电影</div>
+                    <h1>第十六届北京国际电影节主竞赛单元“天坛奖”荣誉揭晓，于和伟获影帝</h1>
+                    <div class="meta">
+                        <span>导筒directube</span>
+                        <span>Sun, 26 Apr 2026 07:05:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69edba75d419f50beb75989c?channel_id=68071d1b2c7742c740dc6aa3">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section><span><span style="color:rgb(85, 87, 92)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2Qo8W5cw70e2LEvv42SAHln.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></span></section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2j0mbo2hRpLa1yNuNWmBQn3.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">4</span></span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">月25</span></span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">日</span>晚，第十六届“天坛奖”主竞赛单元十大奖项获奖结果已全部出炉，来自世界各地的优秀影片与创作者在这一荣耀时刻收获掌声与肯定。</span></p><p><span style="color:rgb(85, 87, 92)">英国影片</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">《危</span></span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">情蜻</span></span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">蜓》</span></span><span style="color:rgb(85, 87, 92)">包揽<span style="color:rgb(123, 12, 0);font-weight:bold">最</span></span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(123, 12, 0);font-weight:bold">佳</span></span><span style="color:rgb(85, 87, 92)"><span style="font-weight:bold;color:rgb(123, 12, 0)">影片</span>、</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(123, 12, 0);font-weight:bold">最佳编剧</span></span><span style="color:rgb(85, 87, 92)">、</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(123, 12, 0);font-weight:bold">最佳女主角</span></span><span style="color:rgb(85, 87, 92)">三项大奖。来自葡萄牙与法国的影片</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">《山火之后》</span></span><span style="color:rgb(85, 87, 92)">则荣获</span><span style="color:rgb(85, 87, 92)"><span style="font-weight:bold;color:rgb(123, 12, 0)">最佳女配角奖</span></span><span style="color:rgb(85, 87, 92)">与</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(123, 12, 0);font-weight:bold">最佳艺术贡献奖</span></span><span style="color:rgb(85, 87, 92)">。最佳导演奖花落</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">《女孩们》</span></span><span style="color:rgb(85, 87, 92)">。中国影片</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">《森中有林》</span></span><span style="color:rgb(85, 87, 92)">中有出色表演的</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">于和伟</span></span><span style="color:rgb(85, 87, 92)">收获</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(123, 12, 0);font-weight:bold">最佳男主角奖</span></span><span style="color:rgb(85, 87, 92)">、</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">乔杉</span></span><span style="color:rgb(85, 87, 92)">收获</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(123, 12, 0);font-weight:bold">最佳男配角奖</span></span><span style="color:rgb(85, 87, 92)">。</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">《余烬》</span></span><span style="color:rgb(85, 87, 92)">与</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(0, 122, 170);font-weight:bold">《配角》</span></span><span style="color:rgb(85, 87, 92)">分别收获</span><span style="color:rgb(85, 87, 92)"><span style="color:rgb(123, 12, 0);font-weight:bold">最佳摄影奖</span></span><span style="color:rgb(85, 87, 92)">和</span><span style="color:rgb(85, 87, 92)"><span style="font-weight:bold;color:rgb(123, 12, 0)">最佳音乐奖</span></span><span style="color:rgb(85, 87, 92)">。</span></p><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/IhBEw1ljiBy1haqez2vxE2q.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span style="color:rgb(85, 87, 92)">雁栖湖畔，光影为证。每一座奖杯，都镌刻着光影背后的匠心与热爱，每一个名字，都闪耀在世界电影共融共生的璀璨星河之中，祝贺所有获奖者！</span></p><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3PRCYL4jegJ17ADgR1rGohK.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><section><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg4ODYyNjczMA==&amp;action=getalbum&amp;album_id=4412913924463935491#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/M7RNlgpQHU3Cxcp84sZnPN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg4ODYyNjczMA==&amp;action=getalbum&amp;album_id=4405342681472729089#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/25TqeB3ABTSB2iPlJx1xaehI.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section><span><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg4ODYyNjczMA==&amp;action=getalbum&amp;album_id=4411263122427117577#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3e3q2CIZjIH2FTKol39u6L4.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></span></section><section><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg4ODYyNjczMA==&amp;action=getalbum&amp;album_id=4405341734465994756#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1AW12h4FJhFr3ZFTDX4e408z.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg4ODYyNjczMA==&amp;action=getalbum&amp;album_id=4405340821064024070#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/34eTJMvdedy242F7m3TvcQm.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg4ODYyNjczMA==&amp;action=getalbum&amp;album_id=4386406240223002627#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/27qNfyvHGFi2ymVk5ufceg.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg4ODYyNjczMA==&amp;action=getalbum&amp;album_id=4386405720028643336#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2wsNLo28O26GTFDoK1JzrAR.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section><a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg4ODYyNjczMA==&amp;action=getalbum&amp;album_id=4429079027395608578#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4uyYmL4ApO9MpMt293wokfD.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3mA8XR27GZEl3jgtJw4zEE7o.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1muWZwoBjwWQyJF3PPlSm.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2GyuNC3n5rvN2IApMM3N2zeb.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1HkouW1VKkBwTcQfW2CboaH.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 艺术电影-电影</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69edba75d419f50beb75989c?channel_id=68071d1b2c7742c740dc6aa3">https://lingowhale.com/reader/web/69edba75d419f50beb75989c?channel_id=68071d1b2c7742c740dc6aa3</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

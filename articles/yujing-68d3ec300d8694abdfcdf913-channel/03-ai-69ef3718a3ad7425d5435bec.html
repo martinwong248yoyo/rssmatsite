@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AI时代的「扫地僧」，藏在一线</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 人间故事铺</div>
+                    <h1>AI时代的「扫地僧」，藏在一线</h1>
+                    <div class="meta">
+                        <span>人物</span>
+                        <span>Mon, 27 Apr 2026 10:04:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69ef3718a3ad7425d5435bec?channel_id=68d3ec300d8694abdfcdf913">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1YJEgE1hLmCf1HwJZi1NyB1k.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="font-weight:400;color:rgb(34, 34, 34)"><section><section style="color:rgb(62, 62, 62)"><section><p><span>AI时代，最先跳出FOMO（错失恐惧症）情绪，拥抱变化，采取行动的，可能并不是一小撮技术大拿，而是那些身居一线、过去受制于技术门槛和岗位边界的普通人。</span></p><p><span>他们让一种新的能力变得稀缺：不一定最懂技术，却能最先把AI带进业务现场、放大业务经验、并将其转化成组织能力。这样的人，可能是工作20年的老员工，也可能是初入职场的新人；可能来自技术岗位，也可能来自生产、运营、行政等一线职能。</span></p><p><span>换句话说，如今对企业而言，真正重要的不是追逐技术本身，而是把AI变成解决问题的方法。过去十年，做系统、改流程，往往意味着排期、找研发、砸预算，轮不到一线说话。但AI正在抹平一部分技术门槛——让最懂问题的人，有机会自己动手解决问题。这样的改变，正在越来越多公司的一线工位上发生。</span></p></section></section></section></section><p><span style="font-weight:bold">被唤醒的「隐形扫地僧」</span></p><p><span>45岁这一年，四维图新的工程师吕坤第一次感觉到职场危机。</span></p><p><span>如果用当下最流行的话去定义他的职场生涯，那他应该算是「吃到过上升红利」的那一批。他是90年代末的大学生，19岁时，他从云南考到北京学计算机，从此扎根北京。找工作也没有那么困难，一毕业，他就顺利留在地图行业的龙头公司四维图新，一干就是20年。</span></p><p><span>后来，有年轻人问他怎么能在一家公司呆这么久，他不知道该怎么回答。工作这么多年，吕坤没有跳过槽，也没有面临过「35岁危机」。在他的记忆里，自己刚进入职场，公司就上了市，整个团队收入上涨、活动多样、未来可期，同事不仅是出了公司门就各奔西东的同事，还是关系融洽的朋友。</span></p><p><span>假如一切照常，吕坤大概率会在这样的工作氛围里干到退休，直到变化发生。吕坤原本是工程师出身，多年经验累积，让他对各部门工作都很熟悉，他因此成为公司的质量体系专家。而也正是因为身处一线，每天跟不同部门的同事打交道，吕坤对公司氛围的转向更加敏感。</span></p><p><span>吕坤的感觉是，这两年，随着技术变革的发生，所有人都开始思考怎么用AI赋能公司的发展。不管是员工还是领导，除了关心原本的产品质量怎么样、如何优化更好，大家的注意力更多集中在有没有新产品问世。这让吕坤心底第一次冒出忧虑——自己的技术，能够适应时代的变化吗？</span></p><p><span>这不是吕坤一个人的焦虑——当整个行业都在讨论AI，最先感受到冲击的，永远是每天泡在一线的人。他们隐隐感觉到，职场里的很多东西都在重构，比如新技术的升级、新规则的制定、新岗位的出现、新人才的标准……数不清的变化让人应接不暇，FOMO情绪随之蔓延。而某种程度上来说，重构又是一种机会，来自一线的工作者们不愿错过浪潮，更希望在重构中找到自己的定位。</span></p><p><span>00后职场新人朱朝冉就是例子。他2023年才毕业，找工作的时候，「所有跟AI沾边的工作都更赚钱」，他因此动了试一试的念头，从美术专业转向，找了一份训练视觉模型的工作。</span></p><p><span>只是，要跨专业学新东西，不是一件容易事。等入了行，朱朝冉才知道，AI的发展比自己想象中更快，在这个行业，每天都有模型发布、迭代。而像他这样非AI专业的学生，即便是摸到了AI的门槛，也只能从事最边缘的测试工作。新模型来了，朱朝冉就跟着学，专业名词隔着山，一篇论文得看一个月，好不容易理解一些了，「今天学的技术，隔两天又过时了，题出得比高三还快」。</span></p><p><span>学不动的时候，朱朝冉会产生很多年轻人共有的困扰——难道不学计算机，我就没有职业上升空间了吗？</span></p><p><span>这个问题，还无数次困扰着32岁的一线蓝领魏云。她是雅迪集团的精益工程师，这几年的制造行业，企业对于效率的追求越发极致，这个岗位因此备受重视。魏云需要做的，就是穿梭在各个车间，发现产线上的效率问题，再跟各方协调、寻找出优化空间。</span></p><p><span>只是，在同样的车间路线里来回走动是一种巨大的消耗。魏云观察过，这份工作的离职率很高，很多人刚把检查路线走熟了就离职，原因都是「担心无法得到成长」。这个潜在的职业归宿让魏云担忧，她不是技术岗位出身，本科学的其实是管理，因此缺少了很多专精的技术知识，不够了解制造业的每一环。这份工作再干下去，自己的职业还能怎么发展？魏云不确定。和吕坤一样，她也不想等着被变化淘汰，想自己找一条新路。</span></p><p><span>而在车间之外，所有人都在讨论AI。与许多停留在焦虑情绪上的人不同，吕坤、朱朝冉、魏云是那种积极去理解变化、感受变化、迎接变化的人。这与他们的「特殊身份」有关，他们可能不是技术大拿，也未必有多深的资历，但都位于一线岗位，每天处理流程、协作、交付和重复任务，是最早真切感受到，自己熟悉的工作方式正在发生变化的人。</span></p><p><span>他们没有停留在感受上，还采取了行动，我的工作能够怎么和AI相结合？如何让自己更加无可替代？如何从最先受到冲击的人，变成最先追上风的人？</span></p><p><span style="font-weight:bold">最懂问题的人，自己动手改流程</span></p><p><span>追风的路上，吕坤最开始的应对方法跟很多人一样，下班后看看新闻，再加几个社群，看大家都在里面聊什么，好像加入了谈论就能不被时代抛下。但放下手机，他心知肚明，AI距离他依旧很远。</span></p><p><span>吕坤并不想做这样的旁观者。</span></p><p><span>转折发生在去年夏天，飞书开展了一场AI效率先锋大赛。这是一场挺特别的比赛，飞书联合了上百家使用飞书的企业，不比业务，只比AI技能。比赛发起后，各家企业参赛热情高涨，大家都想知道，普通人究竟能够用AI做点什么？在这样的疑问里，飞书无疑是那个最贴近普通打工人的工具，随之成为大家探索AI路径的窗口。</span></p><p><span>吕坤的名字也出现在了比赛名单。他的想法是，自己虽然还不懂AI，但飞书的使用门槛并不高，至少先试试。至于要用飞书的AI功能做什么、提升哪方面的效率，反倒成了个小问题——在这家公司干了20年，老板对吕坤的定位是「工龄超过20年还在为公司创造价值的5个人之一」，没有谁比吕坤更明白真实业务中的问题在哪里，流程里的痛点在哪里。</span></p><p><span>其实，在很多企业里，都能找到吕坤这样的员工。他们的工作内容听上去没有那么高大上，却是整个公司运转中的重要一环，他们熟悉行业、精通业务，总是能够上手解决问题，是公司里隐形的「扫地僧」。和武侠小说里武艺高强、深藏功与名的「扫地僧」不同，这些职场扫地僧，一度认为自己价值有限，是很容易被取代的普通人。然而，恰恰是在AI的冲击下，他们的「价值」被重新发现和重构。一些障碍反而被扫清了。</span></p><p><span>比如很早之前，吕坤就想开发一个数字质检系统——每到审核季，集团的70多个部门都得审，他们要根据部门的差异制定不同的表格，再守着一个个项目组填表格，一坐就是一整天。要检查的东西很繁琐，但所有环节都是靠人工填表格来完成，数据一多，耗费时间不说，还很容易出错。</span></p><p><span>只是，公司的研发资源有限，吕坤给技术部门提了需求之后，始终等不到开发排期，这件事情就一直拖着。等得太久，他一度琢磨过学代码，报班、上网课，但老师们教的都是代码基础知识，要解决的问题又很具体，他怎么学怎么费劲，不知道怎么用这些基础知识来解决有专业壁垒的实际问题。</span></p><p><span>技术，成了解决痛点的最大门槛，而在AI时代，技术门槛首次对普通人降到最低。吕坤就在使用中发现，飞书的内置AI工具很友好，只要使用者有清晰的想法，它就能生产出对应产品。在庞大的AI工具栏里，吕坤找到的助手是aPaaS和aily，两者结合智能问答，他做出了一款专属于自家公司的SmartQMS（智能质量管理系统）。</span></p><p><span>可以说，吕坤自己动手，就做成了这件过去要等大半年排期的事。SmartQMS上线之后，大家的工作方式彻底变了，检查时，再也不需要一群人围坐在屋子里，对着表格一条一条熬时间——吕坤输入审核对象，系统会自动生成表格，一键推送给相关人员，被审核者按需求线上回复、上传对应资料，数据传回系统，再由SmartQMS来写报告。</span></p><p><span>这让吕坤突然意识到，AI其实离他很近，「有一种对AI祛魅的感觉」，即便他不懂代码，飞书也能让AI看得见，更用得着。换句话说，飞书这样的AI工具，不仅弥合了业务人员和技术的距离，让他们能围绕真实的问题做尝试，又跳过一层层传达职级，直接借由这些一线工作者的双手，让AI丝滑进入整个企业最细枝末节的工作流。</span></p><p><span>吕坤第一次感到，原本被嫌弃的「年纪」，背后其实是他被低估的流程经验，他不再焦虑自己的年龄跟不上AI——原来自己20年攒的业务经验，才是AI时代最值钱的东西。</span></p><p><span>魏云，同样属于公司里的「隐形扫地僧」。她的工作年限虽然没有吕坤长，但她的工作经验，全是一步一步在厂房里走出来的。不同于坐在办公室里，精益工程师是一份靠脚走出来的工作，她需要深入一线，观察不同岗位上工人们的每一个动作。一天下来，魏云能走出两三万步的步数，走得太多太多，她甚至能察觉不同车间地面的微弱硬度区别。</span></p><p><span>最了解现场「摩擦」的人，成了那个最有机会重构流程的人。魏云发现，因为AI的助力，她这样的普通人，正在参与推动一场工作方式的组织变革，而这在传统叙事里绝非易事——那可能意味着你需要有足够的技术、资历、职位甚至运气。</span></p><p><span>一趟趟走下来，魏云敏锐地察觉到，很多地方都可以优化。比如，上班期间，由于检查人员随时在巡查，工人们的操作问题其实很小。真正的问题在下班后，没人检查了，反而会有工人不按照标准整理收尾，她们就需要等所有人工作结束后再去巡查一遍。</span></p><p><span>和吕坤一样，魏云也一直想做个小程序来解决问题。但在制造业，成本管控是件大事，相对于搭建系统要花的钱，人工成本甚至更低，就算大家都知道流程有问题，也很难有动力改变。有时候，一句话就能把魏云噎回去，搞这些花样，「不如让人员直接去巡查」，她和同事们困在一成不变的流程里，只能执行。</span></p><p><span>但在魏云所在的企业引入飞书后，她发现靠着飞书的AI工具，这些攒了很久的问题，自己就能动手改——不像过去，要等资源、等排期，最后常常不了了之。就像收尾工作的监管方式，下班了，只要让工人们拍张照，让AI来检查有没有问题，合格后，记录上传多维表格就可以。</span></p><p><span>思路一旦打开，工作流程中的很多困扰都有了新解法。每天的巡检结果，她直接用飞书的多维表格记录，再把问题推送给各部门负责人整改。魏云发现，在规范流程时，反而是AI更有效，有时候，如果是人和人对接，工人们会回复「我很忙，你不要打扰我」，只因为她是一个可以面对求情、推诿的人。</span></p><p><span>有了这些成功经验，魏云不再担心「没有技术就没法成长」，因为靠着对现场的熟悉，她成了公司里最早用AI解决真问题的人。</span></p><p><span>朱朝冉则像极了那些初出茅庐的年轻人，曾经忙于追寻江湖最高「武功秘籍」，今年开始，他也尝试做出改变，没有再继续追着模型更新做边缘测试工作，而是进入企业，沉到业务一线寻找AI的落地价值。</span></p><p><span>他的新工作，同样深入华熙生物业务一线——明确公司需求之下，朱朝冉和团队成员们依托飞书AI工具，开发了一个针对销售前台培训项目的系统。在医美行业，培训是刚需，前台们需要给顾客讲清楚新成分、新技术到底是什么。此前，靠人力，很难检测每一次培训质量，这让前台知识水平总是参差不齐，但朱朝冉所开发的AI工具能够模拟QA问答、分析员工学习进度等等，这让整个团队的培训效率大幅提高，解决了公司的大问题。他也因此获得进入华熙生物AI效率部的机会，成为一名AI agent工程师。</span></p><p><span>从「追模型」的焦虑，转向具体的业务，用AI解决真实问题，朱朝冉得到了久违的成就感，也终于感到放松。</span></p><p><span>在这些行动中，魏云、吕坤、朱朝冉成了最先撕开AI缝隙、在其中找到立足之地的那类普通人。不是因为他们是最早「学会AI」或「使用AI」的人，而是他们原本就是那类擅长发现问题、解决问题的人，如今在AI的助力下，他们反而能够扫清技术障碍，跳出岗位限制，一跃到最前沿，成为把个人经验转化成组织能力的「先锋」。</span></p><p><span style="font-weight:bold">职场扫地僧，重新发光</span></p><p><span>当AI开始重塑企业，被重新定义的，不只是工作方式和组织流程，还有「什么样的人更重要」。</span></p><p><span>吕坤原以为称得上「先锋」的一定是那些极少数技术精英，但现在，他比以前更笃定，只有在一线，「才知道最希望改变的是什么」。强大的AI抹平了技术的壁垒，离业务足够近，又敢于行动，这样的普通人也许更值得被重视。他们也在影响更多身边人对AI的看法。</span></p><p><span>吕坤、魏云，都属于典型的例子。吕坤依靠飞书所研发的SmartQMS之所以广受好评，正是因为解决了大多数同事的烦恼——放在以前，同事们工作忙碌，还要花时间参与质量审核，最常问吕坤的问题就是「你为啥要找我茬？」但他又很明确，质量工作不可或缺，沉甸甸的责任摆在那儿，让人为难。</span></p><p><span>现在，所有人都轻松了，不管是质检人员，还是项目组成员，都从重复劳动中被解放出来，有时间去攻克更重要的工作，创造更大的价值。</span></p><p><span>当然，光会发现问题还不够，AI时代的人才，还需要懂得如何把AI嵌进工作流程，用更聪明的方式解决问题。</span></p><p><span>此前的巡检经历，让魏云很熟悉不同部门的困扰。比如仓储部门，货物来了，工人们要一一整理、手动登记，少了零件，又要找不同的厂家补货。等补了某个新货，工人们又得重新整理一遍表格，排查遗漏，花时间在层层叠叠的Excel文件里更新某个小小的数据。</span></p><p><span>魏云又用上了飞书的多维表格，她很快搭建了新的在制品异常管理系统，那之后，哪里缺了件、哪里补了件、跟催进度如何，智能表格都可以直接总结，并给出明确的答案。与此同时，人的角色依旧无法替代，因为制造业现场变化复杂，AI检查出来的问题还是需要工人们去跟进、解决。随着工作的烦心指数直线下降，大家逐渐相信，AI不是一种虚假的幻觉，更不是被想象出来的替代者。</span></p><p><span>从那之后，很多不同部门的同事找到魏云，想让她针对部门的痛点去给出解决方案。魏云彻底从一名普通的精益工程师转身，成了公司里的「蓝领AI讲师」和「流程架构师」，飞书和AI的价值，早已不再是帮她个人实现提效，而是和她一起，去推动更大的团队和组织变化。</span></p><p><span>就像这样，AI时代的人才，还总能把自己或身边人在一点一滴的工作中所沉淀下来的个人经验，转化、放大为整个组织的竞争力。</span></p><p><span>SmartQMS的出现，让大家直观地感受到了AI对于流程改进的效用，越来越多的同事开始学习吕坤的做法。遇到问题，他们找的第一个人还是吕坤。同事们这才意识到，做了多年质检工作的吕坤，除了AI用得熟练，在具体业务上更像是一名资历老道的「老中医」，他对不同部门流程里的关键问题、风险全都门儿清，还能很快指出来，有什么功能可以依托AI搭建。</span></p><p><span>这时，AI不仅优化了流程，还让印刻在吕坤脑子里的业务经验被沉淀、被共享、被放大。而这些经验，此前很难复用，因此常常被人们所忽视。现在，「职场扫地僧」不再是个荣誉称呼，而是同事们打心眼儿里的肯定。大家都没想到，此前，他们总在抱怨的那个中年体系审核员，总能一针见血地找到各部门的痛点，结合AI给出解法。</span></p><p><span>朱朝冉开发的销售前台培训系统，已经在华熙生物内部进行小范围推广测试，他也从当年追技术焦虑的新人，成长为部门的业务骨干。</span></p><p><span>至此，我们可以去定义这个时代的「AI先锋」——AI时代更稀缺的人，不一定是最懂技术的人，而是最先把AI带进业务现场、放大业务经验、转化成组织能力的人。</span></p><section style="color:rgb(62, 62, 62);font-weight:400"><section><section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/UmZ4wiMzUN3gqrJF1X7XP4.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/tzinm4xirGN1o4Ye41Y19k6.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section><section><section><section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2NWqyG2y0e6x33mLE2LsIo8.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section></section></section></section></section></section><p><span>这样的人，可以是工作20年的老员工，也可以是刚毕业的年轻人；可以是办公室工程师，也可以是车间的蓝领——不分年龄、不分岗位、不分专业。真正重要的从来不是追逐技术本身，而是把AI变成解决问题的方法。此刻，这样的改变正在无数个一线工位上发生。</span></p><p><span>飞书今年将原本的「效率先锋」升级为「AI先锋」，正是因为发现AI时代的人才标准已经变了：AI不会创造先锋，但会奖励那些最先把它用进业务、把一线经验变成方法、把个人提效变成组织能力的人。吕坤、魏云、朱朝冉所代表的，正是这类「普通」又不普通的AI先锋。</span></p><p><span>未来，AI属于每一个普通人，它不仅能帮职场人解决工作里的真实问题，也能成为每个人的创意助手。</span><span>这个五一劳动节之际，飞书推出的「虾体诗」活动就是最好的例子：用户只需要输入关键词，通过「虾体诗Skill」，AI就会将与你一起工作的点点滴滴，创作成专属诗歌——无论是工作提效还是生活创作，AI的价值，永远是让普通人的能力被放大、被看</span><span>见。<img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3GVTfy2kjsoxbiP0d2TEcwp.webp" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 人间故事铺</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69ef3718a3ad7425d5435bec?channel_id=68d3ec300d8694abdfcdf913">https://lingowhale.com/reader/web/69ef3718a3ad7425d5435bec?channel_id=68d3ec300d8694abdfcdf913</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

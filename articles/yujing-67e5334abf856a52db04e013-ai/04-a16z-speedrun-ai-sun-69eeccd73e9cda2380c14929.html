@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>对话A16z Speedrun唯一语音AI公司Sun：屏幕没法给你真正的个性化，声音可以</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / 中国AI创业者最新采访</div>
+                    <h1>对话A16z Speedrun唯一语音AI公司Sun：屏幕没法给你真正的个性化，声音可以</h1>
+                    <div class="meta">
+                        <span>硅星人Pro</span>
+                        <span>Mon, 27 Apr 2026 02:31:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eeccd73e9cda2380c14929?channel_id=67e5334abf856a52db04e013">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="font-weight:400;color:rgb(0, 0, 0)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/49GSTrZPxRJixagX1O8qIR.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><p style="color:rgb(48, 48, 48);font-weight:400"><span style="color:rgb(69, 69, 69);font-style:italic">a16z Speedrun SR006里有60家公司，57%做B2B。只有一家做Audio。我们和它的创始人Artin聊了45分钟，发现它踩中的东西比看起来大得多。</span></p><blockquote style="font-weight:400;color:rgb(0, 0, 0)"><strong><span style="color:rgb(136, 136, 136)">信息卡</span></strong><p><strong><span style="color:rgb(136, 136, 136)">SUN </span><span style="color:rgb(136, 136, 136)">— AI-native audio learning, built around youAI让音频内容的生成成本暴跌80倍，但没有人把这件事变成一个主动为你服务的消费级学习产品。SUN做的是：用AI实时生成个性化音频——播客、课程、深度讲解——嵌入通勤、健身、家务等屏幕之外的日常场景。不需要上传材料，不需要看屏幕，有持续记忆层。</span><strong><span style="color:rgb(136, 136, 136)">团队：</span></strong><span style="color:rgb(136, 136, 136)"> Artin，前Walmart AI预测平台负责人 · Amy，Amazon Music播客创始工程师 · Matt，前Sky9 Capital AI投资人</span><strong><span style="color:rgb(136, 136, 136)">a16z Speedrun SR006</span></strong><span style="color:rgb(136, 136, 136)">｜ Pre-seed ｜ 该届60家公司中唯一的Audio Consumer</span></strong></p></blockquote><p style="color:rgb(48, 48, 48);font-weight:400">a16z Speedrun第六届刚刚收官。60家公司，57%是B2B。</p><p style="color:rgb(48, 48, 48);font-weight:400">Consumer只有7家。做Audio的，只有1家。</p><p style="font-weight:400;color:rgb(48, 48, 48)">它叫SUN。三个人，坐标Sunnyvale，一个AI音频学习应用。No screen, just your ears.</p><p style="font-weight:400;color:rgb(48, 48, 48)">我和SUN的创始人Artin Bogdanov聊了45分钟。顺着这家公司往下挖，我们发现它踩中的东西，比大多数人意识到的要大得多。</p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1bQ58h3XXFB22yLo7H1hGThe.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><p style="color:rgb(48, 48, 48);font-weight:400"><strong>---</strong></p><section style="color:rgb(0, 0, 0);font-weight:400"><p>1</p><p style="color:rgb(48, 48, 48);font-weight:bold"><strong>一个笔记工具的意外爆发</strong></p></section><p style="font-weight:400;color:rgb(48, 48, 48)">先说一个看似无关的事。</p><p style="color:rgb(48, 48, 48);font-weight:400">2024年9月，Google给NotebookLM加了一个叫Audio Overview的功能——上传一篇论文或一份财报，它生成一段两个AI主持人互相讨论的播客。</p><p style="color:rgb(48, 48, 48);font-weight:400">这个功能炸了。用户开始把论文、合同、甚至日记喂进去，在TikTok和Twitter上分享"听自己的论文变成播客"的片段。移动端上线几个月，月活突破800万——在部分时段的Google Trends热度上，它甚至超过了Google自家旗舰大模型Gemini。</p><p style="color:rgb(48, 48, 48);font-weight:400">到2025年底，Audio Overview已支持超过80种语言，并开始测试"授课模式"（Lecture Mode）——不再是两个人闲聊，而是一个AI讲师给你上30分钟深度课。a16z在《State of Consumer AI 2025》报告里直接将NotebookLM评为Google推出的最成功的创新产品界面。</p><p style="font-weight:400;color:rgb(48, 48, 48)">一个原本做笔记的工具，因为加了音频生成，变成了现象级应用。</p><p style="color:rgb(48, 48, 48);font-weight:400">这不是偶然。它释放出一个信号：用户对"用耳朵获取信息"的需求，远远被低估了。</p><section style="color:rgb(0, 0, 0);font-weight:400"><p>1</p><p style="color:rgb(48, 48, 48);font-weight:bold"><strong>屏幕见顶，耳朵扩张</strong></p></section><p style="color:rgb(48, 48, 48);font-weight:400">把视野拉远，NotebookLM的爆发只是冰山一角。</p><p style="font-weight:400;color:rgb(48, 48, 48)">美国成年人日均屏幕时间已达7小时2分钟，但53%的人想减少手机使用，超过一半承认屏幕时间"完全没有生产力"。用户被算法绑在屏幕前7个小时，有一半觉得毫无价值。与此同时，Edison Research 2026年数据显示2.33亿美国人每月收听在线音频——72%的人听音频时在做其他事情，阅读时这个比例只有32%。音频不跟TikTok抢眼睛——它填满了眼睛被占用但大脑仍有余力的所有暗时间：通勤、健身、做饭、做家务。这是一块巨大的、被视觉媒体完全忽略的注意力市场。</p><p style="font-weight:400;color:rgb(48, 48, 48)">制作端的变化同样剧烈。2023年一部有声书要3,420到7,650美元加8到12周，2026年用AI生成低于250美元、不到1小时——成本暴跌10到80倍。ElevenLabs拿到5亿美元D轮、估值110亿，a16z超额跟投4倍。AI配音有声书已占新发行量的23%，非虚构类内容上AI音频和人类录制版的完播率、退货率已无统计学差异。</p><p style="color:rgb(48, 48, 48);font-weight:400">屏幕见顶，耳朵扩张，成本崩溃，体验过线。四条线同时交汇。</p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3tKuMl1LpjLpmKMWH3s4qbv.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><p style="color:rgb(48, 48, 48);font-weight:400"><strong>---</strong></p><section style="color:rgb(0, 0, 0);font-weight:400"><p>1</p><p style="color:rgb(48, 48, 48);font-weight:bold"><strong>四十年悬而未决的问题</strong></p></section><p style="font-weight:400;color:rgb(48, 48, 48)">拉到教育场景里，故事更有张力。1984年，教育心理学家Benjamin Bloom证明了一件事：一对一辅导的学生成绩比普通班级高出两个标准差，但给每个学生配一个导师在经济上不可能。四十年来，所有教育技术都停在了半路——直到2025年哈佛在Nature旗下发表随机对照实验，证明AI导师的学习增益直接逼近Bloom的黄金标准。AI导师有效。那最佳的交付形式是什么？BBC的神经科学研究发现，边运动边听音频的人比看屏幕的人长期记忆编码高22%。音频学习不是视觉学习的降级版——它让人在生活的缝隙里持续学习。</p><section style="color:rgb(0, 0, 0);font-weight:400"><p>1</p><p style="font-weight:bold;color:rgb(48, 48, 48)"><strong>和耶稣聊天</strong></p></section><p style="font-weight:400;color:rgb(48, 48, 48)">Artin不会跟你讲这些论文。</p><p style="font-weight:400;color:rgb(48, 48, 48)">他告诉我，在Walmart干了几年之后——年营收超过6000亿美元，230万员工，全球收入第一的公司——他每天工作大约12个小时。他负责智能商业增长部门的预测平台：如果Taylor Swift下周在Austin开演唱会，这家店要备多少卷厕纸？要排多少人上班？从下一个小时到未来五年，财务、运营、时间三个维度交叉预测。</p><p style="font-weight:400;color:rgb(48, 48, 48)">回到家，他想读圣经——66卷书，他的家庭是基督徒。但12个小时盯完屏幕后，眼睛痛得读不下去。</p><p style="font-weight:400;color:rgb(48, 48, 48)">于是他做了一件事：把圣经全部喂给AI，然后开始"和耶稣聊天"。问问题，听耶稣讲。后来耶稣开始给他上课。再后来，他把亚里士多德也加了进去。</p><p style="color:rgb(48, 48, 48);font-weight:400">"这就是SUN诞生的方式，"Artin说。"我相信音频是最健康的信息摄取方式。"</p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/28oMVR1rMYJUu827h2FDyBm.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><p style="color:rgb(48, 48, 48);font-weight:400"><strong>---</strong></p><section style="color:rgb(0, 0, 0);font-weight:400"><p>1</p><p style="color:rgb(48, 48, 48);font-weight:bold"><strong>从"预制品"到"定制品"</strong></p></section><p style="color:rgb(48, 48, 48);font-weight:400">那SUN到底是什么？</p><p style="color:rgb(48, 48, 48);font-weight:400">传统的音频消费——播客、有声书——是单向的、预录的、为所有人做一份内容。听一个四个半小时的播客有一段没懂，你得暂停、离开、去别处找答案再回来。只有15分钟通勤时间的人，四个半小时的播客根本不是选项。</p><p style="color:rgb(48, 48, 48);font-weight:400">SUN要做的是把音频从"预制品"变成"定制品"。</p><p style="color:rgb(48, 48, 48);font-weight:400">你可以对它说："生成一个60分钟的Deep Dive播客，主题是怎么在a16z Demo Day上成功，针对旧金山的B2C应用。"它全网抓取最新信息，过滤过时内容，编织成一段有结构的音频体验——有时是一个讲述者，有时是两人辩论，有背景音乐和转场。你随时可以打断、提问，它回答后继续。</p><p style="color:rgb(48, 48, 48);font-weight:400">或者什么都不说，直接按播放。SUN有一个记忆层，它知道你是谁、你在哪个阶段、你想成为什么样的人，会主动推送内容。Artin告诉我，有一天他和投资人开完会，觉得在某个问题上有分歧但不想制造信任裂痕，回到办公室后SUN推了一个三分钟的音频——主题是"如何获得投资人的信任"。</p><p style="color:rgb(48, 48, 48);font-weight:400">"这就是魔法发生的时刻，"他说。"It's almost like a universal sense of timing."</p><p style="color:rgb(48, 48, 48);font-weight:400">Artin把这叫做"Audio TikTok, but without brain rot"——像TikTok一样懂你，但不用多巴胺绑架你。</p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3vG0lvyROPS37BVj55fqDg.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><p style="font-weight:400;color:rgb(48, 48, 48)"><strong>---</strong></p><section style="font-weight:400;color:rgb(0, 0, 0)"><p>1</p><p style="color:rgb(48, 48, 48);font-weight:bold"><strong>不要你看屏幕</strong></p></section><p style="font-weight:400;color:rgb(48, 48, 48)">我问Artin，SUN和其他学习产品的根本区别是什么。他没讲功能，讲了哲学。</p><p style="font-weight:400;color:rgb(48, 48, 48)">"我们活在注意力经济里，"他说。"所有App都想要你的注意力。TikTok用多巴胺换你的时间——看吧，跟我玩你会有火花的。Duolingo呢？也是多巴胺，但它说我们给你的是好东西，因为你在学习——broccoli with chocolate topology，裹了巧克力的西兰花。但本质上，它们都在说同一句话：给我你的注意力，看着屏幕。"</p><p style="color:rgb(48, 48, 48);font-weight:400">"SUN不要你看屏幕。We want to dissolve into your daily routine。我们不想改变你的生活节奏，不想让你额外拿出时间做'学习会话'。通勤时听，健身时听，散步时听。我们只是嵌入你已经在做的事情里。"</p><p style="color:rgb(48, 48, 48);font-weight:400">"用视频做到这一点是不可能的，"他说。"视频意味着你必须看着屏幕，必须保持那个姿势。而我想让你去体验生活——go for a walk, go to the gym, be mobile——在路上学。It's like a voice in your ear that gives you information at the right time."</p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4baWCIwHfwn4APZOQdVCa4.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><p style="font-weight:400;color:rgb(48, 48, 48)">这段话背后是SUN和NotebookLM最本质的区别。NotebookLM是reactive的——你得先上传数据集，它才能生成内容。它是一个工具，等着你喂东西。SUN是proactive的——它有持续的记忆层，每一次交互不是独立的session，而是在你的长期画像上不断叠加。它不是帮你"做一次研究"，而是持续性地推动你往你想去的方向走。</p><p style="font-weight:400;color:rgb(48, 48, 48)">Artin花了一年给Forbes写AI与产品设计交叉领域的文章，发展出一个核心观点：大多数产品把太多选项堆在界面上，给用户造成选择瘫痪。AI的价值不是给你更多选项，而是用对你的理解来消除选项。</p><p style="color:rgb(48, 48, 48);font-weight:400">"Personalization is empathy，"他说。"真正的个性化就是共情。你真正理解用户，就不需要给他十个选项让他自己挑。"</p><p style="color:rgb(48, 48, 48);font-weight:400"><strong>---</strong></p><section style="color:rgb(0, 0, 0);font-weight:400"><p>1</p><p style="font-weight:bold;color:rgb(48, 48, 48)"><strong>几乎没有人的位置</strong></p></section><p style="font-weight:400;color:rgb(48, 48, 48)">在AI音频学习这个赛道上，已有几个名字。Speak拿到7800万美元C轮、估值10亿，做AI语言口语对练——但只做语言。PadhAI做考试备考的AI语音辅导，在印度拿到20万用户——但只做考试。YouLearn是YC孵化项目，把讲义转化成AI音频导师——但需要你上传材料。NotebookLM最接近SUN，但正如前文所述，它是reactive的——你必须给它喂数据，它才能生成内容。</p><p style="color:rgb(48, 48, 48);font-weight:400">值得注意的是，把这四个名字排在一起看，会发现一个规律：每个都在AI音频的某个切面上做到了验证，但每个都被自己的边界卡住了——要么只做一个品类，要么只能被动响应，要么只能处理用户已有的材料。</p><p style="color:rgb(48, 48, 48);font-weight:400">那个精确的空白地带是什么？一个主动为你生成全品类个性化音频学习内容的消费级产品——不限语言，不限考试，不需要上传，有持续记忆层，能嵌入日常节奏。</p><p style="font-weight:400;color:rgb(48, 48, 48)">这个位置上，几乎没有人。</p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/27WjaB3RYxcp1WyAY427OEMI.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><p style="font-weight:400;color:rgb(48, 48, 48)">SUN的团队配置也值得单独看一下。Artin来自Walmart的AI预测系统，做过从下一小时到未来五年的全维度商业预测。Amy是Amazon Music播客的创始工程师，在大平台内部做了四年音频产品——她知道大平台为什么做不好这件事。Matt在Sky9 Capital做了两年多AI项目投资和孵化，看过大量类似的idea之后选择下场加入——一个VC选择跳到创业这边，通常意味着他看到了一个别人还没看到的东西。</p><section style="font-weight:400;color:rgb(0, 0, 0)"><p>1</p><p style="color:rgb(48, 48, 48);font-weight:bold"><strong>意外的用户</strong></p></section><p style="font-weight:400;color:rgb(48, 48, 48)">对话快结束时，我问Artin有没有意外的用户——那种你没预期到会出现的人。</p><p style="color:rgb(48, 48, 48);font-weight:400">他想了想，说了两个。</p><p style="font-weight:400;color:rgb(48, 48, 48)">一个是55岁的女性用户。三个孩子，有工作，做家务的时候听SUN。她告诉Artin："我一直想继续学习，但我没有时间。现在做家务的时候在听，终于可以了。"</p><p style="color:rgb(48, 48, 48);font-weight:400">Artin说他从没想过要触达这个群体。但这个案例让他意识到一件事：定义用户不一定从人口统计学出发，可以从"时间场景"出发——什么时候人们的耳朵是空闲的，但手和眼睛是忙碌的？做家务就是这样一个窗口。由此反推：谁在做家务？可能是有大房子的家长，可能在德州或阿肯色，可能对育儿或个人兴趣有学习需求。</p><p style="font-weight:400;color:rgb(48, 48, 48)">另一个是ADHD用户。她说音频比文字更容易消化，SUN把内容切成短课程的方式帮她更容易完成学习。</p><p style="color:rgb(48, 48, 48);font-weight:400">这两个案例指向同一件事：SUN真正在争夺的不是某个人口画像，而是某种时间状态——身体在动、眼睛被占、大脑仍有余力的那些时刻。</p><p style="font-weight:400;color:rgb(48, 48, 48)">Artin还提到了他的"Son Test"。他有一个三个月大的儿子。自从当了父亲，他给产品加了一个新的KPI——一个极其二元的判断标准：</p><p style="font-weight:400;color:rgb(48, 48, 48)">"我愿不愿意让我儿子每天用这个功能？"</p><p style="color:rgb(48, 48, 48);font-weight:400">"我永远不会让这个App变得让人上瘾，因为我不想让我儿子产生依赖。如果某个功能我不愿意让我儿子每天使用，那我也不愿意让其他任何人使用。"</p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2bmXa43HSt8N4jbogX3XhEvT.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span><p style="font-weight:400;color:rgb(48, 48, 48)"><strong>---</strong></p><section style="font-weight:400;color:rgb(0, 0, 0)"><p>1</p><p style="color:rgb(48, 48, 48);font-weight:bold"><strong>那个扶梯</strong></p></section><p style="color:rgb(48, 48, 48);font-weight:400">在SR006的画像里，SUN看起来是个异类——不是B2B，三个人，做Audio。但如果你把视角拉远——NotebookLM 800万月活、ElevenLabs 110亿估值、音频制作成本暴跌80倍、2.33亿美国人每月听在线音频、哈佛RCT证明AI导师学习增益翻倍、BBC证明听音频比看屏幕记忆编码高22%——SUN不是异类。它是早到了。</p><p style="font-weight:400;color:rgb(48, 48, 48)">Speak做AI语言口语对练做到了10亿估值。全品类的AI音频学习，还没有赢家。</p><p style="color:rgb(48, 48, 48);font-weight:400">我问Artin，SUN最终想改变什么——不是功能层面的，更大的那个东西。</p><p style="color:rgb(48, 48, 48);font-weight:400">他说SUN的使命是"帮你成长"。在入门引导的第一步，SUN问的是两个问题：你今天在哪里？你想到哪里去？</p><p style="color:rgb(48, 48, 48);font-weight:400">"转变是有距离的，你在这里，你想去那里。你知道机场里那种自动扶梯吗？你可以站在上面不动，也可以走得飞快，但不管怎样你都在前进。SUN就是那个扶梯。"</p><p style="color:rgb(48, 48, 48);font-weight:400">"在这个AI试图替代你的时代，SUN试图升级你。"</p><p style="color:rgb(48, 48, 48);font-weight:400">他停了一下。</p><p style="color:rgb(48, 48, 48);font-weight:400">"SUN is light. And light is nice."</p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3aOqfW3P7KvzaDxf24eUxIY.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><section><section><section><span><section><section style="color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1lGYms2aIy89Ij3XL6nrj.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section><section><section><strong><a href="https://mp.weixin.qq.com/s?__biz=MzkyNjU2ODM2NQ==&amp;mid=2247628041&amp;idx=1&amp;sn=9113e0d2da915438928b90889f309c7b&amp;scene=21#wechat_redirect"><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3NEKuA1s54lR3pCYyr2XPrRM.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></a><a href="https://mp.weixin.qq.com/s?__biz=MzkyNjU2ODM2NQ==&amp;mid=2247628004&amp;idx=2&amp;sn=380870d49c8de074262c77400d98b2aa&amp;scene=21#wechat_redirect"><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Rci5x3xmDzYg5z6M3cRBNK.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></a><section><a href="https://mp.weixin.qq.com/s?__biz=MzkyNjU2ODM2NQ==&amp;mid=2247627962&amp;idx=1&amp;sn=b549eef256fa5aecd5f671715c5288bb&amp;scene=21#wechat_redirect"><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/4fRAgC3fpJOG3VLntz48OXiJ.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></a></section></strong></section></section></section></section></span></section></section></section>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / 中国AI创业者最新采访</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eeccd73e9cda2380c14929?channel_id=67e5334abf856a52db04e013">https://lingowhale.com/reader/web/69eeccd73e9cda2380c14929?channel_id=67e5334abf856a52db04e013</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

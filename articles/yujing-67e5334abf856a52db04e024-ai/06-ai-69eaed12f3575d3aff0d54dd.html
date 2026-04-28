@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>“我，把创业想法扔给AI，它居然帮我找到了投资人”</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI行业最新融资案例解读</div>
+                    <h1>“我，把创业想法扔给AI，它居然帮我找到了投资人”</h1>
+                    <div class="meta">
+                        <span>创业邦</span>
+                        <span>Fri, 24 Apr 2026 03:20:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69eaed12f3575d3aff0d54dd?channel_id=67e5334abf856a52db04e024">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <p><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2fHKJZ1kP6WL2NHLF52bLPHF.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></p><p>【视频】跳转到原文查看</p><p>【视频】跳转到原文查看</p><p><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/oTA1ThpSnO3wQOoL4A7Fpr.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></p><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">那时候没有</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">AI，只有「人工」</span></span></strong></p><p><span><span style="color:rgba(0, 0, 0, 0.9)"><a href="https://chat.aitoumi.com/chat"><span style="font-weight:bold">创小融（点此直接体验）</span></a></span><span style="color:rgba(0, 0, 0, 0.9)">是宜信</span><span style="color:rgba(0, 0, 0, 0.9)">AI Lab推出</span><span style="color:rgba(0, 0, 0, 0.9)">的</span><span style="color:rgba(0, 0, 0, 0.9)">中国第一款人工智能</span><span style="color:rgba(0, 0, 0, 0.9)">FA（融资顾问），利用智能体技术</span><span style="color:rgba(0, 0, 0, 0.9)">，</span><span style="color:rgba(0, 0, 0, 0.9)">重塑初创企业募资的全流程。</span></span></p><p><span style="color:rgba(0, 0, 0, 0.9)">宜信唐宁</span><span style="color:rgba(0, 0, 0, 0.9)">，从</span><span style="color:rgba(0, 0, 0, 0.9)">2002年开始，就在做早期创业者的投融资服务了。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">那时候没有智能体，没有大模型，只有他自己。一个项目一个项目地看，一份商业计划书一份商业计划书地改，</span><span style="color:rgba(0, 0, 0, 0.9)">大多是</span><span style="color:rgba(0, 0, 0, 0.9)">传统</span><span style="color:rgba(0, 0, 0, 0.9)">FA</span><span style="color:rgba(0, 0, 0, 0.9)">不关注</span><span style="color:rgba(0, 0, 0, 0.9)">的早期项目。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">传统</span><span style="color:rgba(0, 0, 0, 0.9)">FA为什么不接这种单子？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">太简单了，服务成本差不多，佣金却少一个零。一个早期创业者，可能连商业计划书都写不明白，你要从头教起，陪跑半年，最后成了收个三五十万，不成毛都没有。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这是个数学题，不划算。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">所以市场上一直有个空白，一群最该被帮助的创业者，反而没人服务。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">以太当年试过，雇一两百号人做线下对接，模式太重，成本太高，最后解散了。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">市场又回到了原点。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">然后呢？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">然后</span><span style="color:rgba(0, 0, 0, 0.9)">AI来了。</span></p><p><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1Uj8bM2zkPMuVqltf3jlsd0.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></p><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">一个「老炮」决定把自己装进</span></span><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">AI里</span></span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">创小融这个产品，本质上就是把那个干了</span><span style="color:rgba(0, 0, 0, 0.9)">24年的</span><span style="color:rgba(0, 0, 0, 0.9)">投资</span><span style="color:rgba(0, 0, 0, 0.9)">「</span><span style="color:rgba(0, 0, 0, 0.9)">老法师</span><span style="color:rgba(0, 0, 0, 0.9)">」，塞进了大模型里。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">不是简单的问答机器人。是那种你丢给它一个创业想法，它能告诉你「这玩意行不行、哪里不行、怎么改才行」的专业陪跑。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">你想想看，一个刚毕业的年轻人，脑子里有个模糊的</span><span style="color:rgba(0, 0, 0, 0.9)">idea，不知道跟谁聊。找FA吧，人家嫌你额度小。找朋友吧，他们只会说「牛逼」「加油」。找投资人吧，你连商业计划书都拿不出手。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">他能怎么办？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">现在他可以打开创小融，跟它聊。聊完之后，发现原来这个想法早就有人做过了，差异化不够。或者发现某个细分领域还有缝隙，值得一试。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">聊到差不多了，它能帮你生成一份正经的商业计划书。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">再然后，它会根据你的行业、阶段、特点，把你推给真正投这个领域的投资人。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">全程免费。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">只有融资成功了，才收成功费。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">听创始人</span><span style="color:rgba(0, 0, 0, 0.9)">讲这个模式的时候，我特别好奇一个问题：不怕跳单吗？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">他说了一个逻辑，我觉得挺有意思。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">「创业者欺负智能体，不值得。因为智能体可以把跳单信息同步给全行业投资人，你以后在这个圈子里还混不混了？再说了，他需要持续获得服务，会主动履约的。」</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">更重要的是，平台会用大数据监控项目融资进展，有没有成交，一清二楚。</span></p><p><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/5fulaa8df3hMteX16KHOH.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></p><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">上线三个月</span></span></strong></p><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">2000个创业者被「震撼」了</span></span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">我问创始人，现在数据怎么样？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">他说，上线三个月，迭代了六个版本，近</span><span style="color:rgba(0, 0, 0, 0.9)">2000个创业者用过。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">「多数体验完之后，都会被震撼到。」</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">震撼的点在哪里？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">我觉得是「预期差」。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">大部分人对</span><span style="color:rgba(0, 0, 0, 0.9)">AI的预期是「能聊」，但创小融给的是「懂行」。它不是泛泛地鼓励你「加油你可以的」，而是真的从投资逻辑出发，告诉你这个项目有没有机会。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">比如你想做个社区团购，它会告诉你这个赛道现在的格局是什么样的，新玩家进入的难度有多大，你的差异化在哪里。如果分析完发现这确实是个伪需求，它会委婉建议你换个方向。</span></p><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/UYUPn4pB7ad1XOtVvNBYOW.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><span style="color:rgba(0, 0, 0, 0.9)">这种「专业感」是从哪儿来的？</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">24年的积累。创始人把这二十多年看过的商业计划书、签过的TS，全部脱敏处理后，用来训练模型。更重要的是，他把这24年沉淀下来的投资判断逻辑，也注入了进去。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这不是换个模型就能抄走的。你需要既懂</span><span style="color:rgba(0, 0, 0, 0.9)">AI技术，又懂早期投融资，而且得懂24年。</span></p><p><span><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/2VQEju3gaPkj2KX2e1qOfOc.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></span></p><p><strong><span style="color:rgba(0, 0, 0, 0.9)"><span style="font-weight:bold">写在最后</span></span></strong></p><p><span style="color:rgba(0, 0, 0, 0.9)">回到开头那两条</span><span style="color:rgba(0, 0, 0, 0.9)">AI短剧。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">我觉得它们之所以会出现，是因为创小融这个产品本身有「故事性」。一个创业者看了觉得有意思，就自己做了一条。一个编导专业的年轻人，觉得好玩，又做了一条。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">这不是花钱买的广告，是用户自发的传播。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">唐宁</span><span style="color:rgba(0, 0, 0, 0.9)">说，他不希望过度解读商业模式、个人经历和其他业务。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">「好产品自己会说话，让用户体验后自行判断。」</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">我觉得这句话本身，就很像那群早期创业者的写照。不会包装，不会讲故事，只会埋头做事。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">现在好了，有了创小融，他们可以专注做事，剩下的交给</span><span style="color:rgba(0, 0, 0, 0.9)">AI。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">如果你身边有正在创业、或者想创业的朋友，可以把这个丢给他。</span></p><p><span style="color:rgba(0, 0, 0, 0.9)">也许，这就是他一直在找的那个「起点」。</span></p>
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI行业最新融资案例解读</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69eaed12f3575d3aff0d54dd?channel_id=67e5334abf856a52db04e024">https://lingowhale.com/reader/web/69eaed12f3575d3aff0d54dd?channel_id=67e5334abf856a52db04e024</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>

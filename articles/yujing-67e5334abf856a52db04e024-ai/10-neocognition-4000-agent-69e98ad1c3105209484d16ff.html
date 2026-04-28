@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>速递｜NeoCognition完成4000万美元种子轮融资，要打造会自学的通用Agent</title>
+        <style>
+            :root {
+                --bg: #f5efe6;
+                --paper: #fffdfa;
+                --text: #241f1a;
+                --muted: #665f56;
+                --accent: #bf5f2f;
+                --accent-soft: rgba(191, 95, 47, 0.12);
+                --border: rgba(36, 31, 26, 0.1);
+                --shadow: 0 24px 60px rgba(80, 57, 28, 0.12);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                color: var(--text);
+                font-family: "PingFang SC", "Hiragino Sans GB", "Noto Serif SC", "Source Han Serif SC", Georgia, serif;
+                background:
+                    radial-gradient(circle at top left, rgba(191, 95, 47, 0.14), transparent 24%),
+                    radial-gradient(circle at top right, rgba(82, 114, 88, 0.1), transparent 26%),
+                    linear-gradient(180deg, #f8f2e8 0%, var(--bg) 100%);
+            }
+
+            main {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 48px 20px 72px;
+            }
+
+            .article-shell {
+                border: 1px solid var(--border);
+                border-radius: 28px;
+                background: rgba(255, 253, 250, 0.9);
+                box-shadow: var(--shadow);
+                overflow: hidden;
+                backdrop-filter: blur(10px);
+            }
+
+            .hero {
+                padding: 36px 32px 24px;
+                background:
+                    linear-gradient(135deg, rgba(191, 95, 47, 0.08), transparent 60%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 253, 250, 0.88));
+                border-bottom: 1px solid var(--border);
+            }
+
+            .eyebrow {
+                color: var(--accent);
+                font-size: 0.78rem;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                margin: 12px 0 0;
+                font-size: clamp(2rem, 4vw, 3.5rem);
+                line-height: 1.08;
+                letter-spacing: -0.04em;
+            }
+
+            .meta {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 18px;
+            }
+
+            .meta span {
+                display: inline-flex;
+                align-items: center;
+                min-height: 34px;
+                padding: 0 12px;
+                border-radius: 999px;
+                background: rgba(36, 31, 26, 0.06);
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                margin-top: 22px;
+            }
+
+            .actions a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 42px;
+                padding: 0 16px;
+                border-radius: 999px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            .actions .primary {
+                color: #fff;
+                background: var(--accent);
+                box-shadow: 0 10px 24px rgba(191, 95, 47, 0.22);
+            }
+
+            .actions .secondary {
+                color: var(--text);
+                background: var(--accent-soft);
+            }
+
+            .article-body {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 36px 32px 44px;
+                font-size: 18px;
+                line-height: 1.9;
+            }
+
+            .article-body > :first-child {
+                margin-top: 0;
+            }
+
+            .article-body h2,
+            .article-body h3,
+            .article-body h4 {
+                line-height: 1.32;
+                margin-top: 1.9em;
+                margin-bottom: 0.75em;
+                letter-spacing: -0.02em;
+            }
+
+            .article-body p {
+                margin: 1em 0;
+            }
+
+            .article-body .openget-meta {
+                display: grid;
+                gap: 12px;
+                margin-bottom: 28px;
+                padding: 18px 20px;
+                border: 1px solid rgba(36, 31, 26, 0.08);
+                border-radius: 18px;
+                background: rgba(36, 31, 26, 0.035);
+            }
+
+            .article-body .openget-meta-item {
+                display: grid;
+                gap: 4px;
+            }
+
+            .article-body .openget-meta-label {
+                color: var(--muted);
+                font-size: 0.76rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+            }
+
+            .article-body .openget-meta-value {
+                color: rgba(36, 31, 26, 0.78);
+                font-size: 0.98rem;
+                line-height: 1.7;
+            }
+
+            .article-body a {
+                color: var(--accent);
+                text-decoration-thickness: 0.08em;
+                text-underline-offset: 0.14em;
+            }
+
+            .article-body blockquote {
+                margin: 1.5em 0;
+                padding: 0.9em 1.1em;
+                border-left: 4px solid var(--accent);
+                background: rgba(191, 95, 47, 0.08);
+                color: #544a40;
+                border-radius: 14px;
+            }
+
+            .article-body ul,
+            .article-body ol {
+                padding-left: 1.45em;
+            }
+
+            .article-body li + li {
+                margin-top: 0.5em;
+            }
+
+            .article-body code {
+                padding: 0.15em 0.38em;
+                border-radius: 6px;
+                background: rgba(36, 31, 26, 0.06);
+                font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+                font-size: 0.92em;
+            }
+
+            .article-body pre {
+                overflow: auto;
+                padding: 18px;
+                border-radius: 16px;
+                background: #212733;
+                color: #f3f5f8;
+            }
+
+            .article-body pre code {
+                padding: 0;
+                background: transparent;
+                color: inherit;
+            }
+
+            .article-body img {
+                display: block;
+                max-width: 100%;
+                margin: 1.4em auto;
+                border-radius: 16px;
+            }
+
+            footer {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 0 32px 36px;
+                color: var(--muted);
+                font-size: 0.95rem;
+            }
+
+            @media (max-width: 720px) {
+                .hero,
+                .article-body,
+                footer {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <article class="article-shell">
+                <header class="hero">
+                    <div class="eyebrow">语鲸 / AI行业最新融资案例解读</div>
+                    <h1>速递｜NeoCognition完成4000万美元种子轮融资，要打造会自学的通用Agent</h1>
+                    <div class="meta">
+                        <span>Z Potentials</span>
+                        <span>Thu, 23 Apr 2026 02:50:00 GMT</span>
+                    </div>
+                    <div class="actions">
+                        <a class="primary" href="https://lingowhale.com/reader/web/69e98ad1c3105209484d16ff?channel_id=67e5334abf856a52db04e024">查看原链接</a>
+                        <a class="secondary" href="https://martinwong248yoyo.github.io/rssmatsite/">返回 RSS 索引</a>
+                    </div>
+                </header>
+                <section class="article-body">
+                    <section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/k3K144jWfH2MYR2qPiITX.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1npH3hzqk66AIWac6wizR.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /><p><em><span><span>图</span></span><em><span><span><span>片来源：</span></span><span><span>NeoCognition</span></span></span></em></em></p><p>投资者正在积极争取AI 研究人员创办初创公司，以使 AI 更加可靠和高效。</p><p>俄亥俄州立大学教授、AI Agent 实验室负责人 Yu Su 表示，他最初抵制了风险投资公司要求他将研究商业化的压力。当他看到基础模型的进步可以使Agent 真正个性化时，他终于在去年迈出了这一步，将自己的研究成果分拆成一家初创公司。</p><p><span style="font-weight:bold">NeoCognition </span><span style="font-weight:bold">是一家 </span><span style="font-weight:bold">Su </span><span style="font-weight:bold">描述为开发自学习 </span><span style="font-weight:bold">AI </span><span style="font-weight:bold">Agent </span><span style="font-weight:bold">的研究实验室的初创公司，刚刚从隐身模式中现身，获得了</span><span style="font-weight:bold">4000 </span><span style="font-weight:bold">万美元的种子轮融资。</span>本轮融资由 Cambium Capital 和 Walden Catalyst Ventures 共同领投，Vista Equity Partners 和包括 Intel 首席执行官 Lip-Bu Tan 和 Databricks 联合创始人 Ion Stoica 在内的天使投资者参与。</p><p>"今天的Agent 是通才，"Su 告诉 TechCrunch。"每次你要求它们执行任务时，你都在冒险。"</p><p>根据 Su 的说法，问题在于缺乏一致性。他表示，<span>无论是来自 </span><span>Claude</span><span>、</span><span>OpenClaw </span><span>还是 </span><span>Perplexity </span><span>的计算机工具，当前的</span><span>Agent </span><span>只能在大约 </span><span>50 %</span><span>的时间内成功完成预期任务。</span></p><p>由于Agent 仍然不够可靠，它们还没有准备好被信任为独立的工作者，Su 告诉 TechCrunch。<span>NeoCognition </span><span>打算通过开发一个能够自学成为任何领域专家的</span><span>Agent </span><span>系统来改变这一现状，类似于人类的学习方式。</span></p><p>Su 辩称，虽然人类智能范围广泛，但其真正的力量在于我们的专业化能力。当我们进入一个新的环境或职业时，我们可以快速掌握其独特的规则、关系和后果。</p><p>NeoCognition 正在构建能够镜像这一确切方法的Agent 。</p><p>"对于人类来说，我们持续的学习过程本质上就是为任何职业、任何环境构建世界模型的过程，"Su 说。"我们相信，要让Agent 成为专家，它们需要自主学习来构建任何给定微观世界的模型。"</p><p><span>Su </span><span>认为这种快速专业化的能力是让 </span><span>AI </span><span>能够可靠地独立工作的关键缺失环节。</span></p><p>虽然可以为自主任务训练Agent ，但它们必须针对特定的垂直领域进行定制工程。NeoCognition 的不同之处在于<span style="font-weight:bold">它正在构建能够自学和在任何领域专业化的通才型</span><span style="font-weight:bold">Agent </span>。</p><p>NeoCognition 打算主要向企业销售其Agent 系统，包括成熟的SaaS 公司，这些公司可以使用这些系统来构建Agent 工作者或增强现有产品供应。</p><p>Su 强调，Vista Equity Partners 的投资对此特别有价值。作为软件领域最大的私募股权公司之一，Vista 可以为 NeoCognition 提供直接访问其庞大投资组合的机会，这些公司都在寻求用 AI 来现代化其产品。</p><p>NeoCognition 目前拥有约 15 名员工，其中大多数持有博士学位。</p><p><span style="color:rgb(136, 136, 136);font-style:italic">参考资料：</span></p><p><span style="color:rgb(136, 136, 136);font-style:italic">https://techcrunch.com/2026/04/21/ai-research-lab-neocognition-lands-40m-seed-to-build-agents-that-learn-like-humans/</span></p><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><span><strong><strong><span><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247506405&amp;idx=1&amp;sn=29bdac1ee34aaceade9e66e9b0867d8f&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Rb4gq1Kttj0C6sdJ2kzkXN.png" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></span></strong></strong></span></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247503698&amp;idx=4&amp;sn=ade3fdbb8a82ca59be3212c4843bb1a0&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/3tGylYOPsWP3H0UuD3uCS.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section style="color:rgba(0, 0, 0, 0.9);font-weight:400"><a href="https://mp.weixin.qq.com/s?__biz=MzI4NTgxMDk1NA==&amp;mid=2247494663&amp;idx=1&amp;sn=8fab67231b9ebc593ac65864fd8f7e00&amp;scene=21#wechat_redirect"><span><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/Gk8PW1BuRCX32iMfWVNdAr.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></span></a></section><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/rZlKD3H6UGSB7dB44beqy5.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><section style="font-weight:400;color:rgba(0, 0, 0, 0.9)"><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/1xV3SiPYUz63Vrtzu4c8WQ.jpeg" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" /></section><img src="https://wcd-image-bucket-prod.oss-cn-zhangjiakou.aliyuncs.com/raw/28FG1544LRlz14bI5T15sCkZ.gif" style="display:block;max-width:100%;height:auto;margin:1.2em auto;border-radius:12px" referrerpolicy="no-referrer" />
+                </section>
+                <footer>
+                    <div>来源订阅：语鲸 / AI行业最新融资案例解读</div>
+                    <div>原始内容：<a href="https://lingowhale.com/reader/web/69e98ad1c3105209484d16ff?channel_id=67e5334abf856a52db04e024">https://lingowhale.com/reader/web/69e98ad1c3105209484d16ff?channel_id=67e5334abf856a52db04e024</a></div>
+                </footer>
+            </article>
+        </main>
+    </body>
+</html>
