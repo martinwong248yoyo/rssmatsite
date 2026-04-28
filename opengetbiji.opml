@@ -2,23 +2,23 @@
 <opml version="2.0">
   <head>
     <title>opengetbiji Feeds</title>
-    <dateCreated>Tue, 28 Apr 2026 16:53:53 GMT</dateCreated>
+    <dateCreated>Tue, 28 Apr 2026 16:56:29 GMT</dateCreated>
   </head>
   <body>
     <outline text="opengetbiji" title="opengetbiji">
-      <outline type="rss" text="Koji杨远骋" title="Koji杨远骋 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--koji.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--koji.xml" />
+      <outline type="rss" text="Koji杨远骋" title="Koji杨远骋 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--koji-yangyuancheng.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--koji-yangyuancheng.xml" />
       <outline type="rss" text="unknown" title="unknown - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--unknown.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--unknown.xml" />
-      <outline type="rss" text="何楚涵博士" title="何楚涵博士 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--何楚涵博士.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--何楚涵博士.xml" />
-      <outline type="rss" text="北京经济犯罪&amp;职务犯罪.阮思乔律师" title="北京经济犯罪&amp;职务犯罪.阮思乔律师 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--tag.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--tag.xml" />
-      <outline type="rss" text="小辉教你开公司" title="小辉教你开公司 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--小辉教你开公司.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--小辉教你开公司.xml" />
-      <outline type="rss" text="投机大拿" title="投机大拿 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--投机大拿.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--投机大拿.xml" />
-      <outline type="rss" text="晓辉博士" title="晓辉博士 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--晓辉博士.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--晓辉博士.xml" />
-      <outline type="rss" text="深圳刑事 陈成均律师" title="深圳刑事 陈成均律师 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--tag.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--tag.xml" />
-      <outline type="rss" text="特效老炮BillyZhang" title="特效老炮BillyZhang - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--billyzhang.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--billyzhang.xml" />
-      <outline type="rss" text="独夫之心" title="独夫之心 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--独夫之心.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--独夫之心.xml" />
-      <outline type="rss" text="王自如AI" title="王自如AI - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--ai.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--ai.xml" />
-      <outline type="rss" text="邹先华" title="邹先华 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--邹先华.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--邹先华.xml" />
-      <outline type="rss" text="陈杰森资本棋局" title="陈杰森资本棋局 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--陈杰森资本棋局.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--陈杰森资本棋局.xml" />
+      <outline type="rss" text="何楚涵博士" title="何楚涵博士 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--hechuhan-boshi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--hechuhan-boshi.xml" />
+      <outline type="rss" text="北京经济犯罪&amp;职务犯罪.阮思乔律师" title="北京经济犯罪&amp;职务犯罪.阮思乔律师 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--beijing-jingjifanzui-zhiwufanzui-ruansiqiao-lvshi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--beijing-jingjifanzui-zhiwufanzui-ruansiqiao-lvshi.xml" />
+      <outline type="rss" text="小辉教你开公司" title="小辉教你开公司 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-jiaoni-kaigongsi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-jiaoni-kaigongsi.xml" />
+      <outline type="rss" text="投机大拿" title="投机大拿 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--touji-dana.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--touji-dana.xml" />
+      <outline type="rss" text="晓辉博士" title="晓辉博士 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-boshi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-boshi.xml" />
+      <outline type="rss" text="深圳刑事 陈成均律师" title="深圳刑事 陈成均律师 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--shenzhen-xingshi-chenchengjun-lvshi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--shenzhen-xingshi-chenchengjun-lvshi.xml" />
+      <outline type="rss" text="特效老炮BillyZhang" title="特效老炮BillyZhang - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--texiao-laopao-billyzhang.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--texiao-laopao-billyzhang.xml" />
+      <outline type="rss" text="独夫之心" title="独夫之心 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--dufu-zhixin.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--dufu-zhixin.xml" />
+      <outline type="rss" text="王自如AI" title="王自如AI - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--wangziru-ai.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--wangziru-ai.xml" />
+      <outline type="rss" text="邹先华" title="邹先华 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--zouxianhua.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--zouxianhua.xml" />
+      <outline type="rss" text="陈杰森资本棋局" title="陈杰森资本棋局 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--chenjiesen-zibenqiju.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--chenjiesen-zibenqiju.xml" />
     </outline>
   </body>
 </opml>
