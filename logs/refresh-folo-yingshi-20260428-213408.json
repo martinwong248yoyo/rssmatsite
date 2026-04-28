@@ -1,0 +1,177 @@
+{
+  "timestamp": "20260428-213408",
+  "started_at": "2026-04-28 21:34:08 CST",
+  "finished_at": "2026-04-28 21:36:55 CST",
+  "settings": {
+    "page_limit": 50,
+    "feed_limit": null,
+    "workers": 6,
+    "recent_days": 3,
+    "timeline_timeout": 90,
+    "entry_timeout": 90
+  },
+  "totals": {
+    "feed_count": 10,
+    "fetched": 48,
+    "inserted": 0,
+    "updated": 0,
+    "deduped": 0,
+    "unchanged": 48,
+    "classified": 387,
+    "built_feeds": 99
+  },
+  "feeds": [
+    {
+      "source_key": "271213954972262400",
+      "title": "逗马贰叁Dogme23 - 今天看啥",
+      "fetched": 6,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 6
+    },
+    {
+      "source_key": "266873310754931712",
+      "title": "桃桃淘电影 - 今天看啥",
+      "fetched": 2,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 2
+    },
+    {
+      "source_key": "266873337248919552",
+      "title": "深焦DeepFocus - 今天看啥",
+      "fetched": 25,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 25
+    },
+    {
+      "source_key": "266873373241242624",
+      "title": "影视工业网 - 今天看啥",
+      "fetched": 4,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 4
+    },
+    {
+      "source_key": "266873738934649856",
+      "title": "凹凸镜DOC - 今天看啥",
+      "fetched": 4,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 4
+    },
+    {
+      "source_key": "266873943145492480",
+      "title": "3号厅检票员工 - 今天看啥",
+      "fetched": 3,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 3
+    },
+    {
+      "source_key": "266874028924204032",
+      "title": "MovieMonthly - 今天看啥",
+      "fetched": 3,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 3
+    },
+    {
+      "source_key": "266874662532543488",
+      "title": "ARRI - 今天看啥",
+      "fetched": 0,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "266875140901303296",
+      "title": "中国影视摄影师学会 - 今天看啥",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "266873988289786880",
+      "title": "GaiaDaily - 今天看啥",
+      "fetched": 0,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
+  "top_categories": [
+    {
+      "primary": "文章",
+      "secondary": "院线观察",
+      "tertiary": "",
+      "count": 158
+    },
+    {
+      "primary": "资料",
+      "secondary": "技术资料",
+      "tertiary": "AIGC",
+      "count": 67
+    },
+    {
+      "primary": "电影节展",
+      "secondary": "长片电影节",
+      "tertiary": "电影节活动",
+      "count": 37
+    },
+    {
+      "primary": "资料",
+      "secondary": "组讯",
+      "tertiary": "",
+      "count": 23
+    },
+    {
+      "primary": "活动",
+      "secondary": "线下活动",
+      "tertiary": "线下交流",
+      "count": 22
+    },
+    {
+      "primary": "活动",
+      "secondary": "线下活动",
+      "tertiary": "电影节活动",
+      "count": 17
+    },
+    {
+      "primary": "资料",
+      "secondary": "技术资料",
+      "tertiary": "器材",
+      "count": 16
+    },
+    {
+      "primary": "资料",
+      "secondary": "技术资料",
+      "tertiary": "创作访谈",
+      "count": 12
+    },
+    {
+      "primary": "文章",
+      "secondary": "电影史",
+      "tertiary": "",
+      "count": 9
+    },
+    {
+      "primary": "活动",
+      "secondary": "征片",
+      "tertiary": "",
+      "count": 9
+    }
+  ]
+}
