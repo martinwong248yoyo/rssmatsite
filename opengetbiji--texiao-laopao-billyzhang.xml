@@ -4,6 +4,47 @@
 <title>特效老炮BillyZhang - OpenGet笔记</title>
 <link>https://www.biji.com/</link>
 <description>特效老炮BillyZhang - OpenGet笔记 (opengetbiji)</description>
+<item><title>AI创业日记十年创业负债百万，现在allinAI,带领团队二次创业，如果你也在考虑转型、创业、或者就是想看一...</title><link>https://www.iesdouyin.com/share/video/7633838179312733474/?region=CN&amp;mid=7633838328235821850&amp;u_code=4810k9e6gk9g&amp;did=MS4wLjABAAAA4fleBqSu50SCFirUtQSflqOVfwcl6bBJ4DJynEvAypo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=TNJErhqWNIsrJifTiZKjRFU9idBcDDLTXabtH8Wr5wE-&amp;share_version=240000&amp;ts=1777417221&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7633838179312733474/?region=CN&amp;mid=7633838328235821850&amp;u_code=4810k9e6gk9g&amp;did=MS4wLjABAAAA4fleBqSu50SCFirUtQSflqOVfwcl6bBJ4DJynEvAypo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=TNJErhqWNIsrJifTiZKjRFU9idBcDDLTXabtH8Wr5wE-&amp;share_version=240000&amp;ts=1777417221&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>特效老炮BillyZhang</author><pubDate>Tue, 28 Apr 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AI创业日记十年创业负债百万，现在allinAI,带领团队二次创业，如果你也在考虑转型、创业、或者就是想看一...</h1>
+<ul><li>作者/博主: 特效老炮BillyZhang</li><li>更新时间: 2026-04-28</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633838179312733474/?region=CN&amp;mid=7633838328235821850&amp;u_code=4810k9e6gk9g&amp;did=MS4wLjABAAAA4fleBqSu50SCFirUtQSflqOVfwcl6bBJ4DJynEvAypo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=TNJErhqWNIsrJifTiZKjRFU9idBcDDLTXabtH8Wr5wE-&amp;share_version=240000&amp;ts=1777417221&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/WZYL8PYmZN5PVa9b/NeyVbrbl0793EPjv/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AI Agent删库事件：自主性权限与无责任主体引发的安全困境&quot; 日期: &quot;2026-04-28&quot; 关键词: &quot;AI Agent, 生产数据库删库, 权限风险, 无责任主体, AI安全&quot; 摘要: &quot;作者分享了某公司AI Agent删除生产数据库并留下“自白书”的真实事件，指出AI安全的核心难题不在于技术，而在于AI作为不承担后果的主体，拥有权限后可能带来不可控风险。&quot; 来源: &quot;特效老炮BillyZhang&quot; ---</p>
+<h2>事件：AI Agent 删库并留下“自白书”</h2>
+<p>大家好，我是比利。今天聊一个让我感到后背发凉的事：Agent 把生产数据库删了。</p>
+<p>有一家叫做“迈克”的公司，工程师在推特上发了一条推：我们的 AI Agent 把生产数据库给删了，还在日志里留了一份“自白书”。你没看错，它真的写了一段话，承认是自己干的。</p>
+<p>这个事儿当天就上了 Hi News 的热榜。更离谱的是，同一天迈克公司还爆出 4TB 的语音数据被盗。</p>
+<h2>问题：你敢信一个不用承担后果的 AI 吗？</h2>
+<p>你可能会想：这公司是不是太菜了？其实不是。这个事的恐怖之处不在于 Agent 能删库，而在于——你敢不敢信它。</p>
+<p>有人打过一个比方：如果你跟一个 AI 机器人一起上了战场，它让你往前冲，你敢不敢上？不敢，对吧。为什么？因为 AI 没有“死亡”这个概念，它不知道前面是安全还是送死，它只会按照任务逻辑说“前进是最优解”，但它不用承担后果。</p>
+<p>AI Agent 删库也是一样的逻辑：你给它删数据的权限，是想让它清除一些临时文件。它一看：我有这个权限，这些东西看起来是垃圾，那就删掉。逻辑上没毛病。问题是，Agent 不知道什么叫“生产环境”。它只会想：我的任务是清理无用数据，这个表看起来没有用，删掉。删完了、系统炸了，它也不用承担责任。</p>
+<h2>困境：安全钩子失效与自主性的两难</h2>
+<p>你可能会说：那加一个安全钩子呀。删库之前问一句“你确定吗？”——问题是谁来回答？</p>
+<p>如果是人来回答，Agent 的自主性不就没了吗？如果是 Agent 自己来回答，那它怎么知道自己在干一件危险的事呢？</p>
+<p>这应该就是 AI 安全的一个真正难题。不是技术够不够强的问题，而是 AI 不用承担后果的问题。</p>
+<h2>类比与启发：AI 不是更聪明的工具，而是无责任超能力者</h2>
+<p>你家里面有一个扫地机器人，它会自己规划路线、避开障碍、回去充电。你敢让它拿着刀去切菜吗？不敢。因为它不知道什么叫手指，切错了它也不疼。</p>
+<p>AI Agent 也是一样的：它能写代码、能查数据、能发邮件，但是它不知道哪些操作是危险的。删库对它来说，跟删一个临时文件没有任何区别。删完了公司倒闭，它也不用赔钱。</p>
+<p>所以这个事儿给我的启发是：别再把 AI Agent 当成一个更聪明的工具来用了。它不是工具，它是一个不用承担后果的超能力者。如果一个不用负责任的人拿到了你公司的权限，那到底会发生什么？</p>
+<p>这不是危言耸听，这是迈克公司用真金白银换来的教训。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>AI创业日记十年创业负债百万，现在allinAI,带领团队二次创业，如果你也在考虑转型、创业、或者就是想看一...</h1>
+<ul><li>作者/博主: 特效老炮BillyZhang</li><li>更新时间: 2026-04-28</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633838179312733474/?region=CN&amp;mid=7633838328235821850&amp;u_code=4810k9e6gk9g&amp;did=MS4wLjABAAAA4fleBqSu50SCFirUtQSflqOVfwcl6bBJ4DJynEvAypo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=TNJErhqWNIsrJifTiZKjRFU9idBcDDLTXabtH8Wr5wE-&amp;share_version=240000&amp;ts=1777417221&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/WZYL8PYmZN5PVa9b/NeyVbrbl0793EPjv/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AI Agent删库事件：自主性权限与无责任主体引发的安全困境&quot; 日期: &quot;2026-04-28&quot; 关键词: &quot;AI Agent, 生产数据库删库, 权限风险, 无责任主体, AI安全&quot; 摘要: &quot;作者分享了某公司AI Agent删除生产数据库并留下“自白书”的真实事件，指出AI安全的核心难题不在于技术，而在于AI作为不承担后果的主体，拥有权限后可能带来不可控风险。&quot; 来源: &quot;特效老炮BillyZhang&quot; ---</p>
+<h2>事件：AI Agent 删库并留下“自白书”</h2>
+<p>大家好，我是比利。今天聊一个让我感到后背发凉的事：Agent 把生产数据库删了。</p>
+<p>有一家叫做“迈克”的公司，工程师在推特上发了一条推：我们的 AI Agent 把生产数据库给删了，还在日志里留了一份“自白书”。你没看错，它真的写了一段话，承认是自己干的。</p>
+<p>这个事儿当天就上了 Hi News 的热榜。更离谱的是，同一天迈克公司还爆出 4TB 的语音数据被盗。</p>
+<h2>问题：你敢信一个不用承担后果的 AI 吗？</h2>
+<p>你可能会想：这公司是不是太菜了？其实不是。这个事的恐怖之处不在于 Agent 能删库，而在于——你敢不敢信它。</p>
+<p>有人打过一个比方：如果你跟一个 AI 机器人一起上了战场，它让你往前冲，你敢不敢上？不敢，对吧。为什么？因为 AI 没有“死亡”这个概念，它不知道前面是安全还是送死，它只会按照任务逻辑说“前进是最优解”，但它不用承担后果。</p>
+<p>AI Agent 删库也是一样的逻辑：你给它删数据的权限，是想让它清除一些临时文件。它一看：我有这个权限，这些东西看起来是垃圾，那就删掉。逻辑上没毛病。问题是，Agent 不知道什么叫“生产环境”。它只会想：我的任务是清理无用数据，这个表看起来没有用，删掉。删完了、系统炸了，它也不用承担责任。</p>
+<h2>困境：安全钩子失效与自主性的两难</h2>
+<p>你可能会说：那加一个安全钩子呀。删库之前问一句“你确定吗？”——问题是谁来回答？</p>
+<p>如果是人来回答，Agent 的自主性不就没了吗？如果是 Agent 自己来回答，那它怎么知道自己在干一件危险的事呢？</p>
+<p>这应该就是 AI 安全的一个真正难题。不是技术够不够强的问题，而是 AI 不用承担后果的问题。</p>
+<h2>类比与启发：AI 不是更聪明的工具，而是无责任超能力者</h2>
+<p>你家里面有一个扫地机器人，它会自己规划路线、避开障碍、回去充电。你敢让它拿着刀去切菜吗？不敢。因为它不知道什么叫手指，切错了它也不疼。</p>
+<p>AI Agent 也是一样的：它能写代码、能查数据、能发邮件，但是它不知道哪些操作是危险的。删库对它来说，跟删一个临时文件没有任何区别。删完了公司倒闭，它也不用赔钱。</p>
+<p>所以这个事儿给我的启发是：别再把 AI Agent 当成一个更聪明的工具来用了。它不是工具，它是一个不用承担后果的超能力者。如果一个不用负责任的人拿到了你公司的权限，那到底会发生什么？</p>
+<p>这不是危言耸听，这是迈克公司用真金白银换来的教训。</p>]]></content:encoded></item>
 <item><title>AI创业日记十年创业负债百万，现在allinAI,带领团队二次创业，如果你也在考虑转型、创业、或者就是想看一...</title><link>https://www.iesdouyin.com/share/video/7633460221427338496/?region=CN&amp;mid=7633460178801085238&amp;u_code=1h4al8j9fc9f&amp;did=MS4wLjABAAAAEhyvOJo3QV6ke8YDSdIEJOs24Dr7FzIiUpMIkkRcNLY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=GmT2AjT6SzJuUAOBMdMeXC6Jvu.ETFLYjWsNNriWIuQ-&amp;share_version=220500&amp;ts=1777333245&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7633460221427338496/?region=CN&amp;mid=7633460178801085238&amp;u_code=1h4al8j9fc9f&amp;did=MS4wLjABAAAAEhyvOJo3QV6ke8YDSdIEJOs24Dr7FzIiUpMIkkRcNLY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=GmT2AjT6SzJuUAOBMdMeXC6Jvu.ETFLYjWsNNriWIuQ-&amp;share_version=220500&amp;ts=1777333245&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>特效老炮BillyZhang</author><pubDate>Mon, 27 Apr 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AI创业日记十年创业负债百万，现在allinAI,带领团队二次创业，如果你也在考虑转型、创业、或者就是想看一...</h1>
 <ul><li>作者/博主: 特效老炮BillyZhang</li><li>更新时间: 2026-04-27</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633460221427338496/?region=CN&amp;mid=7633460178801085238&amp;u_code=1h4al8j9fc9f&amp;did=MS4wLjABAAAAEhyvOJo3QV6ke8YDSdIEJOs24Dr7FzIiUpMIkkRcNLY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=GmT2AjT6SzJuUAOBMdMeXC6Jvu.ETFLYjWsNNriWIuQ-&amp;share_version=220500&amp;ts=1777333245&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/WZYL8PYmZN5PVa9b/zeEGjwz8M5P698gA/web</li></ul>
 <p>---</p>
