@@ -4,6 +4,47 @@
 <title>晓辉博士 - OpenGet笔记</title>
 <link>https://www.biji.com/</link>
 <description>晓辉博士 - OpenGet笔记 (opengetbiji)</description>
+<item><title>让AI帮你生成你的知识图谱我发现AI使用能力的提升是不均匀的，一段时间没什么长进的平台期过后，当又有了时...</title><link>https://www.iesdouyin.com/share/video/7633835844281288549/?region=CN&amp;mid=7633835756565449487&amp;u_code=fg3gc7jk&amp;did=MS4wLjABAAAAAvc4DOGlhHFnOynVffG7HGDDqu5hRCNt5IhLHmgqKs8&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=5bulz2b2TQhbhepxjLE0wF7_UW4Lcksg8veBWxFt734-&amp;share_version=210700&amp;ts=1777392103&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7633835844281288549/?region=CN&amp;mid=7633835756565449487&amp;u_code=fg3gc7jk&amp;did=MS4wLjABAAAAAvc4DOGlhHFnOynVffG7HGDDqu5hRCNt5IhLHmgqKs8&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=5bulz2b2TQhbhepxjLE0wF7_UW4Lcksg8veBWxFt734-&amp;share_version=210700&amp;ts=1777392103&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>晓辉博士</author><pubDate>Tue, 28 Apr 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>让AI帮你生成你的知识图谱我发现AI使用能力的提升是不均匀的，一段时间没什么长进的平台期过后，当又有了时...</h1>
+<ul><li>作者/博主: 晓辉博士</li><li>更新时间: 2026-04-28</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633835844281288549/?region=CN&amp;mid=7633835756565449487&amp;u_code=fg3gc7jk&amp;did=MS4wLjABAAAAAvc4DOGlhHFnOynVffG7HGDDqu5hRCNt5IhLHmgqKs8&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=5bulz2b2TQhbhepxjLE0wF7_UW4Lcksg8veBWxFt734-&amp;share_version=210700&amp;ts=1777392103&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/y1djNVB5XEPX704z/5KXNGrGJVg42wR3v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AI使用能力突破平台期：知识图谱方法、多工具协作与个人实践发现&quot; 日期: &quot;2026-04-28&quot; 关键词: &quot;AI使用能力, 平台期, 知识图谱, 卡帕西, 多工具协作, 生产力&quot; 摘要: &quot;晓辉博士分享了使用AI进入新阶段的方法：通过借鉴Karpathy的知识图谱理论，让AI扫描文件夹，识别关键概念及其联系，生成知识图谱（如markdown文件），从而更高效地处理大量文档、推进研究和跨IDE协作。他认为面对电脑实践是进步的关键，鼓励大家尝试探索。&quot; 来源: &quot;晓辉博士&quot; ---</p>
+<h2>引言：AI使用能力的“平台期”与突破契机</h2>
+<p>晓辉博士观察到，AI的使用能力提升往往是不均匀的。我们常常会经历一段时间的“平台期”——此时，和AI的协作模式基本固定下来，似乎没有什么新的长进。然而，一段时间后，当你忙忙碌碌地与外界有很多接触（包括工作），当你真的有一点点时间坐下来，重新与AI一起审视当前状态时，往往会出现新的进展和突破。</p>
+<p>晓辉博士前一段时间有大量外部分享、内部圆桌讨论以及阅读，导致没有太多时间与AI协作。但他发现，当自己静下心来，把之前汇总到的资料信息做整理，重新进行文件夹的沉淀、信息打磨，以及尝试各种新工具和能力时，就来到了一个新的阶段。</p>
+<h2>核心实践：借鉴Karpathy知识图谱，让AI扫描文件夹</h2>
+<p>这个新阶段指的是：借鉴Andrej Karpathy提出的“知识图谱”理论，让AI帮自己系统地扫描文件夹（特别是项目文件夹）。具体的操作过程如下：</p>
+<ul><li>**识别关键节点、边和联系**：AI会识别出你所有文档中的关键概念（即实体），以及这些概念与概念之间的联系（即边）。这些识别出的信息会被存入一套体系和框架中。</li><li>**框架的构成**：这个框架包含一个目录（index）。其中会有实体记录（entity records）。例如，“token经济学”是一个概念实体；“Google”也是一个实体；“block”也是实体；“杰文斯悖论”也是一个实体。不同的实体之间存在联系。</li><li>**生成知识图谱的原理**：一篇文章可以拆解成不同知识点之间的联系、不同实体之间的联系，这就是知识图谱。以前大家讨论知识图谱如何与AI联系起来，现在的实现方式是：AI可以帮助你生成这些概念之间的联系。</li></ul>
+<h2>知识图谱的核心优势：解决大量文档的检索与上下文问题</h2>
+<ul><li>**问题背景**：当一个文件夹里有几十上百个文件时，每次找东西都比较困难。如果要进行相关研究或分析，你需要把大量上下文装入自己的context（或AI的上下文空间），而上下文空间非常有限。</li><li>**解决方案**：用知识图谱的方法对AI最友好，对人也很友好。在Obsidian等软件中，你可以可视化地看到生成的知识图谱：一个节点和边的关系网络。</li><li>**应用案例**：以晓辉博士正在做的“token经济学”研究为例，他之前做了一个deep research。利用知识图谱，AI帮他点出了其中的重要概念（虽然画得不太全），但作为首次尝试，他感觉打开了一个新的研究方式大门——通过知识图谱，你可以从不同角度看到事物之间的联系，并基于这些联系推进研究。</li></ul>
+<h2>具体操作方法：使用开源方案与代码生成</h2>
+<p>方法非常简单：</p>
+<p>1. 对Cody（或Coder）说：我想借鉴Karpathy的知识图谱办法。 2. Karpathy在GitHub上有一个链接（晓辉博士将贴在评论区）。 3. 把这条信息复制给AI，它就可以帮你在本地写一个`.md`的文件。 4. 下一次你跟AI说“生成这个文件夹的知识图谱”，它就能快速生成。</p>
+<p>邀请大家尝试这个方法。</p>
+<h2>额外进展：多IDE协作与注意力管理</h2>
+<p>今天的节点上，晓辉博士还做了一些其他事情：装了一些其他的IDE（不止一个，比如Cusor，还有其他IDE），从而可以同时用不同的IDE干活，甚至可以用一个远程软件控制它们一起协作。</p>
+<p>关于人的注意力：这是一个重要话题。如何在不同IDE间切换？人会慢慢适应这个过程，肯定会有一些最佳实践。但前提是“先中毒再解毒”——你得先去适应这个变化，然后再看看怎么去优化。现在还没有到收敛的时候，仍处于发散或探索的阶段，大家还可以充分尝试不同的工具。</p>
+<h2>总结与感悟</h2>
+<p>晓辉博士今天收获非常多，甚至比之前一两周与AI协作的经验积累都要多。这些收获是通过面对电脑、实际动手干活干出来的。最近有一种感觉：当你坐在电脑前的时候，是你进步最大的时候。当然这个进步可能是自己的一种幻觉，但确实你在体验一种全新的生产力工具，这是一种前所未有的体验。分享给大家。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>让AI帮你生成你的知识图谱我发现AI使用能力的提升是不均匀的，一段时间没什么长进的平台期过后，当又有了时...</h1>
+<ul><li>作者/博主: 晓辉博士</li><li>更新时间: 2026-04-28</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633835844281288549/?region=CN&amp;mid=7633835756565449487&amp;u_code=fg3gc7jk&amp;did=MS4wLjABAAAAAvc4DOGlhHFnOynVffG7HGDDqu5hRCNt5IhLHmgqKs8&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=5bulz2b2TQhbhepxjLE0wF7_UW4Lcksg8veBWxFt734-&amp;share_version=210700&amp;ts=1777392103&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/y1djNVB5XEPX704z/5KXNGrGJVg42wR3v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AI使用能力突破平台期：知识图谱方法、多工具协作与个人实践发现&quot; 日期: &quot;2026-04-28&quot; 关键词: &quot;AI使用能力, 平台期, 知识图谱, 卡帕西, 多工具协作, 生产力&quot; 摘要: &quot;晓辉博士分享了使用AI进入新阶段的方法：通过借鉴Karpathy的知识图谱理论，让AI扫描文件夹，识别关键概念及其联系，生成知识图谱（如markdown文件），从而更高效地处理大量文档、推进研究和跨IDE协作。他认为面对电脑实践是进步的关键，鼓励大家尝试探索。&quot; 来源: &quot;晓辉博士&quot; ---</p>
+<h2>引言：AI使用能力的“平台期”与突破契机</h2>
+<p>晓辉博士观察到，AI的使用能力提升往往是不均匀的。我们常常会经历一段时间的“平台期”——此时，和AI的协作模式基本固定下来，似乎没有什么新的长进。然而，一段时间后，当你忙忙碌碌地与外界有很多接触（包括工作），当你真的有一点点时间坐下来，重新与AI一起审视当前状态时，往往会出现新的进展和突破。</p>
+<p>晓辉博士前一段时间有大量外部分享、内部圆桌讨论以及阅读，导致没有太多时间与AI协作。但他发现，当自己静下心来，把之前汇总到的资料信息做整理，重新进行文件夹的沉淀、信息打磨，以及尝试各种新工具和能力时，就来到了一个新的阶段。</p>
+<h2>核心实践：借鉴Karpathy知识图谱，让AI扫描文件夹</h2>
+<p>这个新阶段指的是：借鉴Andrej Karpathy提出的“知识图谱”理论，让AI帮自己系统地扫描文件夹（特别是项目文件夹）。具体的操作过程如下：</p>
+<ul><li>**识别关键节点、边和联系**：AI会识别出你所有文档中的关键概念（即实体），以及这些概念与概念之间的联系（即边）。这些识别出的信息会被存入一套体系和框架中。</li><li>**框架的构成**：这个框架包含一个目录（index）。其中会有实体记录（entity records）。例如，“token经济学”是一个概念实体；“Google”也是一个实体；“block”也是实体；“杰文斯悖论”也是一个实体。不同的实体之间存在联系。</li><li>**生成知识图谱的原理**：一篇文章可以拆解成不同知识点之间的联系、不同实体之间的联系，这就是知识图谱。以前大家讨论知识图谱如何与AI联系起来，现在的实现方式是：AI可以帮助你生成这些概念之间的联系。</li></ul>
+<h2>知识图谱的核心优势：解决大量文档的检索与上下文问题</h2>
+<ul><li>**问题背景**：当一个文件夹里有几十上百个文件时，每次找东西都比较困难。如果要进行相关研究或分析，你需要把大量上下文装入自己的context（或AI的上下文空间），而上下文空间非常有限。</li><li>**解决方案**：用知识图谱的方法对AI最友好，对人也很友好。在Obsidian等软件中，你可以可视化地看到生成的知识图谱：一个节点和边的关系网络。</li><li>**应用案例**：以晓辉博士正在做的“token经济学”研究为例，他之前做了一个deep research。利用知识图谱，AI帮他点出了其中的重要概念（虽然画得不太全），但作为首次尝试，他感觉打开了一个新的研究方式大门——通过知识图谱，你可以从不同角度看到事物之间的联系，并基于这些联系推进研究。</li></ul>
+<h2>具体操作方法：使用开源方案与代码生成</h2>
+<p>方法非常简单：</p>
+<p>1. 对Cody（或Coder）说：我想借鉴Karpathy的知识图谱办法。 2. Karpathy在GitHub上有一个链接（晓辉博士将贴在评论区）。 3. 把这条信息复制给AI，它就可以帮你在本地写一个`.md`的文件。 4. 下一次你跟AI说“生成这个文件夹的知识图谱”，它就能快速生成。</p>
+<p>邀请大家尝试这个方法。</p>
+<h2>额外进展：多IDE协作与注意力管理</h2>
+<p>今天的节点上，晓辉博士还做了一些其他事情：装了一些其他的IDE（不止一个，比如Cusor，还有其他IDE），从而可以同时用不同的IDE干活，甚至可以用一个远程软件控制它们一起协作。</p>
+<p>关于人的注意力：这是一个重要话题。如何在不同IDE间切换？人会慢慢适应这个过程，肯定会有一些最佳实践。但前提是“先中毒再解毒”——你得先去适应这个变化，然后再看看怎么去优化。现在还没有到收敛的时候，仍处于发散或探索的阶段，大家还可以充分尝试不同的工具。</p>
+<h2>总结与感悟</h2>
+<p>晓辉博士今天收获非常多，甚至比之前一两周与AI协作的经验积累都要多。这些收获是通过面对电脑、实际动手干活干出来的。最近有一种感觉：当你坐在电脑前的时候，是你进步最大的时候。当然这个进步可能是自己的一种幻觉，但确实你在体验一种全新的生产力工具，这是一种前所未有的体验。分享给大家。</p>]]></content:encoded></item>
 <item><title>AI时代什么样的文章值得阅读？最近发现AI生成的内容越来越多，同质化现象也越来越严重，以《Token经济学》...</title><link>https://www.iesdouyin.com/share/video/7633445642120332145/?region=CN&amp;mid=7633445530114280227&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAJI5w5Y_aVSH-EYOEvbqIJuyZpMhmZYTLAAGM-SWbDtc&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=4VfUeYN5w.7CgIazaks462i1ykE9kmd_AkFH7_d2mDw-&amp;share_version=240000&amp;ts=1777305727&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7633445642120332145/?region=CN&amp;mid=7633445530114280227&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAJI5w5Y_aVSH-EYOEvbqIJuyZpMhmZYTLAAGM-SWbDtc&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=4VfUeYN5w.7CgIazaks462i1ykE9kmd_AkFH7_d2mDw-&amp;share_version=240000&amp;ts=1777305727&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>晓辉博士</author><pubDate>Mon, 27 Apr 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AI时代什么样的文章值得阅读？最近发现AI生成的内容越来越多，同质化现象也越来越严重，以《Token经济学》...</h1>
 <ul><li>作者/博主: 晓辉博士</li><li>更新时间: 2026-04-27</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633445642120332145/?region=CN&amp;mid=7633445530114280227&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAJI5w5Y_aVSH-EYOEvbqIJuyZpMhmZYTLAAGM-SWbDtc&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=4VfUeYN5w.7CgIazaks462i1ykE9kmd_AkFH7_d2mDw-&amp;share_version=240000&amp;ts=1777305727&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/y1djNVB5XEPX704z/pAOQG4pbPD4GywMe/web</li></ul>
 <p>---</p>
