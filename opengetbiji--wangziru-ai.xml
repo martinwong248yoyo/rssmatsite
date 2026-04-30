@@ -4,6 +4,53 @@
 <title>王自如AI - OpenGet笔记</title>
 <link>https://www.biji.com/</link>
 <description>王自如AI - OpenGet笔记 (opengetbiji)</description>
+<item><title>DeepSeekv4最大的挑战如果还觉得100万上下文只是为了让你一次塞进几本书，那就太小看DeepSeekv4了。对...</title><link>https://www.iesdouyin.com/share/video/7634036956485143846/?region=CN&amp;mid=7634036934305663750&amp;u_code=9deaej4b99m&amp;did=MS4wLjABAAAADSzG1_JmDDXhPEXnnArs9e6GWNT5biAadBLVzFzxdCI&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=zhoqb41dNyKQLsfbYqKJeqS8Z314BFhRZvKwVvlxsTs-&amp;share_version=220800&amp;ts=1777487718&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7634036956485143846/?region=CN&amp;mid=7634036934305663750&amp;u_code=9deaej4b99m&amp;did=MS4wLjABAAAADSzG1_JmDDXhPEXnnArs9e6GWNT5biAadBLVzFzxdCI&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=zhoqb41dNyKQLsfbYqKJeqS8Z314BFhRZvKwVvlxsTs-&amp;share_version=220800&amp;ts=1777487718&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>王自如AI</author><pubDate>Wed, 29 Apr 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>DeepSeekv4最大的挑战如果还觉得100万上下文只是为了让你一次塞进几本书，那就太小看DeepSeekv4了。对...</h1>
+<ul><li>作者/博主: 王自如AI</li><li>更新时间: 2026-04-29</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634036956485143846/?region=CN&amp;mid=7634036934305663750&amp;u_code=9deaej4b99m&amp;did=MS4wLjABAAAADSzG1_JmDDXhPEXnnArs9e6GWNT5biAadBLVzFzxdCI&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=zhoqb41dNyKQLsfbYqKJeqS8Z314BFhRZvKwVvlxsTs-&amp;share_version=220800&amp;ts=1777487718&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/MKE9gBWkmEYBz8qN/qKDZz4j4nDXkrZ3v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;DeepSeekv4的核心挑战：超长上下文下的并行工具调用、推理严谨性与长时序任务可靠性&quot; 日期: &quot;2026-04-29&quot; 关键词: &quot;DeepSeekv4, 超长上下文, 并行工具调用, 长时序推理, 代码审计, 模型推理稳定性&quot; 摘要: &quot;本文讨论DeepSeekv4超长上下文（百万级）的真正价值并非塞入大量文本，而是在长时序推理与复杂任务编排中保持关键信息不丢失；核心挑战在于并行工具调用的稳定性与多步推理的严谨性。&quot; 来源: &quot;王自如AI&quot; ---</p>
+<h2>背景：对DeepSeekv4的常见误解</h2>
+<p>对于DeepSeekv4，我最关注的问题并不是一百万上下文。</p>
+<p>一百万上下文意味着模型具备了常识序推理、复杂任务处理的上下文空间，这很好。但如果真的想良好地完成这样的常识序推理，工具调用的稳定性、模型推理的严谨性极为重要。</p>
+<h2>核心挑战：并行工具调用与多步推理的可靠性</h2>
+<p>过去，中国国产模型最大的挑战就在于并行工具调用、多轮推理的可靠性——这一点上是不够的。</p>
+<p>所以，如果DeepSeekv4能够解决超多工具调用、准确并行调用，并且还能够完成持续推理的严谨性——对于多步骤推理，不中途停顿、不中途掉链、并且不丢失信息——那么从能力上来说就已经非常强了。</p>
+<p>因为在真正去调用模型、用模型解决现实问题的时候，参数量根本不重要。即便你问它雕塑问题、艺术史、中国考古、再到现在的科技，所有这些都只是在用MoE极小的一部分。</p>
+<h2>超长上下文的真正用途：不是堆文本，而是长时序推理</h2>
+<p>如果你用一百万的上下文，你会发现聊天可能聊一个月都聊不完。但如果你想做一次代码审计，三十万行代码库丢进去，立马就吃掉——这就是区别。所以DeepSeek如何解决这些问题是我最关心的。</p>
+<p>很多人问：DeepSeekv4 Pro能平替Cursor或Prodex吗？或者是不是比Gemini 5.1强很多？很多人认为v4最重要的一百万上下文加编程能力等等这些核心指标。</p>
+<p>但一百万上下文对于一个AI模型来说意味着什么？</p>
+<p>如果认为有超长上下文就可以把一个超大的文本塞进去让模型读完——可以这样用，但实际上这不是AI真正的价值。单纯的聊天和文本处理不是AI产生真正生产力的核心场景。</p>
+<p>真正的核心场景在于：超长上下文是在长时序推理、复杂任务编排时，可以容纳更大的上下文，而不要频繁压缩从而丢失关键信息。</p>
+<p>假设一个长时序推理任务要跑二十分钟到三十分钟，在这种情况下，如果没有超长的上下文，你在扫资料的过程当中很可能就满了。几轮推理之后，每一轮压缩都有可能丢掉关键信息，最终结果会非常不好。</p>
+<h2>现实应用场景：代码审计与多规范交叉问题</h2>
+<p>一百万的上下文不是让你每次都用光，本质是希望能够在长时序推理时，在不丢失关键细节信息、不压缩的情况下完成推理任务。</p>
+<p>大家千万别觉得这种场景非常少。在产业应用当中，在深圳的场景当中，其实非常多。处理大量的图片集中的业务场景，就会迅速消耗token窗口。想做整个代码库的全面审计，也会迅速吃掉token窗口。</p>
+<p>以前我在做复杂代码审计的时候，即便是几个sub-agent同时干，扫完整个代码库直接筛审，结束了他都不给你压缩了——因为直接超过了限额。所以要把审计分成几个部分不停地做，而且每个部分的问题可能是交叉的。</p>
+<p>比如iOS的HIG规范、苹果的accessibility、光学震动系统的反馈，一大堆东西交叉，界面又有问题，每个问题都是关联的。那就没办法通过一次全面的审计来提高代码库的质量。</p>
+<p>超长上下文就是为了解决这个问题。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>DeepSeekv4最大的挑战如果还觉得100万上下文只是为了让你一次塞进几本书，那就太小看DeepSeekv4了。对...</h1>
+<ul><li>作者/博主: 王自如AI</li><li>更新时间: 2026-04-29</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634036956485143846/?region=CN&amp;mid=7634036934305663750&amp;u_code=9deaej4b99m&amp;did=MS4wLjABAAAADSzG1_JmDDXhPEXnnArs9e6GWNT5biAadBLVzFzxdCI&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=zhoqb41dNyKQLsfbYqKJeqS8Z314BFhRZvKwVvlxsTs-&amp;share_version=220800&amp;ts=1777487718&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/MKE9gBWkmEYBz8qN/qKDZz4j4nDXkrZ3v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;DeepSeekv4的核心挑战：超长上下文下的并行工具调用、推理严谨性与长时序任务可靠性&quot; 日期: &quot;2026-04-29&quot; 关键词: &quot;DeepSeekv4, 超长上下文, 并行工具调用, 长时序推理, 代码审计, 模型推理稳定性&quot; 摘要: &quot;本文讨论DeepSeekv4超长上下文（百万级）的真正价值并非塞入大量文本，而是在长时序推理与复杂任务编排中保持关键信息不丢失；核心挑战在于并行工具调用的稳定性与多步推理的严谨性。&quot; 来源: &quot;王自如AI&quot; ---</p>
+<h2>背景：对DeepSeekv4的常见误解</h2>
+<p>对于DeepSeekv4，我最关注的问题并不是一百万上下文。</p>
+<p>一百万上下文意味着模型具备了常识序推理、复杂任务处理的上下文空间，这很好。但如果真的想良好地完成这样的常识序推理，工具调用的稳定性、模型推理的严谨性极为重要。</p>
+<h2>核心挑战：并行工具调用与多步推理的可靠性</h2>
+<p>过去，中国国产模型最大的挑战就在于并行工具调用、多轮推理的可靠性——这一点上是不够的。</p>
+<p>所以，如果DeepSeekv4能够解决超多工具调用、准确并行调用，并且还能够完成持续推理的严谨性——对于多步骤推理，不中途停顿、不中途掉链、并且不丢失信息——那么从能力上来说就已经非常强了。</p>
+<p>因为在真正去调用模型、用模型解决现实问题的时候，参数量根本不重要。即便你问它雕塑问题、艺术史、中国考古、再到现在的科技，所有这些都只是在用MoE极小的一部分。</p>
+<h2>超长上下文的真正用途：不是堆文本，而是长时序推理</h2>
+<p>如果你用一百万的上下文，你会发现聊天可能聊一个月都聊不完。但如果你想做一次代码审计，三十万行代码库丢进去，立马就吃掉——这就是区别。所以DeepSeek如何解决这些问题是我最关心的。</p>
+<p>很多人问：DeepSeekv4 Pro能平替Cursor或Prodex吗？或者是不是比Gemini 5.1强很多？很多人认为v4最重要的一百万上下文加编程能力等等这些核心指标。</p>
+<p>但一百万上下文对于一个AI模型来说意味着什么？</p>
+<p>如果认为有超长上下文就可以把一个超大的文本塞进去让模型读完——可以这样用，但实际上这不是AI真正的价值。单纯的聊天和文本处理不是AI产生真正生产力的核心场景。</p>
+<p>真正的核心场景在于：超长上下文是在长时序推理、复杂任务编排时，可以容纳更大的上下文，而不要频繁压缩从而丢失关键信息。</p>
+<p>假设一个长时序推理任务要跑二十分钟到三十分钟，在这种情况下，如果没有超长的上下文，你在扫资料的过程当中很可能就满了。几轮推理之后，每一轮压缩都有可能丢掉关键信息，最终结果会非常不好。</p>
+<h2>现实应用场景：代码审计与多规范交叉问题</h2>
+<p>一百万的上下文不是让你每次都用光，本质是希望能够在长时序推理时，在不丢失关键细节信息、不压缩的情况下完成推理任务。</p>
+<p>大家千万别觉得这种场景非常少。在产业应用当中，在深圳的场景当中，其实非常多。处理大量的图片集中的业务场景，就会迅速消耗token窗口。想做整个代码库的全面审计，也会迅速吃掉token窗口。</p>
+<p>以前我在做复杂代码审计的时候，即便是几个sub-agent同时干，扫完整个代码库直接筛审，结束了他都不给你压缩了——因为直接超过了限额。所以要把审计分成几个部分不停地做，而且每个部分的问题可能是交叉的。</p>
+<p>比如iOS的HIG规范、苹果的accessibility、光学震动系统的反馈，一大堆东西交叉，界面又有问题，每个问题都是关联的。那就没办法通过一次全面的审计来提高代码库的质量。</p>
+<p>超长上下文就是为了解决这个问题。</p>]]></content:encoded></item>
 <item><title>未来简历不是给人看，而是AI看#热点#简历#HR失业#AI</title><link>https://www.iesdouyin.com/share/video/7633473320553368858/?region=CN&amp;mid=7633473332125502244&amp;u_code=1d8d2j2fciel&amp;did=MS4wLjABAAAAzmOKBwPWiwo39_0E957p46EuT6W5TNGD5OCvxLafscA&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=CtlHBP3tuEOwRvWeQ4Yrac8ob5eKpFuAb0kZqofEJhM-&amp;share_version=210700&amp;ts=1777400986&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7633473320553368858/?region=CN&amp;mid=7633473332125502244&amp;u_code=1d8d2j2fciel&amp;did=MS4wLjABAAAAzmOKBwPWiwo39_0E957p46EuT6W5TNGD5OCvxLafscA&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=CtlHBP3tuEOwRvWeQ4Yrac8ob5eKpFuAb0kZqofEJhM-&amp;share_version=210700&amp;ts=1777400986&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>王自如AI</author><pubDate>Tue, 28 Apr 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>未来简历不是给人看，而是AI看#热点#简历#HR失业#AI</h1>
 <ul><li>作者/博主: 王自如AI</li><li>更新时间: 2026-04-28</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633473320553368858/?region=CN&amp;mid=7633473332125502244&amp;u_code=1d8d2j2fciel&amp;did=MS4wLjABAAAAzmOKBwPWiwo39_0E957p46EuT6W5TNGD5OCvxLafscA&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=CtlHBP3tuEOwRvWeQ4Yrac8ob5eKpFuAb0kZqofEJhM-&amp;share_version=210700&amp;ts=1777400986&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/MKE9gBWkmEYBz8qN/1e1jZ4Z7B5jykVrv/web</li></ul>
 <p>---</p>
