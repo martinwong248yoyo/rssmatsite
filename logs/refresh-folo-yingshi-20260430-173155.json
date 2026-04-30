@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260430-193813",
-  "started_at": "2026-04-30 19:38:13 CST",
-  "finished_at": "2026-04-30 19:40:15 CST",
+  "timestamp": "20260430-173155",
+  "started_at": "2026-04-30 17:31:55 CST",
+  "finished_at": "2026-04-30 17:33:26 CST",
   "settings": {
     "page_limit": 50,
     "feed_limit": null,
@@ -11,16 +11,25 @@
     "entry_timeout": 90
   },
   "totals": {
-    "feed_count": 11,
-    "fetched": 37,
-    "inserted": 0,
-    "updated": 2,
+    "feed_count": 12,
+    "fetched": 40,
+    "inserted": 8,
+    "updated": 0,
     "deduped": 0,
-    "unchanged": 35,
+    "unchanged": 32,
     "classified": 419,
     "built_feeds": 102
   },
   "feeds": [
+    {
+      "source_key": "271212293520369664",
+      "title": "午夜失焦MIDNIGHT BLUR - 今天看啥",
+      "fetched": 2,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 2
+    },
     {
       "source_key": "271213954972262400",
       "title": "逗马贰叁Dogme23 - 今天看啥",
@@ -34,10 +43,10 @@
       "source_key": "266873310754931712",
       "title": "桃桃淘电影 - 今天看啥",
       "fetched": 3,
-      "inserted": 0,
+      "inserted": 1,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 3
+      "unchanged": 2
     },
     {
       "source_key": "266873337248919552",
@@ -52,10 +61,10 @@
       "source_key": "266873373241242624",
       "title": "影视工业网 - 今天看啥",
       "fetched": 5,
-      "inserted": 0,
+      "inserted": 5,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 5
+      "unchanged": 0
     },
     {
       "source_key": "266873554108449792",
@@ -71,9 +80,9 @@
       "title": "凹凸镜DOC - 今天看啥",
       "fetched": 6,
       "inserted": 0,
-      "updated": 2,
+      "updated": 0,
       "deduped": 0,
-      "unchanged": 4
+      "unchanged": 6
     },
     {
       "source_key": "266873943145492480",
@@ -88,10 +97,10 @@
       "source_key": "266874028924204032",
       "title": "MovieMonthly - 今天看啥",
       "fetched": 3,
-      "inserted": 0,
+      "inserted": 2,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 3
+      "unchanged": 1
     },
     {
       "source_key": "266874662532543488",
@@ -114,11 +123,11 @@
     {
       "source_key": "266873988289786880",
       "title": "GaiaDaily - 今天看啥",
-      "fetched": 2,
+      "fetched": 3,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 2
+      "unchanged": 3
     }
   ],
   "top_categories": [
