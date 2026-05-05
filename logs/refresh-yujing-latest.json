@@ -1,12 +1,12 @@
 {
-  "timestamp": "20260505-145910",
-  "started_at": "2026-05-05 14:59:10 CST",
-  "finished_at": "2026-05-05 15:12:48 CST",
+  "timestamp": "20260505-153402",
+  "started_at": "2026-05-05 15:34:02 CST",
+  "finished_at": "2026-05-05 15:36:04 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
     "max_articles": 10,
-    "profile_dir": null,
+    "profile_dir": "/Users/mat/Local_Documents/Programming/03-网络爬虫/yujingScraper/profiles/lingowhale",
     "risk_profile": "low",
     "include_all_channels": false,
     "limit": null,
