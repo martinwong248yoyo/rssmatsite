@@ -1,0 +1,1198 @@
+{
+  "timestamp": "20260505-140450",
+  "started_at": "2026-05-05 14:04:50 CST",
+  "finished_at": "2026-05-05 14:05:40 CST",
+  "command": "python3 -m rsshome.cli.yujing_richtext_rollout --headless",
+  "settings": {
+    "profile_dir": "/Users/mat/Local_Documents/Programming/03-网络爬虫/yujingScraper/profiles/lingowhale",
+    "risk_profile": "low",
+    "headless": true,
+    "publish": true,
+    "source_keys": []
+  },
+  "totals": {
+    "before_source_count": 33,
+    "after_source_count": 25,
+    "before_articles": 918,
+    "after_articles": 235,
+    "before_rich_articles": 263,
+    "after_rich_articles": 235,
+    "before_plain_articles": 655,
+    "after_plain_articles": 0,
+    "deleted_plain_articles": 263,
+    "built_feeds": 94,
+    "published_feeds": 25,
+    "published_logs": 6
+  },
+  "feeds": [
+    {
+      "title": "财新-公众号",
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "fetched": 132,
+      "inserted": 14,
+      "updated": 118,
+      "deduped": 0,
+      "unchanged": 118,
+      "status": "failed"
+    },
+    {
+      "title": "新智元-公众号",
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "fetched": 111,
+      "inserted": 14,
+      "updated": 97,
+      "deduped": 0,
+      "unchanged": 97,
+      "status": "failed"
+    },
+    {
+      "title": "热门AI公众号更新追踪",
+      "source_key": "67e5334abf856a52db04e0b7-ai",
+      "fetched": 82,
+      "inserted": 8,
+      "updated": 74,
+      "deduped": 0,
+      "unchanged": 74,
+      "status": "failed"
+    },
+    {
+      "title": "量子位-公众号",
+      "source_key": "67cc08a19a4297b6148b295c-channel",
+      "fetched": 78,
+      "inserted": 12,
+      "updated": 66,
+      "deduped": 0,
+      "unchanged": 66,
+      "status": "failed"
+    },
+    {
+      "title": "DeepTech深科技-公众号",
+      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
+      "fetched": 57,
+      "inserted": 12,
+      "updated": 45,
+      "deduped": 1,
+      "unchanged": 45,
+      "status": "failed"
+    },
+    {
+      "title": "疯投圈-播客",
+      "source_key": "68d9fe108bf47f51582d2c7d-channel",
+      "fetched": 19,
+      "inserted": 0,
+      "updated": 19,
+      "deduped": 0,
+      "unchanged": 19,
+      "status": "failed"
+    },
+    {
+      "title": "42章经-播客",
+      "source_key": "68d6c8e51173fc364b3328ff-42",
+      "fetched": 18,
+      "inserted": 0,
+      "updated": 18,
+      "deduped": 0,
+      "unchanged": 18,
+      "status": "failed"
+    },
+    {
+      "title": "硅谷101-播客",
+      "source_key": "68d9ff9fc3cd8ada000f1cf3-101",
+      "fetched": 16,
+      "inserted": 0,
+      "updated": 16,
+      "deduped": 0,
+      "unchanged": 16,
+      "status": "failed"
+    },
+    {
+      "title": "武志红-公众号",
+      "source_key": "67cc08a19a4297b6148b298f-channel",
+      "fetched": 24,
+      "inserted": 10,
+      "updated": 14,
+      "deduped": 0,
+      "unchanged": 14,
+      "status": "failed"
+    },
+    {
+      "title": "互联网服务-行业研报",
+      "source_key": "67cc08b79a4297b6148b4c00-channel",
+      "fetched": 14,
+      "inserted": 0,
+      "updated": 14,
+      "deduped": 0,
+      "unchanged": 14,
+      "status": "failed"
+    },
+    {
+      "title": "有新的消费电子个股研报",
+      "source_key": "67cc08b79a4297b6148b4c49-channel",
+      "fetched": 14,
+      "inserted": 0,
+      "updated": 14,
+      "deduped": 0,
+      "unchanged": 14,
+      "status": "failed"
+    },
+    {
+      "title": "Z Potentials-公众号",
+      "source_key": "67cc08a19a4297b6148b2969-z-potentials",
+      "fetched": 23,
+      "inserted": 10,
+      "updated": 13,
+      "deduped": 0,
+      "unchanged": 13,
+      "status": "failed"
+    },
+    {
+      "title": "商业WHY酱-播客",
+      "source_key": "68d6c930d2fb5962ace87138-why",
+      "fetched": 13,
+      "inserted": 0,
+      "updated": 13,
+      "deduped": 0,
+      "unchanged": 13,
+      "status": "failed"
+    },
+    {
+      "title": "AI异类弗兰克-公众号",
+      "source_key": "67cc08a39a4297b6148b2c97-ai",
+      "fetched": 24,
+      "inserted": 12,
+      "updated": 12,
+      "deduped": 0,
+      "unchanged": 12,
+      "status": "failed"
+    },
+    {
+      "title": "金融-公众号-评论",
+      "source_key": "68060c00303fabc7419af262-channel",
+      "fetched": 21,
+      "inserted": 9,
+      "updated": 12,
+      "deduped": 0,
+      "unchanged": 12,
+      "status": "failed"
+    },
+    {
+      "title": "有新的软件开发行业研报",
+      "source_key": "67cc08b79a4297b6148b4c13-channel",
+      "fetched": 12,
+      "inserted": 0,
+      "updated": 12,
+      "deduped": 0,
+      "unchanged": 12,
+      "status": "failed"
+    },
+    {
+      "title": "有新的食品饮料个股研报",
+      "source_key": "67cc08b79a4297b6148b4c86-channel",
+      "fetched": 11,
+      "inserted": 0,
+      "updated": 11,
+      "deduped": 0,
+      "unchanged": 11,
+      "status": "failed"
+    },
+    {
+      "title": "数字生命卡兹克-公众号",
+      "source_key": "67cc08a19a4297b6148b29c6-channel",
+      "fetched": 20,
+      "inserted": 11,
+      "updated": 9,
+      "deduped": 0,
+      "unchanged": 9,
+      "status": "failed"
+    },
+    {
+      "title": "KnowYourself-公众号",
+      "source_key": "67cc08a19a4297b6148b2932-knowyourself",
+      "fetched": 19,
+      "inserted": 10,
+      "updated": 9,
+      "deduped": 0,
+      "unchanged": 9,
+      "status": "failed"
+    },
+    {
+      "title": "AI提效手册",
+      "source_key": "68d3ec1b685bba553f09f016-ai",
+      "fetched": 18,
+      "inserted": 10,
+      "updated": 8,
+      "deduped": 4,
+      "unchanged": 8,
+      "status": "failed"
+    },
+    {
+      "title": "创投风向标",
+      "source_key": "68d3ec2cf8177a255e32e809-channel",
+      "fetched": 16,
+      "inserted": 8,
+      "updated": 8,
+      "deduped": 0,
+      "unchanged": 8,
+      "status": "failed"
+    },
+    {
+      "title": "AI行业最新融资案例解读",
+      "source_key": "67e5334abf856a52db04e024-ai",
+      "fetched": 17,
+      "inserted": 10,
+      "updated": 7,
+      "deduped": 2,
+      "unchanged": 7,
+      "status": "failed"
+    },
+    {
+      "title": "FIRST青年电影展-公众号",
+      "source_key": "68a7bfd8a2a8009ba9ba576e-first",
+      "fetched": 14,
+      "inserted": 7,
+      "updated": 7,
+      "deduped": 0,
+      "unchanged": 7,
+      "status": "failed"
+    },
+    {
+      "title": "财新网 - 最新文章-RSS",
+      "source_key": "67ff875fe87e13f49af43e57-rss",
+      "fetched": 24,
+      "inserted": 18,
+      "updated": 6,
+      "deduped": 0,
+      "unchanged": 6,
+      "status": "failed"
+    },
+    {
+      "title": "小互AI-公众号",
+      "source_key": "67cc08a89a4297b6148b34f0-ai",
+      "fetched": 16,
+      "inserted": 10,
+      "updated": 6,
+      "deduped": 0,
+      "unchanged": 6,
+      "status": "failed"
+    },
+    {
+      "title": "中国AI创业者最新采访",
+      "source_key": "67e5334abf856a52db04e013-ai",
+      "fetched": 15,
+      "inserted": 9,
+      "updated": 6,
+      "deduped": 0,
+      "unchanged": 6,
+      "status": "failed"
+    },
+    {
+      "title": "艺术电影-电影",
+      "source_key": "68071d1b45e75b2ff0e165bc-channel",
+      "fetched": 18,
+      "inserted": 14,
+      "updated": 4,
+      "deduped": 0,
+      "unchanged": 4,
+      "status": "failed"
+    },
+    {
+      "title": "人间故事铺",
+      "source_key": "68d3ec300d8694abdfcdf913-channel",
+      "fetched": 14,
+      "inserted": 10,
+      "updated": 4,
+      "deduped": 0,
+      "unchanged": 4,
+      "status": "failed"
+    },
+    {
+      "title": "暗涌Waves-公众号",
+      "source_key": "67cc08a29a4297b6148b29ed-waves",
+      "fetched": 14,
+      "inserted": 10,
+      "updated": 4,
+      "deduped": 0,
+      "unchanged": 4,
+      "status": "failed"
+    },
+    {
+      "title": "时政",
+      "source_key": "6805170d303fabc7418d8d04-channel",
+      "fetched": 13,
+      "inserted": 9,
+      "updated": 4,
+      "deduped": 0,
+      "unchanged": 4,
+      "status": "failed"
+    },
+    {
+      "title": "拆解新消费",
+      "source_key": "68d3ec287c1c9536cd1cb7b8-channel",
+      "fetched": 13,
+      "inserted": 10,
+      "updated": 3,
+      "deduped": 0,
+      "unchanged": 3,
+      "status": "failed"
+    },
+    {
+      "title": "简单心理Uni-公众号",
+      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
+      "fetched": 12,
+      "inserted": 10,
+      "updated": 2,
+      "deduped": 0,
+      "unchanged": 2,
+      "status": "failed"
+    },
+    {
+      "title": "甲子光年-公众号",
+      "source_key": "67cc08a29a4297b6148b29e8-channel",
+      "fetched": 6,
+      "inserted": 6,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0,
+      "status": "skipped"
+    }
+  ],
+  "source_runs": [
+    {
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "source_title": "财新-公众号",
+      "channel_id": "67cc08a59a4297b6148b2f44",
+      "before_total": 132,
+      "before_rich": 14,
+      "before_plain": 118,
+      "reserved_entry_count": 132,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a59a4297b6148b2f44-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 118,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "source_title": "新智元-公众号",
+      "channel_id": "67cc08a19a4297b6148b2994",
+      "before_total": 111,
+      "before_rich": 14,
+      "before_plain": 97,
+      "reserved_entry_count": 111,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a19a4297b6148b2994-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 97,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67e5334abf856a52db04e0b7-ai",
+      "source_title": "热门AI公众号更新追踪",
+      "channel_id": "67e5334abf856a52db04e0b7",
+      "before_total": 82,
+      "before_rich": 8,
+      "before_plain": 74,
+      "reserved_entry_count": 82,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67e5334abf856a52db04e0b7-ai/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 2,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 3,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 74,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b295c-channel",
+      "source_title": "量子位-公众号",
+      "channel_id": "67cc08a19a4297b6148b295c",
+      "before_total": 78,
+      "before_rich": 12,
+      "before_plain": 66,
+      "reserved_entry_count": 78,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a19a4297b6148b295c-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 1,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 3,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 66,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
+      "source_title": "DeepTech深科技-公众号",
+      "channel_id": "67cc08a19a4297b6148b28e7",
+      "before_total": 57,
+      "before_rich": 12,
+      "before_plain": 45,
+      "reserved_entry_count": 57,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a19a4297b6148b28e7-deeptech/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 2,
+        "feedItemsRemoved": 1,
+        "seenIdsRemoved": 1,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 45,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68d9fe108bf47f51582d2c7d-channel",
+      "source_title": "疯投圈-播客",
+      "channel_id": "68d9fe108bf47f51582d2c7d",
+      "before_total": 19,
+      "before_rich": 0,
+      "before_plain": 19,
+      "reserved_entry_count": 19,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68d9fe108bf47f51582d2c7d-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 19,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68d6c8e51173fc364b3328ff-42",
+      "source_title": "42章经-播客",
+      "channel_id": "68d6c8e51173fc364b3328ff",
+      "before_total": 18,
+      "before_rich": 0,
+      "before_plain": 18,
+      "reserved_entry_count": 18,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68d6c8e51173fc364b3328ff-42/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 18,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68d9ff9fc3cd8ada000f1cf3-101",
+      "source_title": "硅谷101-播客",
+      "channel_id": "68d9ff9fc3cd8ada000f1cf3",
+      "before_total": 16,
+      "before_rich": 0,
+      "before_plain": 16,
+      "reserved_entry_count": 16,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68d9ff9fc3cd8ada000f1cf3-101/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 16,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b298f-channel",
+      "source_title": "武志红-公众号",
+      "channel_id": "67cc08a19a4297b6148b298f",
+      "before_total": 24,
+      "before_rich": 10,
+      "before_plain": 14,
+      "reserved_entry_count": 24,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a19a4297b6148b298f-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 14,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08b79a4297b6148b4c00-channel",
+      "source_title": "互联网服务-行业研报",
+      "channel_id": "67cc08b79a4297b6148b4c00",
+      "before_total": 14,
+      "before_rich": 0,
+      "before_plain": 14,
+      "reserved_entry_count": 14,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08b79a4297b6148b4c00-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 14,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08b79a4297b6148b4c49-channel",
+      "source_title": "有新的消费电子个股研报",
+      "channel_id": "67cc08b79a4297b6148b4c49",
+      "before_total": 14,
+      "before_rich": 0,
+      "before_plain": 14,
+      "reserved_entry_count": 14,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08b79a4297b6148b4c49-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 14,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2969-z-potentials",
+      "source_title": "Z Potentials-公众号",
+      "channel_id": "67cc08a19a4297b6148b2969",
+      "before_total": 23,
+      "before_rich": 10,
+      "before_plain": 13,
+      "reserved_entry_count": 23,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a19a4297b6148b2969-z-potentials/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 2,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 2,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 13,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68d6c930d2fb5962ace87138-why",
+      "source_title": "商业WHY酱-播客",
+      "channel_id": "68d6c930d2fb5962ace87138",
+      "before_total": 13,
+      "before_rich": 0,
+      "before_plain": 13,
+      "reserved_entry_count": 13,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68d6c930d2fb5962ace87138-why/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 13,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a39a4297b6148b2c97-ai",
+      "source_title": "AI异类弗兰克-公众号",
+      "channel_id": "67cc08a39a4297b6148b2c97",
+      "before_total": 24,
+      "before_rich": 12,
+      "before_plain": 12,
+      "reserved_entry_count": 24,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a39a4297b6148b2c97-ai/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 2,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 2,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 12,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68060c00303fabc7419af262-channel",
+      "source_title": "金融-公众号-评论",
+      "channel_id": "68060c00303fabc7419af262",
+      "before_total": 21,
+      "before_rich": 9,
+      "before_plain": 12,
+      "reserved_entry_count": 21,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68060c00303fabc7419af262-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 12,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08b79a4297b6148b4c13-channel",
+      "source_title": "有新的软件开发行业研报",
+      "channel_id": "67cc08b79a4297b6148b4c13",
+      "before_total": 12,
+      "before_rich": 0,
+      "before_plain": 12,
+      "reserved_entry_count": 12,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08b79a4297b6148b4c13-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 12,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08b79a4297b6148b4c86-channel",
+      "source_title": "有新的食品饮料个股研报",
+      "channel_id": "67cc08b79a4297b6148b4c86",
+      "before_total": 11,
+      "before_rich": 0,
+      "before_plain": 11,
+      "reserved_entry_count": 11,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08b79a4297b6148b4c86-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 11,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b29c6-channel",
+      "source_title": "数字生命卡兹克-公众号",
+      "channel_id": "67cc08a19a4297b6148b29c6",
+      "before_total": 20,
+      "before_rich": 11,
+      "before_plain": 9,
+      "reserved_entry_count": 20,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a19a4297b6148b29c6-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 9,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2932-knowyourself",
+      "source_title": "KnowYourself-公众号",
+      "channel_id": "67cc08a19a4297b6148b2932",
+      "before_total": 19,
+      "before_rich": 10,
+      "before_plain": 9,
+      "reserved_entry_count": 19,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a19a4297b6148b2932-knowyourself/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 9,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68d3ec1b685bba553f09f016-ai",
+      "source_title": "AI提效手册",
+      "channel_id": "68d3ec1b685bba553f09f016",
+      "before_total": 18,
+      "before_rich": 10,
+      "before_plain": 8,
+      "reserved_entry_count": 18,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68d3ec1b685bba553f09f016-ai/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 3,
+        "feedItemsRemoved": 4,
+        "seenIdsRemoved": 8,
+        "articleFilesRemoved": 12
+      },
+      "refetch_attempted": 8,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68d3ec2cf8177a255e32e809-channel",
+      "source_title": "创投风向标",
+      "channel_id": "68d3ec2cf8177a255e32e809",
+      "before_total": 16,
+      "before_rich": 8,
+      "before_plain": 8,
+      "reserved_entry_count": 16,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68d3ec2cf8177a255e32e809-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 8,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67e5334abf856a52db04e024-ai",
+      "source_title": "AI行业最新融资案例解读",
+      "channel_id": "67e5334abf856a52db04e024",
+      "before_total": 17,
+      "before_rich": 10,
+      "before_plain": 7,
+      "reserved_entry_count": 17,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67e5334abf856a52db04e024-ai/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 2,
+        "feedItemsRemoved": 2,
+        "seenIdsRemoved": 4,
+        "articleFilesRemoved": 8
+      },
+      "refetch_attempted": 7,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68a7bfd8a2a8009ba9ba576e-first",
+      "source_title": "FIRST青年电影展-公众号",
+      "channel_id": "68a7bfd8a2a8009ba9ba576e",
+      "before_total": 14,
+      "before_rich": 7,
+      "before_plain": 7,
+      "reserved_entry_count": 14,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68a7bfd8a2a8009ba9ba576e-first/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 7,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67ff875fe87e13f49af43e57-rss",
+      "source_title": "财新网 - 最新文章-RSS",
+      "channel_id": "67ff875fe87e13f49af43e57",
+      "before_total": 24,
+      "before_rich": 18,
+      "before_plain": 6,
+      "reserved_entry_count": 24,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67ff875fe87e13f49af43e57-rss/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 1,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 1,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 6,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a89a4297b6148b34f0-ai",
+      "source_title": "小互AI-公众号",
+      "channel_id": "67cc08a89a4297b6148b34f0",
+      "before_total": 16,
+      "before_rich": 10,
+      "before_plain": 6,
+      "reserved_entry_count": 16,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a89a4297b6148b34f0-ai/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 1,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 1,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 6,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67e5334abf856a52db04e013-ai",
+      "source_title": "中国AI创业者最新采访",
+      "channel_id": "67e5334abf856a52db04e013",
+      "before_total": 15,
+      "before_rich": 9,
+      "before_plain": 6,
+      "reserved_entry_count": 15,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67e5334abf856a52db04e013-ai/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 1,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 1,
+        "articleFilesRemoved": 2
+      },
+      "refetch_attempted": 6,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68071d1b45e75b2ff0e165bc-channel",
+      "source_title": "艺术电影-电影",
+      "channel_id": "68071d1b45e75b2ff0e165bc",
+      "before_total": 18,
+      "before_rich": 14,
+      "before_plain": 4,
+      "reserved_entry_count": 18,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68071d1b45e75b2ff0e165bc-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 4,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68d3ec300d8694abdfcdf913-channel",
+      "source_title": "人间故事铺",
+      "channel_id": "68d3ec300d8694abdfcdf913",
+      "before_total": 14,
+      "before_rich": 10,
+      "before_plain": 4,
+      "reserved_entry_count": 14,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68d3ec300d8694abdfcdf913-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 4,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a29a4297b6148b29ed-waves",
+      "source_title": "暗涌Waves-公众号",
+      "channel_id": "67cc08a29a4297b6148b29ed",
+      "before_total": 14,
+      "before_rich": 10,
+      "before_plain": 4,
+      "reserved_entry_count": 14,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a29a4297b6148b29ed-waves/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 4,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "6805170d303fabc7418d8d04-channel",
+      "source_title": "时政",
+      "channel_id": "6805170d303fabc7418d8d04",
+      "before_total": 13,
+      "before_rich": 9,
+      "before_plain": 4,
+      "reserved_entry_count": 13,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/6805170d303fabc7418d8d04-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 4,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "68d3ec287c1c9536cd1cb7b8-channel",
+      "source_title": "拆解新消费",
+      "channel_id": "68d3ec287c1c9536cd1cb7b8",
+      "before_total": 13,
+      "before_rich": 10,
+      "before_plain": 3,
+      "reserved_entry_count": 13,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/68d3ec287c1c9536cd1cb7b8-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 3,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
+      "source_title": "简单心理Uni-公众号",
+      "channel_id": "67ea609b3daf5a4f63dea8ce",
+      "before_total": 12,
+      "before_rich": 10,
+      "before_plain": 2,
+      "reserved_entry_count": 12,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67ea609b3daf5a4f63dea8ce-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 2,
+      "refetch_exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "source_key": "67cc08a29a4297b6148b29e8-channel",
+      "source_title": "甲子光年-公众号",
+      "channel_id": "67cc08a29a4297b6148b29e8",
+      "before_total": 6,
+      "before_rich": 6,
+      "before_plain": 0,
+      "reserved_entry_count": 6,
+      "entry_ids_path": "data/backfill/runs/20260505-140450/sources/67cc08a29a4297b6148b29e8-channel/entry-ids.txt",
+      "conflict_cleanup": {
+        "channelDirsTouched": 0,
+        "feedItemsRemoved": 0,
+        "seenIdsRemoved": 0,
+        "articleFilesRemoved": 0
+      },
+      "refetch_attempted": 0,
+      "refetch_exit_code": null,
+      "status": "skipped"
+    }
+  ],
+  "prune_results": [
+    {
+      "source_key": "68d6c8e51173fc364b3328ff-42",
+      "source_title": "42章经-播客",
+      "deleted_plain_count": 18,
+      "remaining_count": 0
+    },
+    {
+      "source_key": "67cc08a39a4297b6148b2c97-ai",
+      "source_title": "AI异类弗兰克-公众号",
+      "deleted_plain_count": 6,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "68d3ec1b685bba553f09f016-ai",
+      "source_title": "AI提效手册",
+      "deleted_plain_count": 8,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67e5334abf856a52db04e024-ai",
+      "source_title": "AI行业最新融资案例解读",
+      "deleted_plain_count": 7,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
+      "source_title": "DeepTech深科技-公众号",
+      "deleted_plain_count": 7,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "68a7bfd8a2a8009ba9ba576e-first",
+      "source_title": "FIRST青年电影展-公众号",
+      "deleted_plain_count": 6,
+      "remaining_count": 7
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2932-knowyourself",
+      "source_title": "KnowYourself-公众号",
+      "deleted_plain_count": 0,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2969-z-potentials",
+      "source_title": "Z Potentials-公众号",
+      "deleted_plain_count": 6,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67e5334abf856a52db04e013-ai",
+      "source_title": "中国AI创业者最新采访",
+      "deleted_plain_count": 6,
+      "remaining_count": 9
+    },
+    {
+      "source_key": "67cc08b79a4297b6148b4c00-channel",
+      "source_title": "互联网服务-行业研报",
+      "deleted_plain_count": 14,
+      "remaining_count": 0
+    },
+    {
+      "source_key": "68d3ec300d8694abdfcdf913-channel",
+      "source_title": "人间故事铺",
+      "deleted_plain_count": 4,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "68d3ec2cf8177a255e32e809-channel",
+      "source_title": "创投风向标",
+      "deleted_plain_count": 8,
+      "remaining_count": 8
+    },
+    {
+      "source_key": "68d6c930d2fb5962ace87138-why",
+      "source_title": "商业WHY酱-播客",
+      "deleted_plain_count": 13,
+      "remaining_count": 0
+    },
+    {
+      "source_key": "67cc08a89a4297b6148b34f0-ai",
+      "source_title": "小互AI-公众号",
+      "deleted_plain_count": 6,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "68d3ec287c1c9536cd1cb7b8-channel",
+      "source_title": "拆解新消费",
+      "deleted_plain_count": 3,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b29c6-channel",
+      "source_title": "数字生命卡兹克-公众号",
+      "deleted_plain_count": 9,
+      "remaining_count": 11
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "source_title": "新智元-公众号",
+      "deleted_plain_count": 7,
+      "remaining_count": 9
+    },
+    {
+      "source_key": "6805170d303fabc7418d8d04-channel",
+      "source_title": "时政",
+      "deleted_plain_count": 4,
+      "remaining_count": 9
+    },
+    {
+      "source_key": "67cc08a29a4297b6148b29ed-waves",
+      "source_title": "暗涌Waves-公众号",
+      "deleted_plain_count": 4,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67cc08b79a4297b6148b4c49-channel",
+      "source_title": "有新的消费电子个股研报",
+      "deleted_plain_count": 14,
+      "remaining_count": 0
+    },
+    {
+      "source_key": "67cc08b79a4297b6148b4c13-channel",
+      "source_title": "有新的软件开发行业研报",
+      "deleted_plain_count": 12,
+      "remaining_count": 0
+    },
+    {
+      "source_key": "67cc08b79a4297b6148b4c86-channel",
+      "source_title": "有新的食品饮料个股研报",
+      "deleted_plain_count": 11,
+      "remaining_count": 0
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b298f-channel",
+      "source_title": "武志红-公众号",
+      "deleted_plain_count": 3,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67e5334abf856a52db04e0b7-ai",
+      "source_title": "热门AI公众号更新追踪",
+      "deleted_plain_count": 8,
+      "remaining_count": 8
+    },
+    {
+      "source_key": "67cc08a29a4297b6148b29e8-channel",
+      "source_title": "甲子光年-公众号",
+      "deleted_plain_count": 11,
+      "remaining_count": 6
+    },
+    {
+      "source_key": "68d9fe108bf47f51582d2c7d-channel",
+      "source_title": "疯投圈-播客",
+      "deleted_plain_count": 19,
+      "remaining_count": 0
+    },
+    {
+      "source_key": "68d9ff9fc3cd8ada000f1cf3-101",
+      "source_title": "硅谷101-播客",
+      "deleted_plain_count": 16,
+      "remaining_count": 0
+    },
+    {
+      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
+      "source_title": "简单心理Uni-公众号",
+      "deleted_plain_count": 2,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "68071d1b45e75b2ff0e165bc-channel",
+      "source_title": "艺术电影-电影",
+      "deleted_plain_count": 4,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "source_title": "财新-公众号",
+      "deleted_plain_count": 5,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67ff875fe87e13f49af43e57-rss",
+      "source_title": "财新网 - 最新文章-RSS",
+      "deleted_plain_count": 6,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b295c-channel",
+      "source_title": "量子位-公众号",
+      "deleted_plain_count": 9,
+      "remaining_count": 10
+    },
+    {
+      "source_key": "68060c00303fabc7419af262-channel",
+      "source_title": "金融-公众号-评论",
+      "deleted_plain_count": 7,
+      "remaining_count": 8
+    }
+  ],
+  "run_dir": "data/backfill/runs/20260505-140450",
+  "before_report_paths": {
+    "summary_json": "data/backfill/runs/20260505-140450/before/summary.json",
+    "summary_md": "data/backfill/runs/20260505-140450/before/summary.md"
+  },
+  "after_report_paths": {
+    "summary_json": "data/backfill/runs/20260505-140450/after/summary.json",
+    "summary_md": "data/backfill/runs/20260505-140450/after/summary.md"
+  },
+  "top_categories": []
+}
