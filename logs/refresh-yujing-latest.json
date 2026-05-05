@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260506-003711",
-  "started_at": "2026-05-06 00:37:11 CST",
-  "finished_at": "2026-05-06 00:37:42 CST",
+  "timestamp": "20260506-020002",
+  "started_at": "2026-05-06 02:00:02 CST",
+  "finished_at": "2026-05-06 02:03:26 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -10,19 +10,20 @@
     "risk_profile": "low",
     "include_all_channels": false,
     "limit": null,
-    "name_includes": null,
-    "publish": false,
-    "remote_qnap_import": true,
-    "remote_qnap_db_only": true
+    "name_includes": null
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 797,
-    "inserted": 797,
+    "fetched": 799,
+    "inserted": 799,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 257
+    "deleted_plain": 258,
+    "built_feeds": 94,
+    "published_feeds": 25,
+    "published_rich_feeds": 25,
+    "published_logs": 6
   },
   "feeds": [
     {
@@ -235,8 +236,8 @@
     {
       "source_key": "67e5334abf856a52db04e0b7-ai",
       "title": "热门AI公众号更新追踪",
-      "fetched": 61,
-      "inserted": 61,
+      "fetched": 63,
+      "inserted": 63,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0

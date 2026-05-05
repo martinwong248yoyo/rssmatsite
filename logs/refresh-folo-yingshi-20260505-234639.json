@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260506-020002",
-  "started_at": "2026-05-06 02:00:02 CST",
-  "finished_at": "2026-05-06 02:01:46 CST",
+  "timestamp": "20260505-234639",
+  "started_at": "2026-05-05 23:46:39 CST",
+  "finished_at": "2026-05-05 23:50:29 CST",
   "settings": {
     "page_limit": 50,
     "feed_limit": null,
@@ -11,12 +11,12 @@
     "entry_timeout": 90
   },
   "totals": {
-    "feed_count": 12,
-    "fetched": 21,
+    "feed_count": 11,
+    "fetched": 22,
     "inserted": 0,
     "updated": 0,
     "deduped": 0,
-    "unchanged": 21,
+    "unchanged": 22,
     "classified": 498,
     "built_feeds": 94
   },
@@ -96,20 +96,11 @@
     {
       "source_key": "266874028924204032",
       "title": "MovieMonthly - 今天看啥",
-      "fetched": 1,
+      "fetched": 2,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
-    },
-    {
-      "source_key": "266874662532543488",
-      "title": "ARRI - 今天看啥",
-      "fetched": 0,
-      "inserted": 0,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
+      "unchanged": 2
     },
     {
       "source_key": "266875140901303296",

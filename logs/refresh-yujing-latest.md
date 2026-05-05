@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `797`
-- New articles inserted: `797`
+- Updated articles this run: `799`
+- New articles inserted: `799`
 - Existing articles updated: `0`
-- Run time: `2026-05-06 00:37:11 CST` to `2026-05-06 00:37:42 CST`
+- Run time: `2026-05-06 02:00:02 CST` to `2026-05-06 02:03:26 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -11,11 +11,13 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `33`
-- Fetched articles: `797`
-- Inserted articles: `797`
+- Fetched articles: `799`
+- Inserted articles: `799`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
+- Feeds generated: `94`
+- Feeds published: `25`
 
 ## Feed-Level Changes
 
@@ -42,7 +44,7 @@
 - `有新的软件开发行业研报`: fetched=`12`, inserted=`12`, updated=`0`, deduped=`0`, unchanged=`0`
 - `有新的食品饮料个股研报`: fetched=`11`, inserted=`11`, updated=`0`, deduped=`0`, unchanged=`0`
 - `武志红-公众号`: fetched=`22`, inserted=`22`, updated=`0`, deduped=`0`, unchanged=`0`
-- `热门AI公众号更新追踪`: fetched=`61`, inserted=`61`, updated=`0`, deduped=`0`, unchanged=`0`
+- `热门AI公众号更新追踪`: fetched=`63`, inserted=`63`, updated=`0`, deduped=`0`, unchanged=`0`
 - `甲子光年-公众号`: fetched=`22`, inserted=`22`, updated=`0`, deduped=`0`, unchanged=`0`
 - `疯投圈-播客`: fetched=`19`, inserted=`19`, updated=`0`, deduped=`0`, unchanged=`0`
 - `硅谷101-播客`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`

@@ -3,7 +3,7 @@
 - Updated articles this run: `0`
 - New articles inserted: `0`
 - Existing articles updated: `0`
-- Run time: `2026-05-06 02:00:02 CST` to `2026-05-06 02:01:46 CST`
+- Run time: `2026-05-05 23:46:39 CST` to `2026-05-05 23:50:29 CST`
 - Update command: `npm run refresh:folo:yingshi`
 - Recent-days filter: `3`
 - Page limit: `50`
@@ -11,12 +11,12 @@
 ## Summary
 
 - Fetch pipeline completed successfully.
-- Source feeds processed: `12`
-- Fetched articles: `21`
+- Source feeds processed: `11`
+- Fetched articles: `22`
 - Inserted articles: `0`
 - Updated articles: `0`
 - Deduped articles: `0`
-- Unchanged articles: `21`
+- Unchanged articles: `22`
 - Reclassified articles: `498`
 - Feeds generated: `94`
 
@@ -30,8 +30,7 @@
 - `导演帮 - 今天看啥`: fetched=`2`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`2`
 - `凹凸镜DOC - 今天看啥`: fetched=`4`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`4`
 - `3号厅检票员工 - 今天看啥`: fetched=`3`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`3`
-- `MovieMonthly - 今天看啥`: fetched=`1`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`1`
-- `ARRI - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
+- `MovieMonthly - 今天看啥`: fetched=`2`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`2`
 - `中国影视摄影师学会 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `GaiaDaily - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 

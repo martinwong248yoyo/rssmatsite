@@ -1,23 +1,23 @@
 {
-  "timestamp": "20260506-020002",
-  "started_at": "2026-05-06 02:00:02 CST",
-  "finished_at": "2026-05-06 02:13:55 CST",
+  "timestamp": "20260506-013347",
+  "started_at": "2026-05-06 01:33:47 CST",
+  "finished_at": "2026-05-06 01:34:38 CST",
   "command": "npm run refresh:opengetbiji",
   "settings": {
     "recent_days": 3,
-    "start": "2026-05-04",
-    "end": "2026-05-06",
-    "publish": true
+    "start": "2026-05-05",
+    "end": "2026-05-05",
+    "publish": false
   },
   "totals": {
     "feed_count": 13,
-    "fetched": 134,
-    "inserted": 134,
+    "fetched": 122,
+    "inserted": 122,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "built_feeds": 94,
-    "published_feeds": 13
+    "published_feeds": 0
   },
   "feeds": [
     {
@@ -32,8 +32,8 @@
     {
       "source_key": "独夫之心",
       "title": "独夫之心 - OpenGet笔记",
-      "fetched": 43,
-      "inserted": 43,
+      "fetched": 39,
+      "inserted": 39,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -41,8 +41,8 @@
     {
       "source_key": "Koji杨远骋",
       "title": "Koji杨远骋 - OpenGet笔记",
-      "fetched": 12,
-      "inserted": 12,
+      "fetched": 11,
+      "inserted": 11,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -50,15 +50,6 @@
     {
       "source_key": "北京经济犯罪&职务犯罪.阮思乔律师",
       "title": "北京经济犯罪&职务犯罪.阮思乔律师 - OpenGet笔记",
-      "fetched": 8,
-      "inserted": 8,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "陈杰森资本棋局",
-      "title": "陈杰森资本棋局 - OpenGet笔记",
       "fetched": 7,
       "inserted": 7,
       "updated": 0,
@@ -66,10 +57,19 @@
       "unchanged": 0
     },
     {
+      "source_key": "陈杰森资本棋局",
+      "title": "陈杰森资本棋局 - OpenGet笔记",
+      "fetched": 6,
+      "inserted": 6,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
       "source_key": "深圳刑事 陈成均律师",
       "title": "深圳刑事 陈成均律师 - OpenGet笔记",
-      "fetched": 13,
-      "inserted": 13,
+      "fetched": 11,
+      "inserted": 11,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -77,8 +77,8 @@
     {
       "source_key": "特效老炮BillyZhang",
       "title": "特效老炮BillyZhang - OpenGet笔记",
-      "fetched": 8,
-      "inserted": 8,
+      "fetched": 7,
+      "inserted": 7,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -86,8 +86,8 @@
     {
       "source_key": "邹先华",
       "title": "邹先华 - OpenGet笔记",
-      "fetched": 20,
-      "inserted": 20,
+      "fetched": 18,
+      "inserted": 18,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
