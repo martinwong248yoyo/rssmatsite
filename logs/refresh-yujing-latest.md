@@ -3,7 +3,7 @@
 - Updated articles this run: `797`
 - New articles inserted: `797`
 - Existing articles updated: `0`
-- Run time: `2026-05-05 21:31:17 CST` to `2026-05-05 21:46:31 CST`
+- Run time: `2026-05-06 00:37:11 CST` to `2026-05-06 00:37:42 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -16,8 +16,6 @@
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
-- Feeds generated: `94`
-- Feeds published: `25`
 
 ## Feed-Level Changes
 

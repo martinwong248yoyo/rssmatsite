@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260505-213117",
-  "started_at": "2026-05-05 21:31:17 CST",
-  "finished_at": "2026-05-05 21:46:31 CST",
+  "timestamp": "20260506-003711",
+  "started_at": "2026-05-06 00:37:11 CST",
+  "finished_at": "2026-05-06 00:37:42 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -10,7 +10,10 @@
     "risk_profile": "low",
     "include_all_channels": false,
     "limit": null,
-    "name_includes": null
+    "name_includes": null,
+    "publish": false,
+    "remote_qnap_import": true,
+    "remote_qnap_db_only": true
   },
   "totals": {
     "feed_count": 33,
@@ -19,11 +22,7 @@
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 257,
-    "built_feeds": 94,
-    "published_feeds": 25,
-    "published_rich_feeds": 25,
-    "published_logs": 6
+    "deleted_plain": 257
   },
   "feeds": [
     {
