@@ -4,49 +4,6 @@
 <title>Koji杨远骋 - OpenGet笔记</title>
 <link>https://www.biji.com/</link>
 <description>Koji杨远骋 - OpenGet笔记 (opengetbiji)</description>
-<item><title>开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战</title><link>https://www.biji.com/post/fd8c3e14a7</link><guid>https://www.biji.com/post/fd8c3e14a7</guid><author>Koji杨远骋</author><description><![CDATA[<h1>开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战</h1>
-<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: undated</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接:</li><li>站内链接:</li></ul>
-<p>---</p>
-<p>标题: &quot;开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战&quot; 日期: &quot;未知&quot; 关键词: &quot;AI for Science, 材料发现, 扩散模型, 开物纪, 商业管线, 技术规模化&quot; 摘要: &quot;本期对谈中，开物纪创始人陆子恒系统阐述了公司利用扩散模型等AI技术发现新材料并推动其从实验室走向量产的愿景，讨论了当前的技术路线、商业模式探索与行业非共识，并分享了从微软研究院到创业的个人经历与对AI时代人才培养的思考。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
-<p>本期十字路口的嘉宾是开物纪创始人陆子恒。开物纪去年9月注册成立，目前团队约10人，专注AI for Material方向——用AI发现并验证新材料，同时推动其从实验室走向量产商用。公司刚完成数亿元天使+轮融资，投资方包括Monoliths、光合创投等。</p>
-<p>陆子恒30岁，本科就读于南京理工大学，博士毕业于香港科技大学。创业前在微软研究院（MSR）从事AI for Science研究，同时深度参与北京中关村学院物质方向建设，现任该院首席材料科学家及物质方向负责人。公司目前收入和利润均为零。</p>
-<h2>AI发明材料的本质与历史价值</h2>
-<p>从第一性原理来看，材料就是原子的排列组合。AI发明材料本质上是一个&quot;在白纸上放原子&quot;的游戏：生成的结构首先要能量足够低、能够被合成；其次要具备目标性质；最后还要能商业化。</p>
-<p>历史上，材料IP创造了巨大的产业价值。单晶硅支撑了整个AI和计算产业；2011年日本科学家发现的硫化物材料，因锂离子在其中的穿梭速度接近在水中的速度，直接带动了固态电池产业，高峰期一吨售价可达七八十万。这些原始IP往往诞生于高校或研究所的少数科学家之手，如Goodenough一人就做了四五种截然不同的锂电主材。</p>
-<h2>技术路径：模型Scaling与发现流程</h2>
-<p>开物纪的技术信念源于2023-2024年间的一次关键观察：团队开发的MatterSim模型在zero-shot预测材料声子（即比热容）时，能力突然超过了所有针对该任务专门训练的模型。这印证了GPT-3.5带来的启示——通过scaling可以显著提升模型的泛化能力。</p>
-<p>在生成模型方面，团队采用基于图（graph）的扩散模型（diffusion），学习在高维空间中寻找&quot;可被合成材料的流形&quot;并从中采样。去年团队在《自然》发表了相关成果，用diffusion模型进行材料生成，效果大幅超越此前基于VAE等架构的方法。</p>
-<p>以一个锂电池负极材料为例，完整流程是：基于商业需求，通过生成模型和筛选模型产出候选化合物；材料专家评估后进入实验室验证；验证通过后做到公斤级；再交给下游客户在产线上试用，根据反馈决定是否放量。AI发挥最关键作用的是前端发现颠覆性IP的环节，单卡筛选速度从几十秒到几十分钟不等。</p>
-<p>团队希望未来一两年在&quot;物质自由能预测&quot;上取得突破，从而在较广的材料空间中准确推断任意材料的热力学可合成性，替代大量实验。</p>
-<h2>商业逻辑与行业定位</h2>
-<p>陆子恒将开物纪的愿景类比为材料界的Flagship Pioneering——后者通过孵化药物管线（如Moderna）创造了多家巨头公司。开物纪希望做材料界的管线孵化，从头打到尾，先亲自跑通至少一个材料的全流程，证明AI发现新材料的可行性，再探索平台化、轻资产的可能性。</p>
-<p>目前行业尚未形成强共识：商业化价值究竟主要体现在原始重磅化合物的发现上，还是后端工艺放大优化上；模型发展应侧重哪些能力，各家认知也有差异。海外如Pure Lithium、Prometheus、Cospe、Orbital Materials等公司，技术路线和侧重点也各不相同。</p>
-<p>融资主要投向两方面：一是算力和AI人才（每年算力几千万，AI人才薪资极高），二是材料管线研发。实验室阶段做到公斤级成本相对可控（大几百万），但一旦进入大规模产能建设，成本将跃升至亿级。</p>
-<h2>研究文化、教育与个人经历</h2>
-<p>陆子恒认为，做好一家研究驱动的商业公司，需要&quot;做AI的、做统计物理的、做simulation的、实验室里的老法师&quot;天天在一起，形成对两边能力边界的清晰认知，这是潜在壁垒。</p>
-<p>在AI重塑知识的背景下，他对教育也有些迷茫：GPT能回答所有知识性问题，面试应考察什么？他倾向于看重候选人的主动性、企业家精神（韧性、领导力、愿景）以及taste（审美/品味）——后者在科研中体现为对问题的选择能力。他建议年轻人读博，因为这是&quot;有人给你一笔不用还的钱去探索有意思的事&quot;的最好阶段；也建议想进入AI for材料领域的人，在一个重大课题里做最核心、最硬核的技术部分，做深做透。</p>
-<p>他个人经历颇为&quot;折腾&quot;：从本科时&quot;月薪三千&quot;的目标，到读博、出国、想当老师、想做产业化，再到2018-2020年在深圳先进院接触市场，最后进入微软研究院，直至创业。他将这种折腾归因于父母给予的强大安全感，以及深圳&quot;必须自己造血&quot;的生态系统带来的深刻影响。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战</h1>
-<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: undated</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接:</li><li>站内链接:</li></ul>
-<p>---</p>
-<p>标题: &quot;开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战&quot; 日期: &quot;未知&quot; 关键词: &quot;AI for Science, 材料发现, 扩散模型, 开物纪, 商业管线, 技术规模化&quot; 摘要: &quot;本期对谈中，开物纪创始人陆子恒系统阐述了公司利用扩散模型等AI技术发现新材料并推动其从实验室走向量产的愿景，讨论了当前的技术路线、商业模式探索与行业非共识，并分享了从微软研究院到创业的个人经历与对AI时代人才培养的思考。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
-<p>本期十字路口的嘉宾是开物纪创始人陆子恒。开物纪去年9月注册成立，目前团队约10人，专注AI for Material方向——用AI发现并验证新材料，同时推动其从实验室走向量产商用。公司刚完成数亿元天使+轮融资，投资方包括Monoliths、光合创投等。</p>
-<p>陆子恒30岁，本科就读于南京理工大学，博士毕业于香港科技大学。创业前在微软研究院（MSR）从事AI for Science研究，同时深度参与北京中关村学院物质方向建设，现任该院首席材料科学家及物质方向负责人。公司目前收入和利润均为零。</p>
-<h2>AI发明材料的本质与历史价值</h2>
-<p>从第一性原理来看，材料就是原子的排列组合。AI发明材料本质上是一个&quot;在白纸上放原子&quot;的游戏：生成的结构首先要能量足够低、能够被合成；其次要具备目标性质；最后还要能商业化。</p>
-<p>历史上，材料IP创造了巨大的产业价值。单晶硅支撑了整个AI和计算产业；2011年日本科学家发现的硫化物材料，因锂离子在其中的穿梭速度接近在水中的速度，直接带动了固态电池产业，高峰期一吨售价可达七八十万。这些原始IP往往诞生于高校或研究所的少数科学家之手，如Goodenough一人就做了四五种截然不同的锂电主材。</p>
-<h2>技术路径：模型Scaling与发现流程</h2>
-<p>开物纪的技术信念源于2023-2024年间的一次关键观察：团队开发的MatterSim模型在zero-shot预测材料声子（即比热容）时，能力突然超过了所有针对该任务专门训练的模型。这印证了GPT-3.5带来的启示——通过scaling可以显著提升模型的泛化能力。</p>
-<p>在生成模型方面，团队采用基于图（graph）的扩散模型（diffusion），学习在高维空间中寻找&quot;可被合成材料的流形&quot;并从中采样。去年团队在《自然》发表了相关成果，用diffusion模型进行材料生成，效果大幅超越此前基于VAE等架构的方法。</p>
-<p>以一个锂电池负极材料为例，完整流程是：基于商业需求，通过生成模型和筛选模型产出候选化合物；材料专家评估后进入实验室验证；验证通过后做到公斤级；再交给下游客户在产线上试用，根据反馈决定是否放量。AI发挥最关键作用的是前端发现颠覆性IP的环节，单卡筛选速度从几十秒到几十分钟不等。</p>
-<p>团队希望未来一两年在&quot;物质自由能预测&quot;上取得突破，从而在较广的材料空间中准确推断任意材料的热力学可合成性，替代大量实验。</p>
-<h2>商业逻辑与行业定位</h2>
-<p>陆子恒将开物纪的愿景类比为材料界的Flagship Pioneering——后者通过孵化药物管线（如Moderna）创造了多家巨头公司。开物纪希望做材料界的管线孵化，从头打到尾，先亲自跑通至少一个材料的全流程，证明AI发现新材料的可行性，再探索平台化、轻资产的可能性。</p>
-<p>目前行业尚未形成强共识：商业化价值究竟主要体现在原始重磅化合物的发现上，还是后端工艺放大优化上；模型发展应侧重哪些能力，各家认知也有差异。海外如Pure Lithium、Prometheus、Cospe、Orbital Materials等公司，技术路线和侧重点也各不相同。</p>
-<p>融资主要投向两方面：一是算力和AI人才（每年算力几千万，AI人才薪资极高），二是材料管线研发。实验室阶段做到公斤级成本相对可控（大几百万），但一旦进入大规模产能建设，成本将跃升至亿级。</p>
-<h2>研究文化、教育与个人经历</h2>
-<p>陆子恒认为，做好一家研究驱动的商业公司，需要&quot;做AI的、做统计物理的、做simulation的、实验室里的老法师&quot;天天在一起，形成对两边能力边界的清晰认知，这是潜在壁垒。</p>
-<p>在AI重塑知识的背景下，他对教育也有些迷茫：GPT能回答所有知识性问题，面试应考察什么？他倾向于看重候选人的主动性、企业家精神（韧性、领导力、愿景）以及taste（审美/品味）——后者在科研中体现为对问题的选择能力。他建议年轻人读博，因为这是&quot;有人给你一笔不用还的钱去探索有意思的事&quot;的最好阶段；也建议想进入AI for材料领域的人，在一个重大课题里做最核心、最硬核的技术部分，做深做透。</p>
-<p>他个人经历颇为&quot;折腾&quot;：从本科时&quot;月薪三千&quot;的目标，到读博、出国、想当老师、想做产业化，再到2018-2020年在深圳先进院接触市场，最后进入微软研究院，直至创业。他将这种折腾归因于父母给予的强大安全感，以及深圳&quot;必须自己造血&quot;的生态系统带来的深刻影响。</p>]]></content:encoded></item>
 <item><title>AI革命是最高等级的革命➤「十字路口」有一个内容系列「AI在中国」，长期关注AI在中国各行各业的具体落地案...</title><link>https://www.iesdouyin.com/share/video/7632262054576999730/?region=CN&amp;mid=7632262044419017510&amp;u_code=4c0h4ihjgfjf&amp;did=MS4wLjABAAAAdXzaGj-RiJA6z7ONZSmgK3zMQ5nypiMeeIA8pjBjRAw&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=VFtyIYnl68cRkF0MTbZnxwS1lWCgwh_PP4STTp6RlO8-&amp;share_version=220000&amp;ts=1777500085&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7632262054576999730/?region=CN&amp;mid=7632262044419017510&amp;u_code=4c0h4ihjgfjf&amp;did=MS4wLjABAAAAdXzaGj-RiJA6z7ONZSmgK3zMQ5nypiMeeIA8pjBjRAw&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=VFtyIYnl68cRkF0MTbZnxwS1lWCgwh_PP4STTp6RlO8-&amp;share_version=220000&amp;ts=1777500085&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Wed, 29 Apr 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AI革命是最高等级的革命➤「十字路口」有一个内容系列「AI在中国」，长期关注AI在中国各行各业的具体落地案...</h1>
 <ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-04-29</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7632262054576999730/?region=CN&amp;mid=7632262044419017510&amp;u_code=4c0h4ihjgfjf&amp;did=MS4wLjABAAAAdXzaGj-RiJA6z7ONZSmgK3zMQ5nypiMeeIA8pjBjRAw&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=VFtyIYnl68cRkF0MTbZnxwS1lWCgwh_PP4STTp6RlO8-&amp;share_version=220000&amp;ts=1777500085&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/LKx7bJM0yVDx0loA/web</li></ul>
 <p>---</p>
@@ -201,6 +158,49 @@
 <p>当被问及在黑客松中最喜欢的产品（不能说自己的），Edward从另一个角度回答。他在小红书上翻到了几位队友的账号，发现他们都是有艺术风范的设计师。他觉得小红书有时能反映一个人背后能做出什么样的作品。其中有一位队友经常在小红书上分享自己制作的合成器以及在音乐方面的探索，这些积累最终呈现在了全场大奖的作品上。Edward认为，该作品很好地体现了科技与人文的结合。</p>
 <h2>时间 vs. 注意力</h2>
 <p>最后，关于产品定位是“save time”还是“kill time”，Edward表示，时间不一定是最关键的，最重要的是把注意力放在最值得的地方。他的产品在背后某种程度上起到了这样的作用：不一定节约了时间，但一定为最终结果提升了价值。</p>]]></content:encoded></item>
+<item><title>开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战</title><link>https://www.biji.com/post/fd8c3e14a7</link><guid>https://www.biji.com/post/fd8c3e14a7</guid><author>Koji杨远骋</author><pubDate>Mon, 27 Apr 2026 04:25:29 +0000</pubDate><description><![CDATA[<h1>开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: undated</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接:</li><li>站内链接:</li></ul>
+<p>---</p>
+<p>标题: &quot;开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战&quot; 日期: &quot;未知&quot; 关键词: &quot;AI for Science, 材料发现, 扩散模型, 开物纪, 商业管线, 技术规模化&quot; 摘要: &quot;本期对谈中，开物纪创始人陆子恒系统阐述了公司利用扩散模型等AI技术发现新材料并推动其从实验室走向量产的愿景，讨论了当前的技术路线、商业模式探索与行业非共识，并分享了从微软研究院到创业的个人经历与对AI时代人才培养的思考。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<p>本期十字路口的嘉宾是开物纪创始人陆子恒。开物纪去年9月注册成立，目前团队约10人，专注AI for Material方向——用AI发现并验证新材料，同时推动其从实验室走向量产商用。公司刚完成数亿元天使+轮融资，投资方包括Monoliths、光合创投等。</p>
+<p>陆子恒30岁，本科就读于南京理工大学，博士毕业于香港科技大学。创业前在微软研究院（MSR）从事AI for Science研究，同时深度参与北京中关村学院物质方向建设，现任该院首席材料科学家及物质方向负责人。公司目前收入和利润均为零。</p>
+<h2>AI发明材料的本质与历史价值</h2>
+<p>从第一性原理来看，材料就是原子的排列组合。AI发明材料本质上是一个&quot;在白纸上放原子&quot;的游戏：生成的结构首先要能量足够低、能够被合成；其次要具备目标性质；最后还要能商业化。</p>
+<p>历史上，材料IP创造了巨大的产业价值。单晶硅支撑了整个AI和计算产业；2011年日本科学家发现的硫化物材料，因锂离子在其中的穿梭速度接近在水中的速度，直接带动了固态电池产业，高峰期一吨售价可达七八十万。这些原始IP往往诞生于高校或研究所的少数科学家之手，如Goodenough一人就做了四五种截然不同的锂电主材。</p>
+<h2>技术路径：模型Scaling与发现流程</h2>
+<p>开物纪的技术信念源于2023-2024年间的一次关键观察：团队开发的MatterSim模型在zero-shot预测材料声子（即比热容）时，能力突然超过了所有针对该任务专门训练的模型。这印证了GPT-3.5带来的启示——通过scaling可以显著提升模型的泛化能力。</p>
+<p>在生成模型方面，团队采用基于图（graph）的扩散模型（diffusion），学习在高维空间中寻找&quot;可被合成材料的流形&quot;并从中采样。去年团队在《自然》发表了相关成果，用diffusion模型进行材料生成，效果大幅超越此前基于VAE等架构的方法。</p>
+<p>以一个锂电池负极材料为例，完整流程是：基于商业需求，通过生成模型和筛选模型产出候选化合物；材料专家评估后进入实验室验证；验证通过后做到公斤级；再交给下游客户在产线上试用，根据反馈决定是否放量。AI发挥最关键作用的是前端发现颠覆性IP的环节，单卡筛选速度从几十秒到几十分钟不等。</p>
+<p>团队希望未来一两年在&quot;物质自由能预测&quot;上取得突破，从而在较广的材料空间中准确推断任意材料的热力学可合成性，替代大量实验。</p>
+<h2>商业逻辑与行业定位</h2>
+<p>陆子恒将开物纪的愿景类比为材料界的Flagship Pioneering——后者通过孵化药物管线（如Moderna）创造了多家巨头公司。开物纪希望做材料界的管线孵化，从头打到尾，先亲自跑通至少一个材料的全流程，证明AI发现新材料的可行性，再探索平台化、轻资产的可能性。</p>
+<p>目前行业尚未形成强共识：商业化价值究竟主要体现在原始重磅化合物的发现上，还是后端工艺放大优化上；模型发展应侧重哪些能力，各家认知也有差异。海外如Pure Lithium、Prometheus、Cospe、Orbital Materials等公司，技术路线和侧重点也各不相同。</p>
+<p>融资主要投向两方面：一是算力和AI人才（每年算力几千万，AI人才薪资极高），二是材料管线研发。实验室阶段做到公斤级成本相对可控（大几百万），但一旦进入大规模产能建设，成本将跃升至亿级。</p>
+<h2>研究文化、教育与个人经历</h2>
+<p>陆子恒认为，做好一家研究驱动的商业公司，需要&quot;做AI的、做统计物理的、做simulation的、实验室里的老法师&quot;天天在一起，形成对两边能力边界的清晰认知，这是潜在壁垒。</p>
+<p>在AI重塑知识的背景下，他对教育也有些迷茫：GPT能回答所有知识性问题，面试应考察什么？他倾向于看重候选人的主动性、企业家精神（韧性、领导力、愿景）以及taste（审美/品味）——后者在科研中体现为对问题的选择能力。他建议年轻人读博，因为这是&quot;有人给你一笔不用还的钱去探索有意思的事&quot;的最好阶段；也建议想进入AI for材料领域的人，在一个重大课题里做最核心、最硬核的技术部分，做深做透。</p>
+<p>他个人经历颇为&quot;折腾&quot;：从本科时&quot;月薪三千&quot;的目标，到读博、出国、想当老师、想做产业化，再到2018-2020年在深圳先进院接触市场，最后进入微软研究院，直至创业。他将这种折腾归因于父母给予的强大安全感，以及深圳&quot;必须自己造血&quot;的生态系统带来的深刻影响。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: undated</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接:</li><li>站内链接:</li></ul>
+<p>---</p>
+<p>标题: &quot;开物纪的AI材料研发路径：扩散模型驱动的发现逻辑、商业管线设计与规模化挑战&quot; 日期: &quot;未知&quot; 关键词: &quot;AI for Science, 材料发现, 扩散模型, 开物纪, 商业管线, 技术规模化&quot; 摘要: &quot;本期对谈中，开物纪创始人陆子恒系统阐述了公司利用扩散模型等AI技术发现新材料并推动其从实验室走向量产的愿景，讨论了当前的技术路线、商业模式探索与行业非共识，并分享了从微软研究院到创业的个人经历与对AI时代人才培养的思考。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<p>本期十字路口的嘉宾是开物纪创始人陆子恒。开物纪去年9月注册成立，目前团队约10人，专注AI for Material方向——用AI发现并验证新材料，同时推动其从实验室走向量产商用。公司刚完成数亿元天使+轮融资，投资方包括Monoliths、光合创投等。</p>
+<p>陆子恒30岁，本科就读于南京理工大学，博士毕业于香港科技大学。创业前在微软研究院（MSR）从事AI for Science研究，同时深度参与北京中关村学院物质方向建设，现任该院首席材料科学家及物质方向负责人。公司目前收入和利润均为零。</p>
+<h2>AI发明材料的本质与历史价值</h2>
+<p>从第一性原理来看，材料就是原子的排列组合。AI发明材料本质上是一个&quot;在白纸上放原子&quot;的游戏：生成的结构首先要能量足够低、能够被合成；其次要具备目标性质；最后还要能商业化。</p>
+<p>历史上，材料IP创造了巨大的产业价值。单晶硅支撑了整个AI和计算产业；2011年日本科学家发现的硫化物材料，因锂离子在其中的穿梭速度接近在水中的速度，直接带动了固态电池产业，高峰期一吨售价可达七八十万。这些原始IP往往诞生于高校或研究所的少数科学家之手，如Goodenough一人就做了四五种截然不同的锂电主材。</p>
+<h2>技术路径：模型Scaling与发现流程</h2>
+<p>开物纪的技术信念源于2023-2024年间的一次关键观察：团队开发的MatterSim模型在zero-shot预测材料声子（即比热容）时，能力突然超过了所有针对该任务专门训练的模型。这印证了GPT-3.5带来的启示——通过scaling可以显著提升模型的泛化能力。</p>
+<p>在生成模型方面，团队采用基于图（graph）的扩散模型（diffusion），学习在高维空间中寻找&quot;可被合成材料的流形&quot;并从中采样。去年团队在《自然》发表了相关成果，用diffusion模型进行材料生成，效果大幅超越此前基于VAE等架构的方法。</p>
+<p>以一个锂电池负极材料为例，完整流程是：基于商业需求，通过生成模型和筛选模型产出候选化合物；材料专家评估后进入实验室验证；验证通过后做到公斤级；再交给下游客户在产线上试用，根据反馈决定是否放量。AI发挥最关键作用的是前端发现颠覆性IP的环节，单卡筛选速度从几十秒到几十分钟不等。</p>
+<p>团队希望未来一两年在&quot;物质自由能预测&quot;上取得突破，从而在较广的材料空间中准确推断任意材料的热力学可合成性，替代大量实验。</p>
+<h2>商业逻辑与行业定位</h2>
+<p>陆子恒将开物纪的愿景类比为材料界的Flagship Pioneering——后者通过孵化药物管线（如Moderna）创造了多家巨头公司。开物纪希望做材料界的管线孵化，从头打到尾，先亲自跑通至少一个材料的全流程，证明AI发现新材料的可行性，再探索平台化、轻资产的可能性。</p>
+<p>目前行业尚未形成强共识：商业化价值究竟主要体现在原始重磅化合物的发现上，还是后端工艺放大优化上；模型发展应侧重哪些能力，各家认知也有差异。海外如Pure Lithium、Prometheus、Cospe、Orbital Materials等公司，技术路线和侧重点也各不相同。</p>
+<p>融资主要投向两方面：一是算力和AI人才（每年算力几千万，AI人才薪资极高），二是材料管线研发。实验室阶段做到公斤级成本相对可控（大几百万），但一旦进入大规模产能建设，成本将跃升至亿级。</p>
+<h2>研究文化、教育与个人经历</h2>
+<p>陆子恒认为，做好一家研究驱动的商业公司，需要&quot;做AI的、做统计物理的、做simulation的、实验室里的老法师&quot;天天在一起，形成对两边能力边界的清晰认知，这是潜在壁垒。</p>
+<p>在AI重塑知识的背景下，他对教育也有些迷茫：GPT能回答所有知识性问题，面试应考察什么？他倾向于看重候选人的主动性、企业家精神（韧性、领导力、愿景）以及taste（审美/品味）——后者在科研中体现为对问题的选择能力。他建议年轻人读博，因为这是&quot;有人给你一笔不用还的钱去探索有意思的事&quot;的最好阶段；也建议想进入AI for材料领域的人，在一个重大课题里做最核心、最硬核的技术部分，做深做透。</p>
+<p>他个人经历颇为&quot;折腾&quot;：从本科时&quot;月薪三千&quot;的目标，到读博、出国、想当老师、想做产业化，再到2018-2020年在深圳先进院接触市场，最后进入微软研究院，直至创业。他将这种折腾归因于父母给予的强大安全感，以及深圳&quot;必须自己造血&quot;的生态系统带来的深刻影响。</p>]]></content:encoded></item>
 <item><title>【正片】为什么公司用不好AI？➤「十字路口」有一个内容系列「AI在中国」，长期关注AI在中国各行各业的具体...</title><link>https://www.iesdouyin.com/share/video/7632274216649362714/?region=CN&amp;mid=7632274948886694710&amp;u_code=a092b2de44g&amp;did=MS4wLjABAAAACy7jV09_JpMoQVoqhx9OeXXDmtqOv69TZVZV28Ean58&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=I3oLmk0X.UZ2tZzl07Lj67d0ToUnrrq29fszC_IiIk4-&amp;share_version=210600&amp;ts=1777245824&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7632274216649362714/?region=CN&amp;mid=7632274948886694710&amp;u_code=a092b2de44g&amp;did=MS4wLjABAAAACy7jV09_JpMoQVoqhx9OeXXDmtqOv69TZVZV28Ean58&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=I3oLmk0X.UZ2tZzl07Lj67d0ToUnrrq29fszC_IiIk4-&amp;share_version=210600&amp;ts=1777245824&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Mon, 27 Apr 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>【正片】为什么公司用不好AI？➤「十字路口」有一个内容系列「AI在中国」，长期关注AI在中国各行各业的具体...</h1>
 <ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-04-27</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7632274216649362714/?region=CN&amp;mid=7632274948886694710&amp;u_code=a092b2de44g&amp;did=MS4wLjABAAAACy7jV09_JpMoQVoqhx9OeXXDmtqOv69TZVZV28Ean58&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=I3oLmk0X.UZ2tZzl07Lj67d0ToUnrrq29fszC_IiIk4-&amp;share_version=210600&amp;ts=1777245824&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/6vNqG42a0kgj0VOe/web</li></ul>
 <p>---</p>
