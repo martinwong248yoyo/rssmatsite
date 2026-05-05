@@ -4,6 +4,53 @@
 <title>Koji杨远骋 - OpenGet笔记</title>
 <link>https://www.biji.com/</link>
 <description>Koji杨远骋 - OpenGet笔记 (opengetbiji)</description>
+<item><title>中美AI模型差距不在算法➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgent首席架构...</title><link>https://www.iesdouyin.com/share/video/7634094892532174086/?region=CN&amp;mid=7634094873485806386&amp;u_code=lfmkmgk1jdd&amp;did=MS4wLjABAAAAU_ZlwU2C1iRU8K5RF7t8RfdyNj62nZpnLIB6JT-qhhM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=W5ggn5CfWyX_l1_Bh.UvFZ_5wo6sm6FmZQFF8Rs_sWY-&amp;share_version=230300&amp;ts=1777938292&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7634094892532174086/?region=CN&amp;mid=7634094873485806386&amp;u_code=lfmkmgk1jdd&amp;did=MS4wLjABAAAAU_ZlwU2C1iRU8K5RF7t8RfdyNj62nZpnLIB6JT-qhhM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=W5ggn5CfWyX_l1_Bh.UvFZ_5wo6sm6FmZQFF8Rs_sWY-&amp;share_version=230300&amp;ts=1777938292&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Mon, 04 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>中美AI模型差距不在算法➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgent首席架构...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-04</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634094892532174086/?region=CN&amp;mid=7634094873485806386&amp;u_code=lfmkmgk1jdd&amp;did=MS4wLjABAAAAU_ZlwU2C1iRU8K5RF7t8RfdyNj62nZpnLIB6JT-qhhM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=W5ggn5CfWyX_l1_Bh.UvFZ_5wo6sm6FmZQFF8Rs_sWY-&amp;share_version=230300&amp;ts=1777938292&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/LKx7bW2dLajL6loA/web</li></ul>
+<p>---</p>
+<p>标题: &quot;中美AI模型差距分析：任务定义方法论与规模化投入判断&quot; 日期: &quot;2026-05-04&quot; 关键词: &quot;中美AI差距, 任务定义, 模型蒸馏, 规模化, AGI路径&quot; 摘要: &quot;本文通过与中美一线Agent开发者的对谈，指出当前中美AI模型的核心差距不在算法训练方法，而在任务定义的科学方法论以及对AGI规模化投入的判断上。&quot; 来源: &quot;https://www.iesdouyin.com/share/video/7634094892532174086/&quot; ---</p>
+<h2>对谈背景</h2>
+<p>本期内容中，我邀请了中美两国一线Agent开发者进行深度对谈，探讨中国模型与OpenAI、Anthropic之间的差距。</p>
+<h2>算法训练的差距已不大</h2>
+<p>当我们讨论中国模型与OpenAI等主流模型的差距时，很多人关心：哪些差距已经被消除了？哪些还需要努力追赶？</p>
+<p>我的观点是，在训练方法和对模型训练的认知上，差距其实没有那么大。坦白说，我们和硅谷的研究员一直有交流。</p>
+<h2>真正的差距：任务定义的方法论</h2>
+<p>我认为真正的差距在于——模型要解决的真实任务的定义。</p>
+<p>你要先定义问题：到底想让模型具备什么能力？在这个定义环节，我们与Anthropic、OpenAI存在不小的差距。</p>
+<h3>科学蒸馏人的流程</h3>
+<p>Anthropic和OpenAI的做法是：</p>
+<ul><li>请各领域最优秀的人——学术领域里顶尖的博士（不是普通博士），工业界里最顶尖且有实战经验的人</li><li>与他们一起“劝model”——也就是蒸馏人</li><li>用一套非常科学的方法来定义任务，把这些最优秀的人的行为转化成模型的训练数据</li><li>与最优秀的企业合作，构建相应的评测集（Harness）来解决问题</li></ul>
+<p>这样就形成了一个能力不断扩散的闭环：模型不断接触到更多、更复杂的真实世界任务。</p>
+<p>我觉得这一点上，Anthropic做得非常强。真实的差距就在这里。</p>
+<h2>第二个差距：对AGI规模化投入的判断</h2>
+<p>第二个点：Anthropic比我们更早看到了AGI的方向。</p>
+<p>当然我们也都看到了，否则无法坚定走到今天——这条路确实需要非常大的投入。</p>
+<p>你看，当OpenAI在GPT-4.5之后放弃更大规模的模型时，Anthropic坚定地押注，最终也得到了回报。这同样是一个很大的差距。</p>
+<p>这个差距本质上是**算计能力**的差距——对技术路线和投入回报的判断。</p>
+<h2>对国产模型的展望</h2>
+<p>当然，国产算力也在发展。我相信未来我们能解决算力问题，也相信中国有足够多的人才，能够支撑我们去做足够多的实验，从而找到那条规模化（Scale）的路。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>中美AI模型差距不在算法➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgent首席架构...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-04</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634094892532174086/?region=CN&amp;mid=7634094873485806386&amp;u_code=lfmkmgk1jdd&amp;did=MS4wLjABAAAAU_ZlwU2C1iRU8K5RF7t8RfdyNj62nZpnLIB6JT-qhhM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=W5ggn5CfWyX_l1_Bh.UvFZ_5wo6sm6FmZQFF8Rs_sWY-&amp;share_version=230300&amp;ts=1777938292&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/LKx7bW2dLajL6loA/web</li></ul>
+<p>---</p>
+<p>标题: &quot;中美AI模型差距分析：任务定义方法论与规模化投入判断&quot; 日期: &quot;2026-05-04&quot; 关键词: &quot;中美AI差距, 任务定义, 模型蒸馏, 规模化, AGI路径&quot; 摘要: &quot;本文通过与中美一线Agent开发者的对谈，指出当前中美AI模型的核心差距不在算法训练方法，而在任务定义的科学方法论以及对AGI规模化投入的判断上。&quot; 来源: &quot;https://www.iesdouyin.com/share/video/7634094892532174086/&quot; ---</p>
+<h2>对谈背景</h2>
+<p>本期内容中，我邀请了中美两国一线Agent开发者进行深度对谈，探讨中国模型与OpenAI、Anthropic之间的差距。</p>
+<h2>算法训练的差距已不大</h2>
+<p>当我们讨论中国模型与OpenAI等主流模型的差距时，很多人关心：哪些差距已经被消除了？哪些还需要努力追赶？</p>
+<p>我的观点是，在训练方法和对模型训练的认知上，差距其实没有那么大。坦白说，我们和硅谷的研究员一直有交流。</p>
+<h2>真正的差距：任务定义的方法论</h2>
+<p>我认为真正的差距在于——模型要解决的真实任务的定义。</p>
+<p>你要先定义问题：到底想让模型具备什么能力？在这个定义环节，我们与Anthropic、OpenAI存在不小的差距。</p>
+<h3>科学蒸馏人的流程</h3>
+<p>Anthropic和OpenAI的做法是：</p>
+<ul><li>请各领域最优秀的人——学术领域里顶尖的博士（不是普通博士），工业界里最顶尖且有实战经验的人</li><li>与他们一起“劝model”——也就是蒸馏人</li><li>用一套非常科学的方法来定义任务，把这些最优秀的人的行为转化成模型的训练数据</li><li>与最优秀的企业合作，构建相应的评测集（Harness）来解决问题</li></ul>
+<p>这样就形成了一个能力不断扩散的闭环：模型不断接触到更多、更复杂的真实世界任务。</p>
+<p>我觉得这一点上，Anthropic做得非常强。真实的差距就在这里。</p>
+<h2>第二个差距：对AGI规模化投入的判断</h2>
+<p>第二个点：Anthropic比我们更早看到了AGI的方向。</p>
+<p>当然我们也都看到了，否则无法坚定走到今天——这条路确实需要非常大的投入。</p>
+<p>你看，当OpenAI在GPT-4.5之后放弃更大规模的模型时，Anthropic坚定地押注，最终也得到了回报。这同样是一个很大的差距。</p>
+<p>这个差距本质上是**算计能力**的差距——对技术路线和投入回报的判断。</p>
+<h2>对国产模型的展望</h2>
+<p>当然，国产算力也在发展。我相信未来我们能解决算力问题，也相信中国有足够多的人才，能够支撑我们去做足够多的实验，从而找到那条规模化（Scale）的路。</p>]]></content:encoded></item>
 <item><title>AI革命是最高等级的革命➤「十字路口」有一个内容系列「AI在中国」，长期关注AI在中国各行各业的具体落地案...</title><link>https://www.iesdouyin.com/share/video/7632262054576999730/?region=CN&amp;mid=7632262044419017510&amp;u_code=4c0h4ihjgfjf&amp;did=MS4wLjABAAAAdXzaGj-RiJA6z7ONZSmgK3zMQ5nypiMeeIA8pjBjRAw&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=VFtyIYnl68cRkF0MTbZnxwS1lWCgwh_PP4STTp6RlO8-&amp;share_version=220000&amp;ts=1777500085&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7632262054576999730/?region=CN&amp;mid=7632262044419017510&amp;u_code=4c0h4ihjgfjf&amp;did=MS4wLjABAAAAdXzaGj-RiJA6z7ONZSmgK3zMQ5nypiMeeIA8pjBjRAw&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=VFtyIYnl68cRkF0MTbZnxwS1lWCgwh_PP4STTp6RlO8-&amp;share_version=220000&amp;ts=1777500085&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Wed, 29 Apr 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AI革命是最高等级的革命➤「十字路口」有一个内容系列「AI在中国」，长期关注AI在中国各行各业的具体落地案...</h1>
 <ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-04-29</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7632262054576999730/?region=CN&amp;mid=7632262044419017510&amp;u_code=4c0h4ihjgfjf&amp;did=MS4wLjABAAAAdXzaGj-RiJA6z7ONZSmgK3zMQ5nypiMeeIA8pjBjRAw&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=VFtyIYnl68cRkF0MTbZnxwS1lWCgwh_PP4STTp6RlO8-&amp;share_version=220000&amp;ts=1777500085&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/LKx7bJM0yVDx0loA/web</li></ul>
 <p>---</p>
