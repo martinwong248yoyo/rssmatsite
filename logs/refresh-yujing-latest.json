@@ -1,12 +1,12 @@
 {
-  "timestamp": "20260505-153402",
-  "started_at": "2026-05-05 15:34:02 CST",
-  "finished_at": "2026-05-05 15:36:04 CST",
+  "timestamp": "20260505-171256",
+  "started_at": "2026-05-05 17:12:56 CST",
+  "finished_at": "2026-05-05 17:21:44 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
     "max_articles": 10,
-    "profile_dir": "/Users/mat/Local_Documents/Programming/03-网络爬虫/yujingScraper/profiles/lingowhale",
+    "profile_dir": null,
     "risk_profile": "low",
     "include_all_channels": false,
     "limit": null,
@@ -14,12 +14,12 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 787,
-    "inserted": 787,
+    "fetched": 790,
+    "inserted": 790,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 260,
+    "deleted_plain": 259,
     "built_feeds": 94,
     "published_feeds": 25,
     "published_rich_feeds": 25,
@@ -290,8 +290,8 @@
     {
       "source_key": "67cc08a59a4297b6148b2f44-channel",
       "title": "财新-公众号",
-      "fetched": 84,
-      "inserted": 84,
+      "fetched": 87,
+      "inserted": 87,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
