@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `790`
-- New articles inserted: `790`
+- Updated articles this run: `795`
+- New articles inserted: `795`
 - Existing articles updated: `0`
-- Run time: `2026-05-05 17:12:56 CST` to `2026-05-05 17:21:44 CST`
+- Run time: `2026-05-05 19:21:52 CST` to `2026-05-05 19:31:09 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -11,8 +11,8 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `33`
-- Fetched articles: `790`
-- Inserted articles: `790`
+- Fetched articles: `795`
+- Inserted articles: `795`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
@@ -27,7 +27,7 @@
 - `AI行业最新融资案例解读`: fetched=`17`, inserted=`17`, updated=`0`, deduped=`0`, unchanged=`0`
 - `DeepTech深科技-公众号`: fetched=`43`, inserted=`43`, updated=`0`, deduped=`0`, unchanged=`0`
 - `FIRST青年电影展-公众号`: fetched=`15`, inserted=`15`, updated=`0`, deduped=`0`, unchanged=`0`
-- `KnowYourself-公众号`: fetched=`17`, inserted=`17`, updated=`0`, deduped=`0`, unchanged=`0`
+- `KnowYourself-公众号`: fetched=`19`, inserted=`19`, updated=`0`, deduped=`0`, unchanged=`0`
 - `Z Potentials-公众号`: fetched=`22`, inserted=`22`, updated=`0`, deduped=`0`, unchanged=`0`
 - `中国AI创业者最新采访`: fetched=`15`, inserted=`15`, updated=`0`, deduped=`0`, unchanged=`0`
 - `互联网服务-行业研报`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
@@ -37,7 +37,7 @@
 - `小互AI-公众号`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
 - `拆解新消费`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `数字生命卡兹克-公众号`: fetched=`20`, inserted=`20`, updated=`0`, deduped=`0`, unchanged=`0`
-- `新智元-公众号`: fetched=`77`, inserted=`77`, updated=`0`, deduped=`0`, unchanged=`0`
+- `新智元-公众号`: fetched=`78`, inserted=`78`, updated=`0`, deduped=`0`, unchanged=`0`
 - `时政`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `暗涌Waves-公众号`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
 - `有新的消费电子个股研报`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
@@ -50,7 +50,7 @@
 - `硅谷101-播客`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
 - `简单心理Uni-公众号`: fetched=`12`, inserted=`12`, updated=`0`, deduped=`0`, unchanged=`0`
 - `艺术电影-电影`: fetched=`18`, inserted=`18`, updated=`0`, deduped=`0`, unchanged=`0`
-- `财新-公众号`: fetched=`87`, inserted=`87`, updated=`0`, deduped=`0`, unchanged=`0`
+- `财新-公众号`: fetched=`89`, inserted=`89`, updated=`0`, deduped=`0`, unchanged=`0`
 - `财新网 - 最新文章-RSS`: fetched=`24`, inserted=`24`, updated=`0`, deduped=`0`, unchanged=`0`
 - `量子位-公众号`: fetched=`56`, inserted=`56`, updated=`0`, deduped=`0`, unchanged=`0`
 - `金融-公众号-评论`: fetched=`20`, inserted=`20`, updated=`0`, deduped=`0`, unchanged=`0`
