@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260505-145910",
-  "started_at": "2026-05-05 14:59:10 CST",
-  "finished_at": "2026-05-05 15:00:38 CST",
+  "timestamp": "20260505-125443",
+  "started_at": "2026-05-05 12:54:43 CST",
+  "finished_at": "2026-05-05 12:56:05 CST",
   "settings": {
     "page_limit": 50,
     "feed_limit": null,
@@ -12,13 +12,13 @@
   },
   "totals": {
     "feed_count": 12,
-    "fetched": 24,
-    "inserted": 3,
+    "fetched": 21,
+    "inserted": 0,
     "updated": 0,
     "deduped": 0,
     "unchanged": 21,
-    "classified": 494,
-    "built_feeds": 94
+    "classified": 491,
+    "built_feeds": 102
   },
   "feeds": [
     {
@@ -51,8 +51,8 @@
     {
       "source_key": "266873337248919552",
       "title": "深焦DeepFocus - 今天看啥",
-      "fetched": 3,
-      "inserted": 3,
+      "fetched": 0,
+      "inserted": 0,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -141,7 +141,7 @@
       "primary": "资料",
       "secondary": "技术资料",
       "tertiary": "AIGC",
-      "count": 110
+      "count": 107
     },
     {
       "primary": "电影节展",
