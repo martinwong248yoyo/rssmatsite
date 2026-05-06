@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260506-064456",
-  "started_at": "2026-05-06 06:44:56 CST",
-  "finished_at": "2026-05-06 06:47:13 CST",
+  "timestamp": "20260506-084720",
+  "started_at": "2026-05-06 08:47:20 CST",
+  "finished_at": "2026-05-06 08:56:29 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -14,12 +14,12 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 799,
-    "inserted": 799,
+    "fetched": 803,
+    "inserted": 803,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 258,
+    "deleted_plain": 259,
     "built_feeds": 94,
     "published_feeds": 25,
     "published_rich_feeds": 25,
@@ -65,8 +65,8 @@
     {
       "source_key": "67cc08a19a4297b6148b28e7-deeptech",
       "title": "DeepTech深科技-公众号",
-      "fetched": 44,
-      "inserted": 44,
+      "fetched": 45,
+      "inserted": 45,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -173,8 +173,8 @@
     {
       "source_key": "67cc08a19a4297b6148b2994-channel",
       "title": "新智元-公众号",
-      "fetched": 78,
-      "inserted": 78,
+      "fetched": 79,
+      "inserted": 79,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -236,8 +236,8 @@
     {
       "source_key": "67e5334abf856a52db04e0b7-ai",
       "title": "热门AI公众号更新追踪",
-      "fetched": 63,
-      "inserted": 63,
+      "fetched": 64,
+      "inserted": 64,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -308,8 +308,8 @@
     {
       "source_key": "67cc08a19a4297b6148b295c-channel",
       "title": "量子位-公众号",
-      "fetched": 56,
-      "inserted": 56,
+      "fetched": 57,
+      "inserted": 57,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
