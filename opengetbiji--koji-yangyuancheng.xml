@@ -4,6 +4,222 @@
 <title>Koji杨远骋 - OpenGet笔记</title>
 <link>https://www.biji.com/</link>
 <description>Koji杨远骋 - OpenGet笔记 (opengetbiji)</description>
+<item><title>【正片】一起搞懂AgentHarness！➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨...</title><link>https://www.iesdouyin.com/share/video/7634496757442809129/?region=CN&amp;mid=7634497003514284843&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=edL8zyRTBDbedu.WxSJRVoXMmjRADeMcBF2HbzCK7Cc-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7634496757442809129/?region=CN&amp;mid=7634497003514284843&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=edL8zyRTBDbedu.WxSJRVoXMmjRADeMcBF2HbzCK7Cc-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Wed, 06 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>【正片】一起搞懂AgentHarness！➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-06</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634496757442809129/?region=CN&amp;mid=7634497003514284843&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=edL8zyRTBDbedu.WxSJRVoXMmjRADeMcBF2HbzCK7Cc-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/weYNGMwpQRbjGq9v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;一起搞懂AgentHarness！为什么说Agent的上限来自Harness？当我们讨论Harness时，我们究竟在讨论什么？&quot; 日期: &quot;2026-05-06&quot; 关键词: &quot;AgentHarness, 三层结构, Cloud Code, 上下文管理, 模型自洽, 零人公司&quot; 摘要: &quot;本期播客邀请仙儿AI创始人新路，深入解读Agent Harness的概念、三层架构（执行能力层、上下文环境层、治理编排层），并结合Claude Code原代码泄露案例，讲解记忆机制、上下文压缩、沙箱设计等工程实践。新路认为模型才是Agent的核心，Harness应遵循Unix哲学，提供轻量级、自洽的工具链，并展望了Agent集群、零人公司等未来趋势。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>嘉宾与背景介绍</h2>
+<p>本期播客嘉宾：新路，仙儿AI创始人，正在做一个1KB的Agent Computer工具链（开源），为开发者提供开发Agent用的工具链。他主导的开源教程 **Learn Claude Code** 在GitHub上已超过5万颗星，目标是解析Claude Code的Agent设计模式。</p>
+<p>新路背景：23岁，毕业于河南工业大学，NTJ人格。创业前在一线大厂和研究院做AI infra相关工作。公司刚完成300多万美金融资，团队精悍，主力是他自己加两个实习生。目前新的创业方向尚未有收入。</p>
+<h2>快问快答：定义Harness</h2>
+<p>**Koji问**：用一句话向没听说过Harness的人介绍Harness？ **新路答**：模型以外都是Harness。模型是聪明的大脑，但没有身体和手脚就无法行动。</p>
+<p>**Koji问**：Agent的上限来自Harness的设计，你认可吗？为什么不是来自模型智能的提升？ **新路答**：赞成一半。Agent的智力上限提升肯定还是靠模型。但现在大部分模型智力够用了（好比人智商120-170），而Harness就像机甲、健身、舞蹈，极大扩充了能力。</p>
+<h2>Learn Claude Code 教程的由来</h2>
+<p>九个月前开始写这个教程。当时Claude Code非常强大——只要给Claude Code套一个网页，就能得到强大的Agent产品。但开发者群体中存在**派系之争**：很多人习惯LangGraph、LangChain这类基于Prompt、Node和Flow的方法，觉得Claude Code不好控制、成本高。新路团队希望通过教程分享构建Code Agent的心法。</p>
+<p>**Koji问**：LangGraph这类框架过时了吗？ **新路答**：基于Prompt节点做流转控制的方法论会越来越不适用。基于Claude Code这种“Agent即模型，模型即Agent”的方法——包括Bash、Unix哲学——会越来越清晰并被更多人采用。</p>
+<h2>未来还需要自己搭Harness吗？</h2>
+<p>Claude最近推出了Managed Agents，把Harness给开发出来直接使用。既然可以直接用，还有必要了解Harness细节吗？</p>
+<p>新路认为：**做一个Agent的开发工程师仍然需要了解**。不了解的话，产品缺乏灵魂和迭代空间。类比云服务器：早期工程师会去搞懂服务器方方面面，后来99%项目不需要了。未来两三年，Harness可能会收敛成清晰的开箱即用工具。但现在处于技术周期红利期，创业者应该拥抱技术周期变化，理解变革的内核。</p>
+<h2>谁在学Agent Harness？产品经理需要了解吗？</h2>
+<p>偏自己在构建和开发Agent产品的人，包括大厂和创业公司。</p>
+<p>关于产品经理：新路提出质疑。今天的产品经理跟过去不是同一种。在技术变化周期内，所有产品都在吃技术周期红利。如果自己不了解技术周期变化的本质，很难构建贴合红利的产品。以前产品经理画UX/UI，今天必须同时懂技术变化和场景需求。</p>
+<h2>Agent Harness 的三层架构</h2>
+<p>新路将Agent Harness拆成三个部分：</p>
+<h3>第一层：执行能力层（Action能力）</h3>
+<p>给模型提供执行能力。包括CLI、注册的工具、从MCP扩展的工具。统一为模型提供Action能力。</p>
+<h3>第二层：上下文环境层（Context/State）</h3>
+<p>模型工作需要System Prompt、Skills、Memory。模型上下文窗口有限，很多任务会超过窗口，需要offload策略。新的模型窗口需要加载初始化上下文，延续上一窗口的工作——这涉及上下文的交接问题。</p>
+<h3>第三层：治理编排层（Management）</h3>
+<p>面对的不是一个Agent，而是一百个Agent，如何组织协调？类似公司有一百号员工，按组织架构、协作方式解决复杂问题。另外，不同岗位有不同的访问权限，涉及权限治理、信息提供与隔离。</p>
+<h2>用实际案例串讲三层架构</h2>
+<p>知名案例：用两周时间，通过大量Agent交替完成任务，从零到一构建了一个代码库（Codebase）。</p>
+<ul><li>**第一层**：配置文件的增删读写、搜索等工具能力，让模型有机会写代码、创建文件、修改文件。</li><li>**第二层**：模型要知道自己在什么环境中工作，路径是什么，装了哪些依赖，目录结构如何，Git信息等。上下文窗口满后，下一个Agent需要重新读环境信息、前人代码写到哪了、接下来要干什么，并写文档委托当前上下文状态给下一个Agent，依次接力完成整个代码库。这不是单纯Action能力层能完成的。</li><li>**第三层**：指导Agent之间传递和委托。写代码的Agent和测试的Agent的关系？是否一定是串行？很多模块可以并行，同一时间多个Agent干活，协调关系是什么？权限如何？测试Agent不应有修改代码的权限，防止它边测边改导致死循环。</li></ul>
+<p>目前这三层并没有封装得非常好的工具，因为范式变化太快（从2022年底ChatGPT发布到最近半年Claude Code这类主动式Agent模型才出现）。开源社区没有让新路满意的方案，所以他们自己在做。</p>
+<h2>1KB公司的创业项目：轻量级Unix Computer</h2>
+<p>新路团队在做的是**Agent开发工具链**，最底层叫 **Computer**（取Unix中Computer的字母C）。</p>
+<p>**什么是Computer？** 在数据结构上实现的一台Unix计算机，即在内存中实现一台虚拟计算机。为Claude Code等下一代主动式、自迭代、成长型Agent配置执行环境，让Agent在里面生活和工作。**Unix计算机可能是对Agent最好的居住和生活环境**。</p>
+<p>上层有 **Runtime**（Agent Runtime），提供开发Agent的接口和语法封装。另外还有 **Watch**（观测层）：过去半个月Agent分别在什么情况下遇到卡点，可以指导开发者发现是System Prompt设计问题、Skills提供不到位，还是模型不行。观测层之后可以导出数据，用 **1KL** 工具链做强化学习训练模型。</p>
+<h3>与云服务厂商的区别</h3>
+<p>AWS有Agent Core，阿里云有Agent Studio。新路团队的工具链**不是为了完全运行在云上**，而是希望一切JS场景都能跑：浏览器里的网页、微信小程序（一个package才几兆）。在所有能跑JS的场景，无差别提供类似上个时代Vue/React那一层的空间，import即可用，心智统一简洁，性能极致——**只有1KB大小的Unix Computer**。</p>
+<p>**怎么做到的？** 用数据结构重新实现Unix，用TypeScript重写成虚拟的File System。还有后台进程运行能力、Clock概念在虚拟世界中推进、局域网组网能力、类似Inotify的能力。在支持WebAssembly的场景用Rust重写，不支持则fallback到纯JS。</p>
+<h3>Trade-off：牺牲了什么？</h3>
+<p>无法真实运行GCC编译器、浏览器等需要真实代码执行和编译的东西。提供的是最小化Unix File System和最小化Unix Bash Command能力的子集。局域网文件夹共享、磁盘、基于Mail的局域网通信、Cron命令等能力都有。浏览器、GCC编译器本就不该塞在生产级Agent的配套环境里，应该放在另一个地方做集约化服务。</p>
+<h2>执行能力层的主要工具与踩坑</h2>
+<p>**最主要工具**： 1. 文件系统的增删读写搜索 2. Bash层（操作系统操作能力） 3. 语言解释器层（Python/Node等）</p>
+<p>这三种工具可满足95%以上的Agent任务。</p>
+<p>**容易踩的坑**：与权限和Agent角色相关。比如某个Agent只负责对代码库做Explore，应该只配没有副作用的工具（所有写命令都不能配）。工具链设计要紧密绑定Agent角色，限制它对Unix计算机的操作能力。</p>
+<h2>上下文与记忆层：Memory解决方案</h2>
+<p>Memory发展处于早期阶段。新路将其分为三类：</p>
+<ul><li>**规则式**：基于知识图谱和向量搜索，信息抽象成节点，做关联、检索、扩展。非常结构化。</li><li>**半规则式**（新路更喜欢）：底层是Unix File System，用大量Markdown存储资料信息。Claude Code、小龙虾都这样。通过空间关系（如房间、迷宫）组织，人和LLM都容易懂。更新也是半规则式，由Agent驱动，而不是完全Rule-based。</li><li>**完全模型驱动式**：较新，尚未成熟。</li></ul>
+<p>**记忆的开源项目**：Mem0。拥抱Unix Files + Agent驱动维护、更新、查询的方式。</p>
+<p>**Claude Code的Insights特性**：分析最近一个月对话，分析任务完成与否、犯了什么错误，生成总结报告，可以生成Skills。这是Skills自迭代进化的最早起源。</p>
+<p>**Agent不断自学习进化的目标比标签重要**。Kimi、Minimax、GLM最新一代都紧贴SOTA。</p>
+<h2>共识与非共识</h2>
+<p>**共识**：Bash is all you need。大家都在做CLI，不要MCP（一个一个配太麻烦），装在任何地方所有Agent都能用。</p>
+<p>**非共识**：很多开源框架（如LangGraph）仍然围绕Prompt Node做状态图、路由和条件规则。主流框架不是为了Bash理念原生构建的。新路团队在做的是新时代需要的开发工具链。</p>
+<h2>从Claude Code泄露源码中学到的关键点</h2>
+<h3>1. 多级上下文压缩策略</h3>
+<p>什么时候把工具output删掉？压缩时哪些信息保留、哪些丢弃？Agent之间接力时，下一个Agent要加载哪些内容、哪些按需查看？里面有非常多trade-off。</p>
+<h3>2. 记忆设计精妙</h3>
+<p>Claude Code有两个记忆更新机制：</p>
+<ul><li>**实时更新**：每次用户发消息，Agent工作完成后触发hook，fork一个Agent复用KV Cache，判断哪些信息需要保存，更新到Unix Files（Markdown）。这些Markdown前三行是YAML格式的description，不会一开始加载全文，而是先读文件名和description，在实时交互过程中更新。</li><li>**Auto Dream**：每隔一天（至少大于5个session），做一个深层记忆整理——回顾最近session，提取信息，纠正错误事实，合并和整理记忆。就像人做梦做重放、信息整理。</li></ul>
+<h3>3. 上下文窗口满时的接力策略</h3>
+<p>上下文窗口满后，任务要继续，需要腾出空间或交接。两种策略：</p>
+<ul><li>踢掉垃圾或不必要信息，腾出几十K空间继续工作。</li><li>达到预值上限（如0.8），写文档记录当前进展和下一步任务，让下一个Agent读文档接着干。文档里该总结什么、不该总结什么，下一个Agent的上下文初始化如何准备，都有很好的设计。</li></ul>
+<h3>4. Claude Code的核心理念</h3>
+<ul><li>**模型才是Agent**，用户写Prompt组提词流的Chain做法不make sense。</li><li>本质是给模型配对应合适的工具，让模型调用，给模型充分自由。不是程序员每一步帮它决策。</li><li>**More context, less control**。提供更多Action能力，零控制（最多限制某些工具不能调）。</li></ul>
+<h2>什么是好的Harness，什么是不好的？</h2>
+<p>**不好的Harness**：随便做中间裁剪，扔掉前面轮子，随意修改系统提示词导致Prompt失效。最好的管理就是不要管理，因为管理会导致失效。</p>
+<p>**好的Harness**： 1. 与模型的运行是自洽的。 2. 与模型未来的能力进步是正交的。模型越强，Harness越不会束缚模型。</p>
+<p>不好的Harness（如早期LangGraph那种大量Note和Graph做法）随着模型进步必须拆掉，否则限制模型能力。</p>
+<h2>对Agent各组件的排序</h2>
+<p>1. **模型（最重要）**：Agent从始至终都是模型。任务表现不好，换更强模型大概率能提升。 2. **上下文（第二重要）**：工作在什么文件夹、Windows还是Linux、能用哪些工具（CLI还是MCP）、Skills、Memory、接力棒交接。对用户视角，上下文最重要。大部分人做不了模型参数修改，能做的空间更多在上下文层面。 3. **工具**：配一些Powerful工具，Agent能完成更多事。</p>
+<h2>为什么CLI比MCP更好？</h2>
+<p>新路体验：GitHub的CLI调用时任务成功率比MCP高很多。原因：Linux命令训练语料有几十亿条，训练非常鲁棒充分。MCP是最近两年提出，网络预训练语料占比可能不到0.1%。Feishu CLI也比MCP插件组合性和灵活度更高，任务完成率更高。</p>
+<p>**结论**：Unix 1971年就出现了，不应再造更多轮子和协议。返璞归真，回到Unix自洽的哲学，训练语料最多最充分。**Bash is all you need**——这句话九个月前开源的Learn Claude Code仓库标语。</p>
+<h2>看好的创业方向</h2>
+<h3>方向一：Harness层的Infra（新路自己在做）</h3>
+<p>给开发者提供Agent开发工具链。</p>
+<h3>方向二：Agent组网方向</h3>
+<p>不是给Claude Code组网，而是真正下放到硬件资源（云上服务器、Mac笔记本、Mac Mini、路由器、闲置手机），它们不一定有公网IP，有混合组网问题。以前有frp、内网穿透等方案，但不太能scale。</p>
+<p>新路喜欢的工具：**Tailscale**（不管云上还是边缘，统一组局域网）。但Tailscale不太Agent native，CLI能力缺失。这个赛道可能需要全新的混合组网形态，尤其需要高通量的上下文交换——不只是一个Mail或IM消息，而是高频、小额（几分钱）的Agent间支付场景。</p>
+<h3>方向三：高效低成本训练 + 个性化模型推理</h3>
+<p>十年后，每个人都在调相同模型ID的基模太无趣。需要类似**Together.ai**的方案：大量卡高速互联集群，通过集约化设计用更低成本做PEFT训练。</p>
+<p>推理时：基座模型 + 个性化模型参数（如LoRA）。API请求时Header里带LoRA信息，像请求基模一样，但系统会获取用户的LoRA挂上去做个性化推理。推理成本增加5%左右，但获得可修改模型参数层的个性化体验。</p>
+<p>新路非常看好这个方向。Together.ai的前CEO在做Together.ai项目。这跟新路工具链互补：工具链运行半个月会产生大量轨迹（good case/bad case），可以做分析调优，但没钱没卡修改模型时只能做上下文调优。未来如果能修改模型参数，获得越来越适配自己ERP/CRM/下游场景的个性化模型，将有很大价值。</p>
+<h2>未来预测：Agent群体作业与零人公司</h2>
+<p>**短期（三年内）**：Agent单体模型阶段可能持续约三年。</p>
+<p>**下一步**：Agent集群化作业。现在是人工管理和编排协调100个Agent，下一步应该是Agent自己去管理和协调更多Agent，在训练时加入Agent间协调和编排。</p>
+<p>**更远未来**：AI做发明任务，自己迭代提出新科研方案。如果能做发明并完全驱动公司运行，公司可能成为**理财产品**，而不是由人组成。公司内部运行是黑盒，大部分客户不会天天盯着。Agent可以完全组成公司——**零人公司**，而不是一人公司。</p>
+<p>**案例**：真格和十字路口发起的Token Grant项目 **UU Agent**。创作者把Agent做出来之后丢进汪洋大海，从此不改一行代码、不给一分钱，它要自己进化、自己搞钱买Token。它的目标是有一天超越Claude Code。赚钱方法是在GitHub开打赏化缘。某种意义上它是一个零人公司。未来投资标的可能是一个个Agent，而不是人类创办的公司。大老板从口袋里掏出一张黑色卡片：&quot;这是我公司，每年给我创造几十亿收入，就在这张卡片里。&quot;</p>
+<h2>新路的创业初心</h2>
+<p>公司Slogan：**加速世界升级**。当前技术阶段，如何让地球上充满Agents，让Agents成为社会基础设施，尤其是让Coding Agent成为社会Infra。未来社会可能有比人类多几百倍的Agent，你怎么支撑它们、支撑它们自己去开发Agent、创建Agent、Fork Agent？这是新路团队在思考和做的事情。</p>
+<p>**&quot;未来已来，只是分布不均匀。&quot;**</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>【正片】一起搞懂AgentHarness！➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-06</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634496757442809129/?region=CN&amp;mid=7634497003514284843&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=edL8zyRTBDbedu.WxSJRVoXMmjRADeMcBF2HbzCK7Cc-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/weYNGMwpQRbjGq9v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;一起搞懂AgentHarness！为什么说Agent的上限来自Harness？当我们讨论Harness时，我们究竟在讨论什么？&quot; 日期: &quot;2026-05-06&quot; 关键词: &quot;AgentHarness, 三层结构, Cloud Code, 上下文管理, 模型自洽, 零人公司&quot; 摘要: &quot;本期播客邀请仙儿AI创始人新路，深入解读Agent Harness的概念、三层架构（执行能力层、上下文环境层、治理编排层），并结合Claude Code原代码泄露案例，讲解记忆机制、上下文压缩、沙箱设计等工程实践。新路认为模型才是Agent的核心，Harness应遵循Unix哲学，提供轻量级、自洽的工具链，并展望了Agent集群、零人公司等未来趋势。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>嘉宾与背景介绍</h2>
+<p>本期播客嘉宾：新路，仙儿AI创始人，正在做一个1KB的Agent Computer工具链（开源），为开发者提供开发Agent用的工具链。他主导的开源教程 **Learn Claude Code** 在GitHub上已超过5万颗星，目标是解析Claude Code的Agent设计模式。</p>
+<p>新路背景：23岁，毕业于河南工业大学，NTJ人格。创业前在一线大厂和研究院做AI infra相关工作。公司刚完成300多万美金融资，团队精悍，主力是他自己加两个实习生。目前新的创业方向尚未有收入。</p>
+<h2>快问快答：定义Harness</h2>
+<p>**Koji问**：用一句话向没听说过Harness的人介绍Harness？ **新路答**：模型以外都是Harness。模型是聪明的大脑，但没有身体和手脚就无法行动。</p>
+<p>**Koji问**：Agent的上限来自Harness的设计，你认可吗？为什么不是来自模型智能的提升？ **新路答**：赞成一半。Agent的智力上限提升肯定还是靠模型。但现在大部分模型智力够用了（好比人智商120-170），而Harness就像机甲、健身、舞蹈，极大扩充了能力。</p>
+<h2>Learn Claude Code 教程的由来</h2>
+<p>九个月前开始写这个教程。当时Claude Code非常强大——只要给Claude Code套一个网页，就能得到强大的Agent产品。但开发者群体中存在**派系之争**：很多人习惯LangGraph、LangChain这类基于Prompt、Node和Flow的方法，觉得Claude Code不好控制、成本高。新路团队希望通过教程分享构建Code Agent的心法。</p>
+<p>**Koji问**：LangGraph这类框架过时了吗？ **新路答**：基于Prompt节点做流转控制的方法论会越来越不适用。基于Claude Code这种“Agent即模型，模型即Agent”的方法——包括Bash、Unix哲学——会越来越清晰并被更多人采用。</p>
+<h2>未来还需要自己搭Harness吗？</h2>
+<p>Claude最近推出了Managed Agents，把Harness给开发出来直接使用。既然可以直接用，还有必要了解Harness细节吗？</p>
+<p>新路认为：**做一个Agent的开发工程师仍然需要了解**。不了解的话，产品缺乏灵魂和迭代空间。类比云服务器：早期工程师会去搞懂服务器方方面面，后来99%项目不需要了。未来两三年，Harness可能会收敛成清晰的开箱即用工具。但现在处于技术周期红利期，创业者应该拥抱技术周期变化，理解变革的内核。</p>
+<h2>谁在学Agent Harness？产品经理需要了解吗？</h2>
+<p>偏自己在构建和开发Agent产品的人，包括大厂和创业公司。</p>
+<p>关于产品经理：新路提出质疑。今天的产品经理跟过去不是同一种。在技术变化周期内，所有产品都在吃技术周期红利。如果自己不了解技术周期变化的本质，很难构建贴合红利的产品。以前产品经理画UX/UI，今天必须同时懂技术变化和场景需求。</p>
+<h2>Agent Harness 的三层架构</h2>
+<p>新路将Agent Harness拆成三个部分：</p>
+<h3>第一层：执行能力层（Action能力）</h3>
+<p>给模型提供执行能力。包括CLI、注册的工具、从MCP扩展的工具。统一为模型提供Action能力。</p>
+<h3>第二层：上下文环境层（Context/State）</h3>
+<p>模型工作需要System Prompt、Skills、Memory。模型上下文窗口有限，很多任务会超过窗口，需要offload策略。新的模型窗口需要加载初始化上下文，延续上一窗口的工作——这涉及上下文的交接问题。</p>
+<h3>第三层：治理编排层（Management）</h3>
+<p>面对的不是一个Agent，而是一百个Agent，如何组织协调？类似公司有一百号员工，按组织架构、协作方式解决复杂问题。另外，不同岗位有不同的访问权限，涉及权限治理、信息提供与隔离。</p>
+<h2>用实际案例串讲三层架构</h2>
+<p>知名案例：用两周时间，通过大量Agent交替完成任务，从零到一构建了一个代码库（Codebase）。</p>
+<ul><li>**第一层**：配置文件的增删读写、搜索等工具能力，让模型有机会写代码、创建文件、修改文件。</li><li>**第二层**：模型要知道自己在什么环境中工作，路径是什么，装了哪些依赖，目录结构如何，Git信息等。上下文窗口满后，下一个Agent需要重新读环境信息、前人代码写到哪了、接下来要干什么，并写文档委托当前上下文状态给下一个Agent，依次接力完成整个代码库。这不是单纯Action能力层能完成的。</li><li>**第三层**：指导Agent之间传递和委托。写代码的Agent和测试的Agent的关系？是否一定是串行？很多模块可以并行，同一时间多个Agent干活，协调关系是什么？权限如何？测试Agent不应有修改代码的权限，防止它边测边改导致死循环。</li></ul>
+<p>目前这三层并没有封装得非常好的工具，因为范式变化太快（从2022年底ChatGPT发布到最近半年Claude Code这类主动式Agent模型才出现）。开源社区没有让新路满意的方案，所以他们自己在做。</p>
+<h2>1KB公司的创业项目：轻量级Unix Computer</h2>
+<p>新路团队在做的是**Agent开发工具链**，最底层叫 **Computer**（取Unix中Computer的字母C）。</p>
+<p>**什么是Computer？** 在数据结构上实现的一台Unix计算机，即在内存中实现一台虚拟计算机。为Claude Code等下一代主动式、自迭代、成长型Agent配置执行环境，让Agent在里面生活和工作。**Unix计算机可能是对Agent最好的居住和生活环境**。</p>
+<p>上层有 **Runtime**（Agent Runtime），提供开发Agent的接口和语法封装。另外还有 **Watch**（观测层）：过去半个月Agent分别在什么情况下遇到卡点，可以指导开发者发现是System Prompt设计问题、Skills提供不到位，还是模型不行。观测层之后可以导出数据，用 **1KL** 工具链做强化学习训练模型。</p>
+<h3>与云服务厂商的区别</h3>
+<p>AWS有Agent Core，阿里云有Agent Studio。新路团队的工具链**不是为了完全运行在云上**，而是希望一切JS场景都能跑：浏览器里的网页、微信小程序（一个package才几兆）。在所有能跑JS的场景，无差别提供类似上个时代Vue/React那一层的空间，import即可用，心智统一简洁，性能极致——**只有1KB大小的Unix Computer**。</p>
+<p>**怎么做到的？** 用数据结构重新实现Unix，用TypeScript重写成虚拟的File System。还有后台进程运行能力、Clock概念在虚拟世界中推进、局域网组网能力、类似Inotify的能力。在支持WebAssembly的场景用Rust重写，不支持则fallback到纯JS。</p>
+<h3>Trade-off：牺牲了什么？</h3>
+<p>无法真实运行GCC编译器、浏览器等需要真实代码执行和编译的东西。提供的是最小化Unix File System和最小化Unix Bash Command能力的子集。局域网文件夹共享、磁盘、基于Mail的局域网通信、Cron命令等能力都有。浏览器、GCC编译器本就不该塞在生产级Agent的配套环境里，应该放在另一个地方做集约化服务。</p>
+<h2>执行能力层的主要工具与踩坑</h2>
+<p>**最主要工具**： 1. 文件系统的增删读写搜索 2. Bash层（操作系统操作能力） 3. 语言解释器层（Python/Node等）</p>
+<p>这三种工具可满足95%以上的Agent任务。</p>
+<p>**容易踩的坑**：与权限和Agent角色相关。比如某个Agent只负责对代码库做Explore，应该只配没有副作用的工具（所有写命令都不能配）。工具链设计要紧密绑定Agent角色，限制它对Unix计算机的操作能力。</p>
+<h2>上下文与记忆层：Memory解决方案</h2>
+<p>Memory发展处于早期阶段。新路将其分为三类：</p>
+<ul><li>**规则式**：基于知识图谱和向量搜索，信息抽象成节点，做关联、检索、扩展。非常结构化。</li><li>**半规则式**（新路更喜欢）：底层是Unix File System，用大量Markdown存储资料信息。Claude Code、小龙虾都这样。通过空间关系（如房间、迷宫）组织，人和LLM都容易懂。更新也是半规则式，由Agent驱动，而不是完全Rule-based。</li><li>**完全模型驱动式**：较新，尚未成熟。</li></ul>
+<p>**记忆的开源项目**：Mem0。拥抱Unix Files + Agent驱动维护、更新、查询的方式。</p>
+<p>**Claude Code的Insights特性**：分析最近一个月对话，分析任务完成与否、犯了什么错误，生成总结报告，可以生成Skills。这是Skills自迭代进化的最早起源。</p>
+<p>**Agent不断自学习进化的目标比标签重要**。Kimi、Minimax、GLM最新一代都紧贴SOTA。</p>
+<h2>共识与非共识</h2>
+<p>**共识**：Bash is all you need。大家都在做CLI，不要MCP（一个一个配太麻烦），装在任何地方所有Agent都能用。</p>
+<p>**非共识**：很多开源框架（如LangGraph）仍然围绕Prompt Node做状态图、路由和条件规则。主流框架不是为了Bash理念原生构建的。新路团队在做的是新时代需要的开发工具链。</p>
+<h2>从Claude Code泄露源码中学到的关键点</h2>
+<h3>1. 多级上下文压缩策略</h3>
+<p>什么时候把工具output删掉？压缩时哪些信息保留、哪些丢弃？Agent之间接力时，下一个Agent要加载哪些内容、哪些按需查看？里面有非常多trade-off。</p>
+<h3>2. 记忆设计精妙</h3>
+<p>Claude Code有两个记忆更新机制：</p>
+<ul><li>**实时更新**：每次用户发消息，Agent工作完成后触发hook，fork一个Agent复用KV Cache，判断哪些信息需要保存，更新到Unix Files（Markdown）。这些Markdown前三行是YAML格式的description，不会一开始加载全文，而是先读文件名和description，在实时交互过程中更新。</li><li>**Auto Dream**：每隔一天（至少大于5个session），做一个深层记忆整理——回顾最近session，提取信息，纠正错误事实，合并和整理记忆。就像人做梦做重放、信息整理。</li></ul>
+<h3>3. 上下文窗口满时的接力策略</h3>
+<p>上下文窗口满后，任务要继续，需要腾出空间或交接。两种策略：</p>
+<ul><li>踢掉垃圾或不必要信息，腾出几十K空间继续工作。</li><li>达到预值上限（如0.8），写文档记录当前进展和下一步任务，让下一个Agent读文档接着干。文档里该总结什么、不该总结什么，下一个Agent的上下文初始化如何准备，都有很好的设计。</li></ul>
+<h3>4. Claude Code的核心理念</h3>
+<ul><li>**模型才是Agent**，用户写Prompt组提词流的Chain做法不make sense。</li><li>本质是给模型配对应合适的工具，让模型调用，给模型充分自由。不是程序员每一步帮它决策。</li><li>**More context, less control**。提供更多Action能力，零控制（最多限制某些工具不能调）。</li></ul>
+<h2>什么是好的Harness，什么是不好的？</h2>
+<p>**不好的Harness**：随便做中间裁剪，扔掉前面轮子，随意修改系统提示词导致Prompt失效。最好的管理就是不要管理，因为管理会导致失效。</p>
+<p>**好的Harness**： 1. 与模型的运行是自洽的。 2. 与模型未来的能力进步是正交的。模型越强，Harness越不会束缚模型。</p>
+<p>不好的Harness（如早期LangGraph那种大量Note和Graph做法）随着模型进步必须拆掉，否则限制模型能力。</p>
+<h2>对Agent各组件的排序</h2>
+<p>1. **模型（最重要）**：Agent从始至终都是模型。任务表现不好，换更强模型大概率能提升。 2. **上下文（第二重要）**：工作在什么文件夹、Windows还是Linux、能用哪些工具（CLI还是MCP）、Skills、Memory、接力棒交接。对用户视角，上下文最重要。大部分人做不了模型参数修改，能做的空间更多在上下文层面。 3. **工具**：配一些Powerful工具，Agent能完成更多事。</p>
+<h2>为什么CLI比MCP更好？</h2>
+<p>新路体验：GitHub的CLI调用时任务成功率比MCP高很多。原因：Linux命令训练语料有几十亿条，训练非常鲁棒充分。MCP是最近两年提出，网络预训练语料占比可能不到0.1%。Feishu CLI也比MCP插件组合性和灵活度更高，任务完成率更高。</p>
+<p>**结论**：Unix 1971年就出现了，不应再造更多轮子和协议。返璞归真，回到Unix自洽的哲学，训练语料最多最充分。**Bash is all you need**——这句话九个月前开源的Learn Claude Code仓库标语。</p>
+<h2>看好的创业方向</h2>
+<h3>方向一：Harness层的Infra（新路自己在做）</h3>
+<p>给开发者提供Agent开发工具链。</p>
+<h3>方向二：Agent组网方向</h3>
+<p>不是给Claude Code组网，而是真正下放到硬件资源（云上服务器、Mac笔记本、Mac Mini、路由器、闲置手机），它们不一定有公网IP，有混合组网问题。以前有frp、内网穿透等方案，但不太能scale。</p>
+<p>新路喜欢的工具：**Tailscale**（不管云上还是边缘，统一组局域网）。但Tailscale不太Agent native，CLI能力缺失。这个赛道可能需要全新的混合组网形态，尤其需要高通量的上下文交换——不只是一个Mail或IM消息，而是高频、小额（几分钱）的Agent间支付场景。</p>
+<h3>方向三：高效低成本训练 + 个性化模型推理</h3>
+<p>十年后，每个人都在调相同模型ID的基模太无趣。需要类似**Together.ai**的方案：大量卡高速互联集群，通过集约化设计用更低成本做PEFT训练。</p>
+<p>推理时：基座模型 + 个性化模型参数（如LoRA）。API请求时Header里带LoRA信息，像请求基模一样，但系统会获取用户的LoRA挂上去做个性化推理。推理成本增加5%左右，但获得可修改模型参数层的个性化体验。</p>
+<p>新路非常看好这个方向。Together.ai的前CEO在做Together.ai项目。这跟新路工具链互补：工具链运行半个月会产生大量轨迹（good case/bad case），可以做分析调优，但没钱没卡修改模型时只能做上下文调优。未来如果能修改模型参数，获得越来越适配自己ERP/CRM/下游场景的个性化模型，将有很大价值。</p>
+<h2>未来预测：Agent群体作业与零人公司</h2>
+<p>**短期（三年内）**：Agent单体模型阶段可能持续约三年。</p>
+<p>**下一步**：Agent集群化作业。现在是人工管理和编排协调100个Agent，下一步应该是Agent自己去管理和协调更多Agent，在训练时加入Agent间协调和编排。</p>
+<p>**更远未来**：AI做发明任务，自己迭代提出新科研方案。如果能做发明并完全驱动公司运行，公司可能成为**理财产品**，而不是由人组成。公司内部运行是黑盒，大部分客户不会天天盯着。Agent可以完全组成公司——**零人公司**，而不是一人公司。</p>
+<p>**案例**：真格和十字路口发起的Token Grant项目 **UU Agent**。创作者把Agent做出来之后丢进汪洋大海，从此不改一行代码、不给一分钱，它要自己进化、自己搞钱买Token。它的目标是有一天超越Claude Code。赚钱方法是在GitHub开打赏化缘。某种意义上它是一个零人公司。未来投资标的可能是一个个Agent，而不是人类创办的公司。大老板从口袋里掏出一张黑色卡片：&quot;这是我公司，每年给我创造几十亿收入，就在这张卡片里。&quot;</p>
+<h2>新路的创业初心</h2>
+<p>公司Slogan：**加速世界升级**。当前技术阶段，如何让地球上充满Agents，让Agents成为社会基础设施，尤其是让Coding Agent成为社会Infra。未来社会可能有比人类多几百倍的Agent，你怎么支撑它们、支撑它们自己去开发Agent、创建Agent、Fork Agent？这是新路团队在思考和做的事情。</p>
+<p>**&quot;未来已来，只是分布不均匀。&quot;**</p>]]></content:encoded></item>
+<item><title>ClaudeCode强制实名凭什么你来定义谁是恶人？➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-M...</title><link>https://www.iesdouyin.com/share/video/7634099198912122175/?region=CN&amp;mid=7634099171116600070&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2ssiIILQNGFBwbEl_67fAna63Wxn9DD6UihbQxTk4Kg-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7634099198912122175/?region=CN&amp;mid=7634099171116600070&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2ssiIILQNGFBwbEl_67fAna63Wxn9DD6UihbQxTk4Kg-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Tue, 05 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>ClaudeCode强制实名凭什么你来定义谁是恶人？➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-M...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-05</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634099198912122175/?region=CN&amp;mid=7634099171116600070&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2ssiIILQNGFBwbEl_67fAna63Wxn9DD6UihbQxTk4Kg-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/1e1jZzL907OBbx5v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;ClaudeCode强制实名争议：身份认定逻辑、AI行为归因与开源价值观冲突&quot; 日期: &quot;2026-05-05&quot; 关键词: &quot;ClaudeCode, 强制实名, AI行为归因, 身份认定, 开源价值观&quot; 摘要: &quot;本文围绕ClaudeCode强制实名政策展开讨论，分析其背后的安全逻辑与身份认定难题，并质疑其定义“恶人”的权威性，最终呼吁坚持“intelligence with everyone”的价值观。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>事件背景</h2>
+<p>最近有一个新闻：ClaudeCode强制很多人开始要实名。这个事儿你们怎么看？背后它是出于什么考虑，这么做会带来哪些影响？</p>
+<h2>观点一：AI时代的身份认定困境</h2>
+<p>关于ClaudeCode实名，我绝对抵制这家公司的观点——虽然他们科研做得很好。</p>
+<p>强制实名让我想到一个和AI引发的问题相关的点。在AI时代，认证一个Agent来自哪里、归属于谁，其实是件难事。Agent发出请求很容易，但它想自证自己是谁反而很难。从这个方向去想，人家搞人脸识别什么的，可能也有一些道理。</p>
+<p>但这暴露了一个问题：在已经能够做很多事情的情况下，AI的行为该如何归因？它应该归属于哪个个体、或者属于哪个组织？在这个逻辑之下，我能理解他们往这方面去做。</p>
+<h2>机会与善意假设</h2>
+<p>这也暴露了一个非常大的机会：我们如何去证明某一个来自AI的请求，它真正来自哪里？</p>
+<p>我觉得这家公司的出发点是比较善意的。假设我就没有那么善意了——当然在他们的逻辑下，这是自洽的。他们的逻辑是：我看到AGI很强大，所以要约束它，避免它对人类产生危害；所以我要注重安全。要确保我的AI不会被所谓的“邪恶国家”用到，当然也包括不会被“邪恶的人类”用到。</p>
+<h2>核心质疑：谁来定义“恶人”？</h2>
+<p>在学术和模型设计上，这些都非常牛逼。但我觉得这个“定义善恶”的自我定位，是不是有点太自我了？凭什么你来定义这件事情？</p>
+<p>至少我对这个民族的认同是不太一样的，我非常不认同这一点。</p>
+<h2>我的立场</h2>
+<p>我们的观点叫“intelligence with everyone”，而不是你刷了人脸才可以。这有点扯。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>ClaudeCode强制实名凭什么你来定义谁是恶人？➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-M...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-05</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634099198912122175/?region=CN&amp;mid=7634099171116600070&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2ssiIILQNGFBwbEl_67fAna63Wxn9DD6UihbQxTk4Kg-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/1e1jZzL907OBbx5v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;ClaudeCode强制实名争议：身份认定逻辑、AI行为归因与开源价值观冲突&quot; 日期: &quot;2026-05-05&quot; 关键词: &quot;ClaudeCode, 强制实名, AI行为归因, 身份认定, 开源价值观&quot; 摘要: &quot;本文围绕ClaudeCode强制实名政策展开讨论，分析其背后的安全逻辑与身份认定难题，并质疑其定义“恶人”的权威性，最终呼吁坚持“intelligence with everyone”的价值观。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>事件背景</h2>
+<p>最近有一个新闻：ClaudeCode强制很多人开始要实名。这个事儿你们怎么看？背后它是出于什么考虑，这么做会带来哪些影响？</p>
+<h2>观点一：AI时代的身份认定困境</h2>
+<p>关于ClaudeCode实名，我绝对抵制这家公司的观点——虽然他们科研做得很好。</p>
+<p>强制实名让我想到一个和AI引发的问题相关的点。在AI时代，认证一个Agent来自哪里、归属于谁，其实是件难事。Agent发出请求很容易，但它想自证自己是谁反而很难。从这个方向去想，人家搞人脸识别什么的，可能也有一些道理。</p>
+<p>但这暴露了一个问题：在已经能够做很多事情的情况下，AI的行为该如何归因？它应该归属于哪个个体、或者属于哪个组织？在这个逻辑之下，我能理解他们往这方面去做。</p>
+<h2>机会与善意假设</h2>
+<p>这也暴露了一个非常大的机会：我们如何去证明某一个来自AI的请求，它真正来自哪里？</p>
+<p>我觉得这家公司的出发点是比较善意的。假设我就没有那么善意了——当然在他们的逻辑下，这是自洽的。他们的逻辑是：我看到AGI很强大，所以要约束它，避免它对人类产生危害；所以我要注重安全。要确保我的AI不会被所谓的“邪恶国家”用到，当然也包括不会被“邪恶的人类”用到。</p>
+<h2>核心质疑：谁来定义“恶人”？</h2>
+<p>在学术和模型设计上，这些都非常牛逼。但我觉得这个“定义善恶”的自我定位，是不是有点太自我了？凭什么你来定义这件事情？</p>
+<p>至少我对这个民族的认同是不太一样的，我非常不认同这一点。</p>
+<h2>我的立场</h2>
+<p>我们的观点叫“intelligence with everyone”，而不是你刷了人脸才可以。这有点扯。</p>]]></content:encoded></item>
 <item><title>中美AI模型差距不在算法➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgent首席架构...</title><link>https://www.iesdouyin.com/share/video/7634094892532174086/?region=CN&amp;mid=7634094873485806386&amp;u_code=lfmkmgk1jdd&amp;did=MS4wLjABAAAAU_ZlwU2C1iRU8K5RF7t8RfdyNj62nZpnLIB6JT-qhhM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=W5ggn5CfWyX_l1_Bh.UvFZ_5wo6sm6FmZQFF8Rs_sWY-&amp;share_version=230300&amp;ts=1777938292&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7634094892532174086/?region=CN&amp;mid=7634094873485806386&amp;u_code=lfmkmgk1jdd&amp;did=MS4wLjABAAAAU_ZlwU2C1iRU8K5RF7t8RfdyNj62nZpnLIB6JT-qhhM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=W5ggn5CfWyX_l1_Bh.UvFZ_5wo6sm6FmZQFF8Rs_sWY-&amp;share_version=230300&amp;ts=1777938292&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Mon, 04 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>中美AI模型差距不在算法➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgent首席架构...</h1>
 <ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-04</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634094892532174086/?region=CN&amp;mid=7634094873485806386&amp;u_code=lfmkmgk1jdd&amp;did=MS4wLjABAAAAU_ZlwU2C1iRU8K5RF7t8RfdyNj62nZpnLIB6JT-qhhM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=W5ggn5CfWyX_l1_Bh.UvFZ_5wo6sm6FmZQFF8Rs_sWY-&amp;share_version=230300&amp;ts=1777938292&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/LKx7bW2dLajL6loA/web</li></ul>
 <p>---</p>
