@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260506-084720",
-  "started_at": "2026-05-06 08:47:20 CST",
-  "finished_at": "2026-05-06 08:56:29 CST",
+  "timestamp": "20260506-105706",
+  "started_at": "2026-05-06 10:57:06 CST",
+  "finished_at": "2026-05-06 11:07:50 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -14,8 +14,8 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 803,
-    "inserted": 803,
+    "fetched": 808,
+    "inserted": 808,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
@@ -38,8 +38,8 @@
     {
       "source_key": "67cc08a39a4297b6148b2c97-ai",
       "title": "AI异类弗兰克-公众号",
-      "fetched": 22,
-      "inserted": 22,
+      "fetched": 23,
+      "inserted": 23,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -164,8 +164,8 @@
     {
       "source_key": "67cc08a19a4297b6148b29c6-channel",
       "title": "数字生命卡兹克-公众号",
-      "fetched": 20,
-      "inserted": 20,
+      "fetched": 21,
+      "inserted": 21,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -173,8 +173,8 @@
     {
       "source_key": "67cc08a19a4297b6148b2994-channel",
       "title": "新智元-公众号",
-      "fetched": 79,
-      "inserted": 79,
+      "fetched": 82,
+      "inserted": 82,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0

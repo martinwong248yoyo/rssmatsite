@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `803`
-- New articles inserted: `803`
+- Updated articles this run: `808`
+- New articles inserted: `808`
 - Existing articles updated: `0`
-- Run time: `2026-05-06 08:47:20 CST` to `2026-05-06 08:56:29 CST`
+- Run time: `2026-05-06 10:57:06 CST` to `2026-05-06 11:07:50 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -11,8 +11,8 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `33`
-- Fetched articles: `803`
-- Inserted articles: `803`
+- Fetched articles: `808`
+- Inserted articles: `808`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
@@ -22,7 +22,7 @@
 ## Feed-Level Changes
 
 - `42章经-播客`: fetched=`18`, inserted=`18`, updated=`0`, deduped=`0`, unchanged=`0`
-- `AI异类弗兰克-公众号`: fetched=`22`, inserted=`22`, updated=`0`, deduped=`0`, unchanged=`0`
+- `AI异类弗兰克-公众号`: fetched=`23`, inserted=`23`, updated=`0`, deduped=`0`, unchanged=`0`
 - `AI提效手册`: fetched=`18`, inserted=`18`, updated=`0`, deduped=`0`, unchanged=`0`
 - `AI行业最新融资案例解读`: fetched=`17`, inserted=`17`, updated=`0`, deduped=`0`, unchanged=`0`
 - `DeepTech深科技-公众号`: fetched=`45`, inserted=`45`, updated=`0`, deduped=`0`, unchanged=`0`
@@ -36,8 +36,8 @@
 - `商业WHY酱-播客`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `小互AI-公众号`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
 - `拆解新消费`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
-- `数字生命卡兹克-公众号`: fetched=`20`, inserted=`20`, updated=`0`, deduped=`0`, unchanged=`0`
-- `新智元-公众号`: fetched=`79`, inserted=`79`, updated=`0`, deduped=`0`, unchanged=`0`
+- `数字生命卡兹克-公众号`: fetched=`21`, inserted=`21`, updated=`0`, deduped=`0`, unchanged=`0`
+- `新智元-公众号`: fetched=`82`, inserted=`82`, updated=`0`, deduped=`0`, unchanged=`0`
 - `时政`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `暗涌Waves-公众号`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
 - `有新的消费电子个股研报`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
