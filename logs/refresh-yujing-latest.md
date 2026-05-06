@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `828`
-- New articles inserted: `828`
+- Updated articles this run: `836`
+- New articles inserted: `836`
 - Existing articles updated: `0`
-- Run time: `2026-05-06 13:08:05 CST` to `2026-05-06 13:26:30 CST`
+- Run time: `2026-05-06 17:31:00 CST` to `2026-05-06 17:36:14 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -11,12 +11,12 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `33`
-- Fetched articles: `828`
-- Inserted articles: `828`
+- Fetched articles: `836`
+- Inserted articles: `836`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
-- Feeds generated: `94`
+- Feeds generated: `96`
 - Feeds published: `25`
 
 ## Feed-Level Changes
@@ -36,15 +36,15 @@
 - `商业WHY酱-播客`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `小互AI-公众号`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
 - `拆解新消费`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
-- `数字生命卡兹克-公众号`: fetched=`21`, inserted=`21`, updated=`0`, deduped=`0`, unchanged=`0`
-- `新智元-公众号`: fetched=`85`, inserted=`85`, updated=`0`, deduped=`0`, unchanged=`0`
+- `数字生命卡兹克-公众号`: fetched=`22`, inserted=`22`, updated=`0`, deduped=`0`, unchanged=`0`
+- `新智元-公众号`: fetched=`86`, inserted=`86`, updated=`0`, deduped=`0`, unchanged=`0`
 - `时政`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `暗涌Waves-公众号`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
 - `有新的消费电子个股研报`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
 - `有新的软件开发行业研报`: fetched=`12`, inserted=`12`, updated=`0`, deduped=`0`, unchanged=`0`
 - `有新的食品饮料个股研报`: fetched=`11`, inserted=`11`, updated=`0`, deduped=`0`, unchanged=`0`
 - `武志红-公众号`: fetched=`24`, inserted=`24`, updated=`0`, deduped=`0`, unchanged=`0`
-- `热门AI公众号更新追踪`: fetched=`63`, inserted=`63`, updated=`0`, deduped=`0`, unchanged=`0`
+- `热门AI公众号更新追踪`: fetched=`67`, inserted=`67`, updated=`0`, deduped=`0`, unchanged=`0`
 - `甲子光年-公众号`: fetched=`22`, inserted=`22`, updated=`0`, deduped=`0`, unchanged=`0`
 - `疯投圈-播客`: fetched=`19`, inserted=`19`, updated=`0`, deduped=`0`, unchanged=`0`
 - `硅谷101-播客`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
@@ -52,7 +52,7 @@
 - `艺术电影-电影`: fetched=`18`, inserted=`18`, updated=`0`, deduped=`0`, unchanged=`0`
 - `财新-公众号`: fetched=`99`, inserted=`99`, updated=`0`, deduped=`0`, unchanged=`0`
 - `财新网 - 最新文章-RSS`: fetched=`24`, inserted=`24`, updated=`0`, deduped=`0`, unchanged=`0`
-- `量子位-公众号`: fetched=`58`, inserted=`58`, updated=`0`, deduped=`0`, unchanged=`0`
+- `量子位-公众号`: fetched=`60`, inserted=`60`, updated=`0`, deduped=`0`, unchanged=`0`
 - `金融-公众号-评论`: fetched=`20`, inserted=`20`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
