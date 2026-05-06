@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260507-000203",
-  "started_at": "2026-05-07 00:02:03 CST",
-  "finished_at": "2026-05-07 00:04:17 CST",
+  "timestamp": "20260507-021938",
+  "started_at": "2026-05-07 02:19:38 CST",
+  "finished_at": "2026-05-07 02:27:13 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -19,7 +19,7 @@
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 269,
+    "deleted_plain": 268,
     "built_feeds": 96,
     "published_feeds": 25,
     "published_rich_feeds": 25,
