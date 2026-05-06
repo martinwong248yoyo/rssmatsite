@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260506-173100",
+  "started_at": "2026-05-06 17:31:00 CST",
+  "finished_at": "2026-05-06 17:38:32 CST",
+  "command": "npm run refresh:all",
+  "totals": {
+    "inserted": 978,
+    "updated": 0,
+    "deduped": 0,
+    "unchanged": 20,
+    "changed_articles": 978
+  },
+  "source_runs": [
+    {
+      "key": "folo",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 67.5788631439209,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 20
+    },
+    {
+      "key": "opengetbiji",
+      "status": "failed",
+      "returncode": 1,
+      "elapsed_seconds": 451.73277401924133,
+      "inserted": 142,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "key": "yujing",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 323.17835307121277,
+      "inserted": 836,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ]
+}

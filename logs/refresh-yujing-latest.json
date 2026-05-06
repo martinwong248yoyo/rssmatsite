@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260506-173100",
-  "started_at": "2026-05-06 17:31:00 CST",
-  "finished_at": "2026-05-06 17:36:14 CST",
+  "timestamp": "20260506-193833",
+  "started_at": "2026-05-06 19:38:33 CST",
+  "finished_at": "2026-05-06 19:51:26 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -14,12 +14,12 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 836,
-    "inserted": 836,
+    "fetched": 850,
+    "inserted": 850,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 267,
+    "deleted_plain": 269,
     "built_feeds": 96,
     "published_feeds": 25,
     "published_rich_feeds": 25,
@@ -173,8 +173,8 @@
     {
       "source_key": "67cc08a19a4297b6148b2994-channel",
       "title": "新智元-公众号",
-      "fetched": 86,
-      "inserted": 86,
+      "fetched": 91,
+      "inserted": 91,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -290,8 +290,8 @@
     {
       "source_key": "67cc08a59a4297b6148b2f44-channel",
       "title": "财新-公众号",
-      "fetched": 99,
-      "inserted": 99,
+      "fetched": 105,
+      "inserted": 105,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -308,8 +308,8 @@
     {
       "source_key": "67cc08a19a4297b6148b295c-channel",
       "title": "量子位-公众号",
-      "fetched": 60,
-      "inserted": 60,
+      "fetched": 62,
+      "inserted": 62,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -317,8 +317,8 @@
     {
       "source_key": "68060c00303fabc7419af262-channel",
       "title": "金融-公众号-评论",
-      "fetched": 20,
-      "inserted": 20,
+      "fetched": 21,
+      "inserted": 21,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
