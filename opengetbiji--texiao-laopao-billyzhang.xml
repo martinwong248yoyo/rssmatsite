@@ -4,6 +4,67 @@
 <title>特效老炮BillyZhang - OpenGet笔记</title>
 <link>https://www.biji.com/</link>
 <description>特效老炮BillyZhang - OpenGet笔记 (opengetbiji)</description>
+<item><title>AI不是来拯救行业的五一假期我做了个实验：想用AI完整做一首MV，从歌词、旋律到画面全部AI生成。结果4天+...</title><link>https://www.iesdouyin.com/share/video/7636707134855515444/?region=CN&amp;mid=7636707206666193707&amp;u_code=3k022clik596&amp;did=MS4wLjABAAAAv2soE6LjL3mVT_zd8SQiUR_-rzvgVM7dW6V9LwGZS9s&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=rtzVa0InLWBqQHnUOQUC31H7Us1jfQyoxoNk.WQkCrw-&amp;share_version=210000&amp;ts=1778110728&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7636707134855515444/?region=CN&amp;mid=7636707206666193707&amp;u_code=3k022clik596&amp;did=MS4wLjABAAAAv2soE6LjL3mVT_zd8SQiUR_-rzvgVM7dW6V9LwGZS9s&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=rtzVa0InLWBqQHnUOQUC31H7Us1jfQyoxoNk.WQkCrw-&amp;share_version=210000&amp;ts=1778110728&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>特效老炮BillyZhang</author><pubDate>Wed, 06 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AI不是来拯救行业的五一假期我做了个实验：想用AI完整做一首MV，从歌词、旋律到画面全部AI生成。结果4天+...</h1>
+<ul><li>作者/博主: 特效老炮BillyZhang</li><li>更新时间: 2026-05-06</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7636707134855515444/?region=CN&amp;mid=7636707206666193707&amp;u_code=3k022clik596&amp;did=MS4wLjABAAAAv2soE6LjL3mVT_zd8SQiUR_-rzvgVM7dW6V9LwGZS9s&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=rtzVa0InLWBqQHnUOQUC31H7Us1jfQyoxoNk.WQkCrw-&amp;share_version=210000&amp;ts=1778110728&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/WZYL8PYmZN5PVa9b/LKx7bWpZn034a54A/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AI视频生成实验：4天成本、镜头控制失效与对影视行业的非拯救性判断&quot; 日期: &quot;2026-05-06&quot; 关键词: &quot;AI视频生成, 镜头控制, 影视行业, AI局限性, 行业转型&quot; 摘要: &quot;作者用4天时间和数千元成本尝试用AI完全自主制作一首MV，最终仅做出一个8秒镜头。通过实验发现，AI在处理精细动作（如手指悬停）和空间感知上存在根本缺陷，并认为AI不是来拯救或升级影视老路，而是来颠覆整个饭碗。&quot; 来源: &quot;特效老炮BillyZhang&quot; ---</p>
+<h2>实验起因：想用AI做一首完整的MV</h2>
+<p>大家好，我是比利。这个五一假期，我做了一个实验：用AI完整做一首MV——歌词、旋律到画面全部AI生成。我原本打算给大伙一个惊喜，展示完完全全由AI自主创作的一首歌。</p>
+<p>我本以为一天时间差不多能搞定。结果呢，四天加上几千块钱的token费用，熬了两个晚上，跑了10多个版本。真正满意的，只搞出一个8秒的开场镜头。剩下18个镜头，按这个节奏估计还要花两周多。我最终决定止损，不干了。</p>
+<h2>关键失败细节：让AI表现“手指悬停”</h2>
+<p>我给你们讲一个细节。我想让AI做一个镜头：一个人的左手悬在键盘上方5mm处，非常近，那种克制的颤抖——想按，又不想按，犹豫的感觉。</p>
+<p>我用尽了提示工程的所有技巧：故事化叙事、电影分镜词典、强禁止指令。但AI做出来的画面，不管怎么调，都是手指在键盘上反复敲击按键。</p>
+<p>为什么？因为AI看到“手指”加“键盘”的组合，默认就是打字。它的训练数据里，99.9%的手指加键盘图像都是打字。你写一万遍“不要按下去”，它都听不进去。</p>
+<h2>AI的空间感知缺陷：没有“具身感”</h2>
+<p>更要命的是另一个问题。我让AI看一张房间的照片，它能告诉你“这是一个房间，这是一个客厅”。但你要是问它这个房间有多大？它能估出20到60平方米，误差超过百分之百。</p>
+<p>为什么？因为AI看图，本质上是把图像翻译成文字标签，它没有真正的3D感知。人看一个房间，有站在房间里的具身感，但AI没有。它就像一个只会描述图片的盲人。</p>
+<p>所以，我做这首MV，本质上就是让一个没有空间感的AI，去导演一首需要空间叙事的MV。这件事AI自己做不到。如果需要有人站在旁边强行拧巴它，或者搞出各种奇奇怪怪的小妙招——用人的判断辅助AI做事，那这个实验就失去意义了，产出也就变成一场纯纯的作秀。所以我选择放弃。</p>
+<h2>同期观察：纯娱乐内容的天花板在压低</h2>
+<p>与此同时，我看了眼五一档的电影票房，只能用“惨淡”两个字形容。整个市场都在告诉你：纯娱乐内容的天花板正在压低。</p>
+<p>我一个负债的中年人，熬夜抠一首MV，图什么呢？就为了让人说一句“比利你真牛”？不值得。</p>
+<h2>实验结论：AI仍无法脱离人的主导</h2>
+<p>虽然我没有得到一首完全由AI完成的MV，但我得到了一个比MV本身更值钱的结论。</p>
+<p>按照传统影视制作的衡量标准，当下的AI视频生成还做不到完全AI自主。这仍然需要大量人力、技巧的投入。本质上它不是AI主导的，而仍然是人类主导的应用场景。说大白话就是：AI视频生成仍然脱离不了对人的依赖。影视和设计行业一直诟病的那些老问题，在现在的AI能力之下，还没有一个彻底断根的解决方案。</p>
+<h2>对行业惯性的反思：AI不是来帮你升级老活</h2>
+<p>大家都知道，我是从影视特效转型来做AI应用的。你们知道我那些原同行们现在在想什么吗？</p>
+<p>99%的特效公司现在想的都是：行业不好混，咱们得想想办法，怎么用AI跟自己的业务结合一下？这个逻辑说白了就是：路还是那条路，活还是那些活，区别仅仅是把AI拉进来帮自己一把。</p>
+<p>但这个思路很可能一开始就有问题。我就是从特效圈出来的，我太懂这个行业的惯性了。大家想的是AI怎么帮我把老活干得更快、更便宜。但真相是：AI不是来帮你升级老活的，AI是来把整个饭碗给你端掉的。</p>
+<p>举个例子：你做特效，想着用AI加速渲染。结果甲方压根就不找你做渲染了——他直接就用AI生成视频，整个跳过你这一环。你做剪辑，想着用AI帮你剪得更快。结果甲方压根就不剪了，直接拿AI端到端输出。</p>
+<p>说白了，你想用AI帮自己保住饭碗，但AI压根就不端这碗饭。在AI这个新世界里，它一定不会照着我们的老套路出牌。</p>
+<h2>个人启示：AI不是拯救者，是新的解题角度</h2>
+<p>我这次熬了4天、花了几千块钱搞MV没搞成，但我摸到了一条不能走的路。你非硬走，就逼着你走回老路，而老路本身就是一条死路。</p>
+<p>所以，别看我是干AI落地的，我从来都不觉得AI能干所有事、能拯救所有行业。这次我踩了一个坑，但我搞清楚了一件事：AI不是来帮你的，也不是来给你打工的，更不是来拯救你的。AI是一个新的解决问题的角度。想要用好它，你得先学会判断什么活值得干，什么活在这种能力之下，压根就不该开始。</p>
+<p>好，我是比利，咱们明天见，拜拜。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>AI不是来拯救行业的五一假期我做了个实验：想用AI完整做一首MV，从歌词、旋律到画面全部AI生成。结果4天+...</h1>
+<ul><li>作者/博主: 特效老炮BillyZhang</li><li>更新时间: 2026-05-06</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7636707134855515444/?region=CN&amp;mid=7636707206666193707&amp;u_code=3k022clik596&amp;did=MS4wLjABAAAAv2soE6LjL3mVT_zd8SQiUR_-rzvgVM7dW6V9LwGZS9s&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=rtzVa0InLWBqQHnUOQUC31H7Us1jfQyoxoNk.WQkCrw-&amp;share_version=210000&amp;ts=1778110728&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/WZYL8PYmZN5PVa9b/LKx7bWpZn034a54A/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AI视频生成实验：4天成本、镜头控制失效与对影视行业的非拯救性判断&quot; 日期: &quot;2026-05-06&quot; 关键词: &quot;AI视频生成, 镜头控制, 影视行业, AI局限性, 行业转型&quot; 摘要: &quot;作者用4天时间和数千元成本尝试用AI完全自主制作一首MV，最终仅做出一个8秒镜头。通过实验发现，AI在处理精细动作（如手指悬停）和空间感知上存在根本缺陷，并认为AI不是来拯救或升级影视老路，而是来颠覆整个饭碗。&quot; 来源: &quot;特效老炮BillyZhang&quot; ---</p>
+<h2>实验起因：想用AI做一首完整的MV</h2>
+<p>大家好，我是比利。这个五一假期，我做了一个实验：用AI完整做一首MV——歌词、旋律到画面全部AI生成。我原本打算给大伙一个惊喜，展示完完全全由AI自主创作的一首歌。</p>
+<p>我本以为一天时间差不多能搞定。结果呢，四天加上几千块钱的token费用，熬了两个晚上，跑了10多个版本。真正满意的，只搞出一个8秒的开场镜头。剩下18个镜头，按这个节奏估计还要花两周多。我最终决定止损，不干了。</p>
+<h2>关键失败细节：让AI表现“手指悬停”</h2>
+<p>我给你们讲一个细节。我想让AI做一个镜头：一个人的左手悬在键盘上方5mm处，非常近，那种克制的颤抖——想按，又不想按，犹豫的感觉。</p>
+<p>我用尽了提示工程的所有技巧：故事化叙事、电影分镜词典、强禁止指令。但AI做出来的画面，不管怎么调，都是手指在键盘上反复敲击按键。</p>
+<p>为什么？因为AI看到“手指”加“键盘”的组合，默认就是打字。它的训练数据里，99.9%的手指加键盘图像都是打字。你写一万遍“不要按下去”，它都听不进去。</p>
+<h2>AI的空间感知缺陷：没有“具身感”</h2>
+<p>更要命的是另一个问题。我让AI看一张房间的照片，它能告诉你“这是一个房间，这是一个客厅”。但你要是问它这个房间有多大？它能估出20到60平方米，误差超过百分之百。</p>
+<p>为什么？因为AI看图，本质上是把图像翻译成文字标签，它没有真正的3D感知。人看一个房间，有站在房间里的具身感，但AI没有。它就像一个只会描述图片的盲人。</p>
+<p>所以，我做这首MV，本质上就是让一个没有空间感的AI，去导演一首需要空间叙事的MV。这件事AI自己做不到。如果需要有人站在旁边强行拧巴它，或者搞出各种奇奇怪怪的小妙招——用人的判断辅助AI做事，那这个实验就失去意义了，产出也就变成一场纯纯的作秀。所以我选择放弃。</p>
+<h2>同期观察：纯娱乐内容的天花板在压低</h2>
+<p>与此同时，我看了眼五一档的电影票房，只能用“惨淡”两个字形容。整个市场都在告诉你：纯娱乐内容的天花板正在压低。</p>
+<p>我一个负债的中年人，熬夜抠一首MV，图什么呢？就为了让人说一句“比利你真牛”？不值得。</p>
+<h2>实验结论：AI仍无法脱离人的主导</h2>
+<p>虽然我没有得到一首完全由AI完成的MV，但我得到了一个比MV本身更值钱的结论。</p>
+<p>按照传统影视制作的衡量标准，当下的AI视频生成还做不到完全AI自主。这仍然需要大量人力、技巧的投入。本质上它不是AI主导的，而仍然是人类主导的应用场景。说大白话就是：AI视频生成仍然脱离不了对人的依赖。影视和设计行业一直诟病的那些老问题，在现在的AI能力之下，还没有一个彻底断根的解决方案。</p>
+<h2>对行业惯性的反思：AI不是来帮你升级老活</h2>
+<p>大家都知道，我是从影视特效转型来做AI应用的。你们知道我那些原同行们现在在想什么吗？</p>
+<p>99%的特效公司现在想的都是：行业不好混，咱们得想想办法，怎么用AI跟自己的业务结合一下？这个逻辑说白了就是：路还是那条路，活还是那些活，区别仅仅是把AI拉进来帮自己一把。</p>
+<p>但这个思路很可能一开始就有问题。我就是从特效圈出来的，我太懂这个行业的惯性了。大家想的是AI怎么帮我把老活干得更快、更便宜。但真相是：AI不是来帮你升级老活的，AI是来把整个饭碗给你端掉的。</p>
+<p>举个例子：你做特效，想着用AI加速渲染。结果甲方压根就不找你做渲染了——他直接就用AI生成视频，整个跳过你这一环。你做剪辑，想着用AI帮你剪得更快。结果甲方压根就不剪了，直接拿AI端到端输出。</p>
+<p>说白了，你想用AI帮自己保住饭碗，但AI压根就不端这碗饭。在AI这个新世界里，它一定不会照着我们的老套路出牌。</p>
+<h2>个人启示：AI不是拯救者，是新的解题角度</h2>
+<p>我这次熬了4天、花了几千块钱搞MV没搞成，但我摸到了一条不能走的路。你非硬走，就逼着你走回老路，而老路本身就是一条死路。</p>
+<p>所以，别看我是干AI落地的，我从来都不觉得AI能干所有事、能拯救所有行业。这次我踩了一个坑，但我搞清楚了一件事：AI不是来帮你的，也不是来给你打工的，更不是来拯救你的。AI是一个新的解决问题的角度。想要用好它，你得先学会判断什么活值得干，什么活在这种能力之下，压根就不该开始。</p>
+<p>好，我是比利，咱们明天见，拜拜。</p>]]></content:encoded></item>
 <item><title>AI会主动“做差”最新AI生图能做到什么程度？伪造你的童年照——小时候在老家小卖部门口，阳光照下来，手里...</title><link>https://www.iesdouyin.com/share/video/7634577342811213096/?region=CN&amp;mid=7634577337975081766&amp;u_code=kecjbmcgb8h&amp;did=MS4wLjABAAAA_3ydcgRPinUwhM28kEmeFkTmF82NNvqE_a71hptVNek&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=_.phmW1W3KMnjRwrpW_a712CNQ09BDRLAs06ZGxdHR0-&amp;share_version=220100&amp;ts=1778028243&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7634577342811213096/?region=CN&amp;mid=7634577337975081766&amp;u_code=kecjbmcgb8h&amp;did=MS4wLjABAAAA_3ydcgRPinUwhM28kEmeFkTmF82NNvqE_a71hptVNek&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=_.phmW1W3KMnjRwrpW_a712CNQ09BDRLAs06ZGxdHR0-&amp;share_version=220100&amp;ts=1778028243&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>特效老炮BillyZhang</author><pubDate>Tue, 05 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AI会主动“做差”最新AI生图能做到什么程度？伪造你的童年照——小时候在老家小卖部门口，阳光照下来，手里...</h1>
 <ul><li>作者/博主: 特效老炮BillyZhang</li><li>更新时间: 2026-05-05</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634577342811213096/?region=CN&amp;mid=7634577337975081766&amp;u_code=kecjbmcgb8h&amp;did=MS4wLjABAAAA_3ydcgRPinUwhM28kEmeFkTmF82NNvqE_a71hptVNek&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=_.phmW1W3KMnjRwrpW_a712CNQ09BDRLAs06ZGxdHR0-&amp;share_version=220100&amp;ts=1778028243&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/WZYL8PYmZN5PVa9b/mK8DQzJ925Jz1BzK/web</li></ul>
 <p>---</p>
