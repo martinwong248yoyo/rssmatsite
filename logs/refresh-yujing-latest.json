@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260507-192618",
-  "started_at": "2026-05-07 19:26:18 CST",
-  "finished_at": "2026-05-07 19:39:26 CST",
+  "timestamp": "20260507-213943",
+  "started_at": "2026-05-07 21:39:43 CST",
+  "finished_at": "2026-05-07 21:49:27 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -14,12 +14,12 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 898,
-    "inserted": 898,
+    "fetched": 902,
+    "inserted": 902,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 271,
+    "deleted_plain": 270,
     "built_feeds": 96,
     "published_feeds": 25,
     "published_rich_feeds": 25,
@@ -83,8 +83,8 @@
     {
       "source_key": "67cc08a19a4297b6148b2932-knowyourself",
       "title": "KnowYourself-公众号",
-      "fetched": 20,
-      "inserted": 20,
+      "fetched": 23,
+      "inserted": 23,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -272,8 +272,8 @@
     {
       "source_key": "67ea609b3daf5a4f63dea8ce-channel",
       "title": "简单心理Uni-公众号",
-      "fetched": 12,
-      "inserted": 12,
+      "fetched": 13,
+      "inserted": 13,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
