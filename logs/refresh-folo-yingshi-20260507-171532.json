@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260507-192618",
-  "started_at": "2026-05-07 19:26:18 CST",
-  "finished_at": "2026-05-07 19:29:44 CST",
+  "timestamp": "20260507-171532",
+  "started_at": "2026-05-07 17:15:32 CST",
+  "finished_at": "2026-05-07 17:16:53 CST",
   "settings": {
     "page_limit": 50,
     "feed_limit": null,
@@ -12,11 +12,11 @@
   },
   "totals": {
     "feed_count": 12,
-    "fetched": 25,
+    "fetched": 26,
     "inserted": 0,
     "updated": 0,
     "deduped": 0,
-    "unchanged": 25,
+    "unchanged": 26,
     "classified": 513,
     "built_feeds": 96
   },
@@ -123,11 +123,11 @@
     {
       "source_key": "266873988289786880",
       "title": "GaiaDaily - 今天看啥",
-      "fetched": 4,
+      "fetched": 5,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 4
+      "unchanged": 5
     }
   ],
   "top_categories": [

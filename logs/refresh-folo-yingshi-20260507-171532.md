@@ -3,7 +3,7 @@
 - Updated articles this run: `0`
 - New articles inserted: `0`
 - Existing articles updated: `0`
-- Run time: `2026-05-07 19:26:18 CST` to `2026-05-07 19:29:44 CST`
+- Run time: `2026-05-07 17:15:32 CST` to `2026-05-07 17:16:53 CST`
 - Update command: `npm run refresh:folo:yingshi`
 - Recent-days filter: `3`
 - Page limit: `50`
@@ -12,11 +12,11 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `12`
-- Fetched articles: `25`
+- Fetched articles: `26`
 - Inserted articles: `0`
 - Updated articles: `0`
 - Deduped articles: `0`
-- Unchanged articles: `25`
+- Unchanged articles: `26`
 - Reclassified articles: `513`
 - Feeds generated: `96`
 
@@ -33,7 +33,7 @@
 - `MovieMonthly - 今天看啥`: fetched=`2`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`2`
 - `ARRI - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `中国影视摄影师学会 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
-- `GaiaDaily - 今天看啥`: fetched=`4`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`4`
+- `GaiaDaily - 今天看啥`: fetched=`5`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`5`
 
 ## Category Snapshot
 
