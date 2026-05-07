@@ -4,6 +4,39 @@
 <title>Koji杨远骋 - OpenGet笔记</title>
 <link>https://www.biji.com/</link>
 <description>Koji杨远骋 - OpenGet笔记 (opengetbiji)</description>
+<item><title>ClaudeCode源码泄露缓解了我的FOMO➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgen...</title><link>https://www.iesdouyin.com/share/video/7634100733683486006/?region=CN&amp;mid=7634100739702278950&amp;u_code=4810k9e6gk9g&amp;did=MS4wLjABAAAATF6BDGtXQbgISF39kbgncvuRhDV59TE0lFMKKxGYJSM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=kHFb3U1MiPdRsabApSAiMhKDEYUszVBRSy3VAbNeZRA-&amp;share_version=210700&amp;ts=1778106639&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7634100733683486006/?region=CN&amp;mid=7634100739702278950&amp;u_code=4810k9e6gk9g&amp;did=MS4wLjABAAAATF6BDGtXQbgISF39kbgncvuRhDV59TE0lFMKKxGYJSM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=kHFb3U1MiPdRsabApSAiMhKDEYUszVBRSy3VAbNeZRA-&amp;share_version=210700&amp;ts=1778106639&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Wed, 06 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>ClaudeCode源码泄露缓解了我的FOMO➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgen...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-06</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634100733683486006/?region=CN&amp;mid=7634100739702278950&amp;u_code=4810k9e6gk9g&amp;did=MS4wLjABAAAATF6BDGtXQbgISF39kbgncvuRhDV59TE0lFMKKxGYJSM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=kHFb3U1MiPdRsabApSAiMhKDEYUszVBRSy3VAbNeZRA-&amp;share_version=210700&amp;ts=1778106639&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/1e1jZzXwZdd9wx6v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;Claude Code源码泄露的行业影响、自进化机制与中美开发者实践对比&quot; 日期: &quot;2026-05-06&quot; 关键词: &quot;Claude Code, 源码泄露, Agent开发, 自进化, 中美对比, FOMO缓解&quot; 摘要: &quot;作者从Claude Code源码泄露出发，讨论了行业内的探索实验阶段、与OpenAI Codex的设计理念差异，以及自进化机制带来的启发，缓解了自身的落后焦虑。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>背景与兴奋点</h2>
+<p>高扣得（Claude Code）的源代码泄露了。作为一个AI领域的研发工程师，看到被大家广为赞誉的AI Agent开源后，我的第一反应是兴奋——因为有一个最佳实践可以去学习了。当然，知识产权归他们所有，我只是学习，不参与任何生产活动。</p>
+<h2>缓解FOMO与行业共识</h2>
+<p>另一个点让我缓解了一些落后的感觉。在源码中会发现，他们有很多实验性的功能，比如Agent在做梦、养宠物，以及一些比较激进的Agent之间合作的能力等。这些功能其实也没有开放给用户，可能只在实验阶段。</p>
+<p>这证明了一个点：任何一家公司，即使拥有无限多的算力、最好的智能，在Agent这一方面（以及通用Agent方面），也是处在一个探索和实验的阶段。这让我们更加加把劲吧。在这个时代下，你只要有能力去验证自己的想法，并且尽量快速地落地，就有机会赶超他们。</p>
+<p>看到源代码之后发现，其实也没有那么多的魔法在里面，他们也有大量的假设、探索和摸索。</p>
+<h2>与Codex的设计理念对比</h2>
+<p>特别是和Codex比较。Codex是OpenAI开源的Agent，它是一个极度简化的框架，里面基本上把一切都交给模型了。但相反，Claude Code就像所有人说的那样——Claude自己也不相信自己的模型，它要在一切地方都约束好，就像是一个中国式家长一样，要把孩子的一切都铺平道路。这是两种不同的观点。</p>
+<p>从中我发现：世界上最聪明的人、最强的模型公司，和我们大家都在焦虑同一个事情。我们的思考可能是在一个大气层内的一个层次，都是差不多的。</p>
+<h2>自进化机制与中美开发节奏</h2>
+<p>包括他们发CoWork的时候，我们提前大概三周左右也在做这件事，我们大概三点五个工程师在做我们的Desk Talk，然后比他们晚一周发出来。他们发出来之后，我心想：“我靠，我正在开发对吧？”很多AI开发者都会有这样的感受。</p>
+<p>所以我觉得看到Claude Code的代码，有很多优秀的实践，但没有太超出我认知的。甚至我看到很多我刚才说的在Claude画的那样的一些事件——包括提到的Dream机制。</p>
+<p>Claude Code最核心的一点还是自进化。我们最早提到自进化，Claude Code可能是最早的自进化Agent之一。自进化体现在哪里？我相信他们一定是用Claude Code来开发Claude Code自己的，它是用Claude的模型加Claude Agent来开发自己的模型加Agent。这就是一个自进化。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>ClaudeCode源码泄露缓解了我的FOMO➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgen...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-06</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634100733683486006/?region=CN&amp;mid=7634100739702278950&amp;u_code=4810k9e6gk9g&amp;did=MS4wLjABAAAATF6BDGtXQbgISF39kbgncvuRhDV59TE0lFMKKxGYJSM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=kHFb3U1MiPdRsabApSAiMhKDEYUszVBRSy3VAbNeZRA-&amp;share_version=210700&amp;ts=1778106639&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/1e1jZzXwZdd9wx6v/web</li></ul>
+<p>---</p>
+<p>标题: &quot;Claude Code源码泄露的行业影响、自进化机制与中美开发者实践对比&quot; 日期: &quot;2026-05-06&quot; 关键词: &quot;Claude Code, 源码泄露, Agent开发, 自进化, 中美对比, FOMO缓解&quot; 摘要: &quot;作者从Claude Code源码泄露出发，讨论了行业内的探索实验阶段、与OpenAI Codex的设计理念差异，以及自进化机制带来的启发，缓解了自身的落后焦虑。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>背景与兴奋点</h2>
+<p>高扣得（Claude Code）的源代码泄露了。作为一个AI领域的研发工程师，看到被大家广为赞誉的AI Agent开源后，我的第一反应是兴奋——因为有一个最佳实践可以去学习了。当然，知识产权归他们所有，我只是学习，不参与任何生产活动。</p>
+<h2>缓解FOMO与行业共识</h2>
+<p>另一个点让我缓解了一些落后的感觉。在源码中会发现，他们有很多实验性的功能，比如Agent在做梦、养宠物，以及一些比较激进的Agent之间合作的能力等。这些功能其实也没有开放给用户，可能只在实验阶段。</p>
+<p>这证明了一个点：任何一家公司，即使拥有无限多的算力、最好的智能，在Agent这一方面（以及通用Agent方面），也是处在一个探索和实验的阶段。这让我们更加加把劲吧。在这个时代下，你只要有能力去验证自己的想法，并且尽量快速地落地，就有机会赶超他们。</p>
+<p>看到源代码之后发现，其实也没有那么多的魔法在里面，他们也有大量的假设、探索和摸索。</p>
+<h2>与Codex的设计理念对比</h2>
+<p>特别是和Codex比较。Codex是OpenAI开源的Agent，它是一个极度简化的框架，里面基本上把一切都交给模型了。但相反，Claude Code就像所有人说的那样——Claude自己也不相信自己的模型，它要在一切地方都约束好，就像是一个中国式家长一样，要把孩子的一切都铺平道路。这是两种不同的观点。</p>
+<p>从中我发现：世界上最聪明的人、最强的模型公司，和我们大家都在焦虑同一个事情。我们的思考可能是在一个大气层内的一个层次，都是差不多的。</p>
+<h2>自进化机制与中美开发节奏</h2>
+<p>包括他们发CoWork的时候，我们提前大概三周左右也在做这件事，我们大概三点五个工程师在做我们的Desk Talk，然后比他们晚一周发出来。他们发出来之后，我心想：“我靠，我正在开发对吧？”很多AI开发者都会有这样的感受。</p>
+<p>所以我觉得看到Claude Code的代码，有很多优秀的实践，但没有太超出我认知的。甚至我看到很多我刚才说的在Claude画的那样的一些事件——包括提到的Dream机制。</p>
+<p>Claude Code最核心的一点还是自进化。我们最早提到自进化，Claude Code可能是最早的自进化Agent之一。自进化体现在哪里？我相信他们一定是用Claude Code来开发Claude Code自己的，它是用Claude的模型加Claude Agent来开发自己的模型加Agent。这就是一个自进化。</p>]]></content:encoded></item>
 <item><title>【正片】一起搞懂AgentHarness！➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨...</title><link>https://www.iesdouyin.com/share/video/7634496757442809129/?region=CN&amp;mid=7634497003514284843&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=edL8zyRTBDbedu.WxSJRVoXMmjRADeMcBF2HbzCK7Cc-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7634496757442809129/?region=CN&amp;mid=7634497003514284843&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=edL8zyRTBDbedu.WxSJRVoXMmjRADeMcBF2HbzCK7Cc-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Wed, 06 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>【正片】一起搞懂AgentHarness！➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨...</h1>
 <ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-06</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634496757442809129/?region=CN&amp;mid=7634497003514284843&amp;u_code=c3j931ha4lh&amp;did=MS4wLjABAAAA3y-EF4GRYQfRVmXKWHytL4d3cgUaf3gtX0TT8VHxcNo&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=edL8zyRTBDbedu.WxSJRVoXMmjRADeMcBF2HbzCK7Cc-&amp;share_version=230700&amp;ts=1778023416&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/weYNGMwpQRbjGq9v/web</li></ul>
 <p>---</p>
