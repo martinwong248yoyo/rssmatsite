@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `902`
-- New articles inserted: `902`
+- Updated articles this run: `907`
+- New articles inserted: `907`
 - Existing articles updated: `0`
-- Run time: `2026-05-07 21:39:43 CST` to `2026-05-07 21:49:27 CST`
+- Run time: `2026-05-07 23:49:43 CST` to `2026-05-07 23:58:58 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -11,8 +11,8 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `33`
-- Fetched articles: `902`
-- Inserted articles: `902`
+- Fetched articles: `907`
+- Inserted articles: `907`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
@@ -26,7 +26,7 @@
 - `AI提效手册`: fetched=`18`, inserted=`18`, updated=`0`, deduped=`0`, unchanged=`0`
 - `AI行业最新融资案例解读`: fetched=`17`, inserted=`17`, updated=`0`, deduped=`0`, unchanged=`0`
 - `DeepTech深科技-公众号`: fetched=`51`, inserted=`51`, updated=`0`, deduped=`0`, unchanged=`0`
-- `FIRST青年电影展-公众号`: fetched=`15`, inserted=`15`, updated=`0`, deduped=`0`, unchanged=`0`
+- `FIRST青年电影展-公众号`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
 - `KnowYourself-公众号`: fetched=`23`, inserted=`23`, updated=`0`, deduped=`0`, unchanged=`0`
 - `Z Potentials-公众号`: fetched=`30`, inserted=`30`, updated=`0`, deduped=`0`, unchanged=`0`
 - `中国AI创业者最新采访`: fetched=`15`, inserted=`15`, updated=`0`, deduped=`0`, unchanged=`0`
@@ -44,15 +44,15 @@
 - `有新的软件开发行业研报`: fetched=`12`, inserted=`12`, updated=`0`, deduped=`0`, unchanged=`0`
 - `有新的食品饮料个股研报`: fetched=`11`, inserted=`11`, updated=`0`, deduped=`0`, unchanged=`0`
 - `武志红-公众号`: fetched=`27`, inserted=`27`, updated=`0`, deduped=`0`, unchanged=`0`
-- `热门AI公众号更新追踪`: fetched=`75`, inserted=`75`, updated=`0`, deduped=`0`, unchanged=`0`
+- `热门AI公众号更新追踪`: fetched=`76`, inserted=`76`, updated=`0`, deduped=`0`, unchanged=`0`
 - `甲子光年-公众号`: fetched=`22`, inserted=`22`, updated=`0`, deduped=`0`, unchanged=`0`
 - `疯投圈-播客`: fetched=`19`, inserted=`19`, updated=`0`, deduped=`0`, unchanged=`0`
 - `硅谷101-播客`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
 - `简单心理Uni-公众号`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `艺术电影-电影`: fetched=`18`, inserted=`18`, updated=`0`, deduped=`0`, unchanged=`0`
-- `财新-公众号`: fetched=`118`, inserted=`118`, updated=`0`, deduped=`0`, unchanged=`0`
+- `财新-公众号`: fetched=`119`, inserted=`119`, updated=`0`, deduped=`0`, unchanged=`0`
 - `财新网 - 最新文章-RSS`: fetched=`24`, inserted=`24`, updated=`0`, deduped=`0`, unchanged=`0`
-- `量子位-公众号`: fetched=`67`, inserted=`67`, updated=`0`, deduped=`0`, unchanged=`0`
+- `量子位-公众号`: fetched=`69`, inserted=`69`, updated=`0`, deduped=`0`, unchanged=`0`
 - `金融-公众号-评论`: fetched=`23`, inserted=`23`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
