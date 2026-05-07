@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260507-234943",
-  "started_at": "2026-05-07 23:49:43 CST",
-  "finished_at": "2026-05-07 23:58:58 CST",
+  "timestamp": "20260508-015915",
+  "started_at": "2026-05-08 01:59:15 CST",
+  "finished_at": "2026-05-08 02:01:39 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -14,12 +14,12 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 907,
-    "inserted": 907,
+    "fetched": 908,
+    "inserted": 908,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 271,
+    "deleted_plain": 272,
     "built_feeds": 96,
     "published_feeds": 25,
     "published_rich_feeds": 25,
@@ -308,8 +308,8 @@
     {
       "source_key": "67cc08a19a4297b6148b295c-channel",
       "title": "量子位-公众号",
-      "fetched": 69,
-      "inserted": 69,
+      "fetched": 70,
+      "inserted": 70,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
