@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260508-232021",
-  "started_at": "2026-05-08 23:20:21 CST",
-  "finished_at": "2026-05-08 23:26:20 CST",
+  "timestamp": "20260508-211600",
+  "started_at": "2026-05-08 21:16:00 CST",
+  "finished_at": "2026-05-08 21:20:16 CST",
   "settings": {
     "page_limit": 50,
     "feed_limit": null,
@@ -12,11 +12,11 @@
   },
   "totals": {
     "feed_count": 12,
-    "fetched": 20,
+    "fetched": 22,
     "inserted": 0,
     "updated": 0,
     "deduped": 0,
-    "unchanged": 20,
+    "unchanged": 22,
     "classified": 528,
     "built_feeds": 97
   },
@@ -60,11 +60,11 @@
     {
       "source_key": "266873373241242624",
       "title": "影视工业网 - 今天看啥",
-      "fetched": 2,
+      "fetched": 4,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 2
+      "unchanged": 4
     },
     {
       "source_key": "266873554108449792",

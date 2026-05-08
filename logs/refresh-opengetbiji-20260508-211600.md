@@ -3,7 +3,7 @@
 - Updated articles this run: `185`
 - New articles inserted: `185`
 - Existing articles updated: `0`
-- Run time: `2026-05-08 23:20:21 CST` to `2026-05-08 23:22:46 CST`
+- Run time: `2026-05-08 21:16:00 CST` to `2026-05-08 21:18:33 CST`
 - Update command: `npm run refresh:opengetbiji`
 - Recent-days filter: `3`
 
