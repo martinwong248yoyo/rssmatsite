@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260508-165311",
-  "started_at": "2026-05-08 16:53:11 CST",
-  "finished_at": "2026-05-08 16:56:29 CST",
+  "timestamp": "20260508-190155",
+  "started_at": "2026-05-08 19:01:55 CST",
+  "finished_at": "2026-05-08 19:15:42 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -14,13 +14,13 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 937,
-    "inserted": 937,
+    "fetched": 952,
+    "inserted": 952,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 270,
-    "built_feeds": 96,
+    "deleted_plain": 276,
+    "built_feeds": 97,
     "published_feeds": 25,
     "published_rich_feeds": 25,
     "published_logs": 6
@@ -65,8 +65,8 @@
     {
       "source_key": "67cc08a19a4297b6148b28e7-deeptech",
       "title": "DeepTech深科技-公众号",
-      "fetched": 53,
-      "inserted": 53,
+      "fetched": 56,
+      "inserted": 56,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -173,8 +173,8 @@
     {
       "source_key": "67cc08a19a4297b6148b2994-channel",
       "title": "新智元-公众号",
-      "fetched": 99,
-      "inserted": 99,
+      "fetched": 101,
+      "inserted": 101,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -290,8 +290,8 @@
     {
       "source_key": "67cc08a59a4297b6148b2f44-channel",
       "title": "财新-公众号",
-      "fetched": 127,
-      "inserted": 127,
+      "fetched": 135,
+      "inserted": 135,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -308,8 +308,8 @@
     {
       "source_key": "67cc08a19a4297b6148b295c-channel",
       "title": "量子位-公众号",
-      "fetched": 76,
-      "inserted": 76,
+      "fetched": 78,
+      "inserted": 78,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
