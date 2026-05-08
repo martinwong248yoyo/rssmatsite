@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `174`
-- New articles inserted: `174`
+- Updated articles this run: `169`
+- New articles inserted: `169`
 - Existing articles updated: `0`
-- Run time: `2026-05-08 12:29:08 CST` to `2026-05-08 12:34:31 CST`
+- Run time: `2026-05-08 10:18:48 CST` to `2026-05-08 10:20:06 CST`
 - Update command: `npm run refresh:opengetbiji`
 - Recent-days filter: `3`
 
@@ -11,8 +11,8 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `13`
-- Fetched articles: `174`
-- Inserted articles: `174`
+- Fetched articles: `169`
+- Inserted articles: `169`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
@@ -22,7 +22,7 @@
 ## Feed-Level Changes
 
 - `王自如AI - OpenGet笔记`: fetched=`4`, inserted=`4`, updated=`0`, deduped=`0`, unchanged=`0`
-- `独夫之心 - OpenGet笔记`: fetched=`57`, inserted=`57`, updated=`0`, deduped=`0`, unchanged=`0`
+- `独夫之心 - OpenGet笔记`: fetched=`52`, inserted=`52`, updated=`0`, deduped=`0`, unchanged=`0`
 - `邹先华 - OpenGet笔记`: fetched=`26`, inserted=`26`, updated=`0`, deduped=`0`, unchanged=`0`
 - `Koji杨远骋 - OpenGet笔记`: fetched=`15`, inserted=`15`, updated=`0`, deduped=`0`, unchanged=`0`
 - `北京经济犯罪&职务犯罪.阮思乔律师 - OpenGet笔记`: fetched=`10`, inserted=`10`, updated=`0`, deduped=`0`, unchanged=`0`

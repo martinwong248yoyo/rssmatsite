@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260508-122908",
-  "started_at": "2026-05-08 12:29:08 CST",
-  "finished_at": "2026-05-08 12:34:31 CST",
+  "timestamp": "20260508-101848",
+  "started_at": "2026-05-08 10:18:48 CST",
+  "finished_at": "2026-05-08 10:20:06 CST",
   "command": "npm run refresh:opengetbiji",
   "settings": {
     "recent_days": 3,
@@ -11,8 +11,8 @@
   },
   "totals": {
     "feed_count": 13,
-    "fetched": 174,
-    "inserted": 174,
+    "fetched": 169,
+    "inserted": 169,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
@@ -32,8 +32,8 @@
     {
       "source_key": "独夫之心",
       "title": "独夫之心 - OpenGet笔记",
-      "fetched": 57,
-      "inserted": 57,
+      "fetched": 52,
+      "inserted": 52,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
