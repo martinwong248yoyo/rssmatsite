@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260508-122908",
-  "started_at": "2026-05-08 12:29:08 CST",
-  "finished_at": "2026-05-08 12:41:34 CST",
+  "timestamp": "20260508-144150",
+  "started_at": "2026-05-08 14:41:50 CST",
+  "finished_at": "2026-05-08 14:53:00 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -14,12 +14,12 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 930,
-    "inserted": 930,
+    "fetched": 934,
+    "inserted": 934,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 272,
+    "deleted_plain": 269,
     "built_feeds": 96,
     "published_feeds": 25,
     "published_rich_feeds": 25,
@@ -173,8 +173,8 @@
     {
       "source_key": "67cc08a19a4297b6148b2994-channel",
       "title": "新智元-公众号",
-      "fetched": 96,
-      "inserted": 96,
+      "fetched": 98,
+      "inserted": 98,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -227,8 +227,8 @@
     {
       "source_key": "67cc08a19a4297b6148b298f-channel",
       "title": "武志红-公众号",
-      "fetched": 27,
-      "inserted": 27,
+      "fetched": 28,
+      "inserted": 28,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -308,8 +308,8 @@
     {
       "source_key": "67cc08a19a4297b6148b295c-channel",
       "title": "量子位-公众号",
-      "fetched": 73,
-      "inserted": 73,
+      "fetched": 74,
+      "inserted": 74,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
