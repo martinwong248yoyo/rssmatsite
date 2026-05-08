@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `934`
-- New articles inserted: `934`
+- Updated articles this run: `937`
+- New articles inserted: `937`
 - Existing articles updated: `0`
-- Run time: `2026-05-08 14:41:50 CST` to `2026-05-08 14:53:00 CST`
+- Run time: `2026-05-08 16:53:11 CST` to `2026-05-08 16:56:29 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -11,8 +11,8 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `33`
-- Fetched articles: `934`
-- Inserted articles: `934`
+- Fetched articles: `937`
+- Inserted articles: `937`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
@@ -37,7 +37,7 @@
 - `小互AI-公众号`: fetched=`17`, inserted=`17`, updated=`0`, deduped=`0`, unchanged=`0`
 - `拆解新消费`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `数字生命卡兹克-公众号`: fetched=`24`, inserted=`24`, updated=`0`, deduped=`0`, unchanged=`0`
-- `新智元-公众号`: fetched=`98`, inserted=`98`, updated=`0`, deduped=`0`, unchanged=`0`
+- `新智元-公众号`: fetched=`99`, inserted=`99`, updated=`0`, deduped=`0`, unchanged=`0`
 - `时政`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `暗涌Waves-公众号`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
 - `有新的消费电子个股研报`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
@@ -52,7 +52,7 @@
 - `艺术电影-电影`: fetched=`18`, inserted=`18`, updated=`0`, deduped=`0`, unchanged=`0`
 - `财新-公众号`: fetched=`127`, inserted=`127`, updated=`0`, deduped=`0`, unchanged=`0`
 - `财新网 - 最新文章-RSS`: fetched=`24`, inserted=`24`, updated=`0`, deduped=`0`, unchanged=`0`
-- `量子位-公众号`: fetched=`74`, inserted=`74`, updated=`0`, deduped=`0`, unchanged=`0`
+- `量子位-公众号`: fetched=`76`, inserted=`76`, updated=`0`, deduped=`0`, unchanged=`0`
 - `金融-公众号-评论`: fetched=`23`, inserted=`23`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot

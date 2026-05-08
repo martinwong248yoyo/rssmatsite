@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `179`
-- New articles inserted: `179`
+- Updated articles this run: `175`
+- New articles inserted: `175`
 - Existing articles updated: `0`
-- Run time: `2026-05-08 16:53:11 CST` to `2026-05-08 17:01:38 CST`
+- Run time: `2026-05-08 14:41:50 CST` to `2026-05-08 14:43:44 CST`
 - Update command: `npm run refresh:opengetbiji`
 - Recent-days filter: `3`
 
@@ -11,8 +11,8 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `13`
-- Fetched articles: `179`
-- Inserted articles: `179`
+- Fetched articles: `175`
+- Inserted articles: `175`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
@@ -23,8 +23,8 @@
 
 - `王自如AI - OpenGet笔记`: fetched=`4`, inserted=`4`, updated=`0`, deduped=`0`, unchanged=`0`
 - `独夫之心 - OpenGet笔记`: fetched=`57`, inserted=`57`, updated=`0`, deduped=`0`, unchanged=`0`
-- `邹先华 - OpenGet笔记`: fetched=`29`, inserted=`29`, updated=`0`, deduped=`0`, unchanged=`0`
-- `Koji杨远骋 - OpenGet笔记`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
+- `邹先华 - OpenGet笔记`: fetched=`26`, inserted=`26`, updated=`0`, deduped=`0`, unchanged=`0`
+- `Koji杨远骋 - OpenGet笔记`: fetched=`15`, inserted=`15`, updated=`0`, deduped=`0`, unchanged=`0`
 - `北京经济犯罪&职务犯罪.阮思乔律师 - OpenGet笔记`: fetched=`10`, inserted=`10`, updated=`0`, deduped=`0`, unchanged=`0`
 - `小辉教你开公司 - OpenGet笔记`: fetched=`9`, inserted=`9`, updated=`0`, deduped=`0`, unchanged=`0`
 - `陈杰森资本棋局 - OpenGet笔记`: fetched=`10`, inserted=`10`, updated=`0`, deduped=`0`, unchanged=`0`

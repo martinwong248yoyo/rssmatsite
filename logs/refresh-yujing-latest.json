@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260508-144150",
-  "started_at": "2026-05-08 14:41:50 CST",
-  "finished_at": "2026-05-08 14:53:00 CST",
+  "timestamp": "20260508-165311",
+  "started_at": "2026-05-08 16:53:11 CST",
+  "finished_at": "2026-05-08 16:56:29 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -14,12 +14,12 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 934,
-    "inserted": 934,
+    "fetched": 937,
+    "inserted": 937,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 269,
+    "deleted_plain": 270,
     "built_feeds": 96,
     "published_feeds": 25,
     "published_rich_feeds": 25,
@@ -173,8 +173,8 @@
     {
       "source_key": "67cc08a19a4297b6148b2994-channel",
       "title": "新智元-公众号",
-      "fetched": 98,
-      "inserted": 98,
+      "fetched": 99,
+      "inserted": 99,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -308,8 +308,8 @@
     {
       "source_key": "67cc08a19a4297b6148b295c-channel",
       "title": "量子位-公众号",
-      "fetched": 74,
-      "inserted": 74,
+      "fetched": 76,
+      "inserted": 76,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0

@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260508-165311",
-  "started_at": "2026-05-08 16:53:11 CST",
-  "finished_at": "2026-05-08 17:01:38 CST",
+  "timestamp": "20260508-144150",
+  "started_at": "2026-05-08 14:41:50 CST",
+  "finished_at": "2026-05-08 14:43:44 CST",
   "command": "npm run refresh:opengetbiji",
   "settings": {
     "recent_days": 3,
@@ -11,8 +11,8 @@
   },
   "totals": {
     "feed_count": 13,
-    "fetched": 179,
-    "inserted": 179,
+    "fetched": 175,
+    "inserted": 175,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
@@ -41,8 +41,8 @@
     {
       "source_key": "邹先华",
       "title": "邹先华 - OpenGet笔记",
-      "fetched": 29,
-      "inserted": 29,
+      "fetched": 26,
+      "inserted": 26,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -50,8 +50,8 @@
     {
       "source_key": "Koji杨远骋",
       "title": "Koji杨远骋 - OpenGet笔记",
-      "fetched": 16,
-      "inserted": 16,
+      "fetched": 15,
+      "inserted": 15,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
