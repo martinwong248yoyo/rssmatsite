@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>opengetbiji Feeds</title>
-    <dateCreated>Fri, 08 May 2026 09:01:34 GMT</dateCreated>
+    <dateCreated>Fri, 08 May 2026 11:08:30 GMT</dateCreated>
   </head>
   <body>
     <outline text="opengetbiji" title="opengetbiji">
@@ -11,6 +11,7 @@
       <outline type="rss" text="何楚涵博士" title="何楚涵博士 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--hechuhan-boshi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--hechuhan-boshi.xml" />
       <outline type="rss" text="北京经济犯罪&amp;职务犯罪.阮思乔律师" title="北京经济犯罪&amp;职务犯罪.阮思乔律师 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--beijing-jingjifanzui-zhiwufanzui-ruansiqiao-lvshi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--beijing-jingjifanzui-zhiwufanzui-ruansiqiao-lvshi.xml" />
       <outline type="rss" text="小辉教你开公司" title="小辉教你开公司 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-jiaoni-kaigongsi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-jiaoni-kaigongsi.xml" />
+      <outline type="rss" text="慢炖AI" title="慢炖AI - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--ai.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--ai.xml" />
       <outline type="rss" text="投机大拿" title="投机大拿 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--touji-dana.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--touji-dana.xml" />
       <outline type="rss" text="晓辉博士" title="晓辉博士 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-boshi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-boshi.xml" />
       <outline type="rss" text="深圳刑事 陈成均律师" title="深圳刑事 陈成均律师 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--shenzhen-xingshi-chenchengjun-lvshi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--shenzhen-xingshi-chenchengjun-lvshi.xml" />
