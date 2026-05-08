@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `908`
-- New articles inserted: `908`
+- Updated articles this run: `912`
+- New articles inserted: `912`
 - Existing articles updated: `0`
-- Run time: `2026-05-08 06:07:34 CST` to `2026-05-08 06:09:40 CST`
+- Run time: `2026-05-08 08:09:48 CST` to `2026-05-08 08:18:34 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -11,8 +11,8 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `33`
-- Fetched articles: `908`
-- Inserted articles: `908`
+- Fetched articles: `912`
+- Inserted articles: `912`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
@@ -25,16 +25,16 @@
 - `AI异类弗兰克-公众号`: fetched=`24`, inserted=`24`, updated=`0`, deduped=`0`, unchanged=`0`
 - `AI提效手册`: fetched=`18`, inserted=`18`, updated=`0`, deduped=`0`, unchanged=`0`
 - `AI行业最新融资案例解读`: fetched=`17`, inserted=`17`, updated=`0`, deduped=`0`, unchanged=`0`
-- `DeepTech深科技-公众号`: fetched=`51`, inserted=`51`, updated=`0`, deduped=`0`, unchanged=`0`
+- `DeepTech深科技-公众号`: fetched=`53`, inserted=`53`, updated=`0`, deduped=`0`, unchanged=`0`
 - `FIRST青年电影展-公众号`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
-- `KnowYourself-公众号`: fetched=`23`, inserted=`23`, updated=`0`, deduped=`0`, unchanged=`0`
+- `KnowYourself-公众号`: fetched=`24`, inserted=`24`, updated=`0`, deduped=`0`, unchanged=`0`
 - `Z Potentials-公众号`: fetched=`30`, inserted=`30`, updated=`0`, deduped=`0`, unchanged=`0`
 - `中国AI创业者最新采访`: fetched=`15`, inserted=`15`, updated=`0`, deduped=`0`, unchanged=`0`
 - `互联网服务-行业研报`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
 - `人间故事铺`: fetched=`14`, inserted=`14`, updated=`0`, deduped=`0`, unchanged=`0`
 - `创投风向标`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
 - `商业WHY酱-播客`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
-- `小互AI-公众号`: fetched=`16`, inserted=`16`, updated=`0`, deduped=`0`, unchanged=`0`
+- `小互AI-公众号`: fetched=`17`, inserted=`17`, updated=`0`, deduped=`0`, unchanged=`0`
 - `拆解新消费`: fetched=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`
 - `数字生命卡兹克-公众号`: fetched=`23`, inserted=`23`, updated=`0`, deduped=`0`, unchanged=`0`
 - `新智元-公众号`: fetched=`96`, inserted=`96`, updated=`0`, deduped=`0`, unchanged=`0`

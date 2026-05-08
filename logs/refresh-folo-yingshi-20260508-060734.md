@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `3`
-- New articles inserted: `3`
+- Updated articles this run: `2`
+- New articles inserted: `2`
 - Existing articles updated: `0`
-- Run time: `2026-05-08 08:09:48 CST` to `2026-05-08 08:10:55 CST`
+- Run time: `2026-05-08 06:07:34 CST` to `2026-05-08 06:08:46 CST`
 - Update command: `npm run refresh:folo:yingshi`
 - Recent-days filter: `3`
 - Page limit: `50`
@@ -12,12 +12,12 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `12`
-- Fetched articles: `25`
-- Inserted articles: `3`
+- Fetched articles: `22`
+- Inserted articles: `2`
 - Updated articles: `0`
 - Deduped articles: `0`
-- Unchanged articles: `22`
-- Reclassified articles: `518`
+- Unchanged articles: `20`
+- Reclassified articles: `515`
 - Feeds generated: `96`
 
 ## Feed-Level Changes
@@ -28,16 +28,16 @@
 - `深焦DeepFocus - 今天看啥`: fetched=`10`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`10`
 - `影视工业网 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `导演帮 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
-- `凹凸镜DOC - 今天看啥`: fetched=`6`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`6`
+- `凹凸镜DOC - 今天看啥`: fetched=`6`, inserted=`2`, updated=`0`, deduped=`0`, unchanged=`4`
 - `3号厅检票员工 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `MovieMonthly - 今天看啥`: fetched=`1`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`1`
-- `ARRI - 今天看啥`: fetched=`3`, inserted=`3`, updated=`0`, deduped=`0`, unchanged=`0`
+- `ARRI - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `中国影视摄影师学会 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `GaiaDaily - 今天看啥`: fetched=`4`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`4`
 
 ## Category Snapshot
 
-- `文章 / 院线观察`: `202`
+- `文章 / 院线观察`: `199`
 - `资料 / 技术资料 / AIGC`: `122`
 - `电影节展 / 长片电影节 / 电影节活动`: `41`
 - `资料 / 组讯`: `33`

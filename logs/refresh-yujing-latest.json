@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260508-060734",
-  "started_at": "2026-05-08 06:07:34 CST",
-  "finished_at": "2026-05-08 06:09:40 CST",
+  "timestamp": "20260508-080948",
+  "started_at": "2026-05-08 08:09:48 CST",
+  "finished_at": "2026-05-08 08:18:34 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -14,8 +14,8 @@
   },
   "totals": {
     "feed_count": 33,
-    "fetched": 908,
-    "inserted": 908,
+    "fetched": 912,
+    "inserted": 912,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
@@ -65,8 +65,8 @@
     {
       "source_key": "67cc08a19a4297b6148b28e7-deeptech",
       "title": "DeepTech深科技-公众号",
-      "fetched": 51,
-      "inserted": 51,
+      "fetched": 53,
+      "inserted": 53,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -83,8 +83,8 @@
     {
       "source_key": "67cc08a19a4297b6148b2932-knowyourself",
       "title": "KnowYourself-公众号",
-      "fetched": 23,
-      "inserted": 23,
+      "fetched": 24,
+      "inserted": 24,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -146,8 +146,8 @@
     {
       "source_key": "67cc08a89a4297b6148b34f0-ai",
       "title": "小互AI-公众号",
-      "fetched": 16,
-      "inserted": 16,
+      "fetched": 17,
+      "inserted": 17,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
