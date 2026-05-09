@@ -3,7 +3,7 @@
 - Updated articles this run: `185`
 - New articles inserted: `185`
 - Existing articles updated: `0`
-- Run time: `2026-05-10 01:17:17 CST` to `2026-05-10 01:18:00 CST`
+- Run time: `2026-05-10 01:13:59 CST` to `2026-05-10 01:14:23 CST`
 - Update command: `npm run refresh:opengetbiji`
 - Recent-days filter: `3`
 
@@ -17,7 +17,7 @@
 - Deduped articles: `0`
 - Unchanged articles: `0`
 - Feeds generated: `97`
-- Feeds published: `14`
+- Feeds published: `0`
 
 ## Feed-Level Changes
 

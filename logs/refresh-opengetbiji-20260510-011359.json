@@ -1,13 +1,13 @@
 {
-  "timestamp": "20260510-011717",
-  "started_at": "2026-05-10 01:17:17 CST",
-  "finished_at": "2026-05-10 01:18:00 CST",
+  "timestamp": "20260510-011359",
+  "started_at": "2026-05-10 01:13:59 CST",
+  "finished_at": "2026-05-10 01:14:23 CST",
   "command": "npm run refresh:opengetbiji",
   "settings": {
     "recent_days": 3,
     "start": "2026-05-08",
     "end": "2026-05-10",
-    "publish": true
+    "publish": false
   },
   "totals": {
     "feed_count": 14,
@@ -17,7 +17,7 @@
     "deduped": 0,
     "unchanged": 0,
     "built_feeds": 97,
-    "published_feeds": 14
+    "published_feeds": 0
   },
   "feeds": [
     {
