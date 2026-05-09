@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `6`
-- New articles inserted: `6`
+- Updated articles this run: `0`
+- New articles inserted: `0`
 - Existing articles updated: `0`
-- Run time: `2026-05-09 08:00:42 CST` to `2026-05-09 08:01:52 CST`
+- Run time: `2026-05-09 03:39:06 CST` to `2026-05-09 03:40:14 CST`
 - Update command: `npm run refresh:folo:yingshi`
 - Recent-days filter: `3`
 - Page limit: `50`
@@ -12,12 +12,12 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `12`
-- Fetched articles: `22`
-- Inserted articles: `6`
+- Fetched articles: `16`
+- Inserted articles: `0`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `16`
-- Reclassified articles: `534`
+- Reclassified articles: `528`
 - Feeds generated: `97`
 
 ## Feed-Level Changes
@@ -27,8 +27,8 @@
 - `桃桃淘电影 - 今天看啥`: fetched=`1`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`1`
 - `深焦DeepFocus - 今天看啥`: fetched=`4`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`4`
 - `影视工业网 - 今天看啥`: fetched=`2`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`2`
-- `导演帮 - 今天看啥`: fetched=`4`, inserted=`4`, updated=`0`, deduped=`0`, unchanged=`0`
-- `凹凸镜DOC - 今天看啥`: fetched=`6`, inserted=`2`, updated=`0`, deduped=`0`, unchanged=`4`
+- `导演帮 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
+- `凹凸镜DOC - 今天看啥`: fetched=`4`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`4`
 - `3号厅检票员工 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `MovieMonthly - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `ARRI - 今天看啥`: fetched=`2`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`2`
@@ -37,14 +37,14 @@
 
 ## Category Snapshot
 
-- `文章 / 院线观察`: `207`
-- `资料 / 技术资料 / AIGC`: `125`
+- `文章 / 院线观察`: `205`
+- `资料 / 技术资料 / AIGC`: `123`
 - `电影节展 / 长片电影节 / 电影节活动`: `42`
 - `资料 / 组讯`: `34`
-- `活动 / 线下活动 / 线下交流`: `29`
+- `活动 / 线下活动 / 线下交流`: `28`
 - `资料 / 技术资料 / 器材`: `18`
 - `活动 / 线下活动 / 电影节活动`: `17`
-- `活动 / 征片`: `15`
+- `活动 / 征片`: `14`
 - `资料 / 技术资料 / 创作访谈`: `14`
 - `文章 / 电影史`: `12`
 

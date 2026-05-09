@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260509-080042",
-  "started_at": "2026-05-09 08:00:42 CST",
-  "finished_at": "2026-05-09 08:01:52 CST",
+  "timestamp": "20260509-033906",
+  "started_at": "2026-05-09 03:39:06 CST",
+  "finished_at": "2026-05-09 03:40:14 CST",
   "settings": {
     "page_limit": 50,
     "feed_limit": null,
@@ -12,12 +12,12 @@
   },
   "totals": {
     "feed_count": 12,
-    "fetched": 22,
-    "inserted": 6,
+    "fetched": 16,
+    "inserted": 0,
     "updated": 0,
     "deduped": 0,
     "unchanged": 16,
-    "classified": 534,
+    "classified": 528,
     "built_feeds": 97
   },
   "feeds": [
@@ -69,8 +69,8 @@
     {
       "source_key": "266873554108449792",
       "title": "导演帮 - 今天看啥",
-      "fetched": 4,
-      "inserted": 4,
+      "fetched": 0,
+      "inserted": 0,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -78,8 +78,8 @@
     {
       "source_key": "266873738934649856",
       "title": "凹凸镜DOC - 今天看啥",
-      "fetched": 6,
-      "inserted": 2,
+      "fetched": 4,
+      "inserted": 0,
       "updated": 0,
       "deduped": 0,
       "unchanged": 4
@@ -135,13 +135,13 @@
       "primary": "文章",
       "secondary": "院线观察",
       "tertiary": "",
-      "count": 207
+      "count": 205
     },
     {
       "primary": "资料",
       "secondary": "技术资料",
       "tertiary": "AIGC",
-      "count": 125
+      "count": 123
     },
     {
       "primary": "电影节展",
@@ -159,7 +159,7 @@
       "primary": "活动",
       "secondary": "线下活动",
       "tertiary": "线下交流",
-      "count": 29
+      "count": 28
     },
     {
       "primary": "资料",
@@ -177,7 +177,7 @@
       "primary": "活动",
       "secondary": "征片",
       "tertiary": "",
-      "count": 15
+      "count": 14
     },
     {
       "primary": "资料",
