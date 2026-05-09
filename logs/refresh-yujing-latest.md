@@ -3,7 +3,7 @@
 - Updated articles this run: `963`
 - New articles inserted: `963`
 - Existing articles updated: `0`
-- Run time: `2026-05-09 10:03:09 CST` to `2026-05-09 10:11:25 CST`
+- Run time: `2026-05-09 12:12:06 CST` to `2026-05-09 12:26:41 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
