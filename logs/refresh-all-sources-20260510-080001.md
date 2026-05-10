@@ -5,13 +5,13 @@
 - Existing articles updated: `0`
 - Deduped articles: `0`
 - Unchanged articles: `17`
-- Run time: `2026-05-10 10:00:01 CST` to `2026-05-10 10:03:01 CST`
+- Run time: `2026-05-10 08:00:01 CST` to `2026-05-10 08:01:09 CST`
 - Update command: `npm run refresh:all`
 
 ## Source Overview
 
 - `folo`: changed=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`17`, status=`ok`
-- `opengetbiji`: changed=`185`, inserted=`185`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
+- `opengetbiji`: changed=`185`, inserted=`185`, updated=`0`, deduped=`0`, unchanged=`0`, status=`failed`
 - `yujing`: changed=`1008`, inserted=`1008`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
 
 ## Notes

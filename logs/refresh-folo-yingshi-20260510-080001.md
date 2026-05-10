@@ -3,7 +3,7 @@
 - Updated articles this run: `0`
 - New articles inserted: `0`
 - Existing articles updated: `0`
-- Run time: `2026-05-10 10:00:01 CST` to `2026-05-10 10:01:09 CST`
+- Run time: `2026-05-10 08:00:01 CST` to `2026-05-10 08:01:09 CST`
 - Update command: `npm run refresh:folo:yingshi`
 - Recent-days filter: `3`
 - Page limit: `50`
