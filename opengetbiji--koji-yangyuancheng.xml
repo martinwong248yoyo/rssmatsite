@@ -7,32 +7,52 @@
 <item><title>AgentInfra看好三个创业方向➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什...</title><link>https://www.iesdouyin.com/share/video/7638242400556551487/?region=CN&amp;mid=7638242435109653299&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAkFPkaBLOOPQ3qqIKwuDBtPlDugKwfFthVOjrohGbk6M&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=y599aMUEFNEYawojYEIgQpphh8_cXgpi0zXc39C9JbI-&amp;share_version=240100&amp;ts=1778707964&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7638242400556551487/?region=CN&amp;mid=7638242435109653299&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAkFPkaBLOOPQ3qqIKwuDBtPlDugKwfFthVOjrohGbk6M&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=y599aMUEFNEYawojYEIgQpphh8_cXgpi0zXc39C9JbI-&amp;share_version=240100&amp;ts=1778707964&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Wed, 13 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AgentInfra看好三个创业方向➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什...</h1>
 <ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-13</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7638242400556551487/?region=CN&amp;mid=7638242435109653299&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAkFPkaBLOOPQ3qqIKwuDBtPlDugKwfFthVOjrohGbk6M&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=y599aMUEFNEYawojYEIgQpphh8_cXgpi0zXc39C9JbI-&amp;share_version=240100&amp;ts=1778707964&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/lAoLamWrPlmrNpgK/web</li></ul>
 <p>---</p>
-<p>标题: &quot;AgentInfra的三个创业方向：Harness工具链、混合组网与个性化模型微调推理&quot; 日期: &quot;2026-05-13&quot; 关键词: &quot;Agent基础设施, Harness层, 混合组网, 个性化模型, LoRA推理&quot; 摘要: &quot;Koji杨远骋在分享中展望了Agent Infra领域的三个创业方向：一是他本人参与的Harness层Infra（开发式工具链）；二是为Agent提供混合组网方案，解决云、端、边缘设备（如Mac、路由器、NAS、闲置手机等）无公网IP下的统一局域网组网问题，同时指出Agent之间需要高频小额支付，不同于传统支付；三是借鉴Tinder方案，通过高速互联集群实现低成本、高效率的个性化模型训练与推理（如LoRA挂载），让每个人都能拥有个性化模型，并提到目前只有Tinder等项目在做类似工作。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
-<h2>三个创业方向：从Harness到Agent组网再到个性化模型</h2>
-<p>Koji杨远骋在分享中提出，他重点关注三个大的创业方向，其中一个是Harness这一层的Infra（开发式工具链），他自己所在的项目就属于这一层。另外两个方向则围绕Agent的组网和个性化模型展开。</p>
-<h3>一、Agent混合组网：统一局域网与高频小额支付</h3>
-<p>第二个方向不是简单地为Agent开发AM（Agent Messaging），而是真正下放硬件资源。比如云上的服务器、端侧的Mac笔记本电脑、Mac mini、路由器、NAS（网络附加存储），甚至是闲置的手机。这些设备不一定都有公网IP地址，存在大量混合组网问题。</p>
-<p>过去解决这类问题的方案有FRP（内网穿透）等，但Koji认为这些方案不太容易扩展。他很喜欢一个叫Tailscale的工具，不管设备在云上还是边缘，Tailscale都能把所有设备统一组成一个局域网，组网方式非常简洁。他认为在Agent时代，这种混合组网方案非常需要，但Tailscale并不是Agent原生（Agent Native）的，它的API调用能力等还不够。因此，这个赛道可能需要一个全新的混合组网形态。</p>
-<p>此外，Agent之间需要高通量的上下文交换，这种交换不仅仅是发一封邮件或一条IM消息那么简单。他还提到Agent之间的支付问题：传统的人与人支付不需要那么高的并发，也不需要那么碎的小额支付，但Agent之间的支付很可能每次只有几分钱，而且高频发生。这也就是做Agent Payment这一层的创业公司正在讲的未来可能方向。</p>
-<h3>二、个性化模型：低成本微调与推理</h3>
-<p>第三个方向是关于个性化模型的。Koji设想，如果回到10年后，难道每个人都在发一个API请求，调用同一个基座模型（Foundation Model）的相同模型ID吗？那样太无趣了——每个人都在用Kimi 15.0、GPT-4.0的某个版本。</p>
-<p>他想到类似Tinder（他拍前CEO出去做的项目，叫Tinder）的方案：把大量显卡集中在一起，做高速互联的经营集群，通过集约化设计，用更低的成本和资源开销去做PEFT（参数高效微调）训练。这种高效低成本的训练，可以让每个人都得到自己的个性化训练好的模型。</p>
-<p>他进一步指出，光有训练还不够，还要推理。推理时可能需要一个基座模型加上个性化的模型参数。今年的典型代表是LoRA（低秩适应）。他设想：当发送API请求时，Header信息中携带用户的LoRA信息进行引用，然后像向基座模型发API请求一样，基座模型会获取用户指定的LoRA信息，瞬间挂载上去做个性化推理。这样推理成本也能降低——挂载一个LoRA上去推理，可能只需要多支付5%的成本，但能获得一个可以修改模型参数层的更个性化体验。</p>
-<p>Koji非常关心这个方向的进展。他提到，目前有人在做的项目包括他拍前CEO出去做的Tinder（The CK Mar Lab），国内好像也有一些在做，但他觉得水平还不太符合Tinder那个水准。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>AgentInfra看好三个创业方向➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什...</h1>
+<p>标题: &quot;AgentInfra的三个创业方向：Harness工具链、混合组网与个性化模型参数层&quot; 日期: &quot;2026-05-13&quot; 关键词: &quot;Agent基础设施, Harness层, 混合组网, 个性化模型, LoRA推理&quot; 摘要: &quot;Koji杨远骋分享了Agent基础设施（Infra）的三个创业方向：一是自己团队关注的Harness层工具链；二是Agent混合组网，解决云与端设备（服务器、Mac、路由器、手机等）统一局域网通信问题，认为现有方案（如FRP、T Scale）不原生支持Agent的高通量、高频小额交互需求；三是Agent个性化模型，通过类似LoRA的技术让用户以低成本挂载个人参数到基座模型，实现高效训练与推理，他关注Tinder（由拍前CEO创办的TensorChord lab）等尝试。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>关注方向一：Agent Harness 层的 Infra 工具链</h2>
+<p>Koji 杨远骋表示，他主要关注三个大的方向，其中自己团队做的算是其中之一，就是 **Harness 这一层的基础设施（Infra）**，具体来说是这一层上的开发式工具链。</p>
+<h2>关注方向二：Agent 的混合组网</h2>
+<p>第二个方向是关于 **Agent 的组网**。这里不是指给 Agent 做 AM（可能是 Agent Messaging 或类似概念），而是更关心真正下放硬件资源的组网问题。</p>
+<h3>现有组网方案的不足</h3>
+<p>Koji 举例说明：云上有服务器，端侧有 Mac 笔记本电脑、Mac mini、路由器、NAS、闲置手机等设备，但它们不一定都有公网 IP 地址，存在很多混合组网问题。以前可能有 FRP、内网穿透等方案，但 Koji 认为那些不太能规模化（scale）。</p>
+<p>他个人非常喜欢一个叫做 **T Scale** 的工具。T Scale 的特点是，不管设备在云上还是边缘（边），它的组网方式非常简洁，可以把所有设备统一组成一个局域网。这种混合组网方案在 Agent 时代非常需要。</p>
+<h3>Agent 对组网的新需求</h3>
+<p>但是 T Scale 其实不太“Agent Native”——它的 API 上有很多调用能力都没有。这个赛道可能需要一个 **全新的混合组网形态**。因为 Agent 之间很多时候需要高通量的上下文交换，这个交换不只是发一个邮件或发一个 IM 消息就能完成的。</p>
+<p>Koji 拿 **Agent 支付** 做类比：人与人之间的支付不需要那么高的并发，也不需要那么碎的小额支付。但 Agent 之间的支付很可能是几分钱几分钱地高频发生。这也是一些做 Agent Payment 层的创业公司在讲的一个未来可能的方向。</p>
+<h2>关注方向三：Agent 的个性化模型</h2>
+<p>第三个方向是 **Agent 个性化模型**。Koji 设想回到 10 年后——难道每个人都是在发一个 API 请求，调用同一个模型 ID 的基座模型吗？他觉得那样的世界太无趣了：每个人都在用 Kimi 15.0、So 4.0 几点几的版本。</p>
+<h3>类似 Tinder 的方案</h3>
+<p>所以 Koji 认为，类似 **Tinder** 的方案可能很需要。Tinder 把大量算力卡集中在一起做高速互联、经营集群，通过集约化设计让用户以更低的成本和资源开销去做 PEFT（参数高效微调）训练。这种高效低成本的训练，可以让每个人都得到自己个性化的训练好的模型。</p>
+<h3>训练与推理的个性化</h3>
+<p>光训练还不够，还需要推理。推理时，可能需要一个基座模型加上个人个性化的模型参数。今年（指当时）的一个典型代表就是 **LoRA**。</p>
+<p>Koji 提出一个设想：API 请求过去的时候，Header 信息中带有用户的 LoRA 信息，可以引用（reference）它。就像给基座模型发 API 请求一样，系统获取用户指定的是哪个 LoRA 信息后，瞬间挂载上去做个性化推理。这样推理成本可能也会降低——挂载一个 LoRA 去推理，可能多支付 5% 的成本，但换来一个可以修改模型参数层的、更加个性化的体验。</p>
+<h3>谁在做这个方向？</h3>
+<p>Koji 被问到“现在有人在做这个方向吗？”他回答说：拍前 CEO 出去做的 **Tinder** 那个项目（TensorChord lab）。国内好像也有一些，但做的还不太符合 Tinder 他们那个水准。</p>
+<h2>总结</h2>
+<p>Koji 总结他关注的三个 Agent Infra 方向： 1.  **Harness 层的 Infra 工具链**（他自己团队在做）。 2.  **Agent 混合组网**，需要全新的、Native 的高通量、高频小额交互方案。 3.  **Agent 个性化模型**，通过类似 LoRA 的低成本方式实现训练与推理的个性化，他非常关注 Tinder 等项目的进展。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>AgentInfra看好三个创业方向➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什...</h1>
 <ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-13</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7638242400556551487/?region=CN&amp;mid=7638242435109653299&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAkFPkaBLOOPQ3qqIKwuDBtPlDugKwfFthVOjrohGbk6M&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=y599aMUEFNEYawojYEIgQpphh8_cXgpi0zXc39C9JbI-&amp;share_version=240100&amp;ts=1778707964&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/lAoLamWrPlmrNpgK/web</li></ul>
 <p>---</p>
-<p>标题: &quot;AgentInfra的三个创业方向：Harness工具链、混合组网与个性化模型微调推理&quot; 日期: &quot;2026-05-13&quot; 关键词: &quot;Agent基础设施, Harness层, 混合组网, 个性化模型, LoRA推理&quot; 摘要: &quot;Koji杨远骋在分享中展望了Agent Infra领域的三个创业方向：一是他本人参与的Harness层Infra（开发式工具链）；二是为Agent提供混合组网方案，解决云、端、边缘设备（如Mac、路由器、NAS、闲置手机等）无公网IP下的统一局域网组网问题，同时指出Agent之间需要高频小额支付，不同于传统支付；三是借鉴Tinder方案，通过高速互联集群实现低成本、高效率的个性化模型训练与推理（如LoRA挂载），让每个人都能拥有个性化模型，并提到目前只有Tinder等项目在做类似工作。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
-<h2>三个创业方向：从Harness到Agent组网再到个性化模型</h2>
-<p>Koji杨远骋在分享中提出，他重点关注三个大的创业方向，其中一个是Harness这一层的Infra（开发式工具链），他自己所在的项目就属于这一层。另外两个方向则围绕Agent的组网和个性化模型展开。</p>
-<h3>一、Agent混合组网：统一局域网与高频小额支付</h3>
-<p>第二个方向不是简单地为Agent开发AM（Agent Messaging），而是真正下放硬件资源。比如云上的服务器、端侧的Mac笔记本电脑、Mac mini、路由器、NAS（网络附加存储），甚至是闲置的手机。这些设备不一定都有公网IP地址，存在大量混合组网问题。</p>
-<p>过去解决这类问题的方案有FRP（内网穿透）等，但Koji认为这些方案不太容易扩展。他很喜欢一个叫Tailscale的工具，不管设备在云上还是边缘，Tailscale都能把所有设备统一组成一个局域网，组网方式非常简洁。他认为在Agent时代，这种混合组网方案非常需要，但Tailscale并不是Agent原生（Agent Native）的，它的API调用能力等还不够。因此，这个赛道可能需要一个全新的混合组网形态。</p>
-<p>此外，Agent之间需要高通量的上下文交换，这种交换不仅仅是发一封邮件或一条IM消息那么简单。他还提到Agent之间的支付问题：传统的人与人支付不需要那么高的并发，也不需要那么碎的小额支付，但Agent之间的支付很可能每次只有几分钱，而且高频发生。这也就是做Agent Payment这一层的创业公司正在讲的未来可能方向。</p>
-<h3>二、个性化模型：低成本微调与推理</h3>
-<p>第三个方向是关于个性化模型的。Koji设想，如果回到10年后，难道每个人都在发一个API请求，调用同一个基座模型（Foundation Model）的相同模型ID吗？那样太无趣了——每个人都在用Kimi 15.0、GPT-4.0的某个版本。</p>
-<p>他想到类似Tinder（他拍前CEO出去做的项目，叫Tinder）的方案：把大量显卡集中在一起，做高速互联的经营集群，通过集约化设计，用更低的成本和资源开销去做PEFT（参数高效微调）训练。这种高效低成本的训练，可以让每个人都得到自己的个性化训练好的模型。</p>
-<p>他进一步指出，光有训练还不够，还要推理。推理时可能需要一个基座模型加上个性化的模型参数。今年的典型代表是LoRA（低秩适应）。他设想：当发送API请求时，Header信息中携带用户的LoRA信息进行引用，然后像向基座模型发API请求一样，基座模型会获取用户指定的LoRA信息，瞬间挂载上去做个性化推理。这样推理成本也能降低——挂载一个LoRA上去推理，可能只需要多支付5%的成本，但能获得一个可以修改模型参数层的更个性化体验。</p>
-<p>Koji非常关心这个方向的进展。他提到，目前有人在做的项目包括他拍前CEO出去做的Tinder（The CK Mar Lab），国内好像也有一些在做，但他觉得水平还不太符合Tinder那个水准。</p>]]></content:encoded></item>
+<p>标题: &quot;AgentInfra的三个创业方向：Harness工具链、混合组网与个性化模型参数层&quot; 日期: &quot;2026-05-13&quot; 关键词: &quot;Agent基础设施, Harness层, 混合组网, 个性化模型, LoRA推理&quot; 摘要: &quot;Koji杨远骋分享了Agent基础设施（Infra）的三个创业方向：一是自己团队关注的Harness层工具链；二是Agent混合组网，解决云与端设备（服务器、Mac、路由器、手机等）统一局域网通信问题，认为现有方案（如FRP、T Scale）不原生支持Agent的高通量、高频小额交互需求；三是Agent个性化模型，通过类似LoRA的技术让用户以低成本挂载个人参数到基座模型，实现高效训练与推理，他关注Tinder（由拍前CEO创办的TensorChord lab）等尝试。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>关注方向一：Agent Harness 层的 Infra 工具链</h2>
+<p>Koji 杨远骋表示，他主要关注三个大的方向，其中自己团队做的算是其中之一，就是 **Harness 这一层的基础设施（Infra）**，具体来说是这一层上的开发式工具链。</p>
+<h2>关注方向二：Agent 的混合组网</h2>
+<p>第二个方向是关于 **Agent 的组网**。这里不是指给 Agent 做 AM（可能是 Agent Messaging 或类似概念），而是更关心真正下放硬件资源的组网问题。</p>
+<h3>现有组网方案的不足</h3>
+<p>Koji 举例说明：云上有服务器，端侧有 Mac 笔记本电脑、Mac mini、路由器、NAS、闲置手机等设备，但它们不一定都有公网 IP 地址，存在很多混合组网问题。以前可能有 FRP、内网穿透等方案，但 Koji 认为那些不太能规模化（scale）。</p>
+<p>他个人非常喜欢一个叫做 **T Scale** 的工具。T Scale 的特点是，不管设备在云上还是边缘（边），它的组网方式非常简洁，可以把所有设备统一组成一个局域网。这种混合组网方案在 Agent 时代非常需要。</p>
+<h3>Agent 对组网的新需求</h3>
+<p>但是 T Scale 其实不太“Agent Native”——它的 API 上有很多调用能力都没有。这个赛道可能需要一个 **全新的混合组网形态**。因为 Agent 之间很多时候需要高通量的上下文交换，这个交换不只是发一个邮件或发一个 IM 消息就能完成的。</p>
+<p>Koji 拿 **Agent 支付** 做类比：人与人之间的支付不需要那么高的并发，也不需要那么碎的小额支付。但 Agent 之间的支付很可能是几分钱几分钱地高频发生。这也是一些做 Agent Payment 层的创业公司在讲的一个未来可能的方向。</p>
+<h2>关注方向三：Agent 的个性化模型</h2>
+<p>第三个方向是 **Agent 个性化模型**。Koji 设想回到 10 年后——难道每个人都是在发一个 API 请求，调用同一个模型 ID 的基座模型吗？他觉得那样的世界太无趣了：每个人都在用 Kimi 15.0、So 4.0 几点几的版本。</p>
+<h3>类似 Tinder 的方案</h3>
+<p>所以 Koji 认为，类似 **Tinder** 的方案可能很需要。Tinder 把大量算力卡集中在一起做高速互联、经营集群，通过集约化设计让用户以更低的成本和资源开销去做 PEFT（参数高效微调）训练。这种高效低成本的训练，可以让每个人都得到自己个性化的训练好的模型。</p>
+<h3>训练与推理的个性化</h3>
+<p>光训练还不够，还需要推理。推理时，可能需要一个基座模型加上个人个性化的模型参数。今年（指当时）的一个典型代表就是 **LoRA**。</p>
+<p>Koji 提出一个设想：API 请求过去的时候，Header 信息中带有用户的 LoRA 信息，可以引用（reference）它。就像给基座模型发 API 请求一样，系统获取用户指定的是哪个 LoRA 信息后，瞬间挂载上去做个性化推理。这样推理成本可能也会降低——挂载一个 LoRA 去推理，可能多支付 5% 的成本，但换来一个可以修改模型参数层的、更加个性化的体验。</p>
+<h3>谁在做这个方向？</h3>
+<p>Koji 被问到“现在有人在做这个方向吗？”他回答说：拍前 CEO 出去做的 **Tinder** 那个项目（TensorChord lab）。国内好像也有一些，但做的还不太符合 Tinder 他们那个水准。</p>
+<h2>总结</h2>
+<p>Koji 总结他关注的三个 Agent Infra 方向： 1.  **Harness 层的 Infra 工具链**（他自己团队在做）。 2.  **Agent 混合组网**，需要全新的、Native 的高通量、高频小额交互方案。 3.  **Agent 个性化模型**，通过类似 LoRA 的低成本方式实现训练与推理的个性化，他非常关注 Tinder 等项目的进展。</p>]]></content:encoded></item>
 <item><title>AgentHarness三个组成部分➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什么...</title><link>https://www.iesdouyin.com/share/video/7638241018298551595/?region=CN&amp;mid=7638241076557482762&amp;u_code=2lhgafhlij1d&amp;did=MS4wLjABAAAAhMkb3OpKzClhL9CicsaccknOBZrayjbllP1d9Xm-bYY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2hy8fCE72hddzGmzkmnyh5xUruDNgdxQw2cHge9K2Ug-&amp;share_version=230400&amp;ts=1778622344&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7638241018298551595/?region=CN&amp;mid=7638241076557482762&amp;u_code=2lhgafhlij1d&amp;did=MS4wLjABAAAAhMkb3OpKzClhL9CicsaccknOBZrayjbllP1d9Xm-bYY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2hy8fCE72hddzGmzkmnyh5xUruDNgdxQw2cHge9K2Ug-&amp;share_version=230400&amp;ts=1778622344&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Tue, 12 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AgentHarness三个组成部分➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什么...</h1>
 <ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-12</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7638241018298551595/?region=CN&amp;mid=7638241076557482762&amp;u_code=2lhgafhlij1d&amp;did=MS4wLjABAAAAhMkb3OpKzClhL9CicsaccknOBZrayjbllP1d9Xm-bYY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2hy8fCE72hddzGmzkmnyh5xUruDNgdxQw2cHge9K2Ug-&amp;share_version=230400&amp;ts=1778622344&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/zeEGjPOZp353PrlA/web</li></ul>
 <p>---</p>
