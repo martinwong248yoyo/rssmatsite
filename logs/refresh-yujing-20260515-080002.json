@@ -1,0 +1,32 @@
+{
+  "timestamp": "20260515-080002",
+  "started_at": "2026-05-15 08:00:02 CST",
+  "finished_at": "2026-05-15 08:00:17 CST",
+  "command": "npm run refresh:yujing -- --headless",
+  "settings": {
+    "recent_days": 3,
+    "max_articles": 10,
+    "profile_dir": null,
+    "risk_profile": "low",
+    "include_all_channels": false,
+    "limit": null,
+    "name_includes": null,
+    "publish": false,
+    "remote_qnap_import": true,
+    "remote_qnap_db_only": true,
+    "import_scope": "batch_delta",
+    "batch_channel_count": 0
+  },
+  "totals": {
+    "feed_count": 0,
+    "batch_article_count": 0,
+    "fetched": 0,
+    "inserted": 0,
+    "updated": 0,
+    "deduped": 0,
+    "unchanged": 0,
+    "deleted_plain": 0
+  },
+  "feeds": [],
+  "top_categories": []
+}

@@ -1,18 +1,18 @@
 # Refresh All Sources Report
 
-- Total updated articles this run: `12`
-- New articles inserted: `10`
+- Total updated articles this run: `5`
+- New articles inserted: `3`
 - Existing articles updated: `2`
 - Deduped articles: `0`
-- Unchanged articles: `46`
-- Run time: `2026-05-15 09:28:24 CST` to `2026-05-15 09:34:48 CST`
+- Unchanged articles: `44`
+- Run time: `2026-05-15 08:00:02 CST` to `2026-05-15 08:01:15 CST`
 - Update command: `npm run refresh:all`
 
 ## Source Overview
 
-- `folo`: changed=`5`, inserted=`3`, updated=`2`, deduped=`0`, unchanged=`28`, status=`ok`
+- `folo`: changed=`5`, inserted=`3`, updated=`2`, deduped=`0`, unchanged=`26`, status=`ok`
 - `opengetbiji`: changed=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`18`, status=`failed`
-- `yujing`: changed=`7`, inserted=`7`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
+- `yujing`: changed=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
 
 ## Notes
 

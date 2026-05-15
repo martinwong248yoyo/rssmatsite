@@ -4,6 +4,97 @@
 <title>Koji杨远骋 - OpenGet笔记</title>
 <link>https://www.biji.com/</link>
 <description>Koji杨远骋 - OpenGet笔记 (opengetbiji)</description>
+<item><title>AgentInfra看好三个创业方向➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什...</title><link>https://www.iesdouyin.com/share/video/7638242400556551487/?region=CN&amp;mid=7638242435109653299&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAkFPkaBLOOPQ3qqIKwuDBtPlDugKwfFthVOjrohGbk6M&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=y599aMUEFNEYawojYEIgQpphh8_cXgpi0zXc39C9JbI-&amp;share_version=240100&amp;ts=1778707964&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7638242400556551487/?region=CN&amp;mid=7638242435109653299&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAkFPkaBLOOPQ3qqIKwuDBtPlDugKwfFthVOjrohGbk6M&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=y599aMUEFNEYawojYEIgQpphh8_cXgpi0zXc39C9JbI-&amp;share_version=240100&amp;ts=1778707964&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Wed, 13 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AgentInfra看好三个创业方向➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-13</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7638242400556551487/?region=CN&amp;mid=7638242435109653299&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAkFPkaBLOOPQ3qqIKwuDBtPlDugKwfFthVOjrohGbk6M&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=y599aMUEFNEYawojYEIgQpphh8_cXgpi0zXc39C9JbI-&amp;share_version=240100&amp;ts=1778707964&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/lAoLamWrPlmrNpgK/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AgentInfra的三个创业方向：Harness工具链、混合组网与个性化模型微调推理&quot; 日期: &quot;2026-05-13&quot; 关键词: &quot;Agent基础设施, Harness层, 混合组网, 个性化模型, LoRA推理&quot; 摘要: &quot;Koji杨远骋在分享中展望了Agent Infra领域的三个创业方向：一是他本人参与的Harness层Infra（开发式工具链）；二是为Agent提供混合组网方案，解决云、端、边缘设备（如Mac、路由器、NAS、闲置手机等）无公网IP下的统一局域网组网问题，同时指出Agent之间需要高频小额支付，不同于传统支付；三是借鉴Tinder方案，通过高速互联集群实现低成本、高效率的个性化模型训练与推理（如LoRA挂载），让每个人都能拥有个性化模型，并提到目前只有Tinder等项目在做类似工作。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>三个创业方向：从Harness到Agent组网再到个性化模型</h2>
+<p>Koji杨远骋在分享中提出，他重点关注三个大的创业方向，其中一个是Harness这一层的Infra（开发式工具链），他自己所在的项目就属于这一层。另外两个方向则围绕Agent的组网和个性化模型展开。</p>
+<h3>一、Agent混合组网：统一局域网与高频小额支付</h3>
+<p>第二个方向不是简单地为Agent开发AM（Agent Messaging），而是真正下放硬件资源。比如云上的服务器、端侧的Mac笔记本电脑、Mac mini、路由器、NAS（网络附加存储），甚至是闲置的手机。这些设备不一定都有公网IP地址，存在大量混合组网问题。</p>
+<p>过去解决这类问题的方案有FRP（内网穿透）等，但Koji认为这些方案不太容易扩展。他很喜欢一个叫Tailscale的工具，不管设备在云上还是边缘，Tailscale都能把所有设备统一组成一个局域网，组网方式非常简洁。他认为在Agent时代，这种混合组网方案非常需要，但Tailscale并不是Agent原生（Agent Native）的，它的API调用能力等还不够。因此，这个赛道可能需要一个全新的混合组网形态。</p>
+<p>此外，Agent之间需要高通量的上下文交换，这种交换不仅仅是发一封邮件或一条IM消息那么简单。他还提到Agent之间的支付问题：传统的人与人支付不需要那么高的并发，也不需要那么碎的小额支付，但Agent之间的支付很可能每次只有几分钱，而且高频发生。这也就是做Agent Payment这一层的创业公司正在讲的未来可能方向。</p>
+<h3>二、个性化模型：低成本微调与推理</h3>
+<p>第三个方向是关于个性化模型的。Koji设想，如果回到10年后，难道每个人都在发一个API请求，调用同一个基座模型（Foundation Model）的相同模型ID吗？那样太无趣了——每个人都在用Kimi 15.0、GPT-4.0的某个版本。</p>
+<p>他想到类似Tinder（他拍前CEO出去做的项目，叫Tinder）的方案：把大量显卡集中在一起，做高速互联的经营集群，通过集约化设计，用更低的成本和资源开销去做PEFT（参数高效微调）训练。这种高效低成本的训练，可以让每个人都得到自己的个性化训练好的模型。</p>
+<p>他进一步指出，光有训练还不够，还要推理。推理时可能需要一个基座模型加上个性化的模型参数。今年的典型代表是LoRA（低秩适应）。他设想：当发送API请求时，Header信息中携带用户的LoRA信息进行引用，然后像向基座模型发API请求一样，基座模型会获取用户指定的LoRA信息，瞬间挂载上去做个性化推理。这样推理成本也能降低——挂载一个LoRA上去推理，可能只需要多支付5%的成本，但能获得一个可以修改模型参数层的更个性化体验。</p>
+<p>Koji非常关心这个方向的进展。他提到，目前有人在做的项目包括他拍前CEO出去做的Tinder（The CK Mar Lab），国内好像也有一些在做，但他觉得水平还不太符合Tinder那个水准。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>AgentInfra看好三个创业方向➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-13</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7638242400556551487/?region=CN&amp;mid=7638242435109653299&amp;u_code=34jc4bbifblj&amp;did=MS4wLjABAAAAkFPkaBLOOPQ3qqIKwuDBtPlDugKwfFthVOjrohGbk6M&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=y599aMUEFNEYawojYEIgQpphh8_cXgpi0zXc39C9JbI-&amp;share_version=240100&amp;ts=1778707964&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/lAoLamWrPlmrNpgK/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AgentInfra的三个创业方向：Harness工具链、混合组网与个性化模型微调推理&quot; 日期: &quot;2026-05-13&quot; 关键词: &quot;Agent基础设施, Harness层, 混合组网, 个性化模型, LoRA推理&quot; 摘要: &quot;Koji杨远骋在分享中展望了Agent Infra领域的三个创业方向：一是他本人参与的Harness层Infra（开发式工具链）；二是为Agent提供混合组网方案，解决云、端、边缘设备（如Mac、路由器、NAS、闲置手机等）无公网IP下的统一局域网组网问题，同时指出Agent之间需要高频小额支付，不同于传统支付；三是借鉴Tinder方案，通过高速互联集群实现低成本、高效率的个性化模型训练与推理（如LoRA挂载），让每个人都能拥有个性化模型，并提到目前只有Tinder等项目在做类似工作。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>三个创业方向：从Harness到Agent组网再到个性化模型</h2>
+<p>Koji杨远骋在分享中提出，他重点关注三个大的创业方向，其中一个是Harness这一层的Infra（开发式工具链），他自己所在的项目就属于这一层。另外两个方向则围绕Agent的组网和个性化模型展开。</p>
+<h3>一、Agent混合组网：统一局域网与高频小额支付</h3>
+<p>第二个方向不是简单地为Agent开发AM（Agent Messaging），而是真正下放硬件资源。比如云上的服务器、端侧的Mac笔记本电脑、Mac mini、路由器、NAS（网络附加存储），甚至是闲置的手机。这些设备不一定都有公网IP地址，存在大量混合组网问题。</p>
+<p>过去解决这类问题的方案有FRP（内网穿透）等，但Koji认为这些方案不太容易扩展。他很喜欢一个叫Tailscale的工具，不管设备在云上还是边缘，Tailscale都能把所有设备统一组成一个局域网，组网方式非常简洁。他认为在Agent时代，这种混合组网方案非常需要，但Tailscale并不是Agent原生（Agent Native）的，它的API调用能力等还不够。因此，这个赛道可能需要一个全新的混合组网形态。</p>
+<p>此外，Agent之间需要高通量的上下文交换，这种交换不仅仅是发一封邮件或一条IM消息那么简单。他还提到Agent之间的支付问题：传统的人与人支付不需要那么高的并发，也不需要那么碎的小额支付，但Agent之间的支付很可能每次只有几分钱，而且高频发生。这也就是做Agent Payment这一层的创业公司正在讲的未来可能方向。</p>
+<h3>二、个性化模型：低成本微调与推理</h3>
+<p>第三个方向是关于个性化模型的。Koji设想，如果回到10年后，难道每个人都在发一个API请求，调用同一个基座模型（Foundation Model）的相同模型ID吗？那样太无趣了——每个人都在用Kimi 15.0、GPT-4.0的某个版本。</p>
+<p>他想到类似Tinder（他拍前CEO出去做的项目，叫Tinder）的方案：把大量显卡集中在一起，做高速互联的经营集群，通过集约化设计，用更低的成本和资源开销去做PEFT（参数高效微调）训练。这种高效低成本的训练，可以让每个人都得到自己的个性化训练好的模型。</p>
+<p>他进一步指出，光有训练还不够，还要推理。推理时可能需要一个基座模型加上个性化的模型参数。今年的典型代表是LoRA（低秩适应）。他设想：当发送API请求时，Header信息中携带用户的LoRA信息进行引用，然后像向基座模型发API请求一样，基座模型会获取用户指定的LoRA信息，瞬间挂载上去做个性化推理。这样推理成本也能降低——挂载一个LoRA上去推理，可能只需要多支付5%的成本，但能获得一个可以修改模型参数层的更个性化体验。</p>
+<p>Koji非常关心这个方向的进展。他提到，目前有人在做的项目包括他拍前CEO出去做的Tinder（The CK Mar Lab），国内好像也有一些在做，但他觉得水平还不太符合Tinder那个水准。</p>]]></content:encoded></item>
+<item><title>AgentHarness三个组成部分➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什么...</title><link>https://www.iesdouyin.com/share/video/7638241018298551595/?region=CN&amp;mid=7638241076557482762&amp;u_code=2lhgafhlij1d&amp;did=MS4wLjABAAAAhMkb3OpKzClhL9CicsaccknOBZrayjbllP1d9Xm-bYY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2hy8fCE72hddzGmzkmnyh5xUruDNgdxQw2cHge9K2Ug-&amp;share_version=230400&amp;ts=1778622344&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7638241018298551595/?region=CN&amp;mid=7638241076557482762&amp;u_code=2lhgafhlij1d&amp;did=MS4wLjABAAAAhMkb3OpKzClhL9CicsaccknOBZrayjbllP1d9Xm-bYY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2hy8fCE72hddzGmzkmnyh5xUruDNgdxQw2cHge9K2Ug-&amp;share_version=230400&amp;ts=1778622344&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Tue, 12 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AgentHarness三个组成部分➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什么...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-12</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7638241018298551595/?region=CN&amp;mid=7638241076557482762&amp;u_code=2lhgafhlij1d&amp;did=MS4wLjABAAAAhMkb3OpKzClhL9CicsaccknOBZrayjbllP1d9Xm-bYY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2hy8fCE72hddzGmzkmnyh5xUruDNgdxQw2cHge9K2Ug-&amp;share_version=230400&amp;ts=1778622344&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/zeEGjPOZp353PrlA/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AgentHarness三部分拆解：执行能力、上下文环境与上层治理&quot; 日期: &quot;2026-05-12&quot; 关键词: &quot;AgentHarness, 执行层, 上下文环境, 状态管理, 多Agent协作, 权限治理&quot; 摘要: &quot;作者将AgentHarness拆解为三个层次：执行能力层、上下文环境层和上层管理治理层，并分别阐述了每层在Agent工作流中的关键作用与挑战。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>引言</h2>
+<p>当我们讨论一些Harness的时候，你会把它再拆成几个部分吗？我会倾向于把它拆成三个部分。</p>
+<h2>第一层：执行能力层</h2>
+<p>第一层是给模型提供执行能力的层。简单像CLI也好，包括你去写代码去注册的那些工具，包括从MCP去扩展的工具——这些统一都是给模型提供Action的能力。</p>
+<h2>第二层：上下文与环境层</h2>
+<p>第二层叫做上下文，也就是状态这一层面。比如说你的模型要去工作，它是不是需要有它的System Prompt、它有它的Skills、它有它的Memory？</p>
+<p>另外，模型的上下文窗口不是无限的，很多任务其实会超过模型的上下文窗口。这时是不是需要有一些Offload？然后下一轮相当于——其实你以为还是那个Agent在工作，其实已经是一个新的模型窗口，再装载上一些初始化的上下文，让它继续上一个窗口里的工作。这其实有点像一个新的Agent了。那它怎么接上上一个Agent交接给它的工作？这里边会有很多上下文和状态的问题。</p>
+<p>所以我认为第二层归为上下文的环境层会更好。</p>
+<h2>第三层：上层管理与治理层</h2>
+<p>第三层是对Agent的上层管理。这个管理会分两个方面。</p>
+<h3>多Agent协作</h3>
+<p>一个是如果你今天面对的对象不是一个Agent，而是面对一百个Agent——就像你公司有一百号员工——你怎么去组织他们协调起来，按照某种组织架构、某种协作方式和传递顺序，去把一个复杂的事情给解决掉。</p>
+<h3>权限与信息治理</h3>
+<p>第二层是针对这一百个人，他们每个人要面对不同岗位的访问权限。这里会有很多关于权限治理、关于信息的提供和隔离等方面的治理问题。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>AgentHarness三个组成部分➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论什么...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-12</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7638241018298551595/?region=CN&amp;mid=7638241076557482762&amp;u_code=2lhgafhlij1d&amp;did=MS4wLjABAAAAhMkb3OpKzClhL9CicsaccknOBZrayjbllP1d9Xm-bYY&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=2hy8fCE72hddzGmzkmnyh5xUruDNgdxQw2cHge9K2Ug-&amp;share_version=230400&amp;ts=1778622344&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/zeEGjPOZp353PrlA/web</li></ul>
+<p>---</p>
+<p>标题: &quot;AgentHarness三部分拆解：执行能力、上下文环境与上层治理&quot; 日期: &quot;2026-05-12&quot; 关键词: &quot;AgentHarness, 执行层, 上下文环境, 状态管理, 多Agent协作, 权限治理&quot; 摘要: &quot;作者将AgentHarness拆解为三个层次：执行能力层、上下文环境层和上层管理治理层，并分别阐述了每层在Agent工作流中的关键作用与挑战。&quot; 来源: &quot;Koji杨远骋&quot; ---</p>
+<h2>引言</h2>
+<p>当我们讨论一些Harness的时候，你会把它再拆成几个部分吗？我会倾向于把它拆成三个部分。</p>
+<h2>第一层：执行能力层</h2>
+<p>第一层是给模型提供执行能力的层。简单像CLI也好，包括你去写代码去注册的那些工具，包括从MCP去扩展的工具——这些统一都是给模型提供Action的能力。</p>
+<h2>第二层：上下文与环境层</h2>
+<p>第二层叫做上下文，也就是状态这一层面。比如说你的模型要去工作，它是不是需要有它的System Prompt、它有它的Skills、它有它的Memory？</p>
+<p>另外，模型的上下文窗口不是无限的，很多任务其实会超过模型的上下文窗口。这时是不是需要有一些Offload？然后下一轮相当于——其实你以为还是那个Agent在工作，其实已经是一个新的模型窗口，再装载上一些初始化的上下文，让它继续上一个窗口里的工作。这其实有点像一个新的Agent了。那它怎么接上上一个Agent交接给它的工作？这里边会有很多上下文和状态的问题。</p>
+<p>所以我认为第二层归为上下文的环境层会更好。</p>
+<h2>第三层：上层管理与治理层</h2>
+<p>第三层是对Agent的上层管理。这个管理会分两个方面。</p>
+<h3>多Agent协作</h3>
+<p>一个是如果你今天面对的对象不是一个Agent，而是面对一百个Agent——就像你公司有一百号员工——你怎么去组织他们协调起来，按照某种组织架构、某种协作方式和传递顺序，去把一个复杂的事情给解决掉。</p>
+<h3>权限与信息治理</h3>
+<p>第二层是针对这一百个人，他们每个人要面对不同岗位的访问权限。这里会有很多关于权限治理、关于信息的提供和隔离等方面的治理问题。</p>]]></content:encoded></item>
+<item><title>搞懂AgentHarness为什么重要?➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论...</title><link>https://www.iesdouyin.com/share/video/7638240228406283583/?region=CN&amp;mid=7638240230503435014&amp;u_code=j866l09mdmi&amp;did=MS4wLjABAAAA_Kcq6dGx8-iLPRkZOA6BuziV6gLnKEZ74ahKpnWpHzs&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=K7NhhcMG4pYS3c10HCkyrEcfUxp3rbkXSDRQZnIoylg-&amp;share_version=220100&amp;ts=1778535046&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7638240228406283583/?region=CN&amp;mid=7638240230503435014&amp;u_code=j866l09mdmi&amp;did=MS4wLjABAAAA_Kcq6dGx8-iLPRkZOA6BuziV6gLnKEZ74ahKpnWpHzs&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=K7NhhcMG4pYS3c10HCkyrEcfUxp3rbkXSDRQZnIoylg-&amp;share_version=220100&amp;ts=1778535046&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Mon, 11 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>搞懂AgentHarness为什么重要?➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-11</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7638240228406283583/?region=CN&amp;mid=7638240230503435014&amp;u_code=j866l09mdmi&amp;did=MS4wLjABAAAA_Kcq6dGx8-iLPRkZOA6BuziV6gLnKEZ74ahKpnWpHzs&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=K7NhhcMG4pYS3c10HCkyrEcfUxp3rbkXSDRQZnIoylg-&amp;share_version=220100&amp;ts=1778535046&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/LKx7brl1dOMlG6WA/web</li></ul>
+<p>---</p>
+<p>标题: &quot;Agent Harness 的理解必要性、技术演进阶段与开箱即用趋势判断&quot; 日期: &quot;2026-05-11&quot; 关键词: &quot;Agent Harness, 技术演进, 开箱即用, 技术周期, 迭代与收敛&quot; 摘要: &quot;作者从Agent开发工程师是否需要自建Harness出发，认为当前理解Harness仍是必要的，否则产品会缺乏迭代空间；未来两三年后可能出现开箱即用的服务，但当下要主动拥抱技术周期的变化。&quot; 来源: &quot;https://www.iesdouyin.com/share/video/7638240228406283583/?region=CN&amp;mid=7638240230503435014&amp;u_code=j866l09mdmi&amp;did=MS4wLjABAAAA_Kcq6dGx8-iLPRkZOA6BuziV6gLnKEZ74ahKpnWpHzs&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=K7NhhcMG4pYS3c10HCkyrEcfUxp3rbkXSDRQZnIoylg-&amp;share_version=220100&amp;ts=1778535046&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D&quot; ---</p>
+<h2>问题：开发者还有必要自己搭 Harness 吗？</h2>
+<p>作为一个 Agent 开发工程师，你可能会问：还有必要自己去搭 Harness 吗？</p>
+<p>我的答案是：需要的。如果你不了解这一层，做出来的产品会缺乏灵魂，也会缺乏进一步迭代的空间。</p>
+<h2>未来展望：会不会有一天根本不需要学了？</h2>
+<p>但也有人会想：会不会有一天，大家根本不需要学这些，直接用 Cloud Management Agents 的服务就够了？</p>
+<p>从整个推演角度来看，肯定会有那么一天。就像今天很多人开发全站类的外部应用，直接用 Next.js 框架——但你并不需要知道 Next.js 里面具体怎么设计和工作、它的原因是什么。大部分人可能不关心这一层，直接开箱即用去开发就好了。</p>
+<h2>判断：两三年后可能进入开箱即用阶段</h2>
+<p>以后的 Agent Harness 世界，在迭代和收敛之后，大概率还是会回到这一层。可能两三年以后，它会成为一个非常清晰的东西，大家开箱即用去做事情。</p>
+<h2>当下建议：拥抱技术周期的变化</h2>
+<p>在这个过程中，我们正处在一个技术周期里。无论做创业还是做产品，本质上都是在吃技术周期里的红利变化。你还是需要自己拥抱技术周期的变化，知道里边在变的到底是什么。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>搞懂AgentHarness为什么重要?➤为什么说Agent的上限来自Harness？➤当我们讨论Harness时，我们究竟在讨论...</h1>
+<ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-11</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7638240228406283583/?region=CN&amp;mid=7638240230503435014&amp;u_code=j866l09mdmi&amp;did=MS4wLjABAAAA_Kcq6dGx8-iLPRkZOA6BuziV6gLnKEZ74ahKpnWpHzs&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=K7NhhcMG4pYS3c10HCkyrEcfUxp3rbkXSDRQZnIoylg-&amp;share_version=220100&amp;ts=1778535046&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/LKx7brl1dOMlG6WA/web</li></ul>
+<p>---</p>
+<p>标题: &quot;Agent Harness 的理解必要性、技术演进阶段与开箱即用趋势判断&quot; 日期: &quot;2026-05-11&quot; 关键词: &quot;Agent Harness, 技术演进, 开箱即用, 技术周期, 迭代与收敛&quot; 摘要: &quot;作者从Agent开发工程师是否需要自建Harness出发，认为当前理解Harness仍是必要的，否则产品会缺乏迭代空间；未来两三年后可能出现开箱即用的服务，但当下要主动拥抱技术周期的变化。&quot; 来源: &quot;https://www.iesdouyin.com/share/video/7638240228406283583/?region=CN&amp;mid=7638240230503435014&amp;u_code=j866l09mdmi&amp;did=MS4wLjABAAAA_Kcq6dGx8-iLPRkZOA6BuziV6gLnKEZ74ahKpnWpHzs&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=K7NhhcMG4pYS3c10HCkyrEcfUxp3rbkXSDRQZnIoylg-&amp;share_version=220100&amp;ts=1778535046&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D&quot; ---</p>
+<h2>问题：开发者还有必要自己搭 Harness 吗？</h2>
+<p>作为一个 Agent 开发工程师，你可能会问：还有必要自己去搭 Harness 吗？</p>
+<p>我的答案是：需要的。如果你不了解这一层，做出来的产品会缺乏灵魂，也会缺乏进一步迭代的空间。</p>
+<h2>未来展望：会不会有一天根本不需要学了？</h2>
+<p>但也有人会想：会不会有一天，大家根本不需要学这些，直接用 Cloud Management Agents 的服务就够了？</p>
+<p>从整个推演角度来看，肯定会有那么一天。就像今天很多人开发全站类的外部应用，直接用 Next.js 框架——但你并不需要知道 Next.js 里面具体怎么设计和工作、它的原因是什么。大部分人可能不关心这一层，直接开箱即用去开发就好了。</p>
+<h2>判断：两三年后可能进入开箱即用阶段</h2>
+<p>以后的 Agent Harness 世界，在迭代和收敛之后，大概率还是会回到这一层。可能两三年以后，它会成为一个非常清晰的东西，大家开箱即用去做事情。</p>
+<h2>当下建议：拥抱技术周期的变化</h2>
+<p>在这个过程中，我们正处在一个技术周期里。无论做创业还是做产品，本质上都是在吃技术周期里的红利变化。你还是需要自己拥抱技术周期的变化，知道里边在变的到底是什么。</p>]]></content:encoded></item>
 <item><title>“AI会替代人类”我深度不认同➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgent首...</title><link>https://www.iesdouyin.com/share/video/7634102276751232297/?region=CN&amp;mid=7634102295684336390&amp;u_code=37kgi36c4327&amp;did=MS4wLjABAAAAbom-nci-f-IBUXY8o5YO18IZ3NLMBhcaXsO_IgKCl4w&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=Tw2x2rAwWfZENvL06CYpqsNriCt5SMAlr0hmeQp.RZU-&amp;share_version=220900&amp;ts=1778193523&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7634102276751232297/?region=CN&amp;mid=7634102295684336390&amp;u_code=37kgi36c4327&amp;did=MS4wLjABAAAAbom-nci-f-IBUXY8o5YO18IZ3NLMBhcaXsO_IgKCl4w&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=Tw2x2rAwWfZENvL06CYpqsNriCt5SMAlr0hmeQp.RZU-&amp;share_version=220900&amp;ts=1778193523&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>Koji杨远骋</author><pubDate>Thu, 07 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>“AI会替代人类”我深度不认同➤本期内容中，我邀请了中美两国一线Agent开发者深度对谈：-MiniMaxAgent首...</h1>
 <ul><li>作者/博主: Koji杨远骋</li><li>更新时间: 2026-05-07</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634102276751232297/?region=CN&amp;mid=7634102295684336390&amp;u_code=37kgi36c4327&amp;did=MS4wLjABAAAAbom-nci-f-IBUXY8o5YO18IZ3NLMBhcaXsO_IgKCl4w&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=Tw2x2rAwWfZENvL06CYpqsNriCt5SMAlr0hmeQp.RZU-&amp;share_version=220900&amp;ts=1778193523&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/aEbJdG9eYVKGwMXl/weYNGMgokVmG9J5v/web</li></ul>
 <p>---</p>

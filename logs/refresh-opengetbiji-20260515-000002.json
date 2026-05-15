@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260515-040002",
-  "started_at": "2026-05-15 04:00:02 CST",
-  "finished_at": "2026-05-15 04:00:25 CST",
+  "timestamp": "20260515-000002",
+  "started_at": "2026-05-15 00:00:02 CST",
+  "finished_at": "2026-05-15 00:12:29 CST",
   "command": "npm run refresh:opengetbiji",
   "settings": {
     "recent_days": 3,
@@ -16,10 +16,10 @@
     "feed_count": 11,
     "batch_article_count": 18,
     "fetched": 18,
-    "inserted": 0,
+    "inserted": 18,
     "updated": 0,
     "deduped": 0,
-    "unchanged": 18
+    "unchanged": 0
   },
   "feeds": [],
   "top_categories": []

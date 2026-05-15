@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260515-092824",
-  "started_at": "2026-05-15 09:28:24 CST",
-  "finished_at": "2026-05-15 09:29:44 CST",
+  "timestamp": "20260515-080002",
+  "started_at": "2026-05-15 08:00:02 CST",
+  "finished_at": "2026-05-15 08:01:15 CST",
   "settings": {
     "page_limit": 50,
     "feed_limit": null,
@@ -14,11 +14,11 @@
   },
   "totals": {
     "feed_count": 12,
-    "fetched": 33,
+    "fetched": 31,
     "inserted": 3,
     "updated": 2,
     "deduped": 0,
-    "unchanged": 28
+    "unchanged": 26
   },
   "feeds": [
     {
@@ -42,17 +42,17 @@
     {
       "source_key": "266873310754931712",
       "title": "桃桃淘电影 - 今天看啥",
-      "fetched": 2,
+      "fetched": 3,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 2
+      "unchanged": 3
     },
     {
       "source_key": "266873337248919552",
       "title": "深焦DeepFocus - 今天看啥",
-      "fetched": 9,
-      "inserted": 2,
+      "fetched": 7,
+      "inserted": 0,
       "updated": 0,
       "deduped": 0,
       "unchanged": 7
@@ -62,33 +62,33 @@
       "title": "影视工业网 - 今天看啥",
       "fetched": 2,
       "inserted": 0,
-      "updated": 2,
+      "updated": 0,
       "deduped": 0,
-      "unchanged": 0
+      "unchanged": 2
     },
     {
       "source_key": "266873554108449792",
       "title": "导演帮 - 今天看啥",
       "fetched": 5,
       "inserted": 0,
-      "updated": 0,
+      "updated": 2,
       "deduped": 0,
-      "unchanged": 5
+      "unchanged": 3
     },
     {
       "source_key": "266873738934649856",
       "title": "凹凸镜DOC - 今天看啥",
       "fetched": 7,
-      "inserted": 0,
+      "inserted": 3,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 7
+      "unchanged": 4
     },
     {
       "source_key": "266873943145492480",
       "title": "3号厅检票员工 - 今天看啥",
-      "fetched": 2,
-      "inserted": 1,
+      "fetched": 1,
+      "inserted": 0,
       "updated": 0,
       "deduped": 0,
       "unchanged": 1
