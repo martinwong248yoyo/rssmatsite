@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260619-160138",
-  "started_at": "2026-06-19 16:01:38 CST",
-  "finished_at": "2026-06-19 16:01:45 CST",
+  "timestamp": "20260619-160003",
+  "started_at": "2026-06-19 16:00:03 CST",
+  "finished_at": "2026-06-19 16:00:10 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
