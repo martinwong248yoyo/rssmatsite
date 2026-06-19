@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>opengetbiji Feeds</title>
-    <dateCreated>Fri, 19 Jun 2026 16:02:29 GMT</dateCreated>
+    <dateCreated>Fri, 19 Jun 2026 16:41:52 GMT</dateCreated>
   </head>
   <body>
     <outline text="opengetbiji" title="opengetbiji">
@@ -14,6 +14,7 @@
       <outline type="rss" text="吕晓彤" title="吕晓彤 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--吕晓彤.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--吕晓彤.xml" />
       <outline type="rss" text="小辉教你开公司" title="小辉教你开公司 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-jiaoni-kaigongsi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-jiaoni-kaigongsi.xml" />
       <outline type="rss" text="廖小爱" title="廖小爱 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--廖小爱.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--廖小爱.xml" />
+      <outline type="rss" text="张剑_" title="张剑_ - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--tag.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--tag.xml" />
       <outline type="rss" text="慢炖AI" title="慢炖AI - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--ai.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--ai.xml" />
       <outline type="rss" text="投机大拿" title="投机大拿 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--touji-dana.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--touji-dana.xml" />
       <outline type="rss" text="晓辉博士" title="晓辉博士 - OpenGet笔记" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-boshi.xml" htmlUrl="https://martinwong248yoyo.github.io/rssmatsite/opengetbiji--xiaohui-boshi.xml" />

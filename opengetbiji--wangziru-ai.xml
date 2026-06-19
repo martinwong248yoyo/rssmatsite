@@ -19,7 +19,7 @@
 <h2>模型管道与数据沉淀</h2>
 <p>模型变成了一个管道，你可以选择不同的模型来解决你不同的问题，最后所有的数据沉淀在你自己这儿。</p>
 <h2>个人结论：估值没用，订单才有价值</h2>
-<p>我是觉得今天手机市场的直接摸估值没有意义，最后订单才有价值。其实你窥探到我自己的一个想法，就把这个想（法表达出来）。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>预告：20年资深互联网操盘手，他为何又跳进AI硬件浪潮王自如对话YoooClaw创始人肖睿哲。20年操作系统+...</h1>
+<p>我是觉得今天手机市场的直接摸估值没有意义，最后订单才有价值。其实你窥探到我自己的一个想法，就把这个想（法表达出来）。</p>]]></description><content:encoded><![CDATA[<h1>预告：20年资深互联网操盘手，他为何又跳进AI硬件浪潮王自如对话YoooClaw创始人肖睿哲。20年操作系统+...</h1>
 <ul><li>作者/博主: 王自如AI</li><li>更新时间: 2026-05-13</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7639333533953051938/?region=CN&amp;mid=7639333505985547046&amp;u_code=3eb2gfj7523d&amp;did=MS4wLjABAAAAfnJ-Fes0hbDdZdvd51T2_HXojal6ZdjS5-vmD2PaFm8&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=blJt4g5C_Z.5FMpNYIHbVoDniDWk7T9ZwTx4EAyPqBw-&amp;share_version=210400&amp;ts=1778696943&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/MKE9gBWkmEYBz8qN/6vNqGy1ZMzkroW6e/web</li></ul>
 <p>---</p>
 <p>标题: &quot;AI硬件价值判断：从虾的成本、硅基文明优势到模型管道与数据沉淀&quot; 日期: &quot;2026-05-13&quot; 关键词: &quot;AI硬件, 硅基文明, 生产力工具, 模型管道, 数据沉淀&quot; 摘要: &quot;本文基于20年互联网操盘手肖睿哲的分享，讨论了AI硬件在当前阶段的核心价值：时间延展、生产力效率，以及硅基文明相对于碳基文明的“高级性”，并提出了模型作为管道、数据沉淀在用户侧的产品思路。&quot; 来源: &quot;王自如AI&quot; ---</p>
@@ -58,7 +58,7 @@
 <p>大家千万别觉得这种场景非常少。在产业应用当中，在深圳的场景当中，其实非常多。处理大量的图片集中的业务场景，就会迅速消耗token窗口。想做整个代码库的全面审计，也会迅速吃掉token窗口。</p>
 <p>以前我在做复杂代码审计的时候，即便是几个sub-agent同时干，扫完整个代码库直接筛审，结束了他都不给你压缩了——因为直接超过了限额。所以要把审计分成几个部分不停地做，而且每个部分的问题可能是交叉的。</p>
 <p>比如iOS的HIG规范、苹果的accessibility、光学震动系统的反馈，一大堆东西交叉，界面又有问题，每个问题都是关联的。那就没办法通过一次全面的审计来提高代码库的质量。</p>
-<p>超长上下文就是为了解决这个问题。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>DeepSeekv4最大的挑战如果还觉得100万上下文只是为了让你一次塞进几本书，那就太小看DeepSeekv4了。对...</h1>
+<p>超长上下文就是为了解决这个问题。</p>]]></description><content:encoded><![CDATA[<h1>DeepSeekv4最大的挑战如果还觉得100万上下文只是为了让你一次塞进几本书，那就太小看DeepSeekv4了。对...</h1>
 <ul><li>作者/博主: 王自如AI</li><li>更新时间: 2026-04-29</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7634036956485143846/?region=CN&amp;mid=7634036934305663750&amp;u_code=9deaej4b99m&amp;did=MS4wLjABAAAADSzG1_JmDDXhPEXnnArs9e6GWNT5biAadBLVzFzxdCI&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=zhoqb41dNyKQLsfbYqKJeqS8Z314BFhRZvKwVvlxsTs-&amp;share_version=220800&amp;ts=1777487718&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/MKE9gBWkmEYBz8qN/qKDZz4j4nDXkrZ3v/web</li></ul>
 <p>---</p>
 <p>标题: &quot;DeepSeekv4的核心挑战：超长上下文下的并行工具调用、推理严谨性与长时序任务可靠性&quot; 日期: &quot;2026-04-29&quot; 关键词: &quot;DeepSeekv4, 超长上下文, 并行工具调用, 长时序推理, 代码审计, 模型推理稳定性&quot; 摘要: &quot;本文讨论DeepSeekv4超长上下文（百万级）的真正价值并非塞入大量文本，而是在长时序推理与复杂任务编排中保持关键信息不丢失；核心挑战在于并行工具调用的稳定性与多步推理的严谨性。&quot; 来源: &quot;王自如AI&quot; ---</p>
@@ -101,7 +101,7 @@
 <h2>小米的苹果梦与芯片价值</h2>
 <p>所以小米做模型、做龙虾的目的只有一个：**让自己的生态内部高度凝聚、高度内敛、高度闭环**，打造出一个真正的生态护城河。这可能是完成自己“小米苹果梦”的本质。</p>
 <p>小米这家公司从上到下都非常尊重和崇拜苹果，也特别希望能够达到像苹果那样的生态护城河价值。但因为在上一时代无法在硬件生态链中做到这些，所以在新时代之下，如何去思考、布局新的技术栈，让整个生态构建出能力——这才是本质。</p>
-<p>我认为小米做芯片极为有价值，非常有意义。虽然很难，但小米做龙虾、做管家，包括自己做模型都极有价值——是服务生态的价值。但如果你因为小米做了模型，就要把它和DeepSeek、Kimi、智谱放在一起比较，我觉得不是这样的，它们的根本定位就不一样。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>小米虾&amp;腾讯虾，它们的生态逻辑与布局差异。腾讯意在桌面生产力的拓展，小米志在全场景生态的凝聚，两者的...</h1>
+<p>我认为小米做芯片极为有价值，非常有意义。虽然很难，但小米做龙虾、做管家，包括自己做模型都极有价值——是服务生态的价值。但如果你因为小米做了模型，就要把它和DeepSeek、Kimi、智谱放在一起比较，我觉得不是这样的，它们的根本定位就不一样。</p>]]></description><content:encoded><![CDATA[<h1>小米虾&amp;腾讯虾，它们的生态逻辑与布局差异。腾讯意在桌面生产力的拓展，小米志在全场景生态的凝聚，两者的...</h1>
 <ul><li>作者/博主: 王自如AI</li><li>更新时间: 2026-04-28</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633676465510337792/?region=CN&amp;mid=7633676424324221732&amp;u_code=1d8d2j2fciel&amp;did=MS4wLjABAAAAzmOKBwPWiwo39_0E957p46EuT6W5TNGD5OCvxLafscA&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=uK4YwXwW6kXu1mm7bnb9mpXTWlie6wZFnAYG14Uxgts-&amp;share_version=210700&amp;ts=1777400986&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/MKE9gBWkmEYBz8qN/NeyVbrba20a456pv/web</li></ul>
 <p>---</p>
 <p>标题: &quot;腾讯与小米的AI助手布局差异：PC生产力拓展 vs 全场景生态凝聚&quot; 日期: &quot;2026-04-28&quot; 关键词: &quot;小米, 腾讯, AI助手, PC管家, 生态布局&quot; 摘要: &quot;本文对比腾讯与小米各自推出的AI助手（虾），分析二者在产品定位与生态逻辑上的根本差异：腾讯意在借助PC端助手突破关系链围城，拓展生产力场景；小米则服务于自身硬件生态，追求内部闭环与生态护城河。&quot; 来源: &quot;王自如AI&quot; ---</p>
@@ -138,7 +138,7 @@
 <h2>我的面试与看简历技巧</h2>
 <p>再说一个我现在看简历的技巧。当你在投简历的过程中，看你简历的人脑子里有很多预设。比如我的预设是：如果我今天招的是一个技术岗，你给我一份花里胡哨、明显是AI写的模板式简历，我压根就不会用你。我要找的简历，一看就是MD文档转PDF的，这对我来说会加分。</p>
 <h2>HR会失业吗？</h2>
-<p>HR不会失业。因为人力资源有五大板块：招聘、薪酬、绩效、培训、企业文化。我们刚才只讨论了其中一个板块——招聘。绩效管理没有讨论，薪酬体系、培训、企业文化都没讨论。这些东西HR仍然能发挥很大帮助。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>未来简历不是给人看，而是AI看#热点#简历#HR失业#AI</h1>
+<p>HR不会失业。因为人力资源有五大板块：招聘、薪酬、绩效、培训、企业文化。我们刚才只讨论了其中一个板块——招聘。绩效管理没有讨论，薪酬体系、培训、企业文化都没讨论。这些东西HR仍然能发挥很大帮助。</p>]]></description><content:encoded><![CDATA[<h1>未来简历不是给人看，而是AI看#热点#简历#HR失业#AI</h1>
 <ul><li>作者/博主: 王自如AI</li><li>更新时间: 2026-04-28</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633473320553368858/?region=CN&amp;mid=7633473332125502244&amp;u_code=1d8d2j2fciel&amp;did=MS4wLjABAAAAzmOKBwPWiwo39_0E957p46EuT6W5TNGD5OCvxLafscA&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=CtlHBP3tuEOwRvWeQ4Yrac8ob5eKpFuAb0kZqofEJhM-&amp;share_version=210700&amp;ts=1777400986&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/MKE9gBWkmEYBz8qN/1e1jZ4Z7B5jykVrv/web</li></ul>
 <p>---</p>
 <p>标题: &quot;未来简历筛选机制：从面向HR转向面向AI的招聘流程变化&quot; 日期: &quot;2026-04-28&quot; 关键词: &quot;AI招聘, 简历筛选, HR职能, 求职竞争力, Copilot&quot; 摘要: &quot;作者认为未来简历主要交由AI筛选，企业可通过Agent直接匹配简历库；编辑简历不改变真实竞争力，提升AI技能并写入简历才是关键。&quot; 来源: &quot;https://www.iesdouyin.com/share/video/7633473320553368858/&quot; ---</p>
@@ -182,7 +182,7 @@
 <p>这里面很大的一个问题就是：谁愿意给这只龙虾赋予更多的权限？在安全可控的情况下，对于手机厂商来说，一下子把手机权限都释放出来是没问题的。技术上不是瓶颈，瓶颈是什么？是对存量用户安全、可靠、稳定以及符合监管要求。</p>
 <p>本质在于：让大家都接受了叫“local agent runtime”这件事的市场教育和统一认知，也让真正的硬件厂商敢于去用local agent runtime。</p>
 <h2>为什么荣耀押宝这件事</h2>
-<p>以荣耀现在在整个手机生态当中的身位，它必须要通过AI时代下新趋势的快速跟进，以及最第一时间的大胆想象和小心求证，才能完成在新AI时代之下的弯道超车。你会发现它在AI、在手机AI整体架构上走得是比较前沿的。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>开箱即用，YOYOClaw养虾小白也能轻松上手#养虾#yoyo助手#AI#热点新闻事件</h1>
+<p>以荣耀现在在整个手机生态当中的身位，它必须要通过AI时代下新趋势的快速跟进，以及最第一时间的大胆想象和小心求证，才能完成在新AI时代之下的弯道超车。你会发现它在AI、在手机AI整体架构上走得是比较前沿的。</p>]]></description><content:encoded><![CDATA[<h1>开箱即用，YOYOClaw养虾小白也能轻松上手#养虾#yoyo助手#AI#热点新闻事件</h1>
 <ul><li>作者/博主: 王自如AI</li><li>更新时间: 2026-04-27</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7633405636469984563/?region=CN&amp;mid=7633405720691936063&amp;u_code=1c25ljgc80h2&amp;did=MS4wLjABAAAARQcHcyvuRjyU1UaM4QuiAj2JZaKgriNm9YmMAtJZJCU&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=OpcsyZvyBxS9CI4BxAWGmOHJiXVcbl67dXtevf5RYp0-&amp;share_version=230600&amp;ts=1777315097&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/MKE9gBWkmEYBz8qN/6vNqG4nY246ab2Be/web</li></ul>
 <p>---</p>
 <p>标题: &quot;YOYOClaw的“养虾”模式：开箱即用、多端协同与安全围栏机制&quot; 日期: &quot;2026-04-27&quot; 关键词: &quot;YOYOClaw, 多端协同, 安全围栏, 开箱即用, 本地Agent, 手机厂商AI&quot; 摘要: &quot;作者分析了荣耀YOYOClaw（“养虾”）的核心价值：为普通用户提供开箱即用的AI智能体，并通过多端部署、权限沙箱、危险操作黑名单及智能路由等机制，解决安全与易用性问题。&quot; 来源: &quot;https://www.iesdouyin.com/share/video/7633405636469984563/?region=CN&amp;mid=7633405720691936063&amp;u_code=1c25ljgc80h2&amp;did=MS4wLjABAAAARQcHcyvuRjyU1UaM4QuiAj2JZaKgriNm9YmMAtJZJCU&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=OpcsyZvyBxS9CI4BxAWGmOHJiXVcbl67dXtevf5RYp0-&amp;share_version=230600&amp;ts=1777315097&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D&quot; ---</p>
