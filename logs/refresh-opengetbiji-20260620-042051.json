@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260620-060002",
-  "started_at": "2026-06-20 06:00:02 CST",
-  "finished_at": "2026-06-20 06:00:53 CST",
+  "timestamp": "20260620-042051",
+  "started_at": "2026-06-20 04:20:51 CST",
+  "finished_at": "2026-06-20 04:21:24 CST",
   "command": "npm run refresh:opengetbiji",
   "settings": {
     "recent_days": 3,
@@ -13,10 +13,10 @@
     "import_scope": "batch_delta"
   },
   "totals": {
-    "feed_count": 1,
-    "batch_article_count": 2,
-    "fetched": 2,
-    "inserted": 2,
+    "feed_count": 2,
+    "batch_article_count": 5,
+    "fetched": 5,
+    "inserted": 5,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0
