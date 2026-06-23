@@ -33,6 +33,43 @@
 <p>很多人怕不用AI就会被时代甩下，担心自己会废掉。但真正让你废掉的，恰恰是把“想清楚”这一步也交了出去。</p>
 <p>AI可以替你查一整晚的资料，核对每一组数据。但你每一次方向的调整、每一个关键处的决定，还有亲人住院时发的那条朋友圈，都得你自己一个字一个字琢磨着敲出来。</p>
 <p>这些，AI连半个字都不该替你碰。</p>]]></content:encoded></item>
+<item><title>AI动态工作流AI动态工作流</title><link>https://www.iesdouyin.com/share/video/7653833443570175273/?region=CN&amp;mid=7653833513527577407&amp;u_code=2618082jb322&amp;did=MS4wLjABAAAATo9eM78Z3oMj4PiwKeLjSgBJR0bRxGBLN-cR8eosbVM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=NRSFjw96Zam4AbgXrksgdoZa9_S6F5p8QR0O8SuoJDI-&amp;share_version=220200&amp;ts=1782094339&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7653833443570175273/?region=CN&amp;mid=7653833513527577407&amp;u_code=2618082jb322&amp;did=MS4wLjABAAAATo9eM78Z3oMj4PiwKeLjSgBJR0bRxGBLN-cR8eosbVM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=NRSFjw96Zam4AbgXrksgdoZa9_S6F5p8QR0O8SuoJDI-&amp;share_version=220200&amp;ts=1782094339&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>特效老炮BillyZhang</author><pubDate>Sun, 21 Jun 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AI动态工作流AI动态工作流</h1>
+<ul><li>作者/博主: 特效老炮BillyZhang</li><li>更新时间: 2026-06-21</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7653833443570175273/?region=CN&amp;mid=7653833513527577407&amp;u_code=2618082jb322&amp;did=MS4wLjABAAAATo9eM78Z3oMj4PiwKeLjSgBJR0bRxGBLN-cR8eosbVM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=NRSFjw96Zam4AbgXrksgdoZa9_S6F5p8QR0O8SuoJDI-&amp;share_version=220200&amp;ts=1782094339&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/WZYL8PYmZN5PVa9b/1e1jZ3md5EZ8qYnv/web</li></ul>
+<p>---</p>
+<p>标题: &quot;动态工作流的两层含义：任务分配动态性与脚本现场编排能力&quot; 日期: &quot;2026-06-21&quot; 关键词: &quot;动态工作流, 任务分配, 智能体编排, 循环修正, 并行执行, AI协同&quot; 摘要: &quot;本文介绍动态工作流的两层核心机制：任务分配阶段的动态拆解和脚本执行阶段的实时代码编排。作者结合流程图和实测案例，展示了系统如何自动进行多轮测试、循环修正，并支持并行派出多组智能体协同工作，最后提到会员可获取同款工具。&quot; 来源: &quot;特效老炮BillyZhang&quot; ---</p>
+<h2>什么是动态工作流</h2>
+<p>什么叫动态工作流？这里的“动态”体现在两个层面。</p>
+<h3>第一层：任务分配动态</h3>
+<p>第一层是任务分配层面的动态。在运行时，系统才会决定拆成几个子任务、各自负责什么内容。也就是说，它可以在执行过程中动态决定下一步起多少个 Agent 来干这个活。</p>
+<h3>第二层：脚本现场编排</h3>
+<p>第二层是脚本本身的动态——在运行现场动态编排代码，这层包含循环和分支逻辑，也是我认为最厉害的地方。</p>
+<h2>生成、评估、修改的循环机制</h2>
+<p>整个流程是生成、评估、修改，循环往复直到满意为止。我们看一下流程图：12 个测试全部通过才会继续往前走。刚才大家也看到了，第一轮测试没过，系统就自动开始做第二轮了——这是动态生成的结果。</p>
+<p>你看它在运行：第一轮、第二轮、第三轮……一直在审。第三轮通过了，才算过关。</p>
+<h2>并行协同与多层调度</h2>
+<p>如果你发现某个地方有漏洞，只要它不在同一个文件里，就可以同时发出好几个包，让多个 Agent 并行处理——一个干这个，一个干那个。相当于从你的指挥中心派出无数个 Agent 去协同作业，而且不会阻塞你与主 Agent 的沟通。</p>
+<p>你一旦和主 Agent 聊完方案、确定方向，发出指令后，一队施工队就已经开始干活了。然后你就可以继续规划下一件事，再派出另一支施工队。而你派出的不是单个 Agent，而是一群有明确分工规划的 Agent。</p>
+<p>更关键的是，所有这些 Agent 本身也具备动态工作流能力的叠加。他们住在我的笔记系统里，同时各自又有能力去调不同的施工队来承担不同的大型任务。</p>
+<h2>小结</h2>
+<p>今天分享的动态工作流相关内容，其实大家都可以用。我们所有的会员朋友，都可以拿到我的同款工具。</p>]]></description><category>article_note</category><category>polished</category><content:encoded><![CDATA[<h1>AI动态工作流AI动态工作流</h1>
+<ul><li>作者/博主: 特效老炮BillyZhang</li><li>更新时间: 2026-06-21</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7653833443570175273/?region=CN&amp;mid=7653833513527577407&amp;u_code=2618082jb322&amp;did=MS4wLjABAAAATo9eM78Z3oMj4PiwKeLjSgBJR0bRxGBLN-cR8eosbVM&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=NRSFjw96Zam4AbgXrksgdoZa9_S6F5p8QR0O8SuoJDI-&amp;share_version=220200&amp;ts=1782094339&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/WZYL8PYmZN5PVa9b/1e1jZ3md5EZ8qYnv/web</li></ul>
+<p>---</p>
+<p>标题: &quot;动态工作流的两层含义：任务分配动态性与脚本现场编排能力&quot; 日期: &quot;2026-06-21&quot; 关键词: &quot;动态工作流, 任务分配, 智能体编排, 循环修正, 并行执行, AI协同&quot; 摘要: &quot;本文介绍动态工作流的两层核心机制：任务分配阶段的动态拆解和脚本执行阶段的实时代码编排。作者结合流程图和实测案例，展示了系统如何自动进行多轮测试、循环修正，并支持并行派出多组智能体协同工作，最后提到会员可获取同款工具。&quot; 来源: &quot;特效老炮BillyZhang&quot; ---</p>
+<h2>什么是动态工作流</h2>
+<p>什么叫动态工作流？这里的“动态”体现在两个层面。</p>
+<h3>第一层：任务分配动态</h3>
+<p>第一层是任务分配层面的动态。在运行时，系统才会决定拆成几个子任务、各自负责什么内容。也就是说，它可以在执行过程中动态决定下一步起多少个 Agent 来干这个活。</p>
+<h3>第二层：脚本现场编排</h3>
+<p>第二层是脚本本身的动态——在运行现场动态编排代码，这层包含循环和分支逻辑，也是我认为最厉害的地方。</p>
+<h2>生成、评估、修改的循环机制</h2>
+<p>整个流程是生成、评估、修改，循环往复直到满意为止。我们看一下流程图：12 个测试全部通过才会继续往前走。刚才大家也看到了，第一轮测试没过，系统就自动开始做第二轮了——这是动态生成的结果。</p>
+<p>你看它在运行：第一轮、第二轮、第三轮……一直在审。第三轮通过了，才算过关。</p>
+<h2>并行协同与多层调度</h2>
+<p>如果你发现某个地方有漏洞，只要它不在同一个文件里，就可以同时发出好几个包，让多个 Agent 并行处理——一个干这个，一个干那个。相当于从你的指挥中心派出无数个 Agent 去协同作业，而且不会阻塞你与主 Agent 的沟通。</p>
+<p>你一旦和主 Agent 聊完方案、确定方向，发出指令后，一队施工队就已经开始干活了。然后你就可以继续规划下一件事，再派出另一支施工队。而你派出的不是单个 Agent，而是一群有明确分工规划的 Agent。</p>
+<p>更关键的是，所有这些 Agent 本身也具备动态工作流能力的叠加。他们住在我的笔记系统里，同时各自又有能力去调不同的施工队来承担不同的大型任务。</p>
+<h2>小结</h2>
+<p>今天分享的动态工作流相关内容，其实大家都可以用。我们所有的会员朋友，都可以拿到我的同款工具。</p>]]></content:encoded></item>
 <item><title>AI时代的外交川普访华专机上坐了17位CEO——库克、马斯克、黄仁勋……加起来掌握全球9成AI算力，市值约...</title><link>https://www.iesdouyin.com/share/video/7639723070080503075/?region=CN&amp;mid=7639723112237435689&amp;u_code=36j6gj6l33b3&amp;did=MS4wLjABAAAAVt8_FHRWG9Ai-DgtqqNsm6bHxOE4HnpVYWKrHi-0f08&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=zEOPdtu_bta0NYAgFtTDJjXny.10n6pvlLz3bqpM.L8-&amp;share_version=210600&amp;ts=1778799083&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</link><guid>https://www.iesdouyin.com/share/video/7639723070080503075/?region=CN&amp;mid=7639723112237435689&amp;u_code=36j6gj6l33b3&amp;did=MS4wLjABAAAAVt8_FHRWG9Ai-DgtqqNsm6bHxOE4HnpVYWKrHi-0f08&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=zEOPdtu_bta0NYAgFtTDJjXny.10n6pvlLz3bqpM.L8-&amp;share_version=210600&amp;ts=1778799083&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</guid><author>特效老炮BillyZhang</author><pubDate>Thu, 14 May 2026 00:00:00 -0000</pubDate><description><![CDATA[<h1>AI时代的外交川普访华专机上坐了17位CEO——库克、马斯克、黄仁勋……加起来掌握全球9成AI算力，市值约...</h1>
 <ul><li>作者/博主: 特效老炮BillyZhang</li><li>更新时间: 2026-05-14</li><li>内容版本: polished</li><li>来源类型: article_note</li><li>原链接: https://www.iesdouyin.com/share/video/7639723070080503075/?region=CN&amp;mid=7639723112237435689&amp;u_code=36j6gj6l33b3&amp;did=MS4wLjABAAAAVt8_FHRWG9Ai-DgtqqNsm6bHxOE4HnpVYWKrHi-0f08&amp;iid=MS4wLjABAAAANwkJuWIRFOzg5uCpDRpMj4OX-QryoDgn-yYlXQnRwQQ&amp;with_sec_did=1&amp;video_share_track_ver=&amp;titleType=title&amp;share_sign=zEOPdtu_bta0NYAgFtTDJjXny.10n6pvlLz3bqpM.L8-&amp;share_version=210600&amp;ts=1778799083&amp;from_aid=1128&amp;from_ssr=1&amp;share_track_info=%7B%22link_description_type%22%3A%22%22%7D</li><li>站内链接: https://www.biji.com/post/blogger/WZYL8PYmZN5PVa9b/pAOQGLB8qN098zbe/web</li></ul>
 <p>---</p>
