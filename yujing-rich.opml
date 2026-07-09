@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>Yujing Rich Channels</title>
-    <dateCreated>Thu, 09 Jul 2026 10:04:42 GMT</dateCreated>
+    <dateCreated>Thu, 09 Jul 2026 12:14:43 GMT</dateCreated>
     <docs>https://opml.org/spec2.opml</docs>
   </head>
   <body>
@@ -12,11 +12,9 @@
       <outline text="AI行业最新融资案例解读" title="AI行业最新融资案例解读" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67e5334abf856a52db04e024-ai.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67e5334abf856a52db04e024" />
       <outline text="DeepTech深科技-公众号" title="DeepTech深科技-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67cc08a19a4297b6148b28e7-deeptech.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67cc08a19a4297b6148b28e7" />
       <outline text="FIRST青年电影展-公众号" title="FIRST青年电影展-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-68a7bfd8a2a8009ba9ba576e-first.xml" htmlUrl="https://lingowhale.com/channels?channel_id=68a7bfd8a2a8009ba9ba576e" />
-      <outline text="Uni小编-公众号" title="Uni小编-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67ea609b3daf5a4f63dea8ce-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67ea609b3daf5a4f63dea8ce" />
       <outline text="techcrunch-公众号" title="techcrunch-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67cc08a19a4297b6148b2969-z-potentials.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67cc08a19a4297b6148b2969" />
       <outline text="中国AI创业者最新采访" title="中国AI创业者最新采访" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67e5334abf856a52db04e013-ai.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67e5334abf856a52db04e013" />
       <outline text="人间故事铺" title="人间故事铺" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-68d3ec300d8694abdfcdf913-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=68d3ec300d8694abdfcdf913" />
-      <outline text="关注前沿科技-公众号" title="关注前沿科技-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67cc08a19a4297b6148b295c-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67cc08a19a4297b6148b295c" />
       <outline text="创投风向标" title="创投风向标" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-68d3ec2cf8177a255e32e809-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=68d3ec2cf8177a255e32e809" />
       <outline text="小互AI-公众号" title="小互AI-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67cc08a89a4297b6148b34f0-ai.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67cc08a89a4297b6148b34f0" />
       <outline text="张麟-公众号" title="张麟-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67cc08a29a4297b6148b29e8-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67cc08a29a4297b6148b29e8" />
@@ -28,9 +26,11 @@
       <outline text="武志红-公众号" title="武志红-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67cc08a19a4297b6148b298f-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67cc08a19a4297b6148b298f" />
       <outline text="热门AI公众号更新追踪" title="热门AI公众号更新追踪" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67e5334abf856a52db04e0b7-ai.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67e5334abf856a52db04e0b7" />
       <outline text="知我心理-公众号" title="知我心理-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67cc08a19a4297b6148b2932-knowyourself.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67cc08a19a4297b6148b2932" />
+      <outline text="简单心理Uni-公众号" title="简单心理Uni-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67ea609b3daf5a4f63dea8ce-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67ea609b3daf5a4f63dea8ce" />
       <outline text="艺术电影-电影" title="艺术电影-电影" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-68071d1b45e75b2ff0e165bc-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=68071d1b45e75b2ff0e165bc" />
       <outline text="财新-公众号" title="财新-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67cc08a59a4297b6148b2f44-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67cc08a59a4297b6148b2f44" />
       <outline text="财新网 - 最新文章-RSS" title="财新网 - 最新文章-RSS" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67ff875fe87e13f49af43e57-rss.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67ff875fe87e13f49af43e57" />
+      <outline text="量子位-公众号" title="量子位-公众号" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-67cc08a19a4297b6148b295c-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=67cc08a19a4297b6148b295c" />
       <outline text="金融-公众号-评论" title="金融-公众号-评论" type="rss" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/yujing-rich-68060c00303fabc7419af262-channel.xml" htmlUrl="https://lingowhale.com/channels?channel_id=68060c00303fabc7419af262" />
     </outline>
   </body>
