@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `0`
-- New articles inserted: `0`
-- Existing articles updated: `0`
-- Run time: `2026-07-31 02:00:03 CST` to `2026-07-31 02:01:18 CST`
+- Updated articles this run: `9`
+- New articles inserted: `2`
+- Existing articles updated: `7`
+- Run time: `2026-07-31 00:54:07 CST` to `2026-07-31 00:55:03 CST`
 - Update command: `npm run refresh:folo:yingshi`
 - Recent-days filter: `3`
 - Page limit: `50`
@@ -13,21 +13,21 @@
 - Fetch pipeline completed successfully.
 - Source feeds processed: `12`
 - Fetched articles: `14`
-- Inserted articles: `0`
-- Updated articles: `0`
+- Inserted articles: `2`
+- Updated articles: `7`
 - Deduped articles: `0`
-- Unchanged articles: `14`
+- Unchanged articles: `5`
 
 ## Feed-Level Changes
 
 - `午夜失焦MIDNIGHT BLUR - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `逗马贰叁Dogme23 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
-- `桃桃淘电影 - 今天看啥`: fetched=`4`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`4`
+- `桃桃淘电影 - 今天看啥`: fetched=`4`, inserted=`2`, updated=`2`, deduped=`0`, unchanged=`0`
 - `深焦DeepFocus - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `影视工业网 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `导演帮 - 今天看啥`: fetched=`1`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`1`
-- `凹凸镜DOC - 今天看啥`: fetched=`4`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`4`
-- `3号厅检票员工 - 今天看啥`: fetched=`1`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`1`
+- `凹凸镜DOC - 今天看啥`: fetched=`4`, inserted=`0`, updated=`4`, deduped=`0`, unchanged=`0`
+- `3号厅检票员工 - 今天看啥`: fetched=`1`, inserted=`0`, updated=`1`, deduped=`0`, unchanged=`0`
 - `MovieMonthly - 今天看啥`: fetched=`1`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`1`
 - `ARRI - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
 - `中国影视摄影师学会 - 今天看啥`: fetched=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`
