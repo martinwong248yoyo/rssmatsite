@@ -1,0 +1,26 @@
+{
+  "timestamp": "20260731-140002",
+  "started_at": "2026-07-31 14:00:02 CST",
+  "finished_at": "2026-07-31 14:00:02 CST",
+  "command": "python -m rsshome.cli.refresh_getnote_mat1",
+  "settings": {
+    "topic_id": "oJOxOwkn",
+    "dry_run": false,
+    "remote_qnap_import": true,
+    "recent_days": 3,
+    "cutoff": "2026-07-28T14:00:02+08:00"
+  },
+  "totals": {
+    "source_count": 0,
+    "feed_count": 0,
+    "article_count": 0,
+    "fetched": 0,
+    "inserted": 0,
+    "updated": 0,
+    "deduped": 0,
+    "unchanged": 0,
+    "failed": 1
+  },
+  "feeds": [],
+  "top_categories": []
+}
