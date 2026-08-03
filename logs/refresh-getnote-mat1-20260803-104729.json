@@ -1,0 +1,181 @@
+{
+  "timestamp": "20260803-104729",
+  "started_at": "2026-08-03 10:47:29 CST",
+  "finished_at": "2026-08-03 10:48:25 CST",
+  "command": "python -m rsshome.cli.refresh_getnote_mat1",
+  "settings": {
+    "topic_id": "oJOxOwkn",
+    "dry_run": false,
+    "remote_qnap_import": true,
+    "recent_days": 3,
+    "cutoff": "2026-07-31T10:47:29+08:00"
+  },
+  "totals": {
+    "source_count": 20,
+    "feed_count": 17,
+    "article_count": 17,
+    "fetched": 17,
+    "inserted": 17,
+    "updated": 0,
+    "deduped": 0,
+    "unchanged": 0,
+    "failed": 0
+  },
+  "feeds": [
+    {
+      "source_key": "getnote:douyin:1255873",
+      "title": "张剑_",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1255846",
+      "title": "吕晓彤",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1255836",
+      "title": "财女曼宝",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1231199",
+      "title": "深圳刑事 陈成均律师",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1231199",
+      "title": "深圳刑事 陈成均律师",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1231193",
+      "title": "陈杰森资本棋局",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1231191",
+      "title": "小辉教你开公司",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1231191",
+      "title": "小辉教你开公司",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1225767",
+      "title": "人民公园说AI",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1217265",
+      "title": "邹先华",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1217265",
+      "title": "邹先华",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
+  "top_categories": [],
+  "errors": []
+}

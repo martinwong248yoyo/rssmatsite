@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260803-100002",
-  "started_at": "2026-08-03 10:00:02 CST",
-  "finished_at": "2026-08-03 10:06:12 CST",
+  "timestamp": "20260803-120002",
+  "started_at": "2026-08-03 12:00:02 CST",
+  "finished_at": "2026-08-03 12:08:00 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,21 +18,21 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 2,
-    "batch_article_count": 5,
-    "fetched": 5,
-    "inserted": 5,
+    "feed_count": 4,
+    "batch_article_count": 9,
+    "fetched": 9,
+    "inserted": 9,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 0
+    "deleted_plain": 2
   },
   "feeds": [
     {
-      "source_key": "67cc08a19a4297b6148b2969-z-potentials",
-      "title": "Z Potentials-公众号",
-      "fetched": 4,
-      "inserted": 4,
+      "source_key": "67cc08a89a4297b6148b34f0-ai",
+      "title": "小互AI-公众号",
+      "fetched": 1,
+      "inserted": 1,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -40,8 +40,26 @@
     {
       "source_key": "67cc08a19a4297b6148b2994-channel",
       "title": "新智元-公众号",
-      "fetched": 1,
-      "inserted": 1,
+      "fetched": 2,
+      "inserted": 2,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67e5334abf856a52db04e0b7-ai",
+      "title": "热门AI公众号更新追踪",
+      "fetched": 2,
+      "inserted": 2,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "title": "财新-公众号",
+      "fetched": 4,
+      "inserted": 4,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0

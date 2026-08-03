@@ -1,0 +1,55 @@
+{
+  "timestamp": "20260803-120002",
+  "started_at": "2026-08-03 12:00:02 CST",
+  "finished_at": "2026-08-03 12:08:00 CST",
+  "command": "npm run refresh:all",
+  "totals": {
+    "inserted": 9,
+    "updated": 0,
+    "deduped": 0,
+    "unchanged": 29,
+    "changed_articles": 9
+  },
+  "source_runs": [
+    {
+      "key": "folo",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 50.89534831047058,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 12
+    },
+    {
+      "key": "getnote_mat1",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 59.0114164352417,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 17
+    },
+    {
+      "key": "douyin_favorite",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 0.191009521484375,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "key": "yujing",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 477.81402039527893,
+      "inserted": 9,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ]
+}

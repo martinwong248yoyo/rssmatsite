@@ -1,27 +1,181 @@
 {
-  "timestamp": "20260803-100139",
-  "started_at": "2026-08-03 10:01:39 CST",
-  "finished_at": "2026-08-03 10:02:30 CST",
+  "timestamp": "20260803-120002",
+  "started_at": "2026-08-03 12:00:02 CST",
+  "finished_at": "2026-08-03 12:01:01 CST",
   "command": "python -m rsshome.cli.refresh_getnote_mat1",
   "settings": {
     "topic_id": "oJOxOwkn",
     "dry_run": false,
     "remote_qnap_import": true,
     "recent_days": 3,
-    "cutoff": "2026-07-31T10:01:39+08:00"
+    "cutoff": "2026-07-31T12:00:02+08:00"
   },
   "totals": {
     "source_count": 20,
-    "feed_count": 0,
-    "article_count": 0,
-    "fetched": 0,
+    "feed_count": 17,
+    "article_count": 17,
+    "fetched": 17,
     "inserted": 0,
     "updated": 0,
     "deduped": 0,
-    "unchanged": 0,
-    "failed": 17
+    "unchanged": 17,
+    "failed": 0
   },
-  "feeds": [],
+  "feeds": [
+    {
+      "source_key": "getnote:douyin:1255873",
+      "title": "张剑_",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1255846",
+      "title": "吕晓彤",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1255836",
+      "title": "财女曼宝",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1231199",
+      "title": "深圳刑事 陈成均律师",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1231199",
+      "title": "深圳刑事 陈成均律师",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1231193",
+      "title": "陈杰森资本棋局",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1231191",
+      "title": "小辉教你开公司",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1231191",
+      "title": "小辉教你开公司",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1230673",
+      "title": "独夫之心",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1225767",
+      "title": "人民公园说AI",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1217265",
+      "title": "邹先华",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "getnote:douyin:1217265",
+      "title": "邹先华",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    }
+  ],
   "top_categories": [],
   "errors": []
 }

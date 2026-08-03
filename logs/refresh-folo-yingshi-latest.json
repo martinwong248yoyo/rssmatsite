@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260803-100002",
-  "started_at": "2026-08-03 10:00:02 CST",
-  "finished_at": "2026-08-03 10:01:02 CST",
+  "timestamp": "20260803-120002",
+  "started_at": "2026-08-03 12:00:02 CST",
+  "finished_at": "2026-08-03 12:00:53 CST",
   "settings": {
     "page_limit": 50,
     "feed_limit": null,
@@ -16,9 +16,9 @@
     "feed_count": 12,
     "fetched": 12,
     "inserted": 0,
-    "updated": 1,
+    "updated": 0,
     "deduped": 0,
-    "unchanged": 11
+    "unchanged": 12
   },
   "feeds": [
     {
@@ -89,9 +89,9 @@
       "title": "3号厅检票员工 - 今天看啥",
       "fetched": 3,
       "inserted": 0,
-      "updated": 1,
+      "updated": 0,
       "deduped": 0,
-      "unchanged": 2
+      "unchanged": 3
     },
     {
       "source_key": "266874028924204032",

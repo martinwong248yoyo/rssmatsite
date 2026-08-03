@@ -1,41 +1,41 @@
 {
-  "timestamp": "20260803-100002",
-  "started_at": "2026-08-03 10:00:02 CST",
-  "finished_at": "2026-08-03 10:06:12 CST",
+  "timestamp": "20260803-120002",
+  "started_at": "2026-08-03 12:00:02 CST",
+  "finished_at": "2026-08-03 12:08:00 CST",
   "command": "npm run refresh:all",
   "totals": {
-    "inserted": 5,
-    "updated": 1,
+    "inserted": 9,
+    "updated": 0,
     "deduped": 0,
-    "unchanged": 11,
-    "changed_articles": 6
+    "unchanged": 29,
+    "changed_articles": 9
   },
   "source_runs": [
     {
       "key": "folo",
       "status": "ok",
       "returncode": 0,
-      "elapsed_seconds": 59.622989892959595,
-      "inserted": 0,
-      "updated": 1,
-      "deduped": 0,
-      "unchanged": 11
-    },
-    {
-      "key": "getnote_mat1",
-      "status": "failed",
-      "returncode": 1,
-      "elapsed_seconds": 0.09049272537231445,
+      "elapsed_seconds": 50.89534831047058,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 0
+      "unchanged": 12
+    },
+    {
+      "key": "getnote_mat1",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 59.0114164352417,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 17
     },
     {
       "key": "douyin_favorite",
       "status": "ok",
       "returncode": 0,
-      "elapsed_seconds": 0.17357683181762695,
+      "elapsed_seconds": 0.191009521484375,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
@@ -45,8 +45,8 @@
       "key": "yujing",
       "status": "ok",
       "returncode": 0,
-      "elapsed_seconds": 369.7643404006958,
-      "inserted": 5,
+      "elapsed_seconds": 477.81402039527893,
+      "inserted": 9,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0

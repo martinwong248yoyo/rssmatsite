@@ -1,0 +1,134 @@
+{
+  "timestamp": "20260803-120002",
+  "started_at": "2026-08-03 12:00:02 CST",
+  "finished_at": "2026-08-03 12:00:53 CST",
+  "settings": {
+    "page_limit": 50,
+    "feed_limit": null,
+    "workers": 6,
+    "recent_days": 3,
+    "timeline_timeout": 90,
+    "entry_timeout": 90,
+    "remote_qnap_import": true,
+    "remote_qnap_db_only": true
+  },
+  "totals": {
+    "feed_count": 12,
+    "fetched": 12,
+    "inserted": 0,
+    "updated": 0,
+    "deduped": 0,
+    "unchanged": 12
+  },
+  "feeds": [
+    {
+      "source_key": "271212293520369664",
+      "title": "午夜失焦MIDNIGHT BLUR - 今天看啥",
+      "fetched": 0,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "271213954972262400",
+      "title": "逗马贰叁Dogme23 - 今天看啥",
+      "fetched": 0,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "266873310754931712",
+      "title": "桃桃淘电影 - 今天看啥",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    },
+    {
+      "source_key": "266873337248919552",
+      "title": "深焦DeepFocus - 今天看啥",
+      "fetched": 0,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "266873373241242624",
+      "title": "影视工业网 - 今天看啥",
+      "fetched": 3,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 3
+    },
+    {
+      "source_key": "266873554108449792",
+      "title": "导演帮 - 今天看啥",
+      "fetched": 0,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "266873738934649856",
+      "title": "凹凸镜DOC - 今天看啥",
+      "fetched": 4,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 4
+    },
+    {
+      "source_key": "266873943145492480",
+      "title": "3号厅检票员工 - 今天看啥",
+      "fetched": 3,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 3
+    },
+    {
+      "source_key": "266874028924204032",
+      "title": "MovieMonthly - 今天看啥",
+      "fetched": 0,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "266874662532543488",
+      "title": "ARRI - 今天看啥",
+      "fetched": 0,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "266875140901303296",
+      "title": "中国影视摄影师学会 - 今天看啥",
+      "fetched": 0,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "266873988289786880",
+      "title": "GaiaDaily - 今天看啥",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 1
+    }
+  ],
+  "top_categories": []
+}
