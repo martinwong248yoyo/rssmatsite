@@ -1,17 +1,17 @@
 {
-  "timestamp": "20260803-100139",
-  "started_at": "2026-08-03 10:01:39 CST",
-  "finished_at": "2026-08-03 10:02:30 CST",
+  "timestamp": "20260803-100002",
+  "started_at": "2026-08-03 10:00:02 CST",
+  "finished_at": "2026-08-03 10:00:02 CST",
   "command": "python -m rsshome.cli.refresh_getnote_mat1",
   "settings": {
     "topic_id": "oJOxOwkn",
     "dry_run": false,
     "remote_qnap_import": true,
     "recent_days": 3,
-    "cutoff": "2026-07-31T10:01:39+08:00"
+    "cutoff": "2026-07-31T10:00:02+08:00"
   },
   "totals": {
-    "source_count": 20,
+    "source_count": 0,
     "feed_count": 0,
     "article_count": 0,
     "fetched": 0,
@@ -19,9 +19,14 @@
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "failed": 17
+    "failed": 1
   },
   "feeds": [],
   "top_categories": [],
-  "errors": []
+  "errors": [
+    {
+      "stage": "bloggers",
+      "error": "RuntimeError: GetNote command could not run: [Errno 2] No such file or directory: 'getnote'"
+    }
+  ]
 }

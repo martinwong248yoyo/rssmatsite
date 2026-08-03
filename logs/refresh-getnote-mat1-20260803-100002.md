@@ -3,13 +3,13 @@
 - Updated articles this run: `0`
 - New articles inserted: `0`
 - Existing articles updated: `0`
-- Run time: `2026-08-03 10:01:39 CST` to `2026-08-03 10:02:30 CST`
+- Run time: `2026-08-03 10:00:02 CST` to `2026-08-03 10:00:02 CST`
 - Update command: `python -m rsshome.cli.refresh_getnote_mat1`
 - Recent-days filter: `3`
 
 ## Summary
 
-- Fetch pipeline completed successfully.
+- Fetch pipeline completed with failures.
 - Source feeds processed: `0`
 - Fetched articles: `0`
 - Inserted articles: `0`
@@ -22,6 +22,10 @@
 
 ## Category Snapshot
 
+
+## Errors
+
+- `bloggers`: RuntimeError: GetNote command could not run: [Errno 2] No such file or directory: 'getnote'
 
 ## Notes
 
