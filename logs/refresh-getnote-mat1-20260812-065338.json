@@ -1,24 +1,24 @@
 {
-  "timestamp": "20260812-080002",
-  "started_at": "2026-08-12 08:00:02 CST",
-  "finished_at": "2026-08-12 08:01:27 CST",
+  "timestamp": "20260812-065338",
+  "started_at": "2026-08-12 06:53:38 CST",
+  "finished_at": "2026-08-12 06:54:59 CST",
   "command": "python -m rsshome.cli.refresh_getnote_mat1",
   "settings": {
     "topic_id": "oJOxOwkn",
-    "dry_run": false,
-    "remote_qnap_import": true,
+    "dry_run": true,
+    "remote_qnap_import": false,
     "recent_days": 3,
-    "cutoff": "2026-08-09T08:00:02+08:00"
+    "cutoff": "2026-08-09T06:53:38+08:00"
   },
   "totals": {
     "source_count": 20,
-    "feed_count": 40,
-    "article_count": 40,
-    "fetched": 40,
+    "feed_count": 42,
+    "article_count": 42,
+    "fetched": 42,
     "inserted": 0,
     "updated": 0,
     "deduped": 0,
-    "unchanged": 40,
+    "unchanged": 0,
     "failed": 0
   },
   "feeds": [
@@ -29,7 +29,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1255873",
@@ -38,7 +38,16 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1255873",
+      "title": "张剑_",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1255846",
@@ -47,7 +56,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1255846",
@@ -56,7 +65,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1255836",
@@ -65,7 +74,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1255836",
@@ -74,7 +83,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231199",
@@ -83,7 +92,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231199",
@@ -92,7 +101,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231199",
@@ -101,7 +110,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231198",
@@ -110,7 +119,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231197",
@@ -119,7 +128,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231197",
@@ -128,7 +137,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231193",
@@ -137,7 +146,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231193",
@@ -146,7 +155,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231193",
@@ -155,7 +164,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231193",
@@ -164,7 +173,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231191",
@@ -173,7 +182,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231191",
@@ -182,7 +191,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231191",
@@ -191,7 +200,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231189",
@@ -200,7 +209,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1231189",
@@ -209,7 +218,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230682",
@@ -218,7 +227,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230673",
@@ -227,7 +236,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230673",
@@ -236,7 +245,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230673",
@@ -245,7 +254,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230673",
@@ -254,7 +263,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230673",
@@ -263,7 +272,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230673",
@@ -272,7 +281,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230673",
@@ -281,7 +290,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230673",
@@ -290,7 +299,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1230673",
@@ -299,7 +308,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1217561",
@@ -308,7 +317,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1217561",
@@ -317,7 +326,16 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
+    },
+    {
+      "source_key": "getnote:douyin:1217561",
+      "title": "Koji杨远骋",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1217265",
@@ -326,7 +344,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1217265",
@@ -335,7 +353,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1217265",
@@ -344,7 +362,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1217265",
@@ -353,7 +371,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1217264",
@@ -362,7 +380,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1217264",
@@ -371,7 +389,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     },
     {
       "source_key": "getnote:douyin:1203542",
@@ -380,7 +398,7 @@
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 1
+      "unchanged": 0
     }
   ],
   "top_categories": [],
