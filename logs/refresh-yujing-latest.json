@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260820-020001",
-  "started_at": "2026-08-20 02:00:01 CST",
-  "finished_at": "2026-08-20 02:06:30 CST",
+  "timestamp": "20260820-040002",
+  "started_at": "2026-08-20 04:00:02 CST",
+  "finished_at": "2026-08-20 04:04:14 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,31 +18,22 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 2,
-    "batch_article_count": 3,
-    "fetched": 3,
-    "inserted": 2,
-    "updated": 1,
+    "feed_count": 1,
+    "batch_article_count": 1,
+    "fetched": 1,
+    "inserted": 1,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67cc08a19a4297b6148b2932-knowyourself",
-      "title": "KnowYourself-公众号",
-      "fetched": 2,
-      "inserted": 2,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a29a4297b6148b29e8-channel",
-      "title": "甲子光年-公众号",
+      "source_key": "67e5334abf856a52db04e0b7-ai",
+      "title": "热门AI公众号更新追踪",
       "fetched": 1,
-      "inserted": 0,
-      "updated": 1,
+      "inserted": 1,
+      "updated": 0,
       "deduped": 0,
       "unchanged": 0
     }

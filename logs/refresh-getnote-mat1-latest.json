@@ -1,14 +1,14 @@
 {
-  "timestamp": "20260820-020001",
-  "started_at": "2026-08-20 02:00:01 CST",
-  "finished_at": "2026-08-20 02:00:02 CST",
+  "timestamp": "20260820-040002",
+  "started_at": "2026-08-20 04:00:02 CST",
+  "finished_at": "2026-08-20 04:00:02 CST",
   "command": "python -m rsshome.cli.refresh_getnote_mat1",
   "settings": {
     "topic_id": "oJOxOwkn",
     "dry_run": false,
     "remote_qnap_import": true,
     "recent_days": 3,
-    "cutoff": "2026-08-17T02:00:01+08:00"
+    "cutoff": "2026-08-17T04:00:02+08:00"
   },
   "totals": {
     "source_count": 0,
@@ -26,7 +26,7 @@
   "errors": [
     {
       "stage": "bloggers",
-      "error": "RuntimeError: GetNote command failed (1): Error: API error 10201: not_member: OpenAPI 仅对会员开放: request_id=fdb7840632d2001\n{\n  \"success\": false,\n  \"data\": null,\n  \"error\": {\n    \"code\": 10201,\n    \"message\": \"OpenAPI 仅对会员开放\",\n    \"reason\": \"not_member\",\n    \"retryable\": false,\n    \"membership_url\": \"https://www.biji.com/checkout?product_alias=9Ab36BB3ZD\\u0026spm=openapi_cli\"\n  },\n  \"request_id\": \"fdb7840632d2001\"\n}"
+      "error": "RuntimeError: GetNote command failed (1): Error: API error 10201: not_member: OpenAPI 仅对会员开放: request_id=fdb93b7bdad1001\n{\n  \"success\": false,\n  \"data\": null,\n  \"error\": {\n    \"code\": 10201,\n    \"message\": \"OpenAPI 仅对会员开放\",\n    \"reason\": \"not_member\",\n    \"retryable\": false,\n    \"membership_url\": \"https://www.biji.com/checkout?product_alias=9Ab36BB3ZD\\u0026spm=openapi_cli\"\n  },\n  \"request_id\": \"fdb93b7bdad1001\"\n}"
     }
   ]
 }
