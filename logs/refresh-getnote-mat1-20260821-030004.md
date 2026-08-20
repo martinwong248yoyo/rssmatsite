@@ -3,7 +3,7 @@
 - Updated articles this run: `0`
 - New articles inserted: `0`
 - Existing articles updated: `0`
-- Run time: `2026-08-21 04:00:02 CST` to `2026-08-21 04:00:02 CST`
+- Run time: `2026-08-21 03:00:04 CST` to `2026-08-21 03:00:04 CST`
 - Update command: `python -m rsshome.cli.refresh_getnote_mat1`
 - Recent-days filter: `3`
 
@@ -25,7 +25,7 @@
 
 ## Errors
 
-- `bloggers`: RuntimeError: GetNote command failed (1): Error: API error 10201: not_member: OpenAPI 仅对会员开放: request_id=fdcdd4e9d2d1001
+- `bloggers`: RuntimeError: GetNote command failed (1): Error: API error 10201: not_member: OpenAPI 仅对会员开放: request_id=fdccf94f543f001
 {
   "success": false,
   "data": null,
@@ -36,7 +36,7 @@
     "retryable": false,
     "membership_url": "https://www.biji.com/checkout?product_alias=9Ab36BB3ZD\u0026spm=openapi_cli"
   },
-  "request_id": "fdcdd4e9d2d1001"
+  "request_id": "fdccf94f543f001"
 }
 
 ## Notes
