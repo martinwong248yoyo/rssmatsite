@@ -1,19 +1,18 @@
 # Refresh All Sources Report
 
-- Total updated articles this run: `7`
-- New articles inserted: `4`
-- Existing articles updated: `3`
+- Total updated articles this run: `4`
+- New articles inserted: `0`
+- Existing articles updated: `4`
 - Deduped articles: `0`
-- Unchanged articles: `20`
-- Run time: `2026-09-02 16:00:03 CST` to `2026-09-02 16:09:57 CST`
+- Unchanged articles: `19`
+- Run time: `2026-09-02 18:00:03 CST` to `2026-09-02 18:07:19 CST`
 - Update command: `npm run refresh:all`
 
 ## Source Overview
 
-- `folo`: changed=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`20`, status=`ok`
-- `getnote_mat1`: changed=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`, status=`failed`
+- `folo`: changed=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`19`, status=`ok`
 - `douyin_favorite`: changed=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
-- `yujing`: changed=`7`, inserted=`4`, updated=`3`, deduped=`0`, unchanged=`0`, status=`ok`
+- `yujing`: changed=`4`, inserted=`0`, updated=`4`, deduped=`0`, unchanged=`0`, status=`ok`
 
 ## Notes
 

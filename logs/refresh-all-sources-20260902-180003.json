@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260902-180003",
+  "started_at": "2026-09-02 18:00:03 CST",
+  "finished_at": "2026-09-02 18:07:19 CST",
+  "command": "npm run refresh:all",
+  "totals": {
+    "inserted": 0,
+    "updated": 4,
+    "deduped": 0,
+    "unchanged": 19,
+    "changed_articles": 4
+  },
+  "source_runs": [
+    {
+      "key": "folo",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 87.67602705955505,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 19
+    },
+    {
+      "key": "douyin_favorite",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 17.72003960609436,
+      "inserted": 0,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "key": "yujing",
+      "status": "ok",
+      "returncode": 0,
+      "elapsed_seconds": 436.8613426685333,
+      "inserted": 0,
+      "updated": 4,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ]
+}
