@@ -1,7 +1,7 @@
 {
-  "timestamp": "20260913-100003",
-  "started_at": "2026-09-13 10:00:03 CST",
-  "finished_at": "2026-09-13 10:02:16 CST",
+  "timestamp": "20260913-140003",
+  "started_at": "2026-09-13 14:00:03 CST",
+  "finished_at": "2026-09-13 14:03:05 CST",
   "settings": {
     "page_limit": 50,
     "feed_limit": null,
@@ -14,11 +14,11 @@
   },
   "totals": {
     "feed_count": 12,
-    "fetched": 22,
+    "fetched": 21,
     "inserted": 0,
     "updated": 0,
     "deduped": 0,
-    "unchanged": 22
+    "unchanged": 21
   },
   "feeds": [
     {
@@ -60,11 +60,11 @@
     {
       "source_key": "266873373241242624",
       "title": "影视工业网 - 今天看啥",
-      "fetched": 2,
+      "fetched": 3,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 2
+      "unchanged": 3
     },
     {
       "source_key": "266873554108449792",
@@ -78,11 +78,11 @@
     {
       "source_key": "266873738934649856",
       "title": "凹凸镜DOC - 今天看啥",
-      "fetched": 8,
+      "fetched": 7,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 8
+      "unchanged": 7
     },
     {
       "source_key": "266873943145492480",
@@ -123,11 +123,11 @@
     {
       "source_key": "266873988289786880",
       "title": "GaiaDaily - 今天看啥",
-      "fetched": 5,
+      "fetched": 4,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 5
+      "unchanged": 4
     }
   ],
   "top_categories": []
