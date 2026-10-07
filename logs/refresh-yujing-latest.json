@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261008-000002",
-  "started_at": "2026-10-08 00:00:02 CST",
-  "finished_at": "2026-10-08 00:04:39 CST",
+  "timestamp": "20261008-060003",
+  "started_at": "2026-10-08 06:00:03 CST",
+  "finished_at": "2026-10-08 06:06:06 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,21 +18,30 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 1,
+    "feed_count": 2,
     "batch_article_count": 2,
     "fetched": 2,
     "inserted": 2,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 1
+    "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67cc08a19a4297b6148b298f-channel",
-      "title": "武志红-公众号",
-      "fetched": 2,
-      "inserted": 2,
+      "source_key": "67e5334abf856a52db04e0b7-ai",
+      "title": "热门AI公众号更新追踪",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "68060c00303fabc7419af262-channel",
+      "title": "金融-公众号-评论",
+      "fetched": 1,
+      "inserted": 1,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
