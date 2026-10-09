@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261009-140004",
-  "started_at": "2026-10-09 14:00:04 CST",
-  "finished_at": "2026-10-09 14:11:02 CST",
+  "timestamp": "20261010-060004",
+  "started_at": "2026-10-10 06:00:04 CST",
+  "finished_at": "2026-10-10 06:31:50 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,16 +18,25 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 4,
-    "batch_article_count": 8,
-    "fetched": 8,
-    "inserted": 8,
+    "feed_count": 10,
+    "batch_article_count": 27,
+    "fetched": 27,
+    "inserted": 27,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 0
+    "deleted_plain": 2
   },
   "feeds": [
+    {
+      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
+      "title": "DeepTech深科技-公众号",
+      "fetched": 2,
+      "inserted": 2,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
     {
       "source_key": "67cc08a89a4297b6148b34f0-ai",
       "title": "小互AI-公众号",
@@ -38,10 +47,19 @@
       "unchanged": 0
     },
     {
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "title": "新智元-公众号",
+      "fetched": 2,
+      "inserted": 2,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
       "source_key": "67cc08a19a4297b6148b298f-channel",
       "title": "武志红-公众号",
-      "fetched": 3,
-      "inserted": 3,
+      "fetched": 2,
+      "inserted": 2,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -56,10 +74,46 @@
       "unchanged": 0
     },
     {
-      "source_key": "67cc08a19a4297b6148b295c-channel",
-      "title": "量子位-公众号",
+      "source_key": "67cc08a29a4297b6148b29e8-channel",
+      "title": "甲子光年-公众号",
       "fetched": 2,
       "inserted": 2,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
+      "title": "简单心理Uni-公众号",
+      "fetched": 2,
+      "inserted": 2,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "title": "财新-公众号",
+      "fetched": 8,
+      "inserted": 8,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b295c-channel",
+      "title": "量子位-公众号",
+      "fetched": 5,
+      "inserted": 5,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "68060c00303fabc7419af262-channel",
+      "title": "金融-公众号-评论",
+      "fetched": 1,
+      "inserted": 1,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
