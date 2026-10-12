@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261012-120003",
-  "started_at": "2026-10-12 12:00:03 CST",
-  "finished_at": "2026-10-12 12:09:27 CST",
+  "timestamp": "20261012-140003",
+  "started_at": "2026-10-12 14:00:03 CST",
+  "finished_at": "2026-10-12 14:18:57 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,19 +18,19 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 2,
-    "batch_article_count": 5,
-    "fetched": 5,
-    "inserted": 5,
-    "updated": 0,
+    "feed_count": 3,
+    "batch_article_count": 12,
+    "fetched": 12,
+    "inserted": 9,
+    "updated": 3,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67cc08a19a4297b6148b2969-z-potentials",
-      "title": "Z Potentials-公众号",
+      "source_key": "67cc08a19a4297b6148b298f-channel",
+      "title": "武志红-公众号",
       "fetched": 3,
       "inserted": 3,
       "updated": 0,
@@ -38,11 +38,20 @@
       "unchanged": 0
     },
     {
-      "source_key": "67cc08a19a4297b6148b2994-channel",
-      "title": "新智元-公众号",
-      "fetched": 2,
-      "inserted": 2,
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "title": "财新-公众号",
+      "fetched": 6,
+      "inserted": 6,
       "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b295c-channel",
+      "title": "量子位-公众号",
+      "fetched": 3,
+      "inserted": 0,
+      "updated": 3,
       "deduped": 0,
       "unchanged": 0
     }
