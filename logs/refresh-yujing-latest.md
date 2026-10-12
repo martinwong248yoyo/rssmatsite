@@ -3,7 +3,7 @@
 - Updated articles this run: `2`
 - New articles inserted: `1`
 - Existing articles updated: `1`
-- Run time: `2026-10-13 00:00:04 CST` to `2026-10-13 00:06:23 CST`
+- Run time: `2026-10-13 02:00:04 CST` to `2026-10-13 02:07:02 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -19,8 +19,8 @@
 
 ## Feed-Level Changes
 
-- `DeepTech深科技-公众号`: fetched=`1`, inserted=`0`, updated=`1`, deduped=`0`, unchanged=`0`
-- `武志红-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `FIRST青年电影展-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `热门AI公众号更新追踪`: fetched=`1`, inserted=`0`, updated=`1`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
 

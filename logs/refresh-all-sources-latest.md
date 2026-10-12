@@ -5,7 +5,7 @@
 - Existing articles updated: `1`
 - Deduped articles: `0`
 - Unchanged articles: `0`
-- Run time: `2026-10-13 00:00:03 CST` to `2026-10-13 00:06:24 CST`
+- Run time: `2026-10-13 02:00:04 CST` to `2026-10-13 02:07:03 CST`
 - Update command: `npm run refresh:all`
 
 ## Source Overview
