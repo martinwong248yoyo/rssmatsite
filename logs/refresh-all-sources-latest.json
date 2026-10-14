@@ -1,14 +1,14 @@
 {
-  "timestamp": "20261014-100005",
-  "started_at": "2026-10-14 10:00:05 CST",
-  "finished_at": "2026-10-14 10:06:20 CST",
+  "timestamp": "20261014-120004",
+  "started_at": "2026-10-14 12:00:04 CST",
+  "finished_at": "2026-10-14 12:17:14 CST",
   "command": "npm run refresh:all",
   "totals": {
-    "inserted": 0,
-    "updated": 4,
+    "inserted": 12,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "changed_articles": 4
+    "changed_articles": 12
   },
   "source_runs": [
     {
@@ -17,7 +17,7 @@
       "returncode": 0,
       "internal_failed": 0,
       "internal_degraded": 0,
-      "elapsed_seconds": 30.0787832736969,
+      "elapsed_seconds": 28.064738512039185,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
@@ -25,13 +25,13 @@
     },
     {
       "key": "yujing",
-      "status": "failed",
-      "returncode": 1,
+      "status": "ok",
+      "returncode": 0,
       "internal_failed": 0,
       "internal_degraded": 0,
-      "elapsed_seconds": 375.2037982940674,
-      "inserted": 0,
-      "updated": 4,
+      "elapsed_seconds": 1030.2563319206238,
+      "inserted": 12,
+      "updated": 0,
       "deduped": 0,
       "unchanged": 0
     }
