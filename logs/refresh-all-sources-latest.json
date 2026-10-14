@@ -1,27 +1,27 @@
 {
-  "timestamp": "20261014-160003",
-  "started_at": "2026-10-14 16:00:03 CST",
-  "finished_at": "2026-10-14 16:09:45 CST",
+  "timestamp": "20261014-180004",
+  "started_at": "2026-10-14 18:00:04 CST",
+  "finished_at": "2026-10-14 18:08:11 CST",
   "command": "npm run refresh:all",
   "totals": {
-    "inserted": 4,
+    "inserted": 19,
     "updated": 1,
     "deduped": 0,
-    "unchanged": 0,
-    "changed_articles": 5
+    "unchanged": 16,
+    "changed_articles": 20
   },
   "source_runs": [
     {
       "key": "douyin_favorite",
-      "status": "failed",
-      "returncode": 1,
-      "internal_failed": 1,
-      "internal_degraded": 0,
-      "elapsed_seconds": 15.507948875427246,
-      "inserted": 0,
+      "status": "ok",
+      "returncode": 0,
+      "internal_failed": 0,
+      "internal_degraded": 32,
+      "elapsed_seconds": 85.61640810966492,
+      "inserted": 16,
       "updated": 0,
       "deduped": 0,
-      "unchanged": 0
+      "unchanged": 16
     },
     {
       "key": "yujing",
@@ -29,8 +29,8 @@
       "returncode": 0,
       "internal_failed": 0,
       "internal_degraded": 0,
-      "elapsed_seconds": 582.162026643753,
-      "inserted": 4,
+      "elapsed_seconds": 486.6655399799347,
+      "inserted": 3,
       "updated": 1,
       "deduped": 0,
       "unchanged": 0
