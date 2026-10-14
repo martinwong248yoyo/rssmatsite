@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261015-000003",
-  "started_at": "2026-10-15 00:00:03 CST",
-  "finished_at": "2026-10-15 00:10:26 CST",
+  "timestamp": "20261015-020003",
+  "started_at": "2026-10-15 02:00:03 CST",
+  "finished_at": "2026-10-15 02:04:38 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,52 +18,15 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 4,
-    "batch_article_count": 6,
-    "fetched": 6,
-    "inserted": 3,
-    "updated": 3,
+    "feed_count": 0,
+    "batch_article_count": 0,
+    "fetched": 0,
+    "inserted": 0,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 1
+    "deleted_plain": 0
   },
-  "feeds": [
-    {
-      "source_key": "67cc08a19a4297b6148b2932-knowyourself",
-      "title": "KnowYourself-公众号",
-      "fetched": 2,
-      "inserted": 0,
-      "updated": 2,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a19a4297b6148b298f-channel",
-      "title": "武志红-公众号",
-      "fetched": 1,
-      "inserted": 1,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
-      "title": "简单心理Uni-公众号",
-      "fetched": 2,
-      "inserted": 1,
-      "updated": 1,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "68060c00303fabc7419af262-channel",
-      "title": "金融-公众号-评论",
-      "fetched": 1,
-      "inserted": 1,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    }
-  ],
+  "feeds": [],
   "top_categories": []
 }
