@@ -1,14 +1,14 @@
 {
-  "timestamp": "20261014-220005",
-  "started_at": "2026-10-14 22:00:05 CST",
-  "finished_at": "2026-10-14 22:13:01 CST",
+  "timestamp": "20261015-000003",
+  "started_at": "2026-10-15 00:00:03 CST",
+  "finished_at": "2026-10-15 00:10:27 CST",
   "command": "npm run refresh:all",
   "totals": {
-    "inserted": 5,
+    "inserted": 4,
     "updated": 3,
     "deduped": 0,
     "unchanged": 0,
-    "changed_articles": 8
+    "changed_articles": 7
   },
   "source_runs": [
     {
@@ -16,9 +16,9 @@
       "status": "ok",
       "returncode": 0,
       "internal_failed": 0,
-      "internal_degraded": 0,
-      "elapsed_seconds": 19.02971887588501,
-      "inserted": 0,
+      "internal_degraded": 1,
+      "elapsed_seconds": 78.51791501045227,
+      "inserted": 1,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
@@ -29,8 +29,8 @@
       "returncode": 0,
       "internal_failed": 0,
       "internal_degraded": 0,
-      "elapsed_seconds": 776.6489410400391,
-      "inserted": 5,
+      "elapsed_seconds": 623.3728384971619,
+      "inserted": 3,
       "updated": 3,
       "deduped": 0,
       "unchanged": 0
