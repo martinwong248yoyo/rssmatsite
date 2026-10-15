@@ -3,14 +3,14 @@
 - Updated articles this run: `6`
 - New articles inserted: `5`
 - Existing articles updated: `1`
-- Run time: `2026-10-15 22:00:04 CST` to `2026-10-15 22:10:47 CST`
+- Run time: `2026-10-16 00:00:14 CST` to `2026-10-16 00:13:41 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
 ## Summary
 
 - Fetch pipeline completed successfully.
-- Source feeds processed: `2`
+- Source feeds processed: `4`
 - Fetched articles: `6`
 - Inserted articles: `5`
 - Updated articles: `1`
@@ -19,8 +19,10 @@
 
 ## Feed-Level Changes
 
-- `KnowYourself-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
-- `新智元-公众号`: fetched=`5`, inserted=`4`, updated=`1`, deduped=`0`, unchanged=`0`
+- `DeepTech深科技-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `KnowYourself-公众号`: fetched=`2`, inserted=`1`, updated=`1`, deduped=`0`, unchanged=`0`
+- `武志红-公众号`: fetched=`2`, inserted=`2`, updated=`0`, deduped=`0`, unchanged=`0`
+- `热门AI公众号更新追踪`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
 
