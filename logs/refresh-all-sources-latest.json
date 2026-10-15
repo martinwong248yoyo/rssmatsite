@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261016-040004",
-  "started_at": "2026-10-16 04:00:04 CST",
-  "finished_at": "2026-10-16 04:05:53 CST",
+  "timestamp": "20261016-060006",
+  "started_at": "2026-10-16 06:00:06 CST",
+  "finished_at": "2026-10-16 06:06:19 CST",
   "command": "npm run refresh:all",
   "totals": {
     "inserted": 0,
@@ -17,7 +17,7 @@
       "returncode": 0,
       "internal_failed": 0,
       "internal_degraded": 0,
-      "elapsed_seconds": 32.304964542388916,
+      "elapsed_seconds": 21.62015700340271,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
@@ -29,7 +29,7 @@
       "returncode": 0,
       "internal_failed": 0,
       "internal_degraded": 0,
-      "elapsed_seconds": 348.7117335796356,
+      "elapsed_seconds": 373.74776220321655,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
