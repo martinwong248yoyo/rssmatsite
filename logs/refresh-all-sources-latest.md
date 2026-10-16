@@ -5,13 +5,13 @@
 - Existing articles updated: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
-- Run time: `2026-10-17 02:00:04 CST` to `2026-10-17 02:06:12 CST`
+- Run time: `2026-10-17 04:00:04 CST` to `2026-10-17 04:05:15 CST`
 - Update command: `npm run refresh:all`
 
 ## Source Overview
 
-- `douyin_favorite`: changed=`2`, inserted=`2`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
-- `yujing`: changed=`2`, inserted=`2`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
+- `douyin_favorite`: changed=`3`, inserted=`3`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
+- `yujing`: changed=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
 
 ## Notes
 
