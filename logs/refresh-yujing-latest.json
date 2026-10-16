@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261016-220004",
-  "started_at": "2026-10-16 22:00:04 CST",
-  "finished_at": "2026-10-16 22:08:46 CST",
+  "timestamp": "20261017-000004",
+  "started_at": "2026-10-17 00:00:04 CST",
+  "finished_at": "2026-10-17 00:05:21 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,37 +18,19 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 3,
-    "batch_article_count": 4,
-    "fetched": 4,
+    "feed_count": 1,
+    "batch_article_count": 1,
+    "fetched": 1,
     "inserted": 0,
-    "updated": 4,
+    "updated": 1,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67e5334abf856a52db04e0b7-ai",
-      "title": "热门AI公众号更新追踪",
-      "fetched": 1,
-      "inserted": 0,
-      "updated": 1,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
-      "title": "简单心理Uni-公众号",
-      "fetched": 2,
-      "inserted": 0,
-      "updated": 2,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "68060c00303fabc7419af262-channel",
-      "title": "金融-公众号-评论",
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "title": "财新-公众号",
       "fetched": 1,
       "inserted": 0,
       "updated": 1,
