@@ -1,9 +1,9 @@
 # Update Report
 
-- Updated articles this run: `1`
-- New articles inserted: `0`
-- Existing articles updated: `1`
-- Run time: `2026-10-17 00:00:04 CST` to `2026-10-17 00:05:21 CST`
+- Updated articles this run: `2`
+- New articles inserted: `2`
+- Existing articles updated: `0`
+- Run time: `2026-10-17 02:00:04 CST` to `2026-10-17 02:06:11 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -11,15 +11,15 @@
 
 - Fetch pipeline completed successfully.
 - Source feeds processed: `1`
-- Fetched articles: `1`
-- Inserted articles: `0`
-- Updated articles: `1`
+- Fetched articles: `2`
+- Inserted articles: `2`
+- Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
 
 ## Feed-Level Changes
 
-- `财新-公众号`: fetched=`1`, inserted=`0`, updated=`1`, deduped=`0`, unchanged=`0`
+- `热门AI公众号更新追踪`: fetched=`2`, inserted=`2`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
 
