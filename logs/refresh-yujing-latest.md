@@ -1,24 +1,25 @@
 # Update Report
 
-- Updated articles this run: `0`
+- Updated articles this run: `1`
 - New articles inserted: `0`
-- Existing articles updated: `0`
-- Run time: `2026-10-20 04:00:05 CST` to `2026-10-20 04:05:03 CST`
+- Existing articles updated: `1`
+- Run time: `2026-10-20 06:00:11 CST` to `2026-10-20 06:05:33 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
 ## Summary
 
 - Fetch pipeline completed successfully.
-- Source feeds processed: `0`
-- Fetched articles: `0`
+- Source feeds processed: `1`
+- Fetched articles: `1`
 - Inserted articles: `0`
-- Updated articles: `0`
+- Updated articles: `1`
 - Deduped articles: `0`
 - Unchanged articles: `0`
 
 ## Feed-Level Changes
 
+- `金融-公众号-评论`: fetched=`1`, inserted=`0`, updated=`1`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
 

@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261020-040005",
-  "started_at": "2026-10-20 04:00:05 CST",
-  "finished_at": "2026-10-20 04:05:03 CST",
+  "timestamp": "20261020-060011",
+  "started_at": "2026-10-20 06:00:11 CST",
+  "finished_at": "2026-10-20 06:05:33 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,15 +18,25 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 0,
-    "batch_article_count": 0,
-    "fetched": 0,
+    "feed_count": 1,
+    "batch_article_count": 1,
+    "fetched": 1,
     "inserted": 0,
-    "updated": 0,
+    "updated": 1,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [],
+  "feeds": [
+    {
+      "source_key": "68060c00303fabc7419af262-channel",
+      "title": "金融-公众号-评论",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 1,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
   "top_categories": []
 }
