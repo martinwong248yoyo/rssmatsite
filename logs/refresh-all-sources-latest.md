@@ -1,17 +1,17 @@
 # Refresh All Sources Report
 
-- Total updated articles this run: `10`
-- New articles inserted: `10`
+- Total updated articles this run: `13`
+- New articles inserted: `13`
 - Existing articles updated: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
-- Run time: `2026-10-19 18:00:05 CST` to `2026-10-19 18:14:01 CST`
+- Run time: `2026-10-19 20:00:05 CST` to `2026-10-19 20:17:42 CST`
 - Update command: `npm run refresh:all`
 
 ## Source Overview
 
-- `douyin_favorite`: changed=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
-- `yujing`: changed=`9`, inserted=`9`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
+- `douyin_favorite`: changed=`0`, inserted=`0`, updated=`0`, deduped=`0`, unchanged=`0`, status=`failed`
+- `yujing`: changed=`13`, inserted=`13`, updated=`0`, deduped=`0`, unchanged=`0`, status=`ok`
 
 ## Notes
 
