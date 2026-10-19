@@ -1,23 +1,23 @@
 {
-  "timestamp": "20261019-080004",
-  "started_at": "2026-10-19 08:00:04 CST",
-  "finished_at": "2026-10-19 08:03:36 CST",
+  "timestamp": "20261019-100004",
+  "started_at": "2026-10-19 10:00:04 CST",
+  "finished_at": "2026-10-19 10:06:03 CST",
   "command": "npm run refresh:all",
   "totals": {
     "inserted": 0,
-    "updated": 0,
+    "updated": 2,
     "deduped": 0,
     "unchanged": 0,
-    "changed_articles": 0
+    "changed_articles": 2
   },
   "source_runs": [
     {
       "key": "douyin_favorite",
-      "status": "failed",
-      "returncode": 1,
-      "internal_failed": 1,
+      "status": "ok",
+      "returncode": 0,
+      "internal_failed": 0,
       "internal_degraded": 0,
-      "elapsed_seconds": 28.853129863739014,
+      "elapsed_seconds": 25.42930006980896,
       "inserted": 0,
       "updated": 0,
       "deduped": 0,
@@ -29,9 +29,9 @@
       "returncode": 0,
       "internal_failed": 0,
       "internal_degraded": 0,
-      "elapsed_seconds": 212.17957377433777,
+      "elapsed_seconds": 358.26233100891113,
       "inserted": 0,
-      "updated": 0,
+      "updated": 2,
       "deduped": 0,
       "unchanged": 0
     }
