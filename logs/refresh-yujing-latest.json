@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261020-180004",
-  "started_at": "2026-10-20 18:00:04 CST",
-  "finished_at": "2026-10-20 18:04:44 CST",
+  "timestamp": "20261020-200005",
+  "started_at": "2026-10-20 20:00:05 CST",
+  "finished_at": "2026-10-20 20:01:55 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -15,28 +15,18 @@
     "remote_qnap_import": true,
     "remote_qnap_db_only": true,
     "import_scope": "batch_delta",
-    "batch_channel_count": 16
+    "batch_channel_count": 0
   },
   "totals": {
-    "feed_count": 1,
-    "batch_article_count": 2,
-    "fetched": 2,
-    "inserted": 1,
-    "updated": 1,
+    "feed_count": 0,
+    "batch_article_count": 0,
+    "fetched": 0,
+    "inserted": 0,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [
-    {
-      "source_key": "67cc08a59a4297b6148b2f44-channel",
-      "title": "财新-公众号",
-      "fetched": 2,
-      "inserted": 1,
-      "updated": 1,
-      "deduped": 0,
-      "unchanged": 0
-    }
-  ],
+  "feeds": [],
   "top_categories": []
 }
