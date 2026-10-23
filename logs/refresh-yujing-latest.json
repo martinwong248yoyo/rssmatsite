@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261023-140007",
-  "started_at": "2026-10-23 14:00:07 CST",
-  "finished_at": "2026-10-23 14:13:53 CST",
+  "timestamp": "20261023-160004",
+  "started_at": "2026-10-23 16:00:04 CST",
+  "finished_at": "2026-10-23 16:10:03 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -19,18 +19,18 @@
   },
   "totals": {
     "feed_count": 3,
-    "batch_article_count": 10,
-    "fetched": 10,
-    "inserted": 1,
-    "updated": 9,
+    "batch_article_count": 7,
+    "fetched": 7,
+    "inserted": 0,
+    "updated": 7,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67e5334abf856a52db04e0b7-ai",
-      "title": "热门AI公众号更新追踪",
+      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
+      "title": "DeepTech深科技-公众号",
       "fetched": 2,
       "inserted": 0,
       "updated": 2,
@@ -38,19 +38,19 @@
       "unchanged": 0
     },
     {
-      "source_key": "67cc08a59a4297b6148b2f44-channel",
-      "title": "财新-公众号",
-      "fetched": 5,
+      "source_key": "67cc08a19a4297b6148b298f-channel",
+      "title": "武志红-公众号",
+      "fetched": 3,
       "inserted": 0,
-      "updated": 5,
+      "updated": 3,
       "deduped": 0,
       "unchanged": 0
     },
     {
-      "source_key": "67cc08a19a4297b6148b295c-channel",
-      "title": "量子位-公众号",
-      "fetched": 3,
-      "inserted": 1,
+      "source_key": "67e5334abf856a52db04e0b7-ai",
+      "title": "热门AI公众号更新追踪",
+      "fetched": 2,
+      "inserted": 0,
       "updated": 2,
       "deduped": 0,
       "unchanged": 0
