@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261024-160005",
-  "started_at": "2026-10-24 16:00:05 CST",
-  "finished_at": "2026-10-24 16:11:55 CST",
+  "timestamp": "20261024-180005",
+  "started_at": "2026-10-24 18:00:05 CST",
+  "finished_at": "2026-10-24 18:06:04 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -19,21 +19,30 @@
   },
   "totals": {
     "feed_count": 3,
-    "batch_article_count": 7,
-    "fetched": 7,
-    "inserted": 1,
-    "updated": 6,
+    "batch_article_count": 3,
+    "fetched": 3,
+    "inserted": 0,
+    "updated": 3,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67cc08a19a4297b6148b2994-channel",
-      "title": "新智元-公众号",
-      "fetched": 4,
-      "inserted": 1,
-      "updated": 3,
+      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
+      "title": "DeepTech深科技-公众号",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 1,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2969-z-potentials",
+      "title": "Z Potentials-公众号",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 1,
       "deduped": 0,
       "unchanged": 0
     },
@@ -43,15 +52,6 @@
       "fetched": 1,
       "inserted": 0,
       "updated": 1,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a19a4297b6148b295c-channel",
-      "title": "量子位-公众号",
-      "fetched": 2,
-      "inserted": 0,
-      "updated": 2,
       "deduped": 0,
       "unchanged": 0
     }
