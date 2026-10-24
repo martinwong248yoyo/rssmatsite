@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261024-080005",
-  "started_at": "2026-10-24 08:00:05 CST",
-  "finished_at": "2026-10-24 08:04:47 CST",
+  "timestamp": "20261024-100005",
+  "started_at": "2026-10-24 10:00:05 CST",
+  "finished_at": "2026-10-24 10:07:21 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,15 +18,34 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 0,
-    "batch_article_count": 0,
-    "fetched": 0,
-    "inserted": 0,
-    "updated": 0,
+    "feed_count": 2,
+    "batch_article_count": 3,
+    "fetched": 3,
+    "inserted": 1,
+    "updated": 2,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [],
+  "feeds": [
+    {
+      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
+      "title": "DeepTech深科技-公众号",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "title": "新智元-公众号",
+      "fetched": 2,
+      "inserted": 0,
+      "updated": 2,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
   "top_categories": []
 }
