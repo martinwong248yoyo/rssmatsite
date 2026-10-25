@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0"><head><title>新闻主题订阅 · 2026-10-25</title></head><body>
+  <outline text="国际新闻 · 美洲">
+    <outline type="rss" text="特朗普政府" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/us-trump-admin.xml"/>
+  </outline>
+  <outline text="国际新闻 · 亚太">
+    <outline type="rss" text="日本" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/japan.xml"/>
+  </outline>
+  <outline text="中国">
+    <outline type="rss" text="中国经济与产业" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/china-economy.xml"/>
+    <outline type="rss" text="社会案件与法治" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/china-crime-law.xml"/>
+  </outline>
+  <outline text="社会 · 环境">
+    <outline type="rss" text="气候 · 能源 · 环境" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/climate-energy.xml"/>
+  </outline>
+  <outline text="文化 · 体育">
+    <outline type="rss" text="影视与电视" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/culture-tv.xml"/>
+    <outline type="rss" text="音乐 · 图书 · 艺术" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/culture-music-arts.xml"/>
+  </outline>
+  <outline text="生活方式">
+    <outline type="rss" text="家庭与情感" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/life-family.xml"/>
+  </outline>
+  <outline text="速览与杂项">
+    <outline type="rss" text="专栏 · 评论 · 互动" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/columns.xml"/>
+  </outline>
+</body></opml>
