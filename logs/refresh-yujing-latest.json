@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261025-220003",
-  "started_at": "2026-10-25 22:00:03 CST",
-  "finished_at": "2026-10-25 22:05:57 CST",
+  "timestamp": "20261026-000004",
+  "started_at": "2026-10-26 00:00:04 CST",
+  "finished_at": "2026-10-26 00:08:34 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -19,21 +19,21 @@
   },
   "totals": {
     "feed_count": 1,
-    "batch_article_count": 2,
-    "fetched": 2,
+    "batch_article_count": 1,
+    "fetched": 1,
     "inserted": 1,
-    "updated": 1,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 0
+    "deleted_plain": 1
   },
   "feeds": [
     {
-      "source_key": "67cc08a29a4297b6148b29e8-channel",
-      "title": "甲子光年-公众号",
-      "fetched": 2,
+      "source_key": "67cc08a19a4297b6148b298f-channel",
+      "title": "武志红-公众号",
+      "fetched": 1,
       "inserted": 1,
-      "updated": 1,
+      "updated": 0,
       "deduped": 0,
       "unchanged": 0
     }
