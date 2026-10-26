@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261026-180004",
-  "started_at": "2026-10-26 18:00:04 CST",
-  "finished_at": "2026-10-26 18:08:18 CST",
+  "timestamp": "20261026-200004",
+  "started_at": "2026-10-26 20:00:04 CST",
+  "finished_at": "2026-10-26 20:22:30 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,22 +18,58 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 2,
-    "batch_article_count": 4,
-    "fetched": 4,
-    "inserted": 4,
-    "updated": 0,
+    "feed_count": 6,
+    "batch_article_count": 17,
+    "fetched": 17,
+    "inserted": 10,
+    "updated": 7,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 0
+    "deleted_plain": 1
   },
   "feeds": [
     {
+      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
+      "title": "DeepTech深科技-公众号",
+      "fetched": 2,
+      "inserted": 0,
+      "updated": 2,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
       "source_key": "67cc08a19a4297b6148b2994-channel",
       "title": "新智元-公众号",
-      "fetched": 2,
-      "inserted": 2,
+      "fetched": 1,
+      "inserted": 1,
       "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b298f-channel",
+      "title": "武志红-公众号",
+      "fetched": 3,
+      "inserted": 3,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
+      "title": "简单心理Uni-公众号",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "title": "财新-公众号",
+      "fetched": 8,
+      "inserted": 5,
+      "updated": 3,
       "deduped": 0,
       "unchanged": 0
     },
@@ -41,8 +77,8 @@
       "source_key": "67cc08a19a4297b6148b295c-channel",
       "title": "量子位-公众号",
       "fetched": 2,
-      "inserted": 2,
-      "updated": 0,
+      "inserted": 0,
+      "updated": 2,
       "deduped": 0,
       "unchanged": 0
     }
