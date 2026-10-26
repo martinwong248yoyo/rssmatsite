@@ -4,6 +4,7 @@
     <outline type="rss" text="以伊冲突与伊朗" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/iran-israel.xml"/>
   </outline>
   <outline text="国际新闻 · 欧洲">
+    <outline type="rss" text="欧洲其他" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/u6b27-u6d32-u5176-u.xml"/>
     <outline type="rss" text="法国骚乱与政治" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/france-unrest.xml"/>
   </outline>
   <outline text="国际新闻 · 美洲">
@@ -26,6 +27,7 @@
   </outline>
   <outline text="科技 · AI">
     <outline type="rss" text="AI 行业与科技公司" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/tech-ai.xml"/>
+    <outline type="rss" text="科学与探索" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/science.xml"/>
     <outline type="rss" text="网络安全事件" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/cyber-security.xml"/>
   </outline>
   <outline text="财经 · 商业">

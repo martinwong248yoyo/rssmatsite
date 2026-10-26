@@ -2,8 +2,8 @@
 <rss version="2.0"><channel>
 <title>科技 · AI › AI 行业与科技公司</title>
 <link>https://martinwong248yoyo.github.io/rssmatsite/news-themes/tech-ai.xml</link>
-<description>2026-10-26 主题订阅：科技 · AI › AI 行业与科技公司（15 篇）</description>
-<lastBuildDate>Mon, 26 Oct 2026 21:26:33 +0800</lastBuildDate>
+<description>2026-10-26 主题订阅：科技 · AI › AI 行业与科技公司（19 篇）</description>
+<lastBuildDate>Mon, 26 Oct 2026 22:27:33 +0800</lastBuildDate>
 <generator>matAgent_InfoSource theme-classifier</generator>
 <item>
 <title>【AI交易员】AI悄然入场：华尔街债券交易员部分工作或将被机器接手</title>
@@ -124,5 +124,37 @@
 <pubDate>Mon, 26 Oct 2026 03:21:00 +0800</pubDate>
 <source>财新</source>
 <description><![CDATA[自动驾驶企业或面临降维打击？]]></description>
+</item>
+<item>
+<title>【AnthropicIPO】史上最大IPO来了！Anthropic正式提交IPO申请，上半年净亏损807亿美元，公司称未来可能无法实现盈利</title>
+<link>https://wallstreetcn.com/articles/3784495</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784495</guid>
+<pubDate>Mon, 26 Oct 2026 21:05:31 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[史上最大IPO来了！Anthropic正式提交IPO申请，上半年净亏损807亿美元，公司称未来可能无法实现盈利]]></description>
+</item>
+<item>
+<title>【SpaceX算力】SpaceX签下400亿美元AI算力融资租赁协议，押注英伟达下一代芯片</title>
+<link>https://wallstreetcn.com/articles/3784493</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784493</guid>
+<pubDate>Mon, 26 Oct 2026 21:00:11 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[SpaceX签下400亿美元AI算力融资租赁协议，押注英伟达下一代芯片]]></description>
+</item>
+<item>
+<title>【机器人调研】大摩中国机器人调研：企业愿意尝试但严格算账，要求10万元以内，三年内回本</title>
+<link>https://wallstreetcn.com/articles/3784489</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784489</guid>
+<pubDate>Mon, 26 Oct 2026 20:49:50 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[大摩中国机器人调研：企业愿意尝试但严格算账，要求10万元以内，三年内回本]]></description>
+</item>
+<item>
+<title>【马斯克怒斥】真急了！马斯克怒斥“下地狱去吧！”</title>
+<link>http://weixin.sogou.com/weixin?type=2&amp;query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E7%9C%9F%E6%80%A5%E4%BA%86%EF%BC%81%E9%A9%AC%E6%96%AF%E5%85%8B%E6%80%92%E6%96%A5%E2%80%9C%E4%B8%8B%E5%9C%B0%E7%8B%B1%E5%8E%BB%E5%90%A7%EF%BC%81%E2%80%9D</link>
+<guid isPermaLink="true">http://weixin.sogou.com/weixin?type=2&amp;query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E7%9C%9F%E6%80%A5%E4%BA%86%EF%BC%81%E9%A9%AC%E6%96%AF%E5%85%8B%E6%80%92%E6%96%A5%E2%80%9C%E4%B8%8B%E5%9C%B0%E7%8B%B1%E5%8E%BB%E5%90%A7%EF%BC%81%E2%80%9D</guid>
+<pubDate>Mon, 26 Oct 2026 15:22:00 +0800</pubDate>
+<source>环球时报</source>
+<description><![CDATA[真急了！马斯克怒斥“下地狱去吧！”]]></description>
 </item>
 </channel></rss>

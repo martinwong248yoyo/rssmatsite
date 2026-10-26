@@ -63,6 +63,10 @@
   "group": "国际新闻 · 亚太",
   "slug": "japan"
  },
+ "欧洲其他": {
+  "group": "国际新闻 · 欧洲",
+  "slug": "u6b27-u6d32-u5176-u"
+ },
  "每日新闻简报": {
   "group": "速览与杂项",
   "slug": "daily-brief"
@@ -82,6 +86,10 @@
  "社会案件与法治": {
   "group": "中国",
   "slug": "china-crime-law"
+ },
+ "科学与探索": {
+  "group": "科技 · AI",
+  "slug": "science"
  },
  "网络安全事件": {
   "group": "科技 · AI",
