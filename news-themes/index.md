@@ -17,7 +17,7 @@
 - 【动荡法兰西】[最新封面报道｜动荡法兰西](https://lingowhale.com/reader/web/6adec9c93d28fc31db4538e4?channel_id=67cc08a59a4297b6148b2f44) — 10-26 03:21 · 财新
 - 【周刊导播】[最新周刊导播｜动荡法兰西、长聘不稳了、人民币升值之后](https://lingowhale.com/reader/web/6adf2e717169059d5276e78e?channel_id=67cc08a59a4297b6148b2f44) — 10-26 09:58 · 财新
 
-### 📰 欧洲其他 <sub>u6b27-u6d32-u5176-u.xml</sub>（1）
+### 📰 欧洲其他 <sub>europe-misc.xml</sub>（1）
 
 - 【武契奇时代】[塞尔维亚“武契奇时代”结束](https://lingowhale.com/reader/web/6adf2e701bc0e54a0ca21481?channel_id=67cc08a59a4297b6148b2f44) — 10-26 09:58 · 财新
 
