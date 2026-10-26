@@ -2,15 +2,127 @@
 <rss version="2.0"><channel>
 <title>科技 · AI › AI 行业与科技公司</title>
 <link>https://martinwong248yoyo.github.io/rssmatsite/news-themes/tech-ai.xml</link>
-<description>2026-10-26 主题订阅：科技 · AI › AI 行业与科技公司（1 篇）</description>
-<lastBuildDate>Mon, 26 Oct 2026 19:23:34 +0800</lastBuildDate>
+<description>2026-10-26 主题订阅：科技 · AI › AI 行业与科技公司（15 篇）</description>
+<lastBuildDate>Mon, 26 Oct 2026 20:11:17 +0800</lastBuildDate>
 <generator>matAgent_InfoSource theme-classifier</generator>
 <item>
-<title>【AI投资】巨额资金已经冲进AI，宏观账还没算清</title>
-<link>http://www.infzm.com/contents/343350</link>
-<guid isPermaLink="true">http://www.infzm.com/contents/343350</guid>
-<pubDate>Mon, 26 Oct 2026 10:25:05 +0800</pubDate>
-<source>南方周末</source>
-<description><![CDATA[巨额资金已经冲进AI，宏观账还没算清]]></description>
+<title>【AI交易员】AI悄然入场：华尔街债券交易员部分工作或将被机器接手</title>
+<link>https://wallstreetcn.com/articles/3784486</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784486</guid>
+<pubDate>Mon, 26 Oct 2026 19:54:50 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[AI悄然入场：华尔街债券交易员部分工作或将被机器接手]]></description>
+</item>
+<item>
+<title>【Meta增发】股票募资就达950亿美元，包括650亿ATM发行！Meta“增发”补充AI弹药</title>
+<link>https://wallstreetcn.com/articles/3784484</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784484</guid>
+<pubDate>Mon, 26 Oct 2026 19:01:52 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[股票募资就达950亿美元，包括650亿ATM发行！Meta“增发”补充AI弹药]]></description>
+</item>
+<item>
+<title>【AI云清洗】马斯克预警：200多家AI云厂商面临清洗，Nebius、CoreWeave盘前跌超4%</title>
+<link>https://wallstreetcn.com/articles/3784479</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784479</guid>
+<pubDate>Mon, 26 Oct 2026 18:23:09 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[马斯克预警：200多家AI云厂商面临清洗，Nebius、CoreWeave盘前跌超4%]]></description>
+</item>
+<item>
+<title>【云巨头财报】AI交易迎来关键一周：微软、亚马逊、谷歌财报检验资本开支回报</title>
+<link>https://wallstreetcn.com/articles/3784476</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784476</guid>
+<pubDate>Mon, 26 Oct 2026 18:15:03 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[AI交易迎来关键一周：微软、亚马逊、谷歌财报检验资本开支回报]]></description>
+</item>
+<item>
+<title>【Arm评测】GPU被CPU拖慢？Arm祭出新评测方法论</title>
+<link>https://wallstreetcn.com/articles/3784469</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784469</guid>
+<pubDate>Mon, 26 Oct 2026 17:03:58 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[GPU被CPU拖慢？Arm祭出新评测方法论]]></description>
+</item>
+<item>
+<title>【云巨头财报】市场“瑟瑟发抖”！“资本开支”高度敏感之际，美国云三巨头本周一起“交财报”</title>
+<link>https://wallstreetcn.com/articles/3784424</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784424</guid>
+<pubDate>Mon, 26 Oct 2026 16:03:58 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[市场“瑟瑟发抖”！“资本开支”高度敏感之际，美国云三巨头本周一起“交财报”]]></description>
+</item>
+<item>
+<title>【TikTok换将】TikTok电商换将：欧洲负责人陈熙即将离职，由宋琪接棒</title>
+<link>https://wallstreetcn.com/articles/3784463</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784463</guid>
+<pubDate>Mon, 26 Oct 2026 15:40:55 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[TikTok电商换将：欧洲负责人陈熙即将离职，由宋琪接棒]]></description>
+</item>
+<item>
+<title>【机器人涨停】人形机器人板块掀涨停潮，发生了什么？</title>
+<link>https://wallstreetcn.com/articles/3784459</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784459</guid>
+<pubDate>Mon, 26 Oct 2026 15:31:05 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[人形机器人板块掀涨停潮，发生了什么？]]></description>
+</item>
+<item>
+<title>【Claude越权】Anthropic再曝AI自主行动：Claude未经指令获取佐治亚州选票数据</title>
+<link>https://wallstreetcn.com/articles/3784457</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784457</guid>
+<pubDate>Mon, 26 Oct 2026 15:01:28 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[Anthropic再曝AI自主行动：Claude未经指令获取佐治亚州选票数据]]></description>
+</item>
+<item>
+<title>【SuperMimic】人形机器人大进化！SuperMimic技术让运动控制训练成本骤降1000倍</title>
+<link>https://wallstreetcn.com/articles/3784444</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784444</guid>
+<pubDate>Mon, 26 Oct 2026 12:30:02 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[人形机器人大进化！SuperMimic技术让运动控制训练成本骤降1000倍]]></description>
+</item>
+<item>
+<title>【趋境融资】趋境科技获13亿元B轮融资 “高质Token”的吸引力靠谱吗</title>
+<link>https://wallstreetcn.com/articles/3784449</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784449</guid>
+<pubDate>Mon, 26 Oct 2026 11:56:41 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[趋境科技获13亿元B轮融资 “高质Token”的吸引力靠谱吗]]></description>
+</item>
+<item>
+<title>【宇树增持】宇树评级从“低配”升至“增持”！摩根大通：物理AI“采纳曲线”可能提前</title>
+<link>https://wallstreetcn.com/articles/3784431</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784431</guid>
+<pubDate>Mon, 26 Oct 2026 11:34:39 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[宇树评级从“低配”升至“增持”！摩根大通：物理AI“采纳曲线”可能提前]]></description>
+</item>
+<item>
+<title>【SpaceX融资】马斯克称SpaceX已完成400亿美元GPU债务融资，以可赎回债为主</title>
+<link>https://wallstreetcn.com/articles/3784441</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784441</guid>
+<pubDate>Mon, 26 Oct 2026 11:11:54 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[马斯克称SpaceX已完成400亿美元GPU债务融资，以可赎回债为主]]></description>
+</item>
+<item>
+<title>【折叠iPhone】苹果折叠机iPhone Duo供不应求，追加三成订单提振鸿海、台积电等供应链</title>
+<link>https://wallstreetcn.com/articles/3784429</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3784429</guid>
+<pubDate>Mon, 26 Oct 2026 09:19:46 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[苹果折叠机iPhone Duo供不应求，追加三成订单提振鸿海、台积电等供应链]]></description>
+</item>
+<item>
+<title>【自动驾驶】自动驾驶企业或面临降维打击？</title>
+<link>https://lingowhale.com/reader/web/6adec8f6706754a1603531e1?channel_id=67cc08a59a4297b6148b2f44</link>
+<guid isPermaLink="true">https://lingowhale.com/reader/web/6adec8f6706754a1603531e1?channel_id=67cc08a59a4297b6148b2f44</guid>
+<pubDate>Mon, 26 Oct 2026 03:21:00 +0800</pubDate>
+<source>财新</source>
+<description><![CDATA[自动驾驶企业或面临降维打击？]]></description>
 </item>
 </channel></rss>

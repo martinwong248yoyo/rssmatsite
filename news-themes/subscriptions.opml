@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <opml version="2.0"><head><title>新闻主题订阅 · 2026-10-26</title></head><body>
+  <outline text="国际新闻 · 中东">
+    <outline type="rss" text="以伊冲突与伊朗" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/iran-israel.xml"/>
+  </outline>
+  <outline text="国际新闻 · 欧洲">
+    <outline type="rss" text="法国骚乱与政治" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/france-unrest.xml"/>
+  </outline>
   <outline text="国际新闻 · 美洲">
     <outline type="rss" text="拉美政局" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/latin-america.xml"/>
     <outline type="rss" text="特朗普政府" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/us-trump-admin.xml"/>
+    <outline type="rss" text="美国中期选举" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/us-midterms.xml"/>
   </outline>
   <outline text="国际新闻 · 亚太">
     <outline type="rss" text="亚太其他" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/asia-pacific-misc.xml"/>
@@ -12,12 +19,18 @@
     <outline type="rss" text="中国 · 其他" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/china-misc.xml"/>
     <outline type="rss" text="中国 · 内政与外交" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/china-politics.xml"/>
     <outline type="rss" text="中国经济与产业" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/china-economy.xml"/>
+    <outline type="rss" text="中美博弈" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/china-us-relations.xml"/>
     <outline type="rss" text="人物与暖新闻" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/china-people.xml"/>
+    <outline type="rss" text="健康 · 养生 · 科普" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/china-health.xml"/>
     <outline type="rss" text="社会案件与法治" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/china-crime-law.xml"/>
   </outline>
   <outline text="科技 · AI">
     <outline type="rss" text="AI 行业与科技公司" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/tech-ai.xml"/>
     <outline type="rss" text="网络安全事件" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/cyber-security.xml"/>
+  </outline>
+  <outline text="财经 · 商业">
+    <outline type="rss" text="企业与商业" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/business.xml"/>
+    <outline type="rss" text="全球宏观经济" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/global-macro.xml"/>
   </outline>
   <outline text="社会 · 环境">
     <outline type="rss" text="气候 · 能源 · 环境" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/climate-energy.xml"/>
@@ -32,5 +45,8 @@
   <outline text="速览与杂项">
     <outline type="rss" text="专栏 · 评论 · 互动" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/columns.xml"/>
     <outline type="rss" text="每日新闻简报" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/daily-brief.xml"/>
+  </outline>
+  <outline text="未分组">
+    <outline type="rss" text="速览与杂项" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/briefing.xml"/>
   </outline>
 </body></opml>

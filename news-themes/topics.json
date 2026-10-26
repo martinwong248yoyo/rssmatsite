@@ -19,6 +19,10 @@
   "group": "中国",
   "slug": "china-economy"
  },
+ "中美博弈": {
+  "group": "中国",
+  "slug": "china-us-relations"
+ },
  "亚太其他": {
   "group": "国际新闻 · 亚太",
   "slug": "asia-pacific-misc"
@@ -26,6 +30,22 @@
  "人物与暖新闻": {
   "group": "中国",
   "slug": "china-people"
+ },
+ "以伊冲突与伊朗": {
+  "group": "国际新闻 · 中东",
+  "slug": "iran-israel"
+ },
+ "企业与商业": {
+  "group": "财经 · 商业",
+  "slug": "business"
+ },
+ "健康 · 养生 · 科普": {
+  "group": "中国",
+  "slug": "china-health"
+ },
+ "全球宏观经济": {
+  "group": "财经 · 商业",
+  "slug": "global-macro"
  },
  "家庭与情感": {
   "group": "生活方式",
@@ -51,6 +71,10 @@
   "group": "社会 · 环境",
   "slug": "climate-energy"
  },
+ "法国骚乱与政治": {
+  "group": "国际新闻 · 欧洲",
+  "slug": "france-unrest"
+ },
  "特朗普政府": {
   "group": "国际新闻 · 美洲",
   "slug": "us-trump-admin"
@@ -62,6 +86,14 @@
  "网络安全事件": {
   "group": "科技 · AI",
   "slug": "cyber-security"
+ },
+ "美国中期选举": {
+  "group": "国际新闻 · 美洲",
+  "slug": "us-midterms"
+ },
+ "速览与杂项": {
+  "group": "未分组",
+  "slug": "briefing"
  },
  "音乐 · 图书 · 艺术": {
   "group": "文化 · 体育",
