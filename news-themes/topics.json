@@ -1,0 +1,70 @@
+{
+ "AI 行业与科技公司": {
+  "group": "科技 · AI",
+  "slug": "tech-ai"
+ },
+ "专栏 · 评论 · 互动": {
+  "group": "速览与杂项",
+  "slug": "columns"
+ },
+ "中国 · 其他": {
+  "group": "中国",
+  "slug": "china-misc"
+ },
+ "中国 · 内政与外交": {
+  "group": "中国",
+  "slug": "china-politics"
+ },
+ "中国经济与产业": {
+  "group": "中国",
+  "slug": "china-economy"
+ },
+ "亚太其他": {
+  "group": "国际新闻 · 亚太",
+  "slug": "asia-pacific-misc"
+ },
+ "人物与暖新闻": {
+  "group": "中国",
+  "slug": "china-people"
+ },
+ "家庭与情感": {
+  "group": "生活方式",
+  "slug": "life-family"
+ },
+ "影视与电视": {
+  "group": "文化 · 体育",
+  "slug": "culture-tv"
+ },
+ "拉美政局": {
+  "group": "国际新闻 · 美洲",
+  "slug": "latin-america"
+ },
+ "日本": {
+  "group": "国际新闻 · 亚太",
+  "slug": "japan"
+ },
+ "每日新闻简报": {
+  "group": "速览与杂项",
+  "slug": "daily-brief"
+ },
+ "气候 · 能源 · 环境": {
+  "group": "社会 · 环境",
+  "slug": "climate-energy"
+ },
+ "特朗普政府": {
+  "group": "国际新闻 · 美洲",
+  "slug": "us-trump-admin"
+ },
+ "社会案件与法治": {
+  "group": "中国",
+  "slug": "china-crime-law"
+ },
+ "网络安全事件": {
+  "group": "科技 · AI",
+  "slug": "cyber-security"
+ },
+ "音乐 · 图书 · 艺术": {
+  "group": "文化 · 体育",
+  "slug": "culture-music-arts"
+ }
+}
