@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261027-100004",
-  "started_at": "2026-10-27 10:00:04 CST",
-  "finished_at": "2026-10-27 10:08:17 CST",
+  "timestamp": "20261027-120004",
+  "started_at": "2026-10-27 12:00:04 CST",
+  "finished_at": "2026-10-27 12:16:40 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -19,39 +19,30 @@
   },
   "totals": {
     "feed_count": 4,
-    "batch_article_count": 5,
-    "fetched": 5,
-    "inserted": 1,
-    "updated": 4,
+    "batch_article_count": 13,
+    "fetched": 13,
+    "inserted": 0,
+    "updated": 13,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
-      "title": "DeepTech深科技-公众号",
-      "fetched": 1,
-      "inserted": 1,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a19a4297b6148b29c6-channel",
-      "title": "数字生命卡兹克-公众号",
-      "fetched": 1,
+      "source_key": "67cc08a19a4297b6148b2969-z-potentials",
+      "title": "Z Potentials-公众号",
+      "fetched": 3,
       "inserted": 0,
-      "updated": 1,
+      "updated": 3,
       "deduped": 0,
       "unchanged": 0
     },
     {
       "source_key": "67cc08a19a4297b6148b2994-channel",
       "title": "新智元-公众号",
-      "fetched": 2,
+      "fetched": 3,
       "inserted": 0,
-      "updated": 2,
+      "updated": 3,
       "deduped": 0,
       "unchanged": 0
     },
@@ -61,6 +52,15 @@
       "fetched": 1,
       "inserted": 0,
       "updated": 1,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "title": "财新-公众号",
+      "fetched": 6,
+      "inserted": 0,
+      "updated": 6,
       "deduped": 0,
       "unchanged": 0
     }
