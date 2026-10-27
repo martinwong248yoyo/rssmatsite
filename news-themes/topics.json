@@ -35,9 +35,17 @@
   "group": "国际新闻 · 中东",
   "slug": "iran-israel"
  },
+ "以色列大选": {
+  "group": "国际新闻 · 中东",
+  "slug": "israel-election"
+ },
  "企业与商业": {
   "group": "财经 · 商业",
   "slug": "business"
+ },
+ "体育": {
+  "group": "文化 · 体育",
+  "slug": "sports"
  },
  "健康 · 养生 · 科普": {
   "group": "中国",
@@ -98,6 +106,10 @@
  "美国中期选举": {
   "group": "国际新闻 · 美洲",
   "slug": "us-midterms"
+ },
+ "胡塞武装与也门": {
+  "group": "国际新闻 · 中东",
+  "slug": "houthi-yemen"
  },
  "速览与杂项": {
   "group": "未分组",

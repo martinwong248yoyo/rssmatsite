@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<opml version="2.0"><head><title>新闻主题订阅 · 2026-10-26</title></head><body>
+<opml version="2.0"><head><title>新闻主题订阅 · 2026-10-27</title></head><body>
   <outline text="国际新闻 · 中东">
     <outline type="rss" text="以伊冲突与伊朗" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/iran-israel.xml"/>
+    <outline type="rss" text="以色列大选" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/israel-election.xml"/>
+    <outline type="rss" text="胡塞武装与也门" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/houthi-yemen.xml"/>
   </outline>
   <outline text="国际新闻 · 欧洲">
     <outline type="rss" text="欧洲其他" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/europe-misc.xml"/>
@@ -38,6 +40,7 @@
     <outline type="rss" text="气候 · 能源 · 环境" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/climate-energy.xml"/>
   </outline>
   <outline text="文化 · 体育">
+    <outline type="rss" text="体育" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/sports.xml"/>
     <outline type="rss" text="影视与电视" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/culture-tv.xml"/>
     <outline type="rss" text="音乐 · 图书 · 艺术" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/culture-music-arts.xml"/>
   </outline>
