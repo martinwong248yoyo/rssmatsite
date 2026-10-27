@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261028-020004",
-  "started_at": "2026-10-28 02:00:04 CST",
-  "finished_at": "2026-10-28 02:05:06 CST",
+  "timestamp": "20261028-040004",
+  "started_at": "2026-10-28 04:00:04 CST",
+  "finished_at": "2026-10-28 04:06:03 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,15 +18,25 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 0,
-    "batch_article_count": 0,
-    "fetched": 0,
-    "inserted": 0,
+    "feed_count": 1,
+    "batch_article_count": 1,
+    "fetched": 1,
+    "inserted": 1,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [],
+  "feeds": [
+    {
+      "source_key": "67cc08a39a4297b6148b2c97-ai",
+      "title": "AI异类弗兰克-公众号",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
   "top_categories": []
 }
