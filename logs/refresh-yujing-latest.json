@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261029-040004",
-  "started_at": "2026-10-29 04:00:04 CST",
-  "finished_at": "2026-10-29 04:05:27 CST",
+  "timestamp": "20261029-060006",
+  "started_at": "2026-10-29 06:00:06 CST",
+  "finished_at": "2026-10-29 06:05:44 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -21,19 +21,19 @@
     "feed_count": 1,
     "batch_article_count": 1,
     "fetched": 1,
-    "inserted": 0,
-    "updated": 1,
+    "inserted": 1,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67cc08a39a4297b6148b2c97-ai",
-      "title": "AI异类弗兰克-公众号",
+      "source_key": "68060c00303fabc7419af262-channel",
+      "title": "金融-公众号-评论",
       "fetched": 1,
-      "inserted": 0,
-      "updated": 1,
+      "inserted": 1,
+      "updated": 0,
       "deduped": 0,
       "unchanged": 0
     }
