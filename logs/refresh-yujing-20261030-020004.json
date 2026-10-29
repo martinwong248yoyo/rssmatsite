@@ -1,0 +1,42 @@
+{
+  "timestamp": "20261030-020004",
+  "started_at": "2026-10-30 02:00:04 CST",
+  "finished_at": "2026-10-30 02:05:34 CST",
+  "command": "npm run refresh:yujing -- --headless",
+  "settings": {
+    "recent_days": 3,
+    "max_articles": 10,
+    "profile_dir": null,
+    "risk_profile": "low",
+    "include_all_channels": false,
+    "limit": null,
+    "name_includes": null,
+    "publish": false,
+    "remote_qnap_import": true,
+    "remote_qnap_db_only": true,
+    "import_scope": "batch_delta",
+    "batch_channel_count": 16
+  },
+  "totals": {
+    "feed_count": 1,
+    "batch_article_count": 1,
+    "fetched": 1,
+    "inserted": 0,
+    "updated": 1,
+    "deduped": 0,
+    "unchanged": 0,
+    "deleted_plain": 0
+  },
+  "feeds": [
+    {
+      "source_key": "67cc08a19a4297b6148b2932-knowyourself",
+      "title": "KnowYourself-公众号",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 1,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
+  "top_categories": []
+}
