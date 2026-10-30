@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261031-040005",
-  "started_at": "2026-10-31 04:00:05 CST",
-  "finished_at": "2026-10-31 04:05:42 CST",
+  "timestamp": "20261031-060023",
+  "started_at": "2026-10-31 06:00:23 CST",
+  "finished_at": "2026-10-31 06:03:34 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,25 +18,15 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 1,
-    "batch_article_count": 1,
-    "fetched": 1,
-    "inserted": 1,
+    "feed_count": 0,
+    "batch_article_count": 0,
+    "fetched": 0,
+    "inserted": 0,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 1
+    "deleted_plain": 0
   },
-  "feeds": [
-    {
-      "source_key": "67e5334abf856a52db04e0b7-ai",
-      "title": "热门AI公众号更新追踪",
-      "fetched": 1,
-      "inserted": 1,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    }
-  ],
+  "feeds": [],
   "top_categories": []
 }
