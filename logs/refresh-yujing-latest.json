@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261031-060023",
-  "started_at": "2026-10-31 06:00:23 CST",
-  "finished_at": "2026-10-31 06:03:34 CST",
+  "timestamp": "20261031-080005",
+  "started_at": "2026-10-31 08:00:05 CST",
+  "finished_at": "2026-10-31 08:04:20 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,15 +18,25 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 0,
-    "batch_article_count": 0,
-    "fetched": 0,
-    "inserted": 0,
+    "feed_count": 1,
+    "batch_article_count": 1,
+    "fetched": 1,
+    "inserted": 1,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [],
+  "feeds": [
+    {
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "title": "新智元-公众号",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
   "top_categories": []
 }
