@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261103-040007",
-  "started_at": "2026-11-03 04:00:07 CST",
-  "finished_at": "2026-11-03 04:08:13 CST",
+  "timestamp": "20261103-060008",
+  "started_at": "2026-11-03 06:00:08 CST",
+  "finished_at": "2026-11-03 06:06:01 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -15,28 +15,18 @@
     "remote_qnap_import": true,
     "remote_qnap_db_only": true,
     "import_scope": "batch_delta",
-    "batch_channel_count": 16
+    "batch_channel_count": 0
   },
   "totals": {
-    "feed_count": 1,
-    "batch_article_count": 1,
-    "fetched": 1,
+    "feed_count": 0,
+    "batch_article_count": 0,
+    "fetched": 0,
     "inserted": 0,
-    "updated": 1,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [
-    {
-      "source_key": "67cc08a29a4297b6148b29ed-waves",
-      "title": "暗涌Waves-公众号",
-      "fetched": 1,
-      "inserted": 0,
-      "updated": 1,
-      "deduped": 0,
-      "unchanged": 0
-    }
-  ],
+  "feeds": [],
   "top_categories": []
 }
