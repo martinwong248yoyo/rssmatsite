@@ -3,7 +3,7 @@
 - Updated articles this run: `3`
 - New articles inserted: `3`
 - Existing articles updated: `0`
-- Run time: `2026-11-04 08:00:05 CST` to `2026-11-04 08:09:59 CST`
+- Run time: `2026-11-04 10:00:05 CST` to `2026-11-04 10:07:27 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -19,8 +19,8 @@
 
 ## Feed-Level Changes
 
-- `新智元-公众号`: fetched=`2`, inserted=`2`, updated=`0`, deduped=`0`, unchanged=`0`
-- `热门AI公众号更新追踪`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `数字生命卡兹克-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `量子位-公众号`: fetched=`2`, inserted=`2`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
 
