@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261104-180007",
-  "started_at": "2026-11-04 18:00:07 CST",
-  "finished_at": "2026-11-04 18:11:25 CST",
+  "timestamp": "20261104-200008",
+  "started_at": "2026-11-04 20:00:08 CST",
+  "finished_at": "2026-11-04 20:18:06 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,31 +18,40 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 2,
-    "batch_article_count": 6,
-    "fetched": 6,
+    "feed_count": 3,
+    "batch_article_count": 11,
+    "fetched": 11,
     "inserted": 0,
-    "updated": 6,
+    "updated": 11,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "title": "新智元-公众号",
+      "fetched": 3,
+      "inserted": 0,
+      "updated": 3,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
       "source_key": "67cc08a19a4297b6148b298f-channel",
       "title": "武志红-公众号",
-      "fetched": 2,
+      "fetched": 1,
       "inserted": 0,
-      "updated": 2,
+      "updated": 1,
       "deduped": 0,
       "unchanged": 0
     },
     {
       "source_key": "67cc08a59a4297b6148b2f44-channel",
       "title": "财新-公众号",
-      "fetched": 4,
+      "fetched": 7,
       "inserted": 0,
-      "updated": 4,
+      "updated": 7,
       "deduped": 0,
       "unchanged": 0
     }
