@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<opml version="2.0"><head><title>新闻主题订阅 · 2026-11-07</title></head><body>
+<opml version="2.0"><head><title>新闻主题订阅 · 2026-11-08</title></head><body>
   <outline text="国际新闻 · 中东">
     <outline type="rss" text="以伊冲突与伊朗" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/iran-israel.xml"/>
     <outline type="rss" text="以色列大选" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/israel-election.xml"/>
@@ -51,6 +51,7 @@
   </outline>
   <outline text="生活方式">
     <outline type="rss" text="家庭与情感" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/life-family.xml"/>
+    <outline type="rss" text="美食与生活方式" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/u7f8e-u98df-u4e0e-u.xml"/>
   </outline>
   <outline text="速览与杂项">
     <outline type="rss" text="专栏 · 评论 · 互动" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/columns.xml"/>

@@ -1,143 +1,125 @@
-# 新闻主题 Feed · 2026-11-07
+# 新闻主题 Feed · 2026-11-08
 
-> 五源（环球时报/央视新闻/南方周末/华尔街见闻/财新）今日共 56 篇，AI 精读归入 20 个主题；
-> 累计订阅主题 33 个（当日无新文章的主题 feed 为空频道，订阅保留）。
+> 五源（环球时报/央视新闻/南方周末/华尔街见闻/财新）今日共 38 篇，AI 精读归入 19 个主题；
+> 累计订阅主题 34 个（当日无新文章的主题 feed 为空频道，订阅保留）。
 > Feedly 导入 subscriptions.opml：文件夹 = 一级主题，订阅 = 二级子主题，标题前缀【关键词】。
+> 排版：description 段落化 HTML（本页功能标识用文字，不使用 emoji）。
 
-## 📂 国际新闻 · 中东
+## 国际新闻 · 欧洲
 
-### 📰 以伊冲突与伊朗 <sub>iran-israel.xml</sub>（2）
+### 欧洲其他 <sub>europe-misc.xml</sub>（1）
 
-- 【美伊谈判】[卡塔尔称美伊谈判取得重大进展！万斯深度介入，斡旋升至美国政府最高层级](https://wallstreetcn.com/articles/3785439) — 11-07 15:59 · 华尔街见闻
-- 【格什姆岛遇袭】[两枚导弹击中伊朗格什姆岛！美伊冲突再传新消息](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E4%B8%A4%E6%9E%9A%E5%AF%BC%E5%BC%B9%E5%87%BB%E4%B8%AD%E4%BC%8A%E6%9C%97%E6%A0%BC%E4%BB%80%E5%A7%86%E5%B2%9B%EF%BC%81%E7%BE%8E%E4%BC%8A%E5%86%B2%E7%AA%81%E5%86%8D%E4%BC%A0%E6%96%B0%E6%B6%88%E6%81%AF) — 11-07 12:12 · 环球时报
+- 【克拉科夫枪击】[波兰宣布全国哀悼，克拉科夫枪击事件已致6人死亡、16人受伤](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E6%B3%A2%E5%85%B0%E5%AE%A3%E5%B8%83%E5%85%A8%E5%9B%BD%E5%93%80%E6%82%BC%EF%BC%8C%E5%85%8B%E6%8B%89%E7%A7%91%E5%A4%AB%E6%9E%AA%E5%87%BB%E4%BA%8B%E4%BB%B6%E5%B7%B2%E8%87%B46%E4%BA%BA%E6%AD%BB%E4%BA%A1%E3%80%8116%E4%BA%BA%E5%8F%97%E4%BC%A4) — 11-08 13:48 · 环球时报
 
-## 📂 国际新闻 · 欧洲
+### 欧洲抗议潮 <sub>europe-protests.xml</sub>（1）
 
-### 📰 欧洲抗议潮 <sub>europe-protests.xml</sub>（1）
+- 【数据中心抗议】[“反对数据中心”浪潮不止在美国，欧洲多国爆发抗议](https://wallstreetcn.com/articles/3785465) — 11-08 09:56 · 华尔街见闻
 
-- 【社会不平等】[“社会不平等加剧”：欧洲抗议潮里的“深层愤怒”](http://www.infzm.com/contents/344295) — 11-07 14:25 · 南方周末
+## 国际新闻 · 美洲
 
-## 📂 国际新闻 · 美洲
+### 特朗普政府 <sub>us-trump-admin.xml</sub>（2）
 
-### 📰 特朗普政府 <sub>us-trump-admin.xml</sub>（2）
+- 【UFC总裁怀特】[特朗普邀UFC老板出任白宫发言人，对方或已婉拒](https://wallstreetcn.com/articles/3785489) — 11-08 18:45 · 华尔街见闻
+- 【UFC总裁怀特】[为未来两年“激烈斗争”做准备！特朗普邀请“格斗联盟”UFC总裁出任白宫发言人](https://wallstreetcn.com/articles/3785475) — 11-08 15:20 · 华尔街见闻
 
-- 【白宫幕僚长换人】[不改变政策路线！特朗普撤换白宫幕僚长，任命“强硬派”Stephen Miller](https://wallstreetcn.com/articles/3785431) — 11-07 11:44 · 华尔街见闻
-- 【科技顾问会议取消】[科技股大跌次日，美国白宫突然取消顶级科技顾问会议](https://wallstreetcn.com/articles/3785414) — 11-07 07:18 · 华尔街见闻
+### 美国中期选举 <sub>us-midterms.xml</sub>（2）
 
-### 📰 美国中期选举 <sub>us-midterms.xml</sub>（1）
+- 【加密货币监管】[共和党中选大败，币圈“好事到头”了？](https://wallstreetcn.com/articles/3785476) — 11-08 15:17 · 华尔街见闻
+- 【AI股大跌】[“蓝色浪潮”重创科技信仰，AI交易何时企稳？未来如何演变？华尔街密集研判](https://wallstreetcn.com/articles/3785473) — 11-08 14:00 · 华尔街见闻
 
-- 【数据中心项目取消】[美国下半年20余个数据中心项目被取消](https://lingowhale.com/reader/web/6aeeab04ff6d5a8389207b40?channel_id=67cc08a59a4297b6148b2f44) — 11-07 03:37 · 财新
+## 国际新闻 · 亚太
 
-## 📂 国际新闻
+### 日本 <sub>japan.xml</sub>（1）
 
-### 📰 俄乌战争 <sub>russia-ukraine.xml</sub>（1）
+- 【静冈地震】[日本突发地震](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E6%97%A5%E6%9C%AC%E7%AA%81%E5%8F%91%E5%9C%B0%E9%9C%87) — 11-08 11:57 · 环球时报
 
-- 【美俄乌谈判】[三方下周重启谈判，立场分歧依然巨大，美总统称将就俄乌达成“重大协议”，乌方称“不指望取得突破”](https://wallstreetcn.com/articles/3785418) — 11-07 09:10 · 华尔街见闻
+## 国际新闻
 
-## 📂 中国
+### 俄乌战争 <sub>russia-ukraine.xml</sub>（1）
 
-### 📰 社会案件与法治 <sub>china-crime-law.xml</sub>（4）
+- 【俄美乌会谈】[俄美乌三方会谈在即、特朗普会前密集斡旋，这次会迎来“大和解”吗？](https://wallstreetcn.com/articles/3785474) — 11-08 14:17 · 华尔街见闻
 
-- 【银行拖延扣款】[企业主动凑齐1800万元提前还贷，钱都已经打进还款账户，银行却说要层层审批，拖了近俩月才扣，多收了10万元利息，法院判了：返还](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E4%BC%81%E4%B8%9A%E4%B8%BB%E5%8A%A8%E5%87%91%E9%BD%901800%E4%B8%87%E5%85%83%E6%8F%90%E5%89%8D%E8%BF%98%E8%B4%B7%EF%BC%8C%E9%92%B1%E9%83%BD%E5%B7%B2%E7%BB%8F%E6%89%93%E8%BF%9B%E8%BF%98%E6%AC%BE%E8%B4%A6%E6%88%B7%EF%BC%8C%E9%93%B6%E8%A1%8C%E5%8D%B4%E8%AF%B4%E8%A6%81%E5%B1%82%E5%B1%82%E5%AE%A1%E6%89%B9%EF%BC%8C%E6%8B%96%E4%BA%86%E8%BF%91%E4%BF%A9%E6%9C%88%E6%89%8D%E6%89%A3%EF%BC%8C%E5%A4%9A%E6%94%B6%E4%BA%8610%E4%B8%87%E5%85%83%E5%88%A9%E6%81%AF%EF%BC%8C%E6%B3%95%E9%99%A2%E5%88%A4%E4%BA%86%EF%BC%9A%E8%BF%94%E8%BF%98) — 11-07 13:53 · 环球时报
-- 【墨尔本骑手遇害】[一中国籍骑手在墨尔本不幸遇害身亡 ，我总领馆通报：犯罪嫌疑人已被缉拿归案，要求当地警方全力彻查此案，严惩凶手](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E4%B8%80%E4%B8%AD%E5%9B%BD%E7%B1%8D%E9%AA%91%E6%89%8B%E5%9C%A8%E5%A2%A8%E5%B0%94%E6%9C%AC%E4%B8%8D%E5%B9%B8%E9%81%87%E5%AE%B3%E8%BA%AB%E4%BA%A1%20%EF%BC%8C%E6%88%91%E6%80%BB%E9%A2%86%E9%A6%86%E9%80%9A%E6%8A%A5%EF%BC%9A%E7%8A%AF%E7%BD%AA%E5%AB%8C%E7%96%91%E4%BA%BA%E5%B7%B2%E8%A2%AB%E7%BC%89%E6%8B%BF%E5%BD%92%E6%A1%88%EF%BC%8C%E8%A6%81%E6%B1%82%E5%BD%93%E5%9C%B0%E8%AD%A6%E6%96%B9%E5%85%A8%E5%8A%9B%E5%BD%BB%E6%9F%A5%E6%AD%A4%E6%A1%88%EF%BC%8C%E4%B8%A5%E6%83%A9%E5%87%B6%E6%89%8B) — 11-07 13:53 · 环球时报
-- 【伪造病历骗保】[两个月内“流产”8次？女子伪造病历薅生育金“羊毛”，法院判了](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E4%B8%A4%E4%B8%AA%E6%9C%88%E5%86%85%E2%80%9C%E6%B5%81%E4%BA%A7%E2%80%9D8%E6%AC%A1%EF%BC%9F%E5%A5%B3%E5%AD%90%E4%BC%AA%E9%80%A0%E7%97%85%E5%8E%86%E8%96%85%E7%94%9F%E8%82%B2%E9%87%91%E2%80%9C%E7%BE%8A%E6%AF%9B%E2%80%9D%EF%BC%8C%E6%B3%95%E9%99%A2%E5%88%A4%E4%BA%86) — 11-07 12:35 · 央视新闻
-- 【未成年性侵案】[13岁少年性侵11岁女孩警方不立案 检察院查明有成年人参与作案](https://lingowhale.com/reader/web/6aeeabadb15ec989f1db2048?channel_id=67cc08a59a4297b6148b2f44) — 11-07 03:37 · 财新
+## 中国
 
-### 📰 中国经济与产业 <sub>china-economy.xml</sub>（3）
+### 中国 · 内政与外交 <sub>china-politics.xml</sub>（4）
 
-- 【进博国货圈粉】[国货反向圈粉世界！海外客商来进博会“体验中国”](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E5%9B%BD%E8%B4%A7%E5%8F%8D%E5%90%91%E5%9C%88%E7%B2%89%E4%B8%96%E7%95%8C%EF%BC%81%E6%B5%B7%E5%A4%96%E5%AE%A2%E5%95%86%E6%9D%A5%E8%BF%9B%E5%8D%9A%E4%BC%9A%E2%80%9C%E4%BD%93%E9%AA%8C%E4%B8%AD%E5%9B%BD%E2%80%9D) — 11-07 11:34 · 央视新闻
-- 【央行增持黄金】[连续24个月增持！中国央行10月扩购83万盎司黄金，步伐明显加快](https://wallstreetcn.com/articles/3785426) — 11-07 10:53 · 华尔街见闻
-- 【广州土地新规】[广州拟调整土地出让规则 房企不再替政府修路建公园](https://lingowhale.com/reader/web/6aeee7c2c75a09ff089ab008?channel_id=67cc08a59a4297b6148b2f44) — 11-07 08:16 · 财新
+- 【二十一大代表选举】[中央组织部负责人就党的二十一大代表选举工作答记者问](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E4%B8%AD%E5%A4%AE%E7%BB%84%E7%BB%87%E9%83%A8%E8%B4%9F%E8%B4%A3%E4%BA%BA%E5%B0%B1%E5%85%9A%E7%9A%84%E4%BA%8C%E5%8D%81%E4%B8%80%E5%A4%A7%E4%BB%A3%E8%A1%A8%E9%80%89%E4%B8%BE%E5%B7%A5%E4%BD%9C%E7%AD%94%E8%AE%B0%E8%80%85%E9%97%AE) — 11-08 13:12 · 环球时报
+- 【二十一大】[中央组织部负责人就党的二十一大代表选举工作答记者问](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E4%B8%AD%E5%A4%AE%E7%BB%84%E7%BB%87%E9%83%A8%E8%B4%9F%E8%B4%A3%E4%BA%BA%E5%B0%B1%E5%85%9A%E7%9A%84%E4%BA%8C%E5%8D%81%E4%B8%80%E5%A4%A7%E4%BB%A3%E8%A1%A8%E9%80%89%E4%B8%BE%E5%B7%A5%E4%BD%9C%E7%AD%94%E8%AE%B0%E8%80%85%E9%97%AE) — 11-08 10:49 · 央视新闻
+- 【反跨境腐败法】[首部涉外反腐专门法律出台，集惩治、预防、反制于一体](https://lingowhale.com/reader/web/6af046d2b15ec989f1df6ed6?channel_id=67cc08a59a4297b6148b2f44) — 11-08 08:35 · 财新
+- 【少将辞职】[广东省军区原司令员等四名少将辞去全国人大代表](https://lingowhale.com/reader/web/6aeffb449c66659e23cc9377?channel_id=67cc08a59a4297b6148b2f44) — 11-08 03:56 · 财新
 
-### 📰 中国 · 其他 <sub>china-misc.xml</sub>（1）
+### 人物与暖新闻 <sub>china-people.xml</sub>（2）
 
-- 【保定桥体事故】[河北保定发生桥体脱落事故，致4人受伤](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E6%B2%B3%E5%8C%97%E4%BF%9D%E5%AE%9A%E5%8F%91%E7%94%9F%E6%A1%A5%E4%BD%93%E8%84%B1%E8%90%BD%E4%BA%8B%E6%95%85%EF%BC%8C%E8%87%B44%E4%BA%BA%E5%8F%97%E4%BC%A4) — 11-07 15:34 · 央视新闻
+- 【头盔救命】[女子骑电动车没戴头盔，被交警处罚并提醒“回家戴头盔”，46分钟后捡回一条命：被半挂货车撞翻，头盔碎裂但人没事；家属：感谢交警](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E5%A5%B3%E5%AD%90%E9%AA%91%E7%94%B5%E5%8A%A8%E8%BD%A6%E6%B2%A1%E6%88%B4%E5%A4%B4%E7%9B%94%EF%BC%8C%E8%A2%AB%E4%BA%A4%E8%AD%A6%E5%A4%84%E7%BD%9A%E5%B9%B6%E6%8F%90%E9%86%92%E2%80%9C%E5%9B%9E%E5%AE%B6%E6%88%B4%E5%A4%B4%E7%9B%94%E2%80%9D%EF%BC%8C46%E5%88%86%E9%92%9F%E5%90%8E%E6%8D%A1%E5%9B%9E%E4%B8%80%E6%9D%A1%E5%91%BD%EF%BC%9A%E8%A2%AB%E5%8D%8A%E6%8C%82%E8%B4%A7%E8%BD%A6%E6%92%9E%E7%BF%BB%EF%BC%8C%E5%A4%B4%E7%9B%94%E7%A2%8E%E8%A3%82%E4%BD%86%E4%BA%BA%E6%B2%A1%E4%BA%8B%EF%BC%9B%E5%AE%B6%E5%B1%9E%EF%BC%9A%E6%84%9F%E8%B0%A2%E4%BA%A4%E8%AD%A6) — 11-08 13:48 · 环球时报
+- 【王扶之逝世】[最后一位开国将军王扶之逝世，享年104岁](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E6%9C%80%E5%90%8E%E4%B8%80%E4%BD%8D%E5%BC%80%E5%9B%BD%E5%B0%86%E5%86%9B%E7%8E%8B%E6%89%B6%E4%B9%8B%E9%80%9D%E4%B8%96%EF%BC%8C%E4%BA%AB%E5%B9%B4104%E5%B2%81) — 11-08 13:01 · 央视新闻
 
-### 📰 人物与暖新闻 <sub>china-people.xml</sub>（1）
+### 社会案件与法治 <sub>china-crime-law.xml</sub>（2）
 
-- 【月嫂下户】[“小宝贝，阿姨是这个世界上第一个离开宝宝的人”，月嫂一句话，让宝妈哭了好久……](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E2%80%9C%E5%B0%8F%E5%AE%9D%E8%B4%9D%EF%BC%8C%E9%98%BF%E5%A7%A8%E6%98%AF%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E4%B8%8A%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A6%BB%E5%BC%80%E5%AE%9D%E5%AE%9D%E7%9A%84%E4%BA%BA%E2%80%9D%EF%BC%8C%E6%9C%88%E5%AB%82%E4%B8%80%E5%8F%A5%E8%AF%9D%EF%BC%8C%E8%AE%A9%E5%AE%9D%E5%A6%88%E5%93%AD%E4%BA%86%E5%A5%BD%E4%B9%85%E2%80%A6%E2%80%A6) — 11-07 13:48 · 央视新闻
+- 【驾考作弊】[男子考驾照戴AI眼镜作弊，民警：答案错得离谱](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E7%94%B7%E5%AD%90%E8%80%83%E9%A9%BE%E7%85%A7%E6%88%B4AI%E7%9C%BC%E9%95%9C%E4%BD%9C%E5%BC%8A%EF%BC%8C%E6%B0%91%E8%AD%A6%EF%BC%9A%E7%AD%94%E6%A1%88%E9%94%99%E5%BE%97%E7%A6%BB%E8%B0%B1) — 11-08 09:47 · 央视新闻
+- 【直播诈骗】[“免费鉴宝、高价回收”！《焦点访谈》起底专盯老人的直播诈骗链](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E2%80%9C%E5%85%8D%E8%B4%B9%E9%89%B4%E5%AE%9D%E3%80%81%E9%AB%98%E4%BB%B7%E5%9B%9E%E6%94%B6%E2%80%9D%EF%BC%81%E3%80%8A%E7%84%A6%E7%82%B9%E8%AE%BF%E8%B0%88%E3%80%8B%E8%B5%B7%E5%BA%95%E4%B8%93%E7%9B%AF%E8%80%81%E4%BA%BA%E7%9A%84%E7%9B%B4%E6%92%AD%E8%AF%88%E9%AA%97%E9%93%BE) — 11-08 08:48 · 央视新闻
 
-### 📰 健康 · 养生 · 科普 <sub>china-health.xml</sub>（1）
+### 中国经济与产业 <sub>china-economy.xml</sub>（2）
 
-- 【肉毒毒素中毒】[女子吃了小半只手撕兔，早上醒来头昏脑胀，第三天突然喘不上气，最后进ICU躺了一个月。医生紧急提醒](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E5%A5%B3%E5%AD%90%E5%90%83%E4%BA%86%E5%B0%8F%E5%8D%8A%E5%8F%AA%E6%89%8B%E6%92%95%E5%85%94%EF%BC%8C%E6%97%A9%E4%B8%8A%E9%86%92%E6%9D%A5%E5%A4%B4%E6%98%8F%E8%84%91%E8%83%80%EF%BC%8C%E7%AC%AC%E4%B8%89%E5%A4%A9%E7%AA%81%E7%84%B6%E5%96%98%E4%B8%8D%E4%B8%8A%E6%B0%94%EF%BC%8C%E6%9C%80%E5%90%8E%E8%BF%9BICU%E8%BA%BA%E4%BA%86%E4%B8%80%E4%B8%AA%E6%9C%88%E3%80%82%E5%8C%BB%E7%94%9F%E7%B4%A7%E6%80%A5%E6%8F%90%E9%86%92) — 11-07 12:12 · 环球时报
+- 【民宿挤泡沫】[深度 | 年轻人的生意不好做，民宿行业正加速挤泡沫](https://lingowhale.com/reader/web/6af046d7ff6d5a838924cf2e?channel_id=67cc08a59a4297b6148b2f44) — 11-08 08:35 · 财新
+- 【黄金储备】[10月中国黄金储备增加26吨 央行连续购金已满两年](https://lingowhale.com/reader/web/6aeffb4e4be931034999ebf8?channel_id=67cc08a59a4297b6148b2f44) — 11-08 03:56 · 财新
 
-### 📰 中美博弈 <sub>china-us-relations.xml</sub>（1）
+### 健康 · 养生 · 科普 <sub>china-health.xml</sub>（1）
 
-- 【巴西稀土新规】[巴西拟出台新规！“这正是中国过去30年来一直在做的事情”](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E5%B7%B4%E8%A5%BF%E6%8B%9F%E5%87%BA%E5%8F%B0%E6%96%B0%E8%A7%84%EF%BC%81%E2%80%9C%E8%BF%99%E6%AD%A3%E6%98%AF%E4%B8%AD%E5%9B%BD%E8%BF%87%E5%8E%BB30%E5%B9%B4%E6%9D%A5%E4%B8%80%E7%9B%B4%E5%9C%A8%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85%E2%80%9D) — 11-07 11:30 · 环球时报
+- 【认知测试】[仅靠认知测试总分来招聘，可能并没有那么准](http://www.infzm.com/contents/344334) — 11-08 12:25 · 南方周末
 
-### 📰 中国 · 内政与外交 <sub>china-politics.xml</sub>（1）
+## 科技 · AI
 
-- 【叶建春被罢免】[江西原省长叶建春被罢免全国人大代表](https://lingowhale.com/reader/web/6aeeab944be93103499680af?channel_id=67cc08a59a4297b6148b2f44) — 11-07 03:37 · 财新
+### AI 行业与科技公司 <sub>tech-ai.xml</sub>（6）
 
-## 📂 科技 · AI
+- 【AI数据中心】[Anthropic斥资34亿美元采购燃气发电设备，为数据中心供电](https://wallstreetcn.com/articles/3785493) — 11-08 20:33 · 华尔街见闻
+- 【SpaceX】[马斯克中选后要被“秋后算账”？德银：算力越紧张SpaceX越赚钱，政治风险被高估](https://wallstreetcn.com/articles/3785492) — 11-08 20:00 · 华尔街见闻
+- 【算力许可冻结】[中选之后“美国新增算力被锁死”，马斯克成为“AI格局胜负手”](https://wallstreetcn.com/articles/3785472) — 11-08 12:37 · 华尔街见闻
+- 【空芯光纤】[千公里仅3.43毫秒！我国新一代通信网技术取得新突破](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E5%8D%83%E5%85%AC%E9%87%8C%E4%BB%853.43%E6%AF%AB%E7%A7%92%EF%BC%81%E6%88%91%E5%9B%BD%E6%96%B0%E4%B8%80%E4%BB%A3%E9%80%9A%E4%BF%A1%E7%BD%91%E6%8A%80%E6%9C%AF%E5%8F%96%E5%BE%97%E6%96%B0%E7%AA%81%E7%A0%B4) — 11-08 12:04 · 央视新闻
+- 【得州数据中心】[CoreWeave致信得州当选州长，寻求“数据中心磋商”](https://wallstreetcn.com/articles/3785464) — 11-08 08:59 · 华尔街见闻
+- 【人形机器人】[深度｜短期试用即宣告退场，人形机器人何时能“称职”返岗](https://lingowhale.com/reader/web/6aeffb4dff6d5a838923ea11?channel_id=67cc08a59a4297b6148b2f44) — 11-08 03:56 · 财新
 
-### 📰 AI 行业与科技公司 <sub>tech-ai.xml</sub>（8）
+## 财经 · 商业
 
-- 【Apollo购芯】[Apollo拟豪掷750亿美元采购AI芯片，规模远超任何一家Neocloud](https://wallstreetcn.com/articles/3785447) — 11-07 18:07 · 华尔街见闻
-- 【AI循环融资】[中选只不过是最后一根稻草？市场终于正视AI“循环融资”的雷](https://wallstreetcn.com/articles/3785435) — 11-07 14:05 · 华尔街见闻
-- 【数据中心贷款甩卖】[AI基建融资新裂痕！一批数据中心贷款被打包甩卖，星际之门项目也在其中](https://wallstreetcn.com/articles/3785434) — 11-07 13:22 · 华尔街见闻
-- 【台积电存储芯片】[英伟达“催单”，台积电也要造存储芯片了！](https://wallstreetcn.com/articles/3785433) — 11-07 12:52 · 华尔街见闻
-- 【数据中心逆风】[民主党摧毁数据中心狂潮？高盛“逆势唱多”：上调预测！](https://wallstreetcn.com/articles/3785421) — 11-07 10:20 · 华尔街见闻
-- 【微软算力收缩】[微软收缩AI算力租赁！据称逐步退出甲骨文云协议，“新云”CoreWeave闪跌](https://wallstreetcn.com/articles/3785404) — 11-07 09:26 · 华尔街见闻
-- 【OpenAI融资缩水】[OpenAI新一轮融资缩水！报道：完成110亿美元首批融资，估值1.25万亿美元，软银、红杉参投](https://wallstreetcn.com/articles/3785410) — 11-07 06:23 · 华尔街见闻
-- 【OpenAI融资遇冷】[大金主踩刹车？OpenAI新融资被曝遇冷、软银大幅缩减投入，CFO称中选后数据中心投资不变](https://wallstreetcn.com/articles/3785402) — 11-07 03:40 · 华尔街见闻
+### 全球宏观经济 <sub>global-macro.xml</sub>（6）
 
-### 📰 科学与探索 <sub>science.xml</sub>（1）
+- 【AI债务】[美股科技股重挫后，高盛称AI债务供给压力正在信用市场累积](https://wallstreetcn.com/articles/3785488) — 11-08 18:20 · 华尔街见闻
+- 【木头姐】[美股暴跌后，“木头姐”：市场越担忧我越乐观，牛市未完](https://wallstreetcn.com/articles/3785486) — 11-08 17:35 · 华尔街见闻
+- 【下周财经日程】[下周重磅日程：中美CPI、俄美乌三方会谈、CoreWeave财报与Anthropic路演](https://wallstreetcn.com/articles/3785467) — 11-08 10:23 · 华尔街见闻
+- 【原油暴跌】[原油“暴跌一周”：8天前还是“战火纷飞”，中选后对冲基金狂卖66亿美元](https://wallstreetcn.com/articles/3785468) — 11-08 10:08 · 华尔街见闻
+- 【科技股抄底】[科技股“黑色一周”之后，华尔街高呼“抄底”](https://wallstreetcn.com/articles/3785466) — 11-08 09:30 · 华尔街见闻
+- 【美股大跌】[美股大跌：有哪些原因？对A股有何影响？](https://lingowhale.com/reader/web/6af03ea1ff6d5a838924b188?channel_id=67cc08a59a4297b6148b2f44) — 11-08 08:35 · 财新
 
-- 【顶尖科学家论坛】[下一个十年，科学突破的确定性、不确定性与关键变量｜2026世界顶尖科学家论坛综述](http://www.infzm.com/contents/344297) — 11-07 15:25 · 南方周末
+### 企业与商业 <sub>business.xml</sub>（1）
 
-## 📂 财经 · 商业
+- 【红旗S9】[一汽红旗海外超跑项目烂尾 合作方陷债务谜团](https://lingowhale.com/reader/web/6af046ae28351a78dbc7b438?channel_id=67cc08a59a4297b6148b2f44) — 11-08 08:35 · 财新
 
-### 📰 全球宏观经济 <sub>global-macro.xml</sub>（15）
+## 社会 · 环境
 
-- 【高盛AI泡沫论】[AI泡沫破裂了吗？高盛：当下更像1998年，而非2000年](https://wallstreetcn.com/articles/3785440) — 11-07 16:15 · 华尔街见闻
-- 【恐慌指数】[预示反弹？高盛美股恐慌指数已达“极端水平”](https://wallstreetcn.com/articles/3785438) — 11-07 15:07 · 华尔街见闻
-- 【AI交易转向应用】[投降式抛售后，大摩反思AI交易：从“建设”转向“应用”](https://wallstreetcn.com/articles/3785432) — 11-07 11:44 · 华尔街见闻
-- 【AI资本开支见顶】[AI资本开支“见顶”，美国经济也随之“见顶”？](https://wallstreetcn.com/articles/3785430) — 11-07 11:04 · 华尔街见闻
-- 【非农加息警钟】[美股惊魂一周！AI抛售暂歇，但强劲非农敲响加息警钟，周五反弹恐只是“死猫跳”？](https://wallstreetcn.com/articles/3785420) — 11-07 10:32 · 华尔街见闻
-- 【科技股灾】[5.7万亿美元“灰飞烟灭”！一场“应已计价”的中选却引爆了“科技股灾”](https://wallstreetcn.com/articles/3785423) — 11-07 10:04 · 华尔街见闻
-- 【A股情绪指数】[大摩A股情绪指数突破“过度悲观”阈值，往往预示一到两个月内市场可能反弹](https://wallstreetcn.com/articles/3785425) — 11-07 09:54 · 华尔街见闻
-- 【债务上限】[华尔街预计美国债务上限将于2月触顶，"X日期"或在2027年底前到来](https://wallstreetcn.com/articles/3785417) — 11-07 08:42 · 华尔街见闻
-- 【日央行通胀】[日央行行长：通胀存在上行风险，若未来遭遇严重冲击，或再次启用非常规宽松工具](https://wallstreetcn.com/articles/3785411) — 11-07 07:16 · 华尔街见闻
-- 【芯片股反弹】[强劲非农提振加息预期，美元大涨，美股分化道指收跌，芯片股技术性反弹，AMD涨11%](https://wallstreetcn.com/articles/3785315) — 11-07 06:45 · 华尔街见闻
-- 【对冲基金重创】[AI忧虑冲击科技股，老虎环球、Lone Pine等选股基金10月惨遭重创](https://wallstreetcn.com/articles/3785408) — 11-07 05:22 · 华尔街见闻
-- 【CoreWeave降温】[AI“新云”超跌反弹迅速降温！CoreWeave一度由涨转跌，IREN涨幅腰斩](https://wallstreetcn.com/articles/3785406) — 11-07 03:52 · 华尔街见闻
-- 【LTCM类比之辩】[1998 VS 2000，高盛主管：AI抛售更像LTCM危机而非互联网泡沫，但关键问题尚未解答](https://wallstreetcn.com/articles/3785405) — 11-07 03:40 · 华尔街见闻
-- 【密歇根消费者信心】[美国11月密歇根消费者信心超预期升至三个月高位，独立选民信心提升，通胀预期改善](https://wallstreetcn.com/articles/3785399) — 11-07 01:00 · 华尔街见闻
-- 【12月加息预期】[10月非农重燃12月加息预期！华尔街押注概率超八成，“新美联储通讯社”：AI抛售或成政策变量](https://wallstreetcn.com/articles/3785400) — 11-07 00:15 · 华尔街见闻
+### 气候 · 能源 · 环境 <sub>climate-energy.xml</sub>（1）
 
-### 📰 企业与商业 <sub>business.xml</sub>（8）
+- 【绿色金融】[规模竞赛之后，绿色金融减碳实效如何落地？｜2026企业双碳行动力调研](http://www.infzm.com/contents/344378) — 11-08 20:25 · 南方周末
 
-- 【伯克希尔财报】[刚押注AI就遭遇市场暴击！伯克希尔今晚发布财报，阿贝尔转型成色迎大考](https://wallstreetcn.com/articles/3785441) — 11-07 17:00 · 华尔街见闻
-- 【广交会智造】[广交会上，一套下肢辅助设备背后的中国智造新图景](http://www.infzm.com/contents/344253) — 11-07 16:25 · 南方周末
-- 【进博会医疗】[进博会医疗展区见闻：当中国成了首发市场](https://wallstreetcn.com/articles/3785442) — 11-07 16:22 · 华尔街见闻
-- 【产险金标杆】[产险公司规模大小，关乎投资能力和消保周全度？｜2026年“金标杆”](http://www.infzm.com/contents/344191) — 11-07 12:25 · 南方周末
-- 【Cybertruck停产】[特斯拉Cybertruck：从车窗开裂到停产，三年半画上句号](https://wallstreetcn.com/articles/3785416) — 11-07 12:06 · 华尔街见闻
-- 【Oklo核电财报】[Oklo创逾一年最大涨幅！Q3业绩超预期，首座商业化核电站进入主体结构施工阶段｜财报见闻](https://wallstreetcn.com/articles/3785409) — 11-07 05:22 · 华尔街见闻
-- 【SpaceX营收展望】[SpaceX大反弹逾9%，马斯克放话：Q4营收料将增长70%，明年剑指5000亿](https://wallstreetcn.com/articles/3785407) — 11-07 04:40 · 华尔街见闻
-- 【国联民生合并】[首席风险官再离职！实力券商合并后的"人才洗牌"](https://wallstreetcn.com/articles/3785403) — 11-07 03:39 · 华尔街见闻
+## 文化 · 体育
 
-## 📂 社会 · 环境
+### 音乐 · 图书 · 艺术 <sub>culture-music-arts.xml</sub>（1）
 
-### 📰 教育 <sub>u6559-u80b2.xml</sub>（2）
+- 【麦克法伦】[专访《活水》作者麦克法伦：生命是一个动词](http://www.infzm.com/contents/344251) — 11-08 14:25 · 南方周末
 
-- 【智慧教室】[“智慧教室”的“智慧”，应该用对地方](http://www.infzm.com/contents/344304) — 11-07 16:55 · 南方周末
-- 【高校查抬头率】[高校为什么要查抬头率](https://lingowhale.com/reader/web/6aeea5ae9c66659e23c903fa?channel_id=67cc08a59a4297b6148b2f44) — 11-07 03:37 · 财新
+## 生活方式
 
-## 📂 文化 · 体育
+### 美食与生活方式 <sub>u7f8e-u98df-u4e0e-u.xml</sub>（2）
 
-### 📰 音乐 · 图书 · 艺术 <sub>culture-music-arts.xml</sub>（1）
+- 【广东落叶提醒】[看完广东人的“落叶提醒”，北方人沉默了](http://www.infzm.com/contents/344163) — 11-08 16:25 · 南方周末
+- 【捡秋生意】[当捡秋变成一门生意，年轻人进山把松鼠薅怕了？](http://www.infzm.com/contents/342804) — 11-08 10:25 · 南方周末
 
-- 【文博日历】[一天一页不重样！见证历代中国人的超强创造力](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E4%B8%80%E5%A4%A9%E4%B8%80%E9%A1%B5%E4%B8%8D%E9%87%8D%E6%A0%B7%EF%BC%81%E8%A7%81%E8%AF%81%E5%8E%86%E4%BB%A3%E4%B8%AD%E5%9B%BD%E4%BA%BA%E7%9A%84%E8%B6%85%E5%BC%BA%E5%88%9B%E9%80%A0%E5%8A%9B) — 11-07 14:43 · 央视新闻
+## 速览与杂项
 
-## 📂 速览与杂项
+### 专栏 · 评论 · 互动 <sub>columns.xml</sub>（1）
 
-### 📰 每日新闻简报 <sub>daily-brief.xml</sub>（1）
+- 【个人破产】[“诚实但不幸”的创业者出路何在](https://lingowhale.com/reader/web/6aeffb4db15ec989f1de8b38?channel_id=67cc08a59a4297b6148b2f44) — 11-08 03:56 · 财新
 
-- 【华尔街见闻早餐】[华尔街见闻早餐FM-Radio | 2026年11月7日](https://wallstreetcn.com/articles/3785412) — 11-07 07:14 · 华尔街见闻
+## 未分组
 
-## 📂 未分组
+### 速览与杂项 <sub>briefing.xml</sub>（1）
 
-### 📰 速览与杂项 <sub>briefing.xml</sub>（1）
-
-- 【见闻历促销】[见闻历11.11限时大促！随日历附赠千元知识礼包，送什么都不如送“搞钱的智慧”](https://wallstreetcn.com/articles/3782813) — 11-07 19:03 · 华尔街见闻
+- 【记者节福利】[记者节，我们准备了一份惊喜](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E8%AE%B0%E8%80%85%E8%8A%82%EF%BC%8C%E6%88%91%E4%BB%AC%E5%87%86%E5%A4%87%E4%BA%86%E4%B8%80%E4%BB%BD%E6%83%8A%E5%96%9C) — 11-08 11:57 · 环球时报
