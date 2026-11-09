@@ -91,6 +91,10 @@
   "group": "速览与杂项",
   "slug": "daily-brief"
  },
+ "民生成本与住房": {
+  "group": "财经 · 商业",
+  "slug": "cost-of-living"
+ },
  "气候 · 能源 · 环境": {
   "group": "社会 · 环境",
   "slug": "climate-energy"
@@ -102,6 +106,10 @@
  "特朗普政府": {
   "group": "国际新闻 · 美洲",
   "slug": "us-trump-admin"
+ },
+ "王室与名人": {
+  "group": "文化 · 体育",
+  "slug": "u738b-u5ba4-u4e0e-u"
  },
  "社会案件与法治": {
   "group": "中国",
@@ -118,6 +126,10 @@
  "美国中期选举": {
   "group": "国际新闻 · 美洲",
   "slug": "us-midterms"
+ },
+ "美国司法与社会": {
+  "group": "国际新闻 · 美洲",
+  "slug": "us-justice-society"
  },
  "美食与生活方式": {
   "group": "生活方式",
