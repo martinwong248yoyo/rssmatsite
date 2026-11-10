@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<opml version="2.0"><head><title>新闻主题订阅 · 2026-11-09</title></head><body>
+<opml version="2.0"><head><title>新闻主题订阅 · 2026-11-10</title></head><body>
   <outline text="国际新闻 · 中东">
     <outline type="rss" text="以伊冲突与伊朗" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/iran-israel.xml"/>
     <outline type="rss" text="以色列大选" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/israel-election.xml"/>
@@ -9,6 +9,7 @@
     <outline type="rss" text="欧洲其他" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/europe-misc.xml"/>
     <outline type="rss" text="欧洲抗议潮" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/europe-protests.xml"/>
     <outline type="rss" text="法国骚乱与政治" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/france-unrest.xml"/>
+    <outline type="rss" text="移民与难民" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/migration.xml"/>
   </outline>
   <outline text="国际新闻 · 美洲">
     <outline type="rss" text="拉美政局" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/latin-america.xml"/>
@@ -43,6 +44,7 @@
     <outline type="rss" text="民生成本与住房" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/cost-of-living.xml"/>
   </outline>
   <outline text="社会 · 环境">
+    <outline type="rss" text="公共卫生" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/public-health.xml"/>
     <outline type="rss" text="教育" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/u6559-u80b2.xml"/>
     <outline type="rss" text="气候 · 能源 · 环境" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/climate-energy.xml"/>
   </outline>

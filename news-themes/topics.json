@@ -59,6 +59,10 @@
   "group": "财经 · 商业",
   "slug": "global-macro"
  },
+ "公共卫生": {
+  "group": "社会 · 环境",
+  "slug": "public-health"
+ },
  "家庭与情感": {
   "group": "生活方式",
   "slug": "life-family"
@@ -118,6 +122,10 @@
  "科学与探索": {
   "group": "科技 · AI",
   "slug": "science"
+ },
+ "移民与难民": {
+  "group": "国际新闻 · 欧洲",
+  "slug": "migration"
  },
  "网络安全事件": {
   "group": "科技 · AI",
