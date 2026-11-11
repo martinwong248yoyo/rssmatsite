@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<opml version="2.0"><head><title>新闻主题订阅 · 2026-11-10</title></head><body>
+<opml version="2.0"><head><title>新闻主题订阅 · 2026-11-11</title></head><body>
   <outline text="国际新闻 · 中东">
     <outline type="rss" text="以伊冲突与伊朗" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/iran-israel.xml"/>
     <outline type="rss" text="以色列大选" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/israel-election.xml"/>
+    <outline type="rss" text="巴以 · 约旦河西岸与加沙" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/u5df4-u4ee5-xb7-u.xml"/>
     <outline type="rss" text="胡塞武装与也门" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/houthi-yemen.xml"/>
   </outline>
   <outline text="国际新闻 · 欧洲">
@@ -19,6 +20,7 @@
   </outline>
   <outline text="国际新闻 · 亚太">
     <outline type="rss" text="亚太其他" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/asia-pacific-misc.xml"/>
+    <outline type="rss" text="印度" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/u5370-u5ea6.xml"/>
     <outline type="rss" text="日本" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/japan.xml"/>
   </outline>
   <outline text="国际新闻">

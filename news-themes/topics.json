@@ -63,9 +63,17 @@
   "group": "社会 · 环境",
   "slug": "public-health"
  },
+ "印度": {
+  "group": "国际新闻 · 亚太",
+  "slug": "u5370-u5ea6"
+ },
  "家庭与情感": {
   "group": "生活方式",
   "slug": "life-family"
+ },
+ "巴以 · 约旦河西岸与加沙": {
+  "group": "国际新闻 · 中东",
+  "slug": "u5df4-u4ee5-xb7-u"
  },
  "影视与电视": {
   "group": "文化 · 体育",
