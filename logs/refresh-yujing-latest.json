@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261112-060007",
-  "started_at": "2026-11-12 06:00:07 CST",
-  "finished_at": "2026-11-12 06:07:52 CST",
+  "timestamp": "20261112-080004",
+  "started_at": "2026-11-12 08:00:04 CST",
+  "finished_at": "2026-11-12 08:06:28 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -29,8 +29,8 @@
   },
   "feeds": [
     {
-      "source_key": "68060c00303fabc7419af262-channel",
-      "title": "金融-公众号-评论",
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "title": "新智元-公众号",
       "fetched": 1,
       "inserted": 0,
       "updated": 1,
