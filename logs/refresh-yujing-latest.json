@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261113-040006",
-  "started_at": "2026-11-13 04:00:06 CST",
-  "finished_at": "2026-11-13 04:06:03 CST",
+  "timestamp": "20261113-060007",
+  "started_at": "2026-11-13 06:00:07 CST",
+  "finished_at": "2026-11-13 06:04:52 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,34 +18,15 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 2,
-    "batch_article_count": 2,
-    "fetched": 2,
+    "feed_count": 0,
+    "batch_article_count": 0,
+    "fetched": 0,
     "inserted": 0,
-    "updated": 2,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [
-    {
-      "source_key": "67cc08a39a4297b6148b2c97-ai",
-      "title": "AI异类弗兰克-公众号",
-      "fetched": 1,
-      "inserted": 0,
-      "updated": 1,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a89a4297b6148b34f0-ai",
-      "title": "小互AI-公众号",
-      "fetched": 1,
-      "inserted": 0,
-      "updated": 1,
-      "deduped": 0,
-      "unchanged": 0
-    }
-  ],
+  "feeds": [],
   "top_categories": []
 }
