@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<opml version="2.0"><head><title>新闻主题订阅 · 2026-11-12</title></head><body>
+<opml version="2.0"><head><title>新闻主题订阅 · 2026-11-13</title></head><body>
   <outline text="国际新闻 · 中东">
+    <outline type="rss" text="中东其他" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/u4e2d-u4e1c-u5176-u.xml"/>
     <outline type="rss" text="以伊冲突与伊朗" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/iran-israel.xml"/>
     <outline type="rss" text="以色列大选" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/israel-election.xml"/>
     <outline type="rss" text="巴以 · 约旦河西岸与加沙" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/u5df4-u4ee5-xb7-u.xml"/>
@@ -11,6 +12,7 @@
     <outline type="rss" text="欧洲抗议潮" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/europe-protests.xml"/>
     <outline type="rss" text="法国骚乱与政治" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/france-unrest.xml"/>
     <outline type="rss" text="移民与难民" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/migration.xml"/>
+    <outline type="rss" text="英国政治" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/uk-politics.xml"/>
   </outline>
   <outline text="国际新闻 · 美洲">
     <outline type="rss" text="拉美政局" xmlUrl="https://martinwong248yoyo.github.io/rssmatsite/news-themes/latin-america.xml"/>

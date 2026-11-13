@@ -7,6 +7,10 @@
   "group": "速览与杂项",
   "slug": "columns"
  },
+ "中东其他": {
+  "group": "国际新闻 · 中东",
+  "slug": "u4e2d-u4e1c-u5176-u"
+ },
  "中国 · 其他": {
   "group": "中国",
   "slug": "china-misc"
@@ -154,6 +158,10 @@
  "胡塞武装与也门": {
   "group": "国际新闻 · 中东",
   "slug": "houthi-yemen"
+ },
+ "英国政治": {
+  "group": "国际新闻 · 欧洲",
+  "slug": "uk-politics"
  },
  "速览与杂项": {
   "group": "未分组",
