@@ -1,26 +1,25 @@
 # Update Report
 
-- Updated articles this run: `2`
-- New articles inserted: `2`
+- Updated articles this run: `1`
+- New articles inserted: `1`
 - Existing articles updated: `0`
-- Run time: `2026-11-14 22:00:06 CST` to `2026-11-14 22:07:12 CST`
+- Run time: `2026-11-15 00:00:06 CST` to `2026-11-15 00:07:47 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
 ## Summary
 
 - Fetch pipeline completed successfully.
-- Source feeds processed: `2`
-- Fetched articles: `2`
-- Inserted articles: `2`
+- Source feeds processed: `1`
+- Fetched articles: `1`
+- Inserted articles: `1`
 - Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
 
 ## Feed-Level Changes
 
-- `DeepTech深科技-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
-- `财新-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `武志红-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
 
