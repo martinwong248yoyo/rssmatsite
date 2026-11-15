@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261115-060017",
-  "started_at": "2026-11-15 06:00:17 CST",
-  "finished_at": "2026-11-15 06:08:53 CST",
+  "timestamp": "20261115-080006",
+  "started_at": "2026-11-15 08:00:06 CST",
+  "finished_at": "2026-11-15 08:07:07 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -29,8 +29,8 @@
   },
   "feeds": [
     {
-      "source_key": "68060c00303fabc7419af262-channel",
-      "title": "金融-公众号-评论",
+      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
+      "title": "DeepTech深科技-公众号",
       "fetched": 1,
       "inserted": 1,
       "updated": 0,
