@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261115-140005",
-  "started_at": "2026-11-15 14:00:05 CST",
-  "finished_at": "2026-11-15 14:15:28 CST",
+  "timestamp": "20261115-160006",
+  "started_at": "2026-11-15 16:00:06 CST",
+  "finished_at": "2026-11-15 16:07:14 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,10 +18,10 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 5,
-    "batch_article_count": 9,
-    "fetched": 9,
-    "inserted": 9,
+    "feed_count": 1,
+    "batch_article_count": 2,
+    "fetched": 2,
+    "inserted": 2,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
@@ -29,46 +29,10 @@
   },
   "feeds": [
     {
-      "source_key": "67cc08a19a4297b6148b28e7-deeptech",
-      "title": "DeepTech深科技-公众号",
-      "fetched": 1,
-      "inserted": 1,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a19a4297b6148b2994-channel",
-      "title": "新智元-公众号",
-      "fetched": 3,
-      "inserted": 3,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a19a4297b6148b298f-channel",
-      "title": "武志红-公众号",
-      "fetched": 3,
-      "inserted": 3,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a59a4297b6148b2f44-channel",
-      "title": "财新-公众号",
-      "fetched": 1,
-      "inserted": 1,
-      "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
       "source_key": "67cc08a19a4297b6148b295c-channel",
       "title": "量子位-公众号",
-      "fetched": 1,
-      "inserted": 1,
+      "fetched": 2,
+      "inserted": 2,
       "updated": 0,
       "deduped": 0,
       "unchanged": 0
