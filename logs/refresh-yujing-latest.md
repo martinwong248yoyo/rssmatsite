@@ -1,30 +1,29 @@
 # Update Report
 
-- Updated articles this run: `18`
-- New articles inserted: `0`
-- Existing articles updated: `18`
-- Run time: `2026-11-16 16:00:05 CST` to `2026-11-16 16:28:05 CST`
+- Updated articles this run: `5`
+- New articles inserted: `5`
+- Existing articles updated: `0`
+- Run time: `2026-11-16 20:00:05 CST` to `2026-11-16 20:09:27 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
 ## Summary
 
 - Fetch pipeline completed successfully.
-- Source feeds processed: `6`
-- Fetched articles: `18`
-- Inserted articles: `0`
-- Updated articles: `18`
+- Source feeds processed: `5`
+- Fetched articles: `5`
+- Inserted articles: `5`
+- Updated articles: `0`
 - Deduped articles: `0`
 - Unchanged articles: `0`
 
 ## Feed-Level Changes
 
-- `DeepTech深科技-公众号`: fetched=`1`, inserted=`0`, updated=`1`, deduped=`0`, unchanged=`0`
-- `武志红-公众号`: fetched=`3`, inserted=`0`, updated=`3`, deduped=`0`, unchanged=`0`
-- `热门AI公众号更新追踪`: fetched=`2`, inserted=`0`, updated=`2`, deduped=`0`, unchanged=`0`
-- `甲子光年-公众号`: fetched=`2`, inserted=`0`, updated=`2`, deduped=`0`, unchanged=`0`
-- `财新-公众号`: fetched=`8`, inserted=`0`, updated=`8`, deduped=`0`, unchanged=`0`
-- `量子位-公众号`: fetched=`2`, inserted=`0`, updated=`2`, deduped=`0`, unchanged=`0`
+- `AI异类弗兰克-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `DeepTech深科技-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `数字生命卡兹克-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `热门AI公众号更新追踪`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `简单心理Uni-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
 
