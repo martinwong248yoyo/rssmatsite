@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261117-040007",
-  "started_at": "2026-11-17 04:00:07 CST",
-  "finished_at": "2026-11-17 04:06:15 CST",
+  "timestamp": "20261117-060007",
+  "started_at": "2026-11-17 06:00:07 CST",
+  "finished_at": "2026-11-17 06:07:00 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -21,19 +21,19 @@
     "feed_count": 1,
     "batch_article_count": 1,
     "fetched": 1,
-    "inserted": 0,
-    "updated": 1,
+    "inserted": 1,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
-      "title": "简单心理Uni-公众号",
+      "source_key": "68060c00303fabc7419af262-channel",
+      "title": "金融-公众号-评论",
       "fetched": 1,
-      "inserted": 0,
-      "updated": 1,
+      "inserted": 1,
+      "updated": 0,
       "deduped": 0,
       "unchanged": 0
     }
