@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261116-060007",
-  "started_at": "2026-11-16 06:00:07 CST",
-  "finished_at": "2026-11-16 06:06:51 CST",
+  "timestamp": "20261116-080006",
+  "started_at": "2026-11-16 08:00:06 CST",
+  "finished_at": "2026-11-16 08:10:12 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -15,18 +15,37 @@
     "remote_qnap_import": true,
     "remote_qnap_db_only": true,
     "import_scope": "batch_delta",
-    "batch_channel_count": 0
+    "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 0,
-    "batch_article_count": 0,
-    "fetched": 0,
-    "inserted": 0,
+    "feed_count": 2,
+    "batch_article_count": 2,
+    "fetched": 2,
+    "inserted": 2,
     "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [],
+  "feeds": [
+    {
+      "source_key": "67cc08a19a4297b6148b29c6-channel",
+      "title": "数字生命卡兹克-公众号",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "title": "新智元-公众号",
+      "fetched": 1,
+      "inserted": 1,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
   "top_categories": []
 }
