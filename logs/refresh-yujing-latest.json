@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261117-020007",
-  "started_at": "2026-11-17 02:00:07 CST",
-  "finished_at": "2026-11-17 02:05:41 CST",
+  "timestamp": "20261117-040007",
+  "started_at": "2026-11-17 04:00:07 CST",
+  "finished_at": "2026-11-17 04:06:15 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,15 +18,25 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 0,
-    "batch_article_count": 0,
-    "fetched": 0,
+    "feed_count": 1,
+    "batch_article_count": 1,
+    "fetched": 1,
     "inserted": 0,
-    "updated": 0,
+    "updated": 1,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [],
+  "feeds": [
+    {
+      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
+      "title": "简单心理Uni-公众号",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 1,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
   "top_categories": []
 }
