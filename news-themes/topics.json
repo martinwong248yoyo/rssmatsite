@@ -99,6 +99,10 @@
   "group": "国际新闻 · 亚太",
   "slug": "japan"
  },
+ "朝鲜半岛": {
+  "group": "国际新闻 · 亚太",
+  "slug": "korea"
+ },
  "欧洲其他": {
   "group": "国际新闻 · 欧洲",
   "slug": "europe-misc"
