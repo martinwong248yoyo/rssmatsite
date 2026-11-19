@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261119-180005",
-  "started_at": "2026-11-19 18:00:05 CST",
-  "finished_at": "2026-11-19 18:11:42 CST",
+  "timestamp": "20261119-200005",
+  "started_at": "2026-11-19 20:00:05 CST",
+  "finished_at": "2026-11-19 20:22:55 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,14 +18,14 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 4,
-    "batch_article_count": 7,
-    "fetched": 7,
-    "inserted": 4,
-    "updated": 3,
+    "feed_count": 5,
+    "batch_article_count": 17,
+    "fetched": 17,
+    "inserted": 9,
+    "updated": 8,
     "deduped": 0,
     "unchanged": 0,
-    "deleted_plain": 1
+    "deleted_plain": 0
   },
   "feeds": [
     {
@@ -34,15 +34,6 @@
       "fetched": 2,
       "inserted": 2,
       "updated": 0,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a19a4297b6148b298f-channel",
-      "title": "武志红-公众号",
-      "fetched": 2,
-      "inserted": 1,
-      "updated": 1,
       "deduped": 0,
       "unchanged": 0
     },
@@ -56,11 +47,29 @@
       "unchanged": 0
     },
     {
+      "source_key": "67ea609b3daf5a4f63dea8ce-channel",
+      "title": "简单心理Uni-公众号",
+      "fetched": 2,
+      "inserted": 2,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a59a4297b6148b2f44-channel",
+      "title": "财新-公众号",
+      "fetched": 8,
+      "inserted": 0,
+      "updated": 8,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
       "source_key": "67cc08a19a4297b6148b295c-channel",
       "title": "量子位-公众号",
-      "fetched": 2,
-      "inserted": 0,
-      "updated": 2,
+      "fetched": 4,
+      "inserted": 4,
+      "updated": 0,
       "deduped": 0,
       "unchanged": 0
     }
