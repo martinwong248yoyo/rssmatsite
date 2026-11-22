@@ -2,34 +2,7 @@
 <rss version="2.0"><channel>
 <title>科技 · AI › 网络安全事件</title>
 <link>https://martinwong248yoyo.github.io/rssmatsite/news-themes/cyber-security.xml</link>
-<description>2026-11-21 主题订阅：科技 · AI › 网络安全事件（1 篇）</description>
-<lastBuildDate>Sat, 21 Nov 2026 21:50:11 +0800</lastBuildDate>
+<description>2026-11-22 主题订阅：科技 · AI › 网络安全事件（0 篇）</description>
+<lastBuildDate>Sun, 22 Nov 2026 21:48:44 +0800</lastBuildDate>
 <generator>matAgent_InfoSource theme-classifier v2</generator>
-<item>
-<title>【网络安全行业或迎】网络安全行业或迎史上最大并购：CrowdStrike洽购Zscaler，合并后市值或达2650亿美元</title>
-<link>https://wallstreetcn.com/articles/3786413</link>
-<guid isPermaLink="true">https://wallstreetcn.com/articles/3786413</guid>
-<pubDate>Sat, 21 Nov 2026 06:31:30 +0800</pubDate>
-<source>华尔街见闻</source>
-<description><![CDATA[<p>网络安全行业或将迎来史上最大规模并购交易之一。CrowdStrike Holdings Inc.正在洽谈收购同行Zscaler Inc.，如果交易达成，双方合并后的市值将达到约2650亿美元。</p>]]>
-<![CDATA[<p>据彭博社11月20日援引知情人士报道，两家公司正在讨论潜在合并方案，交易可能很快达成。不过，相关磋商仍在进行中，最终能否形成交易尚无定论。</p>]]>
-<![CDATA[<p>报道没有披露潜在交易的具体报价、支付方式及收购溢价，也没有给出明确的交易时间表。</p>]]>
-<![CDATA[<p>此次潜在交易将把两家网络安全领域的重要参与者整合在一起。CrowdStrike目前市值约2330亿美元，Zscaler市值约320亿美元。若合并完成，新公司的规模将达到约2650亿美元，有望成为网络安全行业最具影响力的企业之一。</p>]]>
-<![CDATA[<p>Zscaler主要开发帮助企业抵御网络威胁的软件。该公司股价今年已下跌13%，目前市值为320亿美元。上述信息发布后，Zscaler盘后拉涨16%，CrowdStrike盘后下跌7.4%。</p>]]>
-<![CDATA[<p><strong>两家网络安全巨头的业务互补</strong></p>]]>
-<![CDATA[<p>两家公司的核心业务有所不同。</p>]]>
-<![CDATA[<p>CrowdStrike是网络安全行业市值最高的公司之一，主要通过旗下Falcon平台提供终端安全服务，保护笔记本电脑、服务器等终端设备免受网络攻击。其业务还覆盖云工作负载、身份安全及数据保护等领域。</p>]]>
-<![CDATA[<p>Zscaler则专注于云安全和零信任架构，通过软件帮助企业保护网络访问和云端应用，降低网络攻击及未经授权访问带来的风险。</p>]]>
-<![CDATA[<p>从产品布局来看，双方业务具有一定互补性： CrowdStrike侧重终端威胁检测与响应，Zscaler则在网络访问控制、云安全和零信任架构方面具有优势。若整合成功，双方有望将终端、身份、网络和云端安全能力纳入更统一的平台，扩大对企业客户的覆盖范围。</p>]]>
-<![CDATA[<p>值得注意的是，两家公司此前已经建立了长期战略合作关系。</p>]]>
-<![CDATA[<p>Zscaler于今年9月宣布扩大与CrowdStrike的合作，推进双方平台之间的深度整合，包括实时共享终端风险信息、自动化安全响应，以及将Zscaler的网络安全数据接入CrowdStrike Falcon平台，以提升跨领域威胁检测能力。</p>]]>
-<![CDATA[<p><strong>AI安全需求推动行业整合</strong></p>]]>
-<![CDATA[<p>此次潜在收购也发生在网络安全行业加速向AI安全领域扩张的背景下。</p>]]>
-<![CDATA[<p>随着企业加快部署AI模型和智能体，传统网络安全产品面临新的挑战。 AI智能体不仅可能成为网络攻击的目标，其自身的权限管理、行为监控和数据访问也带来了新的安全风险。 企业对能够覆盖终端、云端、身份和AI应用的综合安全平台的需求正在增加。</p>]]>
-<![CDATA[<p>CrowdStrike近期已经通过收购加快布局这一领域。</p>]]>
-<![CDATA[<p>11月3日，CrowdStrike宣布达成协议，分别收购AI安全公司Fiddler AI和Dreadnode。前者专注于AI智能体的可观测性和行为解释，后者提供AI模型、应用及智能体的自动化安全测试能力。两笔交易合计金额约4.95亿美元。</p>]]>
-<![CDATA[<p>这表明CrowdStrike正在尝试将Falcon平台的能力从传统终端防护扩展至AI模型和智能体的整个生命周期。如果进一步纳入Zscaler的零信任网络安全能力，其平台覆盖范围有望继续扩大。</p>]]>
-<![CDATA[<p>对于Zscaler而言，加入规模更大的网络安全平台，也可能带来更广泛的客户渠道和产品整合机会。不过，这些潜在协同效应能否兑现，仍取决于交易是否达成以及后续整合情况。</p>]]>
-<![CDATA[<p>本文来自华尔街见闻，欢迎下载APP查看更多</p>]]></description>
-</item>
 </channel></rss>
