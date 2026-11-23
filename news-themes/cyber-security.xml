@@ -2,7 +2,51 @@
 <rss version="2.0"><channel>
 <title>科技 · AI › 网络安全事件</title>
 <link>https://martinwong248yoyo.github.io/rssmatsite/news-themes/cyber-security.xml</link>
-<description>2026-11-22 主题订阅：科技 · AI › 网络安全事件（0 篇）</description>
-<lastBuildDate>Sun, 22 Nov 2026 21:48:44 +0800</lastBuildDate>
+<description>2026-11-23 主题订阅：科技 · AI › 网络安全事件（2 篇）</description>
+<lastBuildDate>Mon, 23 Nov 2026 21:52:18 +0800</lastBuildDate>
 <generator>matAgent_InfoSource theme-classifier v2</generator>
+<item>
+<title>【439亿美元！C】439亿美元！CrowdStrike收购Zscaler，创网络安全行业并购纪录</title>
+<link>https://wallstreetcn.com/articles/3786525</link>
+<guid isPermaLink="true">https://wallstreetcn.com/articles/3786525</guid>
+<pubDate>Mon, 23 Nov 2026 19:54:07 +0800</pubDate>
+<source>华尔街见闻</source>
+<description><![CDATA[<p>网络安全行业正在经历一场规模空前的整合。CrowdStrike宣布以约439亿美元全股票交易收购网络安全公司Zscaler，刷新该行业并购纪录，同时公布的第三财季业绩也超出市场预期，两大利好叠加，进一步强化了市场对这家公司成为AI时代网络安全领域主导平台的预期。</p>]]>
+<![CDATA[<p>根据双方周一发布的公告，Zscaler股东将以1.135股CrowdStrike普通股换取每股Zscaler普通股，折合每股Zscaler约260.41美元，较Zscaler 11月20日收盘价194.82美元溢价约34%。交易完成后，现有CrowdStrike股东将持有合并后公司约84.1%的股权，Zscaler股东持有约15.9%。</p>]]>
+<![CDATA[<p>与此同时，CrowdStrike公布2027财年第三季度营收15.8亿美元，高于市场预期的15.3亿美元；第四季度营收指引为16.4亿美元，亦超出市场预期的16.2亿美元。</p>]]>
+<![CDATA[<p>此次收购将使CrowdStrike从终端安全领域全面扩张至网络安全领域，可寻址市场规模预计扩大逾1850亿美元。合并后公司的年度经常性收入（ARR）预计逾100亿美元。CrowdStrike首席执行官George Kurtz表示： "安全过去是为了把对手挡在门外，如今则需要安全地迎入AI。"</p>]]>
+<![CDATA[<p><strong>战略逻辑：从终端防护到全网零信任</strong></p>]]>
+<![CDATA[<p>此次交易的核心逻辑在于弥补CrowdStrike在网络安全层面的缺口。CrowdStrike旗下Falcon平台是企业终端和云工作负载安全领域的领导者，而Zscaler则专注于保护用户、设备与应用之间的连接，其零信任交换平台（Zero Trust Exchange）被定位为传统VPN的云原生替代方案。</p>]]>
+<![CDATA[<p>Citrix及Ivanti等公司的传统VPN产品曾多次遭到黑客攻击。Zscaler的零信任架构通过精细化的访问控制，能够有效遏制入侵者在系统内部的横向移动。</p>]]>
+<![CDATA[<p>Zscaler目前为财富500强中50%的企业提供保护，在全球超过200个服务节点运营全球最大的分布式内联云安全平台，其Zero Trust Exchange每日处理逾7500亿笔交易。交易完成后，CrowdStrike将把Zscaler的零信任SASE、AI安全及数据保护能力整合进Falcon平台，在每一个终端和每一条网络连接上同时建立安全控制。</p>]]>
+<![CDATA[<p>Zscaler创始人兼首席执行官Jay Chaudhry表示：</p>]]>
+<![CDATA[<p>"在AI时代，零信任安全已不可或缺，而AI代理（AI agents）正迅速成为新的最薄弱环节。这一协议将加速我们向更广泛客户群普及零信任架构的能力。"</p>]]>
+<![CDATA[<p><strong>财务前景：协同效应逐步兑现</strong></p>]]>
+<![CDATA[<p>在财务层面，双方对此次合并的协同效应设定了明确目标。 CrowdStrike预计，交易完成后30个月内，年化营收协同效应将逐步提升，最终达到约10亿美元的年化运营收入协同规模； 成本协同方面，预计在交易完成后18至24个月内实现约5亿美元的年化成本节约，主要来源于数据中心基础设施、供应商及运营层面的优化。</p>]]>
+<![CDATA[<p>公司方面表示，该交易在不计入任何协同效应的情况下，预计将立即对每股自由现金流产生显著正贡献；在协同效应落地后，预计在交易完成后第一个财年内，对营收增长、非GAAP运营利润率及自由现金流利润率均产生正面效果。</p>]]>
+<![CDATA[<p>Zscaler最新一个财季报告的ARR为39亿美元。两家公司合并后的ARR预计超过100亿美元，这将使CrowdStrike一跃成为ARR规模最大的网络安全公司之一。</p>]]>
+<![CDATA[<p>此外，约8000家Zscaler客户目前尚非CrowdStrike客户，构成可观的交叉销售空间。两家公司此前已有超过2000个共同客户，以及16项产品集成，此次合并被定性为长期合作伙伴关系的自然演进。</p>]]>
+<![CDATA[<p><strong>交易结构与监管路径</strong></p>]]>
+<![CDATA[<p>此次交易已获两家公司董事会一致批准。根据协议条款，Jay Chaudhry及其关联方持有Zscaler约34%的流通股，已签署投票支持协议。交易完成后，Jay Chaudhry将继续主导Zscaler业务，并加入CrowdStrike董事会。</p>]]>
+<![CDATA[<p>交易预计于CrowdStrike 2028财年下半年完成，尚需获得Zscaler股东批准、监管机构批准及其他惯常交割条件。在交割前，两家公司将继续独立运营。</p>]]>
+<![CDATA[<p>财务顾问方面，Qatalyst Partners担任CrowdStrike的首席财务顾问，摩根大通和美国银行亦为其提供咨询；BDT & MSD Partners担任Zscaler的首席财务顾问，花旗和高盛提供支持。</p>]]>
+<![CDATA[<p><strong>行业整合加速，AI安全成核心叙事</strong></p>]]>
+<![CDATA[<p>此次收购是网络安全行业近期整合浪潮的缩影。Alphabet旗下谷歌此前已以320亿美元收购云安全公司Wiz，ServiceNow以77.5亿美元收购网络安全初创公司Armis，Palo Alto Networks则于今年2月完成对CyberArk约250亿美元的收购，并于上周宣布以全股票方式收购AI模型平台Applied Compute，估值45亿美元。</p>]]>
+<![CDATA[<p>推动整合的核心驱动力之一是AI安全需求的快速扩张。 随着企业加速部署自主运行的AI代理系统，如何保障这些系统的访问安全与行为可控，成为新一轮安全支出的焦点。市场研究机构Gartner预测，全球信息安全支出今年将增长近12%，达到2440亿美元。</p>]]>
+<![CDATA[<p>CrowdStrike市值目前约为2350亿美元。George Kurtz将合并后的公司定位为"网络安全领域的操作系统"，提供"部署AI、管控AI、让任何AI代理应用安全运行"的统一控制平面，并表示"有望成为全球有史以来最大的AI安全公司"。</p>]]>
+<![CDATA[<p>本文来自华尔街见闻，欢迎下载APP查看更多</p>]]></description>
+</item>
+<item>
+<title>【AI成了黑客的新】AI成了黑客的新工具</title>
+<link>https://lingowhale.com/reader/web/6b040e5a942a514a71cdf14c?channel_id=67cc08a59a4297b6148b2f44</link>
+<guid isPermaLink="true">https://lingowhale.com/reader/web/6b040e5a942a514a71cdf14c?channel_id=67cc08a59a4297b6148b2f44</guid>
+<pubDate>Mon, 23 Nov 2026 09:23:00 +0800</pubDate>
+<source>财新</source>
+<description><![CDATA[<p>图片来自视觉中国</p>]]>
+<![CDATA[<p>CERT-EU称，ARTEX等开源框架正使自动化网络攻击更加频繁、速度更快、规模更大且成功率更高</p>]]>
+<![CDATA[<p>“我们可以确认，这是一场利用AI辅助实施的网络攻击行动，存在对AI工具的滥用。”近日，欧盟委员会发言人托马斯·雷尼耶（Thomas Regnier）在例行新闻发布会上表示，欧盟委员会于10月22日发现异常网络活动，并在10月26日的初步调查后确认系遭到网络攻击，攻击者采用的是一款公开可用的AI工具。目前调查仍在进行，攻击造成的实际影响尚未完全查明。</p>]]>
+<![CDATA[<p>雷尼耶表示，作为保护性和预防性措施，欧盟委员会暂时关闭了多个应用程序。目前，其中大部分应用已经恢复运行。与此同时，欧盟委员会始终与欧盟网络安全应急响应机构（CERT-EU）以及欧洲数据保护监督机构（EDPS）保持密切联系。</p>]]>
+<![CDATA[<p>此次网络攻击对欧盟委员会的内部行政系统造成干扰。据欧洲政治新闻网站Politico报道，受影响的应用包括人力资源管理系统Sysper和医疗费用报销系统MyPMO。前者用于员工查询工资单、申请休假和记录工作时间，后者涉及医疗费用报销等事务。部分服务中断超过10天，翻译服务也在11月17日受到影响。</p>]]>
+<![CDATA[<p>……</p>]]></description>
+</item>
 </channel></rss>
