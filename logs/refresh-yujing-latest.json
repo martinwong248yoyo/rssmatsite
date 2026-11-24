@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261125-040007",
-  "started_at": "2026-11-25 04:00:07 CST",
-  "finished_at": "2026-11-25 04:04:27 CST",
+  "timestamp": "20261125-060025",
+  "started_at": "2026-11-25 06:00:25 CST",
+  "finished_at": "2026-11-25 06:13:31 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -15,7 +15,7 @@
     "remote_qnap_import": true,
     "remote_qnap_db_only": true,
     "import_scope": "batch_delta",
-    "batch_channel_count": 0
+    "batch_channel_count": 16
   },
   "totals": {
     "feed_count": 0,
