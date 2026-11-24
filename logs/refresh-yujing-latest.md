@@ -3,7 +3,7 @@
 - Updated articles this run: `3`
 - New articles inserted: `3`
 - Existing articles updated: `0`
-- Run time: `2026-11-24 18:00:07 CST` to `2026-11-24 18:07:16 CST`
+- Run time: `2026-11-24 20:00:06 CST` to `2026-11-24 20:08:48 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -20,8 +20,8 @@
 ## Feed-Level Changes
 
 - `DeepTech深科技-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `武志红-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
 - `财新-公众号`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
-- `金融-公众号-评论`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
 
