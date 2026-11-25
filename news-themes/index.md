@@ -1,162 +1,160 @@
-# 新闻主题 Feed · 2026-11-24
+# 新闻主题 Feed · 2026-11-25
 
-> 五源（环球时报/央视新闻/南方周末/华尔街见闻/财新）今日共 85 篇，AI 精读归入 17 个主题；
+> 五源（环球时报/央视新闻/南方周末/华尔街见闻/财新）今日共 79 篇，AI 精读归入 19 个主题；
 > 累计订阅主题 46 个（当日无新文章的主题 feed 为空频道，订阅保留）。
 > Feedly 导入 subscriptions.opml：文件夹 = 一级主题，订阅 = 二级子主题，标题前缀【关键词】。
 > 排版：description 段落化 HTML（本页功能标识用文字，不使用 emoji）。
 
 ## 国际新闻 · 中东
 
-### 中东其他 <sub>u4e2d-u4e1c-u5176-u.xml</sub>（1）
+### 以伊冲突与伊朗 <sub>iran-israel.xml</sub>（2）
 
-- 【利比亚输油管道重】[利比亚输油管道重启叠加中东供应回升，布油收跌3.5%至三个月低点](https://wallstreetcn.com/articles/3786553) — 11-24 06:27 · 华尔街见闻
+- 【关税与贸易】[阴霾笼罩年底市场！摩根大通：伊朗军事升级、美联储紧缩、政府关门、关税上调、芯片管制一起来了！](https://wallstreetcn.com/articles/3786649) — 11-25 09:11 · 华尔街见闻
+- 【OPEC+将敲定】[OPEC+将敲定2027年产量政策，伊朗战争与内部分歧加剧不确定性](https://wallstreetcn.com/articles/3786624) — 11-25 00:32 · 华尔街见闻
 
-## 国际新闻 · 美洲
+## 国际新闻 · 欧洲
 
-### 特朗普政府 <sub>us-trump-admin.xml</sub>（2）
+### 法国骚乱与政治 <sub>france-unrest.xml</sub>（1）
 
-- 【特朗普】[特朗普希望美国企业界记住谁才是真正的掌权者](https://wallstreetcn.com/articles/3786587) — 11-24 16:26 · 华尔街见闻
-- 【特朗普】[特朗普痛斥：美国史上最令人震惊的不公正行为之一，简直不敢相信](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E7%89%B9%E6%9C%97%E6%99%AE%E7%97%9B%E6%96%A5%EF%BC%9A%E7%BE%8E%E5%9B%BD%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%BB%A4%E4%BA%BA%E9%9C%87%E6%83%8A%E7%9A%84%E4%B8%8D%E5%85%AC%E6%AD%A3%E8%A1%8C%E4%B8%BA%E4%B9%8B%E4%B8%80%EF%BC%8C%E7%AE%80%E7%9B%B4%E4%B8%8D%E6%95%A2%E7%9B%B8%E4%BF%A1) — 11-24 14:39 · 环球时报
+- 【法国，“财政濒临】[法国，“财政濒临窒息”](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E6%B3%95%E5%9B%BD%EF%BC%8C%E2%80%9C%E8%B4%A2%E6%94%BF%E6%BF%92%E4%B8%B4%E7%AA%92%E6%81%AF%E2%80%9D) — 11-25 14:59 · 环球时报
+
+### 欧洲抗议潮 <sub>europe-protests.xml</sub>（1）
+
+- 【大众汽车工人抬棺】[大众汽车工人抬棺抗议！薪资谈判陷僵局，明年1月罢工风险升温](https://wallstreetcn.com/articles/3786633) — 11-25 05:37 · 华尔街见闻
 
 ## 国际新闻 · 亚太
 
-### 朝鲜半岛 <sub>korea.xml</sub>（1）
+### 朝鲜半岛 <sub>korea.xml</sub>（2）
 
-- 【韩国】[韩国央行后天或再加息！AI暴跌之际，高盛警告：消费撑不住了](https://wallstreetcn.com/articles/3786599) — 11-24 18:56 · 华尔街见闻
+- 【韩国】[10万亿不够“救市”，韩国酝酿扩大股市稳定基金！](https://wallstreetcn.com/articles/3786681) — 11-25 18:03 · 华尔街见闻
+- 【韩国】[韩国高考作弊风波发酵：学生穿围裙考试，举报悬赏最高5亿韩元](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E9%9F%A9%E5%9B%BD%E9%AB%98%E8%80%83%E4%BD%9C%E5%BC%8A%E9%A3%8E%E6%B3%A2%E5%8F%91%E9%85%B5%EF%BC%9A%E5%AD%A6%E7%94%9F%E7%A9%BF%E5%9B%B4%E8%A3%99%E8%80%83%E8%AF%95%EF%BC%8C%E4%B8%BE%E6%8A%A5%E6%82%AC%E8%B5%8F%E6%9C%80%E9%AB%985%E4%BA%BF%E9%9F%A9%E5%85%83) — 11-25 12:50 · 央视新闻
+
+### 亚太其他 <sub>asia-pacific-misc.xml</sub>（2）
+
+- 【特别呈现 | 从】[特别呈现 | 从高性能台式机跃迁至本地AI算力中枢，联想ThinkCentre X Tower闪耀2026 APEC峰会](https://lingowhale.com/reader/web/6b06aa9229fb26421b067852?channel_id=67cc08a59a4297b6148b2f44) — 11-25 09:14 · 财新
+- 【印尼总统：采矿收】[印尼总统：采矿收益七成归国家](https://lingowhale.com/reader/web/6b066f3bb8df590b0c5a6649?channel_id=67cc08a59a4297b6148b2f44) — 11-25 03:15 · 财新
 
 ## 中国
 
-### 中美博弈 <sub>china-us-relations.xml</sub>（22）
+### 中美博弈 <sub>china-us-relations.xml</sub>（10）
 
-- 【英伟达】[高盛：黄仁勋回归也改变不了AI交易逻辑，真正考验是万亿级资本开支能否赚回钱](https://wallstreetcn.com/articles/3786615) — 11-24 21:06 · 华尔街见闻
-- 【英伟达】[“逢高减仓，别追黄仁勋逼空行情”！BTIG警告：纳指历史12次类似反弹后，无一例外全部出现回撤](https://wallstreetcn.com/articles/3786613) — 11-24 21:02 · 华尔街见闻
-- 【英伟达】[黄仁勋回归：当创始人成为公司本身，企业责任该如何安放](http://www.infzm.com/contents/345546) — 11-24 18:25 · 南方周末
-- 【特朗普】[AI“大到不能倒”了？特朗普亲自营救黄仁勋，被指是“现代水门事件”！](https://wallstreetcn.com/articles/3786592) — 11-24 18:10 · 华尔街见闻
-- 【英伟达】[黄仁勋回归引爆美股大反弹，高盛：客户只问一个问题——这波是真的吗？](https://wallstreetcn.com/articles/3786591) — 11-24 16:50 · 华尔街见闻
-- 【英伟达】[黄仁勋回归幕后“作战室”曝光：高盛高管、Uber创始人集结，硅谷大佬秘密营救](https://wallstreetcn.com/articles/3786590) — 11-24 16:30 · 华尔街见闻
-- 【英伟达】[木头姐“倒在黎明前”：卖出英伟达后黄仁勋回归](https://wallstreetcn.com/articles/3786588) — 11-24 16:21 · 华尔街见闻
-- 【英伟达】[华尔街解读“黄仁勋复辟”：卖方“兴奋雀跃”，买方“困惑不解”，这是“第一次AI大救助”](https://wallstreetcn.com/articles/3786579) — 11-24 16:03 · 华尔街见闻
-- 【特朗普】[“救回”黄仁勋，特朗普一夜赚了1500万美元！](https://wallstreetcn.com/articles/3786582) — 11-24 15:22 · 华尔街见闻
-- 【特朗普】[黄仁勋复职，美国国会一片哗然：民主党誓言彻查特朗普和英伟达，共和党也不买账](https://wallstreetcn.com/articles/3786577) — 11-24 14:29 · 华尔街见闻
-- 【英伟达】[黄仁勋复职，内幕来了！](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E9%BB%84%E4%BB%81%E5%8B%8B%E5%A4%8D%E8%81%8C%EF%BC%8C%E5%86%85%E5%B9%95%E6%9D%A5%E4%BA%86%EF%BC%81) — 11-24 13:42 · 环球时报
-- 【特朗普】[《纽约时报》被群嘲！亲手推倒黄仁勋，又见证他回归：震惊！为何特朗普如此重视他？](https://wallstreetcn.com/articles/3786559) — 11-24 08:52 · 华尔街见闻
-- 【特朗普】[特朗普力促黄仁勋复职、万斯介入给出保证，英伟达董事会“周日提前告知白宫”](https://wallstreetcn.com/articles/3786540) — 11-24 08:12 · 华尔街见闻
-- 【英伟达】[黄仁勋=2万亿美元！](https://wallstreetcn.com/articles/3786557) — 11-24 08:06 · 华尔街见闻
-- 【英伟达】[黄仁勋重掌英伟达帅印！股价暴涨31%，市值单日增长近万亿](https://wallstreetcn.com/articles/3786536) — 11-24 07:15 · 华尔街见闻
-- 【英伟达】[黄仁勋称"第二次担任CEO会做得更好"，重返英伟达总部，数百名员工夹道欢迎](https://wallstreetcn.com/articles/3786546) — 11-24 07:12 · 华尔街见闻
-- 【英伟达】[黄仁勋回归引爆美股空头回补，英伟达暴涨31%，芯片指数飙涨14%，黄金反弹近3%](https://wallstreetcn.com/articles/3786472) — 11-24 06:28 · 华尔街见闻
-- 【英伟达】[黄仁勋戏剧性重掌英伟达，跻身美国企业界“回旋镖”CEO名单](https://wallstreetcn.com/articles/3786550) — 11-24 04:52 · 华尔街见闻
-- 【TikTok】[德国与奥地利推动欧洲控股TikTok TikTok驳斥](https://lingowhale.com/reader/web/6b0504c14992acd2e08b2e1c?channel_id=67cc08a59a4297b6148b2f44) — 11-24 03:08 · 财新
-- 【英伟达】[黄仁勋回来了，加息预期也回来了](https://lingowhale.com/reader/web/6b0504734992acd2e08b2bf4?channel_id=67cc08a59a4297b6148b2f44) — 11-24 03:08 · 财新
-- 【特朗普】[黄仁勋复职背后：特朗普认为黄仁勋的回归不构成国家安全风险](https://lingowhale.com/reader/web/6b05046fb9b197a67ef2328c?channel_id=67cc08a59a4297b6148b2f44) — 11-24 03:08 · 财新
-- 【英伟达】[黄仁勋回归“比肥皂剧精彩”！华尔街争论他是否“大到不能解雇”、英伟达董事会是否向资本低头](https://wallstreetcn.com/articles/3786544) — 11-24 02:48 · 华尔街见闻
+- 【英伟达】[英伟达跌成美股“七巨头”最便宜！黄仁勋回归狂欢迅速消退，下周又将迎国会听证大考](https://wallstreetcn.com/articles/3786695) — 11-25 21:10 · 华尔街见闻
+- 【英伟达】[黄仁勋回归引爆期权狂欢！Reddit散户单笔赚近1984%，1.9万美元秒赚37.7万美元](https://wallstreetcn.com/articles/3786684) — 11-25 18:31 · 华尔街见闻
+- 【特朗普】[特朗普：如有必要，愿意赦免黄仁勋](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9A%E5%A6%82%E6%9C%89%E5%BF%85%E8%A6%81%EF%BC%8C%E6%84%BF%E6%84%8F%E8%B5%A6%E5%85%8D%E9%BB%84%E4%BB%81%E5%8B%8B) — 11-25 16:47 · 环球时报
+- 【英伟达】[黄仁勋回归后，该英伟达的董事会辞职了？](https://wallstreetcn.com/articles/3786667) — 11-25 14:46 · 华尔街见闻
+- 【英伟达】[黄仁勋复职“加速”美国国会“芯片出口管制”立法？](https://wallstreetcn.com/articles/3786650) — 11-25 11:48 · 华尔街见闻
+- 【Anthropi】[推动黄仁勋下台的“自媒体黑嘴”：由Anthropic的早期投资者资助](https://wallstreetcn.com/articles/3786645) — 11-25 08:20 · 华尔街见闻
+- 【Anthropi】[AI交易疑虑未消，芯片股领跌纳指，道指涨0.8%，Anthropic破发，金属普跌](https://wallstreetcn.com/articles/3786560) — 11-25 06:54 · 华尔街见闻
+- 【英伟达】[黄仁勋回归行情一日游！华尔街警告：油价、通胀和鹰派美联储，一个都没解决](https://wallstreetcn.com/articles/3786638) — 11-25 06:22 · 华尔街见闻
+- 【Anthropi】[Anthropic破发一度暴跌14%！创始人套现逾5.6亿美元，黄仁勋回归加剧AI路线之争](https://wallstreetcn.com/articles/3786627) — 11-25 04:31 · 华尔街见闻
+- 【英伟达】[黄仁勋复职，法律风险并没有解除](https://lingowhale.com/reader/web/6b066f47b8df590b0c5a6679?channel_id=67cc08a59a4297b6148b2f44) — 11-25 03:15 · 财新
 
-### 中国经济与产业 <sub>china-economy.xml</sub>（6）
+### 中国 · 其他 <sub>china-misc.xml</sub>（8）
 
-- 【国产消费】[小米电话会：今年将在AI领域投入160亿，不能简单通过涨价转嫁内存成本，汽车交付Q4预计将迎“较大提升”](https://wallstreetcn.com/articles/3786602) — 11-24 21:36 · 华尔街见闻
-- 【"R2也会亏"，】["R2也会亏"，银行理财市场面临“本金”考验](https://wallstreetcn.com/articles/3786606) — 11-24 19:25 · 华尔街见闻
-- 【TikTok】[豆包灰测购物一级入口，抖音电商拓展AI获客渠道](https://wallstreetcn.com/articles/3786600) — 11-24 18:47 · 华尔街见闻
-- 【国产消费】[小米Q3营收超预期，存储涨价挤压手机毛利，汽车收入同比下降19.9%，增程SUV首月锁单超7万｜财报见闻](https://wallstreetcn.com/articles/3786596) — 11-24 18:06 · 华尔街见闻
-- 【特别呈现 | 从】[特别呈现 | 从市场进入到贸易走廊：企业跨境资金管理的新考题——星展银行报告洞察](https://lingowhale.com/reader/web/6b050450e2f80938745f30ef?channel_id=67cc08a59a4297b6148b2f44) — 11-24 03:08 · 财新
-- 【美国11月PMI】[美国11月PMI降至四个月低点，供应链瓶颈与成本压力持续](https://wallstreetcn.com/articles/3786539) — 11-24 00:04 · 华尔街见闻
+- 【浦江中国AI T】[浦江中国AI Token业务加速落地，首批客户已接入](https://wallstreetcn.com/articles/3786694) — 11-25 20:23 · 华尔街见闻
+- 【硬折扣祖师爷奥乐】[硬折扣祖师爷奥乐齐，也要面对中国速度](https://wallstreetcn.com/articles/3786693) — 11-25 20:14 · 华尔街见闻
+- 【张晋军任中国资环】[张晋军任中国资环集团董事长](https://lingowhale.com/reader/web/6b06bfd23c98738f41e79414?channel_id=67cc08a59a4297b6148b2f44) — 11-25 09:14 · 财新
+- 【从业35年 董时】[从业35年 董时出任中国青年报社社长](https://lingowhale.com/reader/web/6b06bef33c98738f41e790e5?channel_id=67cc08a59a4297b6148b2f44) — 11-25 09:14 · 财新
+- 【推广 | 第九届】[推广 | 第九届CFA协会中国投资峰会圆满举办](https://lingowhale.com/reader/web/6b065cdf3b7bc86a5fe3fcc2?channel_id=67cc08a59a4297b6148b2f44) — 11-25 03:15 · 财新
+- 【兰州中院，审西安】[兰州中院，审西安人大常委会原主任韩松后，又将审西安原书记方红卫](https://lingowhale.com/reader/web/6b066f587e74355c6fffa44d?channel_id=67cc08a59a4297b6148b2f44) — 11-25 03:15 · 财新
+- 【永辉与茅台“分手】[永辉与茅台“分手”](https://lingowhale.com/reader/web/6b066f374a70b06292d5f0c2?channel_id=67cc08a59a4297b6148b2f44) — 11-25 03:15 · 财新
+- 【家庭仍是中国老年】[家庭仍是中国老年人最主要的照料来源](https://lingowhale.com/reader/web/6b066f36b4fd46194d317985?channel_id=67cc08a59a4297b6148b2f44) — 11-25 03:15 · 财新
 
-### 中国 · 其他 <sub>china-misc.xml</sub>（3）
+### 中国 · 内政与外交 <sub>china-politics.xml</sub>（5）
 
-- 【茅台收回销售计划】[茅台收回销售计划，永辉参股12年的代理公司拟清算](https://wallstreetcn.com/articles/3786597) — 11-24 17:32 · 华尔街见闻
-- 【豆包推出“小豆”】[豆包推出“小豆”，大厂争夺个人AI入口](https://wallstreetcn.com/articles/3786572) — 11-24 12:03 · 华尔街见闻
-- 【时隔21年，上海】[时隔21年，上海地铁票价调整，平均每人次提高0.99元，12月1日实施](https://lingowhale.com/reader/web/6b055f69b4fd46194d2d66b7?channel_id=67cc08a59a4297b6148b2f44) — 11-24 09:47 · 财新
+- 【习近平】[习近平同巴基斯坦总统扎尔达里就中巴航天员执行联合飞行任务互致贺电](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%90%8C%E5%B7%B4%E5%9F%BA%E6%96%AF%E5%9D%A6%E6%80%BB%E7%BB%9F%E6%89%8E%E5%B0%94%E8%BE%BE%E9%87%8C%E5%B0%B1%E4%B8%AD%E5%B7%B4%E8%88%AA%E5%A4%A9%E5%91%98%E6%89%A7%E8%A1%8C%E8%81%94%E5%90%88%E9%A3%9E%E8%A1%8C%E4%BB%BB%E5%8A%A1%E4%BA%92%E8%87%B4%E8%B4%BA%E7%94%B5) — 11-25 16:12 · 环球时报
+- 【习近平】[习近平同巴基斯坦总统扎尔达里就中巴航天员执行联合飞行任务互致贺电](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%90%8C%E5%B7%B4%E5%9F%BA%E6%96%AF%E5%9D%A6%E6%80%BB%E7%BB%9F%E6%89%8E%E5%B0%94%E8%BE%BE%E9%87%8C%E5%B0%B1%E4%B8%AD%E5%B7%B4%E8%88%AA%E5%A4%A9%E5%91%98%E6%89%A7%E8%A1%8C%E8%81%94%E5%90%88%E9%A3%9E%E8%A1%8C%E4%BB%BB%E5%8A%A1%E4%BA%92%E8%87%B4%E8%B4%BA%E7%94%B5) — 11-25 14:55 · 央视新闻
+- 【习近平】[习近平对党内法规工作作出重要指示](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%AF%B9%E5%85%9A%E5%86%85%E6%B3%95%E8%A7%84%E5%B7%A5%E4%BD%9C%E4%BD%9C%E5%87%BA%E9%87%8D%E8%A6%81%E6%8C%87%E7%A4%BA) — 11-25 13:35 · 央视新闻
+- 【多次发表“债都是】[多次发表“债都是前面欠的，凭什么让我还”等言论的贵州毕节市委原书记吴胜华，获刑无期](https://lingowhale.com/reader/web/6b06b4c33b7bc86a5fe5be8a?channel_id=67cc08a59a4297b6148b2f44) — 11-25 09:14 · 财新
+- 【陈吉宁被查】[陈吉宁被查](https://lingowhale.com/reader/web/6b0656407c855cb494b3c850?channel_id=67cc08a59a4297b6148b2f44) — 11-25 03:15 · 财新
 
-### 健康 · 养生 · 科普 <sub>china-health.xml</sub>（3）
+### 中国经济与产业 <sub>china-economy.xml</sub>（4）
 
-- 【蚂蚁百灵医疗模型】[蚂蚁百灵医疗模型的取舍：不做最大的，做放得进医院的](https://wallstreetcn.com/articles/3786593) — 11-24 16:54 · 华尔街见闻
-- 【苹果】[多啃苹果、玉米能让牙齿变整齐？医生提醒（附不同年龄段咀嚼训练）](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E5%A4%9A%E5%95%83%E8%8B%B9%E6%9E%9C%E3%80%81%E7%8E%89%E7%B1%B3%E8%83%BD%E8%AE%A9%E7%89%99%E9%BD%BF%E5%8F%98%E6%95%B4%E9%BD%90%EF%BC%9F%E5%8C%BB%E7%94%9F%E6%8F%90%E9%86%92%EF%BC%88%E9%99%84%E4%B8%8D%E5%90%8C%E5%B9%B4%E9%BE%84%E6%AE%B5%E5%92%80%E5%9A%BC%E8%AE%AD%E7%BB%83%EF%BC%89) — 11-24 12:46 · 央视新闻
-- 【癌症与疫苗】[礼来并购负责人：全力押注癌症领域，未来五年八款抗癌新药有望上市](https://wallstreetcn.com/articles/3786549) — 11-24 04:29 · 华尔街见闻
+- 【国产消费】[降价不再带来更多消费？Ramp CEO警告：AI增长的杰文斯悖论已经失灵，企业AI支出开始放缓](https://wallstreetcn.com/articles/3786679) — 11-25 17:11 · 华尔街见闻
+- 【沪指失守3500】[沪指失守3500点，医药、消费逆势走强，创业板跌超43%，“宁王”大跌8%，半导体产业链下跌，恒科指午后跌超2%](https://wallstreetcn.com/articles/3786653) — 11-25 16:50 · 华尔街见闻
+- 【男子为儿子结婚攒】[男子为儿子结婚攒20万元现金，打开纸箱懵了：纸币遭白蚁严重蛀蚀，票面损毁严重、辨识困难；银行为其挽回14.87万](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E7%94%B7%E5%AD%90%E4%B8%BA%E5%84%BF%E5%AD%90%E7%BB%93%E5%A9%9A%E6%94%9220%E4%B8%87%E5%85%83%E7%8E%B0%E9%87%91%EF%BC%8C%E6%89%93%E5%BC%80%E7%BA%B8%E7%AE%B1%E6%87%B5%E4%BA%86%EF%BC%9A%E7%BA%B8%E5%B8%81%E9%81%AD%E7%99%BD%E8%9A%81%E4%B8%A5%E9%87%8D%E8%9B%80%E8%9A%80%EF%BC%8C%E7%A5%A8%E9%9D%A2%E6%8D%9F%E6%AF%81%E4%B8%A5%E9%87%8D%E3%80%81%E8%BE%A8%E8%AF%86%E5%9B%B0%E9%9A%BE%EF%BC%9B%E9%93%B6%E8%A1%8C%E4%B8%BA%E5%85%B6%E6%8C%BD%E5%9B%9E14.87%E4%B8%87) — 11-25 16:47 · 环球时报
+- 【城堡证券前三季度】[城堡证券前三季度交易收入已超2025年全年纪录](https://wallstreetcn.com/articles/3786629) — 11-25 04:31 · 华尔街见闻
 
-### 社会案件与法治 <sub>china-crime-law.xml</sub>（2）
+### 人物与暖新闻 <sub>china-people.xml</sub>（2）
 
-- 【128家公司暴露】[128家公司暴露ESG风险，卓然股份因财务造假等违法行为被罚1130万元丨善择ESG风险跟踪第164期](http://www.infzm.com/contents/345524) — 11-24 16:25 · 南方周末
-- 【报道：三星未来三】[报道：三星未来三年存储产能接近售罄，客户抢长约至2031年](https://wallstreetcn.com/articles/3786538) — 11-24 00:05 · 华尔街见闻
+- 【希望小学“卖惨骗】[希望小学“卖惨骗捐”：一所小学是如何“组织癌变”的](http://www.infzm.com/contents/345580) — 11-25 12:25 · 南方周末
+- 【1天20倍！上周】[1天20倍！上周五买入英伟达期权的买家火了，周一放话“开盘即卖，感谢老黄”](https://wallstreetcn.com/articles/3786643) — 11-25 08:03 · 华尔街见闻
 
-### 中国 · 内政与外交 <sub>china-politics.xml</sub>（1）
+### 健康 · 养生 · 科普 <sub>china-health.xml</sub>（1）
 
-- 【野生动物】[女子双腿绑21条活蛇，入境时因走路姿势僵硬被查，海关查获：均为外来物种](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E5%A5%B3%E5%AD%90%E5%8F%8C%E8%85%BF%E7%BB%9121%E6%9D%A1%E6%B4%BB%E8%9B%87%EF%BC%8C%E5%85%A5%E5%A2%83%E6%97%B6%E5%9B%A0%E8%B5%B0%E8%B7%AF%E5%A7%BF%E5%8A%BF%E5%83%B5%E7%A1%AC%E8%A2%AB%E6%9F%A5%EF%BC%8C%E6%B5%B7%E5%85%B3%E6%9F%A5%E8%8E%B7%EF%BC%9A%E5%9D%87%E4%B8%BA%E5%A4%96%E6%9D%A5%E7%89%A9%E7%A7%8D) — 11-24 14:39 · 环球时报
+- 【闪迪交流会：NA】[闪迪交流会：NAND“毫无下行风险”，三大AI存储机会“均健康增长”，中国市场足以吸收增加供给](https://wallstreetcn.com/articles/3786651) — 11-25 10:05 · 华尔街见闻
 
-### 人物与暖新闻 <sub>china-people.xml</sub>（1）
+### 社会案件与法治 <sub>china-crime-law.xml</sub>（1）
 
-- 【吊车司机在绿化带】[吊车司机在绿化带捡到一部全是泥的手机，通电开机后，发视频找到失主！失主：半年前骑车摔倒，不知道手机丢那了……](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E5%90%8A%E8%BD%A6%E5%8F%B8%E6%9C%BA%E5%9C%A8%E7%BB%BF%E5%8C%96%E5%B8%A6%E6%8D%A1%E5%88%B0%E4%B8%80%E9%83%A8%E5%85%A8%E6%98%AF%E6%B3%A5%E7%9A%84%E6%89%8B%E6%9C%BA%EF%BC%8C%E9%80%9A%E7%94%B5%E5%BC%80%E6%9C%BA%E5%90%8E%EF%BC%8C%E5%8F%91%E8%A7%86%E9%A2%91%E6%89%BE%E5%88%B0%E5%A4%B1%E4%B8%BB%EF%BC%81%E5%A4%B1%E4%B8%BB%EF%BC%9A%E5%8D%8A%E5%B9%B4%E5%89%8D%E9%AA%91%E8%BD%A6%E6%91%94%E5%80%92%EF%BC%8C%E4%B8%8D%E7%9F%A5%E9%81%93%E6%89%8B%E6%9C%BA%E4%B8%A2%E9%82%A3%E4%BA%86%E2%80%A6%E2%80%A6) — 11-24 13:42 · 环球时报
+- 【致五死一伤，湖南】[致五死一伤，湖南祁东“5·24”火灾事故调查报告公布：违规改装的电动车在充电过程中因锂电池热失控引发火灾](https://lingowhale.com/reader/web/6b06ba42b8df590b0c5bfac8?channel_id=67cc08a59a4297b6148b2f44) — 11-25 09:14 · 财新
 
 ## 科技 · AI
 
-### AI 行业与科技公司 <sub>tech-ai.xml</sub>（11）
+### AI 行业与科技公司 <sub>tech-ai.xml</sub>（13）
 
-- 【Anthropi】[Anthropic上市5天即破发，2万亿美元估值昙花一现！](https://wallstreetcn.com/articles/3786614) — 11-24 21:14 · 华尔街见闻
-- 【知乎三季度营收企】[知乎三季度营收企稳：订阅会员回升、拓展AI布局](https://wallstreetcn.com/articles/3786610) — 11-24 20:15 · 华尔街见闻
-- 【AI风险推高美债】[AI风险推高美债吸引力！Pimco称一旦危机爆发，收益率将迎来“难以预测”的下行](https://wallstreetcn.com/articles/3786607) — 11-24 20:03 · 华尔街见闻
-- 【Anthropi】[大涨之后何去何从？纳指100期货跌1.5%，英伟达盘前跌6%，Anthropic跌破发行价，金油齐跌](https://wallstreetcn.com/articles/3786560) — 11-24 19:14 · 华尔街见闻
-- 【机器人】[创业板高开低走尾盘翻绿，机器人爆发，半导体活跃，恒科指午后跌超1%，AI大模型双雄齐跌](https://wallstreetcn.com/articles/3786562) — 11-24 16:26 · 华尔街见闻
-- 【苹果】[报道：三星或独供iPhone Duo折叠屏至少五年，苹果议价空间受限](https://wallstreetcn.com/articles/3786584) — 11-24 15:54 · 华尔街见闻
-- 【涂鸦智能营收增两】[涂鸦智能营收增两成，AI新品类放量但毛利率下滑](https://wallstreetcn.com/articles/3786586) — 11-24 15:40 · 华尔街见闻
-- 【Citadel：】[Citadel：AI投资的政治风险被严重低估](https://wallstreetcn.com/articles/3786569) — 11-24 13:00 · 华尔街见闻
-- 【Anthropi】[刚刚，Anthropic内部Claude模型独立攻克代数版P/NP问题，全篇Lean机器验证通过](https://wallstreetcn.com/articles/3786566) — 11-24 10:55 · 华尔街见闻
-- 【Anthropi】[Anthropic向企业交出AI数据控制权，Claude Ship同步上线](https://wallstreetcn.com/articles/3786547) — 11-24 05:11 · 华尔街见闻
-- 【马斯克】[马斯克承认SpaceX AI研发落后，出租算力比自研Grok更赚钱](https://wallstreetcn.com/articles/3786545) — 11-24 02:49 · 华尔街见闻
+- 【AI交易信仰动摇】[AI交易信仰动摇，纳指期货跌超3%，英伟达盘前跌超4%，金银大跌，避险资金涌入美债](https://wallstreetcn.com/articles/3786656) — 11-25 20:03 · 华尔街见闻
+- 【Meta】[Meta将Muse智能体接入Instagram与沃尔玛](https://wallstreetcn.com/articles/3786674) — 11-25 19:56 · 华尔街见闻
+- 【AI制药终于开始】[AI制药终于开始省时间了](https://wallstreetcn.com/articles/3786689) — 11-25 19:42 · 华尔街见闻
+- 【Anthropi】[Anthropic内部争论升级：从能力优势到决策权，人类是否应该让位？](https://wallstreetcn.com/articles/3786687) — 11-25 19:18 · 华尔街见闻
+- 【次贷危机的味道？】[次贷危机的味道？甲骨文CDS利差已超越2008年的贝尔斯登，AI数据中心股权被抹去近半](https://wallstreetcn.com/articles/3786678) — 11-25 19:05 · 华尔街见闻
+- 【AI泡沫担忧】[比互联网泡沫更危险？AI已撑起美国25%的经济增长，一旦泡沫破裂，美国经济恐遭重创](https://wallstreetcn.com/articles/3786675) — 11-25 16:50 · 华尔街见闻
+- 【机器人】[小鹏科技日：L4级Robotaxi正式载客，人形机器人IRON登台演讲，明年1月起量产](https://wallstreetcn.com/articles/3786672) — 11-25 16:11 · 华尔街见闻
+- 【腾讯大股东Pro】[腾讯大股东Prosus：AI将产生重大影响，对腾讯“非常看好”](https://wallstreetcn.com/articles/3786668) — 11-25 14:55 · 华尔街见闻
+- 【AI算力需求存疑】[AI算力需求存疑！贝莱德拟大砍250亿美元数据中心收购价](https://wallstreetcn.com/articles/3786662) — 11-25 13:32 · 华尔街见闻
+- 【不做“屎山代码”】[不做“屎山代码”制造机！“AI软件工厂”的“12条军规”](https://wallstreetcn.com/articles/3786655) — 11-25 10:40 · 华尔街见闻
+- 【戴尔电话会：AI】[戴尔电话会：AI服务器积压订单突破1320亿美元，AI代理引爆传统服务器需求](https://wallstreetcn.com/articles/3786641) — 11-25 08:10 · 华尔街见闻
+- 【AI服务器需求引】[AI服务器需求引爆戴尔业绩！营收翻倍、上调全年指引，1323亿美元订单积压创新高｜财报见闻](https://wallstreetcn.com/articles/3786635) — 11-25 05:52 · 华尔街见闻
+- 【铜价"收回"对A】[铜价"收回"对AI周期信任票，大跌超4%回吐周一全部涨幅](https://wallstreetcn.com/articles/3786636) — 11-25 05:38 · 华尔街见闻
 
-### 科学与探索 <sub>science.xml</sub>（3）
+### 网络安全事件 <sub>cyber-security.xml</sub>（2）
 
-- 【首位外籍航天员：】[首位外籍航天员：所有训练中最具挑战的是“中文”](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E9%A6%96%E4%BD%8D%E5%A4%96%E7%B1%8D%E8%88%AA%E5%A4%A9%E5%91%98%EF%BC%9A%E6%89%80%E6%9C%89%E8%AE%AD%E7%BB%83%E4%B8%AD%E6%9C%80%E5%85%B7%E6%8C%91%E6%88%98%E7%9A%84%E6%98%AF%E2%80%9C%E4%B8%AD%E6%96%87%E2%80%9D) — 11-24 11:31 · 央视新闻
-- 【神二十四航天员简】[神二十四航天员简历公布](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E7%A5%9E%E4%BA%8C%E5%8D%81%E5%9B%9B%E8%88%AA%E5%A4%A9%E5%91%98%E7%AE%80%E5%8E%86%E5%85%AC%E5%B8%83) — 11-24 11:10 · 央视新闻
-- 【首位外籍航天员，】[首位外籍航天员，主要承担这些任务！](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E9%A6%96%E4%BD%8D%E5%A4%96%E7%B1%8D%E8%88%AA%E5%A4%A9%E5%91%98%EF%BC%8C%E4%B8%BB%E8%A6%81%E6%89%BF%E6%8B%85%E8%BF%99%E4%BA%9B%E4%BB%BB%E5%8A%A1%EF%BC%81) — 11-24 09:37 · 央视新闻
+- 【问题频发！美中情】[问题频发！美中情局和国家情报总监办公室被曝遭“黑客攻击”](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E9%97%AE%E9%A2%98%E9%A2%91%E5%8F%91%EF%BC%81%E7%BE%8E%E4%B8%AD%E6%83%85%E5%B1%80%E5%92%8C%E5%9B%BD%E5%AE%B6%E6%83%85%E6%8A%A5%E6%80%BB%E7%9B%91%E5%8A%9E%E5%85%AC%E5%AE%A4%E8%A2%AB%E6%9B%9D%E9%81%AD%E2%80%9C%E9%BB%91%E5%AE%A2%E6%94%BB%E5%87%BB%E2%80%9D) — 11-25 16:47 · 环球时报
+- 【OpenAI】[OpenAI瞄上网络安全：比编程更大的下一个市场](https://wallstreetcn.com/articles/3786652) — 11-25 09:22 · 华尔街见闻
 
 ## 财经 · 商业
 
-### 全球宏观经济 <sub>global-macro.xml</sub>（2）
+### 全球宏观经济 <sub>global-macro.xml</sub>（6）
 
-- 【银行业】[美联储监管副主席鲍曼遭罕见调查，被指违反“静默期”规定，鲍曼否认](https://wallstreetcn.com/articles/3786556) — 11-24 06:58 · 华尔街见闻
-- 【通胀与利率】[美联储“三把手”：通胀仍未达标，需逐步采取行动，不排除连续加息的可能](https://wallstreetcn.com/articles/3786554) — 11-24 06:28 · 华尔街见闻
+- 【银行业】[高盛：市场已替美联储“加息四次”，但沃什12月仍将继续加息](https://wallstreetcn.com/articles/3786691) — 11-25 20:16 · 华尔街见闻
+- 【华尔街最乐观之一】[华尔街最乐观之一！德银：盈利增长叠加经济复苏，标普500明年底有望冲上9000点](https://wallstreetcn.com/articles/3786688) — 11-25 19:48 · 华尔街见闻
+- 【通胀与利率】[今晚，美联储12月决议前最后一份重磅通胀报告出炉！](https://wallstreetcn.com/articles/3786680) — 11-25 18:06 · 华尔街见闻
+- 【通胀与利率】[“新债王”：美国债务危机将在2029-2030年启动，只有三条路化债“重组、印钞和通胀”](https://wallstreetcn.com/articles/3786673) — 11-25 17:00 · 华尔街见闻
+- 【AI泡沫担忧】[摩根大通金属展望：铜铝还要“挤泡沫”，黄金即将迎来“抄底时刻”](https://wallstreetcn.com/articles/3786657) — 11-25 11:46 · 华尔街见闻
+- 【黄金】[黄金对冲由亏转盈，周大福账面利润翻倍](https://wallstreetcn.com/articles/3786659) — 11-25 11:27 · 华尔街见闻
 
-## 社会 · 环境
+### 企业与商业 <sub>business.xml</sub>（1）
 
-### 教育 <sub>u6559-u80b2.xml</sub>（1）
-
-- 【大学教授谈论文A】[大学教授谈论文AI率：与其担心检测“误伤”，不如加强自身写作训练](http://www.infzm.com/contents/345562) — 11-24 21:25 · 南方周末
+- 【A股鲜见湿厕纸I】[A股鲜见湿厕纸IPO项目来了，德佑母公司逸祥卫生启动上市辅导](https://wallstreetcn.com/articles/3786670) — 11-25 12:22 · 华尔街见闻
 
 ## 文化 · 体育
 
-### 体育 <sub>sports.xml</sub>（2）
+### 体育 <sub>sports.xml</sub>（1）
 
-- 【不惜溢价46%！】[不惜溢价46%！赛诺菲豪掷410亿美元收购美国生物科技公司](https://wallstreetcn.com/articles/3786608) — 11-24 20:46 · 华尔街见闻
-- 【英伟达】[黄仁勋回归点燃科技债反弹，全球信用风险指标大幅回落](https://wallstreetcn.com/articles/3786543) — 11-24 02:46 · 华尔街见闻
+- 【冠军的另一种金牌】[冠军的另一种金牌：让村里长者每天吃上热饭](http://www.infzm.com/contents/345554) — 11-25 14:25 · 南方周末
 
 ## 生活方式
 
-### 家庭与情感 <sub>life-family.xml</sub>（2）
+### 家庭与情感 <sub>life-family.xml</sub>（1）
 
-- 【拥有“重启人生”】[拥有“重启人生”的能力后，你该如何选择？](http://www.infzm.com/contents/345483) — 11-24 18:25 · 南方周末
-- 【不信了！大摩：我】[不信了！大摩：我们喊"拥抱风险"，客户却在往回缩](https://wallstreetcn.com/articles/3786542) — 11-24 00:07 · 华尔街见闻
+- 【从“养小”向“养】[从“养小”向“养老”倾斜，家庭之外谁来搭把手？](https://lingowhale.com/reader/web/6b06bcaf7c855cb494b5e96e?channel_id=67cc08a59a4297b6148b2f44) — 11-25 09:14 · 财新
 
 ## 未分组
 
-### 速览与杂项 <sub>briefing.xml</sub>（22）
+### 速览与杂项 <sub>briefing.xml</sub>（16）
 
-- 【卢伟冰谈“最难第】[卢伟冰谈“最难第三季度”：小米如何穿越成本周期](https://wallstreetcn.com/articles/3786612) — 11-24 20:43 · 华尔街见闻
-- 【B站三季度广告收】[B站三季度广告收入增长20%，用户活跃度提升支撑商业化](https://wallstreetcn.com/articles/3786611) — 11-24 20:36 · 华尔街见闻
-- 【达利欧最新警告：】[达利欧最新警告：伟大的技术，不等于伟大的投资](https://wallstreetcn.com/articles/3786589) — 11-24 19:46 · 华尔街见闻
-- 【又现卖方王牌团队】[又现卖方王牌团队“集体出走”，近期卖方人事为何变动频频](https://wallstreetcn.com/articles/3786604) — 11-24 19:21 · 华尔街见闻
-- 【商汤开源8B多模】[商汤开源8B多模态模型U1.6，图像自修正写入单次生成](https://wallstreetcn.com/articles/3786598) — 11-24 18:10 · 华尔街见闻
-- 【2027见闻历，】[2027见闻历，财经人的桌面必备“神历”](https://wallstreetcn.com/articles/3782813) — 11-24 17:59 · 华尔街见闻
-- 【十五运开幕式同款】[十五运开幕式同款鳌鱼再登场，大湾区文化艺术节剧目《广秀——鳌・狮》首演倒计时](http://www.infzm.com/contents/345487) — 11-24 17:25 · 南方周末
-- 【“突破1个亿”，】[“突破1个亿”，这是对“卡脖子”的最好回答](http://weixin.sogou.com/weixin?type=2&query=%E7%8E%AF%E7%90%83%E6%97%B6%E6%8A%A5+%E2%80%9C%E7%AA%81%E7%A0%B41%E4%B8%AA%E4%BA%BF%E2%80%9D%EF%BC%8C%E8%BF%99%E6%98%AF%E5%AF%B9%E2%80%9C%E5%8D%A1%E8%84%96%E5%AD%90%E2%80%9D%E7%9A%84%E6%9C%80%E5%A5%BD%E5%9B%9E%E7%AD%94) — 11-24 16:17 · 环球时报
-- 【慧与营收增长50】[慧与营收增长50%，服务器与网络业务共同发力](https://wallstreetcn.com/articles/3786585) — 11-24 15:19 · 华尔街见闻
-- 【云知声营收增五成】[云知声营收增五成，向模型调用生意拓展](https://wallstreetcn.com/articles/3786583) — 11-24 15:01 · 华尔街见闻
-- 【智元精灵G2半年】[智元精灵G2半年进三家工厂，蓝思与长电产线单次节拍低于25秒](https://wallstreetcn.com/articles/3786578) — 11-24 14:03 · 华尔街见闻
-- 【网传纳米海绵磨损】[网传纳米海绵磨损后会释放微塑料，用它洗碗安全吗？](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E7%BD%91%E4%BC%A0%E7%BA%B3%E7%B1%B3%E6%B5%B7%E7%BB%B5%E7%A3%A8%E6%8D%9F%E5%90%8E%E4%BC%9A%E9%87%8A%E6%94%BE%E5%BE%AE%E5%A1%91%E6%96%99%EF%BC%8C%E7%94%A8%E5%AE%83%E6%B4%97%E7%A2%97%E5%AE%89%E5%85%A8%E5%90%97%EF%BC%9F) — 11-24 13:51 · 央视新闻
-- 【老黄“神奇回归”】[老黄“神奇回归” ，投行连夜“撕报告”](https://wallstreetcn.com/articles/3786571) — 11-24 12:07 · 华尔街见闻
-- 【对冲失效，空头止】[对冲失效，空头止损，杠杆ETF狂扫410亿！复盘老黄回归，美股“惊心动魄”的一天](https://wallstreetcn.com/articles/3786563) — 11-24 11:21 · 华尔街见闻
-- 【英伟达一夜暴涨3】[英伟达一夜暴涨31%，空头跌懵了](https://wallstreetcn.com/articles/3786564) — 11-24 10:39 · 华尔街见闻
-- 【推广 | 请查收】[推广 | 请查收高质量发展的ESG30解决方案](https://lingowhale.com/reader/web/6b056fba7c855cb494b0998f?channel_id=67cc08a59a4297b6148b2f44) — 11-24 09:47 · 财新
-- 【华尔街见闻早餐F】[华尔街见闻早餐FM-Radio | 2026年11月24日](https://wallstreetcn.com/articles/3786555) — 11-24 07:03 · 华尔街见闻
-- 【苹果】[时隔多年重启公益联名，苹果拟推（RED）特别版 HomePod mini 2 与 AirPods Max 2](https://wallstreetcn.com/articles/3786551) — 11-24 05:47 · 华尔街见闻
-- 【贪婪无度的副省长】[贪婪无度的副省长，被判死缓的高兴夫](https://lingowhale.com/reader/web/6b050490942a514a71d18cc6?channel_id=67cc08a59a4297b6148b2f44) — 11-24 03:08 · 财新
-- 【惠民保今年再减1】[惠民保今年再减18款](https://lingowhale.com/reader/web/6b05048b9924bc29779a057a?channel_id=67cc08a59a4297b6148b2f44) — 11-24 03:08 · 财新
-- 【特别呈现 | 从】[特别呈现 | 从“绿色产品”到“绿色价值”：立邦可持续创新的商业化实践](https://lingowhale.com/reader/web/6b05047de2f80938745f31c7?channel_id=67cc08a59a4297b6148b2f44) — 11-24 03:08 · 财新
-- 【湖北云梦老虎墩墓】[湖北云梦老虎墩墓地，有重要发现](https://lingowhale.com/reader/web/6b0502c89924bc297799fd0d?channel_id=67cc08a59a4297b6148b2f44) — 11-24 03:08 · 财新
+- 【韩股陷入“无差别】[韩股陷入“无差别抛售”：三星与SK海力士齐现死叉，高盛称估值已计入70%盈利暴跌](https://wallstreetcn.com/articles/3786692) — 11-25 20:39 · 华尔街见闻
+- 【走出漫长哀悼，她】[走出漫长哀悼，她们在异乡重新看见母亲](http://www.infzm.com/contents/345514) — 11-25 17:25 · 南方周末
+- 【理想汽车Q3营收】[理想汽车Q3营收同增5.4%超预期，经营亏损大幅收窄，但Q4交付指引远低于市场预估 | 财报见闻](https://wallstreetcn.com/articles/3786676) — 11-25 16:30 · 华尔街见闻
+- 【办好家门口的养老】[办好家门口的养老院](http://www.infzm.com/contents/345604) — 11-25 16:25 · 南方周末
+- 【美股这波反弹是陷】[美股这波反弹是陷阱？华尔街大佬拉响警报：标普500可能跌到5500点！](https://wallstreetcn.com/articles/3786666) — 11-25 16:20 · 华尔街见闻
+- 【宇宙级合影上新！】[宇宙级合影上新！“天宫”迎来首位外籍访客](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E5%AE%87%E5%AE%99%E7%BA%A7%E5%90%88%E5%BD%B1%E4%B8%8A%E6%96%B0%EF%BC%81%E2%80%9C%E5%A4%A9%E5%AE%AB%E2%80%9D%E8%BF%8E%E6%9D%A5%E9%A6%96%E4%BD%8D%E5%A4%96%E7%B1%8D%E8%AE%BF%E5%AE%A2) — 11-25 15:19 · 央视新闻
+- 【2027见闻历，】[2027见闻历，财经人的桌面必备“神历”](https://wallstreetcn.com/articles/3782813) — 11-25 14:05 · 华尔街见闻
+- 【脂肪肝、结肠癌患】[脂肪肝、结肠癌患病率上升，原因和它有关](http://www.infzm.com/contents/345506) — 11-25 13:25 · 南方周末
+- 【涉案金额超150】[涉案金额超150亿元！舒某某被引渡回国](http://weixin.sogou.com/weixin?type=2&query=%E5%A4%AE%E8%A7%86%E6%96%B0%E9%97%BB+%E6%B6%89%E6%A1%88%E9%87%91%E9%A2%9D%E8%B6%85150%E4%BA%BF%E5%85%83%EF%BC%81%E8%88%92%E6%9F%90%E6%9F%90%E8%A2%AB%E5%BC%95%E6%B8%A1%E5%9B%9E%E5%9B%BD) — 11-25 12:04 · 央视新闻
+- 【小米：拐点已现？】[小米：拐点已现？](https://wallstreetcn.com/articles/3786646) — 11-25 09:12 · 华尔街见闻
+- 【数据中心需求推动】[数据中心需求推动，美国钢铁价格飙至四年高位](https://wallstreetcn.com/articles/3786647) — 11-25 08:42 · 华尔街见闻
+- 【华尔街见闻早餐F】[华尔街见闻早餐FM-Radio | 2026年11月25日](https://wallstreetcn.com/articles/3786639) — 11-25 07:07 · 华尔街见闻
+- 【债务压顶，“华尔】[债务压顶，“华尔街狼王”Icahn身家从261亿美元跌至13亿美元](https://wallstreetcn.com/articles/3786640) — 11-25 07:03 · 华尔街见闻
+- 【惠普盈利指引超预】[惠普盈利指引超预期，内存成本控制取得进展](https://wallstreetcn.com/articles/3786637) — 11-25 06:00 · 华尔街见闻
+- 【黑石、华平、阿波】[黑石、华平、阿波罗洽谈入股，GTCR拟500亿美元私有化Global Payments](https://wallstreetcn.com/articles/3786632) — 11-25 05:05 · 华尔街见闻
+- 【铝现货升水大幅收】[铝现货升水大幅收窄：LME收紧持仓规则，干预数十年来最严重逼仓行情](https://wallstreetcn.com/articles/3786625) — 11-25 02:29 · 华尔街见闻
