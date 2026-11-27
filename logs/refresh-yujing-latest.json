@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261127-080025",
-  "started_at": "2026-11-27 08:00:25 CST",
-  "finished_at": "2026-11-27 08:06:09 CST",
+  "timestamp": "20261127-100007",
+  "started_at": "2026-11-27 10:00:07 CST",
+  "finished_at": "2026-11-27 10:10:43 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,15 +18,43 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 0,
-    "batch_article_count": 0,
-    "fetched": 0,
-    "inserted": 0,
-    "updated": 0,
+    "feed_count": 3,
+    "batch_article_count": 5,
+    "fetched": 5,
+    "inserted": 4,
+    "updated": 1,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
-  "feeds": [],
+  "feeds": [
+    {
+      "source_key": "67cc08a19a4297b6148b29c6-channel",
+      "title": "数字生命卡兹克-公众号",
+      "fetched": 1,
+      "inserted": 0,
+      "updated": 1,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b2994-channel",
+      "title": "新智元-公众号",
+      "fetched": 2,
+      "inserted": 2,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    },
+    {
+      "source_key": "67cc08a19a4297b6148b295c-channel",
+      "title": "量子位-公众号",
+      "fetched": 2,
+      "inserted": 2,
+      "updated": 0,
+      "deduped": 0,
+      "unchanged": 0
+    }
+  ],
   "top_categories": []
 }
