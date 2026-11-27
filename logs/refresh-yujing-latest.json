@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261128-040015",
-  "started_at": "2026-11-28 04:00:15 CST",
-  "finished_at": "2026-11-28 04:07:43 CST",
+  "timestamp": "20261128-060107",
+  "started_at": "2026-11-28 06:01:07 CST",
+  "finished_at": "2026-11-28 06:09:28 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -21,19 +21,19 @@
     "feed_count": 1,
     "batch_article_count": 1,
     "fetched": 1,
-    "inserted": 0,
-    "updated": 1,
+    "inserted": 1,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
   },
   "feeds": [
     {
-      "source_key": "67cc08a89a4297b6148b34f0-ai",
-      "title": "小互AI-公众号",
+      "source_key": "68060c00303fabc7419af262-channel",
+      "title": "金融-公众号-评论",
       "fetched": 1,
-      "inserted": 0,
-      "updated": 1,
+      "inserted": 1,
+      "updated": 0,
       "deduped": 0,
       "unchanged": 0
     }
