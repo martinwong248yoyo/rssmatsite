@@ -3,7 +3,7 @@
 - Updated articles this run: `1`
 - New articles inserted: `1`
 - Existing articles updated: `0`
-- Run time: `2026-11-28 06:01:07 CST` to `2026-11-28 06:09:28 CST`
+- Run time: `2026-11-28 08:00:10 CST` to `2026-11-28 08:06:34 CST`
 - Update command: `npm run refresh:yujing -- --headless`
 - Recent-days filter: `3`
 
@@ -19,7 +19,7 @@
 
 ## Feed-Level Changes
 
-- `金融-公众号-评论`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
+- `热门AI公众号更新追踪`: fetched=`1`, inserted=`1`, updated=`0`, deduped=`0`, unchanged=`0`
 
 ## Category Snapshot
 
