@@ -1,7 +1,7 @@
 {
-  "timestamp": "20261128-220010",
-  "started_at": "2026-11-28 22:00:10 CST",
-  "finished_at": "2026-11-28 22:11:00 CST",
+  "timestamp": "20261129-000043",
+  "started_at": "2026-11-29 00:00:43 CST",
+  "finished_at": "2026-11-29 00:16:10 CST",
   "command": "npm run refresh:yujing -- --headless",
   "settings": {
     "recent_days": 3,
@@ -18,11 +18,11 @@
     "batch_channel_count": 16
   },
   "totals": {
-    "feed_count": 2,
-    "batch_article_count": 5,
-    "fetched": 5,
-    "inserted": 0,
-    "updated": 5,
+    "feed_count": 1,
+    "batch_article_count": 1,
+    "fetched": 1,
+    "inserted": 1,
+    "updated": 0,
     "deduped": 0,
     "unchanged": 0,
     "deleted_plain": 0
@@ -32,17 +32,8 @@
       "source_key": "67cc08a19a4297b6148b28e7-deeptech",
       "title": "DeepTech深科技-公众号",
       "fetched": 1,
-      "inserted": 0,
-      "updated": 1,
-      "deduped": 0,
-      "unchanged": 0
-    },
-    {
-      "source_key": "67cc08a19a4297b6148b295c-channel",
-      "title": "量子位-公众号",
-      "fetched": 4,
-      "inserted": 0,
-      "updated": 4,
+      "inserted": 1,
+      "updated": 0,
       "deduped": 0,
       "unchanged": 0
     }
